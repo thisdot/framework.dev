@@ -5,6 +5,8 @@ applications:
         preBuild:
           commands:
             - cd ../..
+            - nvm install
+            - nvm use
             - yarn install
         build:
           commands:
@@ -12,7 +14,7 @@ applications:
       artifacts:
         baseDirectory: dist
         files:
-          - '**/*'
+          - "**/*"
       cache:
         paths:
           - ../../node_modules/**/*
@@ -23,6 +25,8 @@ applications:
         preBuild:
           commands:
             - cd ../..
+            - nvm install
+            - nvm use
             - yarn install
         build:
           commands:
@@ -30,7 +34,7 @@ applications:
       artifacts:
         baseDirectory: dist
         files:
-          - '**/*'
+          - "**/*"
       cache:
         paths:
           - ../../node_modules/**/*
