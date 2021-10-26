@@ -1,6 +1,7 @@
 version: 1
 applications:
-  - frontend:
+  - appRoot: packages/react
+    frontend:
       phases:
         preBuild:
           commands:
@@ -19,8 +20,8 @@ applications:
         paths:
           - ../../node_modules/**/*
           - ../../packages/*/node_modules/**/*
-    appRoot: packages/react
-  - frontend:
+  - appRoot: packages/system
+    frontend:
       phases:
         preBuild:
           commands:
@@ -31,6 +32,9 @@ applications:
         build:
           commands:
             - yarn build:system
+        postBuild:
+          commands:
+            - yarn workspace @framework.dev/system percy
       artifacts:
         baseDirectory: dist
         files:
@@ -39,4 +43,3 @@ applications:
         paths:
           - ../../node_modules/**/*
           - ../../packages/*/node_modules/**/*
-    appRoot: packages/system
