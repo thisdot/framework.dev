@@ -1,4 +1,5 @@
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles"
+import { vars } from "../themes/themes.css"
 
 const space = {
 	auto: "auto",
@@ -87,4 +88,23 @@ const layout = defineProperties({
 	},
 })
 
-export const sprinkles = createSprinkles(typography, layout, spacing)
+const colors = defineProperties({
+	properties: {
+		color: {
+			regularText: {
+				backgroundColor: vars.color.background,
+				color: vars.color.text,
+			},
+			primaryText: {
+				backgroundColor: vars.color.background,
+				color: vars.color.primary,
+			},
+			primaryButton: {
+				backgroundColor: vars.color.primary,
+				color: vars.color.primaryText,
+			},
+		},
+	},
+})
+
+export const sprinkles = createSprinkles(typography, layout, spacing, colors)

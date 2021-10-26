@@ -6,12 +6,12 @@
 	"author": "ThisDotLabs",
 	"license": "ISC",
 	"scripts": {
-		"dev": "astro dev --port 3001",
-		"build": "astro build",
-		"preview": "astro preview",
-		"check": "astro check"
+		"dev": "start-storybook -p 6006",
+		"build": "build-storybook -o dist"
 	},
 	"dependencies": {
-		"react": "^17.0.2"
-	}
+		"react": "^17.0.2",
+		"typescript": "^4.4.4"
+	},
+	"devDependencies": {}
 }

@@ -2,21 +2,27 @@ import { createTheme, createThemeContract } from "@vanilla-extract/css"
 
 export const vars = createThemeContract({
 	color: {
+		background: "",
+		text: "",
 		primary: "",
-		primaryContrast: "",
+		primaryText: "",
 	},
 })
 
 export const reactTheme = createTheme(vars, {
 	color: {
+		background: "white",
+		text: "black",
 		primary: "black",
-		primaryContrast: "white",
+		primaryText: "white",
 	},
 })
 
 export const vueTheme = createTheme(vars, {
 	color: {
+		background: "white",
+		text: "black",
 		primary: "green",
-		primaryContrast: "white",
+		primaryText: "white",
 	},
 })

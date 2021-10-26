@@ -1,6 +1,6 @@
-import { style } from "@vanilla-extract/css"
-import { vars } from "../themes/index.css"
+import { sprinkles } from "../sprinkles/sprinkles.css"
 
-export const buttonStyle = style({
-	backgroundColor: vars.color.primary,
+export const buttonStyle = sprinkles({
+	padding: "medium",
+	color: "primaryButton",
 })
