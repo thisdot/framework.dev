@@ -23,6 +23,8 @@
 		"@babel/core": "^7.15.8",
 		"@mdx-js/mdx": "^1.6.22",
 		"@mdx-js/preact": "^1.6.22",
+		"@percy/cli": "^1.0.0-beta.70",
+		"@percy/storybook": "^4.1.0",
 		"@storybook/addon-actions": "^6.3.12",
 		"@storybook/addon-essentials": "^6.3.12",
 		"@storybook/addon-links": "^6.3.12",
