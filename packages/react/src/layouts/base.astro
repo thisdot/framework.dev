@@ -1,0 +1,13 @@
+---
+import { CSSReset } from '@framework.dev/system'
+const {title} = Astro.props
+---
+<html>
+  <head>
+    <title>framework.dev design system | {title}</title>
+		<CSSReset />
+  </head>
+  <body >
+		<slot />
+  </body>
+</html>
