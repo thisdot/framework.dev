@@ -14,4 +14,11 @@ module.exports = {
 		config.plugins.push(vanillaExtractPlugin())
 		return config
 	},
+	async previewHead(head) {
+		const { fontHeadTags } = await import("../src/globals/font-import.mjs")
+		return `
+			${head}
+			${fontHeadTags}
+		`
+	},
 }
