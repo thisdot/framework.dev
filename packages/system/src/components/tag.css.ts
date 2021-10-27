@@ -8,7 +8,8 @@ export const tagStyle = style([
 		borderRadius: 4,
 		fontSize: "xSmall",
 		fontWeight: "bold",
-		color: "tag",
+		color: "regularText",
+		backgroundColor: "regular",
 	}),
 	{
 		cursor: "pointer",

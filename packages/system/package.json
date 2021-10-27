@@ -11,7 +11,7 @@
 		"percy": "percy storybook ./dist"
 	},
 	"dependencies": {
-		"react": "^17.0.2",
+		"@reach/dialog": "^0.16.2",
 		"typescript": "^4.4.4"
 	},
 	"devDependencies": {}
