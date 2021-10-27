@@ -1,5 +1,9 @@
 import "../src/globals/global-styles"
 import { reactTheme, vueTheme } from "../src/themes/themes.css"
+import { addDecorator } from "@storybook/react"
+import { withThemes } from "storybook-addon-themes/react"
+
+addDecorator(withThemes)
 
 export const parameters = {
 	actions: { argTypesRegex: "^on[A-Z].*" },
