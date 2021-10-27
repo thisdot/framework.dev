@@ -1,10 +1,10 @@
 import { sprinkles } from "../sprinkles/sprinkles.css"
 
 export const counterStyle = sprinkles({
-	borderRadius: "xlarge",
+	borderRadius: 24,
 	color: "primaryButton",
 	fontSize: "base",
 	fontWeight: "bold",
-	paddingX: "medium",
-	paddingY: "small",
+	paddingX: 10,
+	paddingY: 4,
 })
