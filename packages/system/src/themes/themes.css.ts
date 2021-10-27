@@ -4,6 +4,7 @@ export const themeColors = {
 	gray100: "#F7F9FA",
 	gray200: "#EDEFF2",
 	gray300: "#D3DDE6",
+	gray400: "#B4BFCC",
 	gray500: "#95A1AD",
 	gray600: "#78838F",
 	gray700: "#4D545C",
