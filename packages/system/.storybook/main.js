@@ -1,5 +1,4 @@
 const { vanillaExtractPlugin } = require("@vanilla-extract/vite-plugin")
-const { fontHeadTags } = require("../src/globals/font-import")
 
 module.exports = {
 	core: {
@@ -15,7 +14,8 @@ module.exports = {
 		config.plugins.push(vanillaExtractPlugin())
 		return config
 	},
-	previewHead(head) {
+	async previewHead(head) {
+		const { fontHeadTags } = await import("../src/globals/font-import.mjs")
 		return `
 			${head}
 			${fontHeadTags}
