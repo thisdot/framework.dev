@@ -1,16 +1,36 @@
-import { Story, Meta } from "@storybook/react"
-import { Button, ButtonProps } from "./button"
+import { Meta } from "@storybook/react"
+import { Button as ButtonComponent } from "./button"
 
 export default {
 	title: "Button",
-	component: Button,
-	argTypes: { onClick: { action: "clicked" } },
+	component: ButtonComponent,
+	percy: {
+		name: "Button",
+		additionalSnapshots: [{ suffix: "as anchor", args: { as: "a" } }],
+	},
+	args: {
+		as: "button",
+		size: "medium",
+		color: "primary",
+		children: "Click me!",
+	},
+	argTypes: {
+		onClick: { action: "clicked" },
+		as: {
+			options: ["button", "a"],
+			control: { type: "radio" },
+		},
+		size: {
+			options: ["small", "medium"],
+			control: { type: "radio" },
+		},
+		color: {
+			options: ["primary", "destructive"],
+			control: { type: "radio" },
+		},
+	},
 } as Meta
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />
+const Template = (args) => <ButtonComponent {...args} />
 
-export const Example = Template.bind({})
-
-Example.args = {
-	children: "Click me!",
-}
+export const Button = Template.bind({})

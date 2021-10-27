@@ -3,19 +3,16 @@ import { sprinkles } from "../sprinkles/sprinkles.css"
 
 export const tagStyle = style([
 	sprinkles({
-		paddingY: "small",
+		paddingY: 4,
+		paddingX: 6,
+		borderRadius: 4,
+		fontSize: "xSmall",
+		fontWeight: "bold",
+		color: "tag",
 	}),
 	{
-		background: "rgba(0, 0, 0, 0.04)",
-		borderRadius: "4px",
-		color: "#4D545C",
 		cursor: "pointer",
-		fontSize: "10px",
-		fontWeight: 600,
-		lineHeight: 1,
 		letterSpacing: "0.05em",
-		paddingLeft: "6px",
-		paddingRight: "6px",
 		textTransform: "uppercase",
 	},
 ])
