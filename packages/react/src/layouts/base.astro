@@ -1,11 +1,12 @@
 ---
-import { CSSReset } from '@framework.dev/system/src/util/css-reset';
+import '@framework.dev/system/src/globals/global-styles';
+import { fontHeadTags } from '@framework.dev/system/src/globals/font-import';
 const {title} = Astro.props
 ---
 <html>
   <head>
+		{fontHeadTags}
     <title>framework.dev design system | {title}</title>
-		<CSSReset />
   </head>
   <body >
 		<slot />

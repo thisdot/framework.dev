@@ -1,3 +1,4 @@
+import "../src/globals/global-styles"
 import { reactTheme, vueTheme } from "../src/themes/themes.css"
 
 export const parameters = {
