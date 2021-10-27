@@ -1,5 +1,5 @@
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles"
-import { vars } from "../themes/themes.css"
+import { vars, themeColors } from "../themes/themes.css"
 
 const spaceInPixels = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24] as const
 
@@ -115,7 +115,7 @@ const colors = defineProperties({
 			},
 			tag: {
 				background: "rgba(0, 0, 0, 0.04)",
-				color: "#4D545C",
+				color: themeColors.gray700,
 			},
 		},
 	},
