@@ -1,12 +1,21 @@
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles"
 import { vars } from "../themes/themes.css"
 
+const spaceInPixels = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24] as const
+
+const pxToRem = (px: number) => `${px / 16}rem`
+const spaceInRem = Object.fromEntries(
+	spaceInPixels.map((px) => [px, pxToRem(px)])
+) as {
+	[K in typeof spaceInPixels[Exclude<
+		keyof typeof spaceInPixels,
+		keyof []
+	>]]: string
+}
+
 const space = {
 	auto: "auto",
-	none: 0,
-	small: "4px",
-	medium: "8px",
-	large: "16px",
+	...spaceInRem,
 }
 
 const conditions = {
@@ -20,26 +29,22 @@ const typography = defineProperties({
 	defaultCondition: "mobile",
 	properties: {
 		fontSize: {
+			xSmall: {
+				fontSize: pxToRem(10),
+				lineHeight: pxToRem(10),
+			},
 			small: {
-				fontSize: "0.875rem",
-				lineHeight: "1.25rem",
+				fontSize: pxToRem(14),
+				lineHeight: pxToRem(16),
 			},
 			base: {
-				fontSize: "1rem",
-				lineHeight: "1.5",
-			},
-			large: {
-				fontSize: "1.125rem",
-				lineHeight: "1.75rem",
-			},
-			xl: {
-				fontSize: "1.25rem",
-				lineHeight: "1.75rem",
+				fontSize: pxToRem(16),
+				lineHeight: pxToRem(20),
 			},
 		},
 		fontWeight: {
 			regular: 400,
-			bold: 700,
+			bold: 600,
 		},
 	},
 })
@@ -58,6 +63,7 @@ const spacing = defineProperties({
 		marginBottom: space,
 		rowGap: space,
 		columnGap: space,
+		borderRadius: space,
 	},
 	shorthands: {
 		padding: ["paddingTop", "paddingBottom", "paddingLeft", "paddingRight"],
@@ -102,6 +108,14 @@ const colors = defineProperties({
 			primaryButton: {
 				backgroundColor: vars.color.primary,
 				color: vars.color.primaryText,
+			},
+			destructiveButton: {
+				backgroundColor: "#FFECEB",
+				color: "#F44336",
+			},
+			tag: {
+				background: "rgba(0, 0, 0, 0.04)",
+				color: "#4D545C",
 			},
 		},
 	},
