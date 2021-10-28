@@ -31,7 +31,7 @@ const typography = defineProperties({
 		fontSize: {
 			xSmall: {
 				fontSize: pxToRem(10),
-				lineHeight: 10,
+				lineHeight: 1,
 			},
 			small: {
 				fontSize: pxToRem(14),
