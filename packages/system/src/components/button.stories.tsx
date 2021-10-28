@@ -4,10 +4,6 @@ import { Button as ButtonComponent } from "./button"
 export default {
 	title: "Button",
 	component: ButtonComponent,
-	percy: {
-		name: "Button",
-		additionalSnapshots: [{ suffix: "as anchor", args: { as: "a" } }],
-	},
 	args: {
 		as: "button",
 		size: "medium",
@@ -34,3 +30,10 @@ export default {
 const Template = (args) => <ButtonComponent {...args} />
 
 export const Button = Template.bind({})
+
+Button.parameters = {
+	percy: {
+		name: "Button",
+		additionalSnapshots: [{ suffix: "as anchor", args: { as: "a" } }],
+	},
+}

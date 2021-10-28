@@ -24,16 +24,19 @@ export default {
 			control: { disable: true },
 		},
 	},
-	percy: {
-		name: "Button",
-		additionalSnapshots: [
-			{ suffix: " with burger menu open", args: { initialMenuState: "open" } },
-		],
-	},
 } as Meta
 
 const Template: Story<MobileNavProps> = (args) => (
 	<MobileNavComponent {...args} />
 )
 
-export const MobileNav = Template.bind({})
+export const MobileNav: Story<MobileNavProps> = Template.bind({})
+
+MobileNav.parameters = {
+	percy: {
+		name: "Button",
+		additionalSnapshots: [
+			{ suffix: " with burger menu open", args: { initialMenuState: "open" } },
+		],
+	},
+}
