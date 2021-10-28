@@ -34,7 +34,6 @@ export const MobileNav: Story<MobileNavProps> = Template.bind({})
 
 MobileNav.parameters = {
 	percy: {
-		name: "Button",
 		additionalSnapshots: [
 			{ suffix: " with burger menu open", args: { initialMenuState: "open" } },
 		],

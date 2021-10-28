@@ -33,7 +33,6 @@ export const Button = Template.bind({})
 
 Button.parameters = {
 	percy: {
-		name: "Button",
-		additionalSnapshots: [{ suffix: "as anchor", args: { as: "a" } }],
+		additionalSnapshots: [{ suffix: " as anchor", args: { as: "a" } }],
 	},
 }
