@@ -35,15 +35,15 @@ const typography = defineProperties({
 		fontSize: {
 			xSmall: {
 				fontSize: pxToRem(10),
-				lineHeight: pxToRem(10),
+				lineHeight: 1,
 			},
 			small: {
 				fontSize: pxToRem(14),
-				lineHeight: pxToRem(16),
+				lineHeight: 16 / 14,
 			},
 			base: {
 				fontSize: pxToRem(16),
-				lineHeight: pxToRem(20),
+				lineHeight: 20 / 16,
 			},
 		},
 		fontWeight: {
