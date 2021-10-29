@@ -55,8 +55,6 @@ export const dialogOverlayStyle = style({
 export const dialogContentStyle = recipe({
 	base: [
 		sprinkles({
-			color: "regularText",
-			backgroundColor: "highlight",
 			display: "block",
 		}),
 		{
@@ -84,25 +82,13 @@ export const dialogContentStyle = recipe({
 	},
 })
 
-export const menuHeaderStyle = style([
-	sprinkles({
-		display: "flex",
-		alignItems: "center",
-		paddingX: 24,
-		color: "strongText",
-		borderBottom: "thin",
-	}),
-	{
-		height: pxToRem(72),
-		boxShadow:
-			"0px 4px 8px rgba(0, 0, 0, 0.02), inset 0px -1px 0px rgba(0, 0, 0, 0.08)",
-	},
-])
-
-export const menuBodyStyle = sprinkles({ padding: 24 })
-
 export const menuCloseButtonStyle = style([
-	sprinkles({ border: "thin", color: "regularText", borderRadius: 8 }),
+	sprinkles({
+		border: "thin",
+		color: "regularText",
+		backgroundColor: "highlight",
+		borderRadius: 8,
+	}),
 	{
 		cursor: "pointer",
 		position: "absolute",
