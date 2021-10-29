@@ -6,7 +6,6 @@ export const buttonStyle = recipe({
 		sprinkles({
 			fontWeight: "bold",
 			fontSize: "small",
-			color: "primaryButton",
 			borderRadius: 8,
 		}),
 		{
@@ -27,10 +26,12 @@ export const buttonStyle = recipe({
 		},
 		color: {
 			primary: sprinkles({
-				color: "primaryButton",
+				color: "primaryButtonText",
+				backgroundColor: "primary",
 			}),
 			destructive: sprinkles({
-				color: "destructiveButton",
+				color: "destructiveButtonText",
+				backgroundColor: "destructiveAction",
 			}),
 		},
 	},

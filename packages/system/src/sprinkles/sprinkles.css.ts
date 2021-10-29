@@ -1,9 +1,9 @@
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles"
 import { vars, themeColors } from "../themes/themes.css"
+import { pxToRem } from "../util/style-utils"
 
 const spaceInPixels = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24] as const
 
-const pxToRem = (px: number) => `${px / 16}rem`
 const spaceInRem = Object.fromEntries(
 	spaceInPixels.map((px) => [px, pxToRem(px)])
 ) as {
@@ -16,6 +16,10 @@ const spaceInRem = Object.fromEntries(
 const space = {
 	auto: "auto",
 	...spaceInRem,
+}
+
+const borders = {
+	thin: "1px solid rgba(0, 0, 0, 0.08)",
 }
 
 const conditions = {
@@ -83,7 +87,13 @@ const layout = defineProperties({
 		display: ["none", "block", "flex", "grid"],
 		flexDirection: ["row", "column"],
 		alignItems: ["stretch", "flex-start", "center", "flex-end"],
-		justifyContent: ["stretch", "flex-start", "center", "flex-end"],
+		justifyContent: [
+			"stretch",
+			"flex-start",
+			"center",
+			"flex-end",
+			"space-between",
+		],
 		grid: {
 			sidebar: {
 				display: "grid",
@@ -96,28 +106,29 @@ const layout = defineProperties({
 
 const colors = defineProperties({
 	properties: {
-		color: {
-			regularText: {
-				backgroundColor: vars.color.background,
-				color: vars.color.text,
-			},
-			primaryText: {
-				backgroundColor: vars.color.background,
-				color: vars.color.primary,
-			},
-			primaryButton: {
-				backgroundColor: vars.color.primary,
-				color: vars.color.primaryText,
-			},
-			destructiveButton: {
-				backgroundColor: "#FFECEB",
-				color: "#F44336",
-			},
-			tag: {
-				background: "rgba(0, 0, 0, 0.04)",
-				color: themeColors.gray700,
-			},
+		backgroundColor: {
+			regular: vars.color.background,
+			highlight: vars.color.highlightBackground,
+			shaded: vars.color.shadedBackground,
+			primary: vars.color.primary,
+			destructiveAction: themeColors.redBg,
 		},
+		color: {
+			regularText: vars.color.text,
+			strongText: vars.color.strongText,
+			primaryText: vars.color.primary,
+			primaryButtonText: vars.color.primaryText,
+			destructiveButtonText: themeColors.red,
+		},
+		borderTop: borders,
+		borderBottom: borders,
+		borderLeft: borders,
+		borderRight: borders,
+	},
+	shorthands: {
+		borderX: ["borderLeft", "borderRight"],
+		borderY: ["borderTop", "borderBottom"],
+		border: ["borderBottom", "borderLeft", "borderRight", "borderTop"],
 	},
 })
 
