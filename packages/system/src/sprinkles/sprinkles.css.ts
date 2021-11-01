@@ -45,6 +45,10 @@ const typography = defineProperties({
 				fontSize: pxToRem(16),
 				lineHeight: 20 / 16,
 			},
+			large: {
+				fontSize: pxToRem(20),
+				lineHeight: 24 / 20,
+			},
 		},
 		fontWeight: {
 			regular: 400,
@@ -86,7 +90,7 @@ const layout = defineProperties({
 	properties: {
 		display: ["none", "block", "flex", "grid"],
 		flexDirection: ["row", "column"],
-		alignItems: ["stretch", "flex-start", "center", "flex-end"],
+		alignItems: ["stretch", "flex-start", "center", "flex-end", "end", "start"],
 		justifyContent: [
 			"stretch",
 			"flex-start",
@@ -94,11 +98,19 @@ const layout = defineProperties({
 			"flex-end",
 			"space-between",
 		],
-		grid: {
+		layout: {
 			sidebar: {
 				display: "grid",
 				gridTemplateColumns: "200px 1fr",
 				gridAutoRows: "1fr",
+			},
+			stack: {
+				display: "grid",
+			},
+			row: {
+				display: "grid",
+				gridAutoFlow: "column",
+				gridAutoColumns: "min-content",
 			},
 		},
 	},

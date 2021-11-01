@@ -1,4 +1,6 @@
 import { Story, Meta } from "@storybook/react"
+import { sprinkles } from "../sprinkles/sprinkles.css"
+import { exampleCategories } from "../util/example-content"
 import { MobileNav as MobileNavComponent, MobileNavProps } from "./mobile-nav"
 
 export default {
@@ -14,7 +16,15 @@ export default {
 		},
 	},
 	args: {
-		children: <h1>Logo</h1>,
+		children: (
+			<div className={sprinkles({ layout: "stack", gap: 24 })}>
+				{exampleCategories.map((category) => (
+					<a href={`#${category}`} key={category}>
+						{category}
+					</a>
+				))}
+			</div>
+		),
 	},
 	argTypes: {
 		// This arg exists only for rendering in the open state by Percy
