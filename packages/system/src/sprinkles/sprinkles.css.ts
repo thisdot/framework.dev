@@ -2,7 +2,7 @@ import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles"
 import { vars, themeColors } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
-const spaceInPixels = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24] as const
+const spaceInPixels = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24] as const
 
 const spaceInRem = Object.fromEntries(
 	spaceInPixels.map((px) => [px, pxToRem(px)])
@@ -19,7 +19,7 @@ const space = {
 }
 
 const borders = {
-	thin: "1px solid rgba(0, 0, 0, 0.08)",
+	thin: `1px solid ${themeColors.gray200}`,
 }
 
 const conditions = {
@@ -32,18 +32,53 @@ const typography = defineProperties({
 	conditions,
 	defaultCondition: "mobile",
 	properties: {
-		fontSize: {
-			xSmall: {
+		textStyle: {
+			tinyCaps: {
+				textTransform: "uppercase",
 				fontSize: pxToRem(10),
 				lineHeight: 1,
+				color: vars.color.text,
+				fontWeight: 600,
 			},
-			small: {
+			subHeading: {
+				fontSize: pxToRem(12),
+				lineHeight: 16 / 12,
+				color: vars.color.weakText,
+			},
+			bodyText: {
+				fontSize: pxToRem(14),
+				lineHeight: 20 / 14,
+				color: vars.color.text,
+			},
+			clickable: {
 				fontSize: pxToRem(14),
 				lineHeight: 16 / 14,
+				fontWeight: 600,
+				color: vars.color.text,
 			},
-			base: {
+			minorHeading: {
 				fontSize: pxToRem(16),
 				lineHeight: 20 / 16,
+				fontWeight: 600,
+				color: vars.color.strongText,
+			},
+			sectionHeading: {
+				fontSize: pxToRem(20),
+				lineHeight: 24 / 20,
+				fontWeight: 600,
+				color: vars.color.strongText,
+			},
+			pageHeading: {
+				fontSize: pxToRem(30),
+				lineHeight: 36 / 30,
+				fontWeight: 600,
+				color: vars.color.strongText,
+			},
+			siteHeading: {
+				fontSize: pxToRem(52),
+				lineHeight: 58 / 52,
+				fontWeight: 600,
+				color: vars.color.strongText,
 			},
 			large: {
 				fontSize: pxToRem(20),
@@ -104,13 +139,18 @@ const layout = defineProperties({
 				gridTemplateColumns: "200px 1fr",
 				gridAutoRows: "1fr",
 			},
-			stack: {
+			threeGrid: {
 				display: "grid",
+				gridTemplateColumns: "repeat(3, 340px)",
+				justifyContent: "center",
+			},
+			stack: {
+				display: "flex",
+				flexDirection: "column",
 			},
 			row: {
-				display: "grid",
-				gridAutoFlow: "column",
-				gridAutoColumns: "min-content",
+				display: "flex",
+				flexDirection: "row",
 			},
 		},
 	},
@@ -128,9 +168,15 @@ const colors = defineProperties({
 		color: {
 			regularText: vars.color.text,
 			strongText: vars.color.strongText,
+			weakText: vars.color.weakText,
 			primaryText: vars.color.primary,
 			primaryButtonText: vars.color.primaryText,
 			destructiveButtonText: themeColors.red,
+			beginner: vars.color.beginner,
+			intermediate: vars.color.intermediate,
+			advanced: vars.color.advanced,
+			free: vars.color.weakText,
+			paid: vars.color.paid,
 		},
 		borderTop: borders,
 		borderBottom: borders,

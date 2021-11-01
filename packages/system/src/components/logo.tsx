@@ -17,7 +17,7 @@ export function Logo({ className }: LogoProps) {
 				className={sprinkles({
 					color: "strongText",
 					fontWeight: "bold",
-					fontSize: "large",
+					textStyle: "sectionHeading",
 				})}
 			>
 				Framework
