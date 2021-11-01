@@ -13,6 +13,9 @@ export const themeColors = {
 	redBg: "#FFECEB",
 	red: "#F44336",
 	reactBlue: "#7DEAFA",
+	blue: "#175FE5",
+	green: "#5D8300",
+	purple: "#8A3FFC",
 	white: "#FFFFFF",
 }
 
@@ -23,31 +26,42 @@ export const vars = createThemeContract({
 		shadedBackground: "",
 		text: "",
 		strongText: "",
+		weakText: "",
 		primary: "",
 		primaryText: "",
+		beginner: "",
+		intermediate: "",
+		advanced: "",
+		paid: "",
 	},
 })
 
-export const reactTheme = createTheme(vars, {
+const lightThemeBase = {
 	color: {
+		primaryText: themeColors.gray900,
 		background: themeColors.gray100,
 		highlightBackground: themeColors.white,
 		shadedBackground: themeColors.gray200,
 		text: themeColors.gray700,
 		strongText: themeColors.gray900,
+		weakText: themeColors.gray500,
+		beginner: themeColors.blue,
+		intermediate: themeColors.green,
+		advanced: themeColors.red,
+		paid: themeColors.purple,
+	},
+}
+
+export const reactTheme = createTheme(vars, {
+	color: {
 		primary: themeColors.reactBlue,
-		primaryText: themeColors.gray900,
+		...lightThemeBase.color,
 	},
 })
 
 export const vueTheme = createTheme(vars, {
 	color: {
-		background: themeColors.white,
-		highlightBackground: themeColors.white,
-		shadedBackground: themeColors.gray200,
-		text: themeColors.gray900,
-		strongText: themeColors.gray900,
-		primary: "green",
-		primaryText: themeColors.white,
+		primary: themeColors.green,
+		...lightThemeBase.color,
 	},
 })

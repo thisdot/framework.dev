@@ -4,8 +4,7 @@ import { sprinkles } from "../sprinkles/sprinkles.css"
 export const buttonStyle = recipe({
 	base: [
 		sprinkles({
-			fontWeight: "bold",
-			fontSize: "small",
+			textStyle: "clickable",
 			borderRadius: 8,
 		}),
 		{

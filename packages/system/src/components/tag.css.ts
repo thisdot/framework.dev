@@ -6,7 +6,7 @@ export const tagStyle = style([
 		paddingY: 4,
 		paddingX: 6,
 		borderRadius: 4,
-		fontSize: "xSmall",
+		textStyle: "tinyCaps",
 		fontWeight: "bold",
 		color: "regularText",
 		backgroundColor: "regular",
@@ -14,6 +14,5 @@ export const tagStyle = style([
 	{
 		cursor: "pointer",
 		letterSpacing: "0.05em",
-		textTransform: "uppercase",
 	},
 ])
