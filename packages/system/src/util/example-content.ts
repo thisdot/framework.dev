@@ -80,7 +80,7 @@ export const exampleBooks: Book<string>[] = [
 		href: "/harry-potter",
 		title: "Harry Potter and the Sorcerer's Stone",
 		image: book2,
-		authors: ["J. K. Rowling"],
+		authors: ["J. K. Rowling", "Robert Galbraith"],
 		yearOfPublication: 1997,
 		numberOfPages: 223,
 		level: "beginner",

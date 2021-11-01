@@ -43,7 +43,7 @@ const lightThemeBase = {
 		highlightBackground: themeColors.white,
 		shadedBackground: themeColors.gray200,
 		text: themeColors.gray700,
-		strongText: themeColors.gray900,
+		strongText: themeColors.gray800,
 		weakText: themeColors.gray500,
 		beginner: themeColors.blue,
 		intermediate: themeColors.green,

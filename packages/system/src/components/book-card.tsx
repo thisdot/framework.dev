@@ -1,14 +1,14 @@
 import classNames from "classnames"
 import {
-	BookCardStyle,
-	BookImage,
-	BookDifficulty,
-	BookTitle,
-	BookMetadata,
-	BookMetadataBullet,
-	BookBlurb,
+	bookCardStyle,
+	bookImage,
+	bookTitle,
+	bookMetadata,
+	bookMetadataBullet,
+	bookBlurb,
 } from "./book-card.css"
 import { Book } from "../models/book"
+import { sprinkles } from "../sprinkles/sprinkles.css"
 
 export type BookCardProps = React.ComponentPropsWithoutRef<"article"> & {
 	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
@@ -22,24 +22,24 @@ export function BookCard({
 	...props
 }: BookCardProps) {
 	return (
-		<article className={classNames(className, BookCardStyle)} {...props}>
+		<article className={classNames(className, bookCardStyle)} {...props}>
 			<header>
-				<img className={BookImage} src={book.image} />
-				<p className={BookDifficulty({ difficulty: book.level })}>
+				<img className={bookImage} src={book.image} />
+				<p className={sprinkles({ textStyle: "tinyCaps", color: book.level })}>
 					{book.level}
 				</p>
 				<a href={book.href} target="_blank" rel="noopener noreferrer">
-					<H className={BookTitle}>{book.title}</H>
+					<H className={bookTitle}>{book.title}</H>
 				</a>
-				<p className={BookMetadata}>
+				<p className={bookMetadata}>
 					{book.authors.join(", ")}
-					<span className={BookMetadataBullet}> • </span>
+					<span className={bookMetadataBullet}> • </span>
 					{book.yearOfPublication}
-					<span className={BookMetadataBullet}> • </span>
+					<span className={bookMetadataBullet}> • </span>
 					{book.numberOfPages} pages
 				</p>
 			</header>
-			<p className={BookBlurb}>{book.description}</p>
+			<p className={bookBlurb}>{book.description}</p>
 		</article>
 	)
 }
