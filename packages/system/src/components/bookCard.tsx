@@ -5,6 +5,7 @@ import {
 	BookTitle,
 	BookMetadata,
 	BookMetadataBullet,
+	BookBlurb,
 } from "./bookCard.css"
 
 export interface BookCardProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -46,7 +47,7 @@ export function BookCard({
 						{pages} pages
 					</p>
 				</header>
-				<p>{blurb}</p>
+				<p className={BookBlurb}>{blurb}</p>
 			</article>
 		</Card>
 	)
