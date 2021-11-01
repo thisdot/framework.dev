@@ -1,5 +1,11 @@
 import { Card } from "./card"
-import { BookImage, BookDifficulty, BookTitle } from "./bookCard.css"
+import {
+	BookImage,
+	BookDifficulty,
+	BookTitle,
+	BookMetadata,
+	BookMetadataBullet,
+} from "./bookCard.css"
 
 export interface BookCardProps extends React.HTMLAttributes<HTMLDivElement> {
 	slug: string
@@ -32,7 +38,13 @@ export function BookCard({
 					<a href={slug} target="_blank" rel="noopener noreferrer">
 						<h1 className={BookTitle}>{title}</h1>
 					</a>
-					<p>{`${authors.join(", ")} • ${year} • ${pages} pages`}</p>
+					<p className={BookMetadata}>
+						{authors.join(", ")}
+						<span className={BookMetadataBullet}> • </span>
+						{year}
+						<span className={BookMetadataBullet}> • </span>
+						{pages} pages
+					</p>
 				</header>
 				<p>{blurb}</p>
 			</article>

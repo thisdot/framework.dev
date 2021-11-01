@@ -50,3 +50,16 @@ export const BookTitle = style([
 	sprinkles({ fontSize: "base", fontWeight: "bold" }),
 	{ color: themeColors.gray800 },
 ])
+
+export const BookMetadata = style([
+	sprinkles({
+		fontSize: "xSmall",
+	}),
+	{
+		color: themeColors.gray600,
+	},
+])
+
+export const BookMetadataBullet = style({
+	color: themeColors.gray300,
+})
