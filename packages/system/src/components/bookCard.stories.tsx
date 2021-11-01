@@ -6,6 +6,12 @@ import { themeColors } from "../themes/themes.css"
 export default {
 	title: "Card",
 	component: BookCardComponent,
+	argTypes: {
+		difficulty: {
+			options: ["beginner", "intermediate", "hard"],
+			control: { type: "radio" },
+		},
+	},
 	parameters: {
 		backgrounds: {
 			default: "Light Theme Background",
@@ -20,7 +26,11 @@ export default {
 	},
 } as Meta
 
-const Template: Story<BookCardProps> = (args) => <BookCardComponent {...args} />
+const Template: Story<BookCardProps> = (args) => (
+	<div style={{ width: "249px", minHeight: "394px" }}>
+		<BookCardComponent {...args} />
+	</div>
+)
 
 export const BookCard = Template.bind({})
 
