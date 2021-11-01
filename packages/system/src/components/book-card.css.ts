@@ -13,8 +13,7 @@ export const BookImage = style([
 		borderRadius: "1px",
 		boxShadow:
 			"0px 8px 31px rgba(0, 0, 0, 0.13), 0px 1.00172px 3.88168px rgba(0, 0, 0, 0.065)",
-		height: "9rem",
-		width: "6rem",
+		maxHeight: "9rem",
 	},
 ])
 
@@ -36,7 +35,7 @@ export const BookDifficulty = recipe({
 			intermediate: {
 				color: themeColors.green,
 			},
-			hard: {
+			advanced: {
 				color: themeColors.red,
 			},
 		},

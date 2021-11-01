@@ -7,47 +7,38 @@ import {
 	BookMetadataBullet,
 	BookBlurb,
 } from "./book-card.css"
+import { Book } from "../models/book"
 
-export interface BookCardProps extends React.HTMLAttributes<HTMLDivElement> {
-	slug: string
-	title: string
-	image: string
-	authors: string[]
-	year: number
-	pages: number
-	difficulty: "beginner" | "intermediate" | "hard"
-	blurb: string
+export type BookCardProps = React.ComponentPropsWithoutRef<"article"> & {
+	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+	book: Book<string>
 }
 
 export function BookCard({
-	slug,
-	title,
-	image,
-	authors,
-	year,
-	pages,
-	difficulty,
-	blurb,
+	book,
+	headingTag: H = "h1",
 	...props
 }: BookCardProps) {
 	return (
 		<Card {...props}>
 			<article>
 				<header>
-					<img className={BookImage} src={image} />
-					<p className={BookDifficulty({ difficulty })}>{difficulty}</p>
-					<a href={slug} target="_blank" rel="noopener noreferrer">
-						<h1 className={BookTitle}>{title}</h1>
+					<img className={BookImage} src={book.image} />
+					<p className={BookDifficulty({ difficulty: book.level })}>
+						{book.level}
+					</p>
+					<a href={book.href} target="_blank" rel="noopener noreferrer">
+						<H className={BookTitle}>{book.title}</H>
 					</a>
 					<p className={BookMetadata}>
-						{authors.join(", ")}
+						{book.authors.join(", ")}
 						<span className={BookMetadataBullet}> • </span>
-						{year}
+						{book.yearOfPublication}
 						<span className={BookMetadataBullet}> • </span>
-						{pages} pages
+						{book.numberOfPages} pages
 					</p>
 				</header>
-				<p className={BookBlurb}>{blurb}</p>
+				<p className={BookBlurb}>{book.description}</p>
 			</article>
 		</Card>
 	)
