@@ -3,6 +3,23 @@ import { recipe } from "@vanilla-extract/recipes"
 
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { themeColors } from "../themes/themes.css"
+import { pxToRem } from "../util/style-utils"
+
+export const BookCardStyle = style([
+	sprinkles({
+		border: "thin",
+		borderRadius: 12,
+		display: "grid",
+		backgroundColor: "highlight",
+		padding: 16,
+		rowGap: 12,
+		color: "regularText",
+	}),
+	{
+		gridTemplateRows: `min-content min-content min-content min-content 1fr`,
+		minHeight: pxToRem(256),
+	},
+])
 
 export const BookImage = style([
 	sprinkles({

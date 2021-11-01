@@ -5,7 +5,7 @@ import { themeColors } from "../themes/themes.css"
 import { exampleBooks } from "../util/example-content"
 
 export default {
-	title: "Card",
+	title: "Book Card",
 	component: BookCardComponent,
 	args: {
 		headingTag: "h1",
