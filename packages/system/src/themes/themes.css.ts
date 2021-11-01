@@ -10,8 +10,6 @@ export const themeColors = {
 	gray700: "#4D545C",
 	gray800: "#25292E",
 	gray900: "#1F2529",
-	blue: "#0F62FE",
-	green: "#5D8300",
 	red: "#F44336",
 	redBg: "#FFECEB",
 	reactBlue: "#7DEAFA",

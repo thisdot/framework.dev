@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react"
 
-import { BookCard as BookCardComponent, BookCardProps } from "./bookCard"
+import { BookCard as BookCardComponent, BookCardProps } from "./book-card"
 import { themeColors } from "../themes/themes.css"
 
 export default {

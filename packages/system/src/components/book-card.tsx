@@ -6,7 +6,7 @@ import {
 	BookMetadata,
 	BookMetadataBullet,
 	BookBlurb,
-} from "./bookCard.css"
+} from "./book-card.css"
 
 export interface BookCardProps extends React.HTMLAttributes<HTMLDivElement> {
 	slug: string

@@ -21,11 +21,10 @@ export const BookImage = style([
 export const BookDifficulty = recipe({
 	base: [
 		sprinkles({
-			fontSize: "xSmall",
-			fontWeight: "bold",
-			marginBottom: 12,
+			textStyle: "tinyCaps",
 		}),
 		{
+			marginBottom: 12,
 			textTransform: "uppercase",
 		},
 	],
@@ -49,7 +48,7 @@ export const BookDifficulty = recipe({
 
 export const BookTitle = style([
 	sprinkles({
-		fontSize: "base",
+		textStyle: "minorHeading",
 		fontWeight: "bold",
 		marginBottom: 4,
 	}),
@@ -59,28 +58,15 @@ export const BookTitle = style([
 	},
 ])
 
-export const BookMetadata = style([
-	sprinkles({
-		fontSize: "xSmall",
-		marginBottom: 12,
-	}),
-	{
-		color: themeColors.gray600,
-		lineHeight: 16 / 12,
-	},
-])
+export const BookMetadata = sprinkles({
+	textStyle: "subHeading",
+	marginBottom: 12,
+})
 
 export const BookMetadataBullet = style({
 	color: themeColors.gray300,
 })
 
-export const BookBlurb = style([
-	sprinkles({
-		fontSize: "small",
-		color: "regularText",
-	}),
-	{
-		letterSpacing: "-0.01em",
-		lineHeight: 20 / 14,
-	},
-])
+export const BookBlurb = sprinkles({
+	textStyle: "bodyText",
+})
