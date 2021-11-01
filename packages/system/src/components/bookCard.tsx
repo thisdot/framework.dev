@@ -1,7 +1,5 @@
-import classNames from "classnames"
-
 import { Card } from "./card"
-import { BookImage, BookDifficulty } from "./bookCard.css"
+import { BookImage, BookDifficulty, BookTitle } from "./bookCard.css"
 
 export interface BookCardProps extends React.HTMLAttributes<HTMLDivElement> {
 	slug: string
@@ -32,7 +30,7 @@ export function BookCard({
 					<img className={BookImage} src={image} />
 					<p className={BookDifficulty({ difficulty })}>{difficulty}</p>
 					<a href={slug} target="_blank" rel="noopener noreferrer">
-						<h1>{title}</h1>
+						<h1 className={BookTitle}>{title}</h1>
 					</a>
 					<p>{`${authors.join(", ")} • ${year} • ${pages} pages`}</p>
 				</header>

@@ -22,6 +22,7 @@ export const BookDifficulty = recipe({
 	base: [
 		sprinkles({
 			fontSize: "xSmall",
+			fontWeight: "bold",
 		}),
 		{
 			textTransform: "uppercase",
@@ -44,3 +45,8 @@ export const BookDifficulty = recipe({
 		difficulty: "beginner",
 	},
 })
+
+export const BookTitle = style([
+	sprinkles({ fontSize: "base", fontWeight: "bold" }),
+	{ color: themeColors.gray800 },
+])
