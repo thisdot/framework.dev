@@ -1,5 +1,6 @@
 import { Story, Meta } from "@storybook/react"
 import { exampleCourses } from "../util/example-content"
+import { themeColors } from "../themes/themes.css"
 import {
 	CourseList as CourseListComponent,
 	CourseListProps,
@@ -10,6 +11,18 @@ export default {
 	component: CourseListComponent,
 	args: {
 		headingTag: "h1",
+	},
+	parameters: {
+		backgrounds: {
+			default: "Light Theme Background",
+			values: [
+				{
+					name: "Light Theme Background",
+					value: themeColors.gray100,
+					default: true,
+				},
+			],
+		},
 	},
 } as Meta
 
