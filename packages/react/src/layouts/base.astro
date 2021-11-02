@@ -5,10 +5,12 @@ import { sprinkles } from '@framework.dev/system/src/sprinkles/sprinkles.css';
 import { reactTheme } from '@framework.dev/system/src/themes/themes.css'
 const {title} = Astro.props
 ---
-<html class={reactTheme}>
+<!DOCTYPE html>
+<html class={reactTheme} lang="en">
   <head>
 		{fontHeadTags}
-    <title>framework.dev design system | {title}</title>
+    <title>react.framework.dev | {title}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class={sprinkles({ backgroundColor: "regular" })} >
 		<slot />

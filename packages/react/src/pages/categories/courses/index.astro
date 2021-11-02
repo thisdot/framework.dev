@@ -4,10 +4,14 @@ import BaseLayout from '../../../layouts/base.astro'
 import { Counter } from '@framework.dev/system/src/components/counter'
 import { CourseCard } from '@framework.dev/system/src/components/course-card'
 import { sprinkles } from '@framework.dev/system/src/sprinkles/sprinkles.css'
+const title = "React Courses"
 ---
-<BaseLayout>
+<head>
+	<meta name="description" content={`Browse ${title}`}/>
+</head>
+<BaseLayout title={title}>
 	<header class={sprinkles({ layout: "row", alignItems: "center", gap: 8, margin: 48 })}>
-		<h1 class={sprinkles({ textStyle: "pageHeading"  })}>React Courses</h1>
+		<h1 class={sprinkles({ textStyle: "pageHeading"  })}>{title}</h1>
 		<Counter>{courses.length.toString()}</Counter>
 	</header>
 	<div class={sprinkles({ layout: "threeGrid", gap: 24 })}>

@@ -6,8 +6,6 @@ import { CourseCard } from '@framework.dev/system/src/components/course-card'
 import { sprinkles } from '@framework.dev/system/src/sprinkles/sprinkles.css'
 import { courses } from '../../../../data/courses'
 import BaseLayout from '../../../../layouts/base.astro'
-const format = Astro.props.format as typeof courseFormats[number]
-const selectedCourses = courses.filter(course => course.format === format)
 
 export function getStaticPaths() {
 	return courseFormats.map(format => ({
@@ -17,10 +15,17 @@ export function getStaticPaths() {
 		props: { format } 
 	}))
 }
+
+const format = Astro.props.format as typeof courseFormats[number]
+const selectedCourses = courses.filter(course => course.format === format)
+const title = `${startCase(format)} React Courses`
 ---
-<BaseLayout>
+<head>
+	<meta name="description" content={`Browse ${title}`}/>
+</head>
+<BaseLayout title={title}>
 	<header class={sprinkles({ layout: "row", alignItems: "center", gap: 8, margin: 48 })}>
-		<h1 class={sprinkles({ textStyle: "pageHeading"  })}>{startCase(format)} React Courses</h1>
+		<h1 class={sprinkles({ textStyle: "pageHeading"  })}>{title}</h1>
 		<Counter>{selectedCourses.length.toString()}</Counter>
 	</header>
 	<div class={sprinkles({ layout: "threeGrid", gap: 24 })}>
