@@ -4,11 +4,11 @@ import {
 	bookImage,
 	bookTitle,
 	bookMetadata,
-	bookMetadataBullet,
 	bookBlurb,
 } from "./book-card.css"
 import { Book } from "../models/book"
 import { sprinkles } from "../sprinkles/sprinkles.css"
+import { BulletDivider } from "./bullet-divider"
 
 export type BookCardProps = React.ComponentPropsWithoutRef<"article"> & {
 	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
@@ -33,9 +33,9 @@ export function BookCard({
 				</a>
 				<p className={bookMetadata}>
 					{book.authors.join(", ")}
-					<span className={bookMetadataBullet}> • </span>
+					<BulletDivider />
 					{book.yearOfPublication}
-					<span className={bookMetadataBullet}> • </span>
+					<BulletDivider />
 					{book.numberOfPages} pages
 				</p>
 			</header>

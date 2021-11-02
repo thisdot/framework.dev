@@ -68,9 +68,8 @@ export const courseCardSpacerStyle = style({
 	alignSelf: "center",
 })
 export const courseCardInfoStyle = style([
-	sprinkles({ textStyle: "tinyCaps", layout: "row", gap: 6 }),
+	sprinkles({ textStyle: "tinyCaps" }),
 	{
 		gridArea: GridArea.Info,
-		textTransform: "uppercase",
 	},
 ])

@@ -7,8 +7,8 @@ import {
 	courseListCourseHeaderStyle,
 	courseListCourseInfoStyle,
 	courseListCourseSpacerStyle,
-	courseListCourseMetadataBullet,
 } from "./course-list.css"
+import { BulletDivider } from "./bullet-divider"
 
 export type CourseListProps = React.ComponentPropsWithoutRef<"article"> & {
 	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
@@ -27,16 +27,13 @@ export function CourseList({
 				return (
 					<article key={`course-list-${course.title}`}>
 						<div className={courseListCourseInfoStyle}>
-							<span
-								className={sprinkles({ color: course.level, paddingRight: 6 })}
-							>
+							<span className={sprinkles({ color: course.level })}>
 								{course.level}
 							</span>
-							<span className={courseListCourseMetadataBullet}>•</span>
+							<BulletDivider />
 							<span
 								className={sprinkles({
 									color: course.paymentType,
-									paddingLeft: 6,
 								})}
 							>
 								{course.paymentType}
