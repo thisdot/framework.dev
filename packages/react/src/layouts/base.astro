@@ -1,9 +1,18 @@
 ---
 import '@framework.dev/system/src/globals/global-styles';
+import { startCase } from 'lodash'
 import { fontHeadTags } from '@framework.dev/system/src/globals/font-import.mjs';
 import { sprinkles } from '@framework.dev/system/src/sprinkles/sprinkles.css';
 import { reactTheme } from '@framework.dev/system/src/themes/themes.css'
+import { Sidebar } from '@framework.dev/system/src/components/sidebar'
+import { MobileNav } from '@framework.dev/system/src/components/mobile-nav'
 const {title} = Astro.props
+const categories = ["courses"]
+const categoryLinks = categories.map(category => (
+	`<a href="/categories/${category}">
+		${startCase(category)}
+	</a>`
+))
 ---
 <!DOCTYPE html>
 <html class={reactTheme} lang="en">
@@ -12,7 +21,11 @@ const {title} = Astro.props
     <title>react.framework.dev | {title}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body class={sprinkles({ backgroundColor: "regular", marginX: 64, marginY: 48 })} >
-		<slot />
+  <body class={sprinkles({ backgroundColor: "regular", layout: { mobile: "stack", desktop: "sidebar" } })} >
+		<Sidebar className={sprinkles({ display: { mobile: "none", desktop: "block" }})}>{categoryLinks}</Sidebar>
+		<MobileNav client:media="(max-width:1024px)" className={sprinkles({ display: { mobile: "flex", desktop: "none" }})}>{categoryLinks}</MobileNav>
+		<main class={sprinkles({ marginX: 64, marginY: 48 })}>
+			<slot />
+		</main>
   </body>
 </html>
