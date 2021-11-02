@@ -1,3 +1,4 @@
+import { kebabCase } from "lodash"
 import classNames from "classnames"
 import React from "react"
 import { Course } from "../models/course"
@@ -35,36 +36,53 @@ export function CourseCard({
 					width={40}
 				/>
 				<div className={sprinkles({ layout: "stack", gap: 4 })}>
-					<H
-						className={sprinkles({
-							margin: 0,
-							textStyle: "minorHeading",
-							fontWeight: "bold",
-							color: "strongText",
-						})}
-					>
-						{course.title}
-					</H>
+					<a href={course.href} target="_blank" rel="noreferrer">
+						<H
+							className={sprinkles({
+								margin: 0,
+								textStyle: "minorHeading",
+								fontWeight: "bold",
+								color: "strongText",
+							})}
+						>
+							{course.title}
+						</H>
+					</a>
 					<p className={sprinkles({ textStyle: "subHeading" })}>
 						{course.author}
 					</p>
 				</div>
 			</header>
 			<div className={courseCardInfoStyle}>
-				<span className={sprinkles({ color: course.level })}>
+				<a
+					href={`/categories/courses/levels/${course.level}`}
+					className={sprinkles({ color: course.level })}
+				>
 					{course.level}
-				</span>
+				</a>
 				<BulletDivider />
-				<span className={sprinkles({ color: course.paymentType })}>
+				<a
+					href={`/categories/courses/payment/${course.paymentType}`}
+					className={sprinkles({ color: course.paymentType })}
+				>
 					{course.paymentType}
-				</span>
+				</a>
 			</div>
 			<div className={courseCardBodyStyle}>{course.description}</div>
 			<div className={courseCardSpacerStyle} />
 			<footer className={courseCardFooterStyle}>
-				<ResourceTag icon={course.format}>{course.format}</ResourceTag>
+				<ResourceTag
+					icon={course.format}
+					href={`/categories/courses/formats/${course.format}`}
+				>
+					{course.format}
+				</ResourceTag>
 				{course.tags.map((tag) => (
-					<ResourceTag icon="topic" key={tag}>
+					<ResourceTag
+						icon="topic"
+						key={tag}
+						href={`/categories/courses/tags/${kebabCase(tag)}`}
+					>
 						{tag}
 					</ResourceTag>
 				))}

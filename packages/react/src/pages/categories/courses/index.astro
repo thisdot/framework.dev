@@ -1,0 +1,18 @@
+---
+import { courses } from '../../../data/courses'
+import BaseLayout from '../../../layouts/base.astro'
+import { Counter } from '@framework.dev/system/src/components/counter'
+import { CourseCard } from '@framework.dev/system/src/components/course-card'
+import { sprinkles } from '@framework.dev/system/src/sprinkles/sprinkles.css'
+---
+<BaseLayout>
+	<header class={sprinkles({ layout: "row", alignItems: "center", gap: 8, margin: 48 })}>
+		<h1 class={sprinkles({ textStyle: "pageHeading"  })}>React Courses</h1>
+		<Counter>{courses.length.toString()}</Counter>
+	</header>
+	<div class={sprinkles({ layout: "threeGrid", gap: 24 })}>
+		{courses.map(course => {
+			return <CourseCard course={course} headingTag="h2" />
+		})}
+	</div>
+</BaseLayout>

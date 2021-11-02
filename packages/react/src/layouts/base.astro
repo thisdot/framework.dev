@@ -1,14 +1,16 @@
 ---
 import '@framework.dev/system/src/globals/global-styles';
-import { fontHeadTags } from '@framework.dev/system/src/globals/font-import';
+import { fontHeadTags } from '@framework.dev/system/src/globals/font-import.mjs';
+import { sprinkles } from '@framework.dev/system/src/sprinkles/sprinkles.css';
+import { reactTheme } from '@framework.dev/system/src/themes/themes.css'
 const {title} = Astro.props
 ---
-<html>
+<html class={reactTheme}>
   <head>
 		{fontHeadTags}
     <title>framework.dev design system | {title}</title>
   </head>
-  <body >
+  <body class={sprinkles({ backgroundColor: "regular" })} >
 		<slot />
   </body>
 </html>
