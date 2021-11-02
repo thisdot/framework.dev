@@ -46,10 +46,6 @@ export const bookMetadata = sprinkles({
 	marginBottom: 12,
 })
 
-export const bookMetadataBullet = style({
-	color: themeColors.gray300,
-})
-
 export const bookBlurb = sprinkles({
 	textStyle: "bodyText",
 })

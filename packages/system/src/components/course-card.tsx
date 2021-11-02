@@ -11,6 +11,7 @@ import {
 	courseCardStyle,
 } from "./course-card.css"
 import { ResourceTag } from "./resource-tag"
+import { BulletDivider } from "./bullet-divider"
 
 export type CourseCardProps = React.ComponentPropsWithoutRef<"article"> & {
 	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
@@ -50,11 +51,13 @@ export function CourseCard({
 				</div>
 			</header>
 			<div className={courseCardInfoStyle}>
-				<div className={sprinkles({ color: course.level })}>{course.level}</div>
-				<div>•</div>
-				<div className={sprinkles({ color: course.paymentType })}>
+				<span className={sprinkles({ color: course.level })}>
+					{course.level}
+				</span>
+				<BulletDivider />
+				<span className={sprinkles({ color: course.paymentType })}>
 					{course.paymentType}
-				</div>
+				</span>
 			</div>
 			<div className={courseCardBodyStyle}>{course.description}</div>
 			<div className={courseCardSpacerStyle} />

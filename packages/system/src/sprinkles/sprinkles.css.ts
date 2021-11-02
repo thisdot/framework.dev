@@ -2,7 +2,9 @@ import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles"
 import { vars, themeColors } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
-const spaceInPixels = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24] as const
+const spaceInPixels = [
+	0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 32,
+] as const
 
 const spaceInRem = Object.fromEntries(
 	spaceInPixels.map((px) => [px, pxToRem(px)])
