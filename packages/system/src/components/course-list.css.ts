@@ -8,7 +8,7 @@ export const courseListStyle = style([
 		borderRadius: 12,
 		display: "grid",
 		backgroundColor: "highlight",
-		padding: 16,
+		padding: 32,
 		rowGap: 12,
 		color: "regularText",
 	}),
