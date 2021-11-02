@@ -40,10 +40,14 @@ export const bookTitle = style([
 	}),
 	{
 		color: themeColors.gray800,
+		display: "-webkit-box",
 		fontSize: pxToRem(14),
 		lineHeight: 18 / 14,
 		marginTop: 0,
-		lineClamp: 2,
+		overflow: "hidden",
+		textOverflow: "ellipsis",
+		WebkitLineClamp: 2,
+		WebkitBoxOrient: "vertical",
 	},
 ])
 
