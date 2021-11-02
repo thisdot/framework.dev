@@ -1,10 +1,12 @@
 import logo1 from "./example-assets/logo-1.png"
 import logo2 from "./example-assets/logo-2.png"
 import logo3 from "./example-assets/logo-3.png"
+import logoRedux from "./example-assets/logo-redux.png"
+import { Course } from "../models/course"
+import { Library } from "../models/library"
 import book1 from "./example-assets/book-1.png"
 import book2 from "./example-assets/book-2.png"
 import book3 from "./example-assets/book-3.png"
-import { Course } from "../models/course"
 import { Book } from "../models/book"
 
 export const exampleCategories = [
@@ -19,7 +21,11 @@ export const exampleCategories = [
 	"Companies",
 ]
 
-export const exampleTags = ["accessibility", "state management"] as const
+export const exampleTags = [
+	"accessibility",
+	"state management",
+	"redux",
+] as const
 
 export type ExampleTag = typeof exampleTags[number]
 
@@ -60,6 +66,20 @@ export const exampleCourses: Course<ExampleTag>[] = [
 		href: "https://codewithmosh.com/p/mastering-react",
 		tags: ["state management"],
 	},
+]
+
+export const exampleLibraries: Library<ExampleTag>[] = [
+	{
+		name: "Redux",
+		author: "Redux",
+		description:
+			"Predictable state container for JavaScript apps. It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.",
+		gitHubRepo: "reduxjs/redux",
+		npmPackage: "redux",
+		image: logoRedux,
+		href: "https://redux.js.org/",
+		tags: ["state management", "redux"],
+  },
 ]
 
 export const exampleBooks: Book<string>[] = [
