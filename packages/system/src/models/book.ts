@@ -6,7 +6,7 @@ export type Book<T extends string> = {
 	/** Book title, for display */
 	title: string
 	/** Book's author, for display */
-	author: string
+	authors: string[]
 	/** Cover image of the book, in 2:3 (100x150) format */
 	image: string
 	/** Short description of the book, for display */
