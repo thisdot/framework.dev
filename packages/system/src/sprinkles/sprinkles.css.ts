@@ -3,7 +3,7 @@ import { vars, themeColors } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
 const spaceInPixels = [
-	0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 32,
+	0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 32, 48, 64,
 ] as const
 
 const spaceInRem = Object.fromEntries(
@@ -141,9 +141,9 @@ const layout = defineProperties({
 				gridTemplateColumns: "200px 1fr",
 				gridAutoRows: "1fr",
 			},
-			threeGrid: {
+			landscapeCardGrid: {
 				display: "grid",
-				gridTemplateColumns: "repeat(3, 340px)",
+				gridTemplateColumns: "repeat(auto-fill, 340px) [end]",
 				justifyContent: "center",
 			},
 			stack: {

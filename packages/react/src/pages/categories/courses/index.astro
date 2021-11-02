@@ -1,0 +1,19 @@
+---
+import { courses } from '../../../data/courses'
+import BaseLayout from '../../../layouts/base.astro'
+import { CourseCard } from '@framework.dev/system/src/components/course-card'
+import { PageHeader } from '@framework.dev/system/src/components/page-header'
+import { sprinkles } from '@framework.dev/system/src/sprinkles/sprinkles.css'
+const title = "React Courses"
+---
+<head>
+	<meta name="description" content={`Browse ${title}`}/>
+</head>
+<BaseLayout title={title}>
+	<div class={sprinkles({ layout: "landscapeCardGrid", gap: 24 })}>
+		<PageHeader title={title} count={courses.length} />
+		{courses.map(course => {
+			return <CourseCard course={course} headingTag="h2" />
+		})}
+	</div>
+</BaseLayout>

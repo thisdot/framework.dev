@@ -33,7 +33,7 @@ const Template: Story<BookCardProps> = (args) => (
 	>
 		<div
 			className={sprinkles({
-				layout: "threeGrid",
+				layout: "landscapeCardGrid",
 				gap: 16,
 			})}
 		>

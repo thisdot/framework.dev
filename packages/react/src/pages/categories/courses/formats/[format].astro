@@ -1,0 +1,33 @@
+---
+import { startCase, kebabCase } from 'lodash'
+import { courseFormats } from '@framework.dev/system/src/models/course'
+import { PageHeader } from '@framework.dev/system/src/components/page-header'
+import { CourseCard } from '@framework.dev/system/src/components/course-card'
+import { sprinkles } from '@framework.dev/system/src/sprinkles/sprinkles.css'
+import { courses } from '../../../../data/courses'
+import BaseLayout from '../../../../layouts/base.astro'
+
+export function getStaticPaths() {
+	return courseFormats.map(format => ({
+		params: { 
+			format: kebabCase(format) 
+		}, 
+		props: { format } 
+	}))
+}
+
+const format = Astro.props.format as typeof courseFormats[number]
+const selectedCourses = courses.filter(course => course.format === format)
+const title = `${startCase(format)} React Courses`
+---
+<head>
+	<meta name="description" content={`Browse ${title}`}/>
+</head>
+<BaseLayout title={title}>
+	<div class={sprinkles({ layout: "landscapeCardGrid", gap: 24 })}>
+		<PageHeader title={title} count={selectedCourses.length} />
+		{selectedCourses.map(course => {
+			return <CourseCard course={course} headingTag="h2" />
+		})}
+	</div>
+</BaseLayout>
