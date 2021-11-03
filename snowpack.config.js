@@ -1,7 +1,6 @@
 module.exports = {
 	workspaceRoot: __dirname,
 	plugins: ["@vanilla-extract/snowpack-plugin"],
-	exclude: ["**/node_modules/**/*", "**/*.stories.tsx"],
 	packageOptions: {
 		knownEntrypoints: [
 			"classnames",
@@ -11,5 +10,11 @@ module.exports = {
 			"the-new-css-reset/css/reset.css",
 			"normalize.css",
 		],
+		env: {
+			NODE_ENV: true,
+		},
+	},
+	alias: {
+		"@framework/system": "../system",
 	},
 }

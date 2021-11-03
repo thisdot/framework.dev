@@ -10,11 +10,11 @@
 	"license": "ISC",
 	"scripts": {
 		"dev": "run-p dev:* --print-label",
-		"dev:system": "yarn workspace @framework.dev/system dev",
-		"dev:react": "yarn workspace @framework.dev/react dev",
+		"dev:system": "yarn workspace @framework/system dev",
+		"dev:react": "yarn workspace @framework/react dev",
 		"build": "run-p build:* --print-label",
-		"build:system": "yarn workspace @framework.dev/system build",
-		"build:react": "yarn workspace @framework.dev/react build",
+		"build:system": "yarn workspace @framework/system build",
+		"build:react": "yarn workspace @framework/react build",
 		"prepare": "husky install",
 		"check": "tsc"
 	},
@@ -52,10 +52,12 @@
 		"vite-plugin-mdx": "^3.5.9"
 	},
 	"dependencies": {
+		"@reach/dialog": "^0.16.2",
 		"@babel/core": "^7.15.8",
 		"classnames": "^2.3.1",
 		"lodash": "^4.17.21",
 		"normalize.css": "^8.0.1",
+		"process": "^0.11.10",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"the-new-css-reset": "^1.2.0"

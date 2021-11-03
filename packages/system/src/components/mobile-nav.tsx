@@ -28,7 +28,7 @@ export function MobileNav({
 }: MobileNavProps) {
 	const [menuState, setMenuState] = useState(initialMenuState)
 	useEffect(() => {
-		if (menuState === "opening") setImmediate(() => setMenuState("open"))
+		if (menuState === "opening") setTimeout(() => setMenuState("open"), 0)
 	}, [menuState])
 	return (
 		<nav className={classNames(className, mobileNavStyle)} {...props}>

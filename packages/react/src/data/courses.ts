@@ -1,4 +1,4 @@
-import { Course } from "@framework.dev/system/src/models/course"
+import { Course } from "@framework/system/src/models/course"
 import codingAddict from "./assets/coding-addict.jpeg"
 import moshHamedani from "./assets/mosh-hamedani.jpeg"
 import newline from "./assets/newline.png"

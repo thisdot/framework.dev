@@ -1,1 +1,3 @@
-module.exports = require('../../snowpack.config')
+module.exports = {
+	extends: "../../snowpack.config.js",
+}
