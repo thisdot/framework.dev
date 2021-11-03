@@ -1,3 +1,5 @@
+export const bookLevels = ["beginner", "intermediate", "advanced"] as const
+
 /**
  * Represents a book that might be of interest to
  * someone learning a given framework.
