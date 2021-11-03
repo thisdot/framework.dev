@@ -1,0 +1,32 @@
+---
+import { startCase, kebabCase } from 'lodash'
+import { libraries, libraryTags } from '../../../../data/libraries'
+import BaseLayout from '../../../../layouts/base.astro'
+import { PageHeader } from '@framework.dev/system/src/components/page-header'
+import { LibraryCard } from '@framework.dev/system/src/components/library-card'
+import { sprinkles } from '@framework.dev/system/src/sprinkles/sprinkles.css'
+
+export function getStaticPaths() {
+	return libraryTags.map(tag => ({
+		params: { 
+			tag: kebabCase(tag) 
+		}, 
+		props: { tag } 
+	}))
+}
+
+const tag = Astro.props.tag as typeof libraryTags[number]
+const selectedLibraries = libraries.filter(library => library.tags.includes(tag))
+const title = `React ${startCase(tag)} libraries`
+---
+<head>
+	<meta name="description" content={`Browse ${title}`}/>
+</head>
+<BaseLayout title={title}>
+	<div class={sprinkles({ layout: "landscapeCardGrid", gap: 24 })}>
+		<PageHeader title={title} count={selectedLibraries.length} />
+		{selectedLibraries.map(library => {
+			return <LibraryCard library={library} headingTag="h2" />
+		})}
+	</div>
+</BaseLayout>

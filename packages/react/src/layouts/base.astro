@@ -7,12 +7,7 @@ import { reactTheme } from '@framework/system/src/themes/themes.css'
 import { Sidebar } from '@framework/system/src/components/sidebar.tsx'
 import { MobileNav } from '../components/mobile-nav.tsx'
 const {title} = Astro.props
-const categories = ["courses", "books"]
-const categoryLinks = categories.map(category => (
-	`<a href="/categories/${category}">
-		${startCase(category)}
-	</a>`
-))
+const categories = ["courses", "books", "libraries"]
 ---
 <!DOCTYPE html>
 <html class={reactTheme} lang="en">
@@ -22,8 +17,16 @@ const categoryLinks = categories.map(category => (
 		<meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class={sprinkles({ backgroundColor: "regular", layout: { mobile: "stack", desktop: "sidebar" } })} >
-		<Sidebar className={sprinkles({ display: { mobile: "none", desktop: "block" }})}>{categoryLinks}</Sidebar>
 		<MobileNav client:media="(max-width:1024px)" className={sprinkles({ display: { mobile: "flex", desktop: "none" }})} categories={categories} />
+		<Sidebar className={sprinkles({ display: { mobile: "none", desktop: "block" }})}>
+			<div class={sprinkles({ layout: "stack", gap: 24 })}>
+				{categories.map(category => (
+					<a href={`/categories/${category}`}>
+						{startCase(category)}
+					</a>
+				))}
+			</div>
+		</Sidebar>
 		<main class={sprinkles({ marginX: 64, marginY: 48 })}>
 			<slot />
 		</main>

@@ -77,6 +77,7 @@ export const libraryCardInfoStyle = style([
 	{
 		gridArea: GridArea.Info,
 		textTransform: "uppercase",
+		flexWrap: "wrap",
 	},
 ])
 
