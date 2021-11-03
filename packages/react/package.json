@@ -1,5 +1,5 @@
 {
-	"name": "@framework.dev/react",
+	"name": "@framework/react",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",

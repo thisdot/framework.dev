@@ -1,4 +1,4 @@
-import { Book } from "@framework.dev/system/src/models/book"
+import { Book } from "@framework/system/src/models/book"
 
 export const bookTags = [
 	"state management",
