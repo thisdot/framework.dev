@@ -58,7 +58,7 @@ export function PodcastCard({
 			</header>
 			<div className={podcastCardInfoStyle}>
 				{podcast.tags.map((tag) => (
-					<Tag key={tag} href={`/categories/libraries/tags/${kebabCase(tag)}`}>
+					<Tag key={tag} href={`/categories/podcasts/tags/${kebabCase(tag)}`}>
 						{tag}
 					</Tag>
 				))}
@@ -72,7 +72,7 @@ export function PodcastCard({
 				)}
 			</div>
 			<div className={podcastCardSpacerStyle} />
-			<footer className={classnames(podcastCardFooterStyle, "hide-in-percy")}>
+			<footer className={podcastCardFooterStyle}>
 				<ResourceTag href={podcast.rss} icon="rss">
 					Podcast RSS Feed
 				</ResourceTag>
