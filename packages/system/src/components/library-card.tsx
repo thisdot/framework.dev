@@ -67,9 +67,6 @@ export function LibraryCard({
 					data={`https://img.shields.io/github/stars/${library.gitHubRepo}?style=flat&logo=github`}
 				/>
 				<Badge
-					data={`https://img.shields.io/stackexchange/stackoverflow/t/${library.npmPackage}?style=flat&logo=stackoverflow&label=questions&link=https://stackoverflow.com/search?q=${library.npmPackage}`}
-				/>
-				<Badge
 					data={`https://img.shields.io/npm/dm/${library.npmPackage}?style=flat&logo=npm&link=https://www.npmjs.com/package/${library.npmPackage}`}
 				/>
 				<Badge
@@ -81,11 +78,5 @@ export function LibraryCard({
 }
 
 function Badge({ data }: { data: string }) {
-	return (
-		<object
-			className={libraryCardBadgeStyle}
-			type="image/svg+xml"
-			data={data}
-		/>
-	)
+	return <img className={libraryCardBadgeStyle} src={data} />
 }
