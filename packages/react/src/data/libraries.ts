@@ -1,4 +1,4 @@
-import { Library } from "@framework.dev/system/src/models/library"
+import { Library } from "@framework/system/src/models/library"
 
 export const libraryTags = [
 	"redux",

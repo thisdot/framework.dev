@@ -2,9 +2,9 @@
 import { startCase, kebabCase } from 'lodash'
 import { libraries, libraryTags } from '../../../../data/libraries'
 import BaseLayout from '../../../../layouts/base.astro'
-import { PageHeader } from '@framework.dev/system/src/components/page-header'
-import { LibraryCard } from '@framework.dev/system/src/components/library-card'
-import { sprinkles } from '@framework.dev/system/src/sprinkles/sprinkles.css'
+import { PageHeader } from '@framework/system/src/components/page-header.tsx'
+import { LibraryCard } from '@framework/system/src/components/library-card.tsx'
+import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css'
 
 export function getStaticPaths() {
 	return libraryTags.map(tag => ({
