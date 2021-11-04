@@ -36,16 +36,18 @@ export function LibraryCard({
 					width={40}
 				/>
 				<div className={sprinkles({ layout: "stack", gap: 4 })}>
-					<H
-						className={sprinkles({
-							margin: 0,
-							textStyle: "minorHeading",
-							fontWeight: "bold",
-							color: "strongText",
-						})}
-					>
-						{library.name}
-					</H>
+					<a href={library.href} target="_blank" rel="noreferrer">
+						<H
+							className={sprinkles({
+								margin: 0,
+								textStyle: "minorHeading",
+								fontWeight: "bold",
+								color: "strongText",
+							})}
+						>
+							{library.name}
+						</H>
+					</a>
 					<p className={sprinkles({ textStyle: "subHeading" })}>
 						{library.author}
 					</p>
@@ -53,7 +55,7 @@ export function LibraryCard({
 			</header>
 			<div className={libraryCardInfoStyle}>
 				{library.tags.map((tag) => (
-					<Tag key={tag} href={kebabCase(tag)}>
+					<Tag key={tag} href={`/categories/libraries/tags/${kebabCase(tag)}`}>
 						{tag}
 					</Tag>
 				))}

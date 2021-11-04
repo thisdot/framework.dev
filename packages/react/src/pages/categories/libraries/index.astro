@@ -1,0 +1,19 @@
+---
+import { libraries } from '../../../data/libraries'
+import BaseLayout from '../../../layouts/base.astro'
+import { LibraryCard } from '@framework/system/src/components/library-card.tsx'
+import { PageHeader } from '@framework/system/src/components/page-header.tsx'
+import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css'
+const title = "React Libraries"
+---
+<head>
+	<meta name="description" content={`Browse ${title}`}/>
+</head>
+<BaseLayout title={title}>
+	<div class={sprinkles({ layout: "landscapeCardGrid", gap: 24 })}>
+		<PageHeader title={title} count={libraries.length} />
+		{libraries.map(library => {
+			return <LibraryCard library={library} headingTag="h2" />
+		})}
+	</div>
+</BaseLayout>
