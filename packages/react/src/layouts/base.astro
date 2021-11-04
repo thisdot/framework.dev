@@ -7,7 +7,7 @@ import { reactTheme } from '@framework/system/src/themes/themes.css'
 import { Sidebar } from '@framework/system/src/components/sidebar.tsx'
 import { MobileNav } from '../components/mobile-nav.tsx'
 const {title} = Astro.props
-const categories = ["courses"]
+const categories = ["courses", "books"]
 const categoryLinks = categories.map(category => (
 	`<a href="/categories/${category}">
 		${startCase(category)}
