@@ -8,6 +8,7 @@ import book1 from "./example-assets/book-1.png"
 import book2 from "./example-assets/book-2.png"
 import book3 from "./example-assets/book-3.png"
 import { Book } from "../models/book"
+import { Podcast } from "../models/podcast"
 
 export const exampleCategories = [
 	"Libraries",
@@ -79,7 +80,7 @@ export const exampleLibraries: Library<ExampleTag>[] = [
 		image: logoRedux,
 		href: "https://redux.js.org/",
 		tags: ["state management", "redux"],
-  },
+	},
 ]
 
 export const exampleBooks: Book<string>[] = [
@@ -119,5 +120,38 @@ export const exampleBooks: Book<string>[] = [
 		tags: ["fiction"],
 		description:
 			"Randy Waterhouse spearheads a movement to create a safe haven for data in a world where information equals power and big business and government seek to control the flow of knowledge.",
+	},
+]
+
+export const examplePodcasts: Podcast<string>[] = [
+	{
+		title: "Syntax",
+		image: "https://syntax.fm/static/logo.png",
+		description: "A Tasty Treats Podcast for Web Developers.",
+		rss: "http://feed.syntax.fm/rss",
+		hosts: ["Wes Bos", "Scott Tolinksi"],
+		tags: ["react", "front end"],
+		href: "https://syntax.fm",
+	},
+	{
+		title: "Syntax",
+		image:
+			"https://image.simplecastcdn.com/images/bdb43d4d-bd1d-4fbc-bd60-40f1e3299aa3/20f97d0b-6dab-4005-a995-0ab8fc2cf31c/480x480/1550288890-artwork@2x.jpg",
+		description: "Conversations about React with your favorite developers.",
+		rss: "https://feeds.simplecast.com/JoR28o79",
+		hosts: ["Michael Chan"],
+		tags: ["react", "front end"],
+		href: "https://reactpodcast.simplecast.com/",
+	},
+	{
+		title: "React Round Up",
+		image:
+			"https://devchat.tv/wp-content/uploads/2020/06/reactroundup-1-scaled-1024x1024.jpg",
+		description:
+			"Every week we get together to talk all things React, front-end, and developer careers. Whether you're working on a React web app, React Native app, or diving into development for the first time, we'll help you level up and achieve your React related goals.",
+		rss: "http://feed.syntax.fm/rss",
+		hosts: ["Paige Neidringhaus", "TJ VanToll"],
+		tags: ["react"],
+		href: "https://devchat.tv/podcasts/react-round-up/",
 	},
 ]
