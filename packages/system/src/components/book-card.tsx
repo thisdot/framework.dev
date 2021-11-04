@@ -1,4 +1,5 @@
 import classNames from "classnames"
+import { kebabCase } from "lodash"
 import {
 	bookCardStyle,
 	bookImage,
@@ -26,7 +27,9 @@ export function BookCard({
 			<header>
 				<img className={bookImage} src={book.image} />
 				<p className={sprinkles({ textStyle: "tinyCaps", color: book.level })}>
-					{book.level}
+					<a href={`/categories/books/levels/${kebabCase(book.level)}`}>
+						{book.level}
+					</a>
 				</p>
 				<a href={book.href} target="_blank" rel="noopener noreferrer">
 					<H className={bookTitle}>{book.title}</H>

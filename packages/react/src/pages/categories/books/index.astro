@@ -1,0 +1,19 @@
+---
+import { books } from '../../../data/books'
+import BaseLayout from '../../../layouts/base.astro'
+import { BookCard } from '@framework/system/src/components/book-card.tsx'
+import { PageHeader } from '@framework/system/src/components/page-header.tsx'
+import {sprinkles} from '@framework/system/src/sprinkles/sprinkles.css'
+const title = "React Books"
+---
+<head>
+	<meta name="description" content={`Browse ${title}`}/>
+</head>
+<BaseLayout title={title}>
+	<div class={sprinkles({ layout: "landscapeCardGrid", gap: 24 })}>
+		<PageHeader title={title} count={books.length} />
+		{books.map(book => {
+			return <BookCard book={book} headingTag="h2" />
+		})}
+	</div>
+</BaseLayout>
