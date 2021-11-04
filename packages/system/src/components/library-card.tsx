@@ -13,6 +13,7 @@ import {
 	libraryCardStyle,
 } from "./library-card.css"
 import { Tag } from "./tag"
+import classnames from "classnames"
 
 export type LibraryCardProps = React.ComponentPropsWithoutRef<"article"> & {
 	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
@@ -62,7 +63,7 @@ export function LibraryCard({
 			</div>
 			<div className={libraryCardBodyStyle}>{library.description}</div>
 			<div className={libraryCardSpacerStyle} />
-			<footer className={libraryCardFooterStyle}>
+			<footer className={classnames(libraryCardFooterStyle, "hide-in-percy")}>
 				<Badge
 					data={`https://img.shields.io/github/stars/${library.gitHubRepo}?style=flat&logo=github`}
 				/>
