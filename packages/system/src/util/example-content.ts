@@ -9,6 +9,7 @@ import book2 from "./example-assets/book-2.png"
 import book3 from "./example-assets/book-3.png"
 import { Book } from "../models/book"
 import { Podcast } from "../models/podcast"
+import { Community } from "../models/community"
 
 export const exampleCategories = [
 	"Libraries",
@@ -153,5 +154,30 @@ export const examplePodcasts: Podcast<string>[] = [
 		hosts: ["Paige Neidringhaus", "TJ VanToll"],
 		tags: ["react"],
 		href: "https://devchat.tv/podcasts/react-round-up/",
+	},
+]
+
+export const exampleCommunities: Community<string>[] = [
+	{
+		name: "Community One",
+		description: "Example community, full of people who, uh, commune.",
+		image: logo1,
+		tags: ["accessibility"],
+		href: "https://google.com",
+	},
+	{
+		name: "Community Two",
+		description: "This community isn't as nice if I'm being honest.",
+		image: logo2,
+		tags: ["state management"],
+		href: "https://bing.com",
+	},
+	{
+		name: "Community Three",
+		description:
+			"I can't tell you much about this community because they won't let me join.",
+		image: logo3,
+		tags: ["graphQL"],
+		href: "https://duckduckgo.com",
 	},
 ]
