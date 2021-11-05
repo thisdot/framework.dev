@@ -8,7 +8,9 @@ export const buttonStyle = recipe({
 			borderRadius: 8,
 		}),
 		{
-			display: "inline-block",
+			display: "inline-grid",
+			justifyContent: "center",
+			alignContent: "center",
 			cursor: "pointer",
 		},
 	],
@@ -21,6 +23,10 @@ export const buttonStyle = recipe({
 			medium: sprinkles({
 				paddingY: 10,
 				paddingX: 12,
+			}),
+			large: sprinkles({
+				paddingY: 28,
+				paddingX: 24,
 			}),
 		},
 		color: {
