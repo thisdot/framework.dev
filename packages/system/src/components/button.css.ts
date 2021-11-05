@@ -18,14 +18,14 @@ export const buttonStyle = recipe({
 		size: {
 			small: sprinkles({
 				paddingY: 8,
-				paddingX: 10,
-			}),
-			medium: sprinkles({
-				paddingY: 10,
 				paddingX: 12,
 			}),
+			medium: sprinkles({
+				paddingY: 12,
+				paddingX: 20,
+			}),
 			large: sprinkles({
-				paddingY: 28,
+				paddingY: 16,
 				paddingX: 24,
 			}),
 		},
