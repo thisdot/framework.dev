@@ -4,8 +4,7 @@ import { sprinkles } from "../sprinkles/sprinkles.css"
 export const buttonStyle = recipe({
 	base: [
 		sprinkles({
-			textStyle: "clickable",
-			borderRadius: 8,
+			textStyle: "button",
 		}),
 		{
 			display: "inline-grid",
@@ -17,14 +16,17 @@ export const buttonStyle = recipe({
 	variants: {
 		size: {
 			small: sprinkles({
+				borderRadius: 8,
 				paddingY: 8,
 				paddingX: 12,
 			}),
 			medium: sprinkles({
+				borderRadius: 12,
 				paddingY: 12,
 				paddingX: 20,
 			}),
 			large: sprinkles({
+				borderRadius: 12,
 				paddingY: 16,
 				paddingX: 24,
 			}),
