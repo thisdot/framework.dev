@@ -35,106 +35,97 @@ const typography = defineProperties({
 	defaultCondition: "mobile",
 	properties: {
 		textStyle: {
-			h1: {
-				color: vars.color.primaryText,
+			h600: {
 				fontSize: pxToRem(64),
 				fontWeight: 700,
 				letterSpacing: "-0.02em",
 				lineHeight: 1.06,
 			},
-			h2: {
-				color: vars.color.primaryText,
+			h500: {
 				fontSize: pxToRem(52),
 				fontWeight: 700,
 				letterSpacing: "-0.02em",
 				lineHeight: 1.11,
 			},
-			h3: {
-				color: vars.color.primaryText,
+			h400: {
 				fontSize: pxToRem(40),
 				fontWeight: 700,
 				letterSpacing: "-0.02em",
 				lineHeight: 1.2,
 			},
-			h4: {
-				color: vars.color.primaryText,
+			h300: {
 				fontSize: pxToRem(30),
 				fontWeight: 700,
 				letterSpacing: "-0.02em",
 				lineHeight: 1.2,
 			},
-			h5: {
-				color: vars.color.primaryText,
+			h200: {
 				fontSize: pxToRem(24),
 				fontWeight: 700,
 				letterSpacing: "-0.02em",
 				lineHeight: 1.32,
 			},
+			h100: {
+				fontSize: pxToRem(20),
+				fontWeight: 700,
+				letterSpacing: "-0.02em",
+				lineHeight: 1.39,
+			},
 			subtitle1: {
-				color: vars.color.primaryText,
 				fontSize: pxToRem(20),
 				fontWeight: 600,
 				letterSpacing: "-0.02em",
 				lineHeight: 1.2,
 			},
 			subtitle2: {
-				color: vars.color.primaryText,
 				fontSize: pxToRem(18),
 				fontWeight: 600,
 				letterSpacing: "-0.02em",
 				lineHeight: 1.12,
 			},
 			bodyShort1: {
-				color: vars.color.primaryText,
 				fontSize: pxToRem(16),
 				fontWeight: 400,
 				letterSpacing: "-0.01em",
 				lineHeight: 1.24,
 			},
 			bodyShort2: {
-				color: vars.color.primaryText,
 				fontSize: pxToRem(14),
 				fontWeight: 400,
 				letterSpacing: "-0.01em",
 				lineHeight: 1.28,
 			},
 			bodyShort3: {
-				color: vars.color.primaryText,
 				fontSize: pxToRem(12),
 				fontWeight: 400,
 				letterSpacing: "-0.01em",
 				lineHeight: 1.32,
 			},
 			bodyLong1: {
-				color: vars.color.primaryText,
 				fontSize: pxToRem(16),
 				fontWeight: 400,
 				letterSpacing: "-0.01em",
 				lineHeight: 1.5,
 			},
 			bodyLong2: {
-				color: vars.color.primaryText,
 				fontSize: pxToRem(14),
 				fontWeight: 400,
 				letterSpacing: "-0.01em",
 				lineHeight: 1.42,
 			},
 			bodyLong3: {
-				color: vars.color.primaryText,
 				fontSize: pxToRem(12),
 				fontWeight: 400,
 				letterSpacing: "-0.01em",
 				lineHeight: 1.48,
 			},
 			caption: {
-				color: vars.color.primaryText,
 				fontSize: pxToRem(14),
 				fontWeight: 500,
 				letterSpacing: "-0.01em",
 				lineHeight: 1,
 			},
 			overline: {
-				color: vars.color.primaryText,
 				fontSize: pxToRem(10),
 				fontWeight: 500,
 				letterSpacing: "0.05em",
@@ -142,14 +133,12 @@ const typography = defineProperties({
 				textTransform: "uppercase",
 			},
 			button: {
-				color: vars.color.primaryText,
 				fontSize: pxToRem(15),
 				fontWeight: 600,
 				letterSpacing: "-0.01em",
 				lineHeight: 16 / 15,
 			},
 			buttonSmall: {
-				color: vars.color.primaryText,
 				fontSize: pxToRem(12),
 				fontWeight: 500,
 				lineHeight: 1,
