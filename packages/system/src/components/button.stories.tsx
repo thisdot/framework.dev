@@ -8,6 +8,7 @@ export default {
 		as: "button",
 		size: "medium",
 		color: "primary",
+		disabled: false,
 		children: "Click me!",
 	},
 	argTypes: {

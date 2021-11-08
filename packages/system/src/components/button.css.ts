@@ -16,6 +16,7 @@ export const buttonStyle = recipe({
 			justifyContent: "center",
 			alignContent: "center",
 			cursor: "pointer",
+			transition: "background 0.15s ease-in-out, color 0.15s ease-in-out",
 			":disabled": {
 				cursor: "not-allowed",
 			},
@@ -43,24 +44,73 @@ export const buttonStyle = recipe({
 			primary: {
 				color: vars.themeColors.onTertiary,
 				backgroundColor: vars.themeColors.tertiary,
+				":active": {
+					backgroundColor: vars.palette.tertiary30,
+				},
+				":hover": {
+					backgroundColor: vars.palette.tertiary50,
+				},
+				":disabled": {
+					backgroundColor: vars.palette.neutral90,
+					color: vars.palette.neutral70,
+				},
 			},
 			secondary: {
 				color: vars.themeColors.onSecondaryContainer,
 				backgroundColor: vars.themeColors.secondaryContainer,
+				":active": {
+					backgroundColor: vars.palette.secondary70,
+				},
+				":hover": {
+					backgroundColor: vars.palette.secondary80,
+				},
+				":disabled": {
+					backgroundColor: vars.palette.neutral90,
+					color: vars.palette.neutral70,
+				},
 			},
 			tertiary: {
 				color: vars.themeColors.onSurface,
 				backgroundColor: vars.themeColors.surface,
 				borderColor: vars.themeColors.tertiaryBorder,
+				":active": {
+					backgroundColor: vars.palette.neutral90,
+				},
+				":hover": {
+					backgroundColor: vars.palette.neutralVariant99,
+				},
+				":disabled": {
+					backgroundColor: vars.palette.neutral90,
+					color: vars.palette.neutral70,
+				},
 			},
-
 			plain: {
 				color: vars.themeColors.tertiary,
 				backgroundColor: vars.themeColors.onTertiary,
+				":active": {
+					backgroundColor: vars.palette.neutral90,
+				},
+				":hover": {
+					backgroundColor: vars.palette.neutral99,
+				},
+				":disabled": {
+					backgroundColor: vars.themeColors.onTertiary,
+					color: vars.palette.neutral70,
+				},
 			},
 			destructive: {
 				color: vars.themeColors.onErrorContainer,
 				backgroundColor: vars.themeColors.errorContainer,
+				":active": {
+					backgroundColor: vars.palette.error70,
+				},
+				":hover": {
+					backgroundColor: vars.palette.error80,
+				},
+				":disabled": {
+					backgroundColor: vars.palette.neutral90,
+					color: vars.palette.neutral70,
+				},
 			},
 		},
 	},
