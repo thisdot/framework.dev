@@ -48,7 +48,7 @@
 		"html-element-list": "^1.0.0",
 		"husky": "^7.0.0",
 		"inquirer-autocomplete-prompt": "^1.4.0",
-		"inquirer-file-path": "^1.0.1",
+		"inquirer-file-tree-selection-prompt": "^1.0.13",
 		"lint-staged": "^11.2.4",
 		"npm-run-all": "^4.1.5",
 		"plop": "^2.7.6",
@@ -69,5 +69,8 @@
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"the-new-css-reset": "^1.2.0"
+	},
+	"resolutions": {
+		"inquirer": "7"
 	}
 }
