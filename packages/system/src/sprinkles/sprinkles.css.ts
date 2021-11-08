@@ -35,6 +35,55 @@ const typography = defineProperties({
 	defaultCondition: "mobile",
 	properties: {
 		textStyle: {
+			h1: {
+				color: vars.color.primaryText,
+				fontSize: pxToRem(64),
+				fontWeight: 700,
+				letterSpacing: "-0.02em",
+				lineHeight: 1.06,
+			},
+			h2: {
+				color: vars.color.primaryText,
+				fontSize: pxToRem(52),
+				fontWeight: 700,
+				letterSpacing: "-0.02em",
+				lineHeight: 1.11,
+			},
+			h3: {
+				color: vars.color.primaryText,
+				fontSize: pxToRem(40),
+				fontWeight: 700,
+				letterSpacing: "-0.02em",
+				lineHeight: 1.2,
+			},
+			h4: {
+				color: vars.color.primaryText,
+				fontSize: pxToRem(30),
+				fontWeight: 700,
+				letterSpacing: "-0.02em",
+				lineHeight: 1.2,
+			},
+			h5: {
+				color: vars.color.primaryText,
+				fontSize: pxToRem(24),
+				fontWeight: 700,
+				letterSpacing: "-0.02em",
+				lineHeight: 1.32,
+			},
+			subtitle1: {
+				color: vars.color.primaryText,
+				fontSize: pxToRem(20),
+				fontWeight: 600,
+				letterSpacing: "-0.02em",
+				lineHeight: 1.2,
+			},
+			subtitle2: {
+				color: vars.color.primaryText,
+				fontSize: pxToRem(18),
+				fontWeight: 600,
+				letterSpacing: "-0.02em",
+				lineHeight: 1.12,
+			},
 			tinyCaps: {
 				textTransform: "uppercase",
 				fontSize: pxToRem(10),
