@@ -1,6 +1,5 @@
 import { style } from "@vanilla-extract/css"
 import { sprinkles } from "../sprinkles/sprinkles.css"
-import { themeColors } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
 enum GridArea {
@@ -11,10 +10,9 @@ enum GridArea {
 
 export const communityCardStyle = style([
 	sprinkles({
-		border: "thin",
 		borderRadius: 12,
 		display: "grid",
-		backgroundColor: "highlight",
+		backgroundColor: "surface",
 		padding: 16,
 		rowGap: 12,
 		color: "regularText",

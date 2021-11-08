@@ -1,13 +1,11 @@
 import { style } from "@vanilla-extract/css"
 
 import { sprinkles } from "../sprinkles/sprinkles.css"
-import { themeColors } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
 export const bookListStyle = style([
 	sprinkles({
-		backgroundColor: "highlight",
-		border: "thin",
+		backgroundColor: "surface",
 		borderRadius: 12,
 		color: "regularText",
 		columnGap: 32,
@@ -39,7 +37,7 @@ export const bookTitle = style([
 		marginBottom: 4,
 	}),
 	{
-		color: themeColors.gray800,
+		color: "strongText",
 		display: "-webkit-box",
 		fontSize: pxToRem(14),
 		lineHeight: 18 / 14,

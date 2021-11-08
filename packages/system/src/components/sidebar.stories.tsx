@@ -25,7 +25,7 @@ export default {
 const Template: Story<SidebarProps> = (args) => (
 	<div className={sprinkles({ layout: "sidebar" })}>
 		<SidebarComponent {...args} />
-		<main className={sprinkles({ backgroundColor: "shaded" })} />
+		<main className={sprinkles({ backgroundColor: "surface4" })} />
 	</div>
 )
 

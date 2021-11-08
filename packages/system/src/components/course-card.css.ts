@@ -1,6 +1,5 @@
 import { style } from "@vanilla-extract/css"
 import { sprinkles } from "../sprinkles/sprinkles.css"
-import { themeColors } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
 enum GridArea {
@@ -13,10 +12,9 @@ enum GridArea {
 
 export const courseCardStyle = style([
 	sprinkles({
-		border: "thin",
 		borderRadius: 12,
 		display: "grid",
-		backgroundColor: "highlight",
+		backgroundColor: "surface",
 		padding: 16,
 		rowGap: 12,
 		color: "regularText",
@@ -64,7 +62,7 @@ export const courseCardSpacerStyle = style({
 	gridArea: GridArea.Spacer,
 	width: "100%",
 	height: "1px",
-	backgroundColor: themeColors.gray200,
+	backgroundColor: "outline",
 	alignSelf: "center",
 })
 export const courseCardInfoStyle = style([

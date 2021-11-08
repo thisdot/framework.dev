@@ -2,12 +2,11 @@ import { recipe } from "@vanilla-extract/recipes"
 import { style } from "@vanilla-extract/css"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { pxToRem } from "../util/style-utils"
-import { themeColors } from "../themes/themes.css"
 
 export const mobileNavStyle = style([
 	sprinkles({
 		color: "strongText",
-		backgroundColor: "highlight",
+		backgroundColor: "surface",
 		paddingX: 16,
 		display: "flex",
 		justifyContent: "space-between",
@@ -86,8 +85,8 @@ export const dialogContentStyle = recipe({
 export const menuCloseButtonStyle = style([
 	sprinkles({
 		border: "thin",
-		color: "regularText",
-		backgroundColor: "highlight",
+		backgroundColor: "surface",
+		color: "softText",
 		borderRadius: 8,
 	}),
 	{
@@ -100,6 +99,5 @@ export const menuCloseButtonStyle = style([
 		display: "grid",
 		justifyContent: "center",
 		alignContent: "center",
-		color: themeColors.gray600,
 	},
 ])

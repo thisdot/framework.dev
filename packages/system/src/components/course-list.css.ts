@@ -1,13 +1,11 @@
 import { style } from "@vanilla-extract/css"
 import { sprinkles } from "../sprinkles/sprinkles.css"
-import { themeColors } from "../themes/themes.css"
 
 export const courseListStyle = style([
 	sprinkles({
-		border: "thin",
 		borderRadius: 12,
 		display: "grid",
-		backgroundColor: "highlight",
+		backgroundColor: "surface",
 		padding: 32,
 		rowGap: 12,
 		color: "regularText",
@@ -27,7 +25,7 @@ export const courseListCourseSpacerStyle = style([
 	{
 		width: "100%",
 		height: "1px",
-		backgroundColor: themeColors.gray200,
+		backgroundColor: "outline",
 		alignSelf: "center",
 	},
 ])
@@ -38,5 +36,5 @@ export const courseListCourseInfoStyle = sprinkles({
 })
 
 export const courseListCourseMetadataBullet = style({
-	color: themeColors.gray300,
+	color: "outline",
 })

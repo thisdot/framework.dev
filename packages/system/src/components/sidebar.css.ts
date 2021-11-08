@@ -4,7 +4,8 @@ import { pxToRem } from "../util/style-utils"
 
 export const sidebarStyle = style([
 	sprinkles({
-		backgroundColor: "highlight",
+		backgroundColor: "surface",
+		borderRight: "thin",
 	}),
 	{ height: "100%" },
 ])
