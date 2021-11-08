@@ -1,5 +1,5 @@
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles"
-import { vars, themeColors } from "../themes/themes.css"
+import { vars } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
 const spaceInPixels = [
@@ -21,7 +21,7 @@ const space = {
 }
 
 const borders = {
-	thin: `1px solid ${themeColors.gray200}`,
+	thin: `1px solid ${vars.themeColors.outline}`,
 }
 
 const conditions = {
@@ -39,48 +39,41 @@ const typography = defineProperties({
 				textTransform: "uppercase",
 				fontSize: pxToRem(10),
 				lineHeight: 1,
-				color: vars.color.text,
 				fontWeight: 600,
 			},
 			subHeading: {
 				fontSize: pxToRem(12),
 				lineHeight: 16 / 12,
-				color: vars.color.weakText,
 			},
 			bodyText: {
 				fontSize: pxToRem(14),
 				lineHeight: 20 / 14,
-				color: vars.color.text,
+				color: vars.palette.neutral20,
 			},
 			clickable: {
 				fontSize: pxToRem(14),
 				lineHeight: 16 / 14,
 				fontWeight: 600,
-				color: vars.color.text,
 			},
 			minorHeading: {
 				fontSize: pxToRem(16),
 				lineHeight: 20 / 16,
 				fontWeight: 600,
-				color: vars.color.strongText,
 			},
 			sectionHeading: {
 				fontSize: pxToRem(20),
 				lineHeight: 24 / 20,
 				fontWeight: 600,
-				color: vars.color.strongText,
 			},
 			pageHeading: {
 				fontSize: pxToRem(30),
 				lineHeight: 36 / 30,
 				fontWeight: 600,
-				color: vars.color.strongText,
 			},
 			siteHeading: {
 				fontSize: pxToRem(52),
 				lineHeight: 58 / 52,
 				fontWeight: 600,
-				color: vars.color.strongText,
 			},
 			large: {
 				fontSize: pxToRem(20),
@@ -160,26 +153,9 @@ const layout = defineProperties({
 
 const colors = defineProperties({
 	properties: {
-		backgroundColor: {
-			regular: vars.color.background,
-			highlight: vars.color.highlightBackground,
-			shaded: vars.color.shadedBackground,
-			primary: vars.color.primary,
-			destructiveAction: themeColors.redBg,
-		},
-		color: {
-			regularText: vars.color.text,
-			strongText: vars.color.strongText,
-			weakText: vars.color.weakText,
-			primaryText: vars.color.primary,
-			primaryButtonText: vars.color.primaryText,
-			destructiveButtonText: themeColors.red,
-			beginner: vars.color.beginner,
-			intermediate: vars.color.intermediate,
-			advanced: vars.color.advanced,
-			free: vars.color.weakText,
-			paid: vars.color.paid,
-		},
+		backgroundColor: vars.themeColors,
+		color: vars.themeColors,
+		borderColor: vars.themeColors,
 		borderTop: borders,
 		borderBottom: borders,
 		borderLeft: borders,

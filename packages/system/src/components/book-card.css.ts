@@ -1,16 +1,12 @@
 import { style } from "@vanilla-extract/css"
-import { recipe } from "@vanilla-extract/recipes"
-
 import { sprinkles } from "../sprinkles/sprinkles.css"
-import { themeColors } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
 export const bookCardStyle = style([
 	sprinkles({
-		border: "thin",
 		borderRadius: 12,
 		display: "grid",
-		backgroundColor: "highlight",
+		backgroundColor: "surface",
 		padding: 20,
 		rowGap: 12,
 		color: "regularText",

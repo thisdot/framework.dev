@@ -17,7 +17,7 @@ const categories = ["courses", "books", "libraries"]
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="UTF-8"/>
   </head>
-  <body class={sprinkles({ backgroundColor: "regular", layout: { mobile: "stack", desktop: "sidebar" } })} >
+  <body class={sprinkles({ backgroundColor: "surface4", layout: { mobile: "stack", desktop: "sidebar" } })} >
 		<MobileNav client:media="(max-width:1024px)" className={sprinkles({ display: { mobile: "flex", desktop: "none" }})} categories={categories} />
 		<Sidebar className={sprinkles({ display: { mobile: "none", desktop: "block" }})}>
 			<div class={sprinkles({ layout: "stack", gap: 24 })}>

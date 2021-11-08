@@ -33,7 +33,7 @@ export function CourseList({
 							<BulletDivider />
 							<span
 								className={sprinkles({
-									color: course.paymentType,
+									color: "regularText",
 								})}
 							>
 								{course.paymentType}

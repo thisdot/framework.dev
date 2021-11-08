@@ -63,7 +63,7 @@ export function CourseCard({
 				<BulletDivider />
 				<a
 					href={`/categories/courses/payment/${course.paymentType}`}
-					className={sprinkles({ color: course.paymentType })}
+					className={sprinkles({ color: "regularText" })}
 				>
 					{course.paymentType}
 				</a>

@@ -17,7 +17,7 @@ export default {
 const Template: Story<PodcastCardProps> = (args) => (
 	<div
 		className={sprinkles({
-			backgroundColor: "shaded",
+			backgroundColor: "surface4",
 			padding: 16,
 		})}
 	>

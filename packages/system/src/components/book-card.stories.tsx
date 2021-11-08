@@ -1,7 +1,6 @@
 import { Story, Meta } from "@storybook/react"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { BookCard as BookCardComponent, BookCardProps } from "./book-card"
-import { themeColors } from "../themes/themes.css"
 import { exampleBooks } from "../util/example-content"
 
 export default {
@@ -10,24 +9,12 @@ export default {
 	args: {
 		headingTag: "h1",
 	},
-	parameters: {
-		backgrounds: {
-			default: "Light Theme Background",
-			values: [
-				{
-					name: "Light Theme Background",
-					value: themeColors.gray100,
-					default: true,
-				},
-			],
-		},
-	},
 } as Meta
 
 const Template: Story<BookCardProps> = (args) => (
 	<div
 		className={sprinkles({
-			backgroundColor: "shaded",
+			backgroundColor: "surface4",
 			padding: 16,
 		})}
 	>

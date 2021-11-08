@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react"
+import { vars } from "../themes/themes.css"
 import { exampleBooks } from "../util/example-content"
-import { themeColors } from "../themes/themes.css"
 import { BookList as BookListComponent, BookListProps } from "./book-list"
 
 export default {
@@ -15,7 +15,7 @@ export default {
 			values: [
 				{
 					name: "Light Theme Background",
-					value: themeColors.gray100,
+					value: vars.themeColors.surface4,
 					default: true,
 				},
 			],

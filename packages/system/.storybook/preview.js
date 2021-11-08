@@ -1,5 +1,5 @@
 import "../src/globals/global-styles"
-import { reactTheme, vueTheme } from "../src/themes/themes.css"
+import { reactTheme, reactThemeDark } from "../src/themes/themes.css"
 import { addDecorator } from "@storybook/react"
 import { withThemes } from "storybook-addon-themes/react"
 import { useEffect } from "react"
@@ -25,8 +25,8 @@ export const parameters = {
 		Decorator,
 		default: "react",
 		list: [
-			{ name: "react", class: reactTheme, color: "#61dafb" },
-			{ name: "vue", class: vueTheme, color: "#4fc08d" },
+			{ name: "react", class: reactTheme, color: "#A6EEFF" },
+			{ name: "reactDark", class: reactThemeDark, color: "#004E5C" },
 		],
 	},
 }

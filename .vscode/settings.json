@@ -1,5 +1,7 @@
 {
 	"editor.formatOnSave": true,
 	"editor.detectIndentation": false,
-	"editor.insertSpaces": false
+	"editor.insertSpaces": false,
+	"xd.globalEditor": false,
+	"xd.lastPackage": "/Users/jae/Downloads/material-theme 2"
 }

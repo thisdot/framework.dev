@@ -31,12 +31,12 @@ export const buttonStyle = recipe({
 		},
 		color: {
 			primary: sprinkles({
-				color: "primaryButtonText",
-				backgroundColor: "primary",
+				color: "onPrimaryContainer",
+				backgroundColor: "primaryContainer",
 			}),
 			destructive: sprinkles({
-				color: "destructiveButtonText",
-				backgroundColor: "destructiveAction",
+				color: "onErrorContainer",
+				backgroundColor: "errorContainer",
 			}),
 		},
 	},
