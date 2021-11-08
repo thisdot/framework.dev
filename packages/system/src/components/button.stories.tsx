@@ -17,11 +17,11 @@ export default {
 			control: { type: "radio" },
 		},
 		size: {
-			options: ["small", "medium"],
+			options: ["small", "medium", "large"],
 			control: { type: "radio" },
 		},
 		color: {
-			options: ["primary", "destructive"],
+			options: ["primary", "secondary", "tertiary", "plain", "destructive"],
 			control: { type: "radio" },
 		},
 	},
