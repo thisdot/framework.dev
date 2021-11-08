@@ -8,7 +8,7 @@ module.exports = function (
 	plop
 ) {
 	plop.setPrompt("autocomplete", require("inquirer-autocomplete-prompt"))
-	plop.setPrompt("file-selector", require("inquirer-file-path"))
+	plop.setPrompt("file-selector", require("inquirer-file-tree-selection-prompt"))
 	plop.setHelper("startCase", _.startCase)
 	plop.setHelper("kebabCase", _.kebabCase)
 	plop.setHelper("camelCase", _.camelCase)
