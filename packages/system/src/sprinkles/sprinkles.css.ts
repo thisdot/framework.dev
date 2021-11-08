@@ -163,12 +163,6 @@ const typography = defineProperties({
 				lineHeight: 16 / 14,
 				fontWeight: 600,
 			},
-			button: {
-				fontSize: pxToRem(15),
-				lineHeight: 16 / 15,
-				fontWeight: 600,
-				letterSpacing: "-0.01em",
-			},
 			minorHeading: {
 				fontSize: pxToRem(16),
 				lineHeight: 20 / 16,

@@ -1,6 +1,6 @@
 import { recipe } from "@vanilla-extract/recipes"
 import { sprinkles } from "../sprinkles/sprinkles.css"
-import { reactColorPalette } from "../themes/react-color-scheme"
+import { vars } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
 export const buttonStyle = recipe({
@@ -16,6 +16,9 @@ export const buttonStyle = recipe({
 			justifyContent: "center",
 			alignContent: "center",
 			cursor: "pointer",
+			":disabled": {
+				cursor: "not-allowed",
+			},
 		},
 	],
 	variants: {
@@ -37,32 +40,28 @@ export const buttonStyle = recipe({
 			}),
 		},
 		color: {
-			primary: sprinkles({
-				color: "onTertiary",
-				backgroundColor: "tertiary",
-			}),
-			secondary: sprinkles({
-				color: "onSecondaryContainer",
-				backgroundColor: "secondaryContainer",
-			}),
-			tertiary: [
-				sprinkles({
-					color: "onSurface",
-					backgroundColor: "surface",
-				}),
-				{
-					borderColor: reactColorPalette.neutral80,
-				},
-			],
-			plain: sprinkles({
-				color: "tertiary",
-				backgroundColor: "onTertiary",
-			}),
+			primary: {
+				color: vars.themeColors.onTertiary,
+				backgroundColor: vars.themeColors.tertiary,
+			},
+			secondary: {
+				color: vars.themeColors.onSecondaryContainer,
+				backgroundColor: vars.themeColors.secondaryContainer,
+			},
+			tertiary: {
+				color: vars.themeColors.onSurface,
+				backgroundColor: vars.themeColors.surface,
+				borderColor: vars.themeColors.tertiaryBorder,
+			},
 
-			destructive: sprinkles({
-				color: "onErrorContainer",
-				backgroundColor: "errorContainer",
-			}),
+			plain: {
+				color: vars.themeColors.tertiary,
+				backgroundColor: vars.themeColors.onTertiary,
+			},
+			destructive: {
+				color: vars.themeColors.onErrorContainer,
+				backgroundColor: vars.themeColors.errorContainer,
+			},
 		},
 	},
 	defaultVariants: {
