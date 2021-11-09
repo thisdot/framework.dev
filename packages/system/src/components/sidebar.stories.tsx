@@ -2,6 +2,7 @@ import { Story, Meta } from "@storybook/react"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { exampleCategories } from "../util/example-content"
 import { Sidebar as SidebarComponent, SidebarProps } from "./sidebar"
+import { NavItem } from "./nav-item"
 
 export default {
 	title: "Sidebar",
@@ -11,11 +12,11 @@ export default {
 	},
 	args: {
 		children: (
-			<div className={sprinkles({ layout: "stack", gap: 24 })}>
+			<div className={sprinkles({ layout: "stack", gap: 8 })}>
 				{exampleCategories.map((category) => (
-					<a href={`#${category}`} key={category}>
+					<NavItem href={`#${category}`} key={category}>
 						{category}
-					</a>
+					</NavItem>
 				))}
 			</div>
 		),
