@@ -1,10 +1,18 @@
+import classNames from "classnames"
 import React from "react"
+import { iconStyle } from "./icon.css"
 import { IconProps } from "./shared-icon-types"
 
 export const {{pascalCase name}}Icon = React.forwardRef<SVGSVGElement, IconProps>(
-	function {{pascalCase name}}Icon(props, ref) {
+	function {{pascalCase name}}Icon({ className, ...props }, ref) {
 		return (
-			<svg viewBox={/* insert viewbox here */} fill="currentColor" ref={ref} {...props}>
+			<svg
+				className={classNames(className, iconStyle)}
+				viewBox={/* insert viewbox here */}
+				fill="currentColor"
+				ref={ref}
+				{...props}
+			>
 				{/* insert svg contents here, stripped of any style properties */}
 			</svg>
 		)
