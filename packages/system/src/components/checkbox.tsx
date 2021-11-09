@@ -2,7 +2,7 @@ import classNames from "classnames"
 import React from "react"
 import { useId } from "@reach/auto-id"
 import { sprinkles } from "../sprinkles/sprinkles.css"
-import { checkboxLabelStyle, checkboxStyle } from "./checkbox.css"
+import { checkboxLabelStyle } from "./checkbox.css"
 
 export interface CheckboxProps extends React.ComponentPropsWithoutRef<"input"> {
 	label: string
@@ -16,7 +16,7 @@ export function Checkbox({
 }: CheckboxProps) {
 	const id = useId(customIdFromProps)
 	return (
-		<div className={classNames(className, checkboxStyle)}>
+		<div className={className}>
 			<input
 				type="checkbox"
 				className={sprinkles({ hidden: "visually" })}
