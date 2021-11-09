@@ -44,11 +44,14 @@ export const buttonStyle = recipe({
 			primary: {
 				color: vars.themeColors.onTertiary,
 				backgroundColor: vars.themeColors.tertiary,
-				":active": {
-					backgroundColor: vars.palette.tertiary30,
+				":focus": {
+					backgroundColor: vars.palette.tertiary50,
 				},
 				":hover": {
 					backgroundColor: vars.palette.tertiary50,
+				},
+				":active": {
+					backgroundColor: vars.palette.tertiary30,
 				},
 				":disabled": {
 					backgroundColor: vars.palette.neutral90,
@@ -58,11 +61,14 @@ export const buttonStyle = recipe({
 			secondary: {
 				color: vars.themeColors.onSecondaryContainer,
 				backgroundColor: vars.themeColors.secondaryContainer,
-				":active": {
-					backgroundColor: vars.palette.secondary70,
+				":focus": {
+					backgroundColor: vars.palette.secondary80,
 				},
 				":hover": {
 					backgroundColor: vars.palette.secondary80,
+				},
+				":active": {
+					backgroundColor: vars.palette.secondary70,
 				},
 				":disabled": {
 					backgroundColor: vars.palette.neutral90,
@@ -73,11 +79,14 @@ export const buttonStyle = recipe({
 				color: vars.themeColors.onSurface,
 				backgroundColor: vars.themeColors.surface,
 				borderColor: vars.themeColors.tertiaryBorder,
-				":active": {
-					backgroundColor: vars.palette.neutral90,
+				":focus": {
+					backgroundColor: vars.palette.neutralVariant99,
 				},
 				":hover": {
 					backgroundColor: vars.palette.neutralVariant99,
+				},
+				":active": {
+					backgroundColor: vars.palette.neutral90,
 				},
 				":disabled": {
 					backgroundColor: vars.palette.neutral90,
@@ -87,11 +96,14 @@ export const buttonStyle = recipe({
 			plain: {
 				color: vars.themeColors.tertiary,
 				backgroundColor: vars.themeColors.onTertiary,
-				":active": {
-					backgroundColor: vars.palette.neutral90,
+				":focus": {
+					backgroundColor: vars.palette.neutral99,
 				},
 				":hover": {
 					backgroundColor: vars.palette.neutral99,
+				},
+				":active": {
+					backgroundColor: vars.palette.neutral90,
 				},
 				":disabled": {
 					backgroundColor: vars.themeColors.onTertiary,
@@ -101,11 +113,14 @@ export const buttonStyle = recipe({
 			destructive: {
 				color: vars.themeColors.onErrorContainer,
 				backgroundColor: vars.themeColors.errorContainer,
-				":active": {
-					backgroundColor: vars.palette.error70,
+				":focus": {
+					backgroundColor: vars.palette.error80,
 				},
 				":hover": {
 					backgroundColor: vars.palette.error80,
+				},
+				":active": {
+					backgroundColor: vars.palette.error70,
 				},
 				":disabled": {
 					backgroundColor: vars.palette.neutral90,
