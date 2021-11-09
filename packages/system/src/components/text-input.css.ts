@@ -9,22 +9,22 @@ export const textInputContainerStyle = style([
 		gap: 4,
 	}),
 	{
-		flexDirection: "column-reverse"
+		flexDirection: "column-reverse",
 	},
 ])
 
 export const textInputLabelStyle = style([
 	sprinkles({
 		color: "onSurface",
-		textStyle: "caption"
+		textStyle: "caption",
 	}),
 	{
 		selectors: {
-			"input:disabled + &": {
-				opacity: 0.5
-			}
+			"*:disabled + &": {
+				opacity: 0.5,
+			},
 		},
-	}
+	},
 ])
 
 export const textInputBoxStyle = style([
@@ -34,7 +34,9 @@ export const textInputBoxStyle = style([
 		paddingX: 16,
 		color: "onSurface",
 		border: "thin",
-		textStyle: "caption"
+		textStyle: "caption",
+		display: "grid",
+		alignItems: "center",
 	}),
 	{
 		borderColor: vars.palette.neutral80,
@@ -43,10 +45,10 @@ export const textInputBoxStyle = style([
 			borderColor: vars.themeColors.tertiary,
 		},
 		":disabled": {
-			opacity: 0.5
+			opacity: 0.5,
 		},
 		selectors: {
-			"&:not(:placeholder-shown):not(:focus)": {
+			'&:not(:placeholder-shown):not(:focus):not([value=""])': {
 				borderColor: vars.themeColors.outline,
 			},
 		},

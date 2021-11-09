@@ -32,9 +32,9 @@ applications:
         build:
           commands:
             - yarn build:system
-        postBuild:
-          commands:
-            - yarn workspace @framework/system percy
+        # postBuild:
+        #   commands:
+        #     - yarn workspace @framework/system percy
       artifacts:
         baseDirectory: dist
         files:
