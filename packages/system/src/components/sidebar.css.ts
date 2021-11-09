@@ -25,4 +25,4 @@ export const sidebarHeaderStyle = style([
 	},
 ])
 
-export const sidebarBodyStyle = sprinkles({ padding: 24, color: "regularText" })
+export const sidebarBodyStyle = sprinkles({ padding: 12, color: "regularText" })

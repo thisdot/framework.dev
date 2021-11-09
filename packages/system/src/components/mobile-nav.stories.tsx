@@ -1,6 +1,7 @@
 import { Story, Meta } from "@storybook/react"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { exampleCategories } from "../util/example-content"
+import { NavItem } from "./nav-item"
 import { MobileNav as MobileNavComponent, MobileNavProps } from "./mobile-nav"
 
 export default {
@@ -17,11 +18,11 @@ export default {
 	},
 	args: {
 		children: (
-			<div className={sprinkles({ layout: "stack", gap: 24 })}>
+			<div className={sprinkles({ layout: "stack", gap: 8 })}>
 				{exampleCategories.map((category) => (
-					<a href={`#${category}`} key={category}>
+					<NavItem href={`#${category}`} key={category}>
 						{category}
-					</a>
+					</NavItem>
 				))}
 			</div>
 		),

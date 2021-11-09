@@ -13,7 +13,11 @@ module.exports = {
 		"prettier",
 	],
 	rules: {
+		// This is not necessary and conflicts with typescript's no unused vars
 		"react/react-in-jsx-scope": "off",
+		// This causes false positives when props are correctly inferred
+		"react/prop-types": "off",
+		// Empty interfaces are useful as aliases to be filled in later
 		"@typescript-eslint/no-empty-interface": "off",
 	},
 	settings: {
