@@ -47,6 +47,23 @@ module.exports = function (
 			},
 		],
 	})
+	plop.setGenerator("icon", {
+		description: "design system icon",
+		prompts: [
+			{
+				type: "input",
+				name: "name",
+				message: "name of the icon (without the word 'icon', it will be appended automatically)",
+			},
+		],
+		actions: [
+			{
+				type: "add",
+				path: "packages/system/src/icons/{{kebabCase name}}-icon.tsx",
+				templateFile: "plop-templates/icon.hbs",
+			},
+		],
+	})
 	plop.setGenerator("color scheme", {
 		description: "generate a color scheme from a DSP tokens file",
 		prompts: [
