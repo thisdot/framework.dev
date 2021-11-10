@@ -3,11 +3,17 @@ import React from "react"
 import { tagStyle } from "./tag.css"
 
 export interface TagProps
-	extends React.AnchorHTMLAttributes<HTMLAnchorElement> {}
+	extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+	color?: Parameters<typeof tagStyle>[0]["color"]
+}
 
-export function Tag({ children, className, href, ...props }: TagProps) {
+export function Tag({ children, color, className, href, ...props }: TagProps) {
 	return (
-		<a href={href} className={classNames(className, tagStyle)} {...props}>
+		<a
+			href={href}
+			className={classNames(className, tagStyle({ color }))}
+			{...props}
+		>
 			{children}
 		</a>
 	)

@@ -71,10 +71,9 @@ export const libraryCardSpacerStyle = style({
 })
 
 export const libraryCardInfoStyle = style([
-	sprinkles({ textStyle: "tinyCaps", layout: "row", gap: 6 }),
+	sprinkles({ layout: "row", gap: 6 }),
 	{
 		gridArea: GridArea.Info,
-		textTransform: "uppercase",
 		flexWrap: "wrap",
 	},
 ])
