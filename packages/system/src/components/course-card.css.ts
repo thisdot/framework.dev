@@ -50,11 +50,10 @@ export const courseCardBodyStyle = style([
 ])
 export const courseCardFooterStyle = style([
 	sprinkles({
-		layout: "row",
-		gap: 4,
+		layout: "stack",
+		gap: 12,
 	}),
 	{
-		flexWrap: "wrap",
 		gridArea: GridArea.Footer,
 	},
 ])
