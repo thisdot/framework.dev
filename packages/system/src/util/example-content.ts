@@ -12,6 +12,7 @@ import { Book } from "../models/book"
 import { Podcast } from "../models/podcast"
 import { Community } from "../models/community"
 import { Company } from "../models/company"
+import { CodeExample } from "../models/code-example"
 
 export const exampleCategories = [
 	"Libraries",
@@ -192,5 +193,15 @@ export const exampleCompanies: Company[] = [
 		image: company1,
 		numberOfEmployees: "10 to 50",
 		href: "https://labs.thisdot.co",
+	},
+]
+
+export const exampleCodeExamples: CodeExample<ExampleTag>[] = [
+	{
+		title: "Redux Essentials: Counter",
+		author: "reduxjs",
+		description: "A basic counter implemented using Redux",
+		href: "https://codesandbox.io/s/un8my",
+		tags: ["redux", "state management"],
 	},
 ]
