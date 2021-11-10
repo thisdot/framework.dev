@@ -1,6 +1,7 @@
 import logo1 from "./example-assets/logo-1.png"
 import logo2 from "./example-assets/logo-2.png"
 import logo3 from "./example-assets/logo-3.png"
+import company1 from "./example-assets/company1.png"
 import logoRedux from "./example-assets/logo-redux.png"
 import { Course } from "../models/course"
 import { Library } from "../models/library"
@@ -10,6 +11,7 @@ import book3 from "./example-assets/book-3.png"
 import { Book } from "../models/book"
 import { Podcast } from "../models/podcast"
 import { Community } from "../models/community"
+import { Company } from "../models/company"
 
 export const exampleCategories = [
 	"Libraries",
@@ -179,5 +181,16 @@ export const exampleCommunities: Community<string>[] = [
 		image: logo3,
 		tags: ["graphQL"],
 		href: "https://duckduckgo.com",
+	},
+]
+
+export const exampleCompanies: Company[] = [
+	{
+		name: "This Dot",
+		description:
+			"Provides architectural guidance, staff augmentation, on demand Subject Matter Experts, temporary CTOs, one-on-one pairing, mentorship, and open source strategy support.",
+		image: company1,
+		numberOfEmployees: "10 to 50",
+		href: "https://labs.thisdot.co",
 	},
 ]
