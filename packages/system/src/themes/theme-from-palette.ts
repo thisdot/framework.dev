@@ -121,9 +121,12 @@ export function lightThemeFromPalette(p: ColorPalette) {
 			surface3: surface.mix(primary, 0.11).hex(),
 			surface4: surface.mix(primary, 0.12).hex(),
 			surface5: surface.mix(primary, 0.14).hex(),
-			beginner: "rgba(212, 240, 249, 0.75)",
-			intermediate: "rgba(245, 228, 207, 0.75)",
-			advanced: "rgba(239, 212, 212, 0.75)",
+			beginner: "rgba(212, 249, 235, 0.75)",
+			beginnerHover: "#D4F9EC",
+			intermediate: "rgba(223, 207, 245, 0.75)",
+			intermediateHover: "#E0CFF5",
+			advanced: "rgba(239, 209, 191, 0.75)",
+			advancedHover: "#EFD0BF",
 		},
 	}
 }
@@ -166,9 +169,12 @@ export function darkThemeFromPalette(p: ColorPalette) {
 			surface3: surface.mix(primary, 0.11).hex(),
 			surface4: surface.mix(primary, 0.12).hex(),
 			surface5: surface.mix(primary, 0.14).hex(),
-			beginner: "rgba(212, 240, 249, 0.75)",
-			intermediate: "rgba(245, 228, 207, 0.75)",
-			advanced: "rgba(239, 212, 212, 0.75)",
+			beginner: "rgba(212, 249, 235, 0.75)",
+			beginnerHover: "#D4F9EC",
+			intermediate: "rgba(223, 207, 245, 0.75)",
+			intermediateHover: "#E0CFF5",
+			advanced: "rgba(239, 209, 191, 0.75)",
+			advancedHover: "#EFD0BF",
 		},
 	}
 }

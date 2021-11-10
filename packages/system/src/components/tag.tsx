@@ -1,20 +1,18 @@
 import classNames from "classnames"
 import React from "react"
-import { tagStyle } from "./tag.css"
+import { tagContainerStyle, tagTextStyle } from "./tag.css"
 
 export interface TagProps
 	extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-	color?: Parameters<typeof tagStyle>[0]["color"]
+	color?: Parameters<typeof tagContainerStyle>[0]["color"]
 }
 
 export function Tag({ children, color, className, href, ...props }: TagProps) {
 	return (
-		<a
-			href={href}
-			className={classNames(className, tagStyle({ color }))}
-			{...props}
-		>
-			{children}
-		</a>
+		<span className={classNames(className, tagContainerStyle({ color }))}>
+			<a href={href} className={tagTextStyle} {...props}>
+				{children}
+			</a>
+		</span>
 	)
 }
