@@ -7,7 +7,6 @@ import {
 	toolCardBodyStyle,
 	toolCardFooterStyle,
 	toolCardHeaderStyle,
-	toolCardSpacerStyle,
 	toolCardStyle,
 } from "./tool-card.css"
 import { ResourceTag } from "./resource-tag"
@@ -59,7 +58,6 @@ export function ToolCard({
 				</div>
 			</header>
 			<div className={toolCardBodyStyle}>{tool.description}</div>
-			<div className={toolCardSpacerStyle} />
 			<footer className={toolCardFooterStyle}>
 				<div className={sprinkles({ layout: "row", gap: 4 })}>
 					{/* <ResourceTag

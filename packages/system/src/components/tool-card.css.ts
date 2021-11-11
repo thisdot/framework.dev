@@ -5,7 +5,6 @@ import { pxToRem } from "../util/style-utils"
 enum GridArea {
 	Header = "header",
 	Body = "body",
-	Spacer = "spacer",
 	Footer = "footer",
 }
 
@@ -19,11 +18,10 @@ export const toolCardStyle = style([
 		color: "regularText",
 	}),
 	{
-		gridTemplateRows: `min-content 1fr ${pxToRem(32 - 12 - 12)} min-content`,
+		gridTemplateRows: `min-content 1fr min-content`,
 		gridTemplateAreas: `
 			"${GridArea.Header}"
 			"${GridArea.Body}"
-			"${GridArea.Spacer}"
 			"${GridArea.Footer}"
 		`,
 		minHeight: pxToRem(256),
@@ -56,11 +54,3 @@ export const toolCardFooterStyle = style([
 		gridArea: GridArea.Footer,
 	},
 ])
-
-export const toolCardSpacerStyle = style({
-	gridArea: GridArea.Spacer,
-	width: "100%",
-	height: "1px",
-	backgroundColor: "outline",
-	alignSelf: "center",
-})

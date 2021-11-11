@@ -8,7 +8,6 @@ import {
 	courseCardFooterStyle,
 	courseCardHeaderStyle,
 	courseCardInfoStyle,
-	courseCardSpacerStyle,
 	courseCardStyle,
 } from "./course-card.css"
 import { ResourceTag } from "./resource-tag"
@@ -63,7 +62,6 @@ export function CourseCard({
 				</a>
 			</div>
 			<div className={courseCardBodyStyle}>{course.description}</div>
-			<div className={courseCardSpacerStyle} />
 			<footer className={courseCardFooterStyle}>
 				<div className={sprinkles({ layout: "row", gap: 4 })}>
 					<ResourceTag

@@ -6,7 +6,6 @@ enum GridArea {
 	Info = "info",
 	Header = "header",
 	Body = "body",
-	Spacer = "spacer",
 	Footer = "footer",
 }
 
@@ -20,14 +19,11 @@ export const courseCardStyle = style([
 		color: "regularText",
 	}),
 	{
-		gridTemplateRows: `min-content min-content 1fr ${pxToRem(
-			32 - 12 - 12
-		)} min-content`,
+		gridTemplateRows: `min-content min-content 1fr min-content`,
 		gridTemplateAreas: `
 			"${GridArea.Info}"
 			"${GridArea.Header}"
 			"${GridArea.Body}"
-			"${GridArea.Spacer}"
 			"${GridArea.Footer}"
 		`,
 		minHeight: pxToRem(256),
@@ -57,13 +53,7 @@ export const courseCardFooterStyle = style([
 		gridArea: GridArea.Footer,
 	},
 ])
-export const courseCardSpacerStyle = style({
-	gridArea: GridArea.Spacer,
-	width: "100%",
-	height: "1px",
-	backgroundColor: "outline",
-	alignSelf: "center",
-})
+
 export const courseCardInfoStyle = style([
 	sprinkles({ textStyle: "tinyCaps" }),
 	{
