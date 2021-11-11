@@ -8,8 +8,8 @@ export default {
 		color: {
 			options: ["neutral", "beginner", "intermediate", "advanced"],
 			control: { type: "radio" },
-		}
-	}
+		},
+	},
 } as Meta
 
 const Template: Story<TagProps> = (args) => <TagComponent {...args} />
@@ -19,4 +19,5 @@ export const Tag = Template.bind({})
 Tag.args = {
 	href: "/data-visualization",
 	children: "data visualization",
+	color: "neutral",
 }

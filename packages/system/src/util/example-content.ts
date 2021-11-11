@@ -2,6 +2,7 @@ import logo1 from "./example-assets/logo-1.png"
 import logo2 from "./example-assets/logo-2.png"
 import logo3 from "./example-assets/logo-3.png"
 import company1 from "./example-assets/company1.png"
+import tool1 from "./example-assets/tool-1.png"
 import logoRedux from "./example-assets/logo-redux.png"
 import { Course } from "../models/course"
 import { Library } from "../models/library"
@@ -13,6 +14,7 @@ import { Podcast } from "../models/podcast"
 import { Community } from "../models/community"
 import { Company } from "../models/company"
 import { CodeExample } from "../models/code-example"
+import { Tool } from "../models/tool"
 
 export const exampleCategories = [
 	"Libraries",
@@ -203,5 +205,16 @@ export const exampleCodeExamples: CodeExample<ExampleTag>[] = [
 		description: "A basic counter implemented using Redux",
 		href: "https://codesandbox.io/s/un8my",
 		tags: ["redux", "state management"],
+	},
+]
+
+export const exampleTools: Tool<string>[] = [
+	{
+		name: "Doge Generator",
+		author: "Jackson Palmer",
+		description: "Wow. Doge meme generator. Very plugin.",
+		image: tool1,
+		tags: ["Data Visualization", "Web3", "Hooks"],
+		href: "https://dogecoin.com/",
 	},
 ]

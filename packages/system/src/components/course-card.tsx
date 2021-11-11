@@ -8,11 +8,11 @@ import {
 	courseCardFooterStyle,
 	courseCardHeaderStyle,
 	courseCardInfoStyle,
-	courseCardSpacerStyle,
 	courseCardStyle,
 } from "./course-card.css"
 import { ResourceTag } from "./resource-tag"
-import { BulletDivider } from "./bullet-divider"
+import { CardDivider } from "./card-divider"
+import { Tag } from "./tag"
 
 export type CourseCardProps = React.ComponentPropsWithoutRef<"article"> & {
 	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
@@ -55,13 +55,6 @@ export function CourseCard({
 			</header>
 			<div className={courseCardInfoStyle}>
 				<a
-					href={`/categories/courses/levels/${course.level}`}
-					className={sprinkles({ color: course.level })}
-				>
-					{course.level}
-				</a>
-				<BulletDivider />
-				<a
 					href={`/categories/courses/payment/${course.paymentType}`}
 					className={sprinkles({ color: "regularText" })}
 				>
@@ -69,23 +62,29 @@ export function CourseCard({
 				</a>
 			</div>
 			<div className={courseCardBodyStyle}>{course.description}</div>
-			<div className={courseCardSpacerStyle} />
 			<footer className={courseCardFooterStyle}>
-				<ResourceTag
-					icon={course.format}
-					href={`/categories/courses/formats/${course.format}`}
-				>
-					{course.format}
-				</ResourceTag>
-				{course.tags.map((tag) => (
+				<div className={sprinkles({ layout: "row", gap: 4 })}>
 					<ResourceTag
-						icon="topic"
-						key={tag}
-						href={`/categories/courses/tags/${kebabCase(tag)}`}
+						icon={course.format}
+						href={`/categories/courses/formats/${course.format}`}
 					>
-						{tag}
+						{course.format}
 					</ResourceTag>
-				))}
+				</div>
+				<CardDivider />
+				<div className={sprinkles({ layout: "row", gap: 4 })}>
+					<Tag
+						href={`/categories/courses/levels/${course.level}`}
+						color={course.level}
+					>
+						{course.level}
+					</Tag>
+					{course.tags.map((tag) => (
+						<Tag key={tag} href={`/categories/courses/tags/${kebabCase(tag)}`}>
+							{tag}
+						</Tag>
+					))}
+				</div>
 			</footer>
 		</article>
 	)

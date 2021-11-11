@@ -3,13 +3,12 @@ import { sprinkles } from "../sprinkles/sprinkles.css"
 import { pxToRem } from "../util/style-utils"
 
 enum GridArea {
-	Info = "info",
 	Header = "header",
 	Body = "body",
 	Footer = "footer",
 }
 
-export const courseCardStyle = style([
+export const toolCardStyle = style([
 	sprinkles({
 		borderRadius: 12,
 		display: "grid",
@@ -19,9 +18,8 @@ export const courseCardStyle = style([
 		color: "regularText",
 	}),
 	{
-		gridTemplateRows: `min-content min-content 1fr min-content`,
+		gridTemplateRows: `min-content 1fr min-content`,
 		gridTemplateAreas: `
-			"${GridArea.Info}"
 			"${GridArea.Header}"
 			"${GridArea.Body}"
 			"${GridArea.Footer}"
@@ -29,7 +27,8 @@ export const courseCardStyle = style([
 		minHeight: pxToRem(256),
 	},
 ])
-export const courseCardHeaderStyle = style([
+
+export const toolCardHeaderStyle = style([
 	sprinkles({
 		layout: "row",
 		gap: 16,
@@ -38,25 +37,20 @@ export const courseCardHeaderStyle = style([
 		gridArea: GridArea.Header,
 	},
 ])
-export const courseCardBodyStyle = style([
+
+export const toolCardBodyStyle = style([
 	sprinkles({ textStyle: "bodyText" }),
 	{
 		gridArea: GridArea.Body,
 	},
 ])
-export const courseCardFooterStyle = style([
+
+export const toolCardFooterStyle = style([
 	sprinkles({
 		layout: "stack",
 		gap: 12,
 	}),
 	{
 		gridArea: GridArea.Footer,
-	},
-])
-
-export const courseCardInfoStyle = style([
-	sprinkles({ textStyle: "tinyCaps" }),
-	{
-		gridArea: GridArea.Info,
 	},
 ])
