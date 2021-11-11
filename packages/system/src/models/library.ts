@@ -1,3 +1,5 @@
+import { IndexMetadata } from "./search"
+
 /**
  * Represents a Javascript library. Different
  * frameworks will use different tag sets, so
@@ -34,4 +36,10 @@ export type Library<T extends string> = {
 	 * not then a link to its npm page will suffice
 	 */
 	href: string
+}
+
+export const libraryIndexMetadata: IndexMetadata<Library<string>, "libraries"> = {
+	name: "libraries",
+	searchableFields: ["author", "description", "name"],
+	filterableFields: {},
 }

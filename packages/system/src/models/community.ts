@@ -1,3 +1,5 @@
+import { IndexMetadata } from "./search"
+
 /**
  * Represents a blog or community that
  * hosts content related to the framework
@@ -13,4 +15,10 @@ export type Community<T extends string> = {
 	tags: T[]
 	/** A link to the community's website */
 	href: string
+}
+
+export const communityIndexMetadata: IndexMetadata<Community<string>, "communities"> = {
+	name: "communities",
+	searchableFields: ["description", "name"],
+	filterableFields: {},
 }

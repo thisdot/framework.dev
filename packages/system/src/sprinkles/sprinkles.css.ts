@@ -262,7 +262,6 @@ const layout = defineProperties({
 			landscapeCardGrid: {
 				display: "grid",
 				gridTemplateColumns: "repeat(auto-fill, 340px) [end]",
-				justifyContent: "center",
 			},
 			stack: {
 				display: "flex",

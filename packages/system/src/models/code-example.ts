@@ -1,3 +1,5 @@
+import { IndexMetadata } from "./search"
+
 /**
  * Represents a snippet or code example that
  * someone could use to solve a specific problem
@@ -13,4 +15,10 @@ export type CodeExample<T extends string> = {
 	tags: T[]
 	/** A link to the example, e.g. a gist or codesandbox */
 	href: string
+}
+
+export const codeExampleIndexMetadata: IndexMetadata<CodeExample<string>, "codeExamples"> = {
+	name: "codeExamples",
+	searchableFields: ["author", "description", "title"],
+	filterableFields: {},
 }

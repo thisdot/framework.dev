@@ -1,3 +1,5 @@
+import { IndexMetadata } from "./search"
+
 export const courseLevels = ["beginner", "intermediate", "advanced"] as const
 export const coursePaymentTypes = ["free", "paid"] as const
 export const courseFormats = ["text", "interactive", "video"] as const
@@ -25,4 +27,14 @@ export type Course<T extends string> = {
 	tags: T[]
 	/** Hyperlink to the course, so students can find it */
 	href: string
+}
+
+export const courseIndexMetadata: IndexMetadata<Course<string>, "courses"> = {
+	name: "courses",
+	searchableFields: ["author", "description", "title"],
+	filterableFields: {
+		level: courseLevels,
+		paymentType: coursePaymentTypes,
+		format: courseFormats,
+	},
 }

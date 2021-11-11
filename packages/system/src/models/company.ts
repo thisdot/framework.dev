@@ -3,6 +3,8 @@
  * to help with a given framework.
  */
 
+import { IndexMetadata } from "./search"
+
 export type Company = {
 	/** Company name */
 	name: string
@@ -19,4 +21,10 @@ export type Company = {
 		| "More than 1,000"
 	/** Link to the company's website */
 	href: string
+}
+
+export const companyIndexMetadata: IndexMetadata<Company, "companies"> = {
+	name: "companies",
+	searchableFields: ["description", "name"],
+	filterableFields: {},
 }
