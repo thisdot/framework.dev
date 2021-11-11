@@ -1,7 +1,25 @@
 import classNames from "classnames"
 import React from "react"
 import { Library } from "../models/library"
-import { comparisonTableStyle } from "./comparison-table.css"
+import {
+	comparisonTableContainerStyle,
+	comparisonTableStyle,
+	comparisonTableLibraryIconStyle,
+	comparisonTableCellStyle,
+	comparisonTableCellContentsStyle,
+	comparisonTableHeadStyle,
+	comparisonTableRowCellStyle,
+} from "./comparison-table.css"
+
+const TH = ({ children }: React.ComponentPropsWithoutRef<"th">) => (
+	<th className={comparisonTableCellStyle}>{children}</th>
+)
+
+const TD = ({ children }: React.ComponentPropsWithoutRef<"td">) => (
+	<td className={comparisonTableCellStyle}>
+		<div className={comparisonTableCellContentsStyle}>{children}</div>
+	</td>
+)
 
 export interface ComparisonTableProps
 	extends React.ComponentPropsWithoutRef<"div"> {
@@ -14,30 +32,36 @@ export function ComparisonTable({
 	...props
 }: ComparisonTableProps) {
 	return (
-		<div className={classNames(className, comparisonTableStyle)} {...props}>
-			<table>
-				<thead>
+		<div
+			className={classNames(className, comparisonTableContainerStyle)}
+			{...props}
+		>
+			<table className={comparisonTableStyle}>
+				<thead className={comparisonTableHeadStyle}>
 					<tr>
-						<th>Name</th>
-						<th>Author</th>
-						<th>Testing Coverage</th>
-						<th>Weekly Downloads</th>
-						<th>Overall Health</th>
-						<th>Stars</th>
+						<TH>Name</TH>
+						<TH>Author</TH>
+						<TH>Testing Coverage</TH>
+						<TH>Weekly Downloads</TH>
+						<TH>Overall Health</TH>
+						<TH>Stars</TH>
 					</tr>
 				</thead>
 				<tbody>
 					{libraries.map((library) => (
-						<tr key={library.name}>
-							<td>
-								<img src={library.image} />
+						<tr key={library.name} className={comparisonTableRowCellStyle}>
+							<TD>
+								<img
+									src={library.image}
+									className={comparisonTableLibraryIconStyle}
+								/>
 								{library.name}
-							</td>
-							<td>{library.author}</td>
-							<td>85%</td>
-							<td>29M/week</td>
-							<td>92%</td>
-							<td>2.4K</td>
+							</TD>
+							<TD>{library.author}</TD>
+							<TD>85%</TD>
+							<TD>29M/week</TD>
+							<TD>92%</TD>
+							<TD>2.4K</TD>
 						</tr>
 					))}
 				</tbody>
