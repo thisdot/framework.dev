@@ -1,7 +1,6 @@
 import classNames from "classnames"
 import React, { useEffect, useState } from "react"
 import { Library } from "../models/library"
-import { getGitHubStarsUrl } from "../util/stats-util"
 import {
 	comparisonTableContainerStyle,
 	comparisonTableStyle,
@@ -38,34 +37,28 @@ export function ComparisonTable({
 	className,
 	...props
 }: ComparisonTableProps) {
-	const [librariesWithData, setLibrariesWithData] = useState<LibraryWithData[]>(
-		[]
-	)
+	const [libraryStats, setLibraryStats] = useState<LibraryWithData[]>([])
 	useEffect(() => {
 		async function fetchData() {
-			const librariesWithData = await Promise.all(
-				libraries.map(async (library) => {
-					const stars = await fetch(
-						getGitHubStarsUrl(library.gitHubRepo, "json")
-					)
-						.then((res) => res.json())
-						.then((res) => res.value)
-					return { ...library, stars }
-				})
-			)
-			setLibrariesWithData(librariesWithData)
+			const data = await fetch(`https://api.npms.io/v2/package/mget`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+				},
+				body: JSON.stringify(libraries.map((library) => library.npmPackage)),
+			}).then((res) => res.json())
+			setLibraryStats(data)
 		}
 		fetchData()
 	}, [libraries])
-
-	console.log(librariesWithData)
 
 	return (
 		<div
 			className={classNames(className, comparisonTableContainerStyle)}
 			{...props}
 		>
-			{librariesWithData && (
+			{libraryStats && (
 				<table className={comparisonTableStyle}>
 					<thead className={comparisonTableHeadStyle}>
 						<tr>
@@ -78,20 +71,38 @@ export function ComparisonTable({
 						</tr>
 					</thead>
 					<tbody>
-						{librariesWithData.map((library) => (
+						{libraries.map((library) => (
 							<tr key={library.name} className={comparisonTableRowCellStyle}>
 								<TD>
 									<img
 										src={library.image}
 										className={comparisonTableLibraryIconStyle}
 									/>
-									{library.name}
+									<a
+										href={library.href}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										{library.name}
+									</a>
 								</TD>
 								<TD>{library.author}</TD>
-								<TD>85%</TD>
-								<TD>29M/week</TD>
-								<TD>92%</TD>
-								<TD>{library.stars}</TD>
+								<TD>
+									{libraryStats[library.npmPackage]?.evaluation?.quality
+										?.tests || "N/A"}
+								</TD>
+								<TD>
+									{libraryStats[library.npmPackage]?.collected?.npm
+										?.downloads[1]?.count || "N/A"}
+								</TD>
+								<TD>
+									{libraryStats[library.npmPackage]?.evaluation?.quality
+										?.health || "N/A"}
+								</TD>
+								<TD>
+									{libraryStats[library.npmPackage]?.collected?.github
+										?.starsCount || "N/A"}
+								</TD>
 							</tr>
 						))}
 					</tbody>
