@@ -14,9 +14,9 @@ import {
 } from "./library-card.css"
 import { Tag } from "./tag"
 import {
-	getGitHubStarsUrl,
-	getNpmDownloadsUrl,
-	getBundleSizeUrl,
+	getGitHubStarsBadge,
+	getNpmDownloadsBadge,
+	getBundleSizeBadge,
 } from "../util/stats-util"
 
 export type LibraryCardProps = React.ComponentPropsWithoutRef<"article"> & {
@@ -68,9 +68,9 @@ export function LibraryCard({
 			<div className={libraryCardBodyStyle}>{library.description}</div>
 			<div className={libraryCardSpacerStyle} />
 			<footer className={classNames(libraryCardFooterStyle, "hide-in-percy")}>
-				<Badge data={getGitHubStarsUrl(library.gitHubRepo, "svg")} />
-				<Badge data={getNpmDownloadsUrl(library.npmPackage, "svg")} />
-				<Badge data={getBundleSizeUrl(library.npmPackage, "svg")} />
+				<Badge data={getGitHubStarsBadge(library.gitHubRepo)} />
+				<Badge data={getNpmDownloadsBadge(library.npmPackage)} />
+				<Badge data={getBundleSizeBadge(library.npmPackage)} />
 			</footer>
 		</article>
 	)
