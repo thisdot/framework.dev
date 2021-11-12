@@ -1,3 +1,5 @@
+import { IndexMetadata } from "./search"
+
 export const bookLevels = ["beginner", "intermediate", "advanced"] as const
 
 /**
@@ -28,4 +30,10 @@ export type Book<T extends string> = {
 	href: string
 	/** Tags for display and filtering */
 	tags: T[]
+}
+
+export const bookIndexMetadata: IndexMetadata<Book<string>, "books"> = {
+	name: "books",
+	searchableFields: ["authors", "description", "title"],
+	filterableFields: { level: ["beginner", "intermediate", "advanced"] },
 }

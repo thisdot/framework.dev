@@ -1,3 +1,5 @@
+import { IndexMetadata } from "./search"
+
 /**
  * Represents an IDE plugin, linter or other
  * tool that helps you work with code rather
@@ -17,4 +19,10 @@ export type Tool<T extends string> = {
 	tags: T[]
 	/** A link to the tool's website or where to find it */
 	href: string
+}
+
+export const toolIndexMetadata: IndexMetadata<Tool<string>, "tools"> = {
+	name: "tools",
+	searchableFields: ["author", "description", "name"],
+	filterableFields: {},
 }

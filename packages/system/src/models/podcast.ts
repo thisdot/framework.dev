@@ -1,3 +1,5 @@
+import { IndexMetadata } from "./search"
+
 /**
  * Represents a podcast that talks about the
  * framework or related material
@@ -17,4 +19,10 @@ export type Podcast<T extends string> = {
 	tags: T[]
 	/** A link to the podcast's website or a place to listen to it */
 	href: string
+}
+
+export const podcastIndexMetadata: IndexMetadata<Podcast<string>, "podcasts"> = {
+	name: "podcasts",
+	searchableFields: ["hosts", "description", "title"],
+	filterableFields: {},
 }
