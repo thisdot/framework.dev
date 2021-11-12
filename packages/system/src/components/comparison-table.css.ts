@@ -41,6 +41,66 @@ export const comparisonTableCellStyle = style([
 	},
 ])
 
+export const comparisonTableTHButtonStyle = style([
+	sprinkles({
+		paddingRight: 12,
+	}),
+	{
+		position: "relative",
+		selectors: {
+			"&:before,&:after": {
+				position: "absolute",
+				content: "",
+				right: pxToRem(-10),
+				width: 0,
+				height: 0,
+				border: "solid 5px transparent",
+				background: "transparent",
+			},
+			"&:before": {
+				borderBottom: `solid 7px ${vars.palette.neutral80}`,
+				borderTopWidth: 0,
+				top: 0,
+			},
+			"&:after": {
+				borderTop: `solid 7px ${vars.palette.neutral80}`,
+				borderBottomWidth: 0,
+				bottom: 0,
+			},
+		},
+	},
+])
+
+export const comparisonTableAscStyle = style({
+	selectors: {
+		"&:before": {
+			borderBottom: `solid 7px ${vars.palette.neutral40}`,
+			borderTopWidth: 0,
+			top: 0,
+		},
+		"&:after": {
+			borderTop: `solid 7px transparent`,
+			borderBottomWidth: 0,
+			bottom: 0,
+		},
+	},
+})
+
+export const comparisonTableDescStyle = style({
+	selectors: {
+		"&:before": {
+			borderBottom: `solid 7px transparent`,
+			borderTopWidth: 0,
+			top: 0,
+		},
+		"&:after": {
+			borderTop: `solid 7px ${vars.palette.neutral40}`,
+			borderBottomWidth: 0,
+			bottom: 0,
+		},
+	},
+})
+
 export const comparisonTableCellContentsStyle = style([
 	sprinkles({
 		display: "grid",

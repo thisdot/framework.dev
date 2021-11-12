@@ -9,15 +9,46 @@ import {
 	comparisonTableCellContentsStyle,
 	comparisonTableHeadStyle,
 	comparisonTableRowCellStyle,
+	comparisonTableTHButtonStyle,
+	comparisonTableAscStyle,
+	comparisonTableDescStyle,
 } from "./comparison-table.css"
+
+type Headings =
+	| "name"
+	| "author"
+	| "coverage"
+	| "downloads"
+	| "health"
+	| "stars"
+
+type THProps = {
+	name: Headings
+	ascending: boolean
+	sortBy: Headings
+	onClick: React.MouseEventHandler<HTMLButtonElement>
+}
 
 const TH = ({
 	children,
 	className,
+	name,
+	ascending,
+	sortBy,
+	onClick,
 	...props
-}: React.ComponentPropsWithoutRef<"th">) => (
+}: THProps & React.ComponentPropsWithoutRef<"th">) => (
 	<th className={classNames(comparisonTableCellStyle, className)} {...props}>
-		{children}
+		<button
+			className={classNames(
+				comparisonTableTHButtonStyle,
+				ascending === true && sortBy === name && comparisonTableAscStyle,
+				ascending === false && sortBy === name && comparisonTableDescStyle
+			)}
+			onClick={onClick}
+		>
+			{children}
+		</button>
 	</th>
 )
 
@@ -38,10 +69,8 @@ export function ComparisonTable({
 	...props
 }: ComparisonTableProps) {
 	const [libraryStats, setLibraryStats] = useState([])
-	const [sortBy, setSortBy] = useState<
-		"name" | "author" | "coverage" | "downloads" | "health" | "stars"
-	>("name")
-	const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc")
+	const [sortBy, setSortBy] = useState<Headings>("name")
+	const [sortAscending, setSortAscending] = useState<boolean | null>(null)
 
 	useEffect(() => {
 		async function fetchData() {
@@ -79,22 +108,28 @@ export function ComparisonTable({
 			if (a[sortBy] === b[sortBy]) {
 				return 0
 			}
-			if (sortDirection === "asc") {
+			if (sortAscending) {
 				return a[sortBy] > b[sortBy] ? 1 : -1
 			} else {
 				return b[sortBy] > a[sortBy] ? 1 : -1
 			}
 		})
 		setLibraryStats(sorted)
-	}, [sortBy, sortDirection])
+	}, [sortBy, sortAscending])
 
 	function handleSort(heading: typeof sortBy) {
 		if (sortBy === heading) {
-			setSortDirection(sortDirection === "asc" ? "desc" : "asc")
+			if (sortAscending === null) {
+				setSortAscending(
+					heading === "name" || heading === "author" ? true : false
+				)
+			} else {
+				setSortAscending(!sortAscending)
+			}
 		} else {
 			setSortBy(heading)
-			setSortDirection(
-				heading === "name" || heading === "author" ? "asc" : "desc"
+			setSortAscending(
+				heading === "name" || heading === "author" ? true : false
 			)
 		}
 	}
@@ -108,12 +143,54 @@ export function ComparisonTable({
 				<table className={comparisonTableStyle}>
 					<thead className={comparisonTableHeadStyle}>
 						<tr>
-							<TH onClick={() => handleSort("name")}>Name</TH>
-							<TH onClick={() => handleSort("author")}>Author</TH>
-							<TH onClick={() => handleSort("coverage")}>Testing Coverage</TH>
-							<TH onClick={() => handleSort("downloads")}>Weekly Downloads</TH>
-							<TH onClick={() => handleSort("health")}>Overall Health</TH>
-							<TH onClick={() => handleSort("stars")}>Stars</TH>
+							<TH
+								name="name"
+								ascending={sortAscending}
+								sortBy={sortBy}
+								onClick={() => handleSort("name")}
+							>
+								Name
+							</TH>
+							<TH
+								name="author"
+								ascending={sortAscending}
+								sortBy={sortBy}
+								onClick={() => handleSort("author")}
+							>
+								Author
+							</TH>
+							<TH
+								name="coverage"
+								ascending={sortAscending}
+								sortBy={sortBy}
+								onClick={() => handleSort("coverage")}
+							>
+								Testing Coverage
+							</TH>
+							<TH
+								name="downloads"
+								ascending={sortAscending}
+								sortBy={sortBy}
+								onClick={() => handleSort("downloads")}
+							>
+								Weekly Downloads
+							</TH>
+							<TH
+								name="health"
+								ascending={sortAscending}
+								sortBy={sortBy}
+								onClick={() => handleSort("health")}
+							>
+								Overall Health
+							</TH>
+							<TH
+								name="stars"
+								ascending={sortAscending}
+								sortBy={sortBy}
+								onClick={() => handleSort("stars")}
+							>
+								Stars
+							</TH>
 						</tr>
 					</thead>
 					<tbody>
