@@ -10,10 +10,19 @@ export const comparisonTableContainerStyle = style([
 	},
 ])
 
-export const comparisonTableStyle = sprinkles({
-	color: "regularText",
-	textStyle: "bodyShort2",
-})
+export const comparisonTableStyle = style([
+	sprinkles({
+		border: "tableCell",
+		borderRadius: 12,
+		color: "regularText",
+		textStyle: "bodyShort2",
+	}),
+	{
+		borderCollapse: "collapse",
+		outline: "0.5px solid #C4C7C8",
+		overflow: "hidden",
+	},
+])
 
 export const comparisonTableLibraryIconStyle = style({
 	height: pxToRem(24),
@@ -49,9 +58,11 @@ export const comparisonTableHeadStyle = style([
 	}),
 	{
 		backgroundColor: vars.palette.neutralVariant99,
+		borderTopLeftRadius: pxToRem(12),
+		borderTopRightRadius: pxToRem(12),
 	},
 ])
 
-export const comparisonTableRowCellStyle = sprinkles({
-	backgroundColor: "background",
+export const comparisonTableRowCellStyle = style({
+	backgroundColor: "white",
 })

@@ -12,8 +12,10 @@ import {
 	comparisonTableRowCellStyle,
 } from "./comparison-table.css"
 
-const TH = ({ children }: React.ComponentPropsWithoutRef<"th">) => (
-	<th className={comparisonTableCellStyle}>{children}</th>
+const TH = ({ children, className }: React.ComponentPropsWithoutRef<"th">) => (
+	<th className={classNames(comparisonTableCellStyle, className)}>
+		{children}
+	</th>
 )
 
 const TD = ({ children }: React.ComponentPropsWithoutRef<"td">) => (
