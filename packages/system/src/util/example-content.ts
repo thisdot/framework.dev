@@ -4,6 +4,8 @@ import logo3 from "./example-assets/logo-3.png"
 import company1 from "./example-assets/company1.png"
 import tool1 from "./example-assets/tool-1.png"
 import logoRedux from "./example-assets/logo-redux.png"
+import logoXstate from "./example-assets/logo-xstate.png"
+import logoMobx from "./example-assets/logo-mobx.png"
 import { Course } from "../models/course"
 import { Library } from "../models/library"
 import book1 from "./example-assets/book-1.png"
@@ -74,6 +76,28 @@ export const exampleLibraries: Library<ExampleTag>[] = [
 		image: logoRedux,
 		href: "https://redux.js.org/",
 		tags: ["state-management", "redux"],
+	},
+	{
+		name: "XState",
+		author: "David Khourshid",
+		description:
+			"JavaScript and TypeScript finite state machines and statecharts for the modern web.",
+		gitHubRepo: "statelyai/xstate",
+		npmPackage: "xstate",
+		image: logoXstate,
+		href: "https://xstate.js.org/",
+		tags: ["state management"],
+	},
+	{
+		name: "MobX",
+		author: "Michel Weststrate",
+		description:
+			"MobX is a battle tested library that makes state management simple and scalable by transparently applying functional reactive programming (TFRP).",
+		gitHubRepo: "mobxjs/mobx",
+		npmPackage: "mobx",
+		image: logoMobx,
+		href: "https://redux.js.org/",
+		tags: ["state management", "redux"],
 	},
 ]
 
