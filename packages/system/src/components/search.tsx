@@ -4,7 +4,6 @@ import { assertNever } from "assert-never"
 import Fuse from "fuse.js"
 import startCase from "lodash/startCase"
 import { searchStyle } from "./search.css"
-import { TextInput } from "./text-input"
 import { AllCategories } from "../models/all-categories"
 import { BookCard } from "./book-card"
 import { Book } from "../models/book"
@@ -24,6 +23,7 @@ import { ToolCard } from "./tool-card"
 import { Tool } from "../models/tool"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { Counter } from "./counter"
+import { SearchInput } from "./search-input.stories"
 
 export interface SearchProps extends React.ComponentPropsWithoutRef<"section"> {
 	data: AllCategories<string>[]
@@ -33,11 +33,12 @@ export function Search({ className, data, ...props }: SearchProps) {
 	const [query, setQuery] = useState("")
 	return (
 		<section className={classNames(className, searchStyle)} {...props}>
-			<TextInput
+			<SearchInput
 				label="Search"
 				hideLabel
 				value={query}
 				onChange={(e) => setQuery(e.target.value)}
+				onReset={() => setQuery("")}
 			/>
 			<div className={sprinkles({ layout: "stack", gap: 8 })}>
 				{data.map((category) => (
