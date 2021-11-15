@@ -13,7 +13,11 @@ import {
 } from "@reach/combobox"
 import { startCase, lowerCase } from "lodash"
 import { searchStyle } from "./search.css"
-import { AllCategories, allCategoryNames } from "../models/all-categories"
+import {
+	AllCategories,
+	allCategoryNames,
+	AllModelsByName,
+} from "../models/all-categories"
 import { BookCard } from "./book-card"
 import { Book } from "../models/book"
 import { CodeExampleCard } from "./code-example-card"
@@ -39,16 +43,37 @@ export interface SearchProps extends React.ComponentPropsWithoutRef<"section"> {
 }
 
 export function Search({ className, data, ...props }: SearchProps) {
+	const searchIndices: {
+		[K in keyof AllModelsByName]?: Fuse<AllModelsByName[K]>
+	} = useMemo(
+		() =>
+			Object.fromEntries(
+				data.map((category) => [
+					category.name,
+					new Fuse<AllCategories["data"][number]>(category.data, {
+						keys: [...category.indexMetadata.searchableFields],
+						ignoreLocation: true,
+						includeScore: true,
+						threshold: 0.2,
+						useExtendedSearch: true,
+					}),
+				])
+			),
+		[data]
+	)
 	const [query, setQuery] = useState("")
 	const inputRef = useRef<HTMLInputElement>()
 	const currentWordCoordinates = getWordCoordinatesAt(
 		query,
 		inputRef.current?.selectionStart
 	)
+	const queryParams = parseQueryString(query, data)
 	const autoCompleteResults = currentWordCoordinates
-		? calculateAutocompleteResults(query.slice(...currentWordCoordinates))
+		? calculateAutocompleteResults(
+				queryParams.availableFilters,
+				query.slice(...currentWordCoordinates)
+		  )
 		: []
-	const { categories, textSearch } = parseQueryString(query)
 	return (
 		<section className={classNames(className, searchStyle)} {...props}>
 			<Combobox
@@ -75,7 +100,7 @@ export function Search({ className, data, ...props }: SearchProps) {
 					onReset={() => setQuery("")}
 				/>
 				{autoCompleteResults.length > 0 && (
-					<ComboboxPopover className="shadow-popup">
+					<ComboboxPopover>
 						<ComboboxList>
 							{autoCompleteResults.slice(0, 10).map((result, index) => (
 								<ComboboxOption key={index} value={result.value}>
@@ -87,52 +112,60 @@ export function Search({ className, data, ...props }: SearchProps) {
 				)}
 			</Combobox>
 			<div className={sprinkles({ layout: "stack", gap: 8 })}>
-				{data
-					.filter((category) =>
-						categories.length > 0 ? isInFilteredCategories(category) : true
-					)
-					.map((category, _index, allCategories) => (
-						<ResultsCategory
-							key={category.indexMetadata.name}
-							category={category}
-							variant={allCategories.length > 1 ? "withHeading" : "bare"}
-							query={textSearch}
-						/>
-					))}
+				{query &&
+					data
+						.filter((category) =>
+							queryParams.categories.length > 0
+								? isInFilteredCategories(category)
+								: true
+						)
+						.map((category, _index, allCategories) => (
+							<ResultsCategory
+								key={category.name}
+								category={category}
+								variant={allCategories.length > 1 ? "withHeading" : "bare"}
+								query={queryParams}
+								searchIndex={searchIndices[category.name]}
+							/>
+						))}
 			</div>
 		</section>
 	)
 
 	function isInFilteredCategories(category: AllCategories): unknown {
-		return categories.some(
+		return queryParams.categories.some(
 			(includedCategory) => includedCategory === category.name
 		)
 	}
 }
 
-type ResultsCategoryProps<T> = {
+type ResultsCategoryProps<T extends AllCategories> = {
 	category: T
-	query: string
+	query: QueryParams
+	searchIndex: Fuse<T["data"][number]>
 	variant: "withHeading" | "bare"
 }
 
 function ResultsCategory<T extends AllCategories>({
 	category,
-	query,
+	query: { textSearch, fields, tags },
+	searchIndex,
 	variant,
 }: ResultsCategoryProps<T>) {
-	const fuse = useMemo(
-		() =>
-			new Fuse<T["data"][number]>(category.data, {
-				keys: [...category.indexMetadata.searchableFields],
-				ignoreLocation: true,
-				includeScore: true,
-				threshold: 0.2,
-				useExtendedSearch: true,
-			}),
-		[category]
+	const initialResults: T["data"][number][] = textSearch
+		? searchIndex
+				.search(textSearch)
+				.filter((result) => result.score < 0.4)
+				.map((result) => result.item)
+		: category.data
+
+	const results = initialResults.filter(
+		(record) =>
+			(tags.length === 0 || record.tags.some((tag) => tags.includes(tag))) &&
+			fields.every(
+				([fieldName, fieldValue]) => record[fieldName] === fieldValue
+			)
 	)
-	const results = fuse.search(query).filter((result) => result.score < 0.4)
 
 	if (results.length === 0) return null
 
@@ -196,75 +229,67 @@ function ResultsCategory<T extends AllCategories>({
 function renderCard<T extends AllCategories>(
 	category: AllCategories
 ): (
-	value: Fuse.FuseResult<T["data"][number]>,
+	value: T["data"][number],
 	index: number,
-	array: Fuse.FuseResult<T["data"][number]>[]
+	array: T["data"][number][]
 ) => JSX.Element {
-	return function ResultCard(result) {
+	return function ResultCard(record, index) {
 		switch (category.name) {
 			case "books":
 				return (
-					<BookCard
-						key={result.refIndex}
-						book={result.item as Book<string>}
-						headingTag="h3"
-					/>
+					<BookCard key={index} book={record as Book<string>} headingTag="h3" />
 				)
 			case "codeExamples":
 				return (
 					<CodeExampleCard
-						key={result.refIndex}
-						codeExample={result.item as CodeExample<string>}
+						key={index}
+						codeExample={record as CodeExample<string>}
 						headingTag="h3"
 					/>
 				)
 			case "communities":
 				return (
 					<CommunityCard
-						key={result.refIndex}
-						community={result.item as Community<string>}
+						key={index}
+						community={record as Community<string>}
 						headingTag="h3"
 					/>
 				)
 			case "companies":
 				return (
 					<CompanyCard
-						key={result.refIndex}
-						company={result.item as Company}
+						key={index}
+						company={record as Company<string>}
 						headingTag="h3"
 					/>
 				)
 			case "courses":
 				return (
 					<CourseCard
-						key={result.refIndex}
-						course={result.item as Course<string>}
+						key={index}
+						course={record as Course<string>}
 						headingTag="h3"
 					/>
 				)
 			case "libraries":
 				return (
 					<LibraryCard
-						key={result.refIndex}
-						library={result.item as Library<string>}
+						key={index}
+						library={record as Library<string>}
 						headingTag="h3"
 					/>
 				)
 			case "podcasts":
 				return (
 					<PodcastCard
-						key={result.refIndex}
-						podcast={result.item as Podcast<string>}
+						key={index}
+						podcast={record as Podcast<string>}
 						headingTag="h3"
 					/>
 				)
 			case "tools":
 				return (
-					<ToolCard
-						key={result.refIndex}
-						tool={result.item as Tool<string>}
-						headingTag="h3"
-					/>
+					<ToolCard key={index} tool={record as Tool<string>} headingTag="h3" />
 				)
 			default:
 				return assertNever(category)
@@ -272,21 +297,67 @@ function renderCard<T extends AllCategories>(
 	}
 }
 
-type QueryParams = {
-	categories: string[]
-	textSearch: string
+type Filters = {
+	category: Set<typeof allCategoryNames[number]>
+	tag: Set<string>
+	fields: Map<string, Set<string>>
 }
 
-const categoriesRegex = /in:(\w+)/g
-function parseQueryString(queryString: string): QueryParams {
-	const categories = Array.from(queryString.matchAll(categoriesRegex)).map(
-		([_match, capture]) => capture
+type QueryParams = {
+	categories: string[]
+	tags: string[]
+	fields: (readonly [string, string])[]
+	textSearch: string
+	availableFilters: Filters
+}
+
+const filterRegex = /(\S+):(\S+)/g
+function parseQueryString(
+	queryString: string,
+	allCategories: AllCategories[]
+): QueryParams {
+	const filters = Array.from(queryString.matchAll(filterRegex)).map(
+		([_match, key, value]) => [key, value]
 	)
-	const textSearch = queryString.replaceAll(categoriesRegex, "").trim()
+	const availableCategories = new Set(
+		allCategories.map((category) => category.name)
+	)
+	const categories = filters
+		.filter(([key]) => key === "in")
+		.map(([_key, value]) => value)
+	const tags = filters
+		.filter(([key]) => key === "tag")
+		.map(([_key, value]) => value)
+	const availableFilters = {
+		category: availableCategories,
+		tag: new Set(allCategories.flatMap((category) => category.tags)),
+		fields: allCategories
+			.filter(
+				(category) =>
+					categories.length === 0 || categories.includes(category.name)
+			)
+			.flatMap((category) =>
+				Object.entries(category.indexMetadata.filterableFields)
+			)
+			.reduce((map, [key, values]) => {
+				if (!map.has(key)) map.set(key, new Set())
+				for (const value of values) {
+					map.get(key).add(value)
+				}
+				return map
+			}, new Map<string, Set<string>>()),
+	}
+	const fields = filters
+		.filter(([key]) => availableFilters.fields.has(key))
+		.map(([key, value]) => [key, value] as const)
+	const textSearch = queryString.replaceAll(filterRegex, "").trim()
 
 	return {
 		categories,
+		tags,
+		fields,
 		textSearch,
+		availableFilters,
 	}
 }
 
@@ -295,17 +366,37 @@ type AutocompleteResult = {
 	description: string
 }
 
-const categoryFilterSuggestions: AutocompleteResult[] = allCategoryNames.map(
-	(name) => ({
+function calculateAutocompleteResults(
+	availableFilters: Filters,
+	word: string
+): AutocompleteResult[] {
+	const categoryFilterSuggestions: AutocompleteResult[] = Array.from(
+		availableFilters.category
+	).map((name) => ({
 		value: `in:${name}`,
 		description: `Limit search to ${lowerCase(name)}`,
-	})
-)
-
-function calculateAutocompleteResults(word: string): AutocompleteResult[] {
-	return categoryFilterSuggestions.filter((suggestion) =>
-		suggestion.value.startsWith(word)
+	}))
+	const tagFilterSuggestions: AutocompleteResult[] = Array.from(
+		availableFilters.tag
+	).map((name) => ({
+		value: `tag:${name}`,
+		description: `Only results tagged ${lowerCase(name)}`,
+	}))
+	const fieldFilterSuggestions: AutocompleteResult[] = Array.from(
+		availableFilters.fields
+	).flatMap(([key, values]) =>
+		Array.from(values).map((value) => ({
+			value: `${key}:${value}`,
+			description: `Only results where the ${lowerCase(key)} is ${lowerCase(
+				value
+			)}`,
+		}))
 	)
+	return [
+		...categoryFilterSuggestions,
+		...tagFilterSuggestions,
+		...fieldFilterSuggestions,
+	].filter((suggestion) => suggestion.value.startsWith(word))
 }
 
 function getWordCoordinatesAt(

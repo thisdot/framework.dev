@@ -1,4 +1,4 @@
-import { IndexMetadata } from "./search"
+import { IndexMetadata, SearchableRecord } from "./search"
 
 /**
  * Represents an IDE plugin, linter or other
@@ -6,7 +6,7 @@ import { IndexMetadata } from "./search"
  * than something used in code itself (the latter
  * would be a Library)
  */
-export type Tool<T extends string> = {
+export interface Tool<T extends string> extends SearchableRecord<T> {
 	/** Name of the tool */
 	name: string
 	/** Author of the tool */
@@ -15,8 +15,6 @@ export type Tool<T extends string> = {
 	description: string
 	/** A small (40x40) image to represent it */
 	image: string
-	/** Tags for search and filtering */
-	tags: T[]
 	/** A link to the tool's website or where to find it */
 	href: string
 }

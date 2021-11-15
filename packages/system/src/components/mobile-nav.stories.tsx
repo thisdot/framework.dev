@@ -1,8 +1,9 @@
 import { Story, Meta } from "@storybook/react"
+import { startCase } from "lodash"
 import { sprinkles } from "../sprinkles/sprinkles.css"
-import { exampleCategories } from "../util/example-content"
 import { NavItem } from "./nav-item"
 import { MobileNav as MobileNavComponent, MobileNavProps } from "./mobile-nav"
+import { allCategoryNames } from "../models/all-categories"
 
 export default {
 	title: "Mobile Nav",
@@ -19,9 +20,9 @@ export default {
 	args: {
 		children: (
 			<div className={sprinkles({ layout: "stack", gap: 8 })}>
-				{exampleCategories.map((category) => (
+				{allCategoryNames.map((category) => (
 					<NavItem href={`#${category}`} key={category}>
-						{category}
+						{startCase(category)}
 					</NavItem>
 				))}
 			</div>

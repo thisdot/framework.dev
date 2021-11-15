@@ -16,21 +16,9 @@ import { Company } from "../models/company"
 import { CodeExample } from "../models/code-example"
 import { Tool } from "../models/tool"
 
-export const exampleCategories = [
-	"Libraries",
-	"Tools & Plugins",
-	"Code Snippets",
-	"Courses",
-	"Communities",
-	"Podcasts",
-	"Books",
-	"Events",
-	"Companies",
-]
-
 export const exampleTags = [
 	"accessibility",
-	"state management",
+	"state-management",
 	"redux",
 ] as const
 
@@ -47,7 +35,7 @@ export const exampleCourses: Course<ExampleTag>[] = [
 		level: "advanced",
 		format: "video",
 		href: "https://www.freecodecamp.org/news/solidify-your-react-skills-by-building-15-projects/",
-		tags: ["accessibility", "state management"],
+		tags: ["accessibility", "state-management"],
 	},
 	{
 		title: "Fullstack React",
@@ -71,7 +59,7 @@ export const exampleCourses: Course<ExampleTag>[] = [
 		level: "intermediate",
 		format: "interactive",
 		href: "https://codewithmosh.com/p/mastering-react",
-		tags: ["state management"],
+		tags: ["state-management"],
 	},
 ]
 
@@ -85,7 +73,7 @@ export const exampleLibraries: Library<ExampleTag>[] = [
 		npmPackage: "redux",
 		image: logoRedux,
 		href: "https://redux.js.org/",
-		tags: ["state management", "redux"],
+		tags: ["state-management", "redux"],
 	},
 ]
 
@@ -174,7 +162,7 @@ export const exampleCommunities: Community<string>[] = [
 		name: "Community Two",
 		description: "This community isn't as nice if I'm being honest.",
 		image: logo2,
-		tags: ["state management"],
+		tags: ["state-management"],
 		href: "https://bing.com",
 	},
 	{
@@ -187,7 +175,7 @@ export const exampleCommunities: Community<string>[] = [
 	},
 ]
 
-export const exampleCompanies: Company[] = [
+export const exampleCompanies: Company<ExampleTag>[] = [
 	{
 		name: "This Dot",
 		description:
@@ -195,6 +183,7 @@ export const exampleCompanies: Company[] = [
 		image: company1,
 		numberOfEmployees: "10 to 50",
 		href: "https://labs.thisdot.co",
+		tags: [],
 	},
 ]
 
@@ -204,7 +193,7 @@ export const exampleCodeExamples: CodeExample<ExampleTag>[] = [
 		author: "reduxjs",
 		description: "A basic counter implemented using Redux",
 		href: "https://codesandbox.io/s/un8my",
-		tags: ["redux", "state management"],
+		tags: ["redux", "state-management"],
 	},
 ]
 

@@ -24,9 +24,11 @@ export const allCategoriesMetadata = {
 	[libraryIndexMetadata.name]: libraryIndexMetadata,
 	[podcastIndexMetadata.name]: podcastIndexMetadata,
 	[toolIndexMetadata.name]: toolIndexMetadata,
-}
+} as const
 
-export const allCategoryNames = Object.keys(allCategoriesMetadata)
+export const allCategoryNames = Object.keys(
+	allCategoriesMetadata
+) as (keyof typeof allCategoriesMetadata)[]
 
 export type AllModelsByName = {
 	[K in keyof typeof allCategoriesMetadata]: ExtractType<

@@ -1,4 +1,4 @@
-import { IndexMetadata } from "./search"
+import { IndexMetadata, SearchableRecord } from "./search"
 
 /**
  * Represents a Javascript library. Different
@@ -6,7 +6,7 @@ import { IndexMetadata } from "./search"
  * each framework will have to pass its tag set
  * as a type parameter here.
  */
-export type Library<T extends string> = {
+export interface Library<T extends string> extends SearchableRecord<T> {
 	/** Library name for display*/
 	name: string
 	/** Author name for display */
@@ -15,8 +15,6 @@ export type Library<T extends string> = {
 	image: string
 	/** Short description for display */
 	description: string
-	/** Tags for display and filtering */
-	tags: T[]
 	/**
 	 * GitHub repo, in :author/:repoName format.
 	 * For displaying star count and linking

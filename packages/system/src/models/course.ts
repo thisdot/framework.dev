@@ -1,4 +1,4 @@
-import { IndexMetadata } from "./search"
+import { IndexMetadata, SearchableRecord } from "./search"
 
 export const courseLevels = ["beginner", "intermediate", "advanced"] as const
 export const coursePaymentTypes = ["free", "paid"] as const
@@ -8,7 +8,7 @@ export const courseFormats = ["text", "interactive", "video"] as const
  * Represents an online course, e.g.
  * tutorials, video courses, etc.
  */
-export type Course<T extends string> = {
+export interface Course<T extends string> extends SearchableRecord<T> {
 	/** The title of the course, for display */
 	title: string
 	/** The author of the course, for display */
@@ -23,8 +23,6 @@ export type Course<T extends string> = {
 	paymentType: typeof coursePaymentTypes[number]
 	/** What format a course takes. So that users can search for courses based on their learning style */
 	format: typeof courseFormats[number]
-	/** Tags that describe the content of the course, for display and filtering */
-	tags: T[]
 	/** Hyperlink to the course, so students can find it */
 	href: string
 }
