@@ -1,15 +1,4 @@
 import { Course } from "@framework/system/src/models/course"
-import codingAddict from "./assets/coding-addict.jpeg"
-import moshHamedani from "./assets/mosh-hamedani.jpeg"
-import newline from "./assets/newline.png"
-import freeCodeCamp from "./assets/free-code-camp.png"
-import webdevSimplified from "./assets/webdev-simplified.png"
-import benAwad from "./assets/ben-awad.jpeg"
-import javascriptMastery from "./assets/javascript-mastery.jpeg"
-import theNetNinja from "./assets/the-net-ninja.png"
-import traversyMedia from "./assets/traversy-media.jpeg"
-import brunoAntunes from "./assets/bruno-antunes.jpeg"
-import adrianTwarog from "./assets/adrian-twarog.jpeg"
 
 export const courseTags = [
 	"state management",
@@ -35,7 +24,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "Code 15 React Projects - Complete Course",
 		author: "John Smilga",
-		image: codingAddict,
+		image: "https://github.com/john-smilga.png",
 		description:
 			"Improve your skills with the React JavaScript library by building 15 projects using React.",
 		paymentType: "free",
@@ -47,7 +36,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "Fullstack React",
 		author: "newline",
-		image: newline,
+		image: "https://github.com/fullstackio.png",
 		description:
 			"The up-to-date, in-depth, complete guide to React and friends.",
 		paymentType: "paid",
@@ -67,7 +56,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "Mastering React",
 		author: "Mosh Hamedani",
-		image: moshHamedani,
+		image: "https://github.com/mosh-hamedani.png",
 		description:
 			"If you're on React 15, take your components to new levels with these advanced patterns, lectures, exercises, and more.",
 		paymentType: "paid",
@@ -85,7 +74,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "React.js tutorial for beginners",
 		author: "Mosh Hamedani",
-		image: moshHamedani,
+		image: "https://github.com/mosh-hamedani.png",
 		description:
 			"Get up & running with React JS: the most popular JavaScript library in the world!",
 		paymentType: "free",
@@ -97,7 +86,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "Front End Development - React course",
 		author: "FreeCodeCamp",
-		image: freeCodeCamp,
+		image: "https://github.com/freeCodeCamp.png",
 		description:
 			"In the Front End Development Libraries Certification, you'll learn how to style your site quickly with Bootstrap. You'll also learn how add logic to your CSS styles and extend them with Sass.",
 		paymentType: "free",
@@ -117,7 +106,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "React crash course",
 		author: "FreeCodeCamp",
-		image: freeCodeCamp,
+		image: "https://github.com/freeCodeCamp.png",
 		description:
 			"This is a full premium course. Learn React.js from the ground up with fundamentals to more intermediate and advanced topics. You will learn by building a real app!",
 		paymentType: "free",
@@ -137,7 +126,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "Learn React Today",
 		author: "Web Dev Simplified",
-		image: webdevSimplified,
+		image: "https://github.com/WebDevSimplified",
 		description:
 			"Learn React and all its modern features such as hooks and context in less than a day with this highly focused React course",
 		paymentType: "paid",
@@ -149,7 +138,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "React Hooks Tutorial",
 		author: "Ben Awad",
-		image: benAwad,
+		image: "https://github.com/benawad.png",
 		description: "React hooks playlist for beginners on YouTube",
 		paymentType: "free",
 		level: "intermediate",
@@ -161,7 +150,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		title:
 			"Build and Deploy a Fully Responsive Modern UI/UX Website in React JS",
 		author: "JavaScript Mastery",
-		image: javascriptMastery,
+		image: "https://github.com/adrianhajdin.png",
 		description:
 			"This video is perfect for you if you want to learn how to transform a Figma design into a fully functioning website, improve your CSS skills, and create modern and responsive ReactJS websites.",
 		paymentType: "free",
@@ -173,7 +162,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "Full Modern React Tutorial",
 		author: "The Net Ninja",
-		image: theNetNinja,
+		image: "https://github.com/iamshaunjp.png",
 		description:
 			"This is full React tutorial series, It will take you from novice to ninja. It covers all the basics - what React is, setting up, components & routing - before diving into state management, async code, built-in hooks & custom hooks too.",
 		paymentType: "free",
@@ -185,7 +174,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "React JS Crash Course 2021",
 		author: "Traversy Media",
-		image: traversyMedia,
+		image: "https://github.com/bradtraversy.png",
 		description:
 			"Get started with React in this crash course. We will be building a task tracker app and look at components, props, state, hooks, working with an API and more.",
 		paymentType: "free",
@@ -197,7 +186,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "34 React Project Tutorials step by step",
 		author: "Traversy Media",
-		image: traversyMedia,
+		image: "https://github.com/bradtraversy.png",
 		description: "A playlist with 34 walkthrough projects for beginners",
 		paymentType: "free",
 		level: "beginner",
@@ -217,7 +206,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "React Typescript Tutorial",
 		author: "Ben Awad",
-		image: benAwad,
+		image: "https://github.com/benawad.png",
 		description:
 			"Learn how to start using Typescript in your React code. I go over props, hooks, and render props.",
 		paymentType: "free",
@@ -229,7 +218,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "React Typescript Tutorial - Build a Quiz App",
 		author: "FreeCodeCamp",
-		image: freeCodeCamp,
+		image: "https://github.com/freeCodeCamp.png",
 		description:
 			"Learn how to use React and TypeScript to create a quiz app project. You will also learn how to use Styled-Components with React.",
 		paymentType: "free",
@@ -248,7 +237,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "React.js Tutorial with Hooks and TypeScript",
 		author: "Bruno Antunes",
-		image: brunoAntunes,
+		image: "https://github.com/bmvantunes.png",
 		description:
 			"This playlist contains all the videos from the React.js Tutorial. We are using Function Components with Hooks and Typescript.",
 		paymentType: "free",
@@ -260,7 +249,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "Tailwind CSS React Tutorial",
 		author: "Adrian Twarog",
-		image: adrianTwarog,
+		image: "https://github.com/adriantwarog.png",
 		description:
 			"If you're looking to learn tailwindcss with react, this tutorial should cover the basics of getting it up and running. It's based on the official documentation",
 		paymentType: "free",
@@ -272,7 +261,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "React.js Tutorial with Hooks and TypeScript",
 		author: "Traversy Media",
-		image: traversyMedia,
+		image: "https://github.com/bradtraversy.png",
 		description:
 			"This react material ui tutorial will cover all aspects of material ui and react to get you up and running to use them for your next website development project or application.",
 		paymentType: "free",
