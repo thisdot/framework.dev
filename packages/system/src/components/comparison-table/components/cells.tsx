@@ -22,20 +22,27 @@ export const TH = ({
 	sort,
 	onClick,
 	...props
-}: THProps & React.ComponentPropsWithoutRef<"th">) => (
-	<th className={classNames(cellStyle, className)} {...props}>
-		<button
-			className={classNames(
-				cellTHButtonStyle,
-				sort.asc === true && sort.by === name && cellAscStyle,
-				sort.asc === false && sort.by === name && cellDescStyle
-			)}
-			onClick={onClick}
-		>
-			{children}
-		</button>
-	</th>
-)
+}: THProps & React.ComponentPropsWithoutRef<"th">) => {
+	let sorted = {}
+	if (sort.by === name) {
+		sorted = { "aria-sort": sort.asc ? "ascending" : "descending" }
+	}
+	return (
+		<th className={classNames(cellStyle, className)} {...props} {...sorted}>
+			<button
+				className={classNames(
+					cellTHButtonStyle,
+					sort.asc === true && sort.by === name && cellAscStyle,
+					sort.asc === false && sort.by === name && cellDescStyle
+				)}
+				onClick={onClick}
+				aria-roledescription="sort"
+			>
+				{children}
+			</button>
+		</th>
+	)
+}
 
 export const TD = ({
 	children,
