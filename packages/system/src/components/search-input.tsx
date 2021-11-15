@@ -19,35 +19,46 @@ export interface SearchInputProps
 	onReset: () => void
 }
 
-export function SearchInput({
-	className,
-	label,
-	hideLabel = false,
-	id: customIdFromProps,
-	onReset,
-	...props
-}: SearchInputProps) {
-	const id = useId(customIdFromProps)
-	return (
-		<div className={classNames(className, searchInputContainerStyle)}>
-			<SearchIcon className={searchInputIconStyle} />
-			<button
-				title="Reset"
-				onClick={onReset}
-				className={searchInputResetButtonStyle}
-			>
-				<CloseIcon />
-			</button>
-			<input type="search" className={searchInputBoxStyle} id={id} {...props} />
-			<label
-				htmlFor={id}
-				className={classNames(
-					searchInputLabelStyle,
-					hideLabel && sprinkles({ hidden: "visually" })
-				)}
-			>
-				{label}
-			</label>
-		</div>
-	)
-}
+export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
+	function SearchInput(
+		{
+			className,
+			label,
+			hideLabel = false,
+			id: customIdFromProps,
+			onReset,
+			...props
+		}: SearchInputProps,
+		ref
+	) {
+		const id = useId(customIdFromProps)
+		return (
+			<div className={classNames(className, searchInputContainerStyle)}>
+				<SearchIcon className={searchInputIconStyle} />
+				<button
+					title="Reset"
+					onClick={onReset}
+					className={searchInputResetButtonStyle}
+				>
+					<CloseIcon />
+				</button>
+				<input
+					type="search"
+					className={searchInputBoxStyle}
+					id={id}
+					{...props}
+					ref={ref}
+				/>
+				<label
+					htmlFor={id}
+					className={classNames(
+						searchInputLabelStyle,
+						hideLabel && sprinkles({ hidden: "visually" })
+					)}
+				>
+					{label}
+				</label>
+			</div>
+		)
+	}
+)

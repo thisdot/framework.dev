@@ -1,10 +1,19 @@
+import "@reach/combobox/styles.css"
 import classNames from "classnames"
-import React, { useMemo, useState } from "react"
+import React, { ChangeEvent, useMemo, useRef, useState } from "react"
 import { assertNever } from "assert-never"
 import Fuse from "fuse.js"
-import startCase from "lodash/startCase"
+import {
+	Combobox,
+	ComboboxInput,
+	ComboboxList,
+	ComboboxOption,
+	ComboboxOptionText,
+	ComboboxPopover,
+} from "@reach/combobox"
+import { startCase, lowerCase } from "lodash"
 import { searchStyle } from "./search.css"
-import { AllCategories } from "../models/all-categories"
+import { AllCategories, allCategoryNames } from "../models/all-categories"
 import { BookCard } from "./book-card"
 import { Book } from "../models/book"
 import { CodeExampleCard } from "./code-example-card"
@@ -23,44 +32,94 @@ import { ToolCard } from "./tool-card"
 import { Tool } from "../models/tool"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { Counter } from "./counter"
-import { SearchInput } from "./search-input.stories"
+import { SearchInput } from "./search-input"
 
 export interface SearchProps extends React.ComponentPropsWithoutRef<"section"> {
-	data: AllCategories<string>[]
+	data: AllCategories[]
 }
 
 export function Search({ className, data, ...props }: SearchProps) {
 	const [query, setQuery] = useState("")
+	const inputRef = useRef<HTMLInputElement>()
+	const currentWordCoordinates = getWordCoordinatesAt(
+		query,
+		inputRef.current?.selectionStart
+	)
+	const autoCompleteResults = currentWordCoordinates
+		? calculateAutocompleteResults(query.slice(...currentWordCoordinates))
+		: []
+	const { categories, textSearch } = parseQueryString(query)
 	return (
 		<section className={classNames(className, searchStyle)} {...props}>
-			<SearchInput
-				label="Search"
-				hideLabel
-				value={query}
-				onChange={(e) => setQuery(e.target.value)}
-				onReset={() => setQuery("")}
-			/>
+			<Combobox
+				onSelect={(selection) =>
+					setQuery(
+						(query) =>
+							query.slice(0, currentWordCoordinates[0]) +
+							selection +
+							query.slice(currentWordCoordinates[1])
+					)
+				}
+				aria-label="Search"
+			>
+				<ComboboxInput
+					as={SearchInput}
+					ref={inputRef}
+					autocomplete={false}
+					label="Search"
+					hideLabel
+					value={query}
+					onChange={(e: ChangeEvent<HTMLInputElement>) => {
+						setQuery(e.target.value)
+					}}
+					onReset={() => setQuery("")}
+				/>
+				{autoCompleteResults.length > 0 && (
+					<ComboboxPopover className="shadow-popup">
+						<ComboboxList>
+							{autoCompleteResults.slice(0, 10).map((result, index) => (
+								<ComboboxOption key={index} value={result.value}>
+									<ComboboxOptionText /> {result.description}
+								</ComboboxOption>
+							))}
+						</ComboboxList>
+					</ComboboxPopover>
+				)}
+			</Combobox>
 			<div className={sprinkles({ layout: "stack", gap: 8 })}>
-				{data.map((category) => (
-					<ResultsCategory
-						key={category.indexMetadata.name}
-						category={category}
-						query={query}
-					/>
-				))}
+				{data
+					.filter((category) =>
+						categories.length > 0 ? isInFilteredCategories(category) : true
+					)
+					.map((category, _index, allCategories) => (
+						<ResultsCategory
+							key={category.indexMetadata.name}
+							category={category}
+							variant={allCategories.length > 1 ? "withHeading" : "bare"}
+							query={textSearch}
+						/>
+					))}
 			</div>
 		</section>
 	)
+
+	function isInFilteredCategories(category: AllCategories): unknown {
+		return categories.some(
+			(includedCategory) => includedCategory === category.name
+		)
+	}
 }
 
 type ResultsCategoryProps<T> = {
 	category: T
 	query: string
+	variant: "withHeading" | "bare"
 }
 
-function ResultsCategory<T extends AllCategories<string>>({
+function ResultsCategory<T extends AllCategories>({
 	category,
 	query,
+	variant,
 }: ResultsCategoryProps<T>) {
 	const fuse = useMemo(
 		() =>
@@ -77,44 +136,65 @@ function ResultsCategory<T extends AllCategories<string>>({
 
 	if (results.length === 0) return null
 
-	return (
-		<div
-			className={sprinkles({
-				backgroundColor: "surface1",
-				padding: 24,
-				borderRadius: 12,
-			})}
-		>
-			<header
-				className={sprinkles({ layout: "row", gap: 8, alignItems: "center" })}
-			>
-				<h2
+	switch (variant) {
+		case "bare":
+			return (
+				<div
 					className={sprinkles({
-						textStyle: "bodyShort1",
-						fontWeight: "bold",
-						paddingY: 2,
+						layout: "landscapeCardGrid",
+						gap: 24,
+						justifyContent: "flex-start",
 					})}
 				>
-					{startCase(category.name)}
-				</h2>
-				<Counter size="small">{results.length}</Counter>
-			</header>
-			<div
-				className={sprinkles({
-					paddingTop: 24,
-					layout: "landscapeCardGrid",
-					gap: 24,
-					justifyContent: "flex-start",
-				})}
-			>
-				{results.map(renderCard<T>(category))}
-			</div>
-		</div>
-	)
+					{results.map(renderCard<T>(category))}
+				</div>
+			)
+		case "withHeading":
+			return (
+				<div
+					className={sprinkles({
+						backgroundColor: "surface1",
+						padding: 24,
+						borderRadius: 12,
+					})}
+				>
+					<header
+						className={sprinkles({
+							layout: "row",
+							gap: 8,
+							alignItems: "center",
+						})}
+					>
+						<h2
+							className={sprinkles({
+								textStyle: "bodyShort1",
+								fontWeight: "bold",
+								paddingY: 2,
+							})}
+						>
+							{startCase(category.name)}
+						</h2>
+						<Counter size="small">{results.length}</Counter>
+					</header>
+					<div
+						className={sprinkles({
+							paddingTop: 24,
+							layout: "landscapeCardGrid",
+							gap: 24,
+							justifyContent: "flex-start",
+						})}
+					>
+						{results.map(renderCard<T>(category))}
+					</div>
+				</div>
+			)
+		default:
+			assertNever(variant)
+	}
 }
 
-function renderCard<T extends AllCategories<string>>(
-	category: AllCategories<string>
+function renderCard<T extends AllCategories>(
+	category: AllCategories
 ): (
 	value: Fuse.FuseResult<T["data"][number]>,
 	index: number,
@@ -190,4 +270,54 @@ function renderCard<T extends AllCategories<string>>(
 				return assertNever(category)
 		}
 	}
+}
+
+type QueryParams = {
+	categories: string[]
+	textSearch: string
+}
+
+const categoriesRegex = /in:(\w+)/g
+function parseQueryString(queryString: string): QueryParams {
+	const categories = Array.from(queryString.matchAll(categoriesRegex)).map(
+		([_match, capture]) => capture
+	)
+	const textSearch = queryString.replaceAll(categoriesRegex, "").trim()
+
+	return {
+		categories,
+		textSearch,
+	}
+}
+
+type AutocompleteResult = {
+	value: string
+	description: string
+}
+
+const categoryFilterSuggestions: AutocompleteResult[] = allCategoryNames.map(
+	(name) => ({
+		value: `in:${name}`,
+		description: `Limit search to ${lowerCase(name)}`,
+	})
+)
+
+function calculateAutocompleteResults(word: string): AutocompleteResult[] {
+	return categoryFilterSuggestions.filter((suggestion) =>
+		suggestion.value.startsWith(word)
+	)
+}
+
+function getWordCoordinatesAt(
+	text: string,
+	position: number
+): [number, number] {
+	// Search for the word's beginning and end.
+	const left = text.slice(0, position).search(/\S+$/),
+		right = text.slice(position).search(/\s/)
+
+	return [
+		left < 0 ? position : left,
+		right < 0 ? text.length : right + position,
+	]
 }
