@@ -12,7 +12,7 @@ export const comparisonTableStyle = style([
 	}),
 	{
 		borderCollapse: "collapse",
-		outline: "0.5px solid #C4C7C8",
+		outline: `0.5px solid ${vars.palette.neutral80}`,
 		overflow: "hidden",
 	},
 ])
