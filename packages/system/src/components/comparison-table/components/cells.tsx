@@ -41,7 +41,7 @@ export const TD = ({
 	children,
 	...props
 }: React.ComponentPropsWithoutRef<"td">) => (
-	<td className={cellStyle} role="button" {...props}>
+	<td className={cellStyle} {...props}>
 		<div className={cellContentsStyle}>{children}</div>
 	</td>
 )
