@@ -1,6 +1,6 @@
 import React from "react"
 import classNames from "classnames"
-import { Headings } from "../types"
+import { Headings, ISortConfig } from "../types"
 import {
 	cellStyle,
 	cellTHButtonStyle,
@@ -11,8 +11,7 @@ import {
 
 type THProps = {
 	name: Headings
-	ascending: boolean
-	sortBy: Headings
+	sort: ISortConfig
 	onClick: React.MouseEventHandler<HTMLButtonElement>
 }
 
@@ -20,8 +19,7 @@ export const TH = ({
 	children,
 	className,
 	name,
-	ascending,
-	sortBy,
+	sort,
 	onClick,
 	...props
 }: THProps & React.ComponentPropsWithoutRef<"th">) => (
@@ -29,8 +27,8 @@ export const TH = ({
 		<button
 			className={classNames(
 				cellTHButtonStyle,
-				ascending === true && sortBy === name && cellAscStyle,
-				ascending === false && sortBy === name && cellDescStyle
+				sort.asc === true && sort.by === name && cellAscStyle,
+				sort.asc === false && sort.by === name && cellDescStyle
 			)}
 			onClick={onClick}
 		>

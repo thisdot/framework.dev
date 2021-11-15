@@ -7,7 +7,7 @@ import {
 	comparisonTableRowCellStyle,
 } from "./comparison-table.css"
 import { TH, TD } from "./components/cells"
-import { Headings } from "./types"
+import { ISortConfig } from "./types"
 
 export interface ComparisonTableProps
 	extends React.ComponentPropsWithoutRef<"div"> {
@@ -20,8 +20,10 @@ export function ComparisonTable({
 	...props
 }: ComparisonTableProps) {
 	const [libraryStats, setLibraryStats] = useState([])
-	const [sortBy, setSortBy] = useState<Headings>("name")
-	const [sortAscending, setSortAscending] = useState<boolean | null>(null)
+	const [sortConfig, setSortConfig] = useState<ISortConfig>({
+		by: "name",
+		asc: false,
+	})
 
 	useEffect(() => {
 		async function fetchData() {
@@ -48,7 +50,7 @@ export function ComparisonTable({
 			})
 			setLibraryStats(data)
 		}
-		fetchData()
+		fetchData().then(() => handleSort("name"))
 	}, [libraries])
 
 	useEffect(() => {
@@ -56,33 +58,28 @@ export function ComparisonTable({
 			return
 		}
 		const sorted = [...libraryStats].sort((a, b) => {
-			if (a[sortBy] === b[sortBy]) {
+			if (a[sortConfig.by] === b[sortConfig.by]) {
 				return 0
 			}
-			if (sortAscending) {
-				return a[sortBy] > b[sortBy] ? 1 : -1
+			if (sortConfig.asc) {
+				return a[sortConfig.by] > b[sortConfig.by] ? 1 : -1
 			} else {
-				return b[sortBy] > a[sortBy] ? 1 : -1
+				return b[sortConfig.by] > a[sortConfig.by] ? 1 : -1
 			}
 		})
 		setLibraryStats(sorted)
-	}, [sortBy, sortAscending])
+	}, [sortConfig])
 
-	function handleSort(heading: typeof sortBy) {
-		if (sortBy === heading) {
-			if (sortAscending === null) {
-				setSortAscending(
-					heading === "name" || heading === "author" ? true : false
-				)
-			} else {
-				setSortAscending(!sortAscending)
+	function handleSort(heading: typeof sortConfig.by) {
+		setSortConfig((prevSort) => {
+			if (prevSort.by === heading) {
+				return { by: heading, asc: !prevSort.asc }
 			}
-		} else {
-			setSortBy(heading)
-			setSortAscending(
-				heading === "name" || heading === "author" ? true : false
-			)
-		}
+			if (heading === "name" || heading === "author") {
+				return { by: heading, asc: true }
+			}
+			return { by: heading, asc: false }
+		})
 	}
 
 	return (
@@ -93,48 +90,42 @@ export function ComparisonTable({
 						<tr>
 							<TH
 								name="name"
-								ascending={sortAscending}
-								sortBy={sortBy}
+								sort={sortConfig}
 								onClick={() => handleSort("name")}
 							>
 								Name
 							</TH>
 							<TH
 								name="author"
-								ascending={sortAscending}
-								sortBy={sortBy}
+								sort={sortConfig}
 								onClick={() => handleSort("author")}
 							>
 								Author
 							</TH>
 							<TH
 								name="coverage"
-								ascending={sortAscending}
-								sortBy={sortBy}
+								sort={sortConfig}
 								onClick={() => handleSort("coverage")}
 							>
 								Testing Coverage
 							</TH>
 							<TH
 								name="downloads"
-								ascending={sortAscending}
-								sortBy={sortBy}
+								sort={sortConfig}
 								onClick={() => handleSort("downloads")}
 							>
 								Weekly Downloads
 							</TH>
 							<TH
 								name="health"
-								ascending={sortAscending}
-								sortBy={sortBy}
+								sort={sortConfig}
 								onClick={() => handleSort("health")}
 							>
 								Overall Health
 							</TH>
 							<TH
 								name="stars"
-								ascending={sortAscending}
-								sortBy={sortBy}
+								sort={sortConfig}
 								onClick={() => handleSort("stars")}
 							>
 								Stars
