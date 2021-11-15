@@ -3,13 +3,6 @@ import { sprinkles } from "../sprinkles/sprinkles.css"
 import { vars } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
-export const comparisonTableContainerStyle = style([
-	sprinkles({}),
-	{
-		// Put custom CSS here
-	},
-])
-
 export const comparisonTableStyle = style([
 	sprinkles({
 		border: "tableCell",

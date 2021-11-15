@@ -2,7 +2,6 @@ import classNames from "classnames"
 import React, { useEffect, useState } from "react"
 import { Library } from "../models/library"
 import {
-	comparisonTableContainerStyle,
 	comparisonTableStyle,
 	comparisonTableLibraryIconStyle,
 	comparisonTableCellStyle,
@@ -135,10 +134,7 @@ export function ComparisonTable({
 	}
 
 	return (
-		<div
-			className={classNames(className, comparisonTableContainerStyle)}
-			{...props}
-		>
+		<div className={className} {...props}>
 			{libraryStats && (
 				<table className={comparisonTableStyle}>
 					<thead className={comparisonTableHeadStyle}>
