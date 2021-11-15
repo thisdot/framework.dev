@@ -12,7 +12,7 @@ import {
 
 export type CompanyCardProps = React.ComponentPropsWithoutRef<"article"> & {
 	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
-	company: Company
+	company: Company<string>
 }
 
 export function CompanyCard({

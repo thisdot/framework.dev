@@ -20,6 +20,10 @@ module.exports = {
 		"react/prop-types": "off",
 		// Empty interfaces are useful as aliases to be filled in later
 		"@typescript-eslint/no-empty-interface": "off",
+		"@typescript-eslint/no-unused-vars": [
+			"error",
+			{ ignoreRestSiblings: true, argsIgnorePattern: "^_" },
+		],
 	},
 	settings: {
 		react: {

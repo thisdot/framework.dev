@@ -1,10 +1,10 @@
-import { IndexMetadata } from "./search"
+import { IndexMetadata, SearchableRecord } from "./search"
 
 /**
  * Represents a podcast that talks about the
  * framework or related material
  */
-export type Podcast<T extends string> = {
+export interface Podcast<T extends string> extends SearchableRecord<T> {
 	/** Title of the podcast */
 	title: string
 	/** A small (40x40) image that represents the podcast */
@@ -15,13 +15,14 @@ export type Podcast<T extends string> = {
 	rss: string
 	/** Names of the regular hosts of the podcast */
 	hosts: string[]
-	/** Tags for search and filtering */
-	tags: T[]
 	/** A link to the podcast's website or a place to listen to it */
 	href: string
 }
 
-export const podcastIndexMetadata: IndexMetadata<Podcast<string>, "podcasts"> = {
+export const podcastIndexMetadata: IndexMetadata<
+	Podcast<string>,
+	"podcasts"
+> = {
 	name: "podcasts",
 	searchableFields: ["hosts", "description", "title"],
 	filterableFields: {},

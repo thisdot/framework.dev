@@ -6,6 +6,7 @@ import { companyIndexMetadata } from "../models/company"
 import { courseIndexMetadata } from "../models/course"
 import { libraryIndexMetadata } from "../models/library"
 import { podcastIndexMetadata } from "../models/podcast"
+import { vars } from "../themes/themes.css"
 import {
 	exampleBooks,
 	exampleCodeExamples,
@@ -68,6 +69,18 @@ export default {
 	component: SearchComponent,
 	args: {
 		data,
+	},
+	parameters: {
+		backgrounds: {
+			default: "Light Theme Background",
+			values: [
+				{
+					name: "Light Theme Background",
+					value: vars.themeColors.surface4,
+					default: true,
+				},
+			],
+		},
 	},
 } as Meta
 

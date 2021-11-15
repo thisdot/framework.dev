@@ -12,5 +12,9 @@ export type IndexMetadata<T, Name extends string> = {
 }
 
 export type FilterableFields<T> = {
-	[K in keyof T]?: readonly T[K][]
+	[K in keyof T]?: T[K] extends string ? readonly T[K][] : never
+}
+
+export interface SearchableRecord<T extends string> {
+	tags: T[]
 }

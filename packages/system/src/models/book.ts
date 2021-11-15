@@ -1,4 +1,4 @@
-import { IndexMetadata } from "./search"
+import { IndexMetadata, SearchableRecord } from "./search"
 
 export const bookLevels = ["beginner", "intermediate", "advanced"] as const
 
@@ -6,7 +6,7 @@ export const bookLevels = ["beginner", "intermediate", "advanced"] as const
  * Represents a book that might be of interest to
  * someone learning a given framework.
  */
-export type Book<T extends string> = {
+export interface Book<T extends string> extends SearchableRecord<T> {
 	/** Book title, for display */
 	title: string
 	/** Book's author, for display */
@@ -28,8 +28,6 @@ export type Book<T extends string> = {
 	 * large resellers like Amazon if possible.
 	 */
 	href: string
-	/** Tags for display and filtering */
-	tags: T[]
 }
 
 export const bookIndexMetadata: IndexMetadata<Book<string>, "books"> = {

@@ -1,8 +1,9 @@
 import { Story, Meta } from "@storybook/react"
+import { startCase } from "lodash"
 import { sprinkles } from "../sprinkles/sprinkles.css"
-import { exampleCategories } from "../util/example-content"
 import { Sidebar as SidebarComponent, SidebarProps } from "./sidebar"
 import { NavItem } from "./nav-item"
+import { allCategoryNames } from "../models/all-categories"
 
 export default {
 	title: "Sidebar",
@@ -13,9 +14,9 @@ export default {
 	args: {
 		children: (
 			<div className={sprinkles({ layout: "stack", gap: 8 })}>
-				{exampleCategories.map((category) => (
+				{allCategoryNames.map((category) => (
 					<NavItem href={`#${category}`} key={category}>
-						{category}
+						{startCase(category)}
 					</NavItem>
 				))}
 			</div>
