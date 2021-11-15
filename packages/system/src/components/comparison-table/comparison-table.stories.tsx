@@ -2,9 +2,9 @@ import { Story, Meta } from "@storybook/react"
 import {
 	ComparisonTable as ComparisonTableComponent,
 	ComparisonTableProps,
-} from "./comparison-table"
-import { vars } from "../themes/themes.css"
-import { exampleLibraries } from "../util/example-content"
+} from "./index"
+import { vars } from "../../themes/themes.css"
+import { exampleLibraries } from "../../util/example-content"
 
 export default {
 	title: "Comparison Table",

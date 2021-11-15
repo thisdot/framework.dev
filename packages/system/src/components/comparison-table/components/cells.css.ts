@@ -1,28 +1,9 @@
 import { style } from "@vanilla-extract/css"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { vars } from "../themes/themes.css"
-import { pxToRem } from "../util/style-utils"
+import { sprinkles } from "../../../sprinkles/sprinkles.css"
+import { pxToRem } from "../../../util/style-utils"
+import { vars } from "../../../themes/themes.css"
 
-export const comparisonTableStyle = style([
-	sprinkles({
-		border: "tableCell",
-		borderRadius: 12,
-		color: "regularText",
-		textStyle: "bodyShort2",
-	}),
-	{
-		borderCollapse: "collapse",
-		outline: `0.5px solid ${vars.palette.neutral80}`,
-		overflow: "hidden",
-	},
-])
-
-export const comparisonTableLibraryIconStyle = style({
-	height: pxToRem(24),
-	width: pxToRem(24),
-})
-
-export const comparisonTableCellStyle = style([
+export const cellStyle = style([
 	sprinkles({
 		border: "tableCell",
 		paddingX: 24,
@@ -34,7 +15,7 @@ export const comparisonTableCellStyle = style([
 	},
 ])
 
-export const comparisonTableTHButtonStyle = style([
+export const cellTHButtonStyle = style([
 	sprinkles({
 		paddingRight: 12,
 	}),
@@ -64,7 +45,7 @@ export const comparisonTableTHButtonStyle = style([
 	},
 ])
 
-export const comparisonTableAscStyle = style({
+export const cellAscStyle = style({
 	selectors: {
 		"&:before": {
 			borderBottom: `solid 7px ${vars.palette.neutral40}`,
@@ -79,7 +60,7 @@ export const comparisonTableAscStyle = style({
 	},
 })
 
-export const comparisonTableDescStyle = style({
+export const cellDescStyle = style({
 	selectors: {
 		"&:before": {
 			borderBottom: `solid 7px transparent`,
@@ -94,7 +75,7 @@ export const comparisonTableDescStyle = style({
 	},
 })
 
-export const comparisonTableCellContentsStyle = style([
+export const cellContentsStyle = style([
 	sprinkles({
 		display: "grid",
 		gap: 12,
@@ -104,18 +85,3 @@ export const comparisonTableCellContentsStyle = style([
 		placeItems: "center",
 	},
 ])
-
-export const comparisonTableHeadStyle = style([
-	sprinkles({
-		fontWeight: "bold",
-	}),
-	{
-		backgroundColor: vars.palette.neutralVariant99,
-		borderTopLeftRadius: pxToRem(12),
-		borderTopRightRadius: pxToRem(12),
-	},
-])
-
-export const comparisonTableRowCellStyle = style({
-	backgroundColor: "white",
-})

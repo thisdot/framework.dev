@@ -1,61 +1,13 @@
-import classNames from "classnames"
 import React, { useEffect, useState } from "react"
-import { Library } from "../models/library"
+import { Library } from "../../models/library"
 import {
 	comparisonTableStyle,
 	comparisonTableLibraryIconStyle,
-	comparisonTableCellStyle,
-	comparisonTableCellContentsStyle,
 	comparisonTableHeadStyle,
 	comparisonTableRowCellStyle,
-	comparisonTableTHButtonStyle,
-	comparisonTableAscStyle,
-	comparisonTableDescStyle,
 } from "./comparison-table.css"
-
-type Headings =
-	| "name"
-	| "author"
-	| "coverage"
-	| "downloads"
-	| "health"
-	| "stars"
-
-type THProps = {
-	name: Headings
-	ascending: boolean
-	sortBy: Headings
-	onClick: React.MouseEventHandler<HTMLButtonElement>
-}
-
-const TH = ({
-	children,
-	className,
-	name,
-	ascending,
-	sortBy,
-	onClick,
-	...props
-}: THProps & React.ComponentPropsWithoutRef<"th">) => (
-	<th className={classNames(comparisonTableCellStyle, className)} {...props}>
-		<button
-			className={classNames(
-				comparisonTableTHButtonStyle,
-				ascending === true && sortBy === name && comparisonTableAscStyle,
-				ascending === false && sortBy === name && comparisonTableDescStyle
-			)}
-			onClick={onClick}
-		>
-			{children}
-		</button>
-	</th>
-)
-
-const TD = ({ children, ...props }: React.ComponentPropsWithoutRef<"td">) => (
-	<td className={comparisonTableCellStyle} role="button" {...props}>
-		<div className={comparisonTableCellContentsStyle}>{children}</div>
-	</td>
-)
+import { TH, TD } from "./components/cells"
+import { Headings } from "./types"
 
 export interface ComparisonTableProps
 	extends React.ComponentPropsWithoutRef<"div"> {
