@@ -8,7 +8,7 @@ import {
 } from "./comparison-table.css"
 import { TH, TD } from "./components/cells"
 import { ISortConfig, ILibrary } from "./types"
-import { sortLibraries } from "./utils"
+import { sortLibraries, formatPercentage, formatNumber } from "./utils"
 
 export interface ComparisonTableProps
 	extends React.ComponentPropsWithoutRef<"div"> {
@@ -153,10 +153,10 @@ export function ComparisonTable({
 									</a>
 								</TD>
 								<TD>{library.author}</TD>
-								<TD>{library.coverage || "N/A"}</TD>
-								<TD>{library.downloads || "N/A"}</TD>
-								<TD>{library.health || "N/A"}</TD>
-								<TD>{library.stars || "N/A"}</TD>
+								<TD>{formatPercentage(library.coverage) || "N/A"}</TD>
+								<TD>{formatNumber(library.downloads) || "N/A"}</TD>
+								<TD>{formatPercentage(library.health) || "N/A"}</TD>
+								<TD>{formatNumber(library.stars) || "N/A"}</TD>
 							</tr>
 						))}
 					</tbody>
