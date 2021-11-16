@@ -59,7 +59,13 @@ export function ComparisonTable({
 			})
 			setData(data)
 		}
-		fetchData().then(() => handleSort("name"))
+		fetchData()
+			.then(() => handleSort("name"))
+			.catch((error) => {
+				if (error.name === "AbortError") {
+					return
+				}
+			})
 		return () => abortController.abort()
 	}, [libraries])
 
