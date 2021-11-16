@@ -13,7 +13,11 @@ import {
 	libraryCardStyle,
 } from "./library-card.css"
 import { Tag } from "./tag"
-import classnames from "classnames"
+import {
+	getGitHubStarsBadge,
+	getNpmDownloadsBadge,
+	getBundleSizeBadge,
+} from "../util/stats-util"
 
 export type LibraryCardProps = React.ComponentPropsWithoutRef<"article"> & {
 	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
@@ -63,16 +67,10 @@ export function LibraryCard({
 			</div>
 			<div className={libraryCardBodyStyle}>{library.description}</div>
 			<div className={libraryCardSpacerStyle} />
-			<footer className={classnames(libraryCardFooterStyle, "hide-in-percy")}>
-				<Badge
-					data={`https://img.shields.io/github/stars/${library.gitHubRepo}?style=flat&logo=github`}
-				/>
-				<Badge
-					data={`https://img.shields.io/npm/dm/${library.npmPackage}?style=flat&logo=npm&link=https://www.npmjs.com/package/${library.npmPackage}`}
-				/>
-				<Badge
-					data={`https://img.shields.io/bundlephobia/min/${library.npmPackage}?style=flat&logo=npm&link=https://bundlephobia.com/package/${library.npmPackage}`}
-				/>
+			<footer className={classNames(libraryCardFooterStyle, "hide-in-percy")}>
+				<Badge data={getGitHubStarsBadge(library.gitHubRepo)} />
+				<Badge data={getNpmDownloadsBadge(library.npmPackage)} />
+				<Badge data={getBundleSizeBadge(library.npmPackage)} />
 			</footer>
 		</article>
 	)

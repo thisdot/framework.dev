@@ -23,6 +23,7 @@ const space = {
 const borders = {
 	thin: `1px solid ${vars.themeColors.outline}`,
 	light: `1px solid ${vars.themeColors.surfaceVariant}`,
+	tableCell: `0.5px solid ${vars.palette.neutral80}`,
 }
 
 const conditions = {
