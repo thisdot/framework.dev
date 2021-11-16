@@ -1,10 +1,10 @@
 import { style } from "@vanilla-extract/css"
-import { pxToRem } from "../util/style-utils"
+import { pxToRem } from "../../util/style-utils"
 import {
 	textInputBoxStyle,
 	textInputContainerStyle,
 	textInputLabelStyle,
-} from "./text-input.css"
+} from "../text-input.css"
 
 export const searchInputContainerStyle = style([
 	textInputContainerStyle,

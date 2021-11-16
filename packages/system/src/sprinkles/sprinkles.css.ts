@@ -231,6 +231,10 @@ const layout = defineProperties({
 		display: ["none", "block", "flex", "grid"],
 		flexDirection: ["row", "column"],
 		alignItems: ["stretch", "flex-start", "center", "flex-end", "end", "start"],
+		width: {
+			full: "100%",
+			auto: "auto",
+		},
 		justifyContent: [
 			"stretch",
 			"flex-start",
