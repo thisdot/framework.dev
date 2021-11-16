@@ -34,46 +34,36 @@ export const cellTHButtonStyle = style([
 			"&:before": {
 				borderBottom: `solid 7px ${vars.palette.neutral80}`,
 				borderTopWidth: 0,
-				top: 0,
+				top: "calc(50% - 9px)",
 			},
 			"&:after": {
 				borderTop: `solid 7px ${vars.palette.neutral80}`,
+				borderBottomWidth: 0,
+				bottom: "calc(50% - 9px)",
+			},
+			[`${cellStyle}[aria-sort="ascending"] &:before`]: {
+				borderBottom: `solid 7px ${vars.palette.neutral40}`,
+				borderTopWidth: 0,
+				top: 0,
+			},
+			[`${cellStyle}[aria-sort="ascending"] &:after`]: {
+				borderTop: `solid 7px transparent`,
+				borderBottomWidth: 0,
+				bottom: 0,
+			},
+			[`${cellStyle}[aria-sort="descending"] &:before`]: {
+				borderBottom: `solid 7px transparent`,
+				borderTopWidth: 0,
+				top: 0,
+			},
+			[`${cellStyle}[aria-sort="descending"] &:after`]: {
+				borderTop: `solid 7px ${vars.palette.neutral40}`,
 				borderBottomWidth: 0,
 				bottom: 0,
 			},
 		},
 	},
 ])
-
-export const cellAscStyle = style({
-	selectors: {
-		"&:before": {
-			borderBottom: `solid 7px ${vars.palette.neutral40}`,
-			borderTopWidth: 0,
-			top: 0,
-		},
-		"&:after": {
-			borderTop: `solid 7px transparent`,
-			borderBottomWidth: 0,
-			bottom: 0,
-		},
-	},
-})
-
-export const cellDescStyle = style({
-	selectors: {
-		"&:before": {
-			borderBottom: `solid 7px transparent`,
-			borderTopWidth: 0,
-			top: 0,
-		},
-		"&:after": {
-			borderTop: `solid 7px ${vars.palette.neutral40}`,
-			borderBottomWidth: 0,
-			bottom: 0,
-		},
-	},
-})
 
 export const cellContentsStyle = style([
 	sprinkles({

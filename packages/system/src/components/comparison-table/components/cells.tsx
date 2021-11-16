@@ -1,13 +1,7 @@
 import React from "react"
 import classNames from "classnames"
 import { Headings, ISortConfig } from "../types"
-import {
-	cellStyle,
-	cellTHButtonStyle,
-	cellAscStyle,
-	cellDescStyle,
-	cellContentsStyle,
-} from "./cells.css"
+import { cellStyle, cellTHButtonStyle, cellContentsStyle } from "./cells.css"
 
 type THProps = {
 	name: Headings
@@ -30,13 +24,9 @@ export const TH = ({
 	return (
 		<th className={classNames(cellStyle, className)} {...props} {...sorted}>
 			<button
-				className={classNames(
-					cellTHButtonStyle,
-					sort.asc === true && sort.by === name && cellAscStyle,
-					sort.asc === false && sort.by === name && cellDescStyle
-				)}
+				className={classNames(cellTHButtonStyle)}
 				onClick={onClick}
-				aria-roledescription="sort"
+				aria-roledescription="sort button"
 			>
 				{children}
 			</button>
