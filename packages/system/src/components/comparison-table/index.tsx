@@ -27,6 +27,7 @@ export function ComparisonTable({
 	})
 
 	useEffect(() => {
+		const abortController = new AbortController()
 		async function fetchData() {
 			const npmsio = await fetch(`https://api.npms.io/v2/package/mget`, {
 				method: "POST",
@@ -35,7 +36,14 @@ export function ComparisonTable({
 					Accept: "application/json",
 				},
 				body: JSON.stringify(libraries.map((library) => library.npmPackage)),
-			}).then((res) => res.json())
+				signal: abortController.signal,
+			})
+				.then((res) => res.json())
+				.catch((error) => {
+					if (error.name === "AbortError") {
+						return
+					}
+				})
 			const data: ILibrary[] = libraries.map((library) => {
 				return {
 					name: library.name,
@@ -52,6 +60,7 @@ export function ComparisonTable({
 			setData(data)
 		}
 		fetchData().then(() => handleSort("name"))
+		return () => abortController.abort()
 	}, [libraries])
 
 	const libraryStats = React.useMemo(
