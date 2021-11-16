@@ -86,7 +86,7 @@ export const exampleLibraries: Library<ExampleTag>[] = [
 		npmPackage: "xstate",
 		image: logoXstate,
 		href: "https://xstate.js.org/",
-		tags: ["state management"],
+		tags: ["state-management"],
 	},
 	{
 		name: "MobX",
@@ -97,7 +97,7 @@ export const exampleLibraries: Library<ExampleTag>[] = [
 		npmPackage: "mobx",
 		image: logoMobx,
 		href: "https://redux.js.org/",
-		tags: ["state management", "redux"],
+		tags: ["state-management", "redux"],
 	},
 ]
 

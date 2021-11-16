@@ -7,7 +7,8 @@ import {
 	comparisonTableRowCellStyle,
 } from "./comparison-table.css"
 import { TH, TD } from "./components/cells"
-import { ISortConfig } from "./types"
+import { ISortConfig, ILibrary } from "./types"
+import { sortLibraries } from "./utils"
 
 export interface ComparisonTableProps
 	extends React.ComponentPropsWithoutRef<"div"> {
@@ -19,7 +20,7 @@ export function ComparisonTable({
 	className,
 	...props
 }: ComparisonTableProps) {
-	const [libraryStats, setLibraryStats] = useState([])
+	const [data, setData] = useState<ILibrary[]>([])
 	const [sortConfig, setSortConfig] = useState<ISortConfig>({
 		by: "name",
 		asc: false,
@@ -35,7 +36,7 @@ export function ComparisonTable({
 				},
 				body: JSON.stringify(libraries.map((library) => library.npmPackage)),
 			}).then((res) => res.json())
-			const data = libraries.map((library) => {
+			const data: ILibrary[] = libraries.map((library) => {
 				return {
 					name: library.name,
 					author: library.author,
@@ -48,27 +49,15 @@ export function ComparisonTable({
 					stars: npmsio[library.npmPackage]?.collected?.github?.starsCount,
 				}
 			})
-			setLibraryStats(data)
+			setData(data)
 		}
 		fetchData().then(() => handleSort("name"))
 	}, [libraries])
 
-	useEffect(() => {
-		if (libraryStats.length === 0) {
-			return
-		}
-		const sorted = [...libraryStats].sort((a, b) => {
-			if (a[sortConfig.by] === b[sortConfig.by]) {
-				return 0
-			}
-			if (sortConfig.asc) {
-				return a[sortConfig.by] > b[sortConfig.by] ? 1 : -1
-			} else {
-				return b[sortConfig.by] > a[sortConfig.by] ? 1 : -1
-			}
-		})
-		setLibraryStats(sorted)
-	}, [sortConfig])
+	const libraryStats = React.useMemo(
+		() => sortLibraries(data, sortConfig),
+		[data, sortConfig]
+	)
 
 	function handleSort(heading: typeof sortConfig.by) {
 		setSortConfig((prevSort) => {
