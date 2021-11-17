@@ -4,13 +4,13 @@ import {
 	ComparisonTableProps,
 } from "./index"
 import { vars } from "../../themes/themes.css"
-import { exampleLibraries } from "../../util/example-content"
+import { libraries } from "../../../../react/src/data/libraries"
 
 export default {
 	title: "Comparison Table",
 	component: ComparisonTableComponent,
 	args: {
-		libraries: exampleLibraries,
+		libraries,
 	},
 	parameters: {
 		backgrounds: {

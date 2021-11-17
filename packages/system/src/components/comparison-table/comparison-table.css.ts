@@ -11,9 +11,9 @@ export const comparisonTableStyle = style([
 		textStyle: "bodyShort2",
 	}),
 	{
-		borderCollapse: "collapse",
-		outline: `0.5px solid ${vars.palette.neutral80}`,
-		overflow: "hidden",
+		borderCollapse: "separate",
+		borderSpacing: 0,
+		position: "relative",
 	},
 ])
 

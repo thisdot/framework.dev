@@ -1,7 +1,12 @@
 import React from "react"
 import classNames from "classnames"
 import { Headings, ISortConfig } from "../types"
-import { cellStyle, cellTHButtonStyle, cellContentsStyle } from "./cells.css"
+import {
+	cellTHStyle,
+	cellTDStyle,
+	cellTHButtonStyle,
+	cellContentsStyle,
+} from "./cells.css"
 
 type THProps = {
 	name: Headings
@@ -22,7 +27,7 @@ export const TH = ({
 		sorted = { "aria-sort": sort.asc ? "ascending" : "descending" }
 	}
 	return (
-		<th className={classNames(cellStyle, className)} {...props} {...sorted}>
+		<th className={classNames(cellTHStyle, className)} {...props} {...sorted}>
 			<button
 				className={classNames(cellTHButtonStyle)}
 				onClick={onClick}
@@ -38,7 +43,7 @@ export const TD = ({
 	children,
 	...props
 }: React.ComponentPropsWithoutRef<"td">) => (
-	<td className={cellStyle} {...props}>
+	<td className={cellTDStyle} {...props}>
 		<div className={cellContentsStyle}>{children}</div>
 	</td>
 )

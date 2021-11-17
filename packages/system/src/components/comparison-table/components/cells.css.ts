@@ -3,7 +3,7 @@ import { sprinkles } from "../../../sprinkles/sprinkles.css"
 import { pxToRem } from "../../../util/style-utils"
 import { vars } from "../../../themes/themes.css"
 
-export const cellStyle = style([
+const cellStyle = style([
 	sprinkles({
 		border: "tableCell",
 		paddingX: 24,
@@ -12,6 +12,22 @@ export const cellStyle = style([
 	{
 		minWidth: "max-content",
 		verticalAlign: "middle",
+	},
+])
+
+export const cellTHStyle = style([
+	cellStyle,
+	{
+		backgroundColor: vars.palette.neutralVariant99,
+		position: "sticky",
+		top: 0,
+		zIndex: 2,
+		selectors: {
+			"&:first-of-type": {
+				left: 0,
+				zIndex: 3,
+			},
+		},
 	},
 ])
 
@@ -60,6 +76,20 @@ export const cellTHButtonStyle = style([
 				borderTop: `solid 7px ${vars.palette.neutral40}`,
 				borderBottomWidth: 0,
 				bottom: 0,
+			},
+		},
+	},
+])
+
+export const cellTDStyle = style([
+	cellStyle,
+	{
+		backgroundColor: "white",
+		selectors: {
+			"&:first-of-type": {
+				position: "sticky",
+				left: 0,
+				zIndex: 1,
 			},
 		},
 	},
