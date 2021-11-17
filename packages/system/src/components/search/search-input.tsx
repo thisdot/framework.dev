@@ -1,7 +1,7 @@
 import classNames from "classnames"
 import React from "react"
 import { useId } from "@reach/auto-id"
-import { sprinkles } from "../sprinkles/sprinkles.css"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
 import {
 	searchInputBoxStyle,
 	searchInputContainerStyle,
@@ -9,8 +9,8 @@ import {
 	searchInputLabelStyle,
 	searchInputResetButtonStyle,
 } from "./search-input.css"
-import { SearchIcon } from "../icons/search-icon"
-import { CloseIcon } from "../icons/close-icon"
+import { SearchIcon } from "../../icons/search-icon"
+import { CloseIcon } from "../../icons/close-icon"
 
 export interface SearchInputProps
 	extends React.ComponentPropsWithoutRef<"input"> {

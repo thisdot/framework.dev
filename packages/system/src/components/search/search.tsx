@@ -1,8 +1,8 @@
-import "@reach/combobox/styles.css"
 import classNames from "classnames"
 import React, { ChangeEvent, useMemo, useRef, useState } from "react"
 import { assertNever } from "assert-never"
 import Fuse from "fuse.js"
+import "@reach/combobox/styles.css"
 import {
 	Combobox,
 	ComboboxInput,
@@ -15,28 +15,28 @@ import { startCase, lowerCase } from "lodash"
 import { searchStyle } from "./search.css"
 import {
 	AllCategories,
-	allCategoryNames,
 	AllModelsByName,
-} from "../models/all-categories"
-import { BookCard } from "./book-card"
-import { Book } from "../models/book"
-import { CodeExampleCard } from "./code-example-card"
-import { CodeExample } from "../models/code-example"
-import { CommunityCard } from "./community-card"
-import { Community } from "../models/community"
-import { CompanyCard } from "./company-card"
-import { Company } from "../models/company"
-import { CourseCard } from "./course-card"
-import { Course } from "../models/course"
-import { LibraryCard } from "./library-card"
-import { Library } from "../models/library"
-import { PodcastCard } from "./podcast-card"
-import { Podcast } from "../models/podcast"
-import { ToolCard } from "./tool-card"
-import { Tool } from "../models/tool"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { Counter } from "./counter"
+} from "../../models/all-categories"
+import { BookCard } from "../book-card"
+import { Book } from "../../models/book"
+import { CodeExampleCard } from "../code-example-card"
+import { CodeExample } from "../../models/code-example"
+import { CommunityCard } from "../community-card"
+import { Community } from "../../models/community"
+import { CompanyCard } from "../company-card"
+import { Company } from "../../models/company"
+import { CourseCard } from "../course-card"
+import { Course } from "../../models/course"
+import { LibraryCard } from "../library-card"
+import { Library } from "../../models/library"
+import { PodcastCard } from "../podcast-card"
+import { Podcast } from "../../models/podcast"
+import { ToolCard } from "../tool-card"
+import { Tool } from "../../models/tool"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { Counter } from "../counter"
 import { SearchInput } from "./search-input"
+import { Filters, QueryParams } from "./types"
 
 export interface SearchProps extends React.ComponentPropsWithoutRef<"section"> {
 	data: AllCategories[]
@@ -295,20 +295,6 @@ function renderCard<T extends AllCategories>(
 				return assertNever(category)
 		}
 	}
-}
-
-type Filters = {
-	category: Set<typeof allCategoryNames[number]>
-	tag: Set<string>
-	fields: Map<string, Set<string>>
-}
-
-type QueryParams = {
-	categories: string[]
-	tags: string[]
-	fields: (readonly [string, string])[]
-	textSearch: string
-	availableFilters: Filters
 }
 
 const filterRegex = /(\S+):(\S+)/g

@@ -1,12 +1,12 @@
 import { Story, Meta } from "@storybook/react"
-import { bookIndexMetadata } from "../models/book"
-import { codeExampleIndexMetadata } from "../models/code-example"
-import { communityIndexMetadata } from "../models/community"
-import { companyIndexMetadata } from "../models/company"
-import { courseIndexMetadata } from "../models/course"
-import { libraryIndexMetadata } from "../models/library"
-import { podcastIndexMetadata } from "../models/podcast"
-import { vars } from "../themes/themes.css"
+import { bookIndexMetadata } from "../../models/book"
+import { codeExampleIndexMetadata } from "../../models/code-example"
+import { communityIndexMetadata } from "../../models/community"
+import { companyIndexMetadata } from "../../models/company"
+import { courseIndexMetadata } from "../../models/course"
+import { libraryIndexMetadata } from "../../models/library"
+import { podcastIndexMetadata } from "../../models/podcast"
+import { vars } from "../../themes/themes.css"
 import {
 	exampleBooks,
 	exampleCodeExamples,
@@ -16,7 +16,7 @@ import {
 	exampleLibraries,
 	examplePodcasts,
 	exampleTags,
-} from "../util/example-content"
+} from "../../util/example-content"
 import { Search as SearchComponent, SearchProps } from "./search"
 
 const data: SearchProps["data"] = [

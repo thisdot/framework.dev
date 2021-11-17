@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css"
-import { sprinkles } from "../sprinkles/sprinkles.css"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
 
 export const searchStyle = style([
 	sprinkles({

@@ -1,5 +1,5 @@
 import { Story, Meta } from "@storybook/react"
-import { vars } from "../themes/themes.css"
+import { vars } from "../../themes/themes.css"
 import { SearchInput as SearchInputComponent, SearchInputProps } from "./search-input"
 
 export default {

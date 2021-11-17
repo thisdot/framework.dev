@@ -14,26 +14,37 @@ export interface TextInputProps
 	hideLabel?: boolean
 }
 
-export function TextInput({
-	className,
-	label,
-	hideLabel = false,
-	id: customIdFromProps,
-	...props
-}: TextInputProps) {
-	const id = useId(customIdFromProps)
-	return (
-		<div className={classNames(className, textInputContainerStyle)}>
-			<input type="text" className={textInputBoxStyle} id={id} {...props} />
-			<label
-				htmlFor={id}
-				className={classNames(
-					textInputLabelStyle,
-					hideLabel && sprinkles({ hidden: "visually" })
-				)}
-			>
-				{label}
-			</label>
-		</div>
-	)
-}
+export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
+	function TextInput(
+		{
+			className,
+			label,
+			hideLabel = false,
+			id: customIdFromProps,
+			...props
+		}: TextInputProps,
+		ref
+	) {
+		const id = useId(customIdFromProps)
+		return (
+			<div className={classNames(className, textInputContainerStyle)}>
+				<input
+					type="text"
+					className={textInputBoxStyle}
+					id={id}
+					ref={ref}
+					{...props}
+				/>
+				<label
+					htmlFor={id}
+					className={classNames(
+						textInputLabelStyle,
+						hideLabel && sprinkles({ hidden: "visually" })
+					)}
+				>
+					{label}
+				</label>
+			</div>
+		)
+	}
+)
