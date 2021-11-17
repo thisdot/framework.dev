@@ -1,18 +1,16 @@
 import classNames from "classnames"
-import React, { useEffect, useState } from "react"
-import { DialogOverlay, DialogContent } from "@reach/dialog"
+import React, { useState } from "react"
 import {
 	burgerIconStyle,
-	dialogContentStyle,
-	dialogOverlayStyle,
 	menuButtonStyle,
 	menuCloseButtonStyle,
 	mobileNavStyle,
 } from "./mobile-nav.css"
 import { Sidebar } from "./sidebar"
 import { Logo } from "./logo"
+import { SideDialog } from "./side-dialog"
 
-type MenuState = "opening" | "open" | "closed"
+type MenuState = "open" | "closed"
 
 export type MobileNavProps = React.ComponentProps<"nav"> & {
 	initialMenuState?: MenuState
@@ -27,9 +25,6 @@ export function MobileNav({
 	...props
 }: MobileNavProps) {
 	const [menuState, setMenuState] = useState(initialMenuState)
-	useEffect(() => {
-		if (menuState === "opening") setTimeout(() => setMenuState("open"), 0)
-	}, [menuState])
 	return (
 		<nav className={classNames(className, mobileNavStyle)} {...props}>
 			<Logo />
@@ -38,43 +33,39 @@ export function MobileNav({
 				type="button"
 				id={menuButtonId}
 				onClick={() =>
-					setMenuState((state) => (state === "closed" ? "opening" : state))
+					setMenuState((state) => (state === "closed" ? "open" : state))
 				}
 			>
 				Menu
 				<BurgerIcon className={burgerIconStyle} />
 			</button>
-			<DialogOverlay
-				className={dialogOverlayStyle}
+			<SideDialog
+				position="left"
 				isOpen={menuState !== "closed"}
 				onDismiss={() => setMenuState("closed")}
+				aria-labelledby={menuButtonId}
 			>
-				<DialogContent
-					className={dialogContentStyle({ state: menuState })}
-					aria-labelledby={menuButtonId}
+				<button
+					type="button"
+					aria-label="Close"
+					className={menuCloseButtonStyle}
+					onClick={() => setMenuState("closed")}
 				>
-					<button
-						type="button"
-						aria-label="Close"
-						className={menuCloseButtonStyle}
-						onClick={() => setMenuState("closed")}
+					<svg
+						aria-hidden="true"
+						role="img"
+						viewBox="0 0 24 24"
+						width="20"
+						height="20"
 					>
-						<svg
-							aria-hidden="true"
-							role="img"
-							viewBox="0 0 24 24"
-							width="20"
-							height="20"
-						>
-							<path
-								d="M11.585 18.01L5.575 12l6.01-6.01L13 7.404l-4.6 4.6l4.6 4.6l-1.414 1.406h-.001zm5.425 0L10.999 12l6.011-6.01l1.414 1.414l-4.6 4.6l4.6 4.6l-1.413 1.406h-.001z"
-								fill="currentColor"
-							/>
-						</svg>
-					</button>
-					<Sidebar>{children}</Sidebar>
-				</DialogContent>
-			</DialogOverlay>
+						<path
+							d="M11.585 18.01L5.575 12l6.01-6.01L13 7.404l-4.6 4.6l4.6 4.6l-1.414 1.406h-.001zm5.425 0L10.999 12l6.011-6.01l1.414 1.414l-4.6 4.6l4.6 4.6l-1.413 1.406h-.001z"
+							fill="currentColor"
+						/>
+					</svg>
+				</button>
+				<Sidebar>{children}</Sidebar>
+			</SideDialog>
 		</nav>
 	)
 }

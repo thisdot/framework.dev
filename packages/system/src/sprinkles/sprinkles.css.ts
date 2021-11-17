@@ -26,10 +26,15 @@ const borders = {
 	tableCell: `0.5px solid ${vars.palette.neutral80}`,
 }
 
+export const breakpoints = {
+	tablet: "screen and (min-width: 768px)",
+	desktop: "screen and (min-width: 1024px)",
+}
+
 const conditions = {
 	mobile: {},
-	tablet: { "@media": "screen and (min-width: 768px)" },
-	desktop: { "@media": "screen and (min-width: 1024px)" },
+	tablet: { "@media": breakpoints.tablet },
+	desktop: { "@media": breakpoints.desktop },
 }
 
 const typography = defineProperties({
