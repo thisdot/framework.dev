@@ -3,8 +3,6 @@ import { Library } from "../../models/library"
 import {
 	comparisonTableStyle,
 	comparisonTableLibraryIconStyle,
-	comparisonTableHeadStyle,
-	comparisonTableRowCellStyle,
 } from "./comparison-table.css"
 import { TH, TD } from "./components/cells"
 import { ISortConfig, ILibrary } from "./types"
@@ -90,7 +88,7 @@ export function ComparisonTable({
 		<div className={className} {...props}>
 			{libraryStats && (
 				<table className={comparisonTableStyle}>
-					<thead className={comparisonTableHeadStyle}>
+					<thead>
 						<tr>
 							<TH
 								name="name"
@@ -138,7 +136,7 @@ export function ComparisonTable({
 					</thead>
 					<tbody>
 						{libraryStats.map((library) => (
-							<tr key={library.name} className={comparisonTableRowCellStyle}>
+							<tr key={library.name}>
 								<TD>
 									<img
 										src={library.image}

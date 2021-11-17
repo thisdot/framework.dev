@@ -17,6 +17,9 @@ const cellStyle = style([
 
 export const cellTHStyle = style([
 	cellStyle,
+	sprinkles({
+		fontWeight: "bold",
+	}),
 	{
 		backgroundColor: vars.palette.neutralVariant99,
 		position: "sticky",
@@ -24,8 +27,12 @@ export const cellTHStyle = style([
 		zIndex: 2,
 		selectors: {
 			"&:first-of-type": {
+				borderTopLeftRadius: pxToRem(12),
 				left: 0,
 				zIndex: 3,
+			},
+			"&:last-of-type": {
+				borderTopRightRadius: pxToRem(12),
 			},
 		},
 	},
