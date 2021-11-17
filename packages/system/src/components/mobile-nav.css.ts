@@ -1,4 +1,3 @@
-import { recipe } from "@vanilla-extract/recipes"
 import { style } from "@vanilla-extract/css"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { pxToRem } from "../util/style-utils"
@@ -41,46 +40,6 @@ export const burgerIconStyle = style([
 		height: pxToRem(9),
 	},
 ])
-
-export const dialogOverlayStyle = style({
-	background: "hsla(0, 0%, 0%, 0.66)",
-	position: "fixed",
-	top: 0,
-	bottom: 0,
-	right: 0,
-	left: 0,
-	overflow: "auto",
-})
-
-export const dialogContentStyle = recipe({
-	base: [
-		sprinkles({
-			display: "block",
-		}),
-		{
-			transitionProperty: "transform",
-			transitionDuration: "200ms",
-			position: "fixed",
-			left: 0,
-			top: 0,
-			width: "240px",
-			height: "100%",
-		},
-	],
-	variants: {
-		state: {
-			open: {
-				transform: "translateX(0)",
-				transitionTimingFunction: "ease-out",
-			},
-			opening: {
-				transform: "translateX(-240px)",
-				transitionTimingFunction: "ease-out",
-			},
-			closed: {},
-		},
-	},
-})
 
 export const menuCloseButtonStyle = style([
 	sprinkles({
