@@ -12,7 +12,7 @@ export const comparisonTableStyle = style([
 		textStyle: "bodyShort2",
 	}),
 	{
-		gridTemplateColumns: "max-content repeat(5, minmax(min-content, 1fr))",
+		gridTemplateColumns: "max-content repeat(5, 1fr)",
 		maxWidth: "90%",
 		overflowX: "scroll",
 		position: "relative",
@@ -24,12 +24,12 @@ export const comparisonTableStyle = style([
 		},
 		"::-webkit-scrollbar-track": {
 			backgroundColor: vars.palette.neutral80,
-			border: "31px solid rgba(255, 255, 255, 0)",
+			border: "30px solid rgba(255, 255, 255, 0)",
 			backgroundClip: "padding-box",
 		},
 		"::-webkit-scrollbar-thumb": {
 			backgroundColor: vars.palette.neutral20,
-			border: "31px solid rgba(255, 255, 255, 0)",
+			border: "30px solid rgba(255, 255, 255, 0)",
 			backgroundClip: "padding-box",
 		},
 	},

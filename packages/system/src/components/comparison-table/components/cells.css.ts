@@ -5,7 +5,8 @@ import { vars } from "../../../themes/themes.css"
 
 const cellStyle = style([
 	sprinkles({
-		border: "tableCell",
+		borderBottom: "tableCell",
+		borderRight: "tableCell",
 		paddingX: 24,
 		paddingY: 20,
 	}),
@@ -18,6 +19,7 @@ const cellStyle = style([
 export const cellTHStyle = style([
 	cellStyle,
 	sprinkles({
+		borderTop: "tableCell",
 		fontWeight: "bold",
 	}),
 	{
@@ -44,6 +46,8 @@ export const cellTHButtonStyle = style([
 	}),
 	{
 		position: "relative",
+		textAlign: "center",
+		width: "100%",
 		selectors: {
 			"&:before,&:after": {
 				position: "absolute",
