@@ -27,7 +27,12 @@ export const TH = ({
 		sorted = { "aria-sort": sort.asc ? "ascending" : "descending" }
 	}
 	return (
-		<div className={classNames(cellTHStyle, className)} {...props} {...sorted}>
+		<div
+			className={classNames(cellTHStyle, className)}
+			role="columnheader"
+			{...props}
+			{...sorted}
+		>
 			<button
 				className={classNames(cellTHButtonStyle)}
 				onClick={onClick}
@@ -39,12 +44,17 @@ export const TH = ({
 	)
 }
 
+type TDProps = {
+	role?: string
+}
+
 export const TD = ({
 	children,
 	className,
+	role = "cell",
 	...props
-}: React.ComponentPropsWithoutRef<"div">) => (
-	<div className={classNames(cellTDStyle, className)} {...props}>
+}: TDProps & React.ComponentPropsWithoutRef<"div">) => (
+	<div className={classNames(cellTDStyle, className)} role={role} {...props}>
 		<div className={cellContentsStyle}>{children}</div>
 	</div>
 )

@@ -88,7 +88,7 @@ export function ComparisonTable({
 	return (
 		<div className={className} {...props}>
 			{libraryStats && (
-				<div className={comparisonTableStyle}>
+				<div className={comparisonTableStyle} role="table">
 					<TH name="name" sort={sortConfig} onClick={() => handleSort("name")}>
 						Name
 					</TH>
@@ -129,7 +129,7 @@ export function ComparisonTable({
 					</TH>
 					{libraryStats.map((library) => (
 						<React.Fragment key={library.name}>
-							<TD className={cellStickyStyle}>
+							<TD className={cellStickyStyle} role="rowheader">
 								<img
 									src={library.image}
 									className={comparisonTableLibraryIconStyle}
