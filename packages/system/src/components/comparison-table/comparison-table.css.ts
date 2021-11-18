@@ -7,11 +7,13 @@ export const comparisonTableStyle = style([
 		border: "tableCell",
 		borderRadius: 12,
 		color: "regularText",
+		display: "grid",
 		textStyle: "bodyShort2",
 	}),
 	{
-		borderCollapse: "separate",
-		borderSpacing: 0,
+		gridTemplateColumns: "max-content repeat(5, minmax(min-content, 1fr))",
+		overflowX: "scroll",
+		overflowY: "auto",
 		position: "relative",
 	},
 ])

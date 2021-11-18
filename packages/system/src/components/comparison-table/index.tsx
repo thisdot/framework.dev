@@ -5,6 +5,7 @@ import {
 	comparisonTableLibraryIconStyle,
 } from "./comparison-table.css"
 import { TH, TD } from "./components/cells"
+import { cellStickyStyle } from "./components/cells.css"
 import { ISortConfig, ILibrary } from "./types"
 import { sortLibraries, formatPercentage, formatNumber } from "./utils"
 
@@ -87,78 +88,68 @@ export function ComparisonTable({
 	return (
 		<div className={className} {...props}>
 			{libraryStats && (
-				<table className={comparisonTableStyle}>
-					<thead>
-						<tr>
-							<TH
-								name="name"
-								sort={sortConfig}
-								onClick={() => handleSort("name")}
-							>
-								Name
-							</TH>
-							<TH
-								name="author"
-								sort={sortConfig}
-								onClick={() => handleSort("author")}
-							>
-								Author
-							</TH>
-							<TH
-								name="coverage"
-								sort={sortConfig}
-								onClick={() => handleSort("coverage")}
-							>
-								Testing Coverage
-							</TH>
-							<TH
-								name="downloads"
-								sort={sortConfig}
-								onClick={() => handleSort("downloads")}
-							>
-								Weekly Downloads
-							</TH>
-							<TH
-								name="health"
-								sort={sortConfig}
-								onClick={() => handleSort("health")}
-							>
-								Overall Health
-							</TH>
-							<TH
-								name="stars"
-								sort={sortConfig}
-								onClick={() => handleSort("stars")}
-							>
-								Stars
-							</TH>
-						</tr>
-					</thead>
-					<tbody>
-						{libraryStats.map((library) => (
-							<tr key={library.name}>
-								<TD>
-									<img
-										src={library.image}
-										className={comparisonTableLibraryIconStyle}
-									/>
-									<a
-										href={library.href}
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										{library.name}
-									</a>
-								</TD>
-								<TD>{library.author}</TD>
-								<TD>{formatPercentage(library.coverage) || "N/A"}</TD>
-								<TD>{formatNumber(library.downloads) || "N/A"}</TD>
-								<TD>{formatPercentage(library.health) || "N/A"}</TD>
-								<TD>{formatNumber(library.stars) || "N/A"}</TD>
-							</tr>
-						))}
-					</tbody>
-				</table>
+				<div className={comparisonTableStyle}>
+					<TH name="name" sort={sortConfig} onClick={() => handleSort("name")}>
+						Name
+					</TH>
+					<TH
+						name="author"
+						sort={sortConfig}
+						onClick={() => handleSort("author")}
+					>
+						Author
+					</TH>
+					<TH
+						name="coverage"
+						sort={sortConfig}
+						onClick={() => handleSort("coverage")}
+					>
+						Testing Coverage
+					</TH>
+					<TH
+						name="downloads"
+						sort={sortConfig}
+						onClick={() => handleSort("downloads")}
+					>
+						Weekly Downloads
+					</TH>
+					<TH
+						name="health"
+						sort={sortConfig}
+						onClick={() => handleSort("health")}
+					>
+						Overall Health
+					</TH>
+					<TH
+						name="stars"
+						sort={sortConfig}
+						onClick={() => handleSort("stars")}
+					>
+						Stars
+					</TH>
+					{libraryStats.map((library) => (
+						<React.Fragment key={library.name}>
+							<TD className={cellStickyStyle}>
+								<img
+									src={library.image}
+									className={comparisonTableLibraryIconStyle}
+								/>
+								<a
+									href={library.href}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									{library.name}
+								</a>
+							</TD>
+							<TD>{library.author}</TD>
+							<TD>{formatPercentage(library.coverage) || "N/A"}</TD>
+							<TD>{formatNumber(library.downloads) || "N/A"}</TD>
+							<TD>{formatPercentage(library.health) || "N/A"}</TD>
+							<TD>{formatNumber(library.stars) || "N/A"}</TD>
+						</React.Fragment>
+					))}
+				</div>
 			)}
 		</div>
 	)

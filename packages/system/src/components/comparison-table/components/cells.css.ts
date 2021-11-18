@@ -92,13 +92,15 @@ export const cellTDStyle = style([
 	cellStyle,
 	{
 		backgroundColor: "white",
-		selectors: {
-			"&:first-of-type": {
-				position: "sticky",
-				left: 0,
-				zIndex: 1,
-			},
-		},
+	},
+])
+
+export const cellStickyStyle = style([
+	cellTDStyle,
+	{
+		position: "sticky",
+		left: 0,
+		zIndex: 1,
 	},
 ])
 
