@@ -3,7 +3,7 @@ import { vars } from "../../themes/themes.css"
 import { SearchInput as SearchInputComponent, SearchInputProps } from "./search-input"
 
 export default {
-	title: "Search Input",
+	title: "Search/Search Input",
 	component: SearchInputComponent,
 	args: {
 		label: "Search",

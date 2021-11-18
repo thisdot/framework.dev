@@ -24,7 +24,7 @@ const params: QueryParams = {
 }
 
 export default {
-	title: "Filter Menu",
+	title: "Search/Filter Menu",
 	component: FilterMenuComponent,
 	parameters: {
 		layout: "fullscreen",

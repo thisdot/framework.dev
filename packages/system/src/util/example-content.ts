@@ -6,17 +6,18 @@ import tool1 from "./example-assets/tool-1.png"
 import logoRedux from "./example-assets/logo-redux.png"
 import logoXstate from "./example-assets/logo-xstate.png"
 import logoMobx from "./example-assets/logo-mobx.png"
-import { Course } from "../models/course"
-import { Library } from "../models/library"
+import { Course, courseIndexMetadata } from "../models/course"
+import { Library, libraryIndexMetadata } from "../models/library"
 import book1 from "./example-assets/book-1.png"
 import book2 from "./example-assets/book-2.png"
 import book3 from "./example-assets/book-3.png"
-import { Book } from "../models/book"
-import { Podcast } from "../models/podcast"
-import { Community } from "../models/community"
-import { Company } from "../models/company"
-import { CodeExample } from "../models/code-example"
-import { Tool } from "../models/tool"
+import { Book, bookIndexMetadata } from "../models/book"
+import { Podcast, podcastIndexMetadata } from "../models/podcast"
+import { Community, communityIndexMetadata } from "../models/community"
+import { Company, companyIndexMetadata } from "../models/company"
+import { CodeExample, codeExampleIndexMetadata } from "../models/code-example"
+import { Tool, toolIndexMetadata } from "../models/tool"
+import { AllCategories } from "../models/all-categories"
 
 export const exampleTags = [
 	"accessibility",
@@ -229,5 +230,56 @@ export const exampleTools: Tool<string>[] = [
 		image: tool1,
 		tags: ["Data Visualization", "Web3", "Hooks"],
 		href: "https://dogecoin.com/",
+	},
+]
+
+export const exampleSearchData: AllCategories[] = [
+	{
+		data: exampleBooks,
+		indexMetadata: bookIndexMetadata,
+		name: bookIndexMetadata.name,
+		tags: exampleTags,
+	},
+	{
+		data: exampleCodeExamples,
+		indexMetadata: codeExampleIndexMetadata,
+		name: codeExampleIndexMetadata.name,
+		tags: exampleTags,
+	},
+	{
+		data: exampleCommunities,
+		indexMetadata: communityIndexMetadata,
+		name: communityIndexMetadata.name,
+		tags: exampleTags,
+	},
+	{
+		data: exampleCompanies,
+		indexMetadata: companyIndexMetadata,
+		name: companyIndexMetadata.name,
+		tags: [],
+	},
+	{
+		data: exampleCourses,
+		indexMetadata: courseIndexMetadata,
+		name: courseIndexMetadata.name,
+		tags: exampleTags,
+	},
+	{
+		data: exampleLibraries,
+		indexMetadata: libraryIndexMetadata,
+		name: libraryIndexMetadata.name,
+		tags: exampleTags,
+	},
+	{
+		data: examplePodcasts,
+		indexMetadata: podcastIndexMetadata,
+		name: podcastIndexMetadata.name,
+		tags: exampleTags,
+	},
+	{
+		data: exampleTools,
+		indexMetadata: toolIndexMetadata,
+		name: toolIndexMetadata.name,
+		tags: exampleTags,
 	},
 ]

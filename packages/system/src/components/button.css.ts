@@ -7,6 +7,7 @@ export const buttonStyle = recipe({
 	base: [
 		sprinkles({
 			textStyle: "button",
+			gap: 8
 		}),
 		{
 			borderColor: "transparent",
@@ -16,6 +17,7 @@ export const buttonStyle = recipe({
 			justifyContent: "center",
 			alignContent: "center",
 			cursor: "pointer",
+			gridTemplateColumns: "repeat(2, auto)",
 			transition: "background 0.15s ease-in-out, color 0.15s ease-in-out",
 			":disabled": {
 				cursor: "not-allowed",

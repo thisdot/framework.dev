@@ -4,10 +4,10 @@ import { iconStyle } from "./icon.css"
 import { IconProps } from "./shared-icon-types"
 
 export const SearchIcon = React.forwardRef<SVGSVGElement, IconProps>(
-	function SearchIcon({ className, ...props }, ref) {
+	function SearchIcon({ className, size, ...props }, ref) {
 		return (
 			<svg
-				className={classNames(className, iconStyle)}
+				className={classNames(className, iconStyle({ size }))}
 				viewBox="0 0 24 24"
 				fill="currentColor"
 				ref={ref}
