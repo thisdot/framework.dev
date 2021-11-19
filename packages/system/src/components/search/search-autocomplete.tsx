@@ -11,7 +11,7 @@ import {
 import { lowerCase } from "lodash"
 import { SearchInput } from "./search-input"
 import { getWordCoordinatesAt, parseQueryString } from "./query-util"
-import { Filters } from "./types"
+import { FilterSet } from "./types"
 import { AllCategories } from "../../models/all-categories"
 
 export interface SearchAutocompleteProps {
@@ -84,7 +84,7 @@ type AutocompleteResult = {
 }
 
 function calculateAutocompleteResults(
-	availableFilters: Filters,
+	availableFilters: FilterSet,
 	word: string
 ): AutocompleteResult[] {
 	if (!word) return []
@@ -102,7 +102,7 @@ function calculateAutocompleteResults(
 		description: `Only results tagged ${lowerCase(name)}`,
 	}))
 	const fieldFilterSuggestions: AutocompleteResult[] = Array.from(
-		availableFilters.fields
+		availableFilters.field
 	).flatMap(([key, values]) =>
 		Array.from(values).map((value) => ({
 			value: `${key}:${value}`,

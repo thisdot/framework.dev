@@ -1,22 +1,24 @@
 import Fuse from "fuse.js"
+import { groupBy, map, mapValues, toPairs, uniq } from "lodash"
 import {
 	AllCategories,
 	AllModelsByName,
 	CategoryName,
 } from "../../models/all-categories"
-import { QueryParams } from "./types"
+import { FilterSet, QueryParams } from "./types"
 
 const filterRegex = /(\S+):(\S+)/g
 export function parseQueryString(
 	queryString: string,
 	allCategories: AllCategories[]
-): QueryParams {
+): { params: QueryParams; availableFilters: FilterSet } {
 	const filters = Array.from(queryString.matchAll(filterRegex)).map(
-		([_match, key, value]) => [key, value]
+		([_match, key, value]) => [key, value] as const
 	)
-	const availableCategories = new Set(
+	const availableCategories = uniq(
 		allCategories.map((category) => category.name)
 	)
+
 	const categories = filters
 		.filter(([key]) => key === "in")
 		.map(([_key, value]) => value)
@@ -25,41 +27,39 @@ export function parseQueryString(
 		.map(([_key, value]) => value)
 	const availableFilters = {
 		category: availableCategories,
-		tag: new Set(allCategories.flatMap((category) => category.tags)),
-		fields: allCategories
-			.filter(
-				(category) =>
-					categories.length === 0 || categories.includes(category.name)
-			)
-			.flatMap((category) =>
-				Object.entries(category.indexMetadata.filterableFields)
-			)
-			.reduce((map, [key, values]) => {
-				if (!map.has(key)) map.set(key, new Set())
-				for (const value of values) {
-					map.get(key).add(value)
-				}
-				return map
-			}, new Map<string, Set<string>>()),
+		tag: uniq(allCategories.flatMap((category) => category.tags)),
+		field:
+			categories.length === 1
+				? Object.entries(
+						allCategories.find((cat) => cat.name === categories[0])
+							.indexMetadata.filterableFields
+				  )
+				: [],
 	}
-	const fields = filters
-		.filter(([key]) => availableFilters.fields.has(key))
-		.map(([key, value]) => [key, value] as const)
+	const fields = groupFieldFilters(
+		filters.filter(([key]) =>
+			availableFilters.field.some(([fieldName]) => key === fieldName)
+		)
+	)
 	const textSearch = queryString.replaceAll(filterRegex, "").trim()
 
 	return {
-		categories,
-		tags,
-		fields,
-		textSearch,
+		params: {
+			filters: {
+				category: categories,
+				tag: tags,
+				field: fields,
+			},
+			textSearch,
+		},
 		availableFilters,
 	}
 }
 
 export function serializeQueryParams(params: QueryParams): string {
-	const categories = params.categories.map((category) => `in:${category}`)
-	const tags = params.tags.map((tag) => `tag:${tag}`)
-	const fields = params.fields.map(
+	const categories = params.filters.category.map((category) => `in:${category}`)
+	const tags = params.filters.tag.map((tag) => `tag:${tag}`)
+	const fields = ungroupFieldFilters(params.filters.field).map(
 		([fieldName, value]) => `${fieldName}:${value}`
 	)
 
@@ -93,7 +93,7 @@ type SearchArgs<
 
 export function getSearchResults<K extends CategoryName>({
 	data,
-	params: { textSearch, tags, fields },
+	params: { textSearch, filters },
 	searchIndex,
 }: SearchArgs<K>): AllModelsByName[K][] {
 	const initialResults: AllModelsByName[K][] = textSearch
@@ -105,11 +105,22 @@ export function getSearchResults<K extends CategoryName>({
 
 	return initialResults.filter(
 		(record) =>
-			(tags.length === 0 || record.tags.some((tag) => tags.includes(tag))) &&
-			fields.every(([fieldName]) =>
-				fields
-					.filter(([name]) => name === fieldName)
-					.some(([_name, fieldValue]) => fieldValue === record[fieldName])
+			(filters.tag.length === 0 ||
+				record.tags.some((tag) => filters.tag.includes(tag))) &&
+			filters.field.every(([fieldName, fieldValues]) =>
+				fieldValues.some((fieldValue) => fieldValue === record[fieldName])
 			)
 	)
+}
+
+export function groupFieldFilters(
+	filters: (readonly [string, string])[]
+): (readonly [string, string[]])[] {
+	return toPairs(mapValues(groupBy(filters, 0), (values) => map(values, 1)))
+}
+
+export function ungroupFieldFilters(
+	groupedFilters: (readonly [string, readonly string[]])[]
+): (readonly [string, string])[] {
+	return groupedFilters.flatMap(([k, vs]) => vs.map((v) => [k, v]))
 }

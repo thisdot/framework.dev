@@ -22,7 +22,7 @@ import {
 
 export interface TagFilterProps<T extends string>
 	extends React.ComponentPropsWithoutRef<"fieldset"> {
-	options: Set<T>
+	options: T[]
 	value: T[]
 	onUpdate: (newValue: T[]) => void
 }
@@ -59,7 +59,7 @@ export function TagFilter<T extends string>({
 					/>
 					<ComboboxPopover>
 						<ComboboxList>
-							{Array.from(options)
+							{options
 								.filter((o) => !value.includes(o))
 								.map((option) => (
 									<ComboboxOption key={option} value={option} />

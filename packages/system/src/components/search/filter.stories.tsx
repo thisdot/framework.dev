@@ -7,7 +7,7 @@ export default {
 	component: FilterComponent,
 	args: {
 		name: "Search in",
-		options: new Set(allCategoryNames),
+		options: allCategoryNames,
 		value: ["books"],
 	},
 	argTypes: {

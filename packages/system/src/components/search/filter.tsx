@@ -11,8 +11,8 @@ import { Checkbox } from "../checkbox"
 export interface FilterProps<T extends string>
 	extends React.ComponentPropsWithoutRef<"fieldset"> {
 	name: string
-	options: Set<T>
-	value: T[]
+	options: readonly T[]
+	value: readonly T[]
 	onUpdate: (newValue: T[]) => void
 }
 
@@ -29,7 +29,7 @@ export function Filter<T extends string>({
 		<fieldset className={classNames(className, filterStyle)} {...props}>
 			<legend className={filterTitleStyle}>{name}</legend>
 			<div className={filterCheckboxesStyle}>
-				{Array.from(options).map((option) => {
+				{options.map((option) => {
 					const otherValues = value.filter((v) => v !== option)
 					return (
 						<Checkbox

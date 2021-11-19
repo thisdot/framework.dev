@@ -6,7 +6,7 @@ export default {
 	title: "Search/Tag Filter",
 	component: TagFilterComponent,
 	args: {
-		options: new Set(exampleTags),
+		options: exampleTags,
 		value: ["accessibility"],
 	},
 	argTypes: {

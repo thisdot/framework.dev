@@ -41,7 +41,10 @@ export function Search({ className, data, ...props }: SearchProps) {
 	)
 	const [query, setQuery] = useState("")
 	const [filterMenuOpen, setFilterMenuOpen] = useState(false)
-	const queryParams = parseQueryString(query, data)
+	const { params: queryParams, availableFilters } = parseQueryString(
+		query,
+		data
+	)
 	return (
 		<section className={classNames(className, searchStyle)} {...props}>
 			<div className={sprinkles({ layout: "row", gap: 12 })}>
@@ -65,6 +68,7 @@ export function Search({ className, data, ...props }: SearchProps) {
 				>
 					<FilterMenu
 						params={queryParams}
+						availableFilters={availableFilters}
 						onConfirm={(newParams) => {
 							setQuery(serializeQueryParams(newParams))
 							setFilterMenuOpen(false)
@@ -76,7 +80,7 @@ export function Search({ className, data, ...props }: SearchProps) {
 				{query &&
 					data
 						.filter((category) =>
-							queryParams.categories.length > 0
+							queryParams.filters.category.length > 0
 								? isInFilteredCategories(category)
 								: true
 						)
@@ -98,7 +102,7 @@ export function Search({ className, data, ...props }: SearchProps) {
 	)
 
 	function isInFilteredCategories(category: AllCategories): unknown {
-		return queryParams.categories.some(
+		return queryParams.filters.category.some(
 			(includedCategory) => includedCategory === category.name
 		)
 	}
