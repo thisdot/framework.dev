@@ -6,6 +6,8 @@ import {
 	horizontalScrollbarSectionStyle,
 	horizontalScrollbarTrackStyle,
 	horizontalScrollbarThumbStyle,
+	horizontalScrollbarButtonContainerStyle,
+	horizontalScrollbarButtonStyle,
 } from "./horizontal-scrollbar.css"
 import { ChevronIcon } from "../../../icons/chevron-icon"
 
@@ -29,11 +31,11 @@ export const HorizontalScrollbar = ({
 				<div className={horizontalScrollbarTrackStyle}>
 					<div className={horizontalScrollbarThumbStyle}></div>
 				</div>
-				<div>
-					<button>
+				<div className={horizontalScrollbarButtonContainerStyle}>
+					<button className={horizontalScrollbarButtonStyle}>
 						<ChevronIcon />
 					</button>
-					<button>
+					<button className={horizontalScrollbarButtonStyle}>
 						<ChevronIcon flipped={true} />
 					</button>
 				</div>

@@ -22,6 +22,7 @@ export const horizontalScrollbarContentStyle = style({
 export const horizontalScrollbarSectionStyle = style([
 	sprinkles({
 		display: "grid",
+		gap: 24,
 		paddingX: 24,
 	}),
 	{
@@ -34,6 +35,47 @@ export const horizontalScrollbarSectionStyle = style([
 	},
 ])
 
-export const horizontalScrollbarTrackStyle = style({})
+export const horizontalScrollbarTrackStyle = style([
+	sprinkles({
+		backgroundColor: "tertiaryBorder",
+		borderRadius: 12,
+	}),
+	{
+		height: pxToRem(4),
+		width: "100%",
+	},
+])
 
-export const horizontalScrollbarThumbStyle = style({})
+export const horizontalScrollbarThumbStyle = style([
+	sprinkles({
+		backgroundColor: "regularText",
+		borderRadius: 12,
+	}),
+	{
+		height: pxToRem(4),
+	},
+])
+
+export const horizontalScrollbarButtonContainerStyle = style([
+	sprinkles({
+		display: "grid",
+		gap: 4,
+	}),
+	{
+		gridTemplateColumns: "repeat(2, auto)",
+	},
+])
+
+export const horizontalScrollbarButtonStyle = style([
+	sprinkles({
+		backgroundColor: "surface",
+		border: "tableCell",
+		borderRadius: 12,
+		display: "grid",
+	}),
+	{
+		height: pxToRem(40),
+		placeItems: "center",
+		width: pxToRem(40),
+	},
+])
