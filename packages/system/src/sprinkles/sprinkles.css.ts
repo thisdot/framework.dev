@@ -240,6 +240,10 @@ const layout = defineProperties({
 			full: "100%",
 			auto: "auto",
 		},
+		height: {
+			full: "100%",
+			auto: "auto",
+		},
 		justifyContent: [
 			"stretch",
 			"flex-start",

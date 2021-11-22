@@ -8,6 +8,11 @@ export default {
 	component: SearchComponent,
 	args: {
 		data: exampleSearchData,
+		preFilters: {
+			category: ["courses"],
+			field: [],
+			tag: [],
+		},
 	},
 	parameters: {
 		backgrounds: {

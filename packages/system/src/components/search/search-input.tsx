@@ -6,6 +6,7 @@ import {
 	searchInputBoxStyle,
 	searchInputContainerStyle,
 	searchInputIconStyle,
+	searchInputInputStyle,
 	searchInputLabelStyle,
 	searchInputResetButtonStyle,
 } from "./search-input.css"
@@ -15,6 +16,7 @@ import { CloseIcon } from "../../icons/close-icon"
 export interface SearchInputProps
 	extends React.ComponentPropsWithoutRef<"input"> {
 	label: string
+	staticPrefix?: string
 	hideLabel?: boolean
 	onReset: () => void
 }
@@ -26,6 +28,7 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
 			label,
 			hideLabel = false,
 			id: customIdFromProps,
+			staticPrefix = "",
 			onReset,
 			...props
 		}: SearchInputProps,
@@ -34,21 +37,24 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
 		const id = useId(customIdFromProps)
 		return (
 			<div className={classNames(className, searchInputContainerStyle)}>
-				<SearchIcon className={searchInputIconStyle} />
-				<button
-					title="Reset"
-					onClick={onReset}
-					className={searchInputResetButtonStyle}
-				>
-					<CloseIcon />
-				</button>
-				<input
-					type="search"
-					className={searchInputBoxStyle}
-					id={id}
-					{...props}
-					ref={ref}
-				/>
+				<div className={searchInputBoxStyle}>
+					<SearchIcon className={searchInputIconStyle} />
+					<div className={sprinkles({ color: "softText" })}>{staticPrefix}</div>
+					<input
+						type="search"
+						id={id}
+						className={searchInputInputStyle}
+						{...props}
+						ref={ref}
+					/>
+					<button
+						title="Reset"
+						onClick={onReset}
+						className={searchInputResetButtonStyle}
+					>
+						<CloseIcon />
+					</button>
+				</div>
 				<label
 					htmlFor={id}
 					className={classNames(
