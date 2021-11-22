@@ -3,11 +3,11 @@ import { allCategoryNames } from "../../models/all-categories"
 import { Filter as FilterComponent, FilterProps } from "./filter"
 
 export default {
-	title: "Filter",
+	title: "Search/Filter",
 	component: FilterComponent,
 	args: {
 		name: "Search in",
-		options: new Set(allCategoryNames),
+		options: allCategoryNames,
 		value: ["books"],
 	},
 	argTypes: {

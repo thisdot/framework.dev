@@ -5,26 +5,29 @@ import {
 	FilterMenu as FilterMenuComponent,
 	FilterMenuProps,
 } from "./filter-menu"
-import { QueryParams } from "./types"
+import { FilterSet, QueryParams } from "./types"
 
 const params: QueryParams = {
-	categories: [],
-	fields: [],
-	tags: [],
-	textSearch: "",
-	availableFilters: {
-		category: new Set(allCategoryNames),
-		tag: new Set(exampleTags),
-		fields: new Map([
-			["level", new Set(["beginner", "intermediate", "advanced"])],
-			["paymentType", new Set(["free", "paid"])],
-			["format", new Set(["text", "video", "interactive"])],
-		]),
+	filters: {
+		category: [],
+		field: [],
+		tag: [],
 	},
+	textSearch: "",
+}
+
+const availableFilters: FilterSet = {
+	category: allCategoryNames,
+	tag: [...exampleTags],
+	field: [
+		["level", ["beginner", "intermediate", "advanced"]],
+		["paymentType", ["free", "paid"]],
+		["format", ["text", "video", "interactive"]],
+	],
 }
 
 export default {
-	title: "Filter Menu",
+	title: "Search/Filter Menu",
 	component: FilterMenuComponent,
 	parameters: {
 		layout: "fullscreen",
@@ -34,6 +37,7 @@ export default {
 	},
 	args: {
 		params,
+		availableFilters,
 	},
 	argTypes: {
 		onConfirm: { action: "confirm" },

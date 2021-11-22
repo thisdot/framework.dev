@@ -7,23 +7,25 @@ import {
 	filterMenuHeaderStyle,
 	filterMenuHeadingStyle,
 } from "./filter-menu.css"
-import { QueryParams } from "./types"
+import { FilterSet, QueryParams } from "./types"
 import { Filter } from "./filter"
 import { TagFilter } from "./tag-filter"
 
 export type FilterMenuProps = React.ComponentPropsWithoutRef<"div"> & {
 	params: QueryParams
+	availableFilters: FilterSet
 	onConfirm: (newParams: QueryParams) => void
 }
 
 export function FilterMenu({
 	className,
 	params: initialParams,
+	availableFilters,
 	onConfirm,
 	...props
 }: FilterMenuProps) {
-	const [params, setParams] = useState(initialParams)
-	const { categories, fields, tags, availableFilters } = params
+	const [params, setParams] = useState<QueryParams>(initialParams)
+	const { filters } = params
 	return (
 		<article className={className} {...props}>
 			<header className={filterMenuHeaderStyle}>
@@ -32,7 +34,10 @@ export function FilterMenu({
 					as="button"
 					color="destructive"
 					onClick={() =>
-						setParams({ ...params, categories: [], fields: [], tags: [] })
+						setParams({
+							...params,
+							filters: { category: [], field: [], tag: [] },
+						})
 					}
 				>
 					Reset
@@ -42,45 +47,52 @@ export function FilterMenu({
 				</Button>
 			</header>
 			<div className={filterMenuFilterContainerStyle}>
-				{availableFilters.category.size > 0 && (
+				{availableFilters.category.length > 0 && (
 					<Filter
 						name="Search in"
 						options={availableFilters.category}
-						value={categories}
+						value={filters.category}
 						onUpdate={(newValue) =>
-							setParams((oldParams) => ({ ...oldParams, categories: newValue }))
+							setParams((oldParams) => ({
+								...oldParams,
+								filters: { ...oldParams.filters, category: newValue },
+							}))
 						}
 					/>
 				)}
 				<CardDivider />
-				{Array.from(availableFilters.fields).map(
-					([fieldName, fieldOptions]) => (
-						<React.Fragment key={fieldName}>
-							<Filter
-								name={startCase(fieldName)}
-								options={fieldOptions}
-								value={fields
-									.filter(([name]) => name === fieldName)
-									.map(([_, value]) => value)}
-								onUpdate={(newValue) =>
-									setParams((oldParams) => ({
-										...oldParams,
-										fields: [
-											...fields.filter(([name]) => name !== fieldName),
-											...newValue.map((v) => [fieldName, v] as const),
+				{availableFilters.field.map(([fieldName, fieldOptions]) => (
+					<React.Fragment key={fieldName}>
+						<Filter
+							name={startCase(fieldName)}
+							options={fieldOptions}
+							value={
+								filters.field.find(([name]) => name === fieldName)?.[1] ?? []
+							}
+							onUpdate={(newValue) =>
+								setParams((oldParams) => ({
+									...oldParams,
+									filters: {
+										...oldParams.filters,
+										field: [
+											...filters.field.filter(([name]) => name !== fieldName),
+											[fieldName, newValue],
 										],
-									}))
-								}
-							/>
-							<CardDivider />
-						</React.Fragment>
-					)
-				)}
+									},
+								}))
+							}
+						/>
+						<CardDivider />
+					</React.Fragment>
+				))}
 				<TagFilter
 					options={availableFilters.tag}
-					value={tags}
+					value={filters.tag}
 					onUpdate={(newValue) =>
-						setParams((oldParams) => ({ ...oldParams, tags: newValue }))
+						setParams((oldParams) => ({
+							...oldParams,
+							filters: { ...oldParams.filters, tag: newValue },
+						}))
 					}
 				/>
 			</div>

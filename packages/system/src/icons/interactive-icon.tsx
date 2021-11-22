@@ -4,10 +4,10 @@ import { iconStyle } from "./icon.css"
 import { IconProps } from "./shared-icon-types"
 
 export const InteractiveIcon = React.forwardRef<SVGSVGElement, IconProps>(
-	function InteractiveIcon({ className, ...props }, ref) {
+	function InteractiveIcon({ className, size, ...props }, ref) {
 		return (
 			<svg
-				className={classNames(className, iconStyle)}
+				className={classNames(className, iconStyle({ size }))}
 				viewBox="0 0 15 18"
 				fill="currentColor"
 				ref={ref}

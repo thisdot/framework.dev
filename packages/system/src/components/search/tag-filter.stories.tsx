@@ -3,10 +3,10 @@ import { exampleTags } from "../../util/example-content"
 import { TagFilter as TagFilterComponent, TagFilterProps } from "./tag-filter"
 
 export default {
-	title: "Tag Filter",
+	title: "Search/Tag Filter",
 	component: TagFilterComponent,
 	args: {
-		options: new Set(exampleTags),
+		options: exampleTags,
 		value: ["accessibility"],
 	},
 	argTypes: {
