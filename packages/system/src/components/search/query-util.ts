@@ -1,7 +1,8 @@
 import Fuse from "fuse.js"
-import { groupBy, map, mapValues, toPairs, uniq } from "lodash"
+import { groupBy, map, mapValues, toPairs, uniq, without } from "lodash"
 import {
 	AllCategories,
+	AllModels,
 	AllModelsByName,
 	CategoryName,
 } from "../../models/all-categories"
@@ -10,7 +11,8 @@ import { FilterSet, QueryParams } from "./types"
 const filterRegex = /(\S+):(\S+)/g
 export function parseQueryString(
 	queryString: string,
-	allCategories: AllCategories[]
+	allCategories: AllCategories[],
+	preFilters: FilterSet
 ): { params: QueryParams; availableFilters: FilterSet } {
 	const filters = Array.from(queryString.matchAll(filterRegex)).map(
 		([_match, key, value]) => [key, value] as const
@@ -26,14 +28,14 @@ export function parseQueryString(
 		.filter(([key]) => key === "tag")
 		.map(([_key, value]) => value)
 	const availableFilters = {
-		category: availableCategories,
-		tag: uniq(allCategories.flatMap((category) => category.tags)),
+		category: preFilters.category.length > 0 ? [] : availableCategories,
+		tag: without(
+			uniq(allCategories.flatMap((category) => category.tags)),
+			...preFilters.tag
+		),
 		field:
-			categories.length === 1
-				? Object.entries(
-						allCategories.find((cat) => cat.name === categories[0])
-							.indexMetadata.filterableFields
-				  )
+			allCategories.length === 1
+				? Object.entries(allCategories[0].indexMetadata.filterableFields)
 				: [],
 	}
 	const fields = groupFieldFilters(
@@ -103,7 +105,24 @@ export function getSearchResults<K extends CategoryName>({
 				.map((result) => result.item)
 		: data
 
-	return initialResults.filter(
+	return filterRecords(initialResults, filters)
+}
+
+export function filterCategories(data: AllCategories[], filters: FilterSet) {
+	return data.filter(
+		(category) =>
+			filters.category.length === 0 ||
+			filters.category.some(
+				(filterCategory) => filterCategory === category.name
+			)
+	)
+}
+
+export function filterRecords<T extends AllModels>(
+	data: T[],
+	filters: FilterSet
+): T[] {
+	return data.filter(
 		(record) =>
 			(filters.tag.length === 0 ||
 				record.tags.some((tag) => filters.tag.includes(tag))) &&
@@ -123,4 +142,10 @@ export function ungroupFieldFilters(
 	groupedFilters: (readonly [string, readonly string[]])[]
 ): (readonly [string, string])[] {
 	return groupedFilters.flatMap(([k, vs]) => vs.map((v) => [k, v]))
+}
+
+export const emptyFilterSet: FilterSet = {
+	category: [],
+	field: [],
+	tag: [],
 }

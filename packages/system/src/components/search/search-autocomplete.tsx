@@ -10,14 +10,16 @@ import {
 } from "@reach/combobox"
 import { lowerCase } from "lodash"
 import { SearchInput } from "./search-input"
-import { getWordCoordinatesAt, parseQueryString } from "./query-util"
+import { getWordCoordinatesAt } from "./query-util"
 import { FilterSet } from "./types"
 import { AllCategories } from "../../models/all-categories"
 
 export interface SearchAutocompleteProps {
+	staticPrefix?: string
 	value: string
 	onChange: (newValue: string) => void
 	data: AllCategories[]
+	availableFilters: FilterSet
 	className?: string
 }
 
@@ -25,6 +27,8 @@ export function SearchAutocomplete({
 	onChange,
 	value,
 	data,
+	availableFilters,
+	staticPrefix,
 	...props
 }: SearchAutocompleteProps) {
 	const inputRef = useRef<HTMLInputElement>()
@@ -32,10 +36,9 @@ export function SearchAutocomplete({
 		value,
 		inputRef.current?.selectionStart
 	)
-	const queryParams = parseQueryString(value, data)
 	const autoCompleteResults = currentWordCoordinates
 		? calculateAutocompleteResults(
-				queryParams.availableFilters,
+				availableFilters,
 				value.slice(...currentWordCoordinates)
 		  )
 		: []
@@ -58,6 +61,7 @@ export function SearchAutocomplete({
 				label="Search"
 				hideLabel
 				value={value}
+				staticPrefix={staticPrefix}
 				onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
 					onChange(e.target.value)
 				}}
