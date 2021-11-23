@@ -17,13 +17,21 @@ export const HorizontalScrollbar = ({
 	...props
 }: React.ComponentPropsWithoutRef<"div">) => {
 	const scrollSectionRef = useRef<HTMLDivElement>(null)
-	const [thumbWidth, setThumbWidth] = useState(20)
+	const [thumbWidth, setThumbWidth] = useState(5)
+
+	function handleResize(ref) {
+		const { clientWidth, scrollWidth } = ref
+		const visibleRatio = clientWidth / scrollWidth
+		setThumbWidth(Math.max(visibleRatio * 100, 5))
+	}
 
 	useEffect(() => {
 		if (scrollSectionRef.current) {
-			const { clientWidth, scrollWidth } = scrollSectionRef.current
-			const visibleRatio = clientWidth / scrollWidth
-			setThumbWidth(Math.max(visibleRatio * clientWidth, 20))
+			const ref = scrollSectionRef.current
+			handleResize(ref)
+			const resizeObserver = new ResizeObserver(() => handleResize(ref))
+			resizeObserver.observe(ref)
+			return () => resizeObserver.disconnect()
 		}
 	}, [])
 
@@ -40,7 +48,7 @@ export const HorizontalScrollbar = ({
 				<div className={horizontalScrollbarTrackStyle}>
 					<div
 						className={horizontalScrollbarThumbStyle}
-						style={{ width: `${thumbWidth}px` }}
+						style={{ width: `${thumbWidth}%` }}
 					></div>
 				</div>
 				<div className={horizontalScrollbarButtonContainerStyle}>
