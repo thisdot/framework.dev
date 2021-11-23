@@ -11,6 +11,7 @@ export const libraryTags = [
 	"CSS processor",
 	"CSS modules",
 	"webpack",
+	"component library",
 ] as const
 
 export const libraries: Library<typeof libraryTags[number]>[] = [
@@ -281,5 +282,94 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Generate a static set of custom utility classes and compose them either statically at build time, or dynamically at runtime, without the usual style generation overhead of CSS-in-JS. Basically, it’s like building your own zero-runtime, type-safe version of Tailwind, Styled System, etc.",
 		image: "https://github.com/seek-oss.png",
 		tags: ["styling", "utility-first CSS", "CSS in JS"],
+	},
+	{
+		name: "MUI",
+		author: "Material-UI",
+		gitHubRepo: "mui-org/material-ui",
+		npmPackage: "@mui/material",
+		href: "https://mui.com/",
+		description:
+			"MUI is a simple and customizable component library to build faster, beautiful, and more accessible React applications. Follow your own design system, or start with Material Design.",
+		image: "https://github.com/mui-org",
+		tags: ["component library"],
+	},
+	{
+		name: "React Bootstrap",
+		author: "Stephen J. Collings, Matthew Honnibal, Pieter Vanderwerff",
+		gitHubRepo: "https://github.com/react-bootstrap/react-bootstrap",
+		npmPackage: "react-bootstrap",
+		href: "https://react-bootstrap.github.io/",
+		description:
+			"The most popular front-end framework rebuilt for React. Each component has been built from scratch as a true React component, without unneeded dependencies like jQuery.",
+		image: "https://github.com/react-bootstrap.png",
+		tags: ["component library"],
+	},
+	{
+		name: "Fluent UI React",
+		author: "Microsoft",
+		gitHubRepo: "microsoft/fluentui",
+		npmPackage: "@fluentui/react",
+		href: "https://aka.ms/fluentui-react",
+		description:
+			"Fluent UI web represents a collection of utilities, React components, and web components for building web applications. It is the web version of Microsoft's cross-platform Fluent UI design framework.",
+		image: "https://github.com/microsoft.png",
+		tags: ["component library"],
+	},
+	{
+		name: "Blueprint",
+		author: "Palantir",
+		gitHubRepo: "palantir/blueprint",
+		npmPackage: "@blueprintjs/core",
+		href: "http://blueprintjs.com/docs",
+		image:
+			"https://cloud.githubusercontent.com/assets/464822/20228152/d3f36dc2-a804-11e6-80ff-51ada2d13ea7.png",
+		tags: ["component library"],
+		description:
+			"Blueprint is a React-based UI toolkit for the web. It is optimized for building complex, data-dense web interfaces for desktop applications which run in modern browsers and IE11. This is not a mobile-first UI toolkit.",
+	},
+	{
+		name: "Semantic UI React",
+		author: "Semantic Org",
+		gitHubRepo: "Semantic-Org/Semantic-UI-React",
+		npmPackage: "semantic-ui-react",
+		href: "https://react.semantic-ui.com/",
+		image:
+			"https://github.com/Semantic-Org/Semantic-UI-React/raw/master/docs/public/logo.png",
+		tags: ["component library"],
+		description:
+			"Semantic UI React is the official React integration for Semantic UI, a popular UI development framework.",
+	},
+	{
+		name: "Headless UI",
+		author: "Tailwind Labs",
+		gitHubRepo: "tailwindlabs/headlessui",
+		npmPackage: "@headlessui/react",
+		href: "https://headlessui.dev/",
+		image: "https://github.com/tailwindlabs.png",
+		tags: ["component library"],
+		description:
+			"A set of completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.",
+	},
+	{
+		name: "Ant Design",
+		author: "Ant",
+		gitHubRepo: "ant-design/ant-design",
+		npmPackage: "antd",
+		href: "https://ant.design/",
+		image: "https://github.com/ant-design.png",
+		tags: ["component library"],
+		description: "An enterprise-class UI design language and React UI library.",
+	},
+	{
+		name: "Radix Primitives",
+		author: "Modulz",
+		gitHubRepo: "radix-ui/primitives",
+		npmPackage: "@radix-ui/primitives",
+		href: "https://radix-ui.com/docs/primitives",
+		image: "https://github.com/radix-ui.png",
+		tags: ["component library"],
+		description:
+			"Radix Primitives is a low-level UI component library with a focus on accessibility, customization and developer experience. You can use these components either as the base layer of your design system, or adopt them incrementally.",
 	},
 ]
