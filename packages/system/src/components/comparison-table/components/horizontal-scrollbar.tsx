@@ -17,13 +17,13 @@ export const HorizontalScrollbar = ({
 	...props
 }: React.ComponentPropsWithoutRef<"div">) => {
 	const scrollSectionRef = useRef<HTMLDivElement>(null)
-	const [thumbWidth, setThumbWidth] = useState(5)
+	const scrollTrackRef = useRef<HTMLDivElement>(null)
+	const [thumbWidth, setThumbWidth] = useState(20)
 	const [thumbLeft, setThumbLeft] = useState(0)
 
-	function handleResize(ref: HTMLDivElement) {
+	function handleResize(ref: HTMLDivElement, track: number) {
 		const { clientWidth, scrollWidth } = ref
-		const visibleRatio = clientWidth / scrollWidth
-		setThumbWidth(Math.max(visibleRatio * 100, 5))
+		setThumbWidth(Math.max((clientWidth / scrollWidth) * track, 20))
 	}
 
 	function handleScrollButton(direction: "left" | "right") {
@@ -35,21 +35,25 @@ export const HorizontalScrollbar = ({
 	}
 
 	const handleThumbPosition = useCallback(() => {
-		if (!scrollSectionRef.current) {
+		if (!scrollSectionRef.current || !scrollTrackRef.current) {
 			return
 		}
 		const { current } = scrollSectionRef
-		const { scrollLeft, scrollWidth, offsetWidth } = current
-		let newLeft = (+scrollLeft / +scrollWidth) * offsetWidth
-		newLeft = Math.min(newLeft, offsetWidth - thumbWidth)
+		const trackWidth = scrollTrackRef.current.clientWidth
+		const { scrollLeft, scrollWidth } = current
+		let newLeft = (+scrollLeft / +scrollWidth) * trackWidth
+		newLeft = Math.min(newLeft, trackWidth - thumbWidth)
 		setThumbLeft(newLeft)
 	}, [])
 
 	useEffect(() => {
-		if (scrollSectionRef.current) {
+		if (scrollSectionRef.current && scrollTrackRef.current) {
 			const ref = scrollSectionRef.current
-			handleResize(ref)
-			const resizeObserver = new ResizeObserver(() => handleResize(ref))
+			const track = scrollTrackRef.current
+			handleResize(ref, track.clientWidth)
+			const resizeObserver = new ResizeObserver(() =>
+				handleResize(ref, track.clientWidth)
+			)
 			resizeObserver.observe(ref)
 			ref.addEventListener("scroll", handleThumbPosition)
 			return () => {
@@ -69,10 +73,10 @@ export const HorizontalScrollbar = ({
 				{children}
 			</div>
 			<div className={horizontalScrollbarSectionStyle}>
-				<div className={horizontalScrollbarTrackStyle}>
+				<div className={horizontalScrollbarTrackStyle} ref={scrollTrackRef}>
 					<div
 						className={horizontalScrollbarThumbStyle}
-						style={{ width: `${thumbWidth}%`, left: `${thumbLeft}px` }}
+						style={{ width: `${thumbWidth}px`, left: `${thumbLeft}px` }}
 					></div>
 				</div>
 				<div className={horizontalScrollbarButtonContainerStyle}>
