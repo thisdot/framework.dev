@@ -2,15 +2,10 @@ import { Podcast } from "@framework/system/src/models/podcast"
 
 export const podcastTags = [
 	"general",
-	"state management",
-	"data fetching",
-	"routing",
-	"testing",
-	"forms",
+	"react.js",
 	"graphQL",
-	"native",
+	"react native",
 	"redux",
-	"authentication",
 ] as const
 
 export const podcasts: Podcast<typeof podcastTags[number]>[] = [
@@ -22,7 +17,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		description: "Conversations about React with your favorite developers.",
 		rss: "https://feeds.simplecast.com/JoR28o79",
 		href: "https://reactpodcast.com/",
-		tags: ["general", "state management", "data fetching", "routing"],
+		tags: ["react.js"],
 	},
 	{
 		title: "JavaScript Air",
@@ -31,13 +26,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		description: "The live broadcast podcast all about JavaScript",
 		rss: "https://feed.podbean.com/audio.javascriptair.com/feed.xml",
 		href: "https://javascriptair.com/",
-		tags: [
-			"general",
-			"state management",
-			"data fetching",
-			"testing",
-			"graphQL",
-		],
+		tags: ["general"],
 	},
 	{
 		title: "React Native Radio",
@@ -47,18 +36,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		description: "Exploring React Native Together",
 		rss: "https://feeds.simplecast.com/hEI_f9Dx",
 		href: "https://reactnativeradio.com/",
-		tags: ["native", "state management", "data fetching", "testing", "graphQL"],
-	},
-	{
-		title: "React Wednesdays",
-		image:
-			"https://dtzbdy9anri2p.cloudfront.net/telerik/img/logo/progress-telerik-black.svg",
-		hosts: ["KendoReact"],
-		description:
-			"React Wednesdays is a weekly chat show with the best and brightest from the React world, hosted by KendoReact Developer Advocate TJ VanToll. New episodes stream live every Wednesday at 1:00 PM Eastern US time.",
-		rss: "",
-		href: "https://www.telerik.com/react-wednesdays",
-		tags: ["general", "state management", "data fetching", "testing"],
+		tags: ["react native"],
 	},
 	{
 		title: "React Native Podcast",
@@ -67,9 +45,9 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		hosts: ["Mike Grabowski"],
 		description:
 			"Join our experts as they discuss everything React Native Latest Episode 9 React Native News",
-		rss: "",
+		rss: "https://feeds.soundcloud.com/users/soundcloud:users:859563619/sounds.rss",
 		href: "https://callstack.com/podcast-react-native-show",
-		tags: ["general", "native", "state management", "data fetching", "testing"],
+		tags: ["react native"],
 	},
 	{
 		title: "React Round Up",
@@ -85,7 +63,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		description: "A weekly discussion among React developers",
 		rss: "https://reactroundup.com/rss",
 		href: "https://reactroundup.com/",
-		tags: ["general", "state management", "data fetching", "testing"],
+		tags: ["react.js"],
 	},
 	{
 		title: "Syntax",
@@ -94,7 +72,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		description: "A Tasty Treats Podcast for Web Developers.",
 		rss: "http://feed.syntax.fm/rss",
 		href: "https://syntax.fm/",
-		tags: ["general", "state management", "data fetching", "testing"],
+		tags: ["general"],
 	},
 	{
 		title: "JS Party",
@@ -114,7 +92,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		description: "a weekly celebration of JavaScript and the web",
 		rss: "https://jsparty.fm/rss",
 		href: "https://changelog.com/jsparty",
-		tags: ["general", "state management", "data fetching", "testing"],
+		tags: ["general"],
 	},
 	{
 		title: "React Native Nerds",
@@ -125,16 +103,17 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"Join Spencer Carli and Jonathan Wheat as they discuss React Native topics you need to know about to become a better developer.",
 		rss: "https://www.podbean.com/site/podcatcher/index/blog/yOanVRcNMt7v",
 		href: "https://www.reactnativenerds.com/",
-		tags: ["native", "general", "state management", "data fetching", "testing"],
+		tags: ["react native"],
 	},
 	{
 		title: "Epic React",
-		image: "",
+		image:
+			"https://image.simplecastcdn.com/images/1105175e-7479-432b-910e-60e1e20f351f/84c729af-3bfb-4b6a-b80a-e0e0d0eb58d3/epic-react-podcast-show-artwork.jpg",
 		hosts: ["Kent C. Dodds"],
 		description: "Learn By Consuming, Building, And Teaching",
-		rss: "",
+		rss: "https://feeds.simplecast.com/giYVu3vJ",
 		href: "https://epicreact.dev/podcast/learn-by-consuming-building-and-teaching",
-		tags: ["general", "state management", "data fetching", "testing"],
+		tags: ["react.js"],
 	},
 	{
 		title: "iteration",
@@ -145,6 +124,6 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"A podcast about development and design. We do our best to be code-agnostic but we talk a lot about Rails, JavaScript, React, React Native, design, business and startups.",
 		rss: "https://feeds.simplecast.com/YmvH1ayC",
 		href: "https://iteration.simplecast.com",
-		tags: ["general", "state management", "data fetching", "testing"],
+		tags: ["general"],
 	},
 ]
