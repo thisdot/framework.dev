@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useState, useEffect, useRef } from "react"
 import classNames from "classnames"
 import {
 	horizontalScrollbarContainerStyle,
@@ -17,6 +17,15 @@ export const HorizontalScrollbar = ({
 	...props
 }: React.ComponentPropsWithoutRef<"div">) => {
 	const scrollSectionRef = useRef<HTMLDivElement>(null)
+	const [thumbWidth, setThumbWidth] = useState(20)
+
+	useEffect(() => {
+		if (scrollSectionRef.current) {
+			const { clientWidth, scrollWidth } = scrollSectionRef.current
+			const visibleRatio = clientWidth / scrollWidth
+			setThumbWidth(Math.max(visibleRatio * clientWidth, 20))
+		}
+	}, [])
 
 	return (
 		<div className={classNames(className, horizontalScrollbarContainerStyle)}>
@@ -29,7 +38,10 @@ export const HorizontalScrollbar = ({
 			</div>
 			<div className={horizontalScrollbarSectionStyle}>
 				<div className={horizontalScrollbarTrackStyle}>
-					<div className={horizontalScrollbarThumbStyle}></div>
+					<div
+						className={horizontalScrollbarThumbStyle}
+						style={{ width: `${thumbWidth}px` }}
+					></div>
 				</div>
 				<div className={horizontalScrollbarButtonContainerStyle}>
 					<button className={horizontalScrollbarButtonStyle}>
