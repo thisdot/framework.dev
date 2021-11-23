@@ -11,6 +11,11 @@ export default {
 	component: SearchAutocompleteComponent,
 	args: {
 		data: exampleSearchData,
+		availableFilters: {
+			category: ["books", "courses"],
+			tag: ["redux", "data fetching"],
+			field: [["level", ["beginner", "intermediate", "advanced"]]],
+		},
 	},
 } as Meta
 

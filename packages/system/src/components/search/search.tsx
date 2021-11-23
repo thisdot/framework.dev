@@ -9,18 +9,36 @@ import { SideDialog } from "../side-dialog"
 import { Button } from "../button"
 import { ResultsCategory } from "./results-category"
 import {
+	emptyFilterSet,
+	filterCategories,
+	filterRecords,
 	getSearchResults,
 	parseQueryString,
 	serializeQueryParams,
 } from "./query-util"
 import { SearchAutocomplete } from "./search-autocomplete"
 import { FilterIcon } from "../../icons/filter-icon"
+import { FilterSet } from "./types"
 
 export interface SearchProps extends React.ComponentPropsWithoutRef<"section"> {
 	data: AllCategories[]
+	preFilters?: FilterSet
 }
 
-export function Search({ className, data, ...props }: SearchProps) {
+export function Search({
+	className,
+	data: initialData,
+	preFilters = emptyFilterSet,
+	...props
+}: SearchProps) {
+	const data = useMemo(() => {
+		const data = filterCategories(initialData, preFilters)
+		for (const category of data) {
+			// @ts-expect-error just a very silly "cannot iterate over a union" error here
+			category.data = filterRecords(category.data, preFilters)
+		}
+		return data
+	}, [initialData, preFilters])
 	const searchIndices: {
 		[K in keyof AllModelsByName]?: Fuse<AllModelsByName[K]>
 	} = useMemo(
@@ -43,12 +61,18 @@ export function Search({ className, data, ...props }: SearchProps) {
 	const [filterMenuOpen, setFilterMenuOpen] = useState(false)
 	const { params: queryParams, availableFilters } = parseQueryString(
 		query,
-		data
+		data,
+		preFilters
 	)
 	return (
 		<section className={classNames(className, searchStyle)} {...props}>
 			<div className={sprinkles({ layout: "row", gap: 12 })}>
 				<SearchAutocomplete
+					staticPrefix={serializeQueryParams({
+						filters: preFilters,
+						textSearch: "",
+					})}
+					availableFilters={availableFilters}
 					className={sprinkles({ width: "full" })}
 					onChange={setQuery}
 					value={query}
@@ -77,18 +101,23 @@ export function Search({ className, data, ...props }: SearchProps) {
 				</SideDialog>
 			</div>
 			<div className={sprinkles({ layout: "stack", gap: 8 })}>
-				{query &&
+				{(query ||
+					preFilters.category.length > 0 ||
+					preFilters.field.length > 0 ||
+					preFilters.tag.length > 0) &&
 					data
 						.filter((category) =>
 							queryParams.filters.category.length > 0
 								? isInFilteredCategories(category)
 								: true
 						)
-						.map((category, _index, allCategories) => (
+						.map((category, _index) => (
 							<ResultsCategory
 								key={category.name}
 								category={category.name}
-								variant={allCategories.length > 1 ? "withHeading" : "bare"}
+								variant={
+									preFilters.category.length === 1 ? "bare" : "withHeading"
+								}
 								searchResults={getSearchResults({
 									category: category.name,
 									data: category.data,

@@ -7,6 +7,7 @@ export default {
 	component: SearchInputComponent,
 	args: {
 		label: "Search",
+		staticPrefix: "in:books",
 		placeholder: "",
 		disabled: false,
 		hideLabel: true,
