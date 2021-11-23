@@ -43,6 +43,7 @@ export const horizontalScrollbarTrackStyle = style([
 	}),
 	{
 		height: pxToRem(4),
+		position: "relative",
 		width: "100%",
 	},
 ])
@@ -54,6 +55,7 @@ export const horizontalScrollbarThumbStyle = style([
 	}),
 	{
 		height: pxToRem(4),
+		position: "absolute",
 	},
 ])
 
