@@ -13,6 +13,7 @@ module.exports = {
 		"storybook-addon-themes",
 	],
 	webpackFinal(baseConfig, options) {
+		throw new Error("Test error deliberately introduced")
 		const { module = {}, plugins = {} } = baseConfig
 
 		const cssRule = module.rules.find((rule) => rule?.test?.test("test.css"))
