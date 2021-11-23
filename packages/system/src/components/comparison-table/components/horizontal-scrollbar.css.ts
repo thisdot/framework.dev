@@ -8,9 +8,9 @@ export const horizontalScrollbarContainerStyle = style({
 })
 
 export const horizontalScrollbarContentStyle = style({
-	height: "100%",
+	height: "90vh",
 	msOverflowStyle: "none",
-	overflowX: "scroll",
+	overflow: "auto",
 	scrollbarWidth: "none",
 	selectors: {
 		"&::-webkit-scrollbar": {
@@ -21,16 +21,17 @@ export const horizontalScrollbarContentStyle = style({
 
 export const horizontalScrollbarSectionStyle = style([
 	sprinkles({
+		border: "tableCell",
 		display: "grid",
 		gap: 24,
 		paddingX: 24,
+		paddingY: 12,
 	}),
 	{
 		backgroundColor: "white",
 		borderBottomLeftRadius: pxToRem(12),
 		borderBottomRightRadius: pxToRem(12),
 		gridTemplateColumns: "1fr auto",
-		height: pxToRem(64),
 		placeItems: "center",
 	},
 ])
