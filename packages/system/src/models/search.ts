@@ -2,6 +2,7 @@ export type SearchableCategory<T, Name extends string> = {
 	name: Name
 	indexMetadata: IndexMetadata<T, Name>
 	tags: readonly string[]
+	subCategories?: readonly string[]
 	data: T[]
 }
 

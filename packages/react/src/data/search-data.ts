@@ -18,10 +18,25 @@ import { tools, toolTags } from "./tools"
 
 export const searchData: AllCategories[] = [
 	{
-		data: books,
-		indexMetadata: bookIndexMetadata,
-		name: bookIndexMetadata.name,
-		tags: bookTags,
+		data: libraries,
+		indexMetadata: libraryIndexMetadata,
+		name: libraryIndexMetadata.name,
+		tags: libraryTags,
+		subCategories: [
+			"state management",
+			"data fetching",
+			"styling",
+			"component library",
+			"forms",
+			"framework",
+			"internationalization",
+		] as typeof libraryTags[number][],
+	},
+	{
+		data: tools,
+		indexMetadata: toolIndexMetadata,
+		name: toolIndexMetadata.name,
+		tags: toolTags,
 	},
 	{
 		data: codeExamples,
@@ -30,28 +45,16 @@ export const searchData: AllCategories[] = [
 		tags: codeExampleTags,
 	},
 	{
-		data: communities,
-		indexMetadata: communityIndexMetadata,
-		name: communityIndexMetadata.name,
-		tags: communityTags,
-	},
-	{
-		data: companies,
-		indexMetadata: companyIndexMetadata,
-		name: companyIndexMetadata.name,
-		tags: companyTags,
-	},
-	{
 		data: courses,
 		indexMetadata: courseIndexMetadata,
 		name: courseIndexMetadata.name,
 		tags: courseTags,
 	},
 	{
-		data: libraries,
-		indexMetadata: libraryIndexMetadata,
-		name: libraryIndexMetadata.name,
-		tags: libraryTags,
+		data: communities,
+		indexMetadata: communityIndexMetadata,
+		name: communityIndexMetadata.name,
+		tags: communityTags,
 	},
 	{
 		data: podcasts,
@@ -60,9 +63,15 @@ export const searchData: AllCategories[] = [
 		tags: podcastTags,
 	},
 	{
-		data: tools,
-		indexMetadata: toolIndexMetadata,
-		name: toolIndexMetadata.name,
-		tags: toolTags,
+		data: books,
+		indexMetadata: bookIndexMetadata,
+		name: bookIndexMetadata.name,
+		tags: bookTags,
+	},
+	{
+		data: companies,
+		indexMetadata: companyIndexMetadata,
+		name: companyIndexMetadata.name,
+		tags: companyTags,
 	},
 ]

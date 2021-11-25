@@ -233,6 +233,7 @@ const layout = defineProperties({
 	conditions,
 	defaultCondition: "mobile",
 	properties: {
+		objectFit: ["contain"],
 		display: ["none", "block", "flex", "grid"],
 		flexDirection: ["row", "column"],
 		alignItems: ["stretch", "flex-start", "center", "flex-end", "end", "start"],
@@ -270,7 +271,7 @@ const layout = defineProperties({
 		layout: {
 			sidebar: {
 				display: "grid",
-				gridTemplateColumns: "200px 1fr",
+				gridTemplateColumns: "240px 1fr",
 				gridAutoRows: "1fr",
 			},
 			landscapeCardGrid: {

@@ -24,6 +24,6 @@ const title = `React ${formatFieldName(category)}`
 <head>
 	<meta name="description" content={`Browse ${title}`}/>
 </head>
-<BaseLayout title={title}>
+<BaseLayout title={title} currentCategory={category}>
 	<Search client:load preFilters={{ category: [category], tag: [], field: [] }} />
 </BaseLayout>

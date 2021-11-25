@@ -35,7 +35,7 @@ export function LibraryCard({
 			<header className={libraryCardHeaderStyle}>
 				<img
 					src={library.image}
-					className={sprinkles({ border: "thin" })}
+					className={sprinkles({ border: "thin", objectFit: "contain" })}
 					aria-hidden
 					height={40}
 					width={40}
