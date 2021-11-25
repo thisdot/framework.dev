@@ -7,24 +7,44 @@ export const navItemStyle = style([
 	sprinkles({
 		gap: 14,
 		alignItems: "center",
-		paddingX: 16,
 		borderRadius: 12,
 		layout: "row",
 		textStyle: "button",
 		justifyContent: "space-between",
 	}),
 	{
+		paddingLeft: pxToRem(15),
+		paddingRight: pxToRem(15),
+		position: "relative",
 		height: pxToRem(44),
 		transition: "background 0.15s ease-in",
+		border: "1px solid transparent",
 		":hover": {
 			transition: "none",
 			backgroundColor: vars.palette.neutral95,
 		},
 		selectors: {
 			"&[aria-current]": {
-				backgroundColor: vars.palette.primary95
-			}
-		}
+				backgroundColor: vars.palette.primary95,
+			},
+			"&[aria-expanded]::after": {
+				content: "",
+				position: "absolute",
+				right: pxToRem(16),
+				width: pxToRem(18),
+				height: pxToRem(18),
+				backgroundColor: "currentColor",
+				transform: "rotate(0deg)",
+				clipPath:
+					"polygon(30.9% 35.8%, 50.0% 54.9%, 69.1% 35.8%, 75.0% 41.7%, 50.0% 66.7%, 25.0% 41.7%, 30.9% 35.8%)",
+			},
+			'&[aria-expanded="true"]::after': {
+				transform: "rotate(-90deg)",
+			},
+			'&[aria-expanded="true"]:not([aria-current])': {
+				borderColor: vars.themeColors.outline,
+			},
+		},
 	},
 ])
 
@@ -41,7 +61,7 @@ export const navItemIconStyle = style({
 	color: vars.palette.neutral60,
 	selectors: {
 		"*:hover > &, *[aria-current] > &": {
-			color: "currentcolor"
+			color: "currentcolor",
 		},
-	}
+	},
 })
