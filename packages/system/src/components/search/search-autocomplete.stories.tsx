@@ -22,7 +22,7 @@ export default {
 const Template: Story<SearchAutocompleteProps> = (args) => {
 	const [value, setValue] = useState("")
 	return (
-		<SearchAutocompleteComponent value={value} onChange={setValue} {...args} />
+		<SearchAutocompleteComponent {...args} value={value} onChange={setValue} />
 	)
 }
 

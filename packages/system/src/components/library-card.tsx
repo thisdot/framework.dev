@@ -1,6 +1,5 @@
 import classNames from "classnames"
 import React from "react"
-import { kebabCase } from "lodash"
 import { Library } from "../models/library"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import {
@@ -18,6 +17,7 @@ import {
 	getNpmDownloadsBadge,
 	getBundleSizeBadge,
 } from "../util/stats-util"
+import { formatFieldValue, serializeFieldValue } from "../util/string-utils"
 
 export type LibraryCardProps = React.ComponentPropsWithoutRef<"article"> & {
 	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
@@ -60,8 +60,11 @@ export function LibraryCard({
 			</header>
 			<div className={libraryCardInfoStyle}>
 				{library.tags.map((tag) => (
-					<Tag key={tag} href={`/categories/libraries/tags/${kebabCase(tag)}`}>
-						{tag}
+					<Tag
+						key={tag}
+						href={`/categories/libraries/tags/${serializeFieldValue(tag)}`}
+					>
+						{formatFieldValue(tag)}
 					</Tag>
 				))}
 			</div>

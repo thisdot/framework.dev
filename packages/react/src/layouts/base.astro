@@ -1,13 +1,12 @@
 ---
 import '@framework/system/src/globals/global-styles';
-import { startCase } from 'lodash'
 import { fontHeadTags } from '@framework/system/src/globals/font-import.mjs';
 import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css';
 import { reactTheme } from '@framework/system/src/themes/themes.css'
 import { Sidebar } from '@framework/system/src/components/sidebar.tsx'
 import { MobileNav } from '../components/mobile-nav.tsx'
-const {title} = Astro.props
-const categories = ["courses", "books", "libraries"]
+import { NavItems } from '../components/nav-items.tsx'
+const { title } = Astro.props
 ---
 <!DOCTYPE html>
 <html class={reactTheme} lang="en">
@@ -18,14 +17,10 @@ const categories = ["courses", "books", "libraries"]
 		<meta charset="UTF-8"/>
   </head>
   <body class={sprinkles({ backgroundColor: "surface4", layout: { mobile: "stack", desktop: "sidebar" } })} >
-		<MobileNav client:media="(max-width:1024px)" className={sprinkles({ display: { mobile: "flex", desktop: "none" }})} categories={categories} />
+		<MobileNav client:media="(max-width:1024px)" className={sprinkles({ display: { mobile: "flex", desktop: "none" }})} />
 		<Sidebar className={sprinkles({ display: { mobile: "none", desktop: "block" }})}>
 			<div class={sprinkles({ layout: "stack", gap: 24 })}>
-				{categories.map(category => (
-					<a href={`/categories/${category}`}>
-						{startCase(category)}
-					</a>
-				))}
+				<NavItems />
 			</div>
 		</Sidebar>
 		<main class={sprinkles({ marginX: 64, marginY: 48 })}>

@@ -1,5 +1,4 @@
 import React from "react"
-import { kebabCase } from "lodash"
 import { Community } from "../models/community"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import {
@@ -10,6 +9,7 @@ import {
 } from "./community-card.css"
 import { Tag } from "./tag"
 import classnames from "classnames"
+import { formatFieldValue, serializeFieldValue } from "../util/string-utils"
 
 export type CommunityCardProps = React.ComponentPropsWithoutRef<"article"> & {
 	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
@@ -49,8 +49,11 @@ export function CommunityCard({
 			</header>
 			<div className={communityCardInfoStyle}>
 				{community.tags.map((tag) => (
-					<Tag key={tag} href={`/categories/communitys/tags/${kebabCase(tag)}`}>
-						{tag}
+					<Tag
+						key={tag}
+						href={`/categories/communitys/tags/${serializeFieldValue(tag)}`}
+					>
+						{formatFieldValue(tag)}
 					</Tag>
 				))}
 			</div>

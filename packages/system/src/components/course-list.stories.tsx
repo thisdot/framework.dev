@@ -28,7 +28,7 @@ export default {
 
 const Template: Story<CourseListProps> = (args) => (
 	<div style={{ maxWidth: "522px" }}>
-		<CourseListComponent courses={exampleCourses} {...args} />
+		<CourseListComponent {...args} courses={exampleCourses} />
 	</div>
 )
 

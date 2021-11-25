@@ -1,7 +1,7 @@
 {
 	"include": ["./packages/*/src/**/*", "./*.d.ts"],
 	"compilerOptions": {
-		"strict": false, // setting it to true breaks astro language server https://github.com/snowpackjs/astro-language-tools/issues/91
+		"strict": true,
 		"lib": ["ES2021", "DOM"],
 		"moduleResolution": "node",
 		"esModuleInterop": true,

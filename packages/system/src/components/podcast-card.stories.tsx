@@ -29,10 +29,10 @@ const Template: Story<PodcastCardProps> = (args) => (
 		>
 			{examplePodcasts.map((podcast) => (
 				<PodcastCardComponent
+					{...args}
 					podcast={podcast}
 					key={podcast.title}
 					lastPublishedDate="November 4th, 2021"
-					{...args}
 				/>
 			))}
 		</div>

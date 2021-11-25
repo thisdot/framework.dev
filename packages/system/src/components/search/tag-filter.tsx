@@ -8,7 +8,6 @@ import {
 	ComboboxOption,
 	ComboboxPopover,
 } from "@reach/combobox"
-import { startCase } from "lodash"
 import { TextInput } from "../text-input"
 import { Tag } from "../tag"
 import {
@@ -19,6 +18,7 @@ import {
 	tagFilterStyle,
 	tagFilterTitleStyle,
 } from "./tag-filter.css"
+import { formatFieldValue } from "../../util/string-utils"
 
 export interface TagFilterProps<T extends string>
 	extends React.ComponentPropsWithoutRef<"fieldset"> {
@@ -76,7 +76,7 @@ export function TagFilter<T extends string>({
 									key={tag}
 									onClick={() => onUpdate(value.filter((v) => v !== tag))}
 								>
-									{startCase(tag)}
+									{formatFieldValue(tag)}
 								</Tag>
 							))}
 						</div>
