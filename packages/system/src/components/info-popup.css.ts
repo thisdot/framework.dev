@@ -1,8 +1,14 @@
-import { style } from "@vanilla-extract/css"
+import { globalStyle, style } from "@vanilla-extract/css"
 import { recipe } from "@vanilla-extract/recipes"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { vars } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
+
+globalStyle(":root", {
+	vars: {
+		"--reach-dialog": "1",
+	},
+})
 
 export const infoPopupOverlayStyle = style({
 	position: "fixed",

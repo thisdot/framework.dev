@@ -50,6 +50,7 @@ export function InfoPopup({
 				ref={contentRef}
 				style={contentPosition}
 				className={classNames(className, infoPopupContentStyle)}
+				aria-label="Additional information"
 				{...props}
 			>
 				{children}
@@ -78,7 +79,6 @@ function calculateContentPosition(
 		left:
 			targetBounds.left,
 	}
-	console.log(position)
 	const wouldOverflowTop = position.top < 0
 	const wouldOverflowLeft = position.left < 0
 	const wouldOverflowRight =
