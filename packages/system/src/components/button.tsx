@@ -1,40 +1,33 @@
 import classNames from "classnames"
 import React from "react"
 import { buttonStyle } from "./button.css"
+import type * as Polymorphic from "@reach/utils/polymorphic"
 
-export type ButtonProps<T extends "a" | "button"> =
-	React.ComponentPropsWithoutRef<T> & {
-		size?: Parameters<typeof buttonStyle>[0]["size"]
-		color?: Parameters<typeof buttonStyle>[0]["color"]
-		as: T
-	}
-
-export function Button(
-	props: ButtonProps<"a"> | ButtonProps<"button">
-): JSX.Element {
-	switch (props.as) {
-		case "a": {
-			const { className, size, color, children } = props
-			return (
-				<a
-					className={classNames(className, buttonStyle({ size, color }))}
-					{...props}
-				>
-					{children}
-				</a>
-			)
-		}
-		case "button": {
-			const { className, size, color, children, type = "button" } = props
-			return (
-				<button
-					type={type}
-					className={classNames(className, buttonStyle({ size, color }))}
-					{...props}
-				>
-					{children}
-				</button>
-			)
-		}
-	}
+export type ButtonProps = {
+	size?: Parameters<typeof buttonStyle>[0]["size"]
+	color?: Parameters<typeof buttonStyle>[0]["color"]
 }
+
+export const Button = React.forwardRef(function Button(
+	{
+		as: Comp = "button",
+		className,
+		children,
+		size,
+		color,
+		type = "button",
+		...props
+	},
+	ref
+): JSX.Element {
+	return (
+		<Comp
+			ref={ref}
+			className={classNames(className, buttonStyle({ size, color }))}
+			type={Comp === "button" ? type : undefined}
+			{...props}
+		>
+			{children}
+		</Comp>
+	)
+}) as Polymorphic.ForwardRefComponent<"button", ButtonProps>
