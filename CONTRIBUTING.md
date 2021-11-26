@@ -1,11 +1,11 @@
-# Contributing to This Dot Open-Source Packages
+# Contributing to Framework.dev
 
 Please [read our Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this
 repository, you are agreeing to its rules.
 
 Contents
 
-- [Contributing to This Dot Open-Source Packages](#contributing-to-this-dot-open-source-packages)
+- [Contributing to Framework.dev](#contributing-to-frameworkdev)
   - [Submitting a Pull Request (PR)](#submitting-a-pull-request-pr)
   - [Content Guidelines](#content-guidelines)
   - [Code Guidelines](#code-guidelines)
@@ -60,6 +60,25 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 That's it! Thank you for your contribution!
 
 ## Content Guidelines
+
+Content should be added in the `packages/<framework-name>/src/data/<model>.ts`
+files. Data files each contain two things: a list of tags used to tag the
+content and a list of content items. Items are type-checked to follow the
+schemata defined in `packages/system/src/models`. Those model files contain
+additional documentation on how each field should be populated, so consult them
+before filling out new content.
+
+New content should be appended to data files at the end of the appropriate list.
+Do not reorder the lists, the order is irrelevant and keeping it stable helps
+keep git diffs small and intelligible.
+
+It's best to run the site that you are adding content to on your local machine
+to make sure you have not introduced any errors. Regardless of whether you
+checked it locally first, check the preview version of the site when you open
+your pull request and make sure the content you added exists and doesn't have
+errors.
+
+You should also make sure any content you add follows these points:
 
 - **Relevance** – Items should be limited to professional-grade content that
   would be relevant to a developer in the relevant framework. If content is
