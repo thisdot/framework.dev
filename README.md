@@ -22,8 +22,8 @@ run with `yarn dev:<package-name>` e.g. `yarn dev:system` or `yarn dev:react`.
 - Sometimes the Astro+snowpack dependency cache breaks completely and you begin
   to see compilation errors and dependencies not building correct (the symptom
   of which is often the browsers attempting to load `node:process` or other bare
-  identifiers). Deleting the root `node_modules` as well as the `node_modules`
-  in each of the packages and reinstalling fixes the problem.
+  identifiers). This can be fixed by running
+  `rm -rf packages/react/node_modules && yarn build:react`
 
 ## Contributing
 
