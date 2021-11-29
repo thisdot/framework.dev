@@ -1,7 +1,9 @@
 import classNames from "classnames"
 import React, { useRef, useState } from "react"
+import { AttributeDefinition } from "../models/all-categories"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { formatFieldValue } from "../util/string-utils"
+import { DiscreteAttribute } from "./discrete-attribute"
 import { InfoPopup } from "./info-popup"
 import {
 	resourceCardBodyStyle,
@@ -22,6 +24,7 @@ export interface ResourceCardProps
 	title: string
 	subtitle: string
 	image?: string
+	attributes: AttributeDefinition[]
 	layout: "titleFirst" | "imageFirst"
 	imageLayout: "logo" | "book"
 	href: string
@@ -39,6 +42,7 @@ export function ResourceCard({
 	imageLayout,
 	href,
 	tags,
+	attributes,
 	...props
 }: ResourceCardProps) {
 	const maxTags = maxTagsByLayout[layout]
@@ -68,7 +72,16 @@ export function ResourceCard({
 					<p className={resourceCardSubtitleStyle}>{subtitle}</p>
 				</div>
 			</header>
-			<div className={resourceCardBodyStyle}>{children}</div>
+			<div className={resourceCardBodyStyle}>
+				{attributes && (
+					<div className={sprinkles({ layout: "row", gap: 12 })}>
+						{attributes.map((attribute, index) => (
+							<DiscreteAttribute colorize attribute={attribute} key={index} />
+						))}
+					</div>
+				)}
+				{children}
+			</div>
 			<footer className={resourceCardFooterStyle}>
 				{visibleTags.map((tag) => (
 					<Tag key={tag}>{formatFieldValue(tag)}</Tag>

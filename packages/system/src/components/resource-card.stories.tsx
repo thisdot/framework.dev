@@ -1,6 +1,8 @@
 import { Story, Meta } from "@storybook/react"
+import { AttributeDefinition } from "../models/all-categories"
 import {
 	exampleBooks,
+	exampleCourses,
 	exampleLibraries,
 	exampleTags,
 } from "../util/example-content"
@@ -14,10 +16,14 @@ export default {
 	component: ResourceCardComponent,
 	args: {
 		headingTag: "h1",
-		title: exampleLibraries[0].name,
-		subtitle: exampleLibraries[0].author,
-		image: exampleLibraries[0].image,
-		href: exampleLibraries[0].href,
+		title: exampleCourses[0].title,
+		subtitle: exampleCourses[0].author,
+		image: exampleCourses[0].image,
+		href: exampleCourses[0].href,
+		attributes: [
+			["level", exampleCourses[0].level],
+			["format", exampleCourses[0].format],
+		] as AttributeDefinition[],
 		tags: exampleTags,
 		layout: "titleFirst",
 		imageLayout: "logo",
@@ -34,13 +40,13 @@ export default {
 			control: "inline-radio",
 		},
 		image: {
-			options: [exampleLibraries[0].image, exampleBooks[0].image],
+			options: ["logo", "book"],
+			mapping: {
+				logo: exampleLibraries[0].image,
+				book: exampleBooks[0].image,
+			},
 			control: {
 				type: "inline-radio",
-				labels: {
-					[exampleLibraries[0].image]: "logo",
-					[exampleBooks[0].image]: "book",
-				},
 			},
 		},
 	},

@@ -1,3 +1,8 @@
+import {
+	ArrayElement,
+	RecordElement,
+	UnionToIntersection,
+} from "../util/type-utils"
 import { Book, bookIndexMetadata } from "./book"
 import { CodeExample, codeExampleIndexMetadata } from "./code-example"
 import { Community, communityIndexMetadata } from "./community"
@@ -46,3 +51,23 @@ export type AllCategoriesByName = {
 }
 
 export type AllCategories = AllCategoriesByName[keyof AllCategoriesByName]
+
+/**
+ * Come components accept a prop in the form `[fieldName, fieldValue]`
+ * for fields and values that are discrete/filterable. This type code
+ * extracts the valid name/value combinations from the static
+ * category metadata.
+ */
+type AllFilterableFields<M = CategoryMetadata<CategoryName>> =
+	M extends CategoryMetadata<CategoryName>
+		? {
+				[FieldName in keyof M["filterableFields"]]: [
+					FieldName,
+					ArrayElement<M["filterableFields"][FieldName]>
+				]
+		  }
+		: never
+
+export type AttributeDefinition = RecordElement<
+	UnionToIntersection<AllFilterableFields>
+>

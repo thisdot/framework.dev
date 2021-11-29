@@ -9,37 +9,10 @@ import { IntermediateIcon } from "../icons/intermediate-icon"
 import { PaidIcon } from "../icons/paid-icon"
 import { IconProps } from "../icons/shared-icon-types"
 import { VideoIcon } from "../icons/video-icon"
-import { CategoryMetadata, CategoryName } from "../models/all-categories"
+import { AttributeDefinition } from "../models/all-categories"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { ColorTheme } from "../themes/theme-from-palette"
 import { formatFieldValue } from "../util/string-utils"
-import {
-	ArrayElement,
-	RecordElement,
-	UnionToIntersection,
-} from "../util/type-utils"
-
-/**
- * The component accepts a prop in the form `[fieldName, fieldValue]`
- * for fields and values that are discrete/filterable. This type code
- * extracts the valid name/value combinations from the static
- * category metadata. In doing so, we ensure that only valid combinations
- * can be passed to the component and that the component must adequately
- * handle all valid combinations.
- */
-type AllFilterableFields<M = CategoryMetadata<CategoryName>> =
-	M extends CategoryMetadata<CategoryName>
-		? {
-				[FieldName in keyof M["filterableFields"]]: [
-					FieldName,
-					ArrayElement<M["filterableFields"][FieldName]>
-				]
-		  }
-		: never
-
-type AttributeDefinition = RecordElement<
-	UnionToIntersection<AllFilterableFields>
->
 
 export interface DiscreteAttributeProps
 	extends React.ComponentPropsWithoutRef<"div"> {

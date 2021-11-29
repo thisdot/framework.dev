@@ -111,7 +111,7 @@ export const resourceCardSubtitleStyle = style([
 	sprinkles({ textStyle: "bodyShort3", color: "softText" }),
 ])
 export const resourceCardBodyStyle = style([
-	sprinkles({ textStyle: "bodyLong2" }),
+	sprinkles({ textStyle: "bodyLong2", layout: "stack", gap: 12 }),
 ])
 export const resourceCardFooterStyle = style([
 	sprinkles({ paddingTop: 12, layout: "row", gap: 4 }),
