@@ -124,6 +124,7 @@ export type ColorTheme = {
 		intermediateHover: string
 		advanced: string
 		advancedHover: string
+		white: string
 	}
 }
 
@@ -171,6 +172,7 @@ export function lightThemeFromPalette(p: ColorPalette): ColorTheme {
 			intermediateHover: "#E0CFF5",
 			advanced: "rgba(239, 209, 191, 0.75)",
 			advancedHover: "#EFD0BF",
+			white: "#FFFFFF",
 		},
 	}
 }
@@ -219,6 +221,7 @@ export function darkThemeFromPalette(p: ColorPalette): ColorTheme {
 			intermediateHover: "#E0CFF5",
 			advanced: "rgba(239, 209, 191, 0.75)",
 			advancedHover: "#EFD0BF",
+			white: "#FFFFFF",
 		},
 	}
 }
