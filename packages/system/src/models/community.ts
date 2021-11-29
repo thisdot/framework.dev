@@ -1,4 +1,4 @@
-import { IndexMetadata, SearchableRecord } from "./search"
+import { SearchableRecord } from "./search"
 
 /**
  * Represents a blog or community that
@@ -15,8 +15,8 @@ export interface Community<T extends string> extends SearchableRecord<T> {
 	href: string
 }
 
-export const communityIndexMetadata: IndexMetadata<Community<string>, "communities"> = {
+export const communityIndexMetadata = {
 	name: "communities",
 	searchableFields: ["description", "name"],
 	filterableFields: {},
-}
+} as const

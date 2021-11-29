@@ -1,4 +1,4 @@
-import { IndexMetadata, SearchableRecord } from "./search"
+import { SearchableRecord } from "./search"
 
 /**
  * Represents a Javascript library. Different
@@ -36,8 +36,8 @@ export interface Library<T extends string> extends SearchableRecord<T> {
 	href: string
 }
 
-export const libraryIndexMetadata: IndexMetadata<Library<string>, "libraries"> = {
+export const libraryIndexMetadata = {
 	name: "libraries",
 	searchableFields: ["author", "description", "name"],
 	filterableFields: {},
-}
+} as const

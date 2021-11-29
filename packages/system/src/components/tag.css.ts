@@ -14,30 +14,6 @@ const tagContainerVariants = {
 				transition: "none",
 			},
 		},
-		beginner: {
-			backgroundColor: vars.themeColors.beginner,
-			transition: "background 0.15s ease-in",
-			":hover": {
-				backgroundColor: vars.themeColors.beginnerHover,
-				transition: "none",
-			},
-		},
-		intermediate: {
-			backgroundColor: vars.themeColors.intermediate,
-			transition: "background 0.15s ease-in",
-			":hover": {
-				backgroundColor: vars.themeColors.intermediateHover,
-				transition: "none",
-			},
-		},
-		advanced: {
-			backgroundColor: vars.themeColors.advanced,
-			transition: "background 0.15s ease-in",
-			":hover": {
-				backgroundColor: vars.themeColors.advancedHover,
-				transition: "none",
-			},
-		},
 	},
 } as const
 

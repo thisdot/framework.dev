@@ -1,19 +1,12 @@
-import { bookIndexMetadata } from "./book"
-import { codeExampleIndexMetadata } from "./code-example"
-import { communityIndexMetadata } from "./community"
-import { companyIndexMetadata } from "./company"
-import { courseIndexMetadata } from "./course"
-import { libraryIndexMetadata } from "./library"
-import { podcastIndexMetadata } from "./podcast"
-import { IndexMetadata, SearchableCategory } from "./search"
-import { toolIndexMetadata } from "./tool"
-
-type ExtractType<MetadataType> = MetadataType extends IndexMetadata<
-	infer X,
-	any
->
-	? X
-	: never
+import { Book, bookIndexMetadata } from "./book"
+import { CodeExample, codeExampleIndexMetadata } from "./code-example"
+import { Community, communityIndexMetadata } from "./community"
+import { Company, companyIndexMetadata } from "./company"
+import { Course, courseIndexMetadata } from "./course"
+import { Library, libraryIndexMetadata } from "./library"
+import { Podcast, podcastIndexMetadata } from "./podcast"
+import { SearchableCategory } from "./search"
+import { Tool, toolIndexMetadata } from "./tool"
 
 export const allCategoriesMetadata = {
 	[bookIndexMetadata.name]: bookIndexMetadata,
@@ -26,6 +19,9 @@ export const allCategoriesMetadata = {
 	[toolIndexMetadata.name]: toolIndexMetadata,
 } as const
 
+export type CategoryMetadata<T extends keyof typeof allCategoriesMetadata> =
+	typeof allCategoriesMetadata[T]
+
 export type CategoryName = keyof typeof allCategoriesMetadata
 
 export const allCategoryNames = Object.keys(
@@ -33,9 +29,14 @@ export const allCategoryNames = Object.keys(
 ) as CategoryName[]
 
 export type AllModelsByName = {
-	[K in CategoryName]: ExtractType<
-		typeof allCategoriesMetadata[K]
-	>
+	[bookIndexMetadata.name]: Book<string>
+	[codeExampleIndexMetadata.name]: CodeExample<string>
+	[communityIndexMetadata.name]: Community<string>
+	[companyIndexMetadata.name]: Company<string>
+	[courseIndexMetadata.name]: Course<string>
+	[libraryIndexMetadata.name]: Library<string>
+	[podcastIndexMetadata.name]: Podcast<string>
+	[toolIndexMetadata.name]: Tool<string>
 }
 
 export type AllModels = AllModelsByName[keyof AllModelsByName]

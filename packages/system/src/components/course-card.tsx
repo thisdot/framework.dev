@@ -73,10 +73,7 @@ export function CourseCard({
 				</div>
 				<CardDivider />
 				<div className={sprinkles({ layout: "row", gap: 4 })}>
-					<Tag
-						href={`/categories/courses/levels/${course.level}`}
-						color={course.level}
-					>
+					<Tag href={`/categories/courses/levels/${course.level}`}>
 						{formatFieldValue(course.level)}
 					</Tag>
 					{course.tags.map((tag) => (
