@@ -1,5 +1,4 @@
 import { Story, Meta } from "@storybook/react"
-import { vars } from "../../themes/themes.css"
 import { exampleSearchData } from "../../util/example-content"
 import { Search as SearchComponent, SearchProps } from "./search"
 
@@ -12,18 +11,6 @@ export default {
 			category: ["courses"],
 			field: [],
 			tag: [],
-		},
-	},
-	parameters: {
-		backgrounds: {
-			default: "Light Theme Background",
-			values: [
-				{
-					name: "Light Theme Background",
-					value: vars.themeColors.surface4,
-					default: true,
-				},
-			],
 		},
 	},
 } as Meta

@@ -1,5 +1,5 @@
 import "../src/globals/global-styles"
-import { reactTheme, reactThemeDark } from "../src/themes/themes.css"
+import { vars, reactTheme, reactThemeDark } from "../src/themes/themes.css"
 import { addDecorator } from "@storybook/react"
 import { withThemes } from "storybook-addon-themes/react"
 import { useEffect } from "react"
@@ -20,6 +20,21 @@ export const parameters = {
 			color: /(background|color)$/i,
 			date: /Date$/,
 		},
+	},
+	backgrounds: {
+		default: "Surface",
+		values: [
+			{
+				name: "Surface",
+				value: vars.themeColors.surface4,
+				default: true,
+			},
+			{
+				name: "White",
+				value: vars.themeColors.white,
+				default: true,
+			},
+		],
 	},
 	themes: {
 		Decorator,

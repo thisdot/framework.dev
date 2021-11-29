@@ -10,9 +10,6 @@ export default {
 	component: MobileNavComponent,
 	parameters: {
 		layout: "fullscreen",
-		backgrounds: {
-			default: "dark",
-		},
 		viewport: {
 			defaultViewport: "mobile2",
 		},
