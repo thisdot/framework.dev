@@ -20,7 +20,10 @@ import { Podcast } from "../../models/podcast"
 import { ToolCard } from "../tool-card"
 import { Tool } from "../../models/tool"
 import { Counter } from "../counter"
-import { AllModelsByName, CategoryName } from "../../models/all-categories"
+import {
+	AllModelsByName,
+	CategoryName,
+} from "../../models/all-categories"
 import assertNever from "assert-never"
 
 export type ResultsCategoryProps<T extends CategoryName> =
@@ -104,44 +107,45 @@ export function ResultsCategory<T extends CategoryName>({
 	}
 }
 
-function renderCard(
-	category: CategoryName
-): CategoryName extends string
-	? (value: AllModelsByName[CategoryName], index: number) => JSX.Element
-	: never {
+type RenderCardFn<T extends CategoryName> = (
+	value: AllModelsByName[T],
+	index: number
+) => JSX.Element
+
+function renderCard<T extends CategoryName>(category: T): RenderCardFn<T> {
 	switch (category) {
 		case "books":
-			return (record: Book<string>, index) => (
+			return ((record: Book<string>, index: number) => (
 				<BookCard key={index} book={record} headingTag="h3" />
-			)
+			)) as RenderCardFn<T>
 		case "codeExamples":
-			return (record: CodeExample<string>, index) => (
+			return ((record: CodeExample<string>, index: number) => (
 				<CodeExampleCard key={index} codeExample={record} headingTag="h3" />
-			)
+			)) as RenderCardFn<T>
 		case "communities":
-			return (record: Community<string>, index) => (
+			return ((record: Community<string>, index: number) => (
 				<CommunityCard key={index} community={record} headingTag="h3" />
-			)
+			)) as RenderCardFn<T>
 		case "companies":
-			return (record: Company<string>, index) => (
+			return ((record: Company<string>, index: number) => (
 				<CompanyCard key={index} company={record} headingTag="h3" />
-			)
+			)) as RenderCardFn<T>
 		case "courses":
-			return (record: Course<string>, index) => (
+			return ((record: Course<string>, index: number) => (
 				<CourseCard key={index} course={record} headingTag="h3" />
-			)
+			)) as RenderCardFn<T>
 		case "libraries":
-			return (record: Library<string>, index) => (
+			return ((record: Library<string>, index: number) => (
 				<LibraryCard key={index} library={record} headingTag="h3" />
-			)
+			)) as RenderCardFn<T>
 		case "podcasts":
-			return (record: Podcast<string>, index) => (
+			return ((record: Podcast<string>, index: number) => (
 				<PodcastCard key={index} podcast={record} headingTag="h3" />
-			)
+			)) as RenderCardFn<T>
 		case "tools":
-			return (record: Tool<string>, index) => (
+			return ((record: Tool<string>, index: number) => (
 				<ToolCard key={index} tool={record} headingTag="h3" />
-			)
+			)) as RenderCardFn<T>
 		default:
 			return assertNever(category)
 	}

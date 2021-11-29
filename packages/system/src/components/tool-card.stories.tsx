@@ -25,7 +25,7 @@ const Template: Story<ToolCardProps> = (args) => (
 			})}
 		>
 			{exampleTools.map((tool) => (
-				<ToolCardComponent tool={tool} key={tool.name} {...args} />
+				<ToolCardComponent key={tool.name} {...args} tool={tool} />
 			))}
 		</div>
 	</div>

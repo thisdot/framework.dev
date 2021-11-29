@@ -12,7 +12,6 @@ export const resourceTagStyle = style([
 		gap: 6,
 	}),
 	{
-		textTransform: "capitalize",
 		height: pxToRem(32),
 		display: "inline-flex",
 		alignItems: "center",

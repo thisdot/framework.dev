@@ -9,6 +9,7 @@ import { SideDialog } from "../side-dialog"
 import { Button } from "../button"
 import { ResultsCategory } from "./results-category"
 import {
+	calculateAvailableFilters,
 	emptyFilterSet,
 	filterCategories,
 	filterRecords,
@@ -59,11 +60,11 @@ export function Search({
 	)
 	const [query, setQuery] = useState("")
 	const [filterMenuOpen, setFilterMenuOpen] = useState(false)
-	const { params: queryParams, availableFilters } = parseQueryString(
-		query,
-		data,
-		preFilters
+	const availableFilters = useMemo(
+		() => calculateAvailableFilters(data, preFilters),
+		[data, preFilters]
 	)
+	const queryParams = parseQueryString(query, availableFilters)
 	return (
 		<section className={classNames(className, searchStyle)} {...props}>
 			<div className={sprinkles({ layout: "row", gap: 12 })}>
@@ -111,21 +112,26 @@ export function Search({
 								? isInFilteredCategories(category)
 								: true
 						)
-						.map((category, _index) => (
-							<ResultsCategory
-								key={category.name}
-								category={category.name}
-								variant={
-									preFilters.category.length === 1 ? "bare" : "withHeading"
-								}
-								searchResults={getSearchResults({
-									category: category.name,
-									data: category.data,
-									params: queryParams,
-									searchIndex: searchIndices[category.name],
-								})}
-							/>
-						))}
+						.map((category, _index) => {
+							const searchIndex = searchIndices[category.name]
+							return (
+								searchIndex && (
+									<ResultsCategory
+										key={category.name}
+										category={category.name}
+										variant={
+											preFilters.category.length === 1 ? "bare" : "withHeading"
+										}
+										searchResults={getSearchResults({
+											category: category.name,
+											data: category.data,
+											params: queryParams,
+											searchIndex,
+										})}
+									/>
+								)
+							)
+						})}
 			</div>
 		</section>
 	)

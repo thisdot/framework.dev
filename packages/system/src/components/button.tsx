@@ -1,11 +1,11 @@
 import classNames from "classnames"
 import React from "react"
-import { buttonStyle } from "./button.css"
+import { buttonStyle, ButtonVariants } from "./button.css"
 import type * as Polymorphic from "@reach/utils/polymorphic"
 
 export type ButtonProps = {
-	size?: Parameters<typeof buttonStyle>[0]["size"]
-	color?: Parameters<typeof buttonStyle>[0]["color"]
+	size?: ButtonVariants["size"]
+	color?: ButtonVariants["color"]
 }
 
 export const Button = React.forwardRef(function Button(

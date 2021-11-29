@@ -1,4 +1,3 @@
-import { kebabCase } from "lodash"
 import classNames from "classnames"
 import React from "react"
 import { Course } from "../models/course"
@@ -13,6 +12,7 @@ import {
 import { ResourceTag } from "./resource-tag"
 import { CardDivider } from "./card-divider"
 import { Tag } from "./tag"
+import { formatFieldValue, serializeFieldValue } from "../util/string-utils"
 
 export type CourseCardProps = React.ComponentPropsWithoutRef<"article"> & {
 	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
@@ -77,11 +77,14 @@ export function CourseCard({
 						href={`/categories/courses/levels/${course.level}`}
 						color={course.level}
 					>
-						{course.level}
+						{formatFieldValue(course.level)}
 					</Tag>
 					{course.tags.map((tag) => (
-						<Tag key={tag} href={`/categories/courses/tags/${kebabCase(tag)}`}>
-							{tag}
+						<Tag
+							key={tag}
+							href={`/categories/courses/tags/${serializeFieldValue(tag)}`}
+						>
+							{formatFieldValue(tag)}
 						</Tag>
 					))}
 				</div>

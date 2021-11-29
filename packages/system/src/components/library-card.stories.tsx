@@ -28,7 +28,7 @@ const Template: Story<LibraryCardProps> = (args) => (
 			})}
 		>
 			{exampleLibraries.map((library) => (
-				<LibraryCardComponent library={library} key={library.name} {...args} />
+				<LibraryCardComponent key={library.name} {...args} library={library}  />
 			))}
 		</div>
 	</div>

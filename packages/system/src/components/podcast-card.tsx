@@ -1,6 +1,5 @@
 import classNames from "classnames"
 import React from "react"
-import { kebabCase } from "lodash"
 import { Podcast } from "../models/podcast"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import {
@@ -12,8 +11,8 @@ import {
 	podcastCardStyle,
 } from "./podcast-card.css"
 import { Tag } from "./tag"
-import classnames from "classnames"
 import { ResourceTag } from "./resource-tag"
+import { formatFieldValue, serializeFieldValue } from "../util/string-utils"
 
 export type PodcastCardProps = React.ComponentPropsWithoutRef<"article"> & {
 	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
@@ -58,8 +57,11 @@ export function PodcastCard({
 			</header>
 			<div className={podcastCardInfoStyle}>
 				{podcast.tags.map((tag) => (
-					<Tag key={tag} href={`/categories/podcasts/tags/${kebabCase(tag)}`}>
-						{tag}
+					<Tag
+						key={tag}
+						href={`/categories/podcasts/tags/${serializeFieldValue(tag)}`}
+					>
+						{formatFieldValue(tag)}
 					</Tag>
 				))}
 			</div>

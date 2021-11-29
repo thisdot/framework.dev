@@ -28,7 +28,7 @@ const Template: Story<CodeExampleCardProps> = (args) => (
 			})}
 		>
 			{exampleCodeExamples.map((codeExample) => (
-				<CodeExampleCardComponent codeExample={codeExample} key={codeExample.title} {...args} />
+				<CodeExampleCardComponent key={codeExample.title} {...args} codeExample={codeExample}  />
 			))}
 		</div>
 	</div>

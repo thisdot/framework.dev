@@ -1,7 +1,7 @@
 import classNames from "classnames"
 import React, { useEffect, useState } from "react"
 import { DialogOverlay, DialogContent } from "@reach/dialog"
-import { dialogContentStyle, dialogOverlayStyle } from "./side-dialog.css"
+import { dialogContentStyle, DialogContentVariants, dialogOverlayStyle } from "./side-dialog.css"
 import assertNever from "assert-never"
 
 type MenuState = "closed" | "closing" | "opening" | "open"
@@ -10,13 +10,13 @@ type AnimationState = "open" | "closed"
 export interface SideDialogProps extends React.ComponentPropsWithoutRef<"div"> {
 	isOpen?: boolean
 	onDismiss: () => void
-	position: Parameters<typeof dialogContentStyle>[0]["position"]
+	position: NonNullable<DialogContentVariants["position"]>
 }
 
 export function SideDialog({
 	children,
 	className,
-	isOpen,
+	isOpen = false,
 	onDismiss,
 	position,
 	...props

@@ -1,7 +1,45 @@
 import { style } from "@vanilla-extract/css"
 import { recipe } from "@vanilla-extract/recipes"
+import { VariantSelection } from "@vanilla-extract/recipes/dist/declarations/src/types"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { vars } from "../themes/themes.css"
+
+const tagContainerVariants = {
+	color: {
+		neutral: {
+			backgroundColor: vars.palette.neutral95,
+			transition: "background 0.15s ease-in",
+			":hover": {
+				backgroundColor: vars.palette.neutral90,
+				transition: "none",
+			},
+		},
+		beginner: {
+			backgroundColor: vars.themeColors.beginner,
+			transition: "background 0.15s ease-in",
+			":hover": {
+				backgroundColor: vars.themeColors.beginnerHover,
+				transition: "none",
+			},
+		},
+		intermediate: {
+			backgroundColor: vars.themeColors.intermediate,
+			transition: "background 0.15s ease-in",
+			":hover": {
+				backgroundColor: vars.themeColors.intermediateHover,
+				transition: "none",
+			},
+		},
+		advanced: {
+			backgroundColor: vars.themeColors.advanced,
+			transition: "background 0.15s ease-in",
+			":hover": {
+				backgroundColor: vars.themeColors.advancedHover,
+				transition: "none",
+			},
+		},
+	},
+} as const
 
 export const tagContainerStyle = recipe({
 	base: [
@@ -13,50 +51,16 @@ export const tagContainerStyle = recipe({
 			color: "onSurface",
 		}),
 		{
-			textTransform: "capitalize",
 			cursor: "pointer",
 		},
 	],
-	variants: {
-		color: {
-			neutral: {
-				backgroundColor: vars.palette.neutral95,
-				transition: "background 0.15s ease-in",
-				":hover": {
-					backgroundColor: vars.palette.neutral90,
-					transition: "none",
-				},
-			},
-			beginner: {
-				backgroundColor: vars.themeColors.beginner,
-				transition: "background 0.15s ease-in",
-				":hover": {
-					backgroundColor: vars.themeColors.beginnerHover,
-					transition: "none",
-				},
-			},
-			intermediate: {
-				backgroundColor: vars.themeColors.intermediate,
-				transition: "background 0.15s ease-in",
-				":hover": {
-					backgroundColor: vars.themeColors.intermediateHover,
-					transition: "none",
-				},
-			},
-			advanced: {
-				backgroundColor: vars.themeColors.advanced,
-				transition: "background 0.15s ease-in",
-				":hover": {
-					backgroundColor: vars.themeColors.advancedHover,
-					transition: "none",
-				},
-			},
-		},
-	},
+	variants: tagContainerVariants,
 	defaultVariants: {
 		color: "neutral",
 	},
 })
+
+export type TagContainerVariants = VariantSelection<typeof tagContainerVariants>
 
 export const tagTextStyle = style([
 	sprinkles({
@@ -65,7 +69,6 @@ export const tagTextStyle = style([
 	}),
 	{
 		opacity: 0.6,
-		textTransform: "capitalize",
 		transition: "opacity 0.15s ease-in",
 		":hover": {
 			opacity: 0.75,

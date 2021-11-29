@@ -29,9 +29,9 @@ const Template: Story<CommunityCardProps> = (args) => (
 		>
 			{exampleCommunities.map((community) => (
 				<CommunityCardComponent
-					community={community}
 					key={community.name}
 					{...args}
+					community={community}
 				/>
 			))}
 		</div>

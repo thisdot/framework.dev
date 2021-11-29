@@ -6,28 +6,79 @@ import {
 	AllModelsByName,
 	CategoryName,
 } from "../../models/all-categories"
+import { hasFieldEqualToValue } from "../../util/data-utils"
+import {
+	deserializeFieldName,
+	deserializeFieldValues,
+	serializeFieldName,
+	serializeFieldValue,
+} from "../../util/string-utils"
 import { FilterSet, QueryParams } from "./types"
 
 const filterRegex = /(\S+):(\S+)/g
 export function parseQueryString(
 	queryString: string,
-	allCategories: AllCategories[],
-	preFilters: FilterSet
-): { params: QueryParams; availableFilters: FilterSet } {
+	availableFilters: FilterSet
+): QueryParams {
 	const filters = Array.from(queryString.matchAll(filterRegex)).map(
 		([_match, key, value]) => [key, value] as const
-	)
-	const availableCategories = uniq(
-		allCategories.map((category) => category.name)
 	)
 
 	const categories = filters
 		.filter(([key]) => key === "in")
-		.map(([_key, value]) => value)
-	const tags = filters
-		.filter(([key]) => key === "tag")
-		.map(([_key, value]) => value)
-	const availableFilters = {
+		.map(([_key, value]) => deserializeFieldName(value))
+	const tags = deserializeFieldValues(
+		filters.filter(([key]) => key === "tag").map(([_key, value]) => value),
+		availableFilters.tag
+	)
+	const fields = groupFieldFilters(
+		filters.filter(([key]) =>
+			availableFilters.field.some(([fieldName]) => key === fieldName)
+		)
+	).map(
+		([fieldName, filterValues]) =>
+			[
+				deserializeFieldName(fieldName),
+				deserializeFieldValues(
+					filterValues,
+					findAvailableFiltersForField(
+						availableFilters,
+						deserializeFieldName(fieldName)
+					)
+				),
+			] as const
+	)
+	const textSearch = queryString.replace(filterRegex, "").trim()
+
+	return {
+		filters: {
+			category: categories,
+			tag: tags,
+			field: fields,
+		},
+		textSearch,
+	}
+}
+
+function findAvailableFiltersForField(
+	availableFilters: FilterSet,
+	fieldName: string
+) {
+	return (
+		availableFilters.field.find(
+			([availableFilterName]) => availableFilterName === fieldName
+		)?.[1] ?? []
+	)
+}
+
+export function calculateAvailableFilters(
+	allCategories: AllCategories[],
+	preFilters: FilterSet
+): FilterSet {
+	const availableCategories = uniq(
+		allCategories.map((category) => category.name)
+	)
+	return {
 		category: preFilters.category.length > 0 ? [] : availableCategories,
 		tag: without(
 			uniq(allCategories.flatMap((category) => category.tags)),
@@ -38,31 +89,18 @@ export function parseQueryString(
 				? Object.entries(allCategories[0].indexMetadata.filterableFields)
 				: [],
 	}
-	const fields = groupFieldFilters(
-		filters.filter(([key]) =>
-			availableFilters.field.some(([fieldName]) => key === fieldName)
-		)
-	)
-	const textSearch = queryString.replaceAll(filterRegex, "").trim()
-
-	return {
-		params: {
-			filters: {
-				category: categories,
-				tag: tags,
-				field: fields,
-			},
-			textSearch,
-		},
-		availableFilters,
-	}
 }
 
 export function serializeQueryParams(params: QueryParams): string {
-	const categories = params.filters.category.map((category) => `in:${category}`)
-	const tags = params.filters.tag.map((tag) => `tag:${tag}`)
+	const categories = params.filters.category.map(
+		(category) => `in:${serializeFieldName(category)}`
+	)
+	const tags = params.filters.tag.map(
+		(tag) => `tag:${serializeFieldValue(tag)}`
+	)
 	const fields = ungroupFieldFilters(params.filters.field).map(
-		([fieldName, value]) => `${fieldName}:${value}`
+		([fieldName, value]) =>
+			`${serializeFieldName(fieldName)}:${serializeFieldValue(value)}`
 	)
 
 	return [...categories, ...tags, ...fields, params.textSearch].join(" ")
@@ -70,7 +108,7 @@ export function serializeQueryParams(params: QueryParams): string {
 
 export function getWordCoordinatesAt(
 	text: string,
-	position: number
+	position = 0
 ): [number, number] | null {
 	if (!position) return null
 	// Search for the word's beginning and end.
@@ -101,7 +139,7 @@ export function getSearchResults<K extends CategoryName>({
 	const initialResults: AllModelsByName[K][] = textSearch
 		? searchIndex
 				.search(textSearch)
-				.filter((result) => result.score < 0.4)
+				.filter((result) => result.score && result.score < 0.4)
 				.map((result) => result.item)
 		: data
 
@@ -127,7 +165,9 @@ export function filterRecords<T extends AllModels>(
 			(filters.tag.length === 0 ||
 				record.tags.some((tag) => filters.tag.includes(tag))) &&
 			filters.field.every(([fieldName, fieldValues]) =>
-				fieldValues.some((fieldValue) => fieldValue === record[fieldName])
+				fieldValues.some((fieldValue) =>
+					hasFieldEqualToValue(record, fieldName, fieldValue)
+				)
 			)
 	)
 }

@@ -83,7 +83,51 @@ export const blankPalette = {
 
 export type ColorPalette = typeof blankPalette
 
-export function lightThemeFromPalette(p: ColorPalette) {
+export type ColorTheme = {
+	palette: ColorPalette
+	themeColors: {
+		primary: string
+		onPrimary: string
+		primaryContainer: string
+		onPrimaryContainer: string
+		secondary: string
+		onSecondary: string
+		secondaryContainer: string
+		onSecondaryContainer: string
+		tertiary: string
+		onTertiary: string
+		tertiaryContainer: string
+		onTertiaryContainer: string
+		tertiaryBorder: string
+		error: string
+		onError: string
+		errorContainer: string
+		onErrorContainer: string
+		background: string
+		onBackground: string
+		surface: string
+		onSurface: string
+		surfaceVariant: string
+		onSurfaceVariant: string
+		outline: string
+		regularText: string
+		strongText: string
+		softText: string
+		surface1: string
+		surface2: string
+		surface3: string
+		surface4: string
+		surface5: string
+		beginner: string
+		beginnerHover: string
+		intermediate: string
+		intermediateHover: string
+		advanced: string
+		advancedHover: string
+	}
+}
+
+export function lightThemeFromPalette(p: ColorPalette): ColorTheme {
 	const surface = color(p.neutral99)
 	const primary = color(p.primary40)
 	return {
@@ -131,7 +175,7 @@ export function lightThemeFromPalette(p: ColorPalette) {
 	}
 }
 
-export function darkThemeFromPalette(p: ColorPalette) {
+export function darkThemeFromPalette(p: ColorPalette): ColorTheme {
 	const surface = color(p.neutral10)
 	const primary = color(p.primary40)
 	return {

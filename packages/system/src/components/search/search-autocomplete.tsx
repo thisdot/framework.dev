@@ -8,11 +8,15 @@ import {
 	ComboboxOptionText,
 	ComboboxPopover,
 } from "@reach/combobox"
-import { lowerCase } from "lodash"
 import { SearchInput } from "./search-input"
 import { getWordCoordinatesAt } from "./query-util"
 import { FilterSet } from "./types"
 import { AllCategories } from "../../models/all-categories"
+import {
+	formatFieldName,
+	serializeFieldName,
+	serializeFieldValue,
+} from "../../util/string-utils"
 
 export interface SearchAutocompleteProps {
 	staticPrefix?: string
@@ -31,10 +35,10 @@ export function SearchAutocomplete({
 	staticPrefix,
 	...props
 }: SearchAutocompleteProps) {
-	const inputRef = useRef<HTMLInputElement>()
+	const inputRef = useRef<HTMLInputElement>(null)
 	const currentWordCoordinates = getWordCoordinatesAt(
 		value,
-		inputRef.current?.selectionStart
+		inputRef.current?.selectionStart ?? 0
 	)
 	const autoCompleteResults = currentWordCoordinates
 		? calculateAutocompleteResults(
@@ -45,6 +49,7 @@ export function SearchAutocomplete({
 	return (
 		<Combobox
 			onSelect={(selection) =>
+				currentWordCoordinates &&
 				onChange(
 					value.slice(0, currentWordCoordinates[0]) +
 						selection +
@@ -96,23 +101,21 @@ function calculateAutocompleteResults(
 	const categoryFilterSuggestions: AutocompleteResult[] = Array.from(
 		availableFilters.category
 	).map((name) => ({
-		value: `in:${name}`,
-		description: `Limit search to ${lowerCase(name)}`,
+		value: `in:${serializeFieldName(name)}`,
+		description: `Limit search to ${formatFieldName(name)}`,
 	}))
 	const tagFilterSuggestions: AutocompleteResult[] = Array.from(
 		availableFilters.tag
 	).map((name) => ({
-		value: `tag:${name}`,
-		description: `Only results tagged ${lowerCase(name)}`,
+		value: `tag:${serializeFieldValue(name)}`,
+		description: `Only results tagged ${name}`,
 	}))
 	const fieldFilterSuggestions: AutocompleteResult[] = Array.from(
 		availableFilters.field
 	).flatMap(([key, values]) =>
 		Array.from(values).map((value) => ({
-			value: `${key}:${value}`,
-			description: `Only results where the ${lowerCase(key)} is ${lowerCase(
-				value
-			)}`,
+			value: `${serializeFieldName(key)}:${serializeFieldValue(value)}`,
+			description: `Only results where the ${formatFieldName(key)} is ${value}`,
 		}))
 	)
 	return [

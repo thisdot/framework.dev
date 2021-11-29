@@ -1,5 +1,22 @@
 import { recipe } from "@vanilla-extract/recipes"
+import { VariantSelection } from "@vanilla-extract/recipes/dist/declarations/src/types"
 import { breakpoints, sprinkles } from "../sprinkles/sprinkles.css"
+
+const dialogOverlayVariants = {
+	state: {
+		open: {
+			background: "hsla(0, 0%, 0%, 0.66)",
+		},
+		closed: {
+			background: "hsla(0, 0%, 0%, 0)",
+			pointerEvents: "none",
+		},
+	},
+} as const
+
+export type DialogOverlayVariants = VariantSelection<
+	typeof dialogOverlayVariants
+>
 
 export const dialogOverlayStyle = recipe({
 	base: {
@@ -13,18 +30,32 @@ export const dialogOverlayStyle = recipe({
 		transitionDuration: "200ms",
 		transitionTimingFunction: "ease-out",
 	},
-	variants: {
-		state: {
-			open: {
-				background: "hsla(0, 0%, 0%, 0.66)",
-			},
-			closed: {
-				background: "hsla(0, 0%, 0%, 0)",
-				pointerEvents: "none"
-			},
+	variants: dialogOverlayVariants,
+})
+
+const dialogContentVariants = {
+	state: {
+		open: {
+			transform: "translateX(0)",
+			transitionTimingFunction: "ease-out",
+		},
+		closed: {
+			transitionTimingFunction: "ease-out",
 		},
 	},
-})
+	position: {
+		left: {
+			left: 0,
+		},
+		right: {
+			right: 0,
+		},
+	},
+} as const
+
+export type DialogContentVariants = VariantSelection<
+	typeof dialogContentVariants
+>
 
 export const dialogContentStyle = recipe({
 	base: [
@@ -46,25 +77,7 @@ export const dialogContentStyle = recipe({
 			},
 		},
 	],
-	variants: {
-		state: {
-			open: {
-				transform: "translateX(0)",
-				transitionTimingFunction: "ease-out",
-			},
-			closed: {
-				transitionTimingFunction: "ease-out",
-			},
-		},
-		position: {
-			left: {
-				left: 0,
-			},
-			right: {
-				right: 0,
-			},
-		},
-	},
+	variants: dialogContentVariants,
 	compoundVariants: [
 		{
 			variants: {

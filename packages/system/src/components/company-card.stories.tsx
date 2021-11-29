@@ -28,7 +28,7 @@ const Template: Story<CompanyCardProps> = (args) => (
 			})}
 		>
 			{exampleCompanies.map((company) => (
-				<CompanyCardComponent company={company} key={company.name} {...args} />
+				<CompanyCardComponent key={company.name} {...args} company={company} />
 			))}
 		</div>
 	</div>

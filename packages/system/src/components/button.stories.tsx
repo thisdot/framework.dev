@@ -1,5 +1,5 @@
-import { Meta } from "@storybook/react"
-import { Button as ButtonComponent } from "./button"
+import { Meta, Story } from "@storybook/react"
+import { Button as ButtonComponent, ButtonProps } from "./button"
 
 export default {
 	title: "Button",
@@ -28,7 +28,9 @@ export default {
 	},
 } as Meta
 
-const Template = (args) => <ButtonComponent {...args} />
+const Template: Story<ButtonProps> = (args) => (
+	<ButtonComponent {...args} />
+)
 
 export const Button = Template.bind({})
 

@@ -3,19 +3,13 @@ import {
 	MobileNav as MobileNavComponent,
 	MobileNavProps,
 } from "@framework/system/src/components/mobile-nav"
-import startCase from "lodash/startCase"
+import { NavItems } from "./nav-items"
 
-type Props = MobileNavProps & { categories: string[] }
-
-export function MobileNav({ categories, ...props }: Props) {
+export function MobileNav(props: MobileNavProps) {
 	return (
 		<MobileNavComponent {...props}>
 			<div className={sprinkles({ layout: "stack", gap: 24 })}>
-				{categories.map((category) => (
-					<a href={`/categories/${category}`} key={category}>
-						{startCase(category)}
-					</a>
-				))}
+				<NavItems />
 			</div>
 		</MobileNavComponent>
 	)

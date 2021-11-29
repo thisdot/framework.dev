@@ -27,10 +27,11 @@ export default {
 
 const Template: Story<ResultsCategoryProps<CategoryName>> = (args) => (
 	<ResultsCategoryComponent
-		searchResults={
-			exampleSearchData.find((category) => category.name === args.category).data
-		}
 		{...args}
+		searchResults={
+			exampleSearchData.find((category) => category.name === args.category)
+				?.data ?? []
+		}
 	/>
 )
 

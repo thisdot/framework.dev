@@ -1,4 +1,3 @@
-import { kebabCase } from "lodash"
 import classNames from "classnames"
 import React from "react"
 import { Tool } from "../models/tool"
@@ -9,9 +8,9 @@ import {
 	toolCardHeaderStyle,
 	toolCardStyle,
 } from "./tool-card.css"
-import { ResourceTag } from "./resource-tag"
 import { CardDivider } from "./card-divider"
 import { Tag } from "./tag"
+import { formatFieldValue, serializeFieldValue } from "../util/string-utils"
 
 export type ToolCardProps = React.ComponentPropsWithoutRef<"article"> & {
 	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
@@ -70,8 +69,11 @@ export function ToolCard({
 				<CardDivider />
 				<div className={sprinkles({ layout: "row", gap: 4 })}>
 					{tool.tags.map((tag) => (
-						<Tag key={tag} href={`/categories/tools/tags/${kebabCase(tag)}`}>
-							{tag}
+						<Tag
+							key={tag}
+							href={`/categories/tools/tags/${serializeFieldValue(tag)}`}
+						>
+							{formatFieldValue(tag)}
 						</Tag>
 					))}
 				</div>

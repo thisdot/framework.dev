@@ -12,14 +12,14 @@ export default {
 	args: {
 		children: "Hello world",
 		"aria-label": "Example dialog",
-		position: "left"
+		position: "left",
 	},
 	argTypes: {
 		position: {
 			options: ["left", "right"],
-			control: "radio"
-		}
-	}
+			control: "radio",
+		},
+	},
 } as Meta
 
 const Template: Story<SideDialogProps> = (args) => {
@@ -29,7 +29,11 @@ const Template: Story<SideDialogProps> = (args) => {
 			<Button as="button" onClick={() => setOpen(true)}>
 				Open dialog
 			</Button>
-			<SideDialogComponent isOpen={open} onDismiss={() => setOpen(false)} {...args} />
+			<SideDialogComponent
+				isOpen={open}
+				{...args}
+				onDismiss={() => setOpen(false)}
+			/>
 		</>
 	)
 }
