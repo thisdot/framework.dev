@@ -10,11 +10,10 @@ export const comparisonTableStyle = style([
 		color: "regularText",
 		display: "grid",
 		textStyle: "bodyShort2",
+		width: "full",
 	}),
 	{
 		gridTemplateColumns: "max-content repeat(5, 1fr)",
-		maxWidth: "90%",
-		overflowX: "scroll",
 		position: "relative",
 		"::-webkit-scrollbar": {
 			backgroundColor: "white",

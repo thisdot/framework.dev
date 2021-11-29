@@ -6,6 +6,7 @@ import {
 } from "./comparison-table.css"
 import { TH, TD } from "./components/cells"
 import { cellStickyStyle } from "./components/cells.css"
+import { HorizontalScrollbar } from "./components/horizontal-scrollbar"
 import { ISortConfig, ILibrary } from "./types"
 import { sortLibraries, formatPercentage, formatNumber } from "./utils"
 
@@ -88,68 +89,74 @@ export function ComparisonTable({
 	return (
 		<div className={className} {...props}>
 			{libraryStats && (
-				<div className={comparisonTableStyle} role="table">
-					<TH name="name" sort={sortConfig} onClick={() => handleSort("name")}>
-						Name
-					</TH>
-					<TH
-						name="author"
-						sort={sortConfig}
-						onClick={() => handleSort("author")}
-					>
-						Author
-					</TH>
-					<TH
-						name="coverage"
-						sort={sortConfig}
-						onClick={() => handleSort("coverage")}
-					>
-						Testing Coverage
-					</TH>
-					<TH
-						name="downloads"
-						sort={sortConfig}
-						onClick={() => handleSort("downloads")}
-					>
-						Weekly Downloads
-					</TH>
-					<TH
-						name="health"
-						sort={sortConfig}
-						onClick={() => handleSort("health")}
-					>
-						Overall Health
-					</TH>
-					<TH
-						name="stars"
-						sort={sortConfig}
-						onClick={() => handleSort("stars")}
-					>
-						Stars
-					</TH>
-					{libraryStats.map((library) => (
-						<React.Fragment key={library.name}>
-							<TD className={cellStickyStyle} role="rowheader">
-								<img
-									src={library.image}
-									className={comparisonTableLibraryIconStyle}
-								/>
-								<a
-									href={library.href}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									{library.name}
-								</a>
-							</TD>
-							<TD>{library.author}</TD>
-							<TD>{formatPercentage(library.coverage) || "N/A"}</TD>
-							<TD>{formatNumber(library.downloads) || "N/A"}</TD>
-							<TD>{formatPercentage(library.health) || "N/A"}</TD>
-							<TD>{formatNumber(library.stars) || "N/A"}</TD>
-						</React.Fragment>
-					))}
-				</div>
+				<HorizontalScrollbar>
+					<div className={comparisonTableStyle} role="table">
+						<TH
+							name="name"
+							sort={sortConfig}
+							onClick={() => handleSort("name")}
+						>
+							Name
+						</TH>
+						<TH
+							name="author"
+							sort={sortConfig}
+							onClick={() => handleSort("author")}
+						>
+							Author
+						</TH>
+						<TH
+							name="coverage"
+							sort={sortConfig}
+							onClick={() => handleSort("coverage")}
+						>
+							Testing Coverage
+						</TH>
+						<TH
+							name="downloads"
+							sort={sortConfig}
+							onClick={() => handleSort("downloads")}
+						>
+							Weekly Downloads
+						</TH>
+						<TH
+							name="health"
+							sort={sortConfig}
+							onClick={() => handleSort("health")}
+						>
+							Overall Health
+						</TH>
+						<TH
+							name="stars"
+							sort={sortConfig}
+							onClick={() => handleSort("stars")}
+						>
+							Stars
+						</TH>
+						{libraryStats.map((library) => (
+							<React.Fragment key={library.name}>
+								<TD className={cellStickyStyle} role="rowheader">
+									<img
+										src={library.image}
+										className={comparisonTableLibraryIconStyle}
+									/>
+									<a
+										href={library.href}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										{library.name}
+									</a>
+								</TD>
+								<TD>{library.author}</TD>
+								<TD>{formatPercentage(library.coverage) || "N/A"}</TD>
+								<TD>{formatNumber(library.downloads) || "N/A"}</TD>
+								<TD>{formatPercentage(library.health) || "N/A"}</TD>
+								<TD>{formatNumber(library.stars) || "N/A"}</TD>
+							</React.Fragment>
+						))}
+					</div>
+				</HorizontalScrollbar>
 			)}
 		</div>
 	)
