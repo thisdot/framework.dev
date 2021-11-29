@@ -66,6 +66,7 @@
 		"@reach/auto-id": "^0.16.0",
 		"@reach/combobox": "^0.16.3",
 		"@reach/dialog": "^0.16.2",
+		"@reach/utils": "^0.16.0",
 		"assert-never": "^1.2.1",
 		"classnames": "^2.3.1",
 		"fuse.js": "^6.4.6",
