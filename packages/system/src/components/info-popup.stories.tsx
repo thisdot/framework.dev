@@ -47,10 +47,10 @@ const Template: Story<
 				Click me
 			</Button>
 			<InfoPopupComponent
+				{...args}
 				targetRef={targetRef}
 				isOpen={open}
 				onDismiss={() => setOpen(false)}
-				{...args}
 			/>
 		</div>
 	)

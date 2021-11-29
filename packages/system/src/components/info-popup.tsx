@@ -34,7 +34,7 @@ export function InfoPopup({
 	targetRef,
 	...props
 }: InfoPopupProps) {
-	const [contentRef, contentBounds] = useMeasure({ box: "border-box" })
+	const [contentRef, contentBounds] = useMeasure<HTMLDivElement>({ box: "border-box" })
 	const targetBounds =
 		targetRef.current?.getBoundingClientRect() ?? blankDOMRect
 	const contentPosition = calculateContentPosition(targetBounds, contentBounds)

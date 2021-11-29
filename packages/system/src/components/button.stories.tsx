@@ -28,7 +28,7 @@ export default {
 	},
 } as Meta
 
-const Template: Story<ButtonProps<"button">> = (args) => (
+const Template: Story<ButtonProps> = (args) => (
 	<ButtonComponent {...args} />
 )
 
