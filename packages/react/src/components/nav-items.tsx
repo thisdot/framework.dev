@@ -1,4 +1,4 @@
-import { NavItem } from "@framework/system/src/components/nav-item.stories"
+import { NavItem } from "@framework/system/src/components/nav-item"
 import { NavList, NavListItem } from "@framework/system/src/components/nav-list"
 import { CategoryName } from "@framework/system/src/models/all-categories"
 import {

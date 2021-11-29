@@ -1,7 +1,7 @@
 import { Story, Meta } from "@storybook/react"
 import { useState } from "react"
 import { sprinkles } from "../sprinkles/sprinkles.css"
-import { NavItem } from "./nav-item.stories"
+import { NavItem } from "./nav-item"
 import {
 	NavList as NavListComponent,
 	NavListProps,

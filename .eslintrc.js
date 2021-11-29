@@ -14,6 +14,8 @@ module.exports = {
 		"prettier",
 	],
 	rules: {
+		// Story files should not be imported
+		"no-restricted-imports": ["error", { patterns: ["*.stories"] }],
 		// This is not necessary and conflicts with typescript's no unused vars
 		"react/react-in-jsx-scope": "off",
 		// This causes false positives when props are correctly inferred
