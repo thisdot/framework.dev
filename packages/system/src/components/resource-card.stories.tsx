@@ -1,9 +1,9 @@
 import { Story, Meta } from "@storybook/react"
+import { useState } from "react"
 import { AttributeDefinition } from "../models/all-categories"
 import {
 	exampleBooks,
 	exampleCourses,
-	exampleLibraries,
 	exampleTags,
 } from "../util/example-content"
 import {
@@ -27,6 +27,7 @@ export default {
 		tags: exampleTags,
 		layout: "titleFirst",
 		imageLayout: "logo",
+		onSelect: false,
 		children:
 			"Mollit deserunt laborum excepteur esse excepteur incididunt irure deserunt adipisicing anim in id.",
 	},
@@ -42,7 +43,7 @@ export default {
 		image: {
 			options: ["logo", "book"],
 			mapping: {
-				logo: exampleLibraries[0].image,
+				logo: exampleCourses[0].image,
 				book: exampleBooks[0].image,
 			},
 			control: {
@@ -52,8 +53,15 @@ export default {
 	},
 } as Meta
 
-const Template: Story<ResourceCardProps> = (args) => (
-	<ResourceCardComponent {...args} />
-)
+const Template: Story<ResourceCardProps> = ({ onSelect, ...args }) => {
+	const [selected, setSelected] = useState(false)
+	return (
+		<ResourceCardComponent
+			{...args}
+			selected={selected}
+			onSelect={onSelect ? (selected) => setSelected(selected) : undefined}
+		/>
+	)
+}
 
 export const ResourceCard = Template.bind({})

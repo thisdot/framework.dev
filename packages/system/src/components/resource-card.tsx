@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react"
 import { AttributeDefinition } from "../models/all-categories"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { formatFieldValue } from "../util/string-utils"
+import { CardSelector } from "./card-selector"
 import { DiscreteAttribute } from "./discrete-attribute"
 import { InfoPopup } from "./info-popup"
 import {
@@ -19,7 +20,7 @@ import {
 import { Tag } from "./tag"
 
 export interface ResourceCardProps
-	extends React.ComponentPropsWithoutRef<"article"> {
+	extends Omit<React.ComponentPropsWithoutRef<"article">, "onSelect"> {
 	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 	title: string
 	subtitle: string
@@ -29,6 +30,8 @@ export interface ResourceCardProps
 	imageLayout: "logo" | "book"
 	href: string
 	tags: string[]
+	selected?: boolean
+	onSelect?: (selected: boolean) => void
 }
 
 export function ResourceCard({
@@ -43,6 +46,8 @@ export function ResourceCard({
 	href,
 	tags,
 	attributes,
+	selected = false,
+	onSelect,
 	...props
 }: ResourceCardProps) {
 	const maxTags = maxTagsByLayout[layout]
@@ -52,6 +57,7 @@ export function ResourceCard({
 	const popupButtonRef = useRef(null)
 	return (
 		<article
+			data-selected={onSelect ? selected : undefined}
 			className={classNames(className, resourceCardStyle[layout])}
 			{...props}
 		>
@@ -71,6 +77,12 @@ export function ResourceCard({
 					</a>
 					<p className={resourceCardSubtitleStyle}>{subtitle}</p>
 				</div>
+				{onSelect && (
+					<CardSelector
+						checked={selected}
+						onChange={(e) => onSelect(e.target.checked)}
+					/>
+				)}
 			</header>
 			<div className={resourceCardBodyStyle}>
 				{attributes && (

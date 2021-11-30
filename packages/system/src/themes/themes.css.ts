@@ -17,3 +17,7 @@ export const reactThemeDark = createTheme(
 	vars,
 	darkThemeFromPalette(reactColorPalette)
 )
+
+export const derivedAttributes = {
+	outline: `2px solid ${vars.themeColors.tertiary}`,
+}

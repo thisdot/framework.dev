@@ -5,15 +5,20 @@ import { pxToRem } from "../util/style-utils"
 
 const base = style([
 	sprinkles({
-		padding: 16,
 		backgroundColor: "white",
 		border: "thin",
 		borderRadius: 12,
 	}),
 	{
+		padding: pxToRem(15),
 		selectors: {
 			"&:not(:hover)": {
 				borderColor: "transparent",
+			},
+			'&[data-selected="true"]': {
+				borderWidth: pxToRem(4),
+				padding: pxToRem(12),
+				borderColor: vars.palette.tertiary60,
 			},
 		},
 	},
@@ -56,6 +61,7 @@ export const resourceCardImageContainerStyle = style([
 		display: "grid",
 		alignItems: "center",
 		justifyItems: "center",
+		flexShrink: 0,
 		selectors: {
 			[`${titleFirst} &`]: {
 				width: pxToRem(40),
