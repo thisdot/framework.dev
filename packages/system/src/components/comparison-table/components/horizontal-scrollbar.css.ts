@@ -87,3 +87,8 @@ export const horizontalScrollbarButtonStyle = style([
 		width: pxToRem(40),
 	},
 ])
+
+export const horizontalScrollbarButtonIconStyle = style({
+	height: pxToRem(9),
+	width: pxToRem(6),
+})

@@ -8,6 +8,7 @@ import {
 	horizontalScrollbarThumbStyle,
 	horizontalScrollbarButtonContainerStyle,
 	horizontalScrollbarButtonStyle,
+	horizontalScrollbarButtonIconStyle,
 } from "./horizontal-scrollbar.css"
 import { ChevronIcon } from "../../../icons/chevron-icon"
 
@@ -145,13 +146,16 @@ export const HorizontalScrollbar = ({
 						className={horizontalScrollbarButtonStyle}
 						onClick={() => handleScrollButton("left")}
 					>
-						<ChevronIcon />
+						<ChevronIcon className={horizontalScrollbarButtonIconStyle} />
 					</button>
 					<button
 						className={horizontalScrollbarButtonStyle}
 						onClick={() => handleScrollButton("right")}
 					>
-						<ChevronIcon flipped={true} />
+						<ChevronIcon
+							flipped={true}
+							className={horizontalScrollbarButtonIconStyle}
+						/>
 					</button>
 				</div>
 			</div>
