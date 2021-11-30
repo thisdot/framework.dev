@@ -11,6 +11,8 @@ export interface Community<T extends string> extends SearchableRecord<T> {
 	description: string
 	/** A small (40x40) image that represents them */
 	image: string
+	/** The type of community, e.g. "Discord Community", "Slack Community", etc. */
+	type: string
 	/** A link to the community's website */
 	href: string
 }

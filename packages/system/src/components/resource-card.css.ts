@@ -8,6 +8,7 @@ const base = style([
 		backgroundColor: "white",
 		border: "thin",
 		borderRadius: 12,
+		layout: "stack",
 	}),
 	{
 		padding: pxToRem(15),
@@ -120,5 +121,19 @@ export const resourceCardBodyStyle = style([
 	sprinkles({ textStyle: "bodyLong2", layout: "stack", gap: 12 }),
 ])
 export const resourceCardFooterStyle = style([
-	sprinkles({ paddingTop: 12, layout: "row", gap: 4 }),
+	sprinkles({ layout: "stack" }),
+	{
+		flexGrow: 1,
+		justifyContent: "flex-end",
+	},
+])
+export const resourceCardBadgesStyle = style([
+	sprinkles({
+		layout: "row",
+		gap: 4,
+		paddingY: 12
+	}),
+	{
+		flexWrap: "wrap",
+	},
 ])

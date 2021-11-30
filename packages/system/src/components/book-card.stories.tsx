@@ -4,7 +4,7 @@ import { BookCard as BookCardComponent, BookCardProps } from "./book-card"
 import { exampleBooks } from "../util/example-content"
 
 export default {
-	title: "Book Card",
+	title: "Cards/Book Card",
 	component: BookCardComponent,
 	args: {
 		headingTag: "h1",
@@ -20,7 +20,7 @@ const Template: Story<BookCardProps> = (args) => (
 	>
 		<div
 			className={sprinkles({
-				layout: "landscapeCardGrid",
+				layout: "imageFirstCardGrid",
 				gap: 16,
 			})}
 		>

@@ -7,7 +7,7 @@ import {
 } from "./course-card"
 
 export default {
-	title: "Course Card",
+	title: "Cards/Course Card",
 	component: CourseCardComponent,
 	args: {
 		headingTag: "h1",
@@ -23,12 +23,12 @@ const Template: Story<CourseCardProps> = (args) => (
 	>
 		<div
 			className={sprinkles({
-				layout: "landscapeCardGrid",
+				layout: "titleFirstCardGrid",
 				gap: 16,
 			})}
 		>
 			{exampleCourses.map((course) => (
-				<CourseCardComponent key={course.title} {...args} course={course}  />
+				<CourseCardComponent key={course.title} {...args} course={course} />
 			))}
 		</div>
 	</div>

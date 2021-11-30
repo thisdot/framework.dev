@@ -12,7 +12,7 @@ import {
 } from "./resource-card"
 
 export default {
-	title: "Resource Card",
+	title: "Cards/Resource Card",
 	component: ResourceCardComponent,
 	args: {
 		headingTag: "h1",

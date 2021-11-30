@@ -3,10 +3,12 @@ import React, { useRef, useState } from "react"
 import { AttributeDefinition } from "../models/all-categories"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { formatFieldValue } from "../util/string-utils"
+import { CardDivider } from "./card-divider"
 import { CardSelector } from "./card-selector"
 import { DiscreteAttribute } from "./discrete-attribute"
 import { InfoPopup } from "./info-popup"
 import {
+	resourceCardBadgesStyle,
 	resourceCardBodyStyle,
 	resourceCardBookImageDecoration,
 	resourceCardFooterStyle,
@@ -20,14 +22,18 @@ import {
 import { Tag } from "./tag"
 
 export interface ResourceCardProps
-	extends Omit<React.ComponentPropsWithoutRef<"article">, "onSelect"> {
+	extends Omit<
+		React.ComponentPropsWithoutRef<"article">,
+		"onSelect" | "title"
+	> {
 	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
-	title: string
-	subtitle: string
+	title: React.ReactNode
+	subtitle: React.ReactNode
+	badges?: React.ReactNode
 	image?: string
-	attributes: AttributeDefinition[]
-	layout: "titleFirst" | "imageFirst"
-	imageLayout: "logo" | "book"
+	attributes?: AttributeDefinition[]
+	layout?: "titleFirst" | "imageFirst"
+	imageLayout?: "logo" | "book"
 	href: string
 	tags: string[]
 	selected?: boolean
@@ -41,13 +47,14 @@ export function ResourceCard({
 	title,
 	subtitle,
 	image,
-	layout,
-	imageLayout,
+	layout = "titleFirst",
+	imageLayout = "logo",
 	href,
 	tags,
-	attributes,
+	attributes = [],
 	selected = false,
 	onSelect,
+	badges,
 	...props
 }: ResourceCardProps) {
 	const maxTags = maxTagsByLayout[layout]
@@ -62,15 +69,17 @@ export function ResourceCard({
 			{...props}
 		>
 			<header className={resourceCardHeaderStyle}>
-				<div className={resourceCardImageContainerStyle}>
-					{imageLayout === "book" && layout === "imageFirst" ? (
-						<BookImageDecoration>
+				{image && (
+					<div className={resourceCardImageContainerStyle}>
+						{imageLayout === "book" && layout === "imageFirst" ? (
+							<BookImageDecoration>
+								<img src={image} className={resourceCardImageStyle} alt="" />
+							</BookImageDecoration>
+						) : (
 							<img src={image} className={resourceCardImageStyle} alt="" />
-						</BookImageDecoration>
-					) : (
-						<img src={image} className={resourceCardImageStyle} alt="" />
-					)}
-				</div>
+						)}
+					</div>
+				)}
 				<div className={sprinkles({ layout: "stack", gap: 4 })}>
 					<a href={href} target="_blank" rel="noreferrer">
 						<H className={resourceCardTitleStyle}>{title}</H>
@@ -85,8 +94,10 @@ export function ResourceCard({
 				)}
 			</header>
 			<div className={resourceCardBodyStyle}>
-				{attributes && (
-					<div className={sprinkles({ layout: "row", gap: 12 })}>
+				{attributes.length > 0 && (
+					<div
+						className={sprinkles({ layout: "row", gap: 12, color: "softText" })}
+					>
 						{attributes.map((attribute, index) => (
 							<DiscreteAttribute colorize attribute={attribute} key={index} />
 						))}
@@ -95,25 +106,37 @@ export function ResourceCard({
 				{children}
 			</div>
 			<footer className={resourceCardFooterStyle}>
-				{visibleTags.map((tag) => (
-					<Tag key={tag}>{formatFieldValue(tag)}</Tag>
-				))}
-				{tagsInPopup.length > 0 && (
-					<Tag onClick={() => setPopupOpen(true)} ref={popupButtonRef}>
-						{tagsInPopup.length}+
-					</Tag>
+				{badges && (
+					<>
+						<div
+							className={classNames(resourceCardBadgesStyle, "hide-in-percy")}
+						>
+							{badges}
+						</div>
+						<CardDivider />
+					</>
 				)}
-				<InfoPopup
-					isOpen={popupOpen}
-					onDismiss={() => setPopupOpen(false)}
-					targetRef={popupButtonRef}
-				>
-					<div className={sprinkles({ layout: "row", gap: 4 })}>
-						{tagsInPopup.map((tag) => (
-							<Tag key={tag}>{formatFieldValue(tag)}</Tag>
-						))}
-					</div>
-				</InfoPopup>
+				<div className={sprinkles({ paddingTop: 12, layout: "row", gap: 4 })}>
+					{visibleTags.map((tag) => (
+						<Tag key={tag}>{formatFieldValue(tag)}</Tag>
+					))}
+					{tagsInPopup.length > 0 && (
+						<Tag onClick={() => setPopupOpen(true)} ref={popupButtonRef}>
+							{tagsInPopup.length}+
+						</Tag>
+					)}
+					<InfoPopup
+						isOpen={popupOpen}
+						onDismiss={() => setPopupOpen(false)}
+						targetRef={popupButtonRef}
+					>
+						<div className={sprinkles({ layout: "row", gap: 4 })}>
+							{tagsInPopup.map((tag) => (
+								<Tag key={tag}>{formatFieldValue(tag)}</Tag>
+							))}
+						</div>
+					</InfoPopup>
+				</div>
 			</footer>
 		</article>
 	)
