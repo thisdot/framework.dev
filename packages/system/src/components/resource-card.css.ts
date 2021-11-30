@@ -127,13 +127,3 @@ export const resourceCardFooterStyle = style([
 		justifyContent: "flex-end",
 	},
 ])
-export const resourceCardBadgesStyle = style([
-	sprinkles({
-		layout: "row",
-		gap: 4,
-		paddingY: 12
-	}),
-	{
-		flexWrap: "wrap",
-	},
-])

@@ -8,7 +8,6 @@ import { CardSelector } from "./card-selector"
 import { DiscreteAttribute } from "./discrete-attribute"
 import { InfoPopup } from "./info-popup"
 import {
-	resourceCardBadgesStyle,
 	resourceCardBodyStyle,
 	resourceCardBookImageDecoration,
 	resourceCardFooterStyle,
@@ -109,7 +108,15 @@ export function ResourceCard({
 				{badges && (
 					<>
 						<div
-							className={classNames(resourceCardBadgesStyle, "hide-in-percy")}
+							className={classNames(
+								sprinkles({
+									layout: "row",
+									gap: 4,
+									paddingY: 12,
+									flexWrap: "wrap",
+								}),
+								"hide-in-percy"
+							)}
 						>
 							{badges}
 						</div>
@@ -130,7 +137,13 @@ export function ResourceCard({
 						onDismiss={() => setPopupOpen(false)}
 						targetRef={popupButtonRef}
 					>
-						<div className={sprinkles({ layout: "row", gap: 4 })}>
+						<div
+							className={sprinkles({
+								layout: "row",
+								gap: 4,
+								flexWrap: "wrap",
+							})}
+						>
 							{tagsInPopup.map((tag) => (
 								<Tag key={tag}>{formatFieldValue(tag)}</Tag>
 							))}
