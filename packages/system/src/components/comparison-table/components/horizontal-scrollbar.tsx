@@ -20,6 +20,8 @@ export const HorizontalScrollbar = ({
 	const scrollTrackRef = useRef<HTMLDivElement>(null)
 	const [thumbWidth, setThumbWidth] = useState(20)
 	const [thumbLeft, setThumbLeft] = useState(0)
+	const [lastScrollPosition, setLastScrollPosition] = useState(0)
+	const [isDragging, setIsDragging] = useState(false)
 
 	function handleResize(ref: HTMLDivElement, track: number) {
 		const { clientWidth, scrollWidth } = ref
@@ -46,6 +48,46 @@ export const HorizontalScrollbar = ({
 		setThumbLeft(newLeft)
 	}, [])
 
+	const handleThumbMousedown = useCallback((e) => {
+		e.preventDefault()
+		e.stopPropagation()
+		setLastScrollPosition(e.clientX)
+		setIsDragging(true)
+	}, [])
+
+	const handleThumbMouseup = useCallback(
+		(e) => {
+			if (isDragging) {
+				e.preventDefault()
+				setIsDragging(false)
+			}
+		},
+		[isDragging]
+	)
+
+	const handleThumbMousemove = useCallback(
+		(e) => {
+			if (isDragging) {
+				e.preventDefault()
+				e.stopPropagation()
+				const { scrollWidth, offsetWidth } = scrollSectionRef.current
+
+				const deltaX = e.clientX - lastScrollPosition
+
+				setLastScrollPosition(e.clientX)
+				setThumbLeft(
+					Math.min(Math.max(0, thumbLeft + deltaX), offsetWidth - scrollWidth)
+				)
+				scrollSectionRef.current.scrollLeft = Math.min(
+					scrollSectionRef.current.scrollLeft +
+						deltaX * (scrollWidth / offsetWidth),
+					scrollWidth - offsetWidth
+				)
+			}
+		},
+		[isDragging, lastScrollPosition, thumbLeft, thumbWidth]
+	)
+
 	useEffect(() => {
 		if (scrollSectionRef.current && scrollTrackRef.current) {
 			const ref = scrollSectionRef.current
@@ -63,6 +105,17 @@ export const HorizontalScrollbar = ({
 		}
 	}, [])
 
+	useEffect(() => {
+		document.addEventListener("mousemove", handleThumbMousemove)
+		document.addEventListener("mouseup", handleThumbMouseup)
+		document.addEventListener("mouseleave", handleThumbMouseup)
+		return () => {
+			document.removeEventListener("mousemove", handleThumbMousemove)
+			document.removeEventListener("mouseup", handleThumbMouseup)
+			document.removeEventListener("mouseleave", handleThumbMouseup)
+		}
+	}, [handleThumbMousemove, handleThumbMouseup])
+
 	return (
 		<div className={classNames(className, horizontalScrollbarContainerStyle)}>
 			<div
@@ -76,6 +129,7 @@ export const HorizontalScrollbar = ({
 				<div className={horizontalScrollbarTrackStyle} ref={scrollTrackRef}>
 					<div
 						className={horizontalScrollbarThumbStyle}
+						onMouseDown={handleThumbMousedown}
 						style={{ width: `${thumbWidth}px`, left: `${thumbLeft}px` }}
 					></div>
 				</div>
