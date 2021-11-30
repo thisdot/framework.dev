@@ -19,7 +19,6 @@ const cellStyle = style([
 export const cellTHStyle = style([
 	cellStyle,
 	sprinkles({
-		borderTop: "tableCell",
 		fontWeight: "bold",
 	}),
 	{

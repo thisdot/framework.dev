@@ -2,10 +2,17 @@ import { style } from "@vanilla-extract/css"
 import { sprinkles } from "../../../sprinkles/sprinkles.css"
 import { pxToRem } from "../../../util/style-utils"
 
-export const horizontalScrollbarContainerStyle = style({
-	height: "100%",
-	position: "relative",
-})
+export const horizontalScrollbarContainerStyle = style([
+	sprinkles({
+		border: "tableCell",
+		borderRadius: 12,
+	}),
+	{
+		height: "100%",
+		overflow: "hidden",
+		position: "relative",
+	},
+])
 
 export const horizontalScrollbarContentStyle = style({
 	height: "90vh",
@@ -21,7 +28,7 @@ export const horizontalScrollbarContentStyle = style({
 
 export const horizontalScrollbarSectionStyle = style([
 	sprinkles({
-		border: "tableCell",
+		borderTop: "tableCell",
 		display: "grid",
 		gap: 24,
 		paddingX: 24,
@@ -29,8 +36,6 @@ export const horizontalScrollbarSectionStyle = style([
 	}),
 	{
 		backgroundColor: "white",
-		borderBottomLeftRadius: pxToRem(12),
-		borderBottomRightRadius: pxToRem(12),
 		gridTemplateColumns: "1fr auto",
 		placeItems: "center",
 	},

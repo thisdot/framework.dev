@@ -5,8 +5,6 @@ import { pxToRem } from "../../util/style-utils"
 
 export const comparisonTableStyle = style([
 	sprinkles({
-		border: "tableCell",
-		borderRadius: 12,
 		color: "regularText",
 		display: "grid",
 		textStyle: "bodyShort2",
