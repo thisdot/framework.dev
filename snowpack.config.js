@@ -19,6 +19,8 @@ module.exports = {
 			"@reach/utils/make-id",
 			"@reach/utils/use-update-effect",
 			"@reach/utils/use-stateful-ref-value",
+			"@reach/tooltip",
+			"@reach/utils/get-document-dimensions",
 		],
 		env: {
 			NODE_ENV: true,
