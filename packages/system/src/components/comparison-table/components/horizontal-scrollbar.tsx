@@ -70,18 +70,25 @@ export const HorizontalScrollbar = ({
 			if (isDragging) {
 				e.preventDefault()
 				e.stopPropagation()
-				const { scrollWidth, offsetWidth } = scrollSectionRef.current
+				const {
+					scrollWidth: sectionScrollWidth,
+					offsetWidth: sectionOffsetWidth,
+				} = scrollSectionRef.current
+				const { offsetWidth: trackOffsetWidth } = scrollTrackRef.current
 
 				const deltaX = e.clientX - lastScrollPosition
 
 				setLastScrollPosition(e.clientX)
 				setThumbLeft(
-					Math.min(Math.max(0, thumbLeft + deltaX), offsetWidth - scrollWidth)
+					Math.min(
+						Math.max(0, thumbLeft + deltaX),
+						trackOffsetWidth - thumbWidth
+					)
 				)
 				scrollSectionRef.current.scrollLeft = Math.min(
 					scrollSectionRef.current.scrollLeft +
-						deltaX * (scrollWidth / offsetWidth),
-					scrollWidth - offsetWidth
+						deltaX * (sectionScrollWidth / sectionOffsetWidth),
+					sectionScrollWidth - sectionOffsetWidth
 				)
 			}
 		},
