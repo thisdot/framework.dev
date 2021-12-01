@@ -5,9 +5,8 @@ export default {
 	title: "Tag",
 	component: TagComponent,
 	argTypes: {
-		color: {
-			options: ["neutral", "beginner", "intermediate", "advanced"],
-			control: { type: "radio" },
+		onClick: {
+			action: "onClick",
 		},
 	},
 } as Meta
@@ -17,7 +16,6 @@ const Template: Story<TagProps> = (args) => <TagComponent {...args} />
 export const Tag = Template.bind({})
 
 Tag.args = {
-	href: "/data-visualization",
 	children: "data visualization",
 	color: "neutral",
 }

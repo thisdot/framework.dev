@@ -179,14 +179,18 @@ export const exampleCommunities: Community<string>[] = [
 	{
 		name: "Community One",
 		description: "Example community, full of people who, uh, commune.",
-		image: logo1,
+		image:
+			"https://picsum.photos/seed/3aea63e0-3db5-517c-99e7-817a11b35b3e/250",
+		type: "Discord Community",
 		tags: ["accessibility"],
 		href: "https://google.com",
 	},
 	{
 		name: "Community Two",
 		description: "This community isn't as nice if I'm being honest.",
-		image: logo2,
+		image:
+			"https://picsum.photos/seed/ca6b8711-bda2-5f1b-8dc4-5cb48098265d/250",
+		type: "Slack Community",
 		tags: ["state-management"],
 		href: "https://bing.com",
 	},
@@ -194,13 +198,15 @@ export const exampleCommunities: Community<string>[] = [
 		name: "Community Three",
 		description:
 			"I can't tell you much about this community because they won't let me join.",
-		image: logo3,
+		image:
+			"https://picsum.photos/seed/18702836-66b7-5bda-af53-24605bdeed0a/250",
+		type: "Secret Society",
 		tags: ["graphQL"],
 		href: "https://duckduckgo.com",
 	},
 ]
 
-export const exampleCompanies: Company<ExampleTag>[] = [
+export const exampleCompanies: Company<"consultancy">[] = [
 	{
 		name: "This Dot",
 		description:
@@ -208,7 +214,7 @@ export const exampleCompanies: Company<ExampleTag>[] = [
 		image: company1,
 		numberOfEmployees: "10 to 50",
 		href: "https://labs.thisdot.co",
-		tags: [],
+		tags: ["consultancy"],
 	},
 ]
 

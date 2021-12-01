@@ -44,11 +44,14 @@ export const textInputBoxStyle = style([
 		":focus": {
 			borderColor: vars.themeColors.tertiary,
 		},
+		":focus-visible": {
+			outline: "none",
+		},
 		":disabled": {
 			opacity: 0.5,
 		},
 		selectors: {
-			'&:not(:placeholder-shown):not(:focus):not([value=""])': {
+			'&:not(:placeholder-shown):not(:focus):not([value=""]):not(:focus-within)': {
 				borderColor: vars.themeColors.outline,
 			},
 		},

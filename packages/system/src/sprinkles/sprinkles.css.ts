@@ -237,6 +237,7 @@ const layout = defineProperties({
 		display: ["none", "block", "flex", "grid"],
 		flexDirection: ["row", "column"],
 		alignItems: ["stretch", "flex-start", "center", "flex-end", "end", "start"],
+		flexWrap: ["wrap", "nowrap"],
 		width: {
 			full: "100%",
 			auto: "auto",
@@ -274,9 +275,13 @@ const layout = defineProperties({
 				gridTemplateColumns: "240px 1fr",
 				gridAutoRows: "1fr",
 			},
-			landscapeCardGrid: {
+			titleFirstCardGrid: {
 				display: "grid",
 				gridTemplateColumns: "repeat(auto-fill, 340px) [end]",
+			},
+			imageFirstCardGrid: {
+				display: "grid",
+				gridTemplateColumns: "repeat(auto-fill, 250px) [end]",
 			},
 			stack: {
 				display: "flex",

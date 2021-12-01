@@ -7,10 +7,10 @@ import {
 } from "./code-example-card"
 
 export default {
-	title: "Code Example Card",
+	title: "Cards/Code Example Card",
 	component: CodeExampleCardComponent,
 	args: {
-		headingTag: "h1"
+		headingTag: "h1",
 	},
 } as Meta
 
@@ -23,12 +23,16 @@ const Template: Story<CodeExampleCardProps> = (args) => (
 	>
 		<div
 			className={sprinkles({
-				layout: "landscapeCardGrid",
+				layout: "titleFirstCardGrid",
 				gap: 16,
 			})}
 		>
 			{exampleCodeExamples.map((codeExample) => (
-				<CodeExampleCardComponent key={codeExample.title} {...args} codeExample={codeExample}  />
+				<CodeExampleCardComponent
+					key={codeExample.title}
+					{...args}
+					codeExample={codeExample}
+				/>
 			))}
 		</div>
 	</div>

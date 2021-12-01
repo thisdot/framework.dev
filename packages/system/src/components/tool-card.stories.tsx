@@ -4,7 +4,7 @@ import { exampleTools } from "../util/example-content"
 import { ToolCard as ToolCardComponent, ToolCardProps } from "./tool-card"
 
 export default {
-	title: "Tool Card",
+	title: "Cards/Tool Card",
 	component: ToolCardComponent,
 	args: {
 		headingTag: "h1",
@@ -20,7 +20,7 @@ const Template: Story<ToolCardProps> = (args) => (
 	>
 		<div
 			className={sprinkles({
-				layout: "landscapeCardGrid",
+				layout: "titleFirstCardGrid",
 				gap: 16,
 			})}
 		>

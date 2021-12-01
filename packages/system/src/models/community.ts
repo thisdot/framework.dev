@@ -1,4 +1,4 @@
-import { IndexMetadata, SearchableRecord } from "./search"
+import { SearchableRecord } from "./search"
 
 /**
  * Represents a blog or community that
@@ -11,12 +11,14 @@ export interface Community<T extends string> extends SearchableRecord<T> {
 	description: string
 	/** A small (40x40) image that represents them */
 	image: string
+	/** The type of community, e.g. "Discord Community", "Slack Community", etc. */
+	type: string
 	/** A link to the community's website */
 	href: string
 }
 
-export const communityIndexMetadata: IndexMetadata<Community<string>, "communities"> = {
+export const communityIndexMetadata = {
 	name: "communities",
 	searchableFields: ["description", "name"],
 	filterableFields: {},
-}
+} as const

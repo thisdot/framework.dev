@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { vars } from "../../themes/themes.css"
 import { pxToRem } from "../../util/style-utils"
 import {
 	textInputBoxStyle,
@@ -19,12 +20,15 @@ export const searchInputBoxStyle = style([
 		display: "grid",
 		gridTemplateColumns: "min-content auto 1fr min-content",
 		paddingRight: 0,
+		":focus-within": {
+			borderColor: vars.themeColors.tertiary,
+		},
 	},
 	sprinkles({ gap: 4, paddingRight: 0 }),
 ])
 export const searchInputInputStyle = style([
 	sprinkles({ width: "full" }),
-	{ lineHeight: pxToRem(48) },
+	{ lineHeight: pxToRem(48), ":focus-within": { outline: "none" } },
 ])
 export const searchInputIconStyle = sprinkles({ marginRight: 10 })
 export const searchInputResetButtonStyle = style({

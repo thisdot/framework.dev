@@ -1,5 +1,4 @@
-import { noop, useIsomorphicLayoutEffect } from "@reach/utils"
-import { useMemo, useState } from "react"
+import { useLayoutEffect, useMemo, useState } from "react"
 
 export type UseMeasureRect = ResizeObserverSize
 export type UseMeasureRef<E extends Element = Element> = (element: E) => void
@@ -33,7 +32,7 @@ function useMeasure<E extends Element = Element>(
 		[options?.box]
 	)
 
-	useIsomorphicLayoutEffect(() => {
+	useLayoutEffect(() => {
 		if (!element) return
 		observer.observe(element, options)
 		return () => {
@@ -47,4 +46,4 @@ function useMeasure<E extends Element = Element>(
 export default typeof window !== "undefined" &&
 typeof window.ResizeObserver !== "undefined"
 	? useMeasure
-	: ((() => [noop, defaultState]) as typeof useMeasure)
+	: ((() => [() => null, defaultState]) as typeof useMeasure)

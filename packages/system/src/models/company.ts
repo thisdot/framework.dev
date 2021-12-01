@@ -3,7 +3,7 @@
  * to help with a given framework.
  */
 
-import { IndexMetadata, SearchableRecord } from "./search"
+import { SearchableRecord } from "./search"
 
 export interface Company<T extends string> extends SearchableRecord<T> {
 	/** Company name */
@@ -23,11 +23,8 @@ export interface Company<T extends string> extends SearchableRecord<T> {
 	href: string
 }
 
-export const companyIndexMetadata: IndexMetadata<
-	Company<string>,
-	"companies"
-> = {
+export const companyIndexMetadata = {
 	name: "companies",
 	searchableFields: ["description", "name"],
 	filterableFields: {},
-}
+} as const

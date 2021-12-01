@@ -1,4 +1,4 @@
-import { IndexMetadata, SearchableRecord } from "./search"
+import { SearchableRecord } from "./search"
 
 export const courseLevels = ["beginner", "intermediate", "advanced"] as const
 export const coursePaymentTypes = ["free", "paid"] as const
@@ -27,7 +27,7 @@ export interface Course<T extends string> extends SearchableRecord<T> {
 	href: string
 }
 
-export const courseIndexMetadata: IndexMetadata<Course<string>, "courses"> = {
+export const courseIndexMetadata = {
 	name: "courses",
 	searchableFields: ["author", "description", "title"],
 	filterableFields: {
@@ -35,4 +35,4 @@ export const courseIndexMetadata: IndexMetadata<Course<string>, "courses"> = {
 		paymentType: coursePaymentTypes,
 		format: courseFormats,
 	},
-}
+} as const

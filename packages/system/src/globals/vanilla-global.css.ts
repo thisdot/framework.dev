@@ -1,4 +1,5 @@
 import { globalStyle } from "@vanilla-extract/css"
+import { derivedAttributes } from "../themes/themes.css"
 
 globalStyle("body", {
 	fontFamily: "Inter, sans-serif",
@@ -21,3 +22,7 @@ globalStyle(
 	'input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration',
 	{ display: "none" }
 )
+
+globalStyle("*:focus-visible", {
+	outline: derivedAttributes.outline,
+})

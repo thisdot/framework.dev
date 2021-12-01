@@ -1,18 +1,18 @@
 import classNames from "classnames"
 import React from "react"
-import { tagContainerStyle, TagContainerVariants, tagTextStyle } from "./tag.css"
+import { tagContainerStyle, tagTextStyle } from "./tag.css"
 
-export interface TagProps
-	extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-	color?: TagContainerVariants["color"]
-}
+export interface TagProps extends React.ComponentPropsWithoutRef<"button"> {}
 
-export function Tag({ children, color, className, href, ...props }: TagProps) {
+export const Tag = React.forwardRef<HTMLSpanElement, TagProps>(function Tag(
+	{ children, className, ...props },
+	ref
+) {
 	return (
-		<span className={classNames(className, tagContainerStyle({ color }))}>
-			<a href={href} className={tagTextStyle} {...props}>
+		<span ref={ref} className={classNames(className, tagContainerStyle)}>
+			<button type="button" className={tagTextStyle} {...props}>
 				{children}
-			</a>
+			</button>
 		</span>
 	)
-}
+})

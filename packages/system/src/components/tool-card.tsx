@@ -1,83 +1,32 @@
-import classNames from "classnames"
-import React from "react"
 import { Tool } from "../models/tool"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import {
-	toolCardBodyStyle,
-	toolCardFooterStyle,
-	toolCardHeaderStyle,
-	toolCardStyle,
-} from "./tool-card.css"
-import { CardDivider } from "./card-divider"
-import { Tag } from "./tag"
-import { formatFieldValue, serializeFieldValue } from "../util/string-utils"
+import { ResourceCard, ResourceCardProps } from "./resource-card"
 
-export type ToolCardProps = React.ComponentPropsWithoutRef<"article"> & {
-	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+export type ToolCardProps = Omit<
+	ResourceCardProps,
+	| "title"
+	| "subtitle"
+	| "image"
+	| "layout"
+	| "imageLayout"
+	| "href"
+	| "tags"
+	| "attributes"
+	| "children"
+> & {
 	tool: Tool<string>
 }
 
-export function ToolCard({
-	className,
-	tool,
-	headingTag: H,
-	...props
-}: ToolCardProps) {
+export function ToolCard({ tool, ...props }: ToolCardProps) {
 	return (
-		<article className={classNames(className, toolCardStyle)} {...props}>
-			<header className={toolCardHeaderStyle}>
-				<img
-					src={tool.image}
-					className={sprinkles({ border: "thin" })}
-					aria-hidden
-					height={40}
-					width={40}
-				/>
-				<div className={sprinkles({ layout: "stack", gap: 4 })}>
-					<a href={tool.href} target="_blank" rel="noreferrer">
-						<H
-							className={sprinkles({
-								margin: 0,
-								textStyle: "minorHeading",
-								fontWeight: "bold",
-								color: "strongText",
-							})}
-						>
-							{tool.name}
-						</H>
-					</a>
-					<p
-						className={sprinkles({
-							textStyle: "bodyShort3",
-							color: "softText",
-						})}
-					>
-						{tool.author}
-					</p>
-				</div>
-			</header>
-			<div className={toolCardBodyStyle}>{tool.description}</div>
-			<footer className={toolCardFooterStyle}>
-				<div className={sprinkles({ layout: "row", gap: 4 })}>
-					{/* <ResourceTag
-						icon={tool.format}
-						href={`/categories/tools/formats/${tool.format}`}
-					>
-						{tool.format}
-					</ResourceTag> */}
-				</div>
-				<CardDivider />
-				<div className={sprinkles({ layout: "row", gap: 4 })}>
-					{tool.tags.map((tag) => (
-						<Tag
-							key={tag}
-							href={`/categories/tools/tags/${serializeFieldValue(tag)}`}
-						>
-							{formatFieldValue(tag)}
-						</Tag>
-					))}
-				</div>
-			</footer>
-		</article>
+		<ResourceCard
+			title={tool.name}
+			subtitle={tool.author}
+			href={tool.href}
+			tags={tool.tags}
+			image={tool.image}
+			{...props}
+		>
+			{tool.description}
+		</ResourceCard>
 	)
 }

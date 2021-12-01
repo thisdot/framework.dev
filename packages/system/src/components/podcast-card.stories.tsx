@@ -7,7 +7,7 @@ import {
 } from "./podcast-card"
 
 export default {
-	title: "Podcast Card",
+	title: "Cards/Podcast Card",
 	component: PodcastCardComponent,
 	args: {
 		headingTag: "h1",
@@ -23,7 +23,7 @@ const Template: Story<PodcastCardProps> = (args) => (
 	>
 		<div
 			className={sprinkles({
-				layout: "landscapeCardGrid",
+				layout: "imageFirstCardGrid",
 				gap: 16,
 			})}
 		>

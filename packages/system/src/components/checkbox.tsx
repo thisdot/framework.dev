@@ -1,4 +1,3 @@
-import classNames from "classnames"
 import React from "react"
 import { useId } from "@reach/auto-id"
 import { sprinkles } from "../sprinkles/sprinkles.css"

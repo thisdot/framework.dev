@@ -7,7 +7,7 @@ import { sprinkles } from "../sprinkles/sprinkles.css"
 import { exampleCommunities } from "../util/example-content"
 
 export default {
-	title: "Community Card",
+	title: "Cards/Community Card",
 	component: CommunityCardComponent,
 	args: {
 		headingTag: "h1",
@@ -23,7 +23,7 @@ const Template: Story<CommunityCardProps> = (args) => (
 	>
 		<div
 			className={sprinkles({
-				layout: "landscapeCardGrid",
+				layout: "imageFirstCardGrid",
 				gap: 16,
 			})}
 		>

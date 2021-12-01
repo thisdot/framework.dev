@@ -20,10 +20,7 @@ import { Podcast } from "../../models/podcast"
 import { ToolCard } from "../tool-card"
 import { Tool } from "../../models/tool"
 import { Counter } from "../counter"
-import {
-	AllModelsByName,
-	CategoryName,
-} from "../../models/all-categories"
+import { AllModelsByName, CategoryName } from "../../models/all-categories"
 import assertNever from "assert-never"
 
 export type ResultsCategoryProps<T extends CategoryName> =
@@ -41,6 +38,9 @@ export function ResultsCategory<T extends CategoryName>({
 	...props
 }: ResultsCategoryProps<T>) {
 	if (results.length === 0) return null
+	const layout = ["books", "communities", "podcasts"].includes(category)
+		? "imageFirstCardGrid"
+		: "titleFirstCardGrid"
 
 	switch (variant) {
 		case "bare":
@@ -49,7 +49,7 @@ export function ResultsCategory<T extends CategoryName>({
 					className={classNames(
 						className,
 						sprinkles({
-							layout: "landscapeCardGrid",
+							layout,
 							gap: 24,
 							justifyContent: "flex-start",
 						})
@@ -93,7 +93,7 @@ export function ResultsCategory<T extends CategoryName>({
 					<div
 						className={sprinkles({
 							paddingTop: 24,
-							layout: "landscapeCardGrid",
+							layout,
 							gap: 24,
 							justifyContent: "flex-start",
 						})}

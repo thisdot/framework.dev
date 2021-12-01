@@ -1,66 +1,27 @@
 import { style } from "@vanilla-extract/css"
-import { recipe } from "@vanilla-extract/recipes"
-import { VariantSelection } from "@vanilla-extract/recipes/dist/declarations/src/types"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { vars } from "../themes/themes.css"
 
-const tagContainerVariants = {
-	color: {
-		neutral: {
-			backgroundColor: vars.palette.neutral95,
-			transition: "background 0.15s ease-in",
-			":hover": {
+export const tagContainerStyle = style([
+	sprinkles({
+		paddingY: 4,
+		paddingX: 8,
+		borderRadius: 6,
+		textStyle: "buttonSmall",
+		color: "onSurface",
+	}),
+	{
+		cursor: "pointer",
+		backgroundColor: vars.palette.neutral95,
+		transition: "background 0.15s ease-in",
+		selectors: {
+			"&:hover, &:focus": {
 				backgroundColor: vars.palette.neutral90,
 				transition: "none",
 			},
 		},
-		beginner: {
-			backgroundColor: vars.themeColors.beginner,
-			transition: "background 0.15s ease-in",
-			":hover": {
-				backgroundColor: vars.themeColors.beginnerHover,
-				transition: "none",
-			},
-		},
-		intermediate: {
-			backgroundColor: vars.themeColors.intermediate,
-			transition: "background 0.15s ease-in",
-			":hover": {
-				backgroundColor: vars.themeColors.intermediateHover,
-				transition: "none",
-			},
-		},
-		advanced: {
-			backgroundColor: vars.themeColors.advanced,
-			transition: "background 0.15s ease-in",
-			":hover": {
-				backgroundColor: vars.themeColors.advancedHover,
-				transition: "none",
-			},
-		},
 	},
-} as const
-
-export const tagContainerStyle = recipe({
-	base: [
-		sprinkles({
-			paddingY: 4,
-			paddingX: 8,
-			borderRadius: 6,
-			textStyle: "buttonSmall",
-			color: "onSurface",
-		}),
-		{
-			cursor: "pointer",
-		},
-	],
-	variants: tagContainerVariants,
-	defaultVariants: {
-		color: "neutral",
-	},
-})
-
-export type TagContainerVariants = VariantSelection<typeof tagContainerVariants>
+])
 
 export const tagTextStyle = style([
 	sprinkles({

@@ -1,63 +1,33 @@
-import React from "react"
 import { Community } from "../models/community"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import {
-	communityCardBodyStyle,
-	communityCardHeaderStyle,
-	communityCardInfoStyle,
-	communityCardStyle,
-} from "./community-card.css"
-import { Tag } from "./tag"
-import classnames from "classnames"
-import { formatFieldValue, serializeFieldValue } from "../util/string-utils"
+import { ResourceCard, ResourceCardProps } from "./resource-card"
 
-export type CommunityCardProps = React.ComponentPropsWithoutRef<"article"> & {
-	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+export type CommunityCardProps = Omit<
+	ResourceCardProps,
+	| "title"
+	| "subtitle"
+	| "image"
+	| "layout"
+	| "imageLayout"
+	| "href"
+	| "tags"
+	| "attributes"
+	| "children"
+> & {
 	community: Community<string>
 }
 
-export function CommunityCard({
-	className,
-	community,
-	headingTag: H,
-	...props
-}: CommunityCardProps) {
+export function CommunityCard({ community, ...props }: CommunityCardProps) {
 	return (
-		<article className={classnames(className, communityCardStyle)} {...props}>
-			<header className={communityCardHeaderStyle}>
-				<img
-					src={community.image}
-					className={sprinkles({ border: "thin" })}
-					aria-hidden
-					height={40}
-					width={40}
-				/>
-				<div className={sprinkles({ layout: "stack", gap: 4 })}>
-					<a href={community.href} target="_blank" rel="noreferrer">
-						<H
-							className={sprinkles({
-								margin: 0,
-								textStyle: "minorHeading",
-								fontWeight: "bold",
-								color: "strongText",
-							})}
-						>
-							{community.name}
-						</H>
-					</a>
-				</div>
-			</header>
-			<div className={communityCardInfoStyle}>
-				{community.tags.map((tag) => (
-					<Tag
-						key={tag}
-						href={`/categories/communitys/tags/${serializeFieldValue(tag)}`}
-					>
-						{formatFieldValue(tag)}
-					</Tag>
-				))}
-			</div>
-			<p className={communityCardBodyStyle}>{community.description}</p>
-		</article>
+		<ResourceCard
+			title={community.name}
+			subtitle={community.type}
+			href={community.href}
+			tags={community.tags}
+			layout="imageFirst"
+			image={community.image}
+			{...props}
+		>
+			{community.description}
+		</ResourceCard>
 	)
 }
