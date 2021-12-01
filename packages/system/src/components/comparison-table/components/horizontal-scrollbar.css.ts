@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css"
 import { sprinkles } from "../../../sprinkles/sprinkles.css"
+import { vars } from "../../../themes/themes.css"
 import { pxToRem } from "../../../util/style-utils"
 
 export const horizontalScrollbarContainerStyle = style([
@@ -43,11 +44,12 @@ export const horizontalScrollbarSectionStyle = style([
 
 export const horizontalScrollbarTrackStyle = style([
 	sprinkles({
-		backgroundColor: "tertiaryBorder",
 		borderRadius: 12,
 	}),
 	{
-		height: pxToRem(4),
+		backgroundImage: `linear-gradient(${vars.themeColors.onPrimary} 16px, ${vars.themeColors.tertiaryBorder} 16px, ${vars.themeColors.tertiaryBorder} 20px, ${vars.themeColors.onPrimary} 20px)`,
+		cursor: "pointer",
+		height: pxToRem(36),
 		position: "relative",
 		width: "100%",
 	},
@@ -55,11 +57,11 @@ export const horizontalScrollbarTrackStyle = style([
 
 export const horizontalScrollbarThumbStyle = style([
 	sprinkles({
-		backgroundColor: "regularText",
 		borderRadius: 12,
 	}),
 	{
-		height: pxToRem(4),
+		backgroundImage: `linear-gradient(${vars.themeColors.onPrimary} 16px, ${vars.themeColors.regularText} 16px, ${vars.themeColors.regularText} 20px, ${vars.themeColors.onPrimary} 20px)`,
+		height: pxToRem(36),
 		position: "absolute",
 	},
 ])

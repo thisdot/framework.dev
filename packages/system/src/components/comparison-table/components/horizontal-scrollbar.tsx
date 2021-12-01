@@ -138,7 +138,11 @@ export const HorizontalScrollbar = ({
 					<div
 						className={horizontalScrollbarThumbStyle}
 						onMouseDown={handleThumbMousedown}
-						style={{ width: `${thumbWidth}px`, left: `${thumbLeft}px` }}
+						style={{
+							width: `${thumbWidth}px`,
+							left: `${thumbLeft}px`,
+							cursor: isDragging ? "grabbing" : "grab",
+						}}
 					></div>
 				</div>
 				<div className={horizontalScrollbarButtonContainerStyle}>
