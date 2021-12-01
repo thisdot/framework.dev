@@ -21,7 +21,7 @@ export function PodcastCard({ podcast, ...props }: PodcastCardProps) {
 	return (
 		<ResourceCard
 			title={podcast.title}
-			subtitle={podcast.hosts}
+			subtitle={podcast.hosts.join(", ")}
 			href={podcast.href}
 			tags={podcast.tags}
 			layout="imageFirst"

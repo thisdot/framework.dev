@@ -53,7 +53,7 @@ export type AllCategoriesByName = {
 export type AllCategories = AllCategoriesByName[keyof AllCategoriesByName]
 
 /**
- * Come components accept a prop in the form `[fieldName, fieldValue]`
+ * Some components accept a prop in the form `[fieldName, fieldValue]`
  * for fields and values that are discrete/filterable. This type code
  * extracts the valid name/value combinations from the static
  * category metadata.

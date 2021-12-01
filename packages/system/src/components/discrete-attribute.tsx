@@ -33,7 +33,7 @@ export function DiscreteAttribute({
 		<div
 			className={classNames(
 				className,
-				sprinkles({ layout: "row", gap: 6 }),
+				sprinkles({ layout: "row", alignItems: "center", gap: 6 }),
 				colorize && color && sprinkles({ color })
 			)}
 			{...props}
