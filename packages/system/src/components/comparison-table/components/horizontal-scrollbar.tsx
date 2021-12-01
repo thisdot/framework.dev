@@ -37,6 +37,24 @@ export const HorizontalScrollbar = ({
 		}
 	}
 
+	const handleTrackClick = useCallback((e) => {
+		e.preventDefault()
+		e.stopPropagation()
+		const { current: trackCurrent } = scrollTrackRef
+		const { current: contentCurrent } = scrollSectionRef
+		if (trackCurrent && contentCurrent) {
+			const { clientX } = e
+			const target = e.target as HTMLDivElement
+			const rect = target.getBoundingClientRect()
+			const clickRatio = (clientX - rect.left) / trackCurrent.clientWidth
+			const scrollAmount = Math.floor(clickRatio * contentCurrent.scrollWidth)
+			contentCurrent.scrollTo({
+				left: scrollAmount,
+				behavior: "smooth",
+			})
+		}
+	}, [])
+
 	const handleThumbPosition = useCallback(() => {
 		if (!scrollSectionRef.current || !scrollTrackRef.current) {
 			return
@@ -134,7 +152,11 @@ export const HorizontalScrollbar = ({
 				{children}
 			</div>
 			<div className={horizontalScrollbarSectionStyle}>
-				<div className={horizontalScrollbarTrackStyle} ref={scrollTrackRef}>
+				<div
+					className={horizontalScrollbarTrackStyle}
+					ref={scrollTrackRef}
+					onClick={handleTrackClick}
+				>
 					<div
 						className={horizontalScrollbarThumbStyle}
 						onMouseDown={handleThumbMousedown}
