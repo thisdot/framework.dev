@@ -15,6 +15,18 @@ const { title, currentCategory, currentTag } = Astro.props
     <title>react.framework.dev | {title}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="UTF-8"/>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-33DWS64W1B"></script>
+		{
+			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" && 
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', 'G-33DWS64W1B');
+			</script>
+		}
   </head>
   <body class={sprinkles({ backgroundColor: "surface4", layout: { mobile: "stack", desktop: "sidebar" } })} >
 		<MobileNav client:media="(max-width:1024px)" className={sprinkles({ display: { mobile: "flex", desktop: "none" }})} />
