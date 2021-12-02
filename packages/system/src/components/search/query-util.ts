@@ -4,11 +4,14 @@ import {
 	AllCategories,
 	AllModels,
 	AllModelsByName,
+	AttributeDefinition,
 	CategoryName,
+	FieldFilter,
 } from "../../models/all-categories"
 import { hasFieldEqualToValue } from "../../util/data-utils"
 import {
 	deserializeFieldName,
+	deserializeFieldValue,
 	deserializeFieldValues,
 	serializeFieldName,
 	serializeFieldValue,
@@ -24,29 +27,48 @@ export function parseQueryString(
 		([_match, key, value]) => [key, value] as const
 	)
 
+	const isValidCategoryFilter = (
+		filterCandidate: readonly [string, string]
+	): filterCandidate is readonly ["in", CategoryName] =>
+		filterCandidate[0] === "in" &&
+		availableFilters.category.some(
+			(possibleValue) => possibleValue === filterCandidate[1]
+		)
+
 	const categories = filters
-		.filter(([key]) => key === "in")
-		.map(([_key, value]) => deserializeFieldName(value))
+		.map(([key, value]) => [key, deserializeFieldName(value)] as const)
+		.filter(isValidCategoryFilter)
+		.map(([_, value]) => value)
+
 	const tags = deserializeFieldValues(
 		filters.filter(([key]) => key === "tag").map(([_key, value]) => value),
 		availableFilters.tag
 	)
+
+	const isValidFieldFilter = (
+		filterCandidate: readonly [string, string | undefined]
+	): filterCandidate is AttributeDefinition =>
+		!!availableFilters.field
+			.find(([fieldName]) => filterCandidate[0] === fieldName)?.[1]
+			.some((fieldValue) => filterCandidate[1] === fieldValue)
+
+	const deserializeFieldFilter = ([fieldName, filterValue]: readonly [
+		string,
+		string
+	]): readonly [string, string | undefined] =>
+		[
+			deserializeFieldName(fieldName),
+			deserializeFieldValue(
+				filterValue,
+				findAvailableFiltersForField(
+					availableFilters,
+					deserializeFieldName(fieldName)
+				)
+			),
+		] as const
+
 	const fields = groupFieldFilters(
-		filters.filter(([key]) =>
-			availableFilters.field.some(([fieldName]) => key === fieldName)
-		)
-	).map(
-		([fieldName, filterValues]) =>
-			[
-				deserializeFieldName(fieldName),
-				deserializeFieldValues(
-					filterValues,
-					findAvailableFiltersForField(
-						availableFilters,
-						deserializeFieldName(fieldName)
-					)
-				),
-			] as const
+		filters.map(deserializeFieldFilter).filter(isValidFieldFilter)
 	)
 	const textSearch = queryString.replace(filterRegex, "").trim()
 
@@ -86,7 +108,9 @@ export function calculateAvailableFilters(
 		),
 		field:
 			allCategories.length === 1
-				? Object.entries(allCategories[0].indexMetadata.filterableFields)
+				? Object.entries(allCategories[0].indexMetadata.filterableFields).map(
+						([key, values]) => [key, [...values]] as FieldFilter
+				  )
 				: [],
 	}
 }
@@ -173,15 +197,27 @@ export function filterRecords<T extends AllModels>(
 }
 
 export function groupFieldFilters(
-	filters: (readonly [string, string])[]
-): (readonly [string, string[]])[] {
-	return toPairs(mapValues(groupBy(filters, 0), (values) => map(values, 1)))
+	filters: AttributeDefinition[]
+): FieldFilter[] {
+	return toPairs(
+		mapValues(groupBy(filters, 0), (values) => map(values, 1))
+	) as FieldFilter[]
 }
 
 export function ungroupFieldFilters(
-	groupedFilters: (readonly [string, readonly string[]])[]
-): (readonly [string, string])[] {
-	return groupedFilters.flatMap(([k, vs]) => vs.map((v) => [k, v]))
+	groupedFilters: FieldFilter[]
+): AttributeDefinition[] {
+	return groupedFilters.flatMap(([k, vs]) =>
+		// This is a dirty cast but the code to make Typescript understand
+		// what is happening here would be even worse
+		vs.map((v) => [k, v] as AttributeDefinition)
+	)
+}
+
+export function ungroupFieldFilter<T extends FieldFilter>(
+	groupedFilters: T
+): T extends any ? (readonly [T[0], T[1][number]])[] : never {
+	return groupedFilters[1].map((v) => [groupedFilters[0], v])
 }
 
 export const emptyFilterSet: FilterSet = {

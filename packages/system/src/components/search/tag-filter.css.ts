@@ -3,8 +3,7 @@ import { sprinkles } from "../../sprinkles/sprinkles.css"
 export const tagFilterStyle = sprinkles({ paddingX: 16, paddingY: 12 })
 
 export const tagFilterTitleStyle = sprinkles({
-	textStyle: "bodyShort3",
-	fontWeight: "bold",
+	textStyle: "caption",
 	color: "softText",
 })
 

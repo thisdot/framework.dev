@@ -1,7 +1,9 @@
+import { CategoryName, FieldFilter } from "../../models/all-categories"
+
 export type FilterSet = {
-	category: string[]
+	category: CategoryName[]
 	tag: string[]
-	field: (readonly [string, readonly string[]])[]
+	field: FieldFilter[]
 }
 
 export type QueryParams = {

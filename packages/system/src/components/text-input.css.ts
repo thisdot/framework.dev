@@ -15,8 +15,9 @@ export const textInputContainerStyle = style([
 
 export const textInputLabelStyle = style([
 	sprinkles({
-		color: "onSurface",
+		color: "softText",
 		textStyle: "caption",
+		paddingBottom: 12,
 	}),
 	{
 		selectors: {

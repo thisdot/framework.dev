@@ -1,15 +1,17 @@
-import { startCase } from "lodash"
 import React, { useState } from "react"
 import { Button } from "../button"
 import { CardDivider } from "../card-divider"
 import {
 	filterMenuFilterContainerStyle,
-	filterMenuHeaderStyle,
-	filterMenuHeadingStyle,
+	filterMenuFooterStyle,
+	filterMenuStyle,
 } from "./filter-menu.css"
 import { FilterSet, QueryParams } from "./types"
 import { Filter } from "./filter"
 import { TagFilter } from "./tag-filter"
+import classNames from "classnames"
+import { TextInput } from "../text-input"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
 
 export type FilterMenuProps = React.ComponentPropsWithoutRef<"div"> & {
 	params: QueryParams
@@ -27,47 +29,29 @@ export function FilterMenu({
 	const [params, setParams] = useState<QueryParams>(initialParams)
 	const { filters } = params
 	return (
-		<article className={className} {...props}>
-			<header className={filterMenuHeaderStyle}>
-				<h1 className={filterMenuHeadingStyle}>Filter</h1>
-				<Button
-					as="button"
-					color="destructive"
-					onClick={() =>
-						setParams({
-							...params,
-							filters: { category: [], field: [], tag: [] },
-						})
-					}
-				>
-					Reset
-				</Button>
-				<Button as="button" color="primary" onClick={() => onConfirm(params)}>
-					Apply
-				</Button>
-			</header>
+		<article className={classNames(className, filterMenuStyle)} {...props}>
 			<div className={filterMenuFilterContainerStyle}>
-				{availableFilters.category.length > 0 && (
-					<Filter
-						name="Search in"
-						options={availableFilters.category}
-						value={filters.category}
-						onUpdate={(newValue) =>
-							setParams((oldParams) => ({
-								...oldParams,
-								filters: { ...oldParams.filters, category: newValue },
-							}))
-						}
-					/>
-				)}
+				<TextInput
+					className={sprinkles({ paddingX: 16 })}
+					label="Has the words"
+					value={params.textSearch}
+					onChange={(e) =>
+						setParams((oldParams) => ({
+							...oldParams,
+							textSearch: e.target.value,
+						}))
+					}
+				/>
 				<CardDivider />
-				{availableFilters.field.map(([fieldName, fieldOptions]) => (
-					<React.Fragment key={fieldName}>
+				{availableFilters.field.map((fieldFilter) => (
+					<React.Fragment key={fieldFilter[0]}>
 						<Filter
-							name={startCase(fieldName)}
-							options={fieldOptions}
+							options={fieldFilter}
 							value={
-								filters.field.find(([name]) => name === fieldName)?.[1] ?? []
+								filters.field.find(([name]) => name === fieldFilter[0]) ?? [
+									fieldFilter[0],
+									[],
+								]
 							}
 							onUpdate={(newValue) =>
 								setParams((oldParams) => ({
@@ -75,8 +59,10 @@ export function FilterMenu({
 									filters: {
 										...oldParams.filters,
 										field: [
-											...filters.field.filter(([name]) => name !== fieldName),
-											[fieldName, newValue],
+											...filters.field.filter(
+												([name]) => name !== fieldFilter[0]
+											),
+											newValue,
 										],
 									},
 								}))
@@ -95,7 +81,25 @@ export function FilterMenu({
 						}))
 					}
 				/>
+				<CardDivider />
 			</div>
+			<footer className={filterMenuFooterStyle}>
+				<Button
+					as="button"
+					color="plain"
+					onClick={() =>
+						setParams({
+							textSearch: "",
+							filters: { category: [], field: [], tag: [] },
+						})
+					}
+				>
+					Clear filters
+				</Button>
+				<Button as="button" color="primary" onClick={() => onConfirm(params)}>
+					Search
+				</Button>
+			</footer>
 		</article>
 	)
 }

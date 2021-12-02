@@ -9,7 +9,7 @@ import { ungroupFieldFilters } from "./search/query-util"
 const attributeMapping = Object.fromEntries(
 	Object.values(allCategoriesMetadata)
 		.flatMap((metadata) =>
-			ungroupFieldFilters(Object.entries(metadata.filterableFields))
+			ungroupFieldFilters(Object.entries(metadata.filterableFields) as any)
 		)
 		.map((entry) => [entry.join(":"), entry])
 )
