@@ -20,6 +20,7 @@ export const horizontalScrollbarContentStyle = style({
 	msOverflowStyle: "none",
 	overflow: "auto",
 	scrollbarWidth: "none",
+	scrollSnapType: "both mandatory",
 	selectors: {
 		"&::-webkit-scrollbar": {
 			display: "none",

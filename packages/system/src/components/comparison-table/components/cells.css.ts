@@ -12,6 +12,7 @@ const cellStyle = style([
 	}),
 	{
 		minWidth: "max-content",
+		scrollSnapAlign: "start",
 		verticalAlign: "middle",
 	},
 ])

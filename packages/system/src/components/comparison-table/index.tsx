@@ -4,7 +4,7 @@ import {
 	comparisonTableStyle,
 	comparisonTableLibraryIconStyle,
 } from "./comparison-table.css"
-import { TH, TD } from "./components/cells"
+import { ColHeading, RowHeading, TD } from "./components/cells"
 import { cellStickyStyle } from "./components/cells.css"
 import { HorizontalScrollbar } from "./components/horizontal-scrollbar"
 import { ISortConfig, ILibrary } from "./types"
@@ -93,54 +93,54 @@ export function ComparisonTable({
 					<table className={comparisonTableStyle}>
 						<thead style={{ display: "contents" }}>
 							<tr style={{ display: "contents" }}>
-								<TH
+								<ColHeading
 									name="name"
 									sort={sortConfig}
 									onClick={() => handleSort("name")}
 								>
 									Name
-								</TH>
-								<TH
+								</ColHeading>
+								<ColHeading
 									name="author"
 									sort={sortConfig}
 									onClick={() => handleSort("author")}
 								>
 									Author
-								</TH>
-								<TH
+								</ColHeading>
+								<ColHeading
 									name="coverage"
 									sort={sortConfig}
 									onClick={() => handleSort("coverage")}
 								>
 									Testing Coverage
-								</TH>
-								<TH
+								</ColHeading>
+								<ColHeading
 									name="downloads"
 									sort={sortConfig}
 									onClick={() => handleSort("downloads")}
 								>
 									Weekly Downloads
-								</TH>
-								<TH
+								</ColHeading>
+								<ColHeading
 									name="health"
 									sort={sortConfig}
 									onClick={() => handleSort("health")}
 								>
 									Overall Health
-								</TH>
-								<TH
+								</ColHeading>
+								<ColHeading
 									name="stars"
 									sort={sortConfig}
 									onClick={() => handleSort("stars")}
 								>
 									Stars
-								</TH>
+								</ColHeading>
 							</tr>
 						</thead>
 						<tbody style={{ display: "contents" }}>
 							{libraryStats.map((library) => (
 								<tr style={{ display: "contents" }} key={library.name}>
-									<TD className={cellStickyStyle} role="rowheader">
+									<RowHeading className={cellStickyStyle} scope="row">
 										<img
 											src={library.image}
 											className={comparisonTableLibraryIconStyle}
@@ -152,7 +152,7 @@ export function ComparisonTable({
 										>
 											{library.name}
 										</a>
-									</TD>
+									</RowHeading>
 									<TD>{library.author}</TD>
 									<TD>{formatPercentage(library.coverage) || "N/A"}</TD>
 									<TD>{formatNumber(library.downloads) || "N/A"}</TD>
