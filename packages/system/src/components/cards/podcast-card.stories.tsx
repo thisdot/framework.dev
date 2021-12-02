@@ -12,6 +12,11 @@ export default {
 	args: {
 		headingTag: "h1",
 	},
+	argTypes: {
+		onTagClick: {
+			action: "onTagClick",
+		},
+	},
 } as Meta
 
 const Template: Story<PodcastCardProps> = (args) => (

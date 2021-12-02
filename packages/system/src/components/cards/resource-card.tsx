@@ -37,6 +37,7 @@ export interface ResourceCardProps
 	tags: string[]
 	selected?: boolean
 	onSelect?: (selected: boolean) => void
+	onTagClick: (tag: string) => void
 }
 
 export function ResourceCard({
@@ -54,6 +55,7 @@ export function ResourceCard({
 	selected = false,
 	onSelect,
 	badges,
+	onTagClick,
 	...props
 }: ResourceCardProps) {
 	const maxTags = maxTagsByLayout[layout]
@@ -125,7 +127,9 @@ export function ResourceCard({
 				)}
 				<div className={sprinkles({ paddingTop: 12, layout: "row", gap: 4 })}>
 					{visibleTags.map((tag) => (
-						<Tag key={tag}>{formatFieldValue(tag)}</Tag>
+						<Tag key={tag} onClick={() => onTagClick(tag)}>
+							{formatFieldValue(tag)}
+						</Tag>
 					))}
 					{tagsInPopup.length > 0 && (
 						<Tag onClick={() => setPopupOpen(true)} ref={popupButtonRef}>
@@ -145,7 +149,9 @@ export function ResourceCard({
 							})}
 						>
 							{tagsInPopup.map((tag) => (
-								<Tag key={tag}>{formatFieldValue(tag)}</Tag>
+								<Tag key={tag} onClick={() => onTagClick(tag)}>
+									{formatFieldValue(tag)}
+								</Tag>
 							))}
 						</div>
 					</InfoPopup>

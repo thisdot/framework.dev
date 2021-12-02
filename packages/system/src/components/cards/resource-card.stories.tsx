@@ -50,6 +50,9 @@ export default {
 				type: "inline-radio",
 			},
 		},
+		onTagClick: {
+			action: "onTagClick",
+		},
 	},
 } as Meta
 

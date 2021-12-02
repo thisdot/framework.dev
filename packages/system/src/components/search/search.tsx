@@ -20,6 +20,7 @@ import {
 import { SearchAutocomplete } from "./search-autocomplete"
 import { FilterIcon } from "../../icons/filter-icon"
 import { FilterSet } from "./types"
+import { uniq } from "lodash"
 
 export interface SearchProps extends React.ComponentPropsWithoutRef<"section"> {
 	data: AllCategories[]
@@ -128,6 +129,17 @@ export function Search({
 											params: queryParams,
 											searchIndex,
 										})}
+										onTagClick={(tag) =>
+											setQuery(
+												serializeQueryParams({
+													...queryParams,
+													filters: {
+														...queryParams.filters,
+														tag: uniq([...queryParams.filters.tag, tag]),
+													},
+												})
+											)
+										}
 									/>
 								)
 							)
