@@ -19,6 +19,7 @@ export const HorizontalScrollbar = ({
 }: React.ComponentPropsWithoutRef<"div">) => {
 	const scrollSectionRef = useRef<HTMLDivElement>(null)
 	const scrollTrackRef = useRef<HTMLDivElement>(null)
+	const observer = useRef<ResizeObserver>(null)
 	const [thumbWidth, setThumbWidth] = useState(20)
 	const [thumbLeft, setThumbLeft] = useState(0)
 	const [lastScrollPosition, setLastScrollPosition] = useState(0)
@@ -124,14 +125,14 @@ export const HorizontalScrollbar = ({
 		if (scrollSectionRef.current && scrollTrackRef.current) {
 			const ref = scrollSectionRef.current
 			const track = scrollTrackRef.current
-			handleResize(ref, track.clientWidth)
-			const resizeObserver = new ResizeObserver(() =>
+			observer.current = new ResizeObserver(() => {
 				handleResize(ref, track.clientWidth)
-			)
-			resizeObserver.observe(ref)
+			})
+			const firstChild = ref.getElementsByTagName("table")[0]
+			observer.current.observe(firstChild)
 			ref.addEventListener("scroll", handleThumbPosition)
 			return () => {
-				resizeObserver.disconnect()
+				observer.current.unobserve(firstChild)
 				ref.removeEventListener("scroll", handleThumbPosition)
 			}
 		}
