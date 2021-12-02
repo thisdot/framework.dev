@@ -21,18 +21,13 @@ export const TH = ({
 	sort,
 	onClick,
 	...props
-}: THProps & React.ComponentPropsWithoutRef<"div">) => {
+}: THProps & React.ComponentPropsWithoutRef<"th">) => {
 	let sorted = {}
 	if (sort.by === name) {
 		sorted = { "aria-sort": sort.asc ? "ascending" : "descending" }
 	}
 	return (
-		<div
-			className={classNames(cellTHStyle, className)}
-			role="columnheader"
-			{...props}
-			{...sorted}
-		>
+		<th className={classNames(cellTHStyle, className)} {...props} {...sorted}>
 			<button
 				className={classNames(cellTHButtonStyle)}
 				onClick={onClick}
@@ -40,7 +35,7 @@ export const TH = ({
 			>
 				{children}
 			</button>
-		</div>
+		</th>
 	)
 }
 
@@ -53,8 +48,8 @@ export const TD = ({
 	className,
 	role = "cell",
 	...props
-}: TDProps & React.ComponentPropsWithoutRef<"div">) => (
-	<div className={classNames(cellTDStyle, className)} role={role} {...props}>
+}: TDProps & React.ComponentPropsWithoutRef<"td">) => (
+	<td className={classNames(cellTDStyle, className)} role={role} {...props}>
 		<div className={cellContentsStyle}>{children}</div>
-	</div>
+	</td>
 )
