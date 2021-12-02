@@ -1,7 +1,7 @@
 import { style, styleVariants } from "@vanilla-extract/css"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { vars } from "../themes/themes.css"
-import { pxToRem } from "../util/style-utils"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { vars } from "../../themes/themes.css"
+import { pxToRem } from "../../util/style-utils"
 
 const base = style([
 	sprinkles({

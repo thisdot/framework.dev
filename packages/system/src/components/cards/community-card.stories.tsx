@@ -3,8 +3,8 @@ import {
 	CommunityCard as CommunityCardComponent,
 	CommunityCardProps,
 } from "./community-card"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { exampleCommunities } from "../util/example-content"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { exampleCommunities } from "../../util/example-content"
 
 export default {
 	title: "Cards/Community Card",

@@ -1,4 +1,4 @@
-import { Library } from "../models/library"
+import { Library } from "../../models/library"
 import {
 	libraryCardBadgeStyle,
 } from "./library-card.css"
@@ -6,7 +6,7 @@ import {
 	getGitHubStarsBadge,
 	getNpmDownloadsBadge,
 	getBundleSizeBadge,
-} from "../util/stats-util"
+} from "../../util/stats-util"
 import { ResourceCard, ResourceCardProps } from "./resource-card"
 
 export type LibraryCardProps = Omit<

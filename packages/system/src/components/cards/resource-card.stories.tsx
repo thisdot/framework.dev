@@ -1,11 +1,11 @@
 import { Story, Meta } from "@storybook/react"
 import { useState } from "react"
-import { AttributeDefinition } from "../models/all-categories"
+import { AttributeDefinition } from "../../models/all-categories"
 import {
 	exampleBooks,
 	exampleCourses,
 	exampleTags,
-} from "../util/example-content"
+} from "../../util/example-content"
 import {
 	ResourceCard as ResourceCardComponent,
 	ResourceCardProps,

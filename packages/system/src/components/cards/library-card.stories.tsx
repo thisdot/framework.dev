@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { exampleLibraries } from "../util/example-content"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { exampleLibraries } from "../../util/example-content"
 import {
 	LibraryCard as LibraryCardComponent,
 	LibraryCardProps,

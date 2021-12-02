@@ -1,12 +1,12 @@
 import classNames from "classnames"
 import React, { useRef, useState } from "react"
-import { AttributeDefinition } from "../models/all-categories"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { formatFieldValue } from "../util/string-utils"
-import { CardDivider } from "./card-divider"
+import { AttributeDefinition } from "../../models/all-categories"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { formatFieldValue } from "../../util/string-utils"
+import { CardDivider } from "../card-divider"
 import { CardSelector } from "./card-selector"
-import { DiscreteAttribute } from "./discrete-attribute"
-import { InfoPopup } from "./info-popup"
+import { DiscreteAttribute } from "../discrete-attribute"
+import { InfoPopup } from "../info-popup"
 import {
 	resourceCardBodyStyle,
 	resourceCardBookImageDecoration,
@@ -18,7 +18,7 @@ import {
 	resourceCardSubtitleStyle,
 	resourceCardTitleStyle,
 } from "./resource-card.css"
-import { Tag } from "./tag"
+import { Tag } from "../tag"
 
 export interface ResourceCardProps
 	extends Omit<

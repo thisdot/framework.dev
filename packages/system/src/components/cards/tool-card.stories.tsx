@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { exampleTools } from "../util/example-content"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { exampleTools } from "../../util/example-content"
 import { ToolCard as ToolCardComponent, ToolCardProps } from "./tool-card"
 
 export default {
