@@ -38,6 +38,7 @@ export default {
 	args: {
 		params,
 		availableFilters,
+		popularTags: exampleTags,
 	},
 	argTypes: {
 		onConfirm: { action: "confirm" },

@@ -21,7 +21,7 @@ import { AllCategories } from "../models/all-categories"
 
 export const exampleTags = [
 	"accessibility",
-	"state-management",
+	"state management",
 	"redux",
 ] as const
 
@@ -38,7 +38,7 @@ export const exampleCourses: Course<ExampleTag>[] = [
 		level: "advanced",
 		format: "video",
 		href: "https://www.freecodecamp.org/news/solidify-your-react-skills-by-building-15-projects/",
-		tags: ["accessibility", "state-management"],
+		tags: ["accessibility", "state management"],
 	},
 	{
 		title: "Fullstack React",
@@ -62,7 +62,7 @@ export const exampleCourses: Course<ExampleTag>[] = [
 		level: "intermediate",
 		format: "interactive",
 		href: "https://codewithmosh.com/p/mastering-react",
-		tags: ["state-management"],
+		tags: ["state management"],
 	},
 ]
 
@@ -76,7 +76,7 @@ export const exampleLibraries: Library<ExampleTag>[] = [
 		npmPackage: "redux",
 		image: logoRedux,
 		href: "https://redux.js.org/",
-		tags: ["state-management", "redux"],
+		tags: ["state management", "redux"],
 	},
 	{
 		name: "XState",
@@ -87,7 +87,7 @@ export const exampleLibraries: Library<ExampleTag>[] = [
 		npmPackage: "xstate",
 		image: logoXstate,
 		href: "https://xstate.js.org/",
-		tags: ["state-management"],
+		tags: ["state management"],
 	},
 	{
 		name: "MobX",
@@ -98,7 +98,7 @@ export const exampleLibraries: Library<ExampleTag>[] = [
 		npmPackage: "mobx",
 		image: logoMobx,
 		href: "https://redux.js.org/",
-		tags: ["state-management", "redux"],
+		tags: ["state management", "redux"],
 	},
 ]
 
@@ -191,7 +191,7 @@ export const exampleCommunities: Community<string>[] = [
 		image:
 			"https://picsum.photos/seed/ca6b8711-bda2-5f1b-8dc4-5cb48098265d/250",
 		type: "Slack Community",
-		tags: ["state-management"],
+		tags: ["state management"],
 		href: "https://bing.com",
 	},
 	{
@@ -224,7 +224,7 @@ export const exampleCodeExamples: CodeExample<ExampleTag>[] = [
 		author: "reduxjs",
 		description: "A basic counter implemented using Redux",
 		href: "https://codesandbox.io/s/un8my",
-		tags: ["redux", "state-management"],
+		tags: ["redux", "state management"],
 	},
 ]
 

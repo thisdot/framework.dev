@@ -11,12 +11,15 @@ export const chipStyle = style([
 		backgroundColor: "surface",
 		color: "onSurface",
 		paddingX: 12,
+		gap: 6,
 	}),
 	{
 		height: pxToRem(32),
 		display: "inline-grid",
+		gridAutoFlow: "column",
 		justifyContent: "center",
 		alignContent: "center",
+		alignItems: "center",
 		cursor: "pointer",
 		transition: "background 0.15s ease-in",
 		selectors: {
@@ -30,13 +33,3 @@ export const chipStyle = style([
 		},
 	},
 ])
-
-export const chipIconStyle = style({
-	fontSize: pxToRem(15),
-	width: pxToRem(18),
-	height: pxToRem(18),
-	display: "grid",
-	alignItems: "center",
-	justifyItems: "center",
-	color: vars.palette.neutral80,
-})

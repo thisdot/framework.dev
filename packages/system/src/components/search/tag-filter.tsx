@@ -1,6 +1,5 @@
 import classNames from "classnames"
-import React, { useState } from "react"
-import "@reach/combobox/styles.css"
+import React, { useMemo, useState } from "react"
 import {
 	Combobox,
 	ComboboxInput,
@@ -9,21 +8,33 @@ import {
 	ComboboxPopover,
 } from "@reach/combobox"
 import { TextInput } from "../text-input"
-import { Tag } from "../tag"
 import {
 	tagFilterBodyStyle,
+	tagFilterListboxOptionStyle,
+	tagFilterListboxStyle,
 	tagFilterSearchBodyStyle,
 	tagFilterSearchStyle,
 	tagFilterSearchTitleStyle,
 	tagFilterStyle,
 	tagFilterTitleStyle,
 } from "./tag-filter.css"
-import { formatFieldValue } from "../../util/string-utils"
+import {
+	deserializeFieldValue,
+	formatFieldValue,
+	serializeFieldValue,
+} from "../../util/string-utils"
+import { CloseIcon } from "../../icons/close-icon"
+import { Chip } from "../chip"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { Tag } from "../tag"
+import Fuse from "fuse.js"
+import { map, take } from "lodash"
 
 export interface TagFilterProps<T extends string>
 	extends React.ComponentPropsWithoutRef<"fieldset"> {
 	options: T[]
 	value: T[]
+	suggestions?: T[]
 	onUpdate: (newValue: T[]) => void
 }
 
@@ -32,18 +43,35 @@ export function TagFilter<T extends string>({
 	className,
 	onUpdate,
 	options,
+	suggestions = [],
 	value,
 	...props
 }: TagFilterProps<T>) {
 	const [tagSearch, setTagSearch] = useState("")
+	const searchIndex = useMemo(
+		() => new Fuse(options, { threshold: 0.8 }),
+		[options]
+	)
+	const searchResults = take(
+		map(searchIndex.search(tagSearch), "item").filter(
+			(o) => !value.includes(o)
+		),
+		5
+	)
 	return (
 		<fieldset className={classNames(className, tagFilterStyle)} {...props}>
 			<legend className={tagFilterTitleStyle}>Tags</legend>
 			<div className={tagFilterBodyStyle}>
 				<Combobox
-					onSelect={(selection: T) => {
+					onSelect={(selection: string) => {
 						setTagSearch("")
-						onUpdate([...value, selection])
+						const deserializedSelection = deserializeFieldValue(
+							serializeFieldValue(selection),
+							options
+						)
+						if (deserializedSelection) {
+							onUpdate([...value, deserializedSelection])
+						}
 					}}
 					aria-label="Search tags"
 				>
@@ -57,30 +85,57 @@ export function TagFilter<T extends string>({
 							setTagSearch(e.target.value)
 						}
 					/>
-					<ComboboxPopover>
+					<ComboboxPopover portal={false} className={tagFilterListboxStyle}>
 						<ComboboxList>
-							{options
-								.filter((o) => !value.includes(o))
-								.map((option) => (
-									<ComboboxOption key={option} value={option} />
-								))}
+							{searchResults.map((option, index) => (
+								<ComboboxOption
+									className={tagFilterListboxOptionStyle}
+									key={index}
+									value={formatFieldValue(option)}
+								/>
+							))}
 						</ComboboxList>
 					</ComboboxPopover>
 				</Combobox>
-				{value.length > 0 && (
+				{value.length > 0 ? (
 					<fieldset className={tagFilterSearchStyle}>
-						<legend className={tagFilterSearchTitleStyle}>Selected Tags</legend>
+						<legend className={tagFilterSearchTitleStyle}>Selected</legend>
 						<div className={tagFilterSearchBodyStyle}>
 							{value.map((tag) => (
-								<Tag
+								<Chip
 									key={tag}
 									onClick={() => onUpdate(value.filter((v) => v !== tag))}
 								>
 									{formatFieldValue(tag)}
-								</Tag>
+									<CloseIcon />
+								</Chip>
 							))}
 						</div>
+						<button
+							type="button"
+							onClick={() => onUpdate([])}
+							className={sprinkles({
+								color: "tertiary",
+								textStyle: "button",
+								paddingTop: 16,
+							})}
+						>
+							Remove all
+						</button>
 					</fieldset>
+				) : (
+					suggestions.length > 0 && (
+						<fieldset className={tagFilterSearchStyle}>
+							<legend className={tagFilterSearchTitleStyle}>Popular</legend>
+							<div className={tagFilterSearchBodyStyle}>
+								{suggestions.map((tag) => (
+									<Tag key={tag} onClick={() => onUpdate([...value, tag])}>
+										{formatFieldValue(tag)}
+									</Tag>
+								))}
+							</div>
+						</fieldset>
+					)
 				)}
 			</div>
 		</fieldset>

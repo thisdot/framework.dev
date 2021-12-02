@@ -20,7 +20,7 @@ import {
 import { SearchAutocomplete } from "./search-autocomplete"
 import { FilterIcon } from "../../icons/filter-icon"
 import { FilterSet } from "./types"
-import { uniq } from "lodash"
+import { uniq, map, sortBy, take } from "lodash"
 
 export interface SearchProps extends React.ComponentPropsWithoutRef<"section"> {
 	data: AllCategories[]
@@ -65,6 +65,7 @@ export function Search({
 		() => calculateAvailableFilters(data, preFilters),
 		[data, preFilters]
 	)
+	const popularTags = useMemo(() => calculatePopularTags(data), [data])
 	const queryParams = parseQueryString(query, availableFilters)
 	return (
 		<section className={classNames(className, searchStyle)} {...props}>
@@ -99,6 +100,7 @@ export function Search({
 							setQuery(serializeQueryParams(newParams))
 							setFilterMenuOpen(false)
 						}}
+						popularTags={popularTags}
 					/>
 				</SideDialog>
 			</div>
@@ -153,4 +155,16 @@ export function Search({
 			(includedCategory) => includedCategory === category.name
 		)
 	}
+}
+
+function calculatePopularTags(data: AllCategories[]): string[] {
+	const tags = new Map<string, number>()
+	for (const category of data) {
+		for (const record of category.data) {
+			for (const tag of record.tags) {
+				tags.set(tag, tags.get(tag) ?? 0 + 1)
+			}
+		}
+	}
+	return map(take(sortBy(Array.from(tags.entries()), [1]), 5), 0)
 }

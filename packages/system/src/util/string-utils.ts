@@ -1,10 +1,10 @@
 import { camelCase, kebabCase, startCase } from "lodash"
 import { titleCase } from "title-case"
 
-export function deserializeFieldValue(
+export function deserializeFieldValue<T extends string>(
 	inputValue: string,
-	canonicalForms: readonly string[]
-): string | undefined {
+	canonicalForms: readonly T[]
+): T | undefined {
 	return canonicalForms.find((form) => kebabCase(form) === inputValue)
 }
 
