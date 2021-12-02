@@ -187,12 +187,14 @@ export const HorizontalScrollbar = ({
 					<button
 						className={horizontalScrollbarButtonStyle}
 						onClick={() => handleScrollButton("left")}
+						aria-roledescription="scroll left"
 					>
 						<ChevronIcon className={horizontalScrollbarButtonIconStyle} />
 					</button>
 					<button
 						className={horizontalScrollbarButtonStyle}
 						onClick={() => handleScrollButton("right")}
+						aria-roledescription="scroll right"
 					>
 						<ChevronIcon
 							flipped={true}
