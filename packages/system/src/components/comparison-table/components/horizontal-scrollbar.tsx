@@ -37,23 +37,29 @@ export const HorizontalScrollbar = ({
 		}
 	}
 
-	const handleTrackClick = useCallback((e) => {
-		e.preventDefault()
-		e.stopPropagation()
-		const { current: trackCurrent } = scrollTrackRef
-		const { current: contentCurrent } = scrollSectionRef
-		if (trackCurrent && contentCurrent) {
-			const { clientX } = e
-			const target = e.target as HTMLDivElement
-			const rect = target.getBoundingClientRect()
-			const clickRatio = (clientX - rect.left) / trackCurrent.clientWidth
-			const scrollAmount = Math.floor(clickRatio * contentCurrent.scrollWidth)
-			contentCurrent.scrollTo({
-				left: scrollAmount,
-				behavior: "smooth",
-			})
-		}
-	}, [])
+	const handleTrackClick = useCallback(
+		(e) => {
+			e.preventDefault()
+			e.stopPropagation()
+			const { current: trackCurrent } = scrollTrackRef
+			const { current: contentCurrent } = scrollSectionRef
+			if (trackCurrent && contentCurrent) {
+				const { clientX } = e
+				const target = e.target as HTMLDivElement
+				const rect = target.getBoundingClientRect()
+				const thumbOffset = -(thumbWidth / 2)
+				const clickRatio =
+					(clientX - rect.left + thumbOffset) / trackCurrent.clientWidth
+				const scrollAmount = Math.floor(clickRatio * contentCurrent.scrollWidth)
+				console.log(clickRatio, thumbOffset, scrollAmount)
+				contentCurrent.scrollTo({
+					left: scrollAmount,
+					behavior: "smooth",
+				})
+			}
+		},
+		[thumbWidth]
+	)
 
 	const handleThumbPosition = useCallback(() => {
 		if (!scrollSectionRef.current || !scrollTrackRef.current) {
