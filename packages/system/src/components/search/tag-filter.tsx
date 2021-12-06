@@ -38,7 +38,7 @@ export function TagFilter<T extends string>({
 	const [tagSearch, setTagSearch] = useState("")
 	return (
 		<fieldset className={classNames(className, tagFilterStyle)} {...props}>
-			<legend className={tagFilterTitleStyle}>Tags filtering</legend>
+			<legend className={tagFilterTitleStyle}>Tags</legend>
 			<div className={tagFilterBodyStyle}>
 				<Combobox
 					onSelect={(selection: T) => {

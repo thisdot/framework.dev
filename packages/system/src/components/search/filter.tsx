@@ -1,25 +1,27 @@
 import classNames from "classnames"
 import React from "react"
-import { startCase } from "lodash"
 import {
 	filterCheckboxesStyle,
 	filterStyle,
 	filterTitleStyle,
 } from "./filter.css"
-import { Checkbox } from "../checkbox"
+import { FieldFilter } from "../../models/all-categories"
+import { ChipSelector } from "../chip-selector"
+import { DiscreteAttribute } from "../discrete-attribute"
+import { ungroupFieldFilter } from "./query-util"
+import { without } from "lodash"
+import { formatFieldName } from "../../util/string-utils"
 
-export interface FilterProps<T extends string>
+export interface FilterProps<T extends FieldFilter = FieldFilter>
 	extends React.ComponentPropsWithoutRef<"fieldset"> {
-	name: string
-	options: readonly T[]
-	value: readonly T[]
-	onUpdate: (newValue: T[]) => void
+	options: T
+	value: T
+	onUpdate: (newValue: T) => void
 }
 
-export function Filter<T extends string>({
+export function Filter<T extends FieldFilter>({
 	children,
 	className,
-	name,
 	options,
 	value,
 	onUpdate,
@@ -27,19 +29,23 @@ export function Filter<T extends string>({
 }: FilterProps<T>) {
 	return (
 		<fieldset className={classNames(className, filterStyle)} {...props}>
-			<legend className={filterTitleStyle}>{name}</legend>
+			<legend className={filterTitleStyle}>
+				{formatFieldName(options[0])}
+			</legend>
 			<div className={filterCheckboxesStyle}>
-				{options.map((option) => {
-					const otherValues = value.filter((v) => v !== option)
+				{ungroupFieldFilter(options).map((option) => {
 					return (
-						<Checkbox
-							key={option}
-							label={startCase(option)}
-							checked={value.includes(option)}
+						<ChipSelector
+							key={option[1]}
+							label={<DiscreteAttribute attribute={option} />}
+							checked={value[1].some((value) => option[1] === value)}
 							onChange={(e) =>
-								onUpdate(
-									e.target.checked ? [...otherValues, option] : otherValues
-								)
+								onUpdate([
+									value[0],
+									e.target.checked
+										? [option[1], ...without(value[1], option[1])]
+										: without(value[1], option[1]),
+								] as unknown as T)
 							}
 						/>
 					)

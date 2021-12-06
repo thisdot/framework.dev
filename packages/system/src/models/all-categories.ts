@@ -10,7 +10,6 @@ import { Company, companyIndexMetadata } from "./company"
 import { Course, courseIndexMetadata } from "./course"
 import { Library, libraryIndexMetadata } from "./library"
 import { Podcast, podcastIndexMetadata } from "./podcast"
-import { SearchableCategory } from "./search"
 import { Tool, toolIndexMetadata } from "./tool"
 
 export const allCategoriesMetadata = {
@@ -44,10 +43,18 @@ export type AllModelsByName = {
 	[toolIndexMetadata.name]: Tool<string>
 }
 
+export type Model<K extends keyof AllModelsByName> = AllModelsByName[K]
+
 export type AllModels = AllModelsByName[keyof AllModelsByName]
 
 export type AllCategoriesByName = {
-	[K in keyof AllModelsByName]: SearchableCategory<AllModelsByName[K], K>
+	[K in keyof AllModelsByName]: {
+		name: K
+		indexMetadata: CategoryMetadata<K>
+		tags: readonly string[]
+		subCategories?: readonly string[]
+		data: Model<K>[]
+	}
 }
 
 export type AllCategories = AllCategoriesByName[keyof AllCategoriesByName]
@@ -68,6 +75,20 @@ type AllFilterableFields<M = CategoryMetadata<CategoryName>> =
 		  }
 		: never
 
-export type AttributeDefinition = RecordElement<
-	UnionToIntersection<AllFilterableFields>
+export type AttributeDefinition = Readonly<
+	RecordElement<UnionToIntersection<AllFilterableFields>>
+>
+
+type AllFieldFilters<M = CategoryMetadata<CategoryName>> =
+	M extends CategoryMetadata<CategoryName>
+		? {
+				[FieldName in keyof M["filterableFields"]]: [
+					FieldName,
+					Readonly<ArrayElement<M["filterableFields"][FieldName]>[]>
+				]
+		  }
+		: never
+
+export type FieldFilter = Readonly<
+	RecordElement<UnionToIntersection<AllFieldFilters>>
 >

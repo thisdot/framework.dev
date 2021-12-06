@@ -4,8 +4,8 @@ import { sprinkles } from "../sprinkles/sprinkles.css"
 import { chipSelectorStyle, chipSelectorIconStyle } from "./chip-selector.css"
 
 export interface ChipSelectorProps
-	extends React.ComponentPropsWithoutRef<"div"> {
-	label: string
+	extends React.ComponentPropsWithoutRef<"input"> {
+	label: React.ReactNode
 }
 
 export function ChipSelector({

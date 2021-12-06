@@ -17,7 +17,6 @@ export const chipSelectorStyle = style([
 		display: "inline-flex",
 		flexDirection: "row",
 		alignItems: "center",
-		gap: 6,
 		cursor: "pointer",
 		transition: "background 0.15s ease-in",
 		selectors: {
@@ -36,25 +35,19 @@ export const chipSelectorStyle = style([
 ])
 
 export const chipSelectorIconStyle = style({
-	height: pxToRem(10.5),
-	width: pxToRem(10.5),
 	overflow: "hidden",
 	display: "grid",
 	alignItems: "center",
 	justifyItems: "center",
 	selectors: {
-		"&:after": {
-			content: '""',
-			clipPath: "polygon(10% 0, 0 10%, 40% 50%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%)",
-			height: pxToRem(10.5),
-			width: pxToRem(10.5),
-			backgroundColor: "currentcolor",
-			transform: "rotate(45deg) scale(1)",
-			transition: "transform 0.15s ease-in-out",
-		},
 		"input:checked + label > &:after": {
-			transform: "rotate(0deg) scale(1)",
-		}
-	}
-	
+			content: '""',
+			clipPath:
+				"polygon(37.5% 67.4%, 20.1% 50.0%, 14.2% 55.9%, 37.5% 79.2%, 87.5% 29.2%, 81.6% 23.3%, 37.5% 67.4%)",
+			marginLeft: pxToRem(6),
+			height: pxToRem(18),
+			width: pxToRem(18),
+			backgroundColor: "currentcolor",
+		},
+	},
 })

@@ -5,4 +5,5 @@ import { pxToRem } from "../util/style-utils"
 export const cardDividerStyle = style({
 	backgroundColor: vars.palette.neutral95,
 	height: pxToRem(1),
+	flexShrink: 0,
 })
