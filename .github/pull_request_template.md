@@ -1,10 +1,10 @@
 ## Type of change
 
-<!-- Add and x to the categories that apply -->
+<!-- Add an x to the categories that apply -->
 
 - [ ] Content addition
 - [ ] Bug fix
-- [ ] Behaviour change
+- [ ] Behavior change
 
 ## Summary of change
 

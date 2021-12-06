@@ -16,7 +16,7 @@ Contents
 
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-- Search [GitHub](https://github.com/thisdot/open-source/pulls) for an open or
+- Search [GitHub](https://github.com/thisdot/framework.dev/pulls) for an open or
   closed PR that relates to your submission. Help us reduce redundancies.
 - Make your changes in your forked repository as a new git branch:
 
@@ -111,9 +111,6 @@ be updated as the team decides on new standards.
 
 - **Formatting** – Please follow the conventions as outlined in our prettier
   configuration and eslint settings.
-- **Style Guides** – We're following the standard
-  [Angular Style Guide](https://angular.io/guide/styleguide). Any deviation from
-  the style guide is an error.
 - **Developer Testing** – Developers are responsible for thoroughly testing
   their code prior to putting it up for review. It is NOT the responsibility of
   the code reviewer to execute the code and test it (though the reviewer might
