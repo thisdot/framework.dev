@@ -3,21 +3,21 @@ import classNames from "classnames"
 import React from "react"
 import { startCase } from "lodash"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { BookCard } from "../book-card"
+import { BookCard } from "../cards/book-card"
 import { Book } from "../../models/book"
-import { CodeExampleCard } from "../code-example-card"
+import { CodeExampleCard } from "../cards/code-example-card"
 import { CodeExample } from "../../models/code-example"
-import { CommunityCard } from "../community-card"
+import { CommunityCard } from "../cards/community-card"
 import { Community } from "../../models/community"
-import { CompanyCard } from "../company-card"
+import { CompanyCard } from "../cards/company-card"
 import { Company } from "../../models/company"
-import { CourseCard } from "../course-card"
+import { CourseCard } from "../cards/course-card"
 import { Course } from "../../models/course"
-import { LibraryCard } from "../library-card"
+import { LibraryCard } from "../cards/library-card"
 import { Library } from "../../models/library"
-import { PodcastCard } from "../podcast-card"
+import { PodcastCard } from "../cards/podcast-card"
 import { Podcast } from "../../models/podcast"
-import { ToolCard } from "../tool-card"
+import { ToolCard } from "../cards/tool-card"
 import { Tool } from "../../models/tool"
 import { Counter } from "../counter"
 import { AllModelsByName, CategoryName } from "../../models/all-categories"
@@ -28,6 +28,7 @@ export type ResultsCategoryProps<T extends CategoryName> =
 		category: T
 		searchResults: AllModelsByName[T][]
 		variant: "withHeading" | "bare"
+		onTagClick: (tag: string) => void
 	}
 
 export function ResultsCategory<T extends CategoryName>({
@@ -35,6 +36,7 @@ export function ResultsCategory<T extends CategoryName>({
 	searchResults: results,
 	variant,
 	className,
+	onTagClick,
 	...props
 }: ResultsCategoryProps<T>) {
 	if (results.length === 0) return null
@@ -56,7 +58,7 @@ export function ResultsCategory<T extends CategoryName>({
 					)}
 					{...props}
 				>
-					{results.map(renderCard(category))}
+					{results.map(renderCard(category, onTagClick))}
 				</div>
 			)
 		case "withHeading":
@@ -98,7 +100,7 @@ export function ResultsCategory<T extends CategoryName>({
 							justifyContent: "flex-start",
 						})}
 					>
-						{results.map(renderCard(category))}
+						{results.map(renderCard(category, onTagClick))}
 					</div>
 				</div>
 			)
@@ -112,39 +114,82 @@ type RenderCardFn<T extends CategoryName> = (
 	index: number
 ) => JSX.Element
 
-function renderCard<T extends CategoryName>(category: T): RenderCardFn<T> {
+function renderCard<T extends CategoryName>(
+	category: T,
+	onTagClick: (tag: string) => void
+): RenderCardFn<T> {
 	switch (category) {
 		case "books":
 			return ((record: Book<string>, index: number) => (
-				<BookCard key={index} book={record} headingTag="h3" />
+				<BookCard
+					key={index}
+					book={record}
+					headingTag="h3"
+					onTagClick={onTagClick}
+				/>
 			)) as RenderCardFn<T>
 		case "codeExamples":
 			return ((record: CodeExample<string>, index: number) => (
-				<CodeExampleCard key={index} codeExample={record} headingTag="h3" />
+				<CodeExampleCard
+					key={index}
+					codeExample={record}
+					headingTag="h3"
+					onTagClick={onTagClick}
+				/>
 			)) as RenderCardFn<T>
 		case "communities":
 			return ((record: Community<string>, index: number) => (
-				<CommunityCard key={index} community={record} headingTag="h3" />
+				<CommunityCard
+					key={index}
+					community={record}
+					headingTag="h3"
+					onTagClick={onTagClick}
+				/>
 			)) as RenderCardFn<T>
 		case "companies":
 			return ((record: Company<string>, index: number) => (
-				<CompanyCard key={index} company={record} headingTag="h3" />
+				<CompanyCard
+					key={index}
+					company={record}
+					headingTag="h3"
+					onTagClick={onTagClick}
+				/>
 			)) as RenderCardFn<T>
 		case "courses":
 			return ((record: Course<string>, index: number) => (
-				<CourseCard key={index} course={record} headingTag="h3" />
+				<CourseCard
+					key={index}
+					course={record}
+					headingTag="h3"
+					onTagClick={onTagClick}
+				/>
 			)) as RenderCardFn<T>
 		case "libraries":
 			return ((record: Library<string>, index: number) => (
-				<LibraryCard key={index} library={record} headingTag="h3" />
+				<LibraryCard
+					key={index}
+					library={record}
+					headingTag="h3"
+					onTagClick={onTagClick}
+				/>
 			)) as RenderCardFn<T>
 		case "podcasts":
 			return ((record: Podcast<string>, index: number) => (
-				<PodcastCard key={index} podcast={record} headingTag="h3" />
+				<PodcastCard
+					key={index}
+					podcast={record}
+					headingTag="h3"
+					onTagClick={onTagClick}
+				/>
 			)) as RenderCardFn<T>
 		case "tools":
 			return ((record: Tool<string>, index: number) => (
-				<ToolCard key={index} tool={record} headingTag="h3" />
+				<ToolCard
+					key={index}
+					tool={record}
+					headingTag="h3"
+					onTagClick={onTagClick}
+				/>
 			)) as RenderCardFn<T>
 		default:
 			return assertNever(category)

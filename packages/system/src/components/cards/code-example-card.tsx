@@ -1,4 +1,4 @@
-import { CodeExample } from "../models/code-example"
+import { CodeExample } from "../../models/code-example"
 import { ResourceCardProps, ResourceCard } from "./resource-card"
 
 export type CodeExampleCardProps = Omit<

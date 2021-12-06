@@ -1,4 +1,4 @@
-import { Tool } from "../models/tool"
+import { Tool } from "../../models/tool"
 import { ResourceCard, ResourceCardProps } from "./resource-card"
 
 export type ToolCardProps = Omit<

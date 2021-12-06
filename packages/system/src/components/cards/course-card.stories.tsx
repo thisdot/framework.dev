@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { exampleCourses } from "../util/example-content"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { exampleCourses } from "../../util/example-content"
 import {
 	CourseCard as CourseCardComponent,
 	CourseCardProps,
@@ -11,6 +11,11 @@ export default {
 	component: CourseCardComponent,
 	args: {
 		headingTag: "h1",
+	},
+	argTypes: {
+		onTagClick: {
+			action: "onTagClick",
+		},
 	},
 } as Meta
 

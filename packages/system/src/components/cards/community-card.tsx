@@ -1,4 +1,4 @@
-import { Community } from "../models/community"
+import { Community } from "../../models/community"
 import { ResourceCard, ResourceCardProps } from "./resource-card"
 
 export type CommunityCardProps = Omit<

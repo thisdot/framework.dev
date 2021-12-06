@@ -5,7 +5,7 @@ import {
 } from "./card-selector"
 
 export default {
-	title: "Card Selector",
+	title: "Cards/Card Selector",
 	component: CardSelectorComponent,
 	args: {
 		checked: false,

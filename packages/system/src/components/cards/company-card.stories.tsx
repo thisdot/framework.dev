@@ -3,14 +3,19 @@ import {
 	CompanyCard as CompanyCardComponent,
 	CompanyCardProps,
 } from "./company-card"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { exampleCompanies } from "../util/example-content"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { exampleCompanies } from "../../util/example-content"
 
 export default {
 	title: "Cards/Company Card",
 	component: CompanyCardComponent,
 	args: {
 		headingTag: "h1",
+	},
+	argTypes: {
+		onTagClick: {
+			action: "onTagClick",
+		},
 	},
 } as Meta
 

@@ -1,10 +1,10 @@
 import { useId } from "@reach/auto-id"
 import React from "react"
-import { SelectIcon } from "../icons/select-icon"
-import { UnselectIcon } from "../icons/unselect-icon"
-import { sprinkles } from "../sprinkles/sprinkles.css"
+import { SelectIcon } from "../../icons/select-icon"
+import { UnselectIcon } from "../../icons/unselect-icon"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { cardSelectorLabelStyle } from "./card-selector.css"
-import { Tooltip } from "./tooltip"
+import { Tooltip } from "../tooltip"
 
 export interface CardSelectorProps
 	extends React.ComponentPropsWithoutRef<"input"> {}

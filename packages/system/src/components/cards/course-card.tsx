@@ -1,4 +1,4 @@
-import { Course } from "../models/course"
+import { Course } from "../../models/course"
 import { ResourceCard, ResourceCardProps } from "./resource-card"
 
 export type CourseCardProps = Omit<

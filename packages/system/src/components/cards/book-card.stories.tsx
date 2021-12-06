@@ -1,13 +1,18 @@
 import { Story, Meta } from "@storybook/react"
-import { sprinkles } from "../sprinkles/sprinkles.css"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { BookCard as BookCardComponent, BookCardProps } from "./book-card"
-import { exampleBooks } from "../util/example-content"
+import { exampleBooks } from "../../util/example-content"
 
 export default {
 	title: "Cards/Book Card",
 	component: BookCardComponent,
 	args: {
 		headingTag: "h1",
+	},
+	argTypes: {
+		onTagClick: {
+			action: "onTagClick",
+		},
 	},
 } as Meta
 

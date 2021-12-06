@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { examplePodcasts } from "../util/example-content"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { examplePodcasts } from "../../util/example-content"
 import {
 	PodcastCard as PodcastCardComponent,
 	PodcastCardProps,
@@ -11,6 +11,11 @@ export default {
 	component: PodcastCardComponent,
 	args: {
 		headingTag: "h1",
+	},
+	argTypes: {
+		onTagClick: {
+			action: "onTagClick",
+		},
 	},
 } as Meta
 

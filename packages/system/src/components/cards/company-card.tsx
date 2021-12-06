@@ -1,4 +1,4 @@
-import { Company } from "../models/company"
+import { Company } from "../../models/company"
 import { ResourceCard, ResourceCardProps } from "./resource-card"
 
 export type CompanyCardProps = Omit<

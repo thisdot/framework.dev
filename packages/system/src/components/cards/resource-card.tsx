@@ -1,12 +1,12 @@
 import classNames from "classnames"
 import React, { useRef, useState } from "react"
-import { AttributeDefinition } from "../models/all-categories"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { formatFieldValue } from "../util/string-utils"
-import { CardDivider } from "./card-divider"
+import { AttributeDefinition } from "../../models/all-categories"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { formatFieldValue } from "../../util/string-utils"
+import { CardDivider } from "../card-divider"
 import { CardSelector } from "./card-selector"
-import { DiscreteAttribute } from "./discrete-attribute"
-import { InfoPopup } from "./info-popup"
+import { DiscreteAttribute } from "../discrete-attribute"
+import { InfoPopup } from "../info-popup"
 import {
 	resourceCardBodyStyle,
 	resourceCardBookImageDecoration,
@@ -18,7 +18,7 @@ import {
 	resourceCardSubtitleStyle,
 	resourceCardTitleStyle,
 } from "./resource-card.css"
-import { Tag } from "./tag"
+import { Tag } from "../tag"
 
 export interface ResourceCardProps
 	extends Omit<
@@ -37,6 +37,7 @@ export interface ResourceCardProps
 	tags: string[]
 	selected?: boolean
 	onSelect?: (selected: boolean) => void
+	onTagClick: (tag: string) => void
 }
 
 export function ResourceCard({
@@ -54,6 +55,7 @@ export function ResourceCard({
 	selected = false,
 	onSelect,
 	badges,
+	onTagClick,
 	...props
 }: ResourceCardProps) {
 	const maxTags = maxTagsByLayout[layout]
@@ -125,7 +127,9 @@ export function ResourceCard({
 				)}
 				<div className={sprinkles({ paddingTop: 12, layout: "row", gap: 4 })}>
 					{visibleTags.map((tag) => (
-						<Tag key={tag}>{formatFieldValue(tag)}</Tag>
+						<Tag key={tag} onClick={() => onTagClick(tag)}>
+							{formatFieldValue(tag)}
+						</Tag>
 					))}
 					{tagsInPopup.length > 0 && (
 						<Tag onClick={() => setPopupOpen(true)} ref={popupButtonRef}>
@@ -145,7 +149,9 @@ export function ResourceCard({
 							})}
 						>
 							{tagsInPopup.map((tag) => (
-								<Tag key={tag}>{formatFieldValue(tag)}</Tag>
+								<Tag key={tag} onClick={() => onTagClick(tag)}>
+									{formatFieldValue(tag)}
+								</Tag>
 							))}
 						</div>
 					</InfoPopup>
