@@ -4,6 +4,7 @@ import {
 	horizontalScrollbarContainerStyle,
 	horizontalScrollbarContentStyle,
 	horizontalScrollbarSectionStyle,
+	horizontalScrollbarTrackAndThumbStyle,
 	horizontalScrollbarTrackStyle,
 	horizontalScrollbarThumbStyle,
 	horizontalScrollbarButtonContainerStyle,
@@ -17,11 +18,11 @@ export const HorizontalScrollbar = ({
 	className,
 	...props
 }: React.ComponentPropsWithoutRef<"div">) => {
-	const scrollSectionRef = useRef<HTMLDivElement>(null)
+	const scrollContentRef = useRef<HTMLDivElement>(null)
 	const scrollTrackRef = useRef<HTMLDivElement>(null)
+	const scrollThumbRef = useRef<HTMLDivElement>(null)
 	const observer = useRef<ResizeObserver>(null)
 	const [thumbWidth, setThumbWidth] = useState(20)
-	const [thumbLeft, setThumbLeft] = useState(0)
 	const [lastScrollPosition, setLastScrollPosition] = useState(0)
 	const [isDragging, setIsDragging] = useState(false)
 
@@ -31,7 +32,7 @@ export const HorizontalScrollbar = ({
 	}
 
 	function handleScrollButton(direction: "left" | "right") {
-		const { current } = scrollSectionRef
+		const { current } = scrollContentRef
 		if (current) {
 			const scrollAmount = direction === "right" ? 200 : -200
 			current.scrollBy({ left: scrollAmount, behavior: "smooth" })
@@ -43,7 +44,7 @@ export const HorizontalScrollbar = ({
 			e.preventDefault()
 			e.stopPropagation()
 			const { current: trackCurrent } = scrollTrackRef
-			const { current: contentCurrent } = scrollSectionRef
+			const { current: contentCurrent } = scrollContentRef
 			if (trackCurrent && contentCurrent) {
 				const { clientX } = e
 				const target = e.target as HTMLDivElement
@@ -63,15 +64,19 @@ export const HorizontalScrollbar = ({
 	)
 
 	const handleThumbPosition = useCallback(() => {
-		if (!scrollSectionRef.current || !scrollTrackRef.current) {
+		if (
+			!scrollContentRef.current ||
+			!scrollTrackRef.current ||
+			!scrollThumbRef.current
+		) {
 			return
 		}
-		const { current } = scrollSectionRef
+		const { scrollLeft, scrollWidth } = scrollContentRef.current
 		const trackWidth = scrollTrackRef.current.clientWidth
-		const { scrollLeft, scrollWidth } = current
 		let newLeft = (+scrollLeft / +scrollWidth) * trackWidth
 		newLeft = Math.min(newLeft, trackWidth - thumbWidth)
-		setThumbLeft(newLeft)
+		const thumb = scrollThumbRef.current
+		thumb.style.left = newLeft.toString() + "px"
 	}, [])
 
 	const handleThumbMousedown = useCallback((e) => {
@@ -83,8 +88,9 @@ export const HorizontalScrollbar = ({
 
 	const handleThumbMouseup = useCallback(
 		(e) => {
+			e.preventDefault()
+			e.stopPropagation()
 			if (isDragging) {
-				e.preventDefault()
 				setIsDragging(false)
 			}
 		},
@@ -97,33 +103,27 @@ export const HorizontalScrollbar = ({
 				e.preventDefault()
 				e.stopPropagation()
 				const {
-					scrollWidth: sectionScrollWidth,
-					offsetWidth: sectionOffsetWidth,
-				} = scrollSectionRef.current
-				const { offsetWidth: trackOffsetWidth } = scrollTrackRef.current
+					scrollWidth: contentScrollWidth,
+					offsetWidth: contentOffsetWidth,
+				} = scrollContentRef.current
 
-				const deltaX = e.clientX - lastScrollPosition
+				const deltaX =
+					(e.clientX - lastScrollPosition) * (contentOffsetWidth / thumbWidth)
 
+				handleThumbPosition()
+				scrollContentRef.current.scrollLeft = Math.min(
+					scrollContentRef.current.scrollLeft + deltaX,
+					contentScrollWidth - contentOffsetWidth
+				)
 				setLastScrollPosition(e.clientX)
-				setThumbLeft(
-					Math.min(
-						Math.max(0, thumbLeft + deltaX),
-						trackOffsetWidth - thumbWidth
-					)
-				)
-				scrollSectionRef.current.scrollLeft = Math.min(
-					scrollSectionRef.current.scrollLeft +
-						deltaX * (sectionScrollWidth / sectionOffsetWidth),
-					sectionScrollWidth - sectionOffsetWidth
-				)
 			}
 		},
-		[isDragging, lastScrollPosition, thumbLeft, thumbWidth]
+		[isDragging, lastScrollPosition, thumbWidth]
 	)
 
 	useEffect(() => {
-		if (scrollSectionRef.current && scrollTrackRef.current) {
-			const ref = scrollSectionRef.current
+		if (scrollContentRef.current && scrollTrackRef.current) {
+			const ref = scrollContentRef.current
 			const track = scrollTrackRef.current
 			observer.current = new ResizeObserver(() => {
 				handleResize(ref, track.clientWidth)
@@ -153,23 +153,24 @@ export const HorizontalScrollbar = ({
 		<div className={classNames(className, horizontalScrollbarContainerStyle)}>
 			<div
 				className={horizontalScrollbarContentStyle}
-				ref={scrollSectionRef}
+				ref={scrollContentRef}
 				{...props}
 			>
 				{children}
 			</div>
 			<div className={horizontalScrollbarSectionStyle}>
-				<div
-					className={horizontalScrollbarTrackStyle}
-					ref={scrollTrackRef}
-					onClick={handleTrackClick}
-				>
+				<div className={horizontalScrollbarTrackAndThumbStyle}>
+					<div
+						className={horizontalScrollbarTrackStyle}
+						ref={scrollTrackRef}
+						onClick={handleTrackClick}
+					></div>
 					<div
 						className={horizontalScrollbarThumbStyle}
 						onMouseDown={handleThumbMousedown}
+						ref={scrollThumbRef}
 						style={{
 							width: `${thumbWidth}px`,
-							left: `${thumbLeft}px`,
 							cursor: isDragging ? "grabbing" : "grab",
 						}}
 					></div>

@@ -42,6 +42,13 @@ export const horizontalScrollbarSectionStyle = style([
 	},
 ])
 
+export const horizontalScrollbarTrackAndThumbStyle = style({
+	display: "block",
+	height: pxToRem(36),
+	position: "relative",
+	width: "100%",
+})
+
 export const horizontalScrollbarTrackStyle = style([
 	sprinkles({
 		borderRadius: 12,
@@ -50,7 +57,9 @@ export const horizontalScrollbarTrackStyle = style([
 		backgroundImage: `linear-gradient(${vars.themeColors.onPrimary} 16px, ${vars.themeColors.tertiaryBorder} 16px, ${vars.themeColors.tertiaryBorder} 20px, ${vars.themeColors.onPrimary} 20px)`,
 		cursor: "pointer",
 		height: pxToRem(36),
-		position: "relative",
+		left: 0,
+		position: "absolute",
+		right: 0,
 		width: "100%",
 	},
 ])
