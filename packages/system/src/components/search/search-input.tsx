@@ -9,6 +9,7 @@ import {
 	searchInputInputStyle,
 	searchInputLabelStyle,
 	searchInputResetButtonStyle,
+	searchInputStaticPrefixStyle,
 } from "./search-input.css"
 import { SearchIcon } from "../../icons/search-icon"
 import { CloseIcon } from "../../icons/close-icon"
@@ -39,7 +40,7 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
 			<div className={classNames(className, searchInputContainerStyle)}>
 				<div className={searchInputBoxStyle}>
 					<SearchIcon className={searchInputIconStyle} />
-					<div className={sprinkles({ color: "softText" })}>{staticPrefix}</div>
+					<div className={searchInputStaticPrefixStyle}>{staticPrefix}</div>
 					<input
 						type="search"
 						id={id}

@@ -13,7 +13,8 @@ export const filterMenuStyle = style([
 export const filterMenuFooterStyle = sprinkles({
 	layout: "row",
 	justifyContent: "flex-end",
-	padding: 16,
+	paddingY: { mobile: 8, desktop: 16 },
+	paddingX: 16,
 	gap: 8,
 	backgroundColor: "surface",
 	borderTop: "thin",

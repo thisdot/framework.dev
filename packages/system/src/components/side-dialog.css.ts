@@ -68,7 +68,7 @@ export const dialogContentStyle = recipe({
 			transitionDuration: "200ms",
 			position: "fixed",
 			top: 0,
-			width: "240px",
+			width: "304px",
 			height: "100%",
 			"@media": {
 				[breakpoints.tablet]: {

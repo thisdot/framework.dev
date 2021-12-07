@@ -59,7 +59,11 @@ export function ResultsCategory<T extends CategoryName>({
 		case "bare":
 			return (
 				<div
-					className={classNames(className, layout, sprinkles({ padding: 24 }))}
+					className={classNames(
+						className,
+						layout,
+						sprinkles({ padding: { mobile: 0, desktop: 24 } })
+					)}
 					{...props}
 				>
 					{results.map(

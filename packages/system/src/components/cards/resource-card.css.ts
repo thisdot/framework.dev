@@ -1,5 +1,5 @@
 import { style, styleVariants } from "@vanilla-extract/css"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { breakpoints, sprinkles } from "../../sprinkles/sprinkles.css"
 import { vars } from "../../themes/themes.css"
 import { pxToRem } from "../../util/style-utils"
 
@@ -8,9 +8,9 @@ const base = style([
 		backgroundColor: "white",
 		border: "thin",
 		borderRadius: 12,
-		layout: "stack",
 	}),
 	{
+		display: "grid",
 		padding: pxToRem(15),
 		selectors: {
 			"&:not(:hover)": {
@@ -25,13 +25,41 @@ const base = style([
 	},
 ])
 const titleFirst = style([
+	sprinkles({ columnGap: 12, rowGap: { mobile: 8, desktop: 12 } }),
 	{
-		width: pxToRem(340),
+		minWidth: pxToRem(340),
+		gridTemplateAreas: `
+		"image header"
+		"body body"
+		"footer footer"
+		`,
+		gridTemplateColumns: "min-content 1fr",
+		gridTemplateRows: "auto 1fr auto",
 	},
 ])
 const imageFirst = style([
+	sprinkles({ columnGap: 16, rowGap: { mobile: 8, desktop: 12 } }),
 	{
-		width: pxToRem(250),
+		gridTemplateAreas: `
+		"image header"
+		"image body"
+		"image footer"
+		`,
+		gridTemplateColumns: `${pxToRem(112)} 1fr`,
+		gridTemplateRows: "auto 1fr auto",
+		minWidth: pxToRem(250),
+		"@media": {
+			[breakpoints.desktop]: {
+				gridTemplateColumns: "1fr",
+				gridTemplateRows: "auto auto 1fr auto",
+				gridTemplateAreas: `
+				"image"
+				"header"
+				"body"
+				"footer"
+				`,
+			},
+		},
 	},
 ])
 export const resourceCardStyle = styleVariants({
@@ -39,22 +67,20 @@ export const resourceCardStyle = styleVariants({
 	imageFirst: [base, imageFirst],
 })
 
-export const resourceCardHeaderStyle = style([
-	sprinkles({ paddingBottom: 12 }),
-	{
-		display: "flex",
-		selectors: {
-			[`${titleFirst} &`]: {
-				flexDirection: "row",
-				gap: pxToRem(12),
-			},
-			[`${imageFirst} &`]: {
-				flexDirection: "column",
-				gap: pxToRem(16),
-			},
+export const resourceCardHeaderStyle = style({
+	display: "flex",
+	gridArea: "header",
+	selectors: {
+		[`${titleFirst} &`]: {
+			flexDirection: "row",
+			gap: pxToRem(12),
+		},
+		[`${imageFirst} &`]: {
+			flexDirection: "column",
+			gap: pxToRem(16),
 		},
 	},
-])
+})
 
 export const resourceCardTitleContainerStyle = style([
 	sprinkles({ layout: "stack", gap: 4 }),
@@ -66,24 +92,30 @@ export const resourceCardTitleContainerStyle = style([
 export const resourceCardImageContainerStyle = style([
 	sprinkles({ borderRadius: 8 }),
 	{
+		gridArea: "image",
 		overflow: "hidden",
 		display: "grid",
-		alignItems: "center",
+		alignItems: "start",
 		justifyItems: "center",
-		flexShrink: 0,
 		selectors: {
 			[`${titleFirst} &`]: {
 				width: pxToRem(40),
 				height: pxToRem(40),
 				border: "1px solid rgba(0, 0, 0, 0.04)",
+				alignItems: "center",
 			},
 			[`${imageFirst} &`]: {
 				minHeight: pxToRem(144),
-				backgroundColor: vars.palette.neutral95,
 			},
 		},
 	},
 ])
+
+export const bookImageContainerStyle = style({
+	backgroundColor: vars.palette.neutral95,
+	alignItems: "center",
+})
+
 export const resourceCardBookImageDecoration = style({
 	height: pxToRem(120),
 	position: "relative",
@@ -111,9 +143,17 @@ export const resourceCardBookImageDecoration = style({
 		opacity: "0.6",
 	},
 })
-export const resourceCardImageStyle = style({
-	maxHeight: "100%",
-})
+export const resourceCardImageStyle = style([
+	sprinkles({ borderRadius: 8 }),
+	{
+		maxHeight: "100%",
+		selectors: {
+			[`${bookImageContainerStyle} &`]: {
+				borderRadius: 0,
+			},
+		},
+	},
+])
 export const resourceCardTitleStyle = style([
 	sprinkles({ textStyle: "bodyShort1", fontWeight: "bold", margin: 0 }),
 	{
@@ -127,11 +167,12 @@ export const resourceCardSubtitleStyle = style([
 ])
 export const resourceCardBodyStyle = style([
 	sprinkles({ textStyle: "bodyLong2", layout: "stack", gap: 12 }),
+	{ gridArea: "body" },
 ])
 export const resourceCardFooterStyle = style([
 	sprinkles({ layout: "stack" }),
 	{
-		flexGrow: 1,
 		justifyContent: "flex-end",
+		gridArea: "footer",
 	},
 ])

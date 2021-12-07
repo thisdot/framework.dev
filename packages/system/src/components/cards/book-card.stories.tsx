@@ -10,6 +10,9 @@ export default {
 	args: {
 		headingTag: "h1",
 	},
+	parameters: {
+		layout: "fullscreen",
+	},
 	argTypes: {
 		onTagClick: {
 			action: "onTagClick",

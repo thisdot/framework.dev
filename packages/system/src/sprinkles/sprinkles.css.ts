@@ -269,7 +269,7 @@ const layout = defineProperties({
 				width: "1px",
 			},
 			fully: {
-				display: "none",
+				display: "none !important",
 			},
 		},
 		layout: {

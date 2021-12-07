@@ -128,7 +128,13 @@ function SearchBar({
 	const popularTags = useMemo(() => calculatePopularTags(data), [data])
 	const queryParams = parseQueryString(value, availableFilters)
 	return (
-		<div className={sprinkles({ layout: "row", gap: 12, paddingX: 48 })}>
+		<div
+			className={sprinkles({
+				layout: "row",
+				gap: 12,
+				paddingX: { mobile: 16, desktop: 48 },
+			})}
+		>
 			<SearchAutocomplete
 				staticPrefix={serializeQueryParams({
 					filters: preFilters,
@@ -144,8 +150,19 @@ function SearchBar({
 				as="button"
 				color="tertiary"
 				onClick={() => setFilterMenuOpen(true)}
+				className={sprinkles({ hidden: { mobile: "fully", desktop: "none" } })}
 			>
 				Advanced <FilterIcon />
+			</Button>
+			<Button
+				as="button"
+				color="tertiary"
+				size="square"
+				aria-label="Advanced search"
+				onClick={() => setFilterMenuOpen(true)}
+				className={sprinkles({ hidden: { mobile: "none", desktop: "fully" } })}
+			>
+				<FilterIcon />
 			</Button>
 			<SideDialog
 				position="right"
@@ -207,7 +224,7 @@ function SearchResults({
 				layout: "stack",
 				gap: 8,
 				paddingBottom: 24,
-				paddingX: 24,
+				paddingX: { mobile: 16, desktop: 24 },
 			})}
 		>
 			{(!isEmptyFilterSet(preFilters) ||
@@ -302,8 +319,20 @@ function ComparisonBar({
 			<Button color="tertiary" onClick={() => onSelectionChange(allLibraries)}>
 				Select all
 			</Button>
-			<Button color="destructive" onClick={() => onSelectionChange([])}>
+			<Button
+				className={sprinkles({ hidden: { mobile: "fully", desktop: "none" } })}
+				color="destructive"
+				onClick={() => onSelectionChange([])}
+			>
 				Reset <ResetIcon />
+			</Button>
+			<Button
+				size="square"
+				className={sprinkles({ hidden: { desktop: "fully" } })}
+				color="destructive"
+				onClick={() => onSelectionChange([])}
+			>
+				<ResetIcon />
 			</Button>
 		</div>
 	)
@@ -335,12 +364,12 @@ function LibraryComparison({
 	return (
 		<div
 			className={sprinkles({
-				paddingY: 48,
 				paddingX: 64,
 				minWidth: 0,
 				minHeight: 0,
 				maxHeight: "100%",
 				layout: "stack",
+				paddingY: { mobile: 24, desktop: 48 },
 			})}
 		>
 			<div
@@ -348,7 +377,8 @@ function LibraryComparison({
 					layout: "row",
 					alignItems: "center",
 					justifyContent: "space-between",
-					paddingBottom: 24,
+					paddingBottom: { mobile: 16, desktop: 24 },
+					paddingX: { mobile: 16, desktop: 64 },
 				})}
 			>
 				<h2 className={sprinkles({ textStyle: "h200" })}>Library comparison</h2>
@@ -357,7 +387,10 @@ function LibraryComparison({
 				</Button>
 			</div>
 			<ComparisonTable
-				className={sprinkles({ minHeight: 0 })}
+				className={sprinkles({
+					paddingX: { mobile: 0, desktop: 64 },
+					minHeight: 0,
+				})}
 				libraries={selectedLibraries}
 			/>
 			<div
@@ -366,6 +399,7 @@ function LibraryComparison({
 					justifyContent: "flex-end",
 					gap: 12,
 					paddingTop: 16,
+					paddingX: { mobile: 16, desktop: 64 },
 				})}
 			>
 				<Button color="destructive" onClick={onReset}>

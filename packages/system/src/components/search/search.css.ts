@@ -21,8 +21,8 @@ export const compareBarStyle = style([
 	sprinkles({
 		backgroundColor: "surface",
 		borderTop: "thin",
-		paddingX: 64,
-		paddingY: 12,
+		paddingX: { mobile: 16, desktop: 64 },
+		paddingY: { mobile: 8, desktop: 12 },
 		gap: 8,
 	}),
 	{
