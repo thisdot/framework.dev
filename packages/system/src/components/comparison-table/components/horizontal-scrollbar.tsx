@@ -23,7 +23,8 @@ export const HorizontalScrollbar = ({
 	const scrollThumbRef = useRef<HTMLDivElement>(null)
 	const observer = useRef<ResizeObserver>(null)
 	const [thumbWidth, setThumbWidth] = useState(20)
-	const [lastScrollPosition, setLastScrollPosition] = useState(0)
+	const [scrollStartPosition, setScrollStartPosition] = useState(0)
+	const [initialScrollLeft, setInitialScrollLeft] = useState(0)
 	const [isDragging, setIsDragging] = useState(false)
 
 	function handleResize(ref: HTMLDivElement, track: number) {
@@ -76,13 +77,15 @@ export const HorizontalScrollbar = ({
 		let newLeft = (+scrollLeft / +scrollWidth) * trackWidth
 		newLeft = Math.min(newLeft, trackWidth - thumbWidth)
 		const thumb = scrollThumbRef.current
-		thumb.style.left = newLeft.toString() + "px"
+		thumb.style.left = `${newLeft}px`
 	}, [])
 
 	const handleThumbMousedown = useCallback((e) => {
 		e.preventDefault()
 		e.stopPropagation()
-		setLastScrollPosition(e.clientX)
+		setScrollStartPosition(e.clientX)
+		if (scrollContentRef.current)
+			setInitialScrollLeft(scrollContentRef.current.scrollLeft)
 		setIsDragging(true)
 	}, [])
 
@@ -99,26 +102,30 @@ export const HorizontalScrollbar = ({
 
 	const handleThumbMousemove = useCallback(
 		(e) => {
+			e.preventDefault()
+			e.stopPropagation()
 			if (isDragging) {
-				e.preventDefault()
-				e.stopPropagation()
 				const {
 					scrollWidth: contentScrollWidth,
 					offsetWidth: contentOffsetWidth,
 				} = scrollContentRef.current
 
-				const deltaX =
-					(e.clientX - lastScrollPosition) * (contentOffsetWidth / thumbWidth)
+				const deltaX = Math.round(
+					(e.clientX - scrollStartPosition) * (contentOffsetWidth / thumbWidth)
+				)
 
-				handleThumbPosition()
-				scrollContentRef.current.scrollLeft = Math.min(
-					scrollContentRef.current.scrollLeft + deltaX,
+				const newScrollLeft = Math.min(
+					initialScrollLeft + deltaX,
 					contentScrollWidth - contentOffsetWidth
 				)
-				setLastScrollPosition(e.clientX)
+
+				console.log(initialScrollLeft, newScrollLeft)
+
+				scrollContentRef.current.scrollLeft = newScrollLeft
+				handleThumbPosition()
 			}
 		},
-		[isDragging, lastScrollPosition, thumbWidth]
+		[isDragging, scrollStartPosition, thumbWidth]
 	)
 
 	useEffect(() => {
