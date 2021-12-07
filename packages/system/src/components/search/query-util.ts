@@ -225,3 +225,11 @@ export const emptyFilterSet: FilterSet = {
 	field: [],
 	tag: [],
 }
+
+export function isEmptyFilterSet(filters: FilterSet): boolean {
+	return (
+		filters.category.length === 0 &&
+		filters.field.length === 0 &&
+		filters.tag.length === 0
+	)
+}

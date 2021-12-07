@@ -5,6 +5,7 @@ import {
 } from "./company-card"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { exampleCompanies } from "../../util/example-content"
+import { titleFirstCardGrid } from "./card-layouts.css"
 
 export default {
 	title: "Cards/Company Card",
@@ -26,12 +27,7 @@ const Template: Story<CompanyCardProps> = (args) => (
 			padding: 16,
 		})}
 	>
-		<div
-			className={sprinkles({
-				layout: "titleFirstCardGrid",
-				gap: 16,
-			})}
-		>
+		<div className={titleFirstCardGrid}>
 			{exampleCompanies.map((company) => (
 				<CompanyCardComponent key={company.name} {...args} company={company} />
 			))}

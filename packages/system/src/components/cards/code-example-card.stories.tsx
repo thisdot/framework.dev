@@ -1,6 +1,7 @@
 import { Story, Meta } from "@storybook/react"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { exampleCodeExamples } from "../../util/example-content"
+import { titleFirstCardGrid } from "./card-layouts.css"
 import {
 	CodeExampleCard as CodeExampleCardComponent,
 	CodeExampleCardProps,
@@ -26,12 +27,7 @@ const Template: Story<CodeExampleCardProps> = (args) => (
 			padding: 16,
 		})}
 	>
-		<div
-			className={sprinkles({
-				layout: "titleFirstCardGrid",
-				gap: 16,
-			})}
-		>
+		<div className={titleFirstCardGrid}>
 			{exampleCodeExamples.map((codeExample) => (
 				<CodeExampleCardComponent
 					key={codeExample.title}

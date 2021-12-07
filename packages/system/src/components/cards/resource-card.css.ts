@@ -26,12 +26,12 @@ const base = style([
 ])
 const titleFirst = style([
 	{
-		maxWidth: pxToRem(340),
+		width: pxToRem(340),
 	},
 ])
 const imageFirst = style([
 	{
-		maxWidth: pxToRem(250),
+		width: pxToRem(250),
 	},
 ])
 export const resourceCardStyle = styleVariants({
@@ -55,6 +55,14 @@ export const resourceCardHeaderStyle = style([
 		},
 	},
 ])
+
+export const resourceCardTitleContainerStyle = style([
+	sprinkles({ layout: "stack", gap: 4 }),
+	{
+		flexGrow: 1,
+	},
+])
+
 export const resourceCardImageContainerStyle = style([
 	sprinkles({ borderRadius: 8 }),
 	{

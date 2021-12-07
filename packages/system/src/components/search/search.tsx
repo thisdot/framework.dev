@@ -1,26 +1,37 @@
 import classNames from "classnames"
 import React, { useMemo, useState } from "react"
 import Fuse from "fuse.js"
-import { searchStyle } from "./search.css"
+import {
+	compareBarStyle,
+	searchContainerStyle,
+	searchStyle,
+} from "./search.css"
 import { AllCategories, AllModelsByName } from "../../models/all-categories"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { FilterMenu } from "./filter-menu"
 import { SideDialog } from "../side-dialog"
 import { Button } from "../button"
-import { ResultsCategory } from "./results-category"
+import { ResultsCategory, ResultsCategoryProps } from "./results-category"
 import {
 	calculateAvailableFilters,
 	emptyFilterSet,
 	filterCategories,
 	filterRecords,
 	getSearchResults,
+	isEmptyFilterSet,
 	parseQueryString,
 	serializeQueryParams,
 } from "./query-util"
 import { SearchAutocomplete } from "./search-autocomplete"
 import { FilterIcon } from "../../icons/filter-icon"
-import { FilterSet } from "./types"
-import { uniq, map, sortBy, take } from "lodash"
+import { FilterSet, QueryParams } from "./types"
+import { uniq, map, sortBy, take, without } from "lodash"
+import { Library } from "../../models/library"
+import { OpenIcon } from "../../icons/open-icon"
+import { ComparisonTable } from "../comparison-table"
+import { CloseIcon } from "../../icons/close-icon"
+import { ResetIcon } from "../../icons/reset-icon"
+import { AddIcon } from "../../icons/add-icon"
 
 export interface SearchProps extends React.ComponentPropsWithoutRef<"section"> {
 	data: AllCategories[]
@@ -41,6 +52,137 @@ export function Search({
 		}
 		return data
 	}, [initialData, preFilters])
+	const [query, setQuery] = useState("")
+	const [selectedLibraries, setSelectedLibraries] = useState<Library<string>[]>(
+		[]
+	)
+	const [comparisonTableOpen, setComparisonTableOpen] = useState(false)
+	const availableFilters = useMemo(
+		() => calculateAvailableFilters(data, preFilters),
+		[data, preFilters]
+	)
+	const queryParams = parseQueryString(query, availableFilters)
+	return (
+		<section className={classNames(className, searchStyle)} {...props}>
+			{comparisonTableOpen ? (
+				<LibraryComparison
+					selectedLibraries={selectedLibraries}
+					onClose={() => setComparisonTableOpen(false)}
+					onReset={() => {
+						setSelectedLibraries([])
+						setComparisonTableOpen(false)
+					}}
+				/>
+			) : (
+				<>
+					<div className={searchContainerStyle}>
+						<SearchBar
+							availableFilters={availableFilters}
+							data={data}
+							onChange={setQuery}
+							preFilters={preFilters}
+							value={query}
+						/>
+						<SearchResults
+							data={data}
+							onLibrarySelect={setSelectedLibraries}
+							onQueryChange={setQuery}
+							preFilters={preFilters}
+							selectedLibraries={selectedLibraries}
+							queryParams={queryParams}
+						/>
+					</div>
+					{selectedLibraries.length > 0 && (
+						<ComparisonBar
+							onOpenClick={() => setComparisonTableOpen(true)}
+							selectedLibraries={selectedLibraries}
+							onSelectionChange={setSelectedLibraries}
+							allLibraries={
+								(data.find((c) => c.name === "libraries")
+									?.data as Library<string>[]) ?? []
+							}
+						/>
+					)}
+				</>
+			)}
+		</section>
+	)
+}
+
+type SearchBarProps = {
+	preFilters: FilterSet
+	availableFilters: FilterSet
+	onChange: (newValue: string) => void
+	value: string
+	data: AllCategories[]
+}
+
+function SearchBar({
+	preFilters,
+	availableFilters,
+	onChange,
+	value,
+	data,
+}: SearchBarProps) {
+	const [filterMenuOpen, setFilterMenuOpen] = useState(false)
+	const popularTags = useMemo(() => calculatePopularTags(data), [data])
+	const queryParams = parseQueryString(value, availableFilters)
+	return (
+		<div className={sprinkles({ layout: "row", gap: 12, paddingX: 48 })}>
+			<SearchAutocomplete
+				staticPrefix={serializeQueryParams({
+					filters: preFilters,
+					textSearch: "",
+				})}
+				availableFilters={availableFilters}
+				className={sprinkles({ width: "full" })}
+				onChange={onChange}
+				value={value}
+				data={data}
+			/>
+			<Button
+				as="button"
+				color="tertiary"
+				onClick={() => setFilterMenuOpen(true)}
+			>
+				Advanced <FilterIcon />
+			</Button>
+			<SideDialog
+				position="right"
+				isOpen={filterMenuOpen}
+				onDismiss={() => setFilterMenuOpen(false)}
+			>
+				<FilterMenu
+					params={queryParams}
+					availableFilters={availableFilters}
+					onConfirm={(newParams) => {
+						onChange(serializeQueryParams(newParams))
+						setFilterMenuOpen(false)
+					}}
+					popularTags={popularTags}
+				/>
+			</SideDialog>
+		</div>
+	)
+}
+
+type SearchResultsProps = {
+	queryParams: QueryParams
+	preFilters: FilterSet
+	selectedLibraries: Library<string>[]
+	onLibrarySelect: (newSelection: Library<string>[]) => void
+	onQueryChange: (newQuery: string) => void
+	data: AllCategories[]
+}
+
+function SearchResults({
+	queryParams,
+	preFilters,
+	selectedLibraries,
+	onLibrarySelect,
+	onQueryChange,
+	data,
+}: SearchResultsProps) {
 	const searchIndices: {
 		[K in keyof AllModelsByName]?: Fuse<AllModelsByName[K]>
 	} = useMemo(
@@ -59,95 +201,68 @@ export function Search({
 			),
 		[data]
 	)
-	const [query, setQuery] = useState("")
-	const [filterMenuOpen, setFilterMenuOpen] = useState(false)
-	const availableFilters = useMemo(
-		() => calculateAvailableFilters(data, preFilters),
-		[data, preFilters]
-	)
-	const popularTags = useMemo(() => calculatePopularTags(data), [data])
-	const queryParams = parseQueryString(query, availableFilters)
 	return (
-		<section className={classNames(className, searchStyle)} {...props}>
-			<div className={sprinkles({ layout: "row", gap: 12 })}>
-				<SearchAutocomplete
-					staticPrefix={serializeQueryParams({
-						filters: preFilters,
-						textSearch: "",
-					})}
-					availableFilters={availableFilters}
-					className={sprinkles({ width: "full" })}
-					onChange={setQuery}
-					value={query}
-					data={data}
-				/>
-				<Button
-					as="button"
-					color="tertiary"
-					onClick={() => setFilterMenuOpen(true)}
-				>
-					Advanced <FilterIcon />
-				</Button>
-				<SideDialog
-					position="right"
-					isOpen={filterMenuOpen}
-					onDismiss={() => setFilterMenuOpen(false)}
-				>
-					<FilterMenu
-						params={queryParams}
-						availableFilters={availableFilters}
-						onConfirm={(newParams) => {
-							setQuery(serializeQueryParams(newParams))
-							setFilterMenuOpen(false)
-						}}
-						popularTags={popularTags}
-					/>
-				</SideDialog>
-			</div>
-			<div className={sprinkles({ layout: "stack", gap: 8 })}>
-				{(query ||
-					preFilters.category.length > 0 ||
-					preFilters.field.length > 0 ||
-					preFilters.tag.length > 0) &&
-					data
-						.filter((category) =>
-							queryParams.filters.category.length > 0
-								? isInFilteredCategories(category)
-								: true
-						)
-						.map((category, _index) => {
-							const searchIndex = searchIndices[category.name]
+		<div
+			className={sprinkles({
+				layout: "stack",
+				gap: 8,
+				paddingBottom: 24,
+				paddingX: 24,
+			})}
+		>
+			{(!isEmptyFilterSet(preFilters) ||
+				!isEmptyFilterSet(queryParams.filters) ||
+				queryParams.textSearch) &&
+				data
+					.filter((category) =>
+						queryParams.filters.category.length > 0
+							? isInFilteredCategories(category)
+							: true
+					)
+					.map((category, _index) => {
+						const searchIndex = searchIndices[category.name]
+						const commonProps = {
+							category: category.name,
+							variant:
+								preFilters.category.length === 1 ? "bare" : "withHeading",
+							searchResults: searchIndex
+								? getSearchResults({
+										category: category.name,
+										data: category.data,
+										params: queryParams,
+										searchIndex,
+								  })
+								: [],
+							onTagClick: (tag: string) =>
+								onQueryChange(
+									serializeQueryParams({
+										...queryParams,
+										filters: {
+											...queryParams.filters,
+											tag: uniq([...queryParams.filters.tag, tag]),
+										},
+									})
+								),
+						} as const
+						if (category.name === "libraries") {
 							return (
-								searchIndex && (
-									<ResultsCategory
-										key={category.name}
-										category={category.name}
-										variant={
-											preFilters.category.length === 1 ? "bare" : "withHeading"
-										}
-										searchResults={getSearchResults({
-											category: category.name,
-											data: category.data,
-											params: queryParams,
-											searchIndex,
-										})}
-										onTagClick={(tag) =>
-											setQuery(
-												serializeQueryParams({
-													...queryParams,
-													filters: {
-														...queryParams.filters,
-														tag: uniq([...queryParams.filters.tag, tag]),
-													},
-												})
-											)
-										}
-									/>
-								)
+								<ResultsCategory
+									key={category.name}
+									onSelect={(item: Library<string>, selected: boolean) =>
+										onLibrarySelect(
+											selected
+												? uniq([...selectedLibraries, item])
+												: without(selectedLibraries, item)
+										)
+									}
+									selectedItems={selectedLibraries}
+									{...(commonProps as ResultsCategoryProps<"libraries">)}
+								/>
 							)
-						})}
-			</div>
-		</section>
+						}
+						return <ResultsCategory key={category.name} {...commonProps} />
+					})}
+		</div>
 	)
 
 	function isInFilteredCategories(category: AllCategories): unknown {
@@ -155,6 +270,43 @@ export function Search({
 			(includedCategory) => includedCategory === category.name
 		)
 	}
+}
+
+type ComparisonBarProps = {
+	selectedLibraries: Library<string>[]
+	allLibraries: Library<string>[]
+	onSelectionChange: (selection: Library<string>[]) => void
+	onOpenClick: () => void
+}
+
+function ComparisonBar({
+	selectedLibraries,
+	onSelectionChange,
+	onOpenClick,
+	allLibraries,
+}: ComparisonBarProps) {
+	return (
+		<div className={compareBarStyle}>
+			<button
+				className={sprinkles({
+					textStyle: "button",
+					layout: "row",
+					alignItems: "center",
+					gap: 4,
+				})}
+				type="button"
+				onClick={onOpenClick}
+			>
+				<OpenIcon size="large" /> Compare ({selectedLibraries.length})
+			</button>
+			<Button color="tertiary" onClick={() => onSelectionChange(allLibraries)}>
+				Select all
+			</Button>
+			<Button color="destructive" onClick={() => onSelectionChange([])}>
+				Reset <ResetIcon />
+			</Button>
+		</div>
+	)
 }
 
 function calculatePopularTags(data: AllCategories[]): string[] {
@@ -167,4 +319,50 @@ function calculatePopularTags(data: AllCategories[]): string[] {
 		}
 	}
 	return map(take(sortBy(Array.from(tags.entries()), [1]), 5), 0)
+}
+
+type LibraryComparisonProps = {
+	selectedLibraries: Library<string>[]
+	onClose: () => void
+	onReset: () => void
+}
+
+function LibraryComparison({
+	selectedLibraries,
+	onClose,
+	onReset,
+}: LibraryComparisonProps) {
+	return (
+		<div className={sprinkles({ paddingY: 48, paddingX: 64 })}>
+			<div
+				className={sprinkles({
+					layout: "row",
+					alignItems: "center",
+					justifyContent: "space-between",
+					paddingBottom: 24,
+				})}
+			>
+				<h2 className={sprinkles({ textStyle: "h200" })}>Library comparison</h2>
+				<Button color="primary" size="square" onClick={onClose} title="Close">
+					<CloseIcon />
+				</Button>
+			</div>
+			<ComparisonTable libraries={selectedLibraries} />
+			<div
+				className={sprinkles({
+					layout: "row",
+					justifyContent: "flex-end",
+					gap: 12,
+					paddingTop: 16,
+				})}
+			>
+				<Button color="destructive" onClick={onReset}>
+					Reset <ResetIcon />
+				</Button>
+				<Button color="tertiary" onClick={onClose}>
+					Add library <AddIcon />
+				</Button>
+			</div>
+		</div>
+	)
 }

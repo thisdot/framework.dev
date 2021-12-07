@@ -2,6 +2,7 @@ import { Story, Meta } from "@storybook/react"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { BookCard as BookCardComponent, BookCardProps } from "./book-card"
 import { exampleBooks } from "../../util/example-content"
+import { imageFirstCardGrid } from "./card-layouts.css"
 
 export default {
 	title: "Cards/Book Card",
@@ -23,12 +24,7 @@ const Template: Story<BookCardProps> = (args) => (
 			padding: 16,
 		})}
 	>
-		<div
-			className={sprinkles({
-				layout: "imageFirstCardGrid",
-				gap: 16,
-			})}
-		>
+		<div className={imageFirstCardGrid}>
 			{exampleBooks.map((book) => (
 				<BookCardComponent key={book.title} {...args} book={book} />
 			))}

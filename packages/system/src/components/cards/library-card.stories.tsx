@@ -1,6 +1,7 @@
 import { Story, Meta } from "@storybook/react"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { exampleLibraries } from "../../util/example-content"
+import { titleFirstCardGrid } from "./card-layouts.css"
 import {
 	LibraryCard as LibraryCardComponent,
 	LibraryCardProps,
@@ -26,12 +27,7 @@ const Template: Story<LibraryCardProps> = (args) => (
 			padding: 16,
 		})}
 	>
-		<div
-			className={sprinkles({
-				layout: "titleFirstCardGrid",
-				gap: 16,
-			})}
-		>
+		<div className={titleFirstCardGrid}>
 			{exampleLibraries.map((library) => (
 				<LibraryCardComponent key={library.name} {...args} library={library} />
 			))}

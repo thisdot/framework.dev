@@ -1,6 +1,7 @@
 import { Story, Meta } from "@storybook/react"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { examplePodcasts } from "../../util/example-content"
+import { imageFirstCardGrid } from "./card-layouts.css"
 import {
 	PodcastCard as PodcastCardComponent,
 	PodcastCardProps,
@@ -26,12 +27,7 @@ const Template: Story<PodcastCardProps> = (args) => (
 			padding: 16,
 		})}
 	>
-		<div
-			className={sprinkles({
-				layout: "imageFirstCardGrid",
-				gap: 16,
-			})}
-		>
+		<div className={imageFirstCardGrid}>
 			{examplePodcasts.map((podcast) => (
 				<PodcastCardComponent
 					{...args}
