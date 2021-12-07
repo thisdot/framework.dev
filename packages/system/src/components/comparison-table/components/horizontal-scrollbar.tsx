@@ -119,8 +119,6 @@ export const HorizontalScrollbar = ({
 					contentScrollWidth - contentOffsetWidth
 				)
 
-				console.log(initialScrollLeft, newScrollLeft)
-
 				scrollContentRef.current.scrollLeft = newScrollLeft
 				handleThumbPosition()
 			}
@@ -171,6 +169,9 @@ export const HorizontalScrollbar = ({
 						className={horizontalScrollbarTrackStyle}
 						ref={scrollTrackRef}
 						onClick={handleTrackClick}
+						style={{
+							cursor: isDragging ? "grabbing" : "pointer",
+						}}
 					></div>
 					<div
 						className={horizontalScrollbarThumbStyle}
