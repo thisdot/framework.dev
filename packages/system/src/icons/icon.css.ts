@@ -1,3 +1,4 @@
+import { style } from "@vanilla-extract/css"
 import { recipe, RecipeVariants } from "@vanilla-extract/recipes"
 import { pxToRem } from "../util/style-utils"
 
@@ -17,6 +18,9 @@ export const iconStyle = recipe({
 	defaultVariants: {
 		size: "medium",
 	},
+})
+export const flipHorizontallyStyle = style({
+	transform: "scaleX(-1)",
 })
 
 export type IconVariants = RecipeVariants<typeof iconStyle>
