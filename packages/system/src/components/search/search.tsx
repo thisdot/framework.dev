@@ -1,5 +1,5 @@
 import classNames from "classnames"
-import React, { useMemo, useState } from "react"
+import React, { useMemo, useRef, useState } from "react"
 import Fuse from "fuse.js"
 import {
 	compareBarStyle,
@@ -62,6 +62,7 @@ export function Search({
 		[data, preFilters]
 	)
 	const queryParams = parseQueryString(query, availableFilters)
+	const scrollableContainerRef = useRef<null | HTMLDivElement>(null)
 	return (
 		<section className={classNames(className, searchStyle)} {...props}>
 			{comparisonTableOpen ? (
@@ -75,7 +76,7 @@ export function Search({
 				/>
 			) : (
 				<>
-					<div className={searchContainerStyle}>
+					<div className={searchContainerStyle} ref={scrollableContainerRef}>
 						<SearchBar
 							availableFilters={availableFilters}
 							data={data}
@@ -86,7 +87,18 @@ export function Search({
 						<SearchResults
 							data={data}
 							onLibrarySelect={setSelectedLibraries}
-							onQueryChange={setQuery}
+							onTagClick={(tag: string) => {
+								setQuery(
+									serializeQueryParams({
+										...queryParams,
+										filters: {
+											...queryParams.filters,
+											tag: uniq([...queryParams.filters.tag, tag]),
+										},
+									})
+								)
+								scrollableContainerRef.current?.scrollTo(0, 0)
+							}}
 							preFilters={preFilters}
 							selectedLibraries={selectedLibraries}
 							queryParams={queryParams}
@@ -188,7 +200,7 @@ type SearchResultsProps = {
 	preFilters: FilterSet
 	selectedLibraries: Library<string>[]
 	onLibrarySelect: (newSelection: Library<string>[]) => void
-	onQueryChange: (newQuery: string) => void
+	onTagClick: (tag: string) => void
 	data: AllCategories[]
 }
 
@@ -197,7 +209,7 @@ function SearchResults({
 	preFilters,
 	selectedLibraries,
 	onLibrarySelect,
-	onQueryChange,
+	onTagClick,
 	data,
 }: SearchResultsProps) {
 	const searchIndices: {
@@ -250,16 +262,7 @@ function SearchResults({
 										searchIndex,
 								  })
 								: [],
-							onTagClick: (tag: string) =>
-								onQueryChange(
-									serializeQueryParams({
-										...queryParams,
-										filters: {
-											...queryParams.filters,
-											tag: uniq([...queryParams.filters.tag, tag]),
-										},
-									})
-								),
+							onTagClick,
 						} as const
 						if (category.name === "libraries") {
 							return (
