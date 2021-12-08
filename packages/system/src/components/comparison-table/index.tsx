@@ -142,6 +142,7 @@ export function ComparisonTable({
 								<tr style={{ display: "contents" }} key={library.name}>
 									<RowHeading className={cellStickyStyle} scope="row">
 										<img
+											alt=""
 											src={library.image}
 											className={comparisonTableLibraryIconStyle}
 										/>
