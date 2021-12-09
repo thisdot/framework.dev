@@ -3,9 +3,10 @@ import { sprinkles } from "../../../sprinkles/sprinkles.css"
 import { pxToRem } from "../../../util/style-utils"
 import { vars } from "../../../themes/themes.css"
 
-export const cellStyle = style([
+const cellStyle = style([
 	sprinkles({
-		border: "tableCell",
+		borderBottom: "tableCell",
+		borderRight: "tableCell",
 		paddingX: 24,
 		paddingY: 20,
 	}),
@@ -15,12 +16,37 @@ export const cellStyle = style([
 	},
 ])
 
+export const cellTHStyle = style([
+	cellStyle,
+	sprinkles({
+		fontWeight: "bold",
+	}),
+	{
+		backgroundColor: vars.palette.neutralVariant99,
+		position: "sticky",
+		top: 0,
+		zIndex: 2,
+		selectors: {
+			"&:first-of-type": {
+				borderTopLeftRadius: pxToRem(12),
+				left: 0,
+				zIndex: 3,
+			},
+			"&:last-of-type": {
+				borderTopRightRadius: pxToRem(12),
+			},
+		},
+	},
+])
+
 export const cellTHButtonStyle = style([
 	sprinkles({
 		paddingRight: 12,
 	}),
 	{
 		position: "relative",
+		textAlign: "center",
+		width: "100%",
 		selectors: {
 			"&:before,&:after": {
 				position: "absolute",
@@ -62,6 +88,22 @@ export const cellTHButtonStyle = style([
 				bottom: 0,
 			},
 		},
+	},
+])
+
+export const cellTDStyle = style([
+	cellStyle,
+	{
+		backgroundColor: "white",
+	},
+])
+
+export const cellStickyStyle = style([
+	cellTDStyle,
+	{
+		position: "sticky",
+		left: 0,
+		zIndex: 1,
 	},
 ])
 

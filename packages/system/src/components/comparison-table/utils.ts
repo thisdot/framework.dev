@@ -15,3 +15,13 @@ export function sortLibraries(
 		}
 	})
 }
+
+export function formatPercentage(value: number) {
+	return new Intl.NumberFormat([], {
+		style: "percent",
+	}).format(value)
+}
+
+export function formatNumber(value: number) {
+	return new Intl.NumberFormat().format(value)
+}
