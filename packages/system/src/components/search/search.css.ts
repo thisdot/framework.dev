@@ -12,7 +12,7 @@ export const searchContainerStyle = style([
 	sprinkles({
 		layout: "stack",
 		gap: 24,
-		paddingTop: 16,
+		paddingTop: { mobile: 24, desktop: 16 },
 	}),
 	{ overflowY: "auto" },
 ])
@@ -29,5 +29,16 @@ export const compareBarStyle = style([
 		display: "grid",
 		gridTemplateColumns: "1fr max-content max-content",
 		justifyItems: "flex-start",
+	},
+])
+
+export const searchMobileLogoStyle = style([
+	sprinkles({
+		layout: "row",
+		justifyContent: "center",
+		display: { desktop: "none" },
+	}),
+	{
+		transform: `scale(${7 / 6})`,
 	},
 ])
