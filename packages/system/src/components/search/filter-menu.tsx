@@ -17,6 +17,7 @@ export type FilterMenuProps = React.ComponentPropsWithoutRef<"div"> & {
 	params: QueryParams
 	availableFilters: FilterSet
 	onConfirm: (newParams: QueryParams) => void
+	popularTags: string[]
 }
 
 export function FilterMenu({
@@ -24,6 +25,7 @@ export function FilterMenu({
 	params: initialParams,
 	availableFilters,
 	onConfirm,
+	popularTags,
 	...props
 }: FilterMenuProps) {
 	const [params, setParams] = useState<QueryParams>(initialParams)
@@ -80,6 +82,7 @@ export function FilterMenu({
 							filters: { ...oldParams.filters, tag: newValue },
 						}))
 					}
+					suggestions={popularTags}
 				/>
 				<CardDivider />
 			</div>

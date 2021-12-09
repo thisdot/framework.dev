@@ -1,5 +1,4 @@
 import React, { useRef } from "react"
-import "@reach/combobox/styles.css"
 import {
 	Combobox,
 	ComboboxInput,
@@ -17,6 +16,10 @@ import {
 	serializeFieldName,
 	serializeFieldValue,
 } from "../../util/string-utils"
+import {
+	searchAutocompleteOptionStyle,
+	searchAutocompletePopoverStyle,
+} from "./search-autocomplete.css"
 
 export interface SearchAutocompleteProps {
 	staticPrefix?: string
@@ -73,10 +76,14 @@ export function SearchAutocomplete({
 				onReset={() => onChange("")}
 			/>
 			{autoCompleteResults.length > 0 && (
-				<ComboboxPopover>
+				<ComboboxPopover className={searchAutocompletePopoverStyle}>
 					<ComboboxList>
 						{autoCompleteResults.slice(0, 10).map((result, index) => (
-							<ComboboxOption key={index} value={result.value}>
+							<ComboboxOption
+								key={index}
+								value={result.value}
+								className={searchAutocompleteOptionStyle}
+							>
 								<ComboboxOptionText /> {result.description}
 							</ComboboxOption>
 						))}
