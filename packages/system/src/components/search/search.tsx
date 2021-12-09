@@ -333,7 +333,16 @@ function LibraryComparison({
 	onReset,
 }: LibraryComparisonProps) {
 	return (
-		<div className={sprinkles({ paddingY: 48, paddingX: 64 })}>
+		<div
+			className={sprinkles({
+				paddingY: 48,
+				paddingX: 64,
+				minWidth: 0,
+				minHeight: 0,
+				maxHeight: "100%",
+				layout: "stack",
+			})}
+		>
 			<div
 				className={sprinkles({
 					layout: "row",
@@ -347,7 +356,10 @@ function LibraryComparison({
 					<CloseIcon />
 				</Button>
 			</div>
-			<ComparisonTable libraries={selectedLibraries} />
+			<ComparisonTable
+				className={sprinkles({ minHeight: 0 })}
+				libraries={selectedLibraries}
+			/>
 			<div
 				className={sprinkles({
 					layout: "row",

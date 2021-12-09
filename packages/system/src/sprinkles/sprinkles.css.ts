@@ -242,6 +242,9 @@ const layout = defineProperties({
 			full: "100%",
 			auto: "auto",
 		},
+		minWidth: [0],
+		minHeight: [0],
+		maxHeight: ["100%"],
 		height: {
 			full: "100%",
 			auto: "auto",
