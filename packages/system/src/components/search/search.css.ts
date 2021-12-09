@@ -32,13 +32,12 @@ export const compareBarStyle = style([
 	},
 ])
 
-export const searchMobileLogoStyle = style([
-	sprinkles({
-		layout: "row",
-		justifyContent: "center",
-		display: { desktop: "none" },
-	}),
-	{
-		transform: `scale(${7 / 6})`,
-	},
-])
+export const searchMobileLogoContainerStyle = sprinkles({
+	layout: "row",
+	justifyContent: "center",
+	display: { desktop: "none" },
+})
+
+export const searchMobileLogoStyle = style({
+	transform: `scale(${7 / 6})`,
+})

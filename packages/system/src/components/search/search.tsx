@@ -4,6 +4,7 @@ import Fuse from "fuse.js"
 import {
 	compareBarStyle,
 	searchContainerStyle,
+	searchMobileLogoContainerStyle,
 	searchMobileLogoStyle,
 	searchStyle,
 } from "./search.css"
@@ -79,8 +80,8 @@ export function Search({
 			) : (
 				<>
 					<div className={searchContainerStyle} ref={scrollableContainerRef}>
-						<header className={searchMobileLogoStyle}>
-							<Logo />
+						<header className={searchMobileLogoContainerStyle}>
+							<Logo className={searchMobileLogoStyle} />
 						</header>
 						<SearchBar
 							availableFilters={availableFilters}
