@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { breakpoints, sprinkles } from "../../sprinkles/sprinkles.css"
 import { pxToRem } from "../../util/style-utils"
 
 export const comparisonTableStyle = style([
@@ -7,11 +7,17 @@ export const comparisonTableStyle = style([
 		color: "regularText",
 		display: "grid",
 		textStyle: "bodyShort2",
-		width: "full",
 	}),
 	{
-		gridTemplateColumns: "max-content repeat(5, 1fr)",
+		width: "fit-content",
+		gridTemplateColumns: "repeat(6, minmax(max-content, 1fr))",
+		gridAutoRows: pxToRem(44),
 		position: "relative",
+		"@media": {
+			[breakpoints.desktop]: {
+				gridAutoRows: pxToRem(56),
+			},
+		},
 	},
 ])
 

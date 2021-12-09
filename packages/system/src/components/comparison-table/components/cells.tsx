@@ -6,6 +6,7 @@ import {
 	cellTDStyle,
 	cellTHButtonStyle,
 	cellContentsStyle,
+	rowHeadingContentsStyle,
 } from "./cells.css"
 
 type ColHeadingProps = {
@@ -51,7 +52,7 @@ export const RowHeading = ({
 }: React.ComponentPropsWithoutRef<"th">) => {
 	return (
 		<th className={classNames(cellTDStyle, className)} {...props} scope="row">
-			<div className={cellContentsStyle}>{children}</div>
+			<div className={rowHeadingContentsStyle}>{children}</div>
 		</th>
 	)
 }

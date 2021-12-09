@@ -333,21 +333,22 @@ function ComparisonBar({
 			<Button color="tertiary" onClick={() => onSelectionChange(allLibraries)}>
 				Select all
 			</Button>
-			<Button
+			<div
 				className={sprinkles({ display: { mobile: "none", desktop: "block" } })}
-				color="destructive"
-				onClick={() => onSelectionChange([])}
 			>
-				Reset <ResetIcon />
-			</Button>
-			<Button
-				size="square"
-				className={sprinkles({ display: { desktop: "none" } })}
-				color="destructive"
-				onClick={() => onSelectionChange([])}
-			>
-				<ResetIcon />
-			</Button>
+				<Button color="destructive" onClick={() => onSelectionChange([])}>
+					Reset <ResetIcon />
+				</Button>
+			</div>
+			<div className={sprinkles({ display: { desktop: "none" } })}>
+				<Button
+					size="square"
+					color="destructive"
+					onClick={() => onSelectionChange([])}
+				>
+					<ResetIcon />
+				</Button>
+			</div>
 		</div>
 	)
 }
@@ -378,7 +379,6 @@ function LibraryComparison({
 	return (
 		<div
 			className={sprinkles({
-				paddingX: 64,
 				minWidth: 0,
 				minHeight: 0,
 				maxHeight: "100%",
