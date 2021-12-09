@@ -1,7 +1,7 @@
 import React from "react"
 import { useId } from "@reach/auto-id"
-import { sprinkles } from "../sprinkles/sprinkles.css"
 import { checkboxLabelStyle } from "./checkbox.css"
+import { visuallyHidden } from "../styles/utilities.css"
 
 export interface CheckboxProps extends React.ComponentPropsWithoutRef<"input"> {
 	label: string
@@ -16,12 +16,7 @@ export function Checkbox({
 	const id = useId(customIdFromProps)
 	return (
 		<div className={className}>
-			<input
-				type="checkbox"
-				className={sprinkles({ hidden: "visually" })}
-				id={id}
-				{...props}
-			/>
+			<input type="checkbox" className={visuallyHidden} id={id} {...props} />
 			<label htmlFor={id} className={checkboxLabelStyle}>
 				{label}
 			</label>

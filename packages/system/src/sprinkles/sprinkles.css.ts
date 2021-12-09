@@ -256,28 +256,7 @@ const layout = defineProperties({
 			"flex-end",
 			"space-between",
 		],
-		hidden: {
-			none: {},
-			visually: {
-				borderWidth: "0",
-				clip: "rect(1px, 1px, 1px, 1px)",
-				height: "1px",
-				overflow: "hidden",
-				padding: "0",
-				position: "absolute",
-				whiteSpace: "nowrap",
-				width: "1px",
-			},
-			fully: {
-				display: "none !important",
-			},
-		},
 		layout: {
-			sidebar: {
-				display: "grid",
-				gridTemplateColumns: "240px 1fr",
-				gridAutoRows: "1fr",
-			},
 			stack: {
 				display: "flex",
 				flexDirection: "column",

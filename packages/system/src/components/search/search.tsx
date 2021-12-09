@@ -158,24 +158,30 @@ function SearchBar({
 				value={value}
 				data={data}
 			/>
-			<Button
-				as="button"
-				color="tertiary"
-				onClick={() => setFilterMenuOpen(true)}
-				className={sprinkles({ hidden: { mobile: "fully", desktop: "none" } })}
+			<div
+				className={sprinkles({ display: { mobile: "none", desktop: "block" } })}
 			>
-				Advanced <FilterIcon />
-			</Button>
-			<Button
-				as="button"
-				color="tertiary"
-				size="square"
-				aria-label="Advanced search"
-				onClick={() => setFilterMenuOpen(true)}
-				className={sprinkles({ hidden: { mobile: "none", desktop: "fully" } })}
+				<Button
+					as="button"
+					color="tertiary"
+					onClick={() => setFilterMenuOpen(true)}
+				>
+					Advanced <FilterIcon />
+				</Button>
+			</div>
+			<div
+				className={sprinkles({ display: { mobile: "block", desktop: "none" } })}
 			>
-				<FilterIcon />
-			</Button>
+				<Button
+					as="button"
+					color="tertiary"
+					size="square"
+					aria-label="Advanced search"
+					onClick={() => setFilterMenuOpen(true)}
+				>
+					<FilterIcon />
+				</Button>
+			</div>
 			<SideDialog
 				position="right"
 				isOpen={filterMenuOpen}
@@ -323,7 +329,7 @@ function ComparisonBar({
 				Select all
 			</Button>
 			<Button
-				className={sprinkles({ hidden: { mobile: "fully", desktop: "none" } })}
+				className={sprinkles({ display: { mobile: "none", desktop: "block" } })}
 				color="destructive"
 				onClick={() => onSelectionChange([])}
 			>
@@ -331,7 +337,7 @@ function ComparisonBar({
 			</Button>
 			<Button
 				size="square"
-				className={sprinkles({ hidden: { desktop: "fully" } })}
+				className={sprinkles({ display: { desktop: "none" } })}
 				color="destructive"
 				onClick={() => onSelectionChange([])}
 			>

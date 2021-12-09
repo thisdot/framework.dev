@@ -1,12 +1,12 @@
 import classNames from "classnames"
 import React from "react"
 import { useId } from "@reach/auto-id"
-import { sprinkles } from "../sprinkles/sprinkles.css"
 import {
 	selectInputBoxStyle,
 	selectInputContainerStyle,
 	selectInputLabelStyle,
 } from "./select-input.css"
+import { visuallyHidden } from "../styles/utilities.css"
 
 export interface SelectInputProps
 	extends React.ComponentPropsWithoutRef<"select"> {
@@ -32,7 +32,7 @@ export function SelectInput({
 				htmlFor={id}
 				className={classNames(
 					selectInputLabelStyle,
-					hideLabel && sprinkles({ hidden: "visually" })
+					hideLabel && visuallyHidden
 				)}
 			>
 				{label}

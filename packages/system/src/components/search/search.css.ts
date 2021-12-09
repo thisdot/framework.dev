@@ -5,7 +5,7 @@ export const searchStyle = style({
 	display: "grid",
 	gridTemplateRows: `1fr min-content`,
 	gridTemplateColumns: `1fr`,
-	height: "100vh",
+	height: "100%",
 })
 
 export const searchContainerStyle = style([

@@ -1,6 +1,6 @@
 import { Story, Meta } from "@storybook/react"
 import { useState } from "react"
-import { sprinkles } from "../sprinkles/sprinkles.css"
+import { bodyWithNav } from "../styles/layouts.css"
 import { NavItem } from "./nav-item"
 import {
 	NavList as NavListComponent,
@@ -20,7 +20,7 @@ const Template: Story<NavListProps> = (args) => {
 	const [current, setCurrent] = useState<string | null>(null)
 	const isCurrent = (name: string) => (name === current ? "page" : undefined)
 	return (
-		<div className={sprinkles({ layout: "sidebar" })}>
+		<div className={bodyWithNav}>
 			<NavListComponent {...args}>
 				<NavListItem>
 					<NavItem

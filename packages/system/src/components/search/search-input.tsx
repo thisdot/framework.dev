@@ -1,7 +1,6 @@
 import classNames from "classnames"
 import React from "react"
 import { useId } from "@reach/auto-id"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
 import {
 	searchInputBoxStyle,
 	searchInputContainerStyle,
@@ -13,6 +12,7 @@ import {
 } from "./search-input.css"
 import { SearchIcon } from "../../icons/search-icon"
 import { CloseIcon } from "../../icons/close-icon"
+import { visuallyHidden } from "../../styles/utilities.css"
 
 export interface SearchInputProps
 	extends React.ComponentPropsWithoutRef<"input"> {
@@ -60,7 +60,7 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
 					htmlFor={id}
 					className={classNames(
 						searchInputLabelStyle,
-						hideLabel && sprinkles({ hidden: "visually" })
+						hideLabel && visuallyHidden
 					)}
 				>
 					{label}

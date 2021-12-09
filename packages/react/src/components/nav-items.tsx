@@ -9,7 +9,7 @@ import {
 } from "@framework/system/src/util/string-utils"
 import { searchData } from "../data/search-data"
 
-type NavItemsProps = {
+export type NavItemsProps = {
 	currentCategory?: CategoryName
 	currentTag?: string
 }
