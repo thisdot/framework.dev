@@ -1,6 +1,8 @@
 import { Library } from "@framework/system/src/models/library"
 
 export const libraryTags = [
+	"3D",
+	"a11y",
 	"state management",
 	"data fetching",
 	"graphQL",
@@ -650,4 +652,103 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["internationalization"],
 		description: "A general purpose internationalization library in 298 bytes",
 	},
+	{
+		name: "React Three Fiber",
+		author: "Poimandres",
+		gitHubRepo: "pmndrs/react-three-fiber",
+		npmPackage: "@react-three/fiber",
+		href: "https://docs.pmnd.rs/react-three-fiber/getting-started/introduction",
+		image: "https://github.com/pmndrs.png",
+		tags: ["3D"],
+		description: "React-three-fiber is a React renderer for three.js",
+	},
+	{
+		name: "Drei",
+		author: "Poimandres",
+		gitHubRepo: "pmndrs/drei",
+		npmPackage: "@react-three/drei",
+		href: "https://docs.pmnd.rs/drei/introduction",
+		image: "https://github.com/pmndrs.png",
+		tags: ["3D"],
+		description:
+			"A growing collection of useful helpers and abstractions for react-three-fiber",
+	},
+	{
+		name: "Zustand",
+		author: "Poimandres",
+		gitHubRepo: "pmndrs/zustand",
+		npmPackage: "zustand",
+		href: "https://docs.pmnd.rs/zustand/introduction",
+		image: "https://github.com/pmndrs.png",
+		tags: ["state management"],
+		description: "https://docs.pmnd.rs/zustand-resources/bear.png",
+	},
+	{
+		name: "A11y",
+		author: "Poimandres",
+		gitHubRepo: "pmndrs/a11y",
+		npmPackage: "@react-three/a11y",
+		href: "https://docs.pmnd.rs/a11y/introduction",
+		image: "https://github.com/pmndrs.png",
+		tags: ["3D", "a11y"],
+		description:
+			"@react-three/a11y brings accessibility to webGL with easy-to-use react-three-fiber components",
+	},
+	{
+		name: "Cannon",
+		author: "Poimandres",
+		gitHubRepo: "pmndrs/use-cannon",
+		npmPackage: "@react-three/cannon",
+		href: "https://cannon.pmnd.rs/",
+		image: "https://github.com/pmndrs.png",
+		tags: ["3D"],
+		description:
+			"React hooks for cannon-es. Use this in combination with react-three-fiber",
+	},
+	{
+		name: "Use Gesture",
+		author: "Poimandres",
+		gitHubRepo: "pmndrs/use-gesture",
+		npmPackage: "@use-gesture/react",
+		href: "https://use-gesture.netlify.app/",
+		image: "https://github.com/pmndrs.png",
+		tags: ["3D"],
+		description:
+			"@use-gesture is a set of gestures that let you bind mouse and touch events to any node.",
+	},
+	{
+		name: "React XR",
+		author: "Poimandres",
+		gitHubRepo: "pmndrs/react-xr",
+		npmPackage: "@react-three/xr",
+		href: "https://github.com/pmndrs/react-xr",
+		image: "https://github.com/pmndrs.png",
+		tags: ["3D"],
+		description:
+			"React components and hooks for creating VR/AR applications with react-three-fiber",
+	},
+	{
+		name: "React Postprocessing",
+		author: "Poimandres",
+		gitHubRepo: "pmndrs/react-postprocessing",
+		npmPackage: "@react-three/postprocessing",
+		href: "https://docs.pmnd.rs/react-postprocessing/introduction",
+		image: "https://github.com/pmndrs.png",
+		tags: ["3D"],
+		description:
+			"react-postprocessing is a postprocessing wrapper for @react-three/fiber",
+	},
+	{
+		name: "React Three GUI",
+		author: "Birkir Gudjonsson",
+		gitHubRepo: "birkir/react-three-gui",
+		npmPackage: "react-three-gui",
+		href: "https://github.com/birkir/react-three-gui",
+		image: "https://github.com/birkir.png",
+		tags: ["3D"],
+		description:
+			"@use-gesture is a set of gestures that let you bind mouse and touch events to any node.",
+	},
 ]
+
+//https://github.com/birkir/react-three-gui
