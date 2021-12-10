@@ -14,6 +14,11 @@
 
 <!-- Delete as appropriate and then go through the list, adding an X to every item you have completed -->
 
+<!-- Always fill in -->
+
+- [ ] I have added a line to the [changelog](../CHANGELOG.md) with the current
+      date, change, PR number and author
+
 <!-- Delete if your change is not a content addition -->
 
 - [ ] The changes follow the [contributing guidelines](../CONTRIBUTING.md)
