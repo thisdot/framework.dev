@@ -5,10 +5,13 @@ import { Search as SearchComponent, SearchProps } from "./search"
 export default {
 	title: "Search/Search",
 	component: SearchComponent,
+	parameters: {
+		layout: "fullscreen",
+	},
 	args: {
 		data: exampleSearchData,
 		preFilters: {
-			category: ["courses"],
+			category: ["libraries"],
 			field: [],
 			tag: [],
 		},

@@ -1,8 +1,13 @@
 import { globalStyle } from "@vanilla-extract/css"
 import { derivedAttributes } from "../themes/themes.css"
 
+globalStyle("html", {
+	maxHeight: "100vh",
+	overflow: "hidden",
+})
 globalStyle("body", {
 	fontFamily: "Inter, sans-serif",
+	maxHeight: "100vh",
 })
 globalStyle("h1, h2, h3, h4, h5, h6", {
 	margin: 0,

@@ -242,6 +242,9 @@ const layout = defineProperties({
 			full: "100%",
 			auto: "auto",
 		},
+		minWidth: [0],
+		minHeight: [0],
+		maxHeight: ["100%"],
 		height: {
 			full: "100%",
 			auto: "auto",
@@ -274,14 +277,6 @@ const layout = defineProperties({
 				display: "grid",
 				gridTemplateColumns: "240px 1fr",
 				gridAutoRows: "1fr",
-			},
-			titleFirstCardGrid: {
-				display: "grid",
-				gridTemplateColumns: "repeat(auto-fill, 340px) [end]",
-			},
-			imageFirstCardGrid: {
-				display: "grid",
-				gridTemplateColumns: "repeat(auto-fill, 250px) [end]",
 			},
 			stack: {
 				display: "flex",

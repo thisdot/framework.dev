@@ -18,10 +18,9 @@ export const HorizontalScrollbar = ({
 	className,
 	...props
 }: React.ComponentPropsWithoutRef<"div">) => {
-	const scrollContentRef = useRef<HTMLDivElement>(null)
-	const scrollTrackRef = useRef<HTMLDivElement>(null)
-	const scrollThumbRef = useRef<HTMLDivElement>(null)
-	const observer = useRef<ResizeObserver>(null)
+	const scrollContentRef = useRef<HTMLDivElement | null>(null)
+	const scrollTrackRef = useRef<HTMLDivElement | null>(null)
+	const scrollThumbRef = useRef<HTMLDivElement | null>(null)
 	const [thumbWidth, setThumbWidth] = useState(20)
 	const [scrollStartPosition, setScrollStartPosition] = useState(0)
 	const [initialScrollLeft, setInitialScrollLeft] = useState(0)
@@ -78,7 +77,7 @@ export const HorizontalScrollbar = ({
 		newLeft = Math.min(newLeft, trackWidth - thumbWidth)
 		const thumb = scrollThumbRef.current
 		thumb.style.left = `${newLeft}px`
-	}, [])
+	}, [thumbWidth])
 
 	const handleThumbMousedown = useCallback((e) => {
 		e.preventDefault()
@@ -104,7 +103,7 @@ export const HorizontalScrollbar = ({
 		(e) => {
 			e.preventDefault()
 			e.stopPropagation()
-			if (isDragging) {
+			if (isDragging && scrollContentRef.current) {
 				const {
 					scrollWidth: contentScrollWidth,
 					offsetWidth: contentOffsetWidth,
@@ -123,25 +122,31 @@ export const HorizontalScrollbar = ({
 				handleThumbPosition()
 			}
 		},
-		[isDragging, scrollStartPosition, thumbWidth]
+		[
+			handleThumbPosition,
+			initialScrollLeft,
+			isDragging,
+			scrollStartPosition,
+			thumbWidth,
+		]
 	)
 
 	useEffect(() => {
 		if (scrollContentRef.current && scrollTrackRef.current) {
 			const ref = scrollContentRef.current
 			const track = scrollTrackRef.current
-			observer.current = new ResizeObserver(() => {
+			const observer = new ResizeObserver(() => {
 				handleResize(ref, track.clientWidth)
 			})
 			const firstChild = ref.getElementsByTagName("table")[0]
-			observer.current.observe(firstChild)
+			observer.observe(firstChild)
 			ref.addEventListener("scroll", handleThumbPosition)
 			return () => {
-				observer.current.unobserve(firstChild)
+				observer.unobserve(firstChild)
 				ref.removeEventListener("scroll", handleThumbPosition)
 			}
 		}
-	}, [])
+	}, [handleThumbPosition])
 
 	useEffect(() => {
 		document.addEventListener("mousemove", handleThumbMousemove)

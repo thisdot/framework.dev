@@ -21,6 +21,10 @@ const buttonVariants = {
 			paddingY: 16,
 			paddingX: 24,
 		}),
+		square: sprinkles({
+			borderRadius: 12,
+			padding: 12,
+		}),
 	},
 	color: {
 		primary: {
@@ -127,6 +131,7 @@ export const buttonStyle = recipe({
 			display: "inline-grid",
 			justifyContent: "center",
 			alignContent: "center",
+			alignItems: "center",
 			cursor: "pointer",
 			gridAutoFlow: "column",
 			transition: "background 0.15s ease-in-out, color 0.15s ease-in-out",

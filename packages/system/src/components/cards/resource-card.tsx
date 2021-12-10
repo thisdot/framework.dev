@@ -16,6 +16,7 @@ import {
 	resourceCardImageStyle,
 	resourceCardStyle,
 	resourceCardSubtitleStyle,
+	resourceCardTitleContainerStyle,
 	resourceCardTitleStyle,
 } from "./resource-card.css"
 import { Tag } from "../tag"
@@ -81,7 +82,7 @@ export function ResourceCard({
 						)}
 					</div>
 				)}
-				<div className={sprinkles({ layout: "stack", gap: 4 })}>
+				<div className={resourceCardTitleContainerStyle}>
 					<a href={href} target="_blank" rel="noreferrer">
 						<H className={resourceCardTitleStyle}>{title}</H>
 					</a>

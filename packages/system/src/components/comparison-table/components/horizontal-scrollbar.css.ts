@@ -7,16 +7,16 @@ export const horizontalScrollbarContainerStyle = style([
 	sprinkles({
 		border: "tableCell",
 		borderRadius: 12,
+		layout: "stack",
+		maxHeight: "100%",
 	}),
 	{
-		height: "100%",
 		overflow: "hidden",
 		position: "relative",
 	},
 ])
 
 export const horizontalScrollbarContentStyle = style({
-	height: "90vh",
 	msOverflowStyle: "none",
 	overflow: "auto",
 	scrollbarWidth: "none",

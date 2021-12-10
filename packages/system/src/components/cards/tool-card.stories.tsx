@@ -1,6 +1,7 @@
 import { Story, Meta } from "@storybook/react"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { exampleTools } from "../../util/example-content"
+import { titleFirstCardGrid } from "./card-layouts.css"
 import { ToolCard as ToolCardComponent, ToolCardProps } from "./tool-card"
 
 export default {
@@ -23,12 +24,7 @@ const Template: Story<ToolCardProps> = (args) => (
 			padding: 16,
 		})}
 	>
-		<div
-			className={sprinkles({
-				layout: "titleFirstCardGrid",
-				gap: 16,
-			})}
-		>
+		<div className={titleFirstCardGrid}>
 			{exampleTools.map((tool) => (
 				<ToolCardComponent key={tool.name} {...args} tool={tool} />
 			))}

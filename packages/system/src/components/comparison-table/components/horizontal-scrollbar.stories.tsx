@@ -28,12 +28,12 @@ const Template: Story<React.ComponentPropsWithoutRef<"div">> = () => (
 			<tbody>
 				{exampleScrollbarTableData.map((row) => (
 					<tr key={row.id}>
-						{Object.keys(row).map((key) => (
+						{Object.entries(row).map(([key, value]) => (
 							<td
 								key={`row-${row.id}-${key}`}
 								style={{ background: "white", padding: "12px" }}
 							>
-								{row[key]}
+								{value}
 							</td>
 						))}
 					</tr>

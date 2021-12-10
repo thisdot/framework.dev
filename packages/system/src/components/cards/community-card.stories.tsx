@@ -5,6 +5,7 @@ import {
 } from "./community-card"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { exampleCommunities } from "../../util/example-content"
+import { imageFirstCardGrid } from "./card-layouts.css"
 
 export default {
 	title: "Cards/Community Card",
@@ -26,12 +27,7 @@ const Template: Story<CommunityCardProps> = (args) => (
 			padding: 16,
 		})}
 	>
-		<div
-			className={sprinkles({
-				layout: "imageFirstCardGrid",
-				gap: 16,
-			})}
-		>
+		<div className={imageFirstCardGrid}>
 			{exampleCommunities.map((community) => (
 				<CommunityCardComponent
 					key={community.name}
