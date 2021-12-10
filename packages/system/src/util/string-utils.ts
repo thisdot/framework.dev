@@ -27,7 +27,10 @@ export function serializeFieldValue(inputValue: string) {
 }
 
 export function formatFieldValue(inputValue: string) {
-	return titleCase(inputValue)
+	const titleCased = titleCase(inputValue)
+	// Capitalize first letter to work around edge cases with the titleCase
+	// algorithm not working correctly on single-word mixed-case values
+	return titleCased.charAt(0).toUpperCase() + titleCased.slice(1)
 }
 
 export function deserializeFieldName(inputValue: string) {
