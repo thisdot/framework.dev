@@ -6,7 +6,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
   {
     name: "Reactiflux",
     description: "A chat community of 147,000+ React JS, React Native, Redux, Jest, Relay and GraphQL developers. They hold Q&A’s with Facebook Engineers and other developers in the community, both on Discord and Twitter.",
-    image: "",
+    image: "https://github.com/reactiflux.png",
     type: "discord",
     href: "https://usehooks.com/",
     tags: []

@@ -7,7 +7,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
     title: "ui.dev",
     author: "Tyler McGinnis",
     description: "A JavaScript blog with a focus on React content.",
-    image: "https://twitter.com/uidotdev/header_photo",
+    image: "https://github.com/uidotdev.png",
     href: "https://ui.dev/blog/",
     tags: []
   },
@@ -15,7 +15,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
     title: "Kent C. Dodds' Blog",
     author: "Kent C. Dodds",
     description: "Renowned JavaScript and React educator, Kent C. Dodds, shares his React knowledge through his blog.",
-    image: "https://res.cloudinary.com/kentcdodds-com/image/upload/w_1300,q_auto,f_auto/kent/kent-speaking-all-things-open",
+    image: "https://github.com/kentcdodds.png",
     href: "https://kentcdodds.com/blog?q=react",
     tags: []
   },
@@ -23,7 +23,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
     title: "Robin Wieruch's Blog",
     author: "Robin Wieruch",
     description: "German software engineer, Robin Weiruch, shares a variety of posts on React and JavaScript.",
-    image: "",
+    image: "https://github.com/rwieruch.png",
     href: "https://www.robinwieruch.de/categories/react/",
     tags: []
   }

@@ -7,7 +7,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
     name: "useHooks",
     author: "ui.dev",
     description: "Easy to understand React hook recipes.",
-    image: "",
+    image: "https://github.com/uidotdev.png",
     href: "https://usehooks.com/",
     tags: []
   }
