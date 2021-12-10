@@ -7,6 +7,7 @@ export const bodyWithNav = style({
 	"@media": {
 		[breakpoints.desktop]: {
 			gridTemplateColumns: "240px 1fr",
+			gridTemplateRows: "1fr",
 		},
 	},
 })

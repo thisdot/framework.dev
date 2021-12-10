@@ -170,6 +170,7 @@ function SearchBar({
 				<Button
 					as="button"
 					color="tertiary"
+					size="large"
 					onClick={() => setFilterMenuOpen(true)}
 				>
 					Advanced <FilterIcon />
@@ -181,7 +182,7 @@ function SearchBar({
 				<Button
 					as="button"
 					color="tertiary"
-					size="square"
+					size="largeSquare"
 					aria-label="Advanced search"
 					onClick={() => setFilterMenuOpen(true)}
 				>
@@ -192,6 +193,7 @@ function SearchBar({
 				position="right"
 				isOpen={filterMenuOpen}
 				onDismiss={() => setFilterMenuOpen(false)}
+				zIndex={10}
 			>
 				<FilterMenu
 					params={queryParams}

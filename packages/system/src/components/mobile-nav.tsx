@@ -84,6 +84,7 @@ export function MobileNav({
 				onDismiss={() => setMenuState("closed")}
 				aria-labelledby={menuButtonId}
 				className={mobileNavDialogStyle}
+				zIndex={3}
 			>
 				<div
 					className={sprinkles({

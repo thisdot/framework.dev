@@ -29,7 +29,6 @@ export const dialogOverlayStyle = recipe({
 		transitionProperty: "background",
 		transitionDuration: "200ms",
 		transitionTimingFunction: "ease-out",
-		zIndex: 3
 	},
 	variants: dialogOverlayVariants,
 })

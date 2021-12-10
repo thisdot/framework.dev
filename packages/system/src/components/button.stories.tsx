@@ -18,7 +18,7 @@ export default {
 			control: { type: "radio" },
 		},
 		size: {
-			options: ["small", "medium", "large"],
+			options: ["medium", "large", "square", "largeSquare"],
 			control: { type: "radio" },
 		},
 		color: {

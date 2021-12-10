@@ -1,7 +1,11 @@
 import classNames from "classnames"
 import React, { useEffect, useState } from "react"
 import { DialogOverlay, DialogContent } from "@reach/dialog"
-import { dialogContentStyle, DialogContentVariants, dialogOverlayStyle } from "./side-dialog.css"
+import {
+	dialogContentStyle,
+	DialogContentVariants,
+	dialogOverlayStyle,
+} from "./side-dialog.css"
 import assertNever from "assert-never"
 
 type MenuState = "closed" | "closing" | "opening" | "open"
@@ -11,6 +15,7 @@ export interface SideDialogProps extends React.ComponentPropsWithoutRef<"div"> {
 	isOpen?: boolean
 	onDismiss: () => void
 	position: NonNullable<DialogContentVariants["position"]>
+	zIndex?: number
 }
 
 export function SideDialog({
@@ -19,11 +24,13 @@ export function SideDialog({
 	isOpen = false,
 	onDismiss,
 	position,
+	zIndex,
 	...props
 }: SideDialogProps) {
 	const menuState = useMenuState(isOpen)
 	return (
 		<DialogOverlay
+			style={{ zIndex }}
 			className={dialogOverlayStyle({
 				state: menuStateToAnimationState(menuState),
 			})}
