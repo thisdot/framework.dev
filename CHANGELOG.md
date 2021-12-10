@@ -1,5 +1,6 @@
 # Changelog
 
+- [2021-12-10] Create blog model and add resources [\#135](https://github.com/thisdot/framework.dev/pull/135) ([alicenstar](https://github.com/alicenstar))
 - [2021-12-06] Redesign tag filters [\#125](https://github.com/thisdot/framework.dev/pull/125) ([jbachhardie](https://github.com/jbachhardie))
 - [2021-12-02] Make tag clicks modify the current search instead of linking to another page [\#124](https://github.com/thisdot/framework.dev/pull/124) ([jbachhardie](https://github.com/jbachhardie))
 - [2021-12-02] Redesign field filters [\#123](https://github.com/thisdot/framework.dev/pull/123) ([jbachhardie](https://github.com/jbachhardie))
