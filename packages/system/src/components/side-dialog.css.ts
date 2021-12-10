@@ -1,5 +1,5 @@
 import { recipe } from "@vanilla-extract/recipes"
-import { VariantSelection } from "@vanilla-extract/recipes/dist/declarations/src/types"
+import type { VariantSelection } from "@vanilla-extract/recipes/dist/declarations/src/types"
 import { breakpoints, sprinkles } from "../sprinkles/sprinkles.css"
 
 const dialogOverlayVariants = {
@@ -29,6 +29,7 @@ export const dialogOverlayStyle = recipe({
 		transitionProperty: "background",
 		transitionDuration: "200ms",
 		transitionTimingFunction: "ease-out",
+		zIndex: 3
 	},
 	variants: dialogOverlayVariants,
 })
@@ -53,6 +54,11 @@ const dialogContentVariants = {
 			right: 0,
 			width: "304px",
 			height: "100%",
+			"@media": {
+				[breakpoints.tablet]: {
+					width: "320px",
+				},
+			},
 		},
 	},
 } as const
@@ -71,11 +77,6 @@ export const dialogContentStyle = recipe({
 			transitionProperty: "transform",
 			transitionDuration: "200ms",
 			position: "fixed",
-			"@media": {
-				[breakpoints.tablet]: {
-					width: "320px",
-				},
-			},
 		},
 	],
 	variants: dialogContentVariants,

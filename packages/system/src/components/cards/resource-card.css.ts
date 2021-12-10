@@ -25,7 +25,7 @@ const base = style([
 	},
 ])
 const titleFirst = style([
-	sprinkles({ columnGap: 12, rowGap: { mobile: 8, desktop: 12 } }),
+	sprinkles({ columnGap: 12, rowGap: { mobile: 8, tablet: 12 } }),
 	{
 		minWidth: pxToRem(340),
 		gridTemplateAreas: `
@@ -38,7 +38,7 @@ const titleFirst = style([
 	},
 ])
 const imageFirst = style([
-	sprinkles({ columnGap: 16, rowGap: { mobile: 8, desktop: 12 } }),
+	sprinkles({ columnGap: 16, rowGap: { mobile: 8, tablet: 12 } }),
 	{
 		gridTemplateAreas: `
 		"image header"
@@ -49,7 +49,7 @@ const imageFirst = style([
 		gridTemplateRows: "auto 1fr auto",
 		minWidth: pxToRem(250),
 		"@media": {
-			[breakpoints.desktop]: {
+			[breakpoints.tablet]: {
 				gridTemplateColumns: "1fr",
 				gridTemplateRows: "auto auto 1fr auto",
 				gridTemplateAreas: `

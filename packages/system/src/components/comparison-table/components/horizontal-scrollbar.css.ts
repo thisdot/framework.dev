@@ -13,9 +13,8 @@ export const horizontalScrollbarContainerStyle = style([
 		overflow: "hidden",
 		position: "relative",
 		"@media": {
-			[breakpoints.desktop]: {
-				borderBottomLeftRadius: pxToRem(12),
-				borderBottomRightRadius: pxToRem(12),
+			[breakpoints.tablet]: {
+				borderRadius: pxToRem(12),
 			}
 		}
 	},

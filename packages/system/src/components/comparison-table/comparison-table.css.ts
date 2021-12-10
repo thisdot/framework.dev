@@ -14,7 +14,7 @@ export const comparisonTableStyle = style([
 		gridAutoRows: pxToRem(44),
 		position: "relative",
 		"@media": {
-			[breakpoints.desktop]: {
+			[breakpoints.tablet]: {
 				gridAutoRows: pxToRem(56),
 			},
 		},

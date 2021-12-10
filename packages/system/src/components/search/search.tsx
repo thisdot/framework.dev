@@ -384,7 +384,7 @@ function LibraryComparison({
 				minHeight: 0,
 				maxHeight: "100%",
 				layout: "stack",
-				paddingY: { mobile: 24, desktop: 48 },
+				paddingY: { mobile: 24, tablet: 40, desktop: 48 },
 			})}
 		>
 			<div
@@ -392,8 +392,8 @@ function LibraryComparison({
 					layout: "row",
 					alignItems: "center",
 					justifyContent: "space-between",
-					paddingBottom: { mobile: 16, desktop: 24 },
-					paddingX: { mobile: 16, desktop: 64 },
+					paddingBottom: { mobile: 16, tablet: 24 },
+					paddingX: { mobile: 16, tablet: 24, desktop: 64 },
 				})}
 			>
 				<h2 className={sprinkles({ textStyle: "h200" })}>Library comparison</h2>
@@ -403,7 +403,7 @@ function LibraryComparison({
 			</div>
 			<ComparisonTable
 				className={sprinkles({
-					paddingX: { mobile: 0, desktop: 64 },
+					paddingX: { mobile: 0, tablet: 24, desktop: 64 },
 					minHeight: 0,
 				})}
 				libraries={selectedLibraries}
@@ -414,7 +414,7 @@ function LibraryComparison({
 					justifyContent: "flex-end",
 					gap: 12,
 					paddingTop: 16,
-					paddingX: { mobile: 16, desktop: 64 },
+					paddingX: { mobile: 16, tablet: 24, desktop: 64 },
 				})}
 			>
 				<Button color="destructive" onClick={onReset}>

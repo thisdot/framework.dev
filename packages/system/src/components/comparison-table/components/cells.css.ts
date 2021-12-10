@@ -10,16 +10,11 @@ const cellStyle = style([
 		display: "flex",
 		alignItems: "center",
 		justifyContent: "flex-start",
-		paddingX: { mobile: 16, desktop: 24 },
+		paddingX: { mobile: 16, tablet: 24 },
 		height: "full",
 	}),
 	{
-		maxWidth: pxToRem(180),
-		"@media": {
-			[breakpoints.desktop]: {
-				maxWidth: "100%",
-			},
-		},
+		maxWidth: "40vw",
 	},
 ])
 
@@ -38,14 +33,15 @@ export const cellTHStyle = style([
 				left: 0,
 				zIndex: 3,
 				"@media": {
-					[breakpoints.desktop]: {
+					[breakpoints.tablet]: {
 						borderTopLeftRadius: pxToRem(12),
 					},
 				},
 			},
 			"&:last-of-type": {
+				borderRightColor: "transparent",
 				"@media": {
-					[breakpoints.desktop]: {
+					[breakpoints.tablet]: {
 						borderTopRightRadius: pxToRem(12),
 					},
 				},
@@ -110,6 +106,11 @@ export const cellTDStyle = style([
 	cellStyle,
 	{
 		backgroundColor: "white",
+		selectors: {
+			"&:last-child": {
+				borderRight: "none",
+			},
+		},
 	},
 ])
 

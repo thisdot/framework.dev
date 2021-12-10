@@ -40,7 +40,7 @@ const { title, currentCategory, currentTag } = Astro.props
 			<slot />
 		</main>
 		<MobileNav 
-			client:media="(max-width:1024px)"
+			client:media="(max-width:1025px)"
 			currentCategory={currentCategory} 
 			currentTag={currentTag} 
 			className={sprinkles({ display: { mobile: "flex", desktop: "none" }})} 

@@ -1,5 +1,5 @@
 import { recipe } from "@vanilla-extract/recipes"
-import { VariantSelection } from "@vanilla-extract/recipes/dist/declarations/src/types"
+import type { VariantSelection } from "@vanilla-extract/recipes/dist/declarations/src/types"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { vars } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"

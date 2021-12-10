@@ -6,27 +6,21 @@ const base = style([
 	{
 		display: "grid",
 		gridAutoRows: "max-content",
-		gridTemplateColumns: "1fr",
 	},
 ])
 
 export const titleFirstCardGrid = style([
 	base,
-	{
-		"@media": {
-			[breakpoints.desktop]: {
-				gridTemplateColumns: "repeat(auto-fit, 340px)",
-			},
-		},
-	},
+	{ gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))" },
 ])
 
 export const imageFirstCardGrid = style([
 	base,
 	{
+		gridTemplateColumns: "1fr",
 		"@media": {
-			[breakpoints.desktop]: {
-				gridTemplateColumns: "repeat(auto-fit, 250px)",
+			[breakpoints.tablet]: {
+				gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
 			},
 		},
 	},
