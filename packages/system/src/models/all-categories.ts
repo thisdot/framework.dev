@@ -4,6 +4,7 @@ import {
 	UnionToIntersection,
 } from "../util/type-utils"
 import { Book, bookIndexMetadata } from "./book"
+import { Blog, blogIndexMetadata } from "./blog"
 import { CodeExample, codeExampleIndexMetadata } from "./code-example"
 import { Community, communityIndexMetadata } from "./community"
 import { Company, companyIndexMetadata } from "./company"
@@ -14,6 +15,7 @@ import { Tool, toolIndexMetadata } from "./tool"
 
 export const allCategoriesMetadata = {
 	[bookIndexMetadata.name]: bookIndexMetadata,
+	[blogIndexMetadata.name]: blogIndexMetadata,
 	[codeExampleIndexMetadata.name]: codeExampleIndexMetadata,
 	[communityIndexMetadata.name]: communityIndexMetadata,
 	[companyIndexMetadata.name]: companyIndexMetadata,
@@ -34,6 +36,7 @@ export const allCategoryNames = Object.keys(
 
 export type AllModelsByName = {
 	[bookIndexMetadata.name]: Book<string>
+	[blogIndexMetadata.name]: Blog<string>
 	[codeExampleIndexMetadata.name]: CodeExample<string>
 	[communityIndexMetadata.name]: Community<string>
 	[companyIndexMetadata.name]: Company<string>
