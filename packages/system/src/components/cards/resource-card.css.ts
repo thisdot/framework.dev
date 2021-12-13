@@ -27,7 +27,6 @@ const base = style([
 const titleFirst = style([
 	sprinkles({ columnGap: 12, rowGap: { mobile: 8, tablet: 12 } }),
 	{
-		minWidth: pxToRem(340),
 		gridTemplateAreas: `
 		"image header"
 		"body body"
@@ -47,7 +46,6 @@ const imageFirst = style([
 		`,
 		gridTemplateColumns: `${pxToRem(112)} 1fr`,
 		gridTemplateRows: "auto 1fr auto",
-		minWidth: pxToRem(250),
 		"@media": {
 			[breakpoints.tablet]: {
 				gridTemplateColumns: "1fr",

@@ -12,5 +12,6 @@ export const homepageStyle = style([
 	}),
 	{
 		gap: pxToRem(128),
+		overflow: "auto",
 	},
 ])

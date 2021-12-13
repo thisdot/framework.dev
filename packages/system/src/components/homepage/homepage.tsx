@@ -3,22 +3,28 @@ import React from "react"
 import { homepageStyle } from "./homepage.css"
 import { Hero } from "./hero"
 import { FeaturedLibraries } from "./featured-libraries"
-import { ComparisonBox } from "./comparison-box"
 import { Podcasts } from "./podcasts"
 import { Courses } from "./courses"
 import { ContributorBanner } from "./contributor-banner"
 import { Books } from "./books"
 import { LatestTools } from "./latest-tools"
 import { Communities } from "./communities"
+import { Library } from "../../models/library"
 
-export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {}
+export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
+	libraries: Library<string>[]
+}
 
-export function Homepage({ children, className, ...props }: HomepageProps) {
+export function Homepage({
+	children,
+	className,
+	libraries,
+	...props
+}: HomepageProps) {
 	return (
 		<div className={classNames(className, homepageStyle)} {...props}>
 			<Hero />
-			<FeaturedLibraries />
-			<ComparisonBox />
+			<FeaturedLibraries libraries={libraries} />
 			<Podcasts />
 			<Courses />
 			<ContributorBanner

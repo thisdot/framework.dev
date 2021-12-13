@@ -5,10 +5,14 @@ import { comparisonBoxStyle } from "./comparison-box.css"
 export interface ComparisonBoxProps
 	extends React.ComponentPropsWithoutRef<"div"> {}
 
-export function ComparisonBox({ children, className, ...props }: ComparisonBoxProps) {
+export function ComparisonBox({
+	children,
+	className,
+	...props
+}: ComparisonBoxProps) {
 	return (
 		<div className={classNames(className, comparisonBoxStyle)} {...props}>
-			{children}
+			<h2>Compare and select libraries based on your needs</h2>
 		</div>
 	)
 }
