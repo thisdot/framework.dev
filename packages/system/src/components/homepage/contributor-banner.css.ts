@@ -1,6 +1,6 @@
 import { style } from "@vanilla-extract/css"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { pxToRem } from "../util/style-utils"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { pxToRem } from "../../util/style-utils"
 
 export const contributorBannerStyle = style([
 	sprinkles({
