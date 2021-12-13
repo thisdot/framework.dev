@@ -29,7 +29,7 @@ const tag = Astro.props.tag as string
 const title = `React ${formatFieldValue(tag)} ${formatFieldName(category)}`
 ---
 <head>
-	<meta name="description" content={`Browse ${title}`}/>
+	<meta name="description" content={`Browse and search through relevant ${title}`}/>
 </head>
 <BaseLayout title={title} currentCategory={category} currentTag={tag}>
 	<Search client:load preFilters={{ category: [category], tag: [tag], field: [] }} />
