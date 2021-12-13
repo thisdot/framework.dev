@@ -13,7 +13,9 @@ export function Sidebar({ children, className, ...props }: SidebarProps) {
 	return (
 		<nav className={classNames(className, sidebarStyle)} {...props}>
 			<header className={sidebarHeaderStyle}>
-				<Logo />
+				<a href="/">
+					<Logo />
+				</a>
 			</header>
 			<div className={sidebarBodyStyle}>{children}</div>
 		</nav>
