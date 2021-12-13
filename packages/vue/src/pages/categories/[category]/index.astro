@@ -1,0 +1,29 @@
+---
+import {
+	formatFieldName,
+	serializeFieldName,
+} from "@framework/system/src/util/string-utils"
+import BaseLayout from '../../../layouts/base.astro'
+import { searchData } from '../../../data/search-data'
+import { CategoryName } from '@framework/system/src/models/all-categories'
+import Search from '../../../components/search.tsx'
+
+export function getStaticPaths() {
+	return searchData.map(category => ({
+		params: {
+			category: serializeFieldName(category.name)
+		},
+		props: { category: category.name }
+	}))
+}
+
+const category = Astro.props.category as CategoryName
+
+const title = `Vue ${formatFieldName(category)}`
+---
+<head>
+	<meta name="description" content={`Browse and search through relevant ${title}`}/>
+</head>
+<BaseLayout title={title} currentCategory={category}>
+	<Search client:load preFilters={{ category: [category], tag: [], field: [] }} />
+</BaseLayout>

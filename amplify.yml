@@ -20,6 +20,46 @@ applications:
         paths:
           - ../../node_modules/**/*
           - ../../packages/*/node_modules/**/*
+  - appRoot: packages/angular
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd ../..
+            - nvm install
+            - nvm use
+            - yarn install
+        build:
+          commands:
+            - yarn build:angular
+      artifacts:
+        baseDirectory: dist
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - ../../node_modules/**/*
+          - ../../packages/*/node_modules/**/*
+  - appRoot: packages/vue
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd ../..
+            - nvm install
+            - nvm use
+            - yarn install
+        build:
+          commands:
+            - yarn build:vue
+      artifacts:
+        baseDirectory: dist
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - ../../node_modules/**/*
+          - ../../packages/*/node_modules/**/*
   - appRoot: packages/system
     frontend:
       phases:

@@ -3,7 +3,7 @@ import '@framework/system/src/globals/global-styles';
 import classNames from 'classnames'
 import { fontHeadTags } from '@framework/system/src/globals/font-import.mjs'
 import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css'
-import { reactTheme } from '@framework/system/src/themes/themes.css'
+import { vueTheme } from '@framework/system/src/themes/themes.css'
 import { Sidebar } from '@framework/system/src/components/sidebar.tsx'
 import { bodyWithNav, shrinkable } from '@framework/system/src/styles/layouts.css'
 import { MobileNav } from '../components/mobile-nav.tsx'
@@ -11,17 +11,17 @@ import { NavItems } from '../components/nav-items.tsx'
 const { title, currentCategory, currentTag } = Astro.props
 ---
 <!DOCTYPE html>
-<html class={reactTheme} lang="en">
+<html class={vueTheme} lang="en">
   <head>
 		{fontHeadTags}
-    <title>{title} | react.framework.dev</title>
+    <title>{title} | vue.framework.dev</title>
 		<meta name="robots" content="noindex">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="UTF-8"/>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-33DWS64W1B"></script>
 		{
-			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" &&
+			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" && 
 			<script>
 				window.dataLayer = window.dataLayer || [];
 				function gtag(){dataLayer.push(arguments);}
@@ -32,7 +32,7 @@ const { title, currentCategory, currentTag } = Astro.props
 		}
   </head>
   <body class={classNames(sprinkles({ backgroundColor: "surface4", height: "full" }), bodyWithNav)} >
-		<Sidebar aria-label="primary">
+		<Sidebar className={sprinkles({ display: { mobile: "none", desktop: "block" }})}>
 			<div class={sprinkles({ layout: "stack", gap: 24 })}>
 				<NavItems currentCategory={currentCategory} currentTag={currentTag} />
 			</div>
@@ -40,12 +40,11 @@ const { title, currentCategory, currentTag } = Astro.props
 		<main class={shrinkable}>
 			<slot />
 		</main>
-		<MobileNav
-			aria-label="primary"
+		<MobileNav 
 			client:media="(max-width:1025px)"
-			currentCategory={currentCategory}
-			currentTag={currentTag}
-			className={sprinkles({ display: { mobile: "flex", desktop: "none" }})}
+			currentCategory={currentCategory} 
+			currentTag={currentTag} 
+			className={sprinkles({ display: { mobile: "flex", desktop: "none" }})} 
 		/>
   </body>
 </html>

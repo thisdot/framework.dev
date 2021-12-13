@@ -1,0 +1,36 @@
+---
+import {
+	formatFieldName,
+	serializeFieldName,
+	serializeFieldValue,
+	formatFieldValue
+} from "@framework/system/src/util/string-utils"
+import BaseLayout from '../../../../layouts/base.astro'
+import { searchData } from '../../../../data/search-data'
+import { CategoryName } from '@framework/system/src/models/all-categories'
+import Search from '../../../../components/search.tsx'
+
+export function getStaticPaths() {
+	return searchData.flatMap(
+		category => category.tags.map(
+			tag => ({
+				params: {
+					category: serializeFieldName(category.name),
+					tag: serializeFieldValue(tag) 
+				},
+				props: { category: category.name, tag }
+			})
+		)
+	)
+}
+
+const category = Astro.props.category as CategoryName
+const tag = Astro.props.tag as string
+const title = `Vue ${formatFieldValue(tag)} ${formatFieldName(category)}`
+---
+<head>
+	<meta name="description" content={`Browse and search through relevant ${title}`}/>
+</head>
+<BaseLayout title={title} currentCategory={category} currentTag={tag}>
+	<Search client:load preFilters={{ category: [category], tag: [tag], field: [] }} />
+</BaseLayout>
