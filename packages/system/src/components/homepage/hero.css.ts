@@ -1,11 +1,28 @@
 import { style } from "@vanilla-extract/css"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { pxToRem } from "../../util/style-utils"
+import { vars } from "../../themes/themes.css"
 
 export const heroStyle = style([
 	sprinkles({
-		// Put sprinkles here
+		borderRadius: 40,
+		padding: 48,
 	}),
 	{
-		// Put custom CSS here
+		backgroundColor: vars.palette.primary99,
 	},
+])
+
+export const heroHeadingStyle = style({
+	color: vars.themeColors.onSurface,
+	fontSize: pxToRem(88),
+	fontWeight: 700,
+	lineHeight: 1,
+	letterSpacing: "-0.02em",
+})
+
+export const heroParagraphStyle = style([
+	sprinkles({
+		textStyle: "bodyLong1",
+	}),
 ])
