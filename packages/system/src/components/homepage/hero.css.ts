@@ -6,10 +6,13 @@ import { vars } from "../../themes/themes.css"
 export const heroStyle = style([
 	sprinkles({
 		borderRadius: 40,
-		padding: 48,
+		paddingX: 48,
 	}),
 	{
 		backgroundColor: vars.palette.primary99,
+		minHeight: pxToRem(480),
+		paddingBottom: pxToRem(68),
+		paddingTop: pxToRem(68),
 	},
 ])
 

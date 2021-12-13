@@ -11,3 +11,18 @@ export function Chip({ className, children, ...props }: ChipProps) {
 		</button>
 	)
 }
+
+export type ChipLinkProps = React.ComponentPropsWithoutRef<"a">
+
+export function ChipLink({
+	className,
+	children,
+	href,
+	...props
+}: ChipLinkProps) {
+	return (
+		<a className={classNames(className, chipStyle)} href={href} {...props}>
+			{children}
+		</a>
+	)
+}

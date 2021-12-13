@@ -8,11 +8,12 @@ export const comparisonBoxStyle = style([
 		border: "thin",
 		borderRadius: 12,
 		display: "grid",
+		gap: 8,
 		paddingLeft: 16,
 		paddingTop: 16,
 	}),
 	{
-		gridTemplateRows: "1fr repeat(2, auto) 1fr",
+		gridTemplateRows: "1fr repeat(3, auto)",
 		overflow: "hidden",
 		selectors: {
 			"&:not(:hover)": {

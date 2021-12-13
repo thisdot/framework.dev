@@ -7,7 +7,8 @@ import {
 	comparisonBoxWhichLibsStyle,
 	comparisonBoxImageStyle,
 } from "./comparison-box.css"
-import { Chip } from "../chip"
+import { ChipLink } from "../chip"
+import { serializeFieldValue } from "../../util/string-utils"
 
 export interface ComparisonBoxProps
 	extends React.ComponentPropsWithoutRef<"div"> {
@@ -33,9 +34,13 @@ export function ComparisonBox({
 			</p>
 			<div>
 				{libraryTags.slice(0, 6).map((tag) => (
-					<Chip style={{ margin: "0 8px 8px 0" }} key={tag}>
+					<ChipLink
+						style={{ margin: "0 8px 8px 0" }}
+						key={tag}
+						href={`/categories/libraries/tags/${serializeFieldValue(tag)}`}
+					>
 						{tag}
-					</Chip>
+					</ChipLink>
 				))}
 			</div>
 			<svg
