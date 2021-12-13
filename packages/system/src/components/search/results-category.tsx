@@ -5,12 +5,8 @@ import { startCase } from "lodash"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { BookCard } from "../cards/book-card"
 import { Book } from "../../models/book"
-import { CodeExampleCard } from "../cards/code-example-card"
-import { CodeExample } from "../../models/code-example"
 import { CommunityCard } from "../cards/community-card"
 import { Community } from "../../models/community"
-import { CompanyCard } from "../cards/company-card"
-import { Company } from "../../models/company"
 import { CourseCard } from "../cards/course-card"
 import { Course } from "../../models/course"
 import { LibraryCard } from "../cards/library-card"
@@ -27,6 +23,8 @@ import {
 	imageFirstCardGrid,
 	titleFirstCardGrid,
 } from "../cards/card-layouts.css"
+import { Blog } from "../../models/blog"
+import { BlogCard } from "../cards/blog-card"
 
 export type ResultsCategoryProps<T extends CategoryName> = Omit<
 	React.ComponentPropsWithoutRef<"div">,
@@ -146,17 +144,13 @@ function renderCard<T extends CategoryName>({
 			return ((record: Book<string>, index: number) => (
 				<BookCard key={index} book={record} {...props} />
 			)) as RenderCardFn<T>
-		case "codeExamples":
-			return ((record: CodeExample<string>, index: number) => (
-				<CodeExampleCard key={index} codeExample={record} {...props} />
+		case "blogs":
+			return ((record: Blog<string>, index: number) => (
+				<BlogCard key={index} blog={record} {...props} />
 			)) as RenderCardFn<T>
 		case "communities":
 			return ((record: Community<string>, index: number) => (
 				<CommunityCard key={index} community={record} {...props} />
-			)) as RenderCardFn<T>
-		case "companies":
-			return ((record: Company<string>, index: number) => (
-				<CompanyCard key={index} company={record} {...props} />
 			)) as RenderCardFn<T>
 		case "courses":
 			return ((record: Course<string>, index: number) => (
