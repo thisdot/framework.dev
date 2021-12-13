@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/base.astro'
+import Search from '../components/search.tsx'
+---
+<head>
+	<meta name="description" content="Search React resources"/>
+</head>
+<BaseLayout title="Search">
+	<Search client:load />
+</BaseLayout>

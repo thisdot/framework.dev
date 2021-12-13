@@ -1,5 +1,8 @@
 # Changelog
 
+- [2021-12-13] Improve page metadata for better SEO
+  [\#141](https://github.com/thisdot/framework.dev/pull/141)
+  ([jbachhardie](https://github.com/jbachhardie))
 - [2021-12-13] Remove unused categories, add Blogs
   [\#140](https://github.com/thisdot/framework.dev/pull/135)
   ([jbachhardie](https://github.com/jbachhardie))

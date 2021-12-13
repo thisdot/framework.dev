@@ -38,12 +38,14 @@ import { Logo } from "../logo"
 
 export interface SearchProps extends React.ComponentPropsWithoutRef<"section"> {
 	data: AllCategories[]
+	initialQuery?: string
 	preFilters?: FilterSet
 }
 
 export function Search({
 	className,
 	data: initialData,
+	initialQuery = "",
 	preFilters = emptyFilterSet,
 	...props
 }: SearchProps) {
@@ -55,7 +57,7 @@ export function Search({
 		}
 		return data
 	}, [initialData, preFilters])
-	const [query, setQuery] = useState("")
+	const [query, setQuery] = useState(initialQuery)
 	const [selectedLibraries, setSelectedLibraries] = useState<Library<string>[]>(
 		[]
 	)

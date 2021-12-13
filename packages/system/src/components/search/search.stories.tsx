@@ -11,6 +11,7 @@ export default {
 	},
 	args: {
 		data: exampleSearchData,
+		initialQuery: "",
 		preFilters: {
 			category: ["libraries"],
 			field: [],
