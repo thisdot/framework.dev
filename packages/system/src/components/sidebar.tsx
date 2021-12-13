@@ -1,4 +1,3 @@
-import classNames from "classnames"
 import React from "react"
 import { Logo } from "./logo"
 import {
@@ -11,7 +10,7 @@ export type SidebarProps = React.ComponentPropsWithoutRef<"nav">
 
 export function Sidebar({ children, className, ...props }: SidebarProps) {
 	return (
-		<nav className={classNames(className, sidebarStyle)} {...props}>
+		<nav className={sidebarStyle} {...props}>
 			<header className={sidebarHeaderStyle}>
 				<a href="/">
 					<Logo />

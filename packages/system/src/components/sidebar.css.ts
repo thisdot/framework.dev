@@ -6,6 +6,7 @@ export const sidebarStyle = style([
 	sprinkles({
 		backgroundColor: "surface",
 		borderRight: "thin",
+		display: { mobile: "none", desktop: "block" },
 	}),
 	{ height: "100%" },
 ])
