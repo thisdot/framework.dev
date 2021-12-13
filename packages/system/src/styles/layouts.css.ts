@@ -7,7 +7,7 @@ export const bodyWithNav = style({
 	"@media": {
 		[breakpoints.desktop]: {
 			gridTemplateColumns: "240px 1fr",
-			gridTemplateRows: "1fr",
+			gridTemplateRows: "min-content",
 		},
 	},
 })
@@ -15,5 +15,5 @@ export const bodyWithNav = style({
 export const shrinkable = style({ minHeight: 0 })
 
 export const fullscreen = style({
-	height: "100vh"
+	height: "100vh",
 })

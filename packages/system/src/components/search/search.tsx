@@ -408,7 +408,7 @@ function LibraryComparison({
 			className={sprinkles({
 				minWidth: 0,
 				minHeight: 0,
-				maxHeight: "100%",
+				maxHeight: "100vh",
 				layout: "stack",
 				paddingY: { mobile: 24, tablet: 40, desktop: 48 },
 			})}

@@ -6,11 +6,23 @@ export const sidebarStyle = style([
 	sprinkles({
 		backgroundColor: "surface",
 		borderRight: "thin",
-		display: { mobile: "none", desktop: "grid" },
+		display: { mobile: "none", desktop: "block" },
+	}),
+	{
+		position: "relative",
+	},
+])
+
+export const sidebarContentsStyle = style([
+	sprinkles({
+		display: "grid",
 	}),
 	{
 		gridTemplateRows: "auto 1fr auto",
-		height: "100%",
+		height: "100vh",
+		overflow: "auto",
+		position: "sticky",
+		top: 0,
 	},
 ])
 
