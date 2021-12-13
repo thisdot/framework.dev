@@ -13,18 +13,20 @@ import { Library } from "../../models/library"
 
 export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
 	libraries: Library<string>[]
+	libraryTags: string[]
 }
 
 export function Homepage({
 	children,
 	className,
 	libraries,
+	libraryTags,
 	...props
 }: HomepageProps) {
 	return (
 		<div className={classNames(className, homepageStyle)} {...props}>
 			<Hero />
-			<FeaturedLibraries libraries={libraries} />
+			<FeaturedLibraries libraries={libraries} libraryTags={libraryTags} />
 			<Podcasts />
 			<Courses />
 			<ContributorBanner

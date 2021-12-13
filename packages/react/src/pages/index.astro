@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/base.astro'
 import Homepage from '../components/homepage.tsx'
-import {libraries} from '../data/libraries.ts'
+import {libraries, libraryTags} from '../data/libraries.ts'
 
 const searchableWebsiteStructuredData = {
 	"@context": "https://schema.org",
@@ -22,5 +22,5 @@ const searchableWebsiteStructuredData = {
 	{`<script type="application/ld+json">${JSON.stringify(searchableWebsiteStructuredData)}</script>`}
 </head>
 <BaseLayout title="Featured React resources">
-	<Homepage libraries={libraries} />
+	<Homepage libraries={libraries} libraryTags={libraryTags} />
 </BaseLayout>

@@ -1,6 +1,5 @@
 import { style } from "@vanilla-extract/css"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { pxToRem } from "../../util/style-utils"
 import { vars } from "../../themes/themes.css"
 
 export const comparisonBoxStyle = style([
@@ -8,19 +7,43 @@ export const comparisonBoxStyle = style([
 		backgroundColor: "white",
 		border: "thin",
 		borderRadius: 12,
+		display: "grid",
+		paddingLeft: 16,
+		paddingTop: 16,
 	}),
 	{
-		display: "grid",
-		padding: pxToRem(15),
+		gridTemplateRows: "1fr repeat(2, auto) 1fr",
+		overflow: "hidden",
 		selectors: {
 			"&:not(:hover)": {
 				borderColor: "transparent",
 			},
-			'&[data-selected="true"]': {
-				borderWidth: pxToRem(4),
-				padding: pxToRem(12),
-				borderColor: vars.palette.tertiary60,
-			},
 		},
 	},
 ])
+
+export const comparisonBoxHeadingStyle = sprinkles({
+	color: "regularText",
+	paddingRight: 16,
+	textStyle: "h200",
+})
+
+export const comparisonBoxHeadingSoftStyle = sprinkles({
+	color: "softText",
+	paddingRight: 16,
+})
+
+export const comparisonBoxWhichLibsStyle = style([
+	sprinkles({
+		marginBottom: 12,
+		paddingRight: 16,
+		textStyle: "bodyShort2",
+	}),
+	{
+		color: vars.palette.neutralVariant20,
+	},
+])
+
+export const comparisonBoxImageStyle = style({
+	alignSelf: "end",
+})

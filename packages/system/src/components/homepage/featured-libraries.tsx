@@ -13,12 +13,14 @@ import { ComparisonBox } from "./comparison-box"
 export interface FeaturedLibrariesProps
 	extends React.ComponentPropsWithoutRef<"div"> {
 	libraries: Library<string>[]
+	libraryTags: string[]
 }
 
 export function FeaturedLibraries({
 	children,
 	className,
 	libraries,
+	libraryTags,
 	...props
 }: FeaturedLibrariesProps) {
 	const randomLibraries: Library<string>[] = [
@@ -44,7 +46,10 @@ export function FeaturedLibraries({
 							}}
 						/>
 					))}
-					<ComparisonBox style={{ gridArea: "compare" }} />
+					<ComparisonBox
+						style={{ gridArea: "compare" }}
+						libraryTags={libraryTags}
+					/>
 				</>
 			</div>
 			<a href="/categories/libraries" className={featuredLibrariesViewAllStyle}>
@@ -55,5 +60,5 @@ export function FeaturedLibraries({
 }
 
 function generateRandomIndex(length: number): number {
-	return Math.round(Math.random() * length)
+	return Math.floor(Math.random() * length)
 }
