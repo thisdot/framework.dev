@@ -1,5 +1,7 @@
 # Changelog
 
+- [2021-01-05] Add Angular and Vue sites
+  [\#142](https://github.com/thisdot/framework.dev/pull/142)
 - [2022-01-04] Fix trailing slashes on URLs
   [\#147](https://github.com/thisdot/framework.dev/pull/147)
   ([jbachhardie](https://github.com/jbachhardie))
