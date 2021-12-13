@@ -1,6 +1,7 @@
 import { style } from "@vanilla-extract/css"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { vars } from "../themes/themes.css"
+import { pxToRem } from "../util/style-utils"
 
 export const mobileNavStyle = style([
 	sprinkles({
@@ -13,7 +14,10 @@ export const mobileNavStyle = style([
 	}),
 	{
 		backgroundColor: vars.palette.primary99,
-		position: "relative",
+		bottom: 0,
+		height: pxToRem(56),
+		position: "fixed",
+		width: "100%",
 		zIndex: 10,
 	},
 ])
