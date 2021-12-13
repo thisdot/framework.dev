@@ -1,18 +1,22 @@
 import { style } from "@vanilla-extract/css"
-import { sprinkles } from "../../../sprinkles/sprinkles.css"
+import { breakpoints, sprinkles } from "../../../sprinkles/sprinkles.css"
 import { vars } from "../../../themes/themes.css"
 import { pxToRem } from "../../../util/style-utils"
 
 export const horizontalScrollbarContainerStyle = style([
 	sprinkles({
 		border: "tableCell",
-		borderRadius: 12,
 		layout: "stack",
 		maxHeight: "100%",
 	}),
 	{
 		overflow: "hidden",
 		position: "relative",
+		"@media": {
+			[breakpoints.tablet]: {
+				borderRadius: pxToRem(12),
+			}
+		}
 	},
 ])
 

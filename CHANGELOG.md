@@ -2,7 +2,10 @@
 
 - [2021-12-13] Remove unused categories, add Blogs
   [\#140](https://github.com/thisdot/framework.dev/pull/135)
-  ([jbachhardie](https://github.com/jbachhardie)))
+  ([jbachhardie](https://github.com/jbachhardie))
+- [2021-12-10] Mobile and tablet designs for search, navigation and comparison 
+  [\[#126](https://github.com/thisdot/framework.dev/issues/126)
+  ([jbachhardie](https://github.com/jbachhardie))
 - [2021-12-10] Create blog model and add resources
   [\#135](https://github.com/thisdot/framework.dev/pull/135)
   ([alicenstar](https://github.com/alicenstar))

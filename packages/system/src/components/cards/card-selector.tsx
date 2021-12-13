@@ -5,6 +5,7 @@ import { UnselectIcon } from "../../icons/unselect-icon"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { cardSelectorLabelStyle } from "./card-selector.css"
 import { Tooltip } from "../tooltip"
+import { visuallyHidden } from "../../styles/utilities.css"
 
 export interface CardSelectorProps
 	extends React.ComponentPropsWithoutRef<"input"> {}
@@ -23,14 +24,12 @@ export function CardSelector({
 				<input
 					type="checkbox"
 					checked={checked}
-					className={sprinkles({ hidden: "visually" })}
+					className={visuallyHidden}
 					id={id}
 					{...props}
 				/>
 				<label htmlFor={id} className={cardSelectorLabelStyle}>
-					<div className={sprinkles({ hidden: "visually" })}>
-						Add to comparison
-					</div>
+					<div className={visuallyHidden}>Add to comparison</div>
 					{checked ? (
 						<UnselectIcon
 							className={sprinkles({ color: "error" })}

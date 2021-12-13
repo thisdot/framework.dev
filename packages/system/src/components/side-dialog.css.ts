@@ -1,5 +1,5 @@
 import { recipe } from "@vanilla-extract/recipes"
-import { VariantSelection } from "@vanilla-extract/recipes/dist/declarations/src/types"
+import type { VariantSelection } from "@vanilla-extract/recipes/dist/declarations/src/types"
 import { breakpoints, sprinkles } from "../sprinkles/sprinkles.css"
 
 const dialogOverlayVariants = {
@@ -36,7 +36,7 @@ export const dialogOverlayStyle = recipe({
 const dialogContentVariants = {
 	state: {
 		open: {
-			transform: "translateX(0)",
+			transform: "translate3d(0, 0, 0)",
 			transitionTimingFunction: "ease-out",
 		},
 		closed: {
@@ -44,11 +44,20 @@ const dialogContentVariants = {
 		},
 	},
 	position: {
-		left: {
-			left: 0,
+		bottom: {
+			bottom: 56,
+			width: "100%",
 		},
 		right: {
+			top: 0,
 			right: 0,
+			width: "304px",
+			height: "100%",
+			"@media": {
+				[breakpoints.tablet]: {
+					width: "320px",
+				},
+			},
 		},
 	},
 } as const
@@ -67,14 +76,6 @@ export const dialogContentStyle = recipe({
 			transitionProperty: "transform",
 			transitionDuration: "200ms",
 			position: "fixed",
-			top: 0,
-			width: "240px",
-			height: "100%",
-			"@media": {
-				[breakpoints.tablet]: {
-					width: "320px",
-				},
-			},
 		},
 	],
 	variants: dialogContentVariants,
@@ -82,10 +83,10 @@ export const dialogContentStyle = recipe({
 		{
 			variants: {
 				state: "closed",
-				position: "left",
+				position: "bottom",
 			},
 			style: {
-				transform: "translateX(-240px)",
+				transform: "translate3d(0, 100%, 0)",
 			},
 		},
 		{
@@ -94,7 +95,7 @@ export const dialogContentStyle = recipe({
 				position: "right",
 			},
 			style: {
-				transform: "translateX(240px)",
+				transform: "translate3d(100%, 0, 0)",
 			},
 		},
 	],

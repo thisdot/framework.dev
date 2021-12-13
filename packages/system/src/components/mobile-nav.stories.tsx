@@ -4,6 +4,8 @@ import { sprinkles } from "../sprinkles/sprinkles.css"
 import { NavItem } from "./nav-item"
 import { MobileNav as MobileNavComponent, MobileNavProps } from "./mobile-nav"
 import { allCategoryNames } from "../models/all-categories"
+import { bodyWithNav, fullscreen } from "../styles/layouts.css"
+import classNames from "classnames"
 
 export default {
 	title: "Mobile Nav",
@@ -36,7 +38,10 @@ export default {
 } as Meta
 
 const Template: Story<MobileNavProps> = (args) => (
-	<MobileNavComponent {...args} />
+	<div className={classNames(bodyWithNav, fullscreen)}>
+		<div />
+		<MobileNavComponent {...args} />
+	</div>
 )
 
 export const MobileNav: Story<MobileNavProps> = Template.bind({})

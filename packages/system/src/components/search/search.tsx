@@ -1,9 +1,11 @@
 import classNames from "classnames"
-import React, { useMemo, useState } from "react"
+import React, { useMemo, useRef, useState } from "react"
 import Fuse from "fuse.js"
 import {
 	compareBarStyle,
 	searchContainerStyle,
+	searchMobileLogoContainerStyle,
+	searchMobileLogoStyle,
 	searchStyle,
 } from "./search.css"
 import { AllCategories, AllModelsByName } from "../../models/all-categories"
@@ -32,6 +34,7 @@ import { ComparisonTable } from "../comparison-table"
 import { CloseIcon } from "../../icons/close-icon"
 import { ResetIcon } from "../../icons/reset-icon"
 import { AddIcon } from "../../icons/add-icon"
+import { Logo } from "../logo"
 
 export interface SearchProps extends React.ComponentPropsWithoutRef<"section"> {
 	data: AllCategories[]
@@ -62,6 +65,7 @@ export function Search({
 		[data, preFilters]
 	)
 	const queryParams = parseQueryString(query, availableFilters)
+	const scrollableContainerRef = useRef<null | HTMLDivElement>(null)
 	return (
 		<section className={classNames(className, searchStyle)} {...props}>
 			{comparisonTableOpen ? (
@@ -75,7 +79,10 @@ export function Search({
 				/>
 			) : (
 				<>
-					<div className={searchContainerStyle}>
+					<div className={searchContainerStyle} ref={scrollableContainerRef}>
+						<header className={searchMobileLogoContainerStyle}>
+							<Logo className={searchMobileLogoStyle} />
+						</header>
 						<SearchBar
 							availableFilters={availableFilters}
 							data={data}
@@ -86,7 +93,18 @@ export function Search({
 						<SearchResults
 							data={data}
 							onLibrarySelect={setSelectedLibraries}
-							onQueryChange={setQuery}
+							onTagClick={(tag: string) => {
+								setQuery(
+									serializeQueryParams({
+										...queryParams,
+										filters: {
+											...queryParams.filters,
+											tag: uniq([...queryParams.filters.tag, tag]),
+										},
+									})
+								)
+								scrollableContainerRef.current?.scrollTo(0, 0)
+							}}
 							preFilters={preFilters}
 							selectedLibraries={selectedLibraries}
 							queryParams={queryParams}
@@ -128,7 +146,13 @@ function SearchBar({
 	const popularTags = useMemo(() => calculatePopularTags(data), [data])
 	const queryParams = parseQueryString(value, availableFilters)
 	return (
-		<div className={sprinkles({ layout: "row", gap: 12, paddingX: 48 })}>
+		<div
+			className={sprinkles({
+				layout: "row",
+				gap: 12,
+				paddingX: { mobile: 16, desktop: 48 },
+			})}
+		>
 			<SearchAutocomplete
 				staticPrefix={serializeQueryParams({
 					filters: preFilters,
@@ -140,17 +164,36 @@ function SearchBar({
 				value={value}
 				data={data}
 			/>
-			<Button
-				as="button"
-				color="tertiary"
-				onClick={() => setFilterMenuOpen(true)}
+			<div
+				className={sprinkles({ display: { mobile: "none", desktop: "block" } })}
 			>
-				Advanced <FilterIcon />
-			</Button>
+				<Button
+					as="button"
+					color="tertiary"
+					size="large"
+					onClick={() => setFilterMenuOpen(true)}
+				>
+					Advanced <FilterIcon />
+				</Button>
+			</div>
+			<div
+				className={sprinkles({ display: { mobile: "block", desktop: "none" } })}
+			>
+				<Button
+					as="button"
+					color="tertiary"
+					size="largeSquare"
+					aria-label="Advanced search"
+					onClick={() => setFilterMenuOpen(true)}
+				>
+					<FilterIcon />
+				</Button>
+			</div>
 			<SideDialog
 				position="right"
 				isOpen={filterMenuOpen}
 				onDismiss={() => setFilterMenuOpen(false)}
+				zIndex={10}
 			>
 				<FilterMenu
 					params={queryParams}
@@ -171,7 +214,7 @@ type SearchResultsProps = {
 	preFilters: FilterSet
 	selectedLibraries: Library<string>[]
 	onLibrarySelect: (newSelection: Library<string>[]) => void
-	onQueryChange: (newQuery: string) => void
+	onTagClick: (tag: string) => void
 	data: AllCategories[]
 }
 
@@ -180,7 +223,7 @@ function SearchResults({
 	preFilters,
 	selectedLibraries,
 	onLibrarySelect,
-	onQueryChange,
+	onTagClick,
 	data,
 }: SearchResultsProps) {
 	const searchIndices: {
@@ -207,7 +250,7 @@ function SearchResults({
 				layout: "stack",
 				gap: 8,
 				paddingBottom: 24,
-				paddingX: 24,
+				paddingX: { mobile: 16, desktop: 24 },
 			})}
 		>
 			{(!isEmptyFilterSet(preFilters) ||
@@ -233,16 +276,7 @@ function SearchResults({
 										searchIndex,
 								  })
 								: [],
-							onTagClick: (tag: string) =>
-								onQueryChange(
-									serializeQueryParams({
-										...queryParams,
-										filters: {
-											...queryParams.filters,
-											tag: uniq([...queryParams.filters.tag, tag]),
-										},
-									})
-								),
+							onTagClick,
 						} as const
 						if (category.name === "libraries") {
 							return (
@@ -302,9 +336,22 @@ function ComparisonBar({
 			<Button color="tertiary" onClick={() => onSelectionChange(allLibraries)}>
 				Select all
 			</Button>
-			<Button color="destructive" onClick={() => onSelectionChange([])}>
-				Reset <ResetIcon />
-			</Button>
+			<div
+				className={sprinkles({ display: { mobile: "none", desktop: "block" } })}
+			>
+				<Button color="destructive" onClick={() => onSelectionChange([])}>
+					Reset <ResetIcon />
+				</Button>
+			</div>
+			<div className={sprinkles({ display: { desktop: "none" } })}>
+				<Button
+					size="square"
+					color="destructive"
+					onClick={() => onSelectionChange([])}
+				>
+					<ResetIcon />
+				</Button>
+			</div>
 		</div>
 	)
 }
@@ -335,12 +382,11 @@ function LibraryComparison({
 	return (
 		<div
 			className={sprinkles({
-				paddingY: 48,
-				paddingX: 64,
 				minWidth: 0,
 				minHeight: 0,
 				maxHeight: "100%",
 				layout: "stack",
+				paddingY: { mobile: 24, tablet: 40, desktop: 48 },
 			})}
 		>
 			<div
@@ -348,7 +394,8 @@ function LibraryComparison({
 					layout: "row",
 					alignItems: "center",
 					justifyContent: "space-between",
-					paddingBottom: 24,
+					paddingBottom: { mobile: 16, tablet: 24 },
+					paddingX: { mobile: 16, tablet: 24, desktop: 64 },
 				})}
 			>
 				<h2 className={sprinkles({ textStyle: "h200" })}>Library comparison</h2>
@@ -357,7 +404,10 @@ function LibraryComparison({
 				</Button>
 			</div>
 			<ComparisonTable
-				className={sprinkles({ minHeight: 0 })}
+				className={sprinkles({
+					paddingX: { mobile: 0, tablet: 24, desktop: 64 },
+					minHeight: 0,
+				})}
 				libraries={selectedLibraries}
 			/>
 			<div
@@ -366,6 +416,7 @@ function LibraryComparison({
 					justifyContent: "flex-end",
 					gap: 12,
 					paddingTop: 16,
+					paddingX: { mobile: 16, tablet: 24, desktop: 64 },
 				})}
 			>
 				<Button color="destructive" onClick={onReset}>

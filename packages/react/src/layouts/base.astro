@@ -1,9 +1,11 @@
 ---
 import '@framework/system/src/globals/global-styles';
-import { fontHeadTags } from '@framework/system/src/globals/font-import.mjs';
-import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css';
+import classNames from 'classnames'
+import { fontHeadTags } from '@framework/system/src/globals/font-import.mjs'
+import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css'
 import { reactTheme } from '@framework/system/src/themes/themes.css'
 import { Sidebar } from '@framework/system/src/components/sidebar.tsx'
+import { bodyWithNav, shrinkable } from '@framework/system/src/styles/layouts.css'
 import { MobileNav } from '../components/mobile-nav.tsx'
 import { NavItems } from '../components/nav-items.tsx'
 const { title, currentCategory, currentTag } = Astro.props
@@ -28,15 +30,20 @@ const { title, currentCategory, currentTag } = Astro.props
 			</script>
 		}
   </head>
-  <body class={sprinkles({ backgroundColor: "surface4", layout: { mobile: "stack", desktop: "sidebar" } })} >
-		<MobileNav client:media="(max-width:1024px)" className={sprinkles({ display: { mobile: "flex", desktop: "none" }})} />
+  <body class={classNames(sprinkles({ backgroundColor: "surface4", height: "full" }), bodyWithNav)} >
 		<Sidebar className={sprinkles({ display: { mobile: "none", desktop: "block" }})}>
 			<div class={sprinkles({ layout: "stack", gap: 24 })}>
 				<NavItems currentCategory={currentCategory} currentTag={currentTag} />
 			</div>
 		</Sidebar>
-		<main>
+		<main class={shrinkable}>
 			<slot />
 		</main>
+		<MobileNav 
+			client:media="(max-width:1025px)"
+			currentCategory={currentCategory} 
+			currentTag={currentTag} 
+			className={sprinkles({ display: { mobile: "flex", desktop: "none" }})} 
+		/>
   </body>
 </html>

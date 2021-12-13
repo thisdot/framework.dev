@@ -4,6 +4,7 @@ import { sprinkles } from "../sprinkles/sprinkles.css"
 import { Sidebar as SidebarComponent, SidebarProps } from "./sidebar"
 import { NavItem } from "./nav-item"
 import { allCategoryNames } from "../models/all-categories"
+import { bodyWithNav } from "../styles/layouts.css"
 
 export default {
 	title: "Sidebar",
@@ -25,7 +26,7 @@ export default {
 } as Meta
 
 const Template: Story<SidebarProps> = (args) => (
-	<div className={sprinkles({ layout: "sidebar" })}>
+	<div className={bodyWithNav}>
 		<SidebarComponent {...args} />
 		<main className={sprinkles({ backgroundColor: "surface4" })} />
 	</div>
