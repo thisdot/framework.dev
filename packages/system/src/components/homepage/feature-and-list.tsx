@@ -5,6 +5,11 @@ import {
 	featureAndListHeadingStyle,
 	featureAndListBoxStyle,
 	featureAndListFeaturedStyle,
+	featureAndListFeatureImageStyle,
+	featureAndListFeatureTitleStyle,
+	featureAndListMetadataStyle,
+	featureAndListFeatureAttributesStyle,
+	featureAndListFeatureDescription,
 	featureAndListListStyle,
 	featureAndListViewAllStyle,
 } from "./feature-and-list.css"
@@ -40,15 +45,29 @@ export function FeatureAndList({
 			<h2 className={featureAndListHeadingStyle}>{title}</h2>
 			<div className={featureAndListBoxStyle}>
 				<div className={featureAndListFeaturedStyle}>
-					{featured.image && <img src={featured.image} alt="" />}
-					<h3>{featured.title}</h3>
-					<p>{featured.metadata}</p>
-					<div>
+					{featured.image && (
+						<img
+							className={featureAndListFeatureImageStyle}
+							src={featured.image}
+							alt=""
+						/>
+					)}
+					<h3 className={featureAndListFeatureTitleStyle}>{featured.title}</h3>
+					<p className={featureAndListMetadataStyle}>{featured.metadata}</p>
+					<div className={featureAndListFeatureAttributesStyle}>
 						{featured.attributes.map((attribute) => {
-							;<DiscreteAttribute attribute={attribute} colorize={true} />
+							return (
+								<DiscreteAttribute
+									key={`${featured.title}-${attribute[0]}`}
+									attribute={attribute}
+									colorize={true}
+								/>
+							)
 						})}
 					</div>
-					<p>{featured.description}</p>
+					<p className={featureAndListFeatureDescription}>
+						{featured.description}
+					</p>
 				</div>
 				<div className={featureAndListListStyle}></div>
 			</div>

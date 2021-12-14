@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { breakpoints, sprinkles } from "../../sprinkles/sprinkles.css"
 import { vars } from "../../themes/themes.css"
 
 export const featureAndListStyle = style([
@@ -31,7 +31,17 @@ export const featureAndListBoxStyle = style([
 		padding: 24,
 	}),
 	{
+		gridTemplateAreas: `
+			"feature"
+			"list"
+		`,
 		overflow: "hidden",
+		"@media": {
+			[breakpoints.desktop]: {
+				gridTemplateAreas: "feature feature list",
+				gridTemplateColumns: "3fr 2fr",
+			},
+		},
 		selectors: {
 			"&:not(:hover)": {
 				borderColor: "transparent",
@@ -40,9 +50,55 @@ export const featureAndListBoxStyle = style([
 	},
 ])
 
-export const featureAndListFeaturedStyle = style({})
+export const featureAndListFeaturedStyle = style([
+	sprinkles({
+		borderRight: "light",
+		paddingRight: {
+			mobile: 0,
+			desktop: 24,
+		},
+	}),
+	{ gridArea: "feature" },
+])
 
-export const featureAndListListStyle = style({})
+export const featureAndListFeatureImageStyle = sprinkles({
+	marginBottom: 12,
+	width: "full",
+})
+
+export const featureAndListFeatureTitleStyle = style([
+	sprinkles({
+		color: "strongText",
+		marginBottom: 4,
+		textStyle: "bodyShort1",
+	}),
+	{
+		fontWeight: 600,
+	},
+])
+
+export const featureAndListMetadataStyle = style([
+	sprinkles({
+		color: "softText",
+		marginBottom: 12,
+		textStyle: "bodyShort3",
+	}),
+])
+
+export const featureAndListFeatureAttributesStyle = sprinkles({
+	gap: 16,
+	layout: "row",
+	marginBottom: 12,
+})
+
+export const featureAndListFeatureDescription = style([
+	sprinkles({
+		color: "regularText",
+		textStyle: "bodyLong2",
+	}),
+])
+
+export const featureAndListListStyle = style({ gridArea: "list" })
 
 export const featureAndListViewAllStyle = sprinkles({
 	color: "tertiary",
