@@ -10,10 +10,12 @@ import { Books } from "./books"
 import { LatestTools } from "./latest-tools"
 import { Communities } from "./communities"
 import { Library } from "../../models/library"
+import { Podcast } from "../../models/podcast"
 
 export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
 	libraries: Library<string>[]
 	libraryTags: string[]
+	podcasts: Podcast<string>[]
 }
 
 export function Homepage({
@@ -21,13 +23,14 @@ export function Homepage({
 	className,
 	libraries,
 	libraryTags,
+	podcasts,
 	...props
 }: HomepageProps) {
 	return (
 		<div className={classNames(className, homepageStyle)} {...props}>
 			<Hero />
 			<FeaturedLibraries libraries={libraries} libraryTags={libraryTags} />
-			<Podcasts />
+			<Podcasts podcasts={podcasts} />
 			<Courses />
 			<ContributorBanner
 				contributorImages={[

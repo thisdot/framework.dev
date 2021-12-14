@@ -9,6 +9,7 @@ import {
 import { Library } from "../../models/library"
 import { LibraryCard } from "../cards/library-card"
 import { ComparisonBox } from "./comparison-box"
+import { generateRandomIndex } from "./utils"
 
 export interface FeaturedLibrariesProps
 	extends React.ComponentPropsWithoutRef<"div"> {
@@ -23,12 +24,12 @@ export function FeaturedLibraries({
 	libraryTags,
 	...props
 }: FeaturedLibrariesProps) {
-	const randomLibraries: Library<string>[] = [
-		libraries[generateRandomIndex(libraries.length)],
-		libraries[generateRandomIndex(libraries.length)],
-		libraries[generateRandomIndex(libraries.length)],
-		libraries[generateRandomIndex(libraries.length)],
-	]
+	const indices: number[] = []
+	while (indices.length < 4) {
+		const num = generateRandomIndex(libraries.length)
+		if (!indices.includes(num)) indices.push(num)
+	}
+	const randomLibraries: Library<string>[] = indices.map((i) => libraries[i])
 	return (
 		<div className={classNames(className, featuredLibrariesStyle)} {...props}>
 			<h2 className={featuredLibrariesHeadingStyle}>
@@ -57,8 +58,4 @@ export function FeaturedLibraries({
 			</a>
 		</div>
 	)
-}
-
-function generateRandomIndex(length: number): number {
-	return Math.floor(Math.random() * length)
 }
