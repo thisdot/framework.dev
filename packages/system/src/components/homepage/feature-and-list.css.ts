@@ -132,6 +132,19 @@ export const featureAndListListTitleStyle = style([
 	},
 ])
 
+export const featureAndListListMetadataStyle = style([
+	sprinkles({
+		color: "softText",
+		gap: 12,
+		layout: "row",
+		marginBottom: 12,
+		textStyle: "bodyShort3",
+	}),
+	{
+		alignItems: "center",
+	},
+])
+
 export const featureAndListViewAllStyle = sprinkles({
 	color: "tertiary",
 	textStyle: "button",

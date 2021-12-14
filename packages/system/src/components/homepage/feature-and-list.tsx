@@ -14,6 +14,7 @@ import {
 	featureAndListListItemStyle,
 	featureAndListListImageStyle,
 	featureAndListListTitleStyle,
+	featureAndListListMetadataStyle,
 	featureAndListViewAllStyle,
 } from "./feature-and-list.css"
 import { AttributeDefinition } from "../../models/all-categories"
@@ -91,8 +92,8 @@ export function FeatureAndList({
 								<a href={item.href} target="_blank" rel="noreferrer">
 									<h3 className={featureAndListListTitleStyle}>{item.title}</h3>
 								</a>
-								<div className={sprinkles({ layout: "row", gap: 12 })}>
-									<p className={featureAndListMetadataStyle}>{item.metadata}</p>
+								<div className={featureAndListListMetadataStyle}>
+									<p>{item.metadata}</p>
 									{featured.attributes.map((attribute) => {
 										return (
 											<DiscreteAttributeIcon

@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import React from "react"
-import { homepageStyle } from "./homepage.css"
+import { homepageStyle, homepageTwoAndOneSectionStyle } from "./homepage.css"
 import { Hero } from "./hero"
 import { FeaturedLibraries } from "./featured-libraries"
 import { Podcasts } from "./podcasts"
@@ -47,7 +47,7 @@ export function Homepage({
 			<Hero />
 			<FeaturedLibraries libraries={libraries} libraryTags={libraryTags} />
 			<Podcasts podcasts={podcasts} />
-			<div>
+			<div className={homepageTwoAndOneSectionStyle}>
 				<Courses courses={courses} />
 				<Blogs blogs={blogs} />
 			</div>

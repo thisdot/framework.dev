@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { breakpoints, sprinkles } from "../../sprinkles/sprinkles.css"
 import { pxToRem } from "../../util/style-utils"
 
 export const homepageStyle = style([
@@ -13,5 +13,20 @@ export const homepageStyle = style([
 	{
 		gap: pxToRem(128),
 		overflow: "auto",
+	},
+])
+
+export const homepageTwoAndOneSectionStyle = style([
+	sprinkles({
+		gap: 48,
+		display: "grid",
+	}),
+	{
+		gridTemplate: "repeat(2, auto) / 1fr",
+		"@media": {
+			[breakpoints.desktop]: {
+				gridTemplate: "auto / 2fr 1fr",
+			},
+		},
 	},
 ])
