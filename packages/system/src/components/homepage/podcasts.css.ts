@@ -8,8 +8,7 @@ export const podcastsStyle = style([
 		borderRadius: 12,
 		display: "grid",
 		gap: 8,
-		paddingLeft: 16,
-		paddingTop: 16,
+		padding: 24,
 	}),
 	{
 		gridTemplateAreas: `
@@ -44,3 +43,50 @@ export const podcastsStyle = style([
 		},
 	},
 ])
+
+export const podcastTextAreaStyle = style([
+	sprinkles({
+		display: "grid",
+		gap: 16,
+	}),
+	{
+		gridArea: "text",
+		gridTemplateRows: "1fr auto",
+	},
+])
+
+export const podcastHeadingStyle = style([
+	sprinkles({
+		color: "regularText",
+		textStyle: "h200",
+	}),
+])
+
+export const podcastsViewAllStyle = sprinkles({
+	color: "tertiary",
+	textStyle: "button",
+})
+
+export const podcastCardImageStyle = style([
+	sprinkles({ borderRadius: 8, marginBottom: 16 }),
+	{
+		aspectRatio: "1 / 1",
+		width: "100%",
+	},
+])
+
+export const podcastTitleStyle = style([
+	sprinkles({
+		color: "regularText",
+		marginBottom: 4,
+		textStyle: "bodyShort2",
+	}),
+	{
+		fontWeight: 600,
+	},
+])
+
+export const podcastHostStyle = sprinkles({
+	color: "softText",
+	textStyle: "bodyShort3",
+})
