@@ -21,6 +21,7 @@ const space = {
 }
 
 const borders = {
+	none: `none`,
 	thin: `1px solid ${vars.themeColors.outline}`,
 	light: `1px solid ${vars.themeColors.surfaceVariant}`,
 	tableCell: `1px solid ${vars.palette.neutral80}`,
@@ -270,6 +271,8 @@ const layout = defineProperties({
 })
 
 const colors = defineProperties({
+	conditions,
+	defaultCondition: "mobile",
 	properties: {
 		backgroundColor: vars.themeColors,
 		color: vars.themeColors,

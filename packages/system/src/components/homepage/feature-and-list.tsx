@@ -11,10 +11,14 @@ import {
 	featureAndListFeatureAttributesStyle,
 	featureAndListFeatureDescription,
 	featureAndListListStyle,
+	featureAndListListItemStyle,
+	featureAndListListImageStyle,
+	featureAndListListTitleStyle,
 	featureAndListViewAllStyle,
 } from "./feature-and-list.css"
 import { AttributeDefinition } from "../../models/all-categories"
-import { DiscreteAttribute } from "../discrete-attribute"
+import { DiscreteAttribute, DiscreteAttributeIcon } from "../discrete-attribute"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
 
 export interface FeatureAndListProps
 	extends React.ComponentPropsWithoutRef<"div"> {
@@ -27,6 +31,7 @@ export interface FeatureAndListProps
 		image?: string
 		title: string
 		metadata: string
+		href: string
 		attributes: AttributeDefinition[]
 		description: string
 	}[]
@@ -44,7 +49,7 @@ export function FeatureAndList({
 		<div className={classNames(className, featureAndListStyle)} {...props}>
 			<h2 className={featureAndListHeadingStyle}>{title}</h2>
 			<div className={featureAndListBoxStyle}>
-				<div className={featureAndListFeaturedStyle}>
+				<article className={featureAndListFeaturedStyle}>
 					{featured.image && (
 						<img
 							className={featureAndListFeatureImageStyle}
@@ -52,7 +57,11 @@ export function FeatureAndList({
 							alt=""
 						/>
 					)}
-					<h3 className={featureAndListFeatureTitleStyle}>{featured.title}</h3>
+					<a href={featured.href} target="_blank" rel="noreferrer">
+						<h3 className={featureAndListFeatureTitleStyle}>
+							{featured.title}
+						</h3>
+					</a>
 					<p className={featureAndListMetadataStyle}>{featured.metadata}</p>
 					<div className={featureAndListFeatureAttributesStyle}>
 						{featured.attributes.map((attribute) => {
@@ -68,8 +77,36 @@ export function FeatureAndList({
 					<p className={featureAndListFeatureDescription}>
 						{featured.description}
 					</p>
+				</article>
+				<div className={featureAndListListStyle}>
+					{items.slice(1).map((item) => (
+						<article key={item.title} className={featureAndListListItemStyle}>
+							{item.image && (
+								<img
+									className={featureAndListListImageStyle}
+									src={item.image}
+								/>
+							)}
+							<div className={sprinkles({ layout: "stack", gap: 4 })}>
+								<a href={item.href} target="_blank" rel="noreferrer">
+									<h3 className={featureAndListListTitleStyle}>{item.title}</h3>
+								</a>
+								<div className={sprinkles({ layout: "row", gap: 12 })}>
+									<p className={featureAndListMetadataStyle}>{item.metadata}</p>
+									{featured.attributes.map((attribute) => {
+										return (
+											<DiscreteAttributeIcon
+												key={`${featured.title}-${attribute[0]}`}
+												attribute={attribute}
+												colorize={true}
+											/>
+										)
+									})}
+								</div>
+							</div>
+						</article>
+					))}
 				</div>
-				<div className={featureAndListListStyle}></div>
 			</div>
 			<a href={viewAll.href} className={featureAndListViewAllStyle}>
 				{viewAll.title}

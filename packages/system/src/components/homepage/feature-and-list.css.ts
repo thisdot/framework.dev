@@ -1,6 +1,7 @@
 import { style } from "@vanilla-extract/css"
 import { breakpoints, sprinkles } from "../../sprinkles/sprinkles.css"
 import { vars } from "../../themes/themes.css"
+import { pxToRem } from "../../util/style-utils"
 
 export const featureAndListStyle = style([
 	sprinkles({
@@ -31,15 +32,14 @@ export const featureAndListBoxStyle = style([
 		padding: 24,
 	}),
 	{
-		gridTemplateAreas: `
-			"feature"
-			"list"
-		`,
+		gap: pxToRem(24),
+		gridAutoColumns: "1fr",
+		gridTemplateRows: "repeat(2, auto)",
 		overflow: "hidden",
 		"@media": {
 			[breakpoints.desktop]: {
-				gridTemplateAreas: "feature feature list",
 				gridTemplateColumns: "3fr 2fr",
+				gridTemplateRows: "auto",
 			},
 		},
 		selectors: {
@@ -50,18 +50,21 @@ export const featureAndListBoxStyle = style([
 	},
 ])
 
-export const featureAndListFeaturedStyle = style([
-	sprinkles({
-		borderRight: "light",
-		paddingRight: {
-			mobile: 0,
-			desktop: 24,
-		},
-	}),
-	{ gridArea: "feature" },
-])
+export const featureAndListFeaturedStyle = sprinkles({
+	borderBottom: { mobile: "light", desktop: "none" },
+	borderRight: { mobile: "none", desktop: "light" },
+	paddingBottom: {
+		mobile: 24,
+		desktop: 0,
+	},
+	paddingRight: {
+		mobile: 0,
+		desktop: 24,
+	},
+})
 
 export const featureAndListFeatureImageStyle = sprinkles({
+	borderRadius: 8,
 	marginBottom: 12,
 	width: "full",
 })
@@ -98,7 +101,36 @@ export const featureAndListFeatureDescription = style([
 	}),
 ])
 
-export const featureAndListListStyle = style({ gridArea: "list" })
+export const featureAndListListStyle = sprinkles({
+	gap: 24,
+	layout: "stack",
+})
+
+export const featureAndListListItemStyle = style([
+	sprinkles({
+		gap: 12,
+		layout: "row",
+	}),
+])
+
+export const featureAndListListImageStyle = style([
+	sprinkles({ borderRadius: 8 }),
+	{
+		height: pxToRem(32),
+		objectFit: "cover",
+		width: pxToRem(32),
+	},
+])
+
+export const featureAndListListTitleStyle = style([
+	sprinkles({
+		color: "strongText",
+		textStyle: "bodyShort2",
+	}),
+	{
+		fontWeight: 600,
+	},
+])
 
 export const featureAndListViewAllStyle = sprinkles({
 	color: "tertiary",

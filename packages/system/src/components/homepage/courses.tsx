@@ -22,6 +22,7 @@ export function Courses({ className, courses, ...props }: CoursesProps) {
 					image: course.image,
 					title: course.title,
 					metadata: course.author,
+					href: course.href,
 					description: course.description,
 					attributes: [
 						["level", course.level],
