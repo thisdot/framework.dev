@@ -5,6 +5,7 @@ import {
 	serializeFieldValue,
 	formatFieldValue
 } from "@framework/system/src/util/string-utils"
+import { visuallyHidden } from "@framework/system/src/styles/utilities.css"
 import BaseLayout from '../../../../layouts/base.astro'
 import { searchData } from '../../../../data/search-data'
 import { CategoryName } from '@framework/system/src/models/all-categories'
@@ -32,5 +33,6 @@ const title = `React ${formatFieldValue(tag)} ${formatFieldName(category)}`
 	<meta name="description" content={`Browse and search through relevant ${title}`}/>
 </head>
 <BaseLayout title={title} currentCategory={category} currentTag={tag}>
+	<h1 class={visuallyHidden}>{title}</h1>
 	<Search client:load preFilters={{ category: [category], tag: [tag], field: [] }} />
 </BaseLayout>

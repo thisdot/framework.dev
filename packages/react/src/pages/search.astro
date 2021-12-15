@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../layouts/base.astro'
 import Search from '../components/search.tsx'
+import { visuallyHidden } from "@framework/system/src/styles/utilities.css"
 ---
 <head>
 	<meta name="description" content="Search React resources"/>
 </head>
 <BaseLayout title="Search">
+	<h1 class={visuallyHidden}>Search</h1>
 	<Search client:load />
 </BaseLayout>

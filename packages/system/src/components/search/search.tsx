@@ -1,5 +1,5 @@
 import classNames from "classnames"
-import React, { useMemo, useRef, useState } from "react"
+import React, { useEffect, useMemo, useRef, useState } from "react"
 import Fuse from "fuse.js"
 import {
 	compareBarStyle,
@@ -58,6 +58,13 @@ export function Search({
 		return data
 	}, [initialData, preFilters])
 	const [query, setQuery] = useState(initialQuery)
+	const [activeQuery, setActiveQuery] = useState(initialQuery)
+	useEffect(() => {
+		const timeout = setTimeout(() => setActiveQuery(query), 500)
+		return () => {
+			clearTimeout(timeout)
+		}
+	}, [query])
 	const [selectedLibraries, setSelectedLibraries] = useState<Library<string>[]>(
 		[]
 	)
@@ -66,7 +73,7 @@ export function Search({
 		() => calculateAvailableFilters(data, preFilters),
 		[data, preFilters]
 	)
-	const queryParams = parseQueryString(query, availableFilters)
+	const queryParams = parseQueryString(activeQuery, availableFilters)
 	const scrollableContainerRef = useRef<null | HTMLDivElement>(null)
 	return (
 		<section className={classNames(className, searchStyle)} {...props}>
@@ -91,6 +98,10 @@ export function Search({
 							onChange={setQuery}
 							preFilters={preFilters}
 							value={query}
+							onSubmit={(e) => {
+								e.preventDefault()
+								setActiveQuery(query)
+							}}
 						/>
 						<SearchResults
 							data={data}
@@ -133,6 +144,7 @@ type SearchBarProps = {
 	preFilters: FilterSet
 	availableFilters: FilterSet
 	onChange: (newValue: string) => void
+	onSubmit: React.FormEventHandler<HTMLFormElement>
 	value: string
 	data: AllCategories[]
 }
@@ -141,6 +153,7 @@ function SearchBar({
 	preFilters,
 	availableFilters,
 	onChange,
+	onSubmit,
 	value,
 	data,
 }: SearchBarProps) {
@@ -148,7 +161,9 @@ function SearchBar({
 	const popularTags = useMemo(() => calculatePopularTags(data), [data])
 	const queryParams = parseQueryString(value, availableFilters)
 	return (
-		<div
+		<form
+			role="search"
+			onSubmit={onSubmit}
 			className={sprinkles({
 				layout: "row",
 				gap: 12,
@@ -207,7 +222,7 @@ function SearchBar({
 					popularTags={popularTags}
 				/>
 			</SideDialog>
-		</div>
+		</form>
 	)
 }
 
@@ -322,7 +337,14 @@ function ComparisonBar({
 	allLibraries,
 }: ComparisonBarProps) {
 	return (
-		<div className={compareBarStyle}>
+		<form
+			onSubmit={(e) => {
+				e.preventDefault()
+				onOpenClick()
+			}}
+			className={compareBarStyle}
+			aria-label={`Compare ${selectedLibraries.length} libraries`}
+		>
 			<button
 				className={sprinkles({
 					textStyle: "button",
@@ -330,8 +352,7 @@ function ComparisonBar({
 					alignItems: "center",
 					gap: 4,
 				})}
-				type="button"
-				onClick={onOpenClick}
+				type="submit"
 			>
 				<OpenIcon size="large" /> Compare ({selectedLibraries.length})
 			</button>
@@ -349,12 +370,13 @@ function ComparisonBar({
 				<Button
 					size="square"
 					color="destructive"
+					aria-label="Reset"
 					onClick={() => onSelectionChange([])}
 				>
 					<ResetIcon />
 				</Button>
 			</div>
-		</div>
+		</form>
 	)
 }
 

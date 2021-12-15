@@ -13,7 +13,7 @@ import classNames from "classnames"
 import { TextInput } from "../text-input"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 
-export type FilterMenuProps = React.ComponentPropsWithoutRef<"div"> & {
+export type FilterMenuProps = React.ComponentPropsWithoutRef<"form"> & {
 	params: QueryParams
 	availableFilters: FilterSet
 	onConfirm: (newParams: QueryParams) => void
@@ -31,7 +31,15 @@ export function FilterMenu({
 	const [params, setParams] = useState<QueryParams>(initialParams)
 	const { filters } = params
 	return (
-		<article className={classNames(className, filterMenuStyle)} {...props}>
+		<form
+			aria-label="Advanced search controls"
+			onSubmit={(e) => {
+				e.preventDefault()
+				onConfirm(params)
+			}}
+			className={classNames(className, filterMenuStyle)}
+			{...props}
+		>
 			<div className={filterMenuFilterContainerStyle}>
 				<TextInput
 					className={sprinkles({ paddingX: 16 })}
@@ -99,10 +107,14 @@ export function FilterMenu({
 				>
 					Clear filters
 				</Button>
-				<Button as="button" color="primary" onClick={() => onConfirm(params)}>
+				<Button
+					as="button"
+					type="submit"
+					color="primary"
+				>
 					Search
 				</Button>
 			</footer>
-		</article>
+		</form>
 	)
 }
