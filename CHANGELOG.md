@@ -1,5 +1,6 @@
 # Changelog
 
+- [2021-12-22] Add components and content for home page [\#145](https://github.com/thisdot/framework.dev/pull/145) ([tvanantwerp](https://github.com/tvanantwerp))
 - [2021-12-15] Improve site accessibility for keyboard and screen reader users
   [\#144](https://github.com/thisdot/framework.dev/pull/144)
   ([jbachhardie](https://github.com/jbachhardie))
