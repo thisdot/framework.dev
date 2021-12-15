@@ -55,7 +55,7 @@ export function Homepage({
 				contributorImages={[
 					"https://github.com/jbachhardie.png",
 					"https://github.com/tvanantwerp.png",
-					"https://github.com/dustinsgoodman.png",
+					"https://github.com/markshenouda.png",
 				]}
 			></ContributorBanner>
 			<div className={homepageTwoAndOneSectionStyle}>

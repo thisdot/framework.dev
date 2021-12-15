@@ -21,9 +21,10 @@ export const contributorBannerStyle = style([
 ])
 
 export const contributorImageStyle = style([
-	sprinkles({ borderRadius: 24, borderColor: "onSecondaryContainer" }),
+	sprinkles({ borderColor: "onSecondaryContainer" }),
 	{
 		maxWidth: pxToRem(72),
+		borderRadius: "50%",
 		borderWidth: pxToRem(4),
 		borderStyle: "solid",
 		selectors: {
