@@ -2,8 +2,14 @@ import classNames from "classnames"
 import React from "react"
 import {
 	resourceListStyle,
-	resourceListTitleStyle,
+	resourceListHeadingStyle,
 	resourceListListStyle,
+	resourceListItemStyle,
+	resourceListItemHeaderStyle,
+	resourceListItemTitleStyle,
+	resourceListItemMetadataStyle,
+	resourceListItemImageStyle,
+	resourceListItemDescriptionStyle,
 	resourceListViewAllStyle,
 } from "./resource-list.css"
 
@@ -32,19 +38,33 @@ export function ResourceList({
 }: ResourceListProps) {
 	return (
 		<div className={classNames(className, resourceListStyle)} {...props}>
-			<h2 className={resourceListTitleStyle}>{title}</h2>
+			<h2 className={resourceListHeadingStyle}>{title}</h2>
 			<ul className={resourceListListStyle}>
 				{items.map((item) => {
 					return (
-						<li key={`resource-${item.title}`}>
-							<article>
-								<header>
+						<li
+							key={`resource-${item.title}`}
+							className={resourceListItemStyle}
+						>
+							<div className={resourceListItemHeaderStyle}>
+								{item.image && (
+									<img
+										src={item.image}
+										className={resourceListItemImageStyle}
+									/>
+								)}
+								<div>
 									<a href={item.href} target="_blank" rel="noreferrer">
-										<h3>{item.title}</h3>
+										<h3 className={resourceListItemTitleStyle}>{item.title}</h3>
 									</a>
-									<p>{item.metadata}</p>
-								</header>
-							</article>
+									<p className={resourceListItemMetadataStyle}>
+										{item.metadata}
+									</p>
+								</div>
+							</div>
+							<p className={resourceListItemDescriptionStyle}>
+								{item.description}
+							</p>
 						</li>
 					)
 				})}
