@@ -19,7 +19,7 @@ export function Courses({ className, courses, ...props }: CoursesProps) {
 			viewAll={{ title: "View all courses", href: "/categories/courses" }}
 			items={randomCourses.map((course) => {
 				return {
-					image: course.image,
+					image: { src: course.image, style: "normal" },
 					title: course.title,
 					metadata: course.author,
 					href: course.href,

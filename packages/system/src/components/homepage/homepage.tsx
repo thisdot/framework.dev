@@ -58,8 +58,10 @@ export function Homepage({
 					"https://github.com/dustinsgoodman.png",
 				]}
 			></ContributorBanner>
-			<Books books={books} />
-			<LatestTools tools={tools} />
+			<div className={homepageTwoAndOneSectionStyle}>
+				<Books books={books} />
+				<LatestTools tools={tools} />
+			</div>
 			<Communities communities={communities} />
 		</div>
 	)

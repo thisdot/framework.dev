@@ -13,6 +13,9 @@ import {
 	featureAndListListStyle,
 	featureAndListListItemStyle,
 	featureAndListListImageStyle,
+	featureAndListListBookStyle,
+	featureAndListFeatureBookContainerStyle,
+	featureAndListFeatureBookStyle,
 	featureAndListListTitleStyle,
 	featureAndListListMetadataStyle,
 	featureAndListViewAllStyle,
@@ -29,7 +32,10 @@ export interface FeatureAndListProps
 		href: string
 	}
 	items: {
-		image?: string
+		image?: {
+			src: string
+			style: "normal" | "book"
+		}
 		title: string
 		metadata: string
 		href: string
@@ -51,13 +57,20 @@ export function FeatureAndList({
 			<h2 className={featureAndListHeadingStyle}>{title}</h2>
 			<div className={featureAndListBoxStyle}>
 				<article className={featureAndListFeaturedStyle}>
-					{featured.image && (
-						<img
-							className={featureAndListFeatureImageStyle}
-							src={featured.image}
-							alt=""
-						/>
-					)}
+					{featured.image &&
+						(featured.image.style === "book" ? (
+							<div className={featureAndListFeatureBookContainerStyle}>
+								<img
+									className={featureAndListFeatureBookStyle}
+									src={featured.image.src}
+								/>
+							</div>
+						) : (
+							<img
+								className={featureAndListFeatureImageStyle}
+								src={featured.image.src}
+							/>
+						))}
 					<a href={featured.href} target="_blank" rel="noreferrer">
 						<h3 className={featureAndListFeatureTitleStyle}>
 							{featured.title}
@@ -82,12 +95,18 @@ export function FeatureAndList({
 				<div className={featureAndListListStyle}>
 					{items.slice(1).map((item) => (
 						<article key={item.title} className={featureAndListListItemStyle}>
-							{item.image && (
-								<img
-									className={featureAndListListImageStyle}
-									src={item.image}
-								/>
-							)}
+							{item.image &&
+								(item.image.style === "book" ? (
+									<img
+										className={featureAndListListBookStyle}
+										src={item.image.src}
+									/>
+								) : (
+									<img
+										className={featureAndListListImageStyle}
+										src={item.image.src}
+									/>
+								))}
 							<div className={sprinkles({ layout: "stack", gap: 4 })}>
 								<a href={item.href} target="_blank" rel="noreferrer">
 									<h3 className={featureAndListListTitleStyle}>{item.title}</h3>
