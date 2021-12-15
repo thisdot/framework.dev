@@ -8,7 +8,7 @@ export function getRandomNumberArray(
 ): number[] {
 	const indices: number[] = []
 	if (dataSize < length) return Array.from(Array(dataSize).keys())
-	while (indices.length < length + 1) {
+	while (indices.length < length) {
 		const num = generateRandomIndex(dataSize)
 		if (!indices.includes(num)) indices.push(num)
 	}

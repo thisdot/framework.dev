@@ -1,7 +1,7 @@
 import { style } from "@vanilla-extract/css"
 import { breakpoints, sprinkles } from "../../sprinkles/sprinkles.css"
 
-export const podcastsStyle = style([
+export const contentBannerStyle = style([
 	sprinkles({
 		backgroundColor: "white",
 		border: "thin",
@@ -13,8 +13,8 @@ export const podcastsStyle = style([
 	{
 		gridTemplateAreas: `
 			"text text"
-			"podcast podcast"
-			"podcast podcast"
+			"contentBanner contentBanner"
+			"contentBanner contentBanner"
 		`,
 		gridTemplateColumns: "repeat(2, 1fr)",
 		gridTemplateRows: "repeat(3, auto)",
@@ -23,14 +23,14 @@ export const podcastsStyle = style([
 			[breakpoints.tablet]: {
 				gridTemplateAreas: `
 					"text text text text"
-					"podcast podcast podcast podcast"
+					"contentBanner contentBanner contentBanner contentBanner"
 				`,
 				gridTemplateColumns: "repeat(4, 1fr)",
 				gridTemplateRows: "repeat(2, auto)",
 			},
 			[breakpoints.desktop]: {
 				gridTemplateAreas: `
-					"text text podcast podcast podcast podcast"
+					"text text contentBanner contentBanner contentBanner contentBanner"
 				`,
 				gridTemplateColumns: "repeat(6, 1fr)",
 				gridTemplateRows: "auto",
@@ -44,7 +44,7 @@ export const podcastsStyle = style([
 	},
 ])
 
-export const podcastTextAreaStyle = style([
+export const contentBannerTextAreaStyle = style([
 	sprinkles({
 		display: "grid",
 		gap: 16,
@@ -55,19 +55,19 @@ export const podcastTextAreaStyle = style([
 	},
 ])
 
-export const podcastHeadingStyle = style([
+export const contentBannerHeadingStyle = style([
 	sprinkles({
 		color: "regularText",
 		textStyle: "h200",
 	}),
 ])
 
-export const podcastsViewAllStyle = sprinkles({
+export const contentBannersViewAllStyle = sprinkles({
 	color: "tertiary",
 	textStyle: "button",
 })
 
-export const podcastCardImageStyle = style([
+export const contentBannerCardImageStyle = style([
 	sprinkles({ borderRadius: 8, marginBottom: 16 }),
 	{
 		aspectRatio: "1 / 1",
@@ -75,7 +75,7 @@ export const podcastCardImageStyle = style([
 	},
 ])
 
-export const podcastTitleStyle = style([
+export const contentBannerTitleStyle = style([
 	sprinkles({
 		color: "regularText",
 		marginBottom: 4,
@@ -86,7 +86,7 @@ export const podcastTitleStyle = style([
 	},
 ])
 
-export const podcastHostStyle = sprinkles({
+export const contentBannerHostStyle = sprinkles({
 	color: "softText",
 	textStyle: "bodyShort3",
 })
