@@ -3,17 +3,21 @@ import {
 	LatestTools as LatestToolsComponent,
 	LatestToolsProps,
 } from "./latest-tools"
+import { exampleTools } from "../../util/example-content"
+import { pxToRem } from "../../util/style-utils"
 
 export default {
 	title: "Home/Latest Tools",
 	component: LatestToolsComponent,
 	args: {
-		children: "Hello world",
+		tools: exampleTools,
 	},
 } as Meta
 
 const Template: Story<LatestToolsProps> = (args) => (
-	<LatestToolsComponent {...args} />
+	<div style={{ maxWidth: pxToRem(350) }}>
+		<LatestToolsComponent {...args} />
+	</div>
 )
 
 export const LatestTools = Template.bind({})

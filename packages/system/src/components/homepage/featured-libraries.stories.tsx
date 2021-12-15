@@ -3,12 +3,14 @@ import {
 	FeaturedLibraries as FeaturedLibrariesComponent,
 	FeaturedLibrariesProps,
 } from "./featured-libraries"
+import { exampleLibraries, exampleTags } from "../../util/example-content"
 
 export default {
 	title: "Home/Featured Libraries",
 	component: FeaturedLibrariesComponent,
 	args: {
-		children: "Hello world",
+		libraries: exampleLibraries,
+		libraryTags: exampleTags,
 	},
 } as Meta
 

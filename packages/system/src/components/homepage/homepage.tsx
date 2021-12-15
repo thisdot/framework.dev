@@ -30,7 +30,6 @@ export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
 }
 
 export function Homepage({
-	children,
 	className,
 	libraries,
 	libraryTags,

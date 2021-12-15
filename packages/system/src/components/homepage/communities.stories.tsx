@@ -3,12 +3,13 @@ import {
 	Communities as CommunitiesComponent,
 	CommunitiesProps,
 } from "./communities"
+import { exampleCommunities } from "../../util/example-content"
 
 export default {
-	title: "Hone/Communities",
+	title: "Home/Communities",
 	component: CommunitiesComponent,
 	args: {
-		children: "Hello world",
+		communities: exampleCommunities,
 	},
 } as Meta
 

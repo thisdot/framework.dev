@@ -10,7 +10,7 @@ import {
 	podcastHostStyle,
 } from "./podcasts.css"
 import { Podcast } from "../../models/podcast"
-import { generateRandomIndex } from "./utils"
+import { getRandomNumberArray } from "./utils"
 
 export interface PodcastsProps extends React.ComponentPropsWithoutRef<"div"> {
 	podcasts: Podcast<string>[]
@@ -22,12 +22,8 @@ export function Podcasts({
 	podcasts,
 	...props
 }: PodcastsProps) {
-	const indices: number[] = []
-	while (indices.length < 4) {
-		const num = generateRandomIndex(podcasts.length)
-		if (!indices.includes(num)) indices.push(num)
-	}
-	const randomPodcasts: Podcast<string>[] = indices.map((i) => podcasts[i])
+	const indices = getRandomNumberArray(4, podcasts.length)
+	const randomPodcasts = indices.map((i) => podcasts[i])
 	return (
 		<div className={classNames(className, podcastsStyle)} {...props}>
 			<div className={podcastTextAreaStyle}>

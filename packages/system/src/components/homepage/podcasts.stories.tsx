@@ -1,11 +1,12 @@
 import { Story, Meta } from "@storybook/react"
+import { examplePodcasts } from "../../util/example-content"
 import { Podcasts as PodcastsComponent, PodcastsProps } from "./podcasts"
 
 export default {
 	title: "Home/Podcasts",
 	component: PodcastsComponent,
 	args: {
-		children: "Hello world",
+		podcasts: examplePodcasts,
 	},
 } as Meta
 
