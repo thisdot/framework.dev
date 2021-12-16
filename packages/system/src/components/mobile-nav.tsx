@@ -1,14 +1,17 @@
 import classNames from "classnames"
 import React, { useState } from "react"
 import {
-	burgerIconStyle,
 	menuButtonStyle,
-	menuCloseButtonStyle,
+	mobileNavDialogStyle,
 	mobileNavStyle,
 } from "./mobile-nav.css"
-import { Sidebar } from "./sidebar"
-import { Logo } from "./logo"
 import { SideDialog } from "./side-dialog"
+import { SearchIcon } from "../icons/search-icon"
+import { HomeIcon } from "../icons/home-icon"
+import { BurgerIcon } from "../icons/burger-icon"
+import { CloseBurgerIcon } from "../icons/close-burger-icon"
+import { sprinkles } from "../sprinkles/sprinkles.css"
+import { GithubIcon } from "../icons/github-icon"
 
 type MenuState = "open" | "closed"
 
@@ -27,55 +30,96 @@ export function MobileNav({
 	const [menuState, setMenuState] = useState(initialMenuState)
 	return (
 		<nav className={classNames(className, mobileNavStyle)} {...props}>
-			<Logo />
-			<button
-				className={menuButtonStyle}
-				type="button"
-				id={menuButtonId}
-				onClick={() =>
-					setMenuState((state) => (state === "closed" ? "open" : state))
-				}
-			>
-				Menu
-				<BurgerIcon className={burgerIconStyle} />
-			</button>
+			{menuState === "closed" ? (
+				<>
+					<button
+						type="button"
+						aria-label="Search"
+						onClick={() =>
+							(
+								document.querySelector(
+									'input[type="search"]'
+								) as HTMLInputElement | null
+							)?.focus()
+						}
+						className={sprinkles({ layout: "row" })}
+					>
+						<SearchIcon size="large" />
+					</button>
+					<button
+						className={menuButtonStyle}
+						type="button"
+						id={menuButtonId}
+						onClick={() => setMenuState("open")}
+					>
+						<BurgerIcon size="large" />
+						Categories
+					</button>
+					<a
+						aria-label="Home"
+						href="/"
+						className={sprinkles({ layout: "row" })}
+					>
+						<HomeIcon size="large" />
+					</a>
+				</>
+			) : (
+				<>
+					<div />
+					<button
+						className={menuButtonStyle}
+						type="button"
+						id={menuButtonId}
+						onClick={() => setMenuState("closed")}
+					>
+						<CloseBurgerIcon size="large" />
+						Close
+					</button>
+					<div />
+				</>
+			)}
 			<SideDialog
-				position="left"
+				position="bottom"
 				isOpen={menuState !== "closed"}
 				onDismiss={() => setMenuState("closed")}
 				aria-labelledby={menuButtonId}
+				className={mobileNavDialogStyle}
+				zIndex={3}
 			>
-				<button
-					type="button"
-					aria-label="Close"
-					className={menuCloseButtonStyle}
-					onClick={() => setMenuState("closed")}
+				<div
+					className={sprinkles({
+						borderBottom: "thin",
+						paddingY: 24,
+						paddingX: 32,
+						layout: "stack",
+						gap: 14,
+					})}
 				>
-					<svg
-						aria-hidden="true"
-						role="img"
-						viewBox="0 0 24 24"
-						width="20"
-						height="20"
+					<p
+						className={sprinkles({
+							textStyle: "bodyShort3",
+							color: "softText",
+						})}
 					>
-						<path
-							d="M11.585 18.01L5.575 12l6.01-6.01L13 7.404l-4.6 4.6l4.6 4.6l-1.414 1.406h-.001zm5.425 0L10.999 12l6.011-6.01l1.414 1.414l-4.6 4.6l4.6 4.6l-1.413 1.406h-.001z"
-							fill="currentColor"
-						/>
-					</svg>
-				</button>
-				<Sidebar>{children}</Sidebar>
+						© 2021 This Dot, Inc.
+					</p>
+					<a
+						className={sprinkles({
+							textStyle: "bodyShort2",
+							fontWeight: "bold",
+							color: "softText",
+							layout: "row",
+							alignItems: "center",
+							gap: 12,
+						})}
+						href="https://github.com/thisdot/framework.dev"
+					>
+						<GithubIcon size="large" />
+						Submit a PR
+					</a>
+				</div>
+				<div className={sprinkles({ padding: 16 })}>{children}</div> 
 			</SideDialog>
 		</nav>
-	)
-}
-
-function BurgerIcon(props: React.ComponentProps<"svg">) {
-	return (
-		<svg viewBox="0 0 100 80" {...props}>
-			<rect width="100" height="13"></rect>
-			<rect y="30" width="100" height="13"></rect>
-			<rect y="60" width="100" height="13"></rect>
-		</svg>
 	)
 }

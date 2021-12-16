@@ -1,16 +1,27 @@
 import { style } from "@vanilla-extract/css"
-import { pxToRem } from "../../util/style-utils"
+import { breakpoints, sprinkles } from "../../sprinkles/sprinkles.css"
 
-export const titleFirstCardGrid = style({
-	display: "grid",
-	gridTemplateColumns: "repeat(auto-fit, 340px)",
-	gridAutoRows: "max-content",
-	gap: pxToRem(24),
-})
+const base = style([
+	sprinkles({ gap: { mobile: 12, desktop: 24 } }),
+	{
+		display: "grid",
+		gridAutoRows: "max-content",
+	},
+])
 
-export const imageFirstCardGrid = style({
-	display: "grid",
-	gridTemplateColumns: "repeat(auto-fit, 250px)",
-	gridAutoRows: "max-content",
-	gap: pxToRem(24),
-})
+export const titleFirstCardGrid = style([
+	base,
+	{ gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))" },
+])
+
+export const imageFirstCardGrid = style([
+	base,
+	{
+		gridTemplateColumns: "1fr",
+		"@media": {
+			[breakpoints.tablet]: {
+				gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+			},
+		},
+	},
+])

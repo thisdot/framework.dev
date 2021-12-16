@@ -1,6 +1,6 @@
 import { useId } from "@reach/auto-id"
 import React from "react"
-import { sprinkles } from "../sprinkles/sprinkles.css"
+import { visuallyHidden } from "../styles/utilities.css"
 import { chipSelectorStyle, chipSelectorIconStyle } from "./chip-selector.css"
 
 export interface ChipSelectorProps
@@ -19,7 +19,7 @@ export function ChipSelector({
 		<div className={className}>
 			<input
 				type="checkbox"
-				className={sprinkles({ hidden: "visually" })}
+				className={visuallyHidden}
 				id={id}
 				{...props}
 			/>

@@ -3,7 +3,7 @@ import { vars } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
 const spaceInPixels = [
-	0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 28, 32, 48, 56, 64,
+	0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 28, 32, 40, 48, 56, 64,
 ] as const
 
 const spaceInRem = Object.fromEntries(
@@ -28,7 +28,7 @@ const borders = {
 
 export const breakpoints = {
 	tablet: "screen and (min-width: 768px)",
-	desktop: "screen and (min-width: 1024px)",
+	desktop: "screen and (min-width: 1025px)",
 }
 
 const conditions = {
@@ -256,28 +256,7 @@ const layout = defineProperties({
 			"flex-end",
 			"space-between",
 		],
-		hidden: {
-			none: {},
-			visually: {
-				borderWidth: "0",
-				clip: "rect(1px, 1px, 1px, 1px)",
-				height: "1px",
-				overflow: "hidden",
-				padding: "0",
-				position: "absolute",
-				whiteSpace: "nowrap",
-				width: "1px",
-			},
-			fully: {
-				display: "none",
-			},
-		},
 		layout: {
-			sidebar: {
-				display: "grid",
-				gridTemplateColumns: "240px 1fr",
-				gridAutoRows: "1fr",
-			},
 			stack: {
 				display: "flex",
 				flexDirection: "column",

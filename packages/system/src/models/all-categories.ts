@@ -3,10 +3,9 @@ import {
 	RecordElement,
 	UnionToIntersection,
 } from "../util/type-utils"
+import { Blog, blogIndexMetadata } from "./blog"
 import { Book, bookIndexMetadata } from "./book"
-import { CodeExample, codeExampleIndexMetadata } from "./code-example"
 import { Community, communityIndexMetadata } from "./community"
-import { Company, companyIndexMetadata } from "./company"
 import { Course, courseIndexMetadata } from "./course"
 import { Library, libraryIndexMetadata } from "./library"
 import { Podcast, podcastIndexMetadata } from "./podcast"
@@ -14,13 +13,12 @@ import { Tool, toolIndexMetadata } from "./tool"
 
 export const allCategoriesMetadata = {
 	[bookIndexMetadata.name]: bookIndexMetadata,
-	[codeExampleIndexMetadata.name]: codeExampleIndexMetadata,
 	[communityIndexMetadata.name]: communityIndexMetadata,
-	[companyIndexMetadata.name]: companyIndexMetadata,
 	[courseIndexMetadata.name]: courseIndexMetadata,
 	[libraryIndexMetadata.name]: libraryIndexMetadata,
 	[podcastIndexMetadata.name]: podcastIndexMetadata,
 	[toolIndexMetadata.name]: toolIndexMetadata,
+	[blogIndexMetadata.name]: blogIndexMetadata,
 } as const
 
 export type CategoryMetadata<T extends keyof typeof allCategoriesMetadata> =
@@ -34,13 +32,12 @@ export const allCategoryNames = Object.keys(
 
 export type AllModelsByName = {
 	[bookIndexMetadata.name]: Book<string>
-	[codeExampleIndexMetadata.name]: CodeExample<string>
 	[communityIndexMetadata.name]: Community<string>
-	[companyIndexMetadata.name]: Company<string>
 	[courseIndexMetadata.name]: Course<string>
 	[libraryIndexMetadata.name]: Library<string>
 	[podcastIndexMetadata.name]: Podcast<string>
 	[toolIndexMetadata.name]: Tool<string>
+	[blogIndexMetadata.name]: Blog<string>
 }
 
 export type Model<K extends keyof AllModelsByName> = AllModelsByName[K]

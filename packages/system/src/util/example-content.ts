@@ -11,10 +11,11 @@ import book3 from "./example-assets/book-3.png"
 import { Book, bookIndexMetadata } from "../models/book"
 import { Podcast, podcastIndexMetadata } from "../models/podcast"
 import { Community, communityIndexMetadata } from "../models/community"
-import { Company, companyIndexMetadata } from "../models/company"
-import { CodeExample, codeExampleIndexMetadata } from "../models/code-example"
+import { Company } from "../models/company"
+import { CodeExample } from "../models/code-example"
 import { Tool, toolIndexMetadata } from "../models/tool"
 import { AllCategories } from "../models/all-categories"
+import { Blog, blogIndexMetadata } from "../models/blog"
 
 export const exampleTags = [
 	"accessibility",
@@ -852,6 +853,35 @@ export const exampleTools: Tool<string>[] = [
 	},
 ]
 
+export const exampleBlogs: Blog<ExampleTag>[] = [
+	{
+		title: "ui.dev",
+		author: "Tyler McGinnis",
+		description: "A JavaScript blog with a focus on React content.",
+		image: "https://github.com/uidotdev.png",
+		href: "https://ui.dev/blog/",
+		tags: [],
+	},
+	{
+		title: "Kent C. Dodds' Blog",
+		author: "Kent C. Dodds",
+		description:
+			"Renowned JavaScript and React educator, Kent C. Dodds, shares his React knowledge through his blog.",
+		image: "https://github.com/kentcdodds.png",
+		href: "https://kentcdodds.com/blog?q=react",
+		tags: [],
+	},
+	{
+		title: "Robin Wieruch's Blog",
+		author: "Robin Wieruch",
+		description:
+			"German software engineer, Robin Weiruch, shares a variety of posts on React and JavaScript.",
+		image: "https://github.com/rwieruch.png",
+		href: "https://www.robinwieruch.de/categories/react/",
+		tags: [],
+	},
+]
+
 export const exampleSearchData: AllCategories[] = [
 	{
 		data: exampleBooks,
@@ -860,9 +890,9 @@ export const exampleSearchData: AllCategories[] = [
 		tags: exampleTags,
 	},
 	{
-		data: exampleCodeExamples,
-		indexMetadata: codeExampleIndexMetadata,
-		name: codeExampleIndexMetadata.name,
+		data: exampleBlogs,
+		indexMetadata: blogIndexMetadata,
+		name: blogIndexMetadata.name,
 		tags: exampleTags,
 	},
 	{
@@ -870,12 +900,6 @@ export const exampleSearchData: AllCategories[] = [
 		indexMetadata: communityIndexMetadata,
 		name: communityIndexMetadata.name,
 		tags: exampleTags,
-	},
-	{
-		data: exampleCompanies,
-		indexMetadata: companyIndexMetadata,
-		name: companyIndexMetadata.name,
-		tags: [],
 	},
 	{
 		data: exampleCourses,

@@ -93,7 +93,7 @@ You should also make sure any content you add follows these points:
 - **Authors** – Authorship can be ambiguous for certain kinds of content. Always
   follow the authors stated in the content's copyright notice unless the content
   itself makes a clear contradictory claim. Copyright notices for open-source
-  libraries are most often found in a `LICENCE.md` file.
+  libraries are most often found in a `LICENSE.md` file.
 - **Images** – Prefer links to established services like GitHub or Gravatar.
   With GitHub a particularly useful property is that `github.com/<username>.png`
   will always link to that user's current profile picture.

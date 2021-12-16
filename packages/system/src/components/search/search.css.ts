@@ -5,14 +5,14 @@ export const searchStyle = style({
 	display: "grid",
 	gridTemplateRows: `1fr min-content`,
 	gridTemplateColumns: `1fr`,
-	height: "100vh",
+	height: "100%",
 })
 
 export const searchContainerStyle = style([
 	sprinkles({
 		layout: "stack",
 		gap: 24,
-		paddingTop: 16,
+		paddingTop: { mobile: 24, desktop: 16 },
 	}),
 	{ overflowY: "auto" },
 ])
@@ -21,8 +21,8 @@ export const compareBarStyle = style([
 	sprinkles({
 		backgroundColor: "surface",
 		borderTop: "thin",
-		paddingX: 64,
-		paddingY: 12,
+		paddingX: { mobile: 16, desktop: 64 },
+		paddingY: { mobile: 8, desktop: 12 },
 		gap: 8,
 	}),
 	{
@@ -31,3 +31,13 @@ export const compareBarStyle = style([
 		justifyItems: "flex-start",
 	},
 ])
+
+export const searchMobileLogoContainerStyle = sprinkles({
+	layout: "row",
+	justifyContent: "center",
+	display: { desktop: "none" },
+})
+
+export const searchMobileLogoStyle = style({
+	transform: `scale(${7 / 6})`,
+})

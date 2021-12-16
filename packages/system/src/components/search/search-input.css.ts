@@ -18,7 +18,7 @@ export const searchInputBoxStyle = style([
 	{
 		height: pxToRem(48),
 		display: "grid",
-		gridTemplateColumns: "min-content auto 1fr min-content",
+		gridTemplateColumns: "min-content auto minmax(130px, 1fr) min-content",
 		paddingRight: 0,
 		":focus-within": {
 			borderColor: vars.themeColors.tertiary,
@@ -30,7 +30,9 @@ export const searchInputInputStyle = style([
 	sprinkles({ width: "full" }),
 	{ lineHeight: pxToRem(48), ":focus-within": { outline: "none" } },
 ])
-export const searchInputIconStyle = sprinkles({ marginRight: 10 })
+export const searchInputIconStyle = sprinkles({
+	marginRight: { mobile: 6, desktop: 10 },
+})
 export const searchInputResetButtonStyle = style({
 	fontSize: pxToRem(18),
 	height: pxToRem(48),
@@ -39,3 +41,13 @@ export const searchInputResetButtonStyle = style({
 	alignItems: "center",
 	justifyItems: "center",
 })
+export const searchInputStaticPrefixStyle = style([
+	sprinkles({ color: "softText" }),
+	{
+		whiteSpace: "nowrap",
+		textOverflow: "ellipsis",
+		overflow: "hidden",
+		width: "fit-content",
+		maxWidth: "100%"
+	},
+])

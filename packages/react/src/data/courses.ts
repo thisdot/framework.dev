@@ -270,4 +270,28 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		href: "https://youtu.be/vyJU9efvUtQ",
 		tags: ["material ui", "css"],
 	},
+	{
+		title: "Epic React",
+		author: "Kent C. Dodds",
+		image: "https://github.com/kentcdodds.png",
+		description:
+			"Epic React starts from the fundamentals of React application development and moves you rapidly into the patterns and mental models you need to be successful as a web developer using React to solve users' problems.",
+		paymentType: "paid",
+		level: "intermediate",
+		format: "interactive",
+		href: "https://epicreact.dev/",
+		tags: ["testing", "hooks", "state management"],
+	},
+	{
+		title: "The Beginner's Guide to React",
+		author: "Kent C. Dodds",
+		image: "https://github.com/kentcdodds.png",
+		description:
+			"This course is for React newbies and anyone looking to build a solid foundation. It’s designed to teach you everything you need to start building web applications in React right away.",
+		paymentType: "free",
+		level: "beginner",
+		format: "video",
+		href: "https://egghead.io/courses/the-beginner-s-guide-to-react",
+		tags: ["state management", "data fetching", "forms", "hooks"],
+	},
 ]

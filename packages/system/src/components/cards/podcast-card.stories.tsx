@@ -18,6 +18,9 @@ export default {
 			action: "onTagClick",
 		},
 	},
+	parameters: {
+		layout: "fullscreen",
+	},
 } as Meta
 
 const Template: Story<PodcastCardProps> = (args) => (

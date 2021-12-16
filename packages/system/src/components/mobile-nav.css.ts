@@ -1,18 +1,20 @@
 import { style } from "@vanilla-extract/css"
 import { sprinkles } from "../sprinkles/sprinkles.css"
-import { pxToRem } from "../util/style-utils"
+import { vars } from "../themes/themes.css"
 
 export const mobileNavStyle = style([
 	sprinkles({
 		color: "strongText",
-		backgroundColor: "surface",
 		paddingX: 16,
 		display: "flex",
 		justifyContent: "space-between",
 		alignItems: "center",
+		borderTop: "thin",
 	}),
 	{
-		height: pxToRem(64),
+		backgroundColor: vars.palette.primary99,
+		position: "relative",
+		zIndex: 10,
 	},
 ])
 
@@ -24,39 +26,11 @@ export const menuButtonStyle = style([
 		display: "flex",
 		flexDirection: "row",
 		alignItems: "center",
+		gap: 12,
 	}),
-	{
-		cursor: "pointer",
-	},
 ])
 
-export const burgerIconStyle = style([
-	sprinkles({
-		marginLeft: 10,
-	}),
-	{
-		display: "block",
-		width: pxToRem(14),
-		height: pxToRem(9),
-	},
-])
-
-export const menuCloseButtonStyle = style([
-	sprinkles({
-		border: "thin",
-		backgroundColor: "surface",
-		color: "softText",
-		borderRadius: 8,
-	}),
-	{
-		cursor: "pointer",
-		position: "absolute",
-		right: -16,
-		top: 20,
-		height: 32,
-		width: 32,
-		display: "grid",
-		justifyContent: "center",
-		alignContent: "center",
-	},
-])
+export const mobileNavDialogStyle = style({
+	maxHeight: "calc(100vh - 56px)",
+	overflowY: "auto",
+})

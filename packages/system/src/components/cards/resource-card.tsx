@@ -8,6 +8,7 @@ import { CardSelector } from "./card-selector"
 import { DiscreteAttribute } from "../discrete-attribute"
 import { InfoPopup } from "../info-popup"
 import {
+	bookImageContainerStyle,
 	resourceCardBodyStyle,
 	resourceCardBookImageDecoration,
 	resourceCardFooterStyle,
@@ -70,18 +71,23 @@ export function ResourceCard({
 			className={classNames(className, resourceCardStyle[layout])}
 			{...props}
 		>
-			<header className={resourceCardHeaderStyle}>
-				{image && (
-					<div className={resourceCardImageContainerStyle}>
-						{imageLayout === "book" && layout === "imageFirst" ? (
-							<BookImageDecoration>
-								<img src={image} className={resourceCardImageStyle} alt="" />
-							</BookImageDecoration>
-						) : (
+			{image && (
+				<div
+					className={classNames(
+						resourceCardImageContainerStyle,
+						imageLayout === "book" && bookImageContainerStyle
+					)}
+				>
+					{imageLayout === "book" && layout === "imageFirst" ? (
+						<BookImageDecoration>
 							<img src={image} className={resourceCardImageStyle} alt="" />
-						)}
-					</div>
-				)}
+						</BookImageDecoration>
+					) : (
+						<img src={image} className={resourceCardImageStyle} alt="" />
+					)}
+				</div>
+			)}
+			<header className={resourceCardHeaderStyle}>
 				<div className={resourceCardTitleContainerStyle}>
 					<a href={href} target="_blank" rel="noreferrer">
 						<H className={resourceCardTitleStyle}>{title}</H>
@@ -115,7 +121,7 @@ export function ResourceCard({
 								sprinkles({
 									layout: "row",
 									gap: 4,
-									paddingY: 12,
+									paddingBottom: 12,
 									flexWrap: "wrap",
 								}),
 								"hide-in-percy"
@@ -123,10 +129,14 @@ export function ResourceCard({
 						>
 							{badges}
 						</div>
-						<CardDivider />
+						<CardDivider
+							className={sprinkles({
+								marginBottom: 12,
+							})}
+						/>
 					</>
 				)}
-				<div className={sprinkles({ paddingTop: 12, layout: "row", gap: 4 })}>
+				<div className={sprinkles({ layout: "row", gap: 4 })}>
 					{visibleTags.map((tag) => (
 						<Tag key={tag} onClick={() => onTagClick(tag)}>
 							{formatFieldValue(tag)}

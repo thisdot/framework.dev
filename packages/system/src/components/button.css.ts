@@ -1,30 +1,25 @@
 import { recipe } from "@vanilla-extract/recipes"
-import { VariantSelection } from "@vanilla-extract/recipes/dist/declarations/src/types"
+import type { VariantSelection } from "@vanilla-extract/recipes/dist/declarations/src/types"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { vars } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
 const buttonVariants = {
 	size: {
-		small: sprinkles({
-			borderRadius: 8,
-			paddingY: 8,
-			paddingX: 12,
-		}),
-		medium: sprinkles({
-			borderRadius: 12,
-			paddingY: 12,
-			paddingX: 20,
-		}),
-		large: sprinkles({
-			borderRadius: 12,
-			paddingY: 16,
-			paddingX: 24,
-		}),
-		square: sprinkles({
-			borderRadius: 12,
-			padding: 12,
-		}),
+		medium: [
+			sprinkles({
+				paddingX: 20,
+			}),
+			{ height: pxToRem(40) },
+		],
+		large: [
+			sprinkles({
+				paddingX: 24,
+			}),
+			{ height: pxToRem(48) },
+		],
+		square: { height: pxToRem(40), width: pxToRem(40) },
+		largeSquare: { height: pxToRem(48), width: pxToRem(48) },
 	},
 	color: {
 		primary: {
@@ -114,7 +109,7 @@ const buttonVariants = {
 			},
 		},
 	},
-} as const
+}
 
 export type ButtonVariants = VariantSelection<typeof buttonVariants>
 
@@ -123,6 +118,7 @@ export const buttonStyle = recipe({
 		sprinkles({
 			textStyle: "button",
 			gap: 8,
+			borderRadius: 12,
 		}),
 		{
 			borderColor: "transparent",

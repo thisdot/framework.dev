@@ -22,7 +22,7 @@ const category = Astro.props.category as CategoryName
 const title = `React ${formatFieldName(category)}`
 ---
 <head>
-	<meta name="description" content={`Browse ${title}`}/>
+	<meta name="description" content={`Browse and search through relevant ${title}`}/>
 </head>
 <BaseLayout title={title} currentCategory={category}>
 	<Search client:load preFilters={{ category: [category], tag: [], field: [] }} />

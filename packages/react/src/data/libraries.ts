@@ -750,4 +750,28 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"A graphical user interface for changing variable states in React.",
 	},
+  {
+		name: "Blitz",
+		author: "Brandon Bayer",
+		gitHubRepo: "blitz-js/blitz",
+		npmPackage: "blitz",
+		href: "https://blitzjs.com/",
+		description:
+			"Blitz is a batteries-included framework that's inspired by Ruby on Rails, is built on Next.js, and features a \"Zero-API\" data layer abstraction that eliminates the need for REST/GraphQL.",
+		image:
+			"https://github.com/blitz-js.png",
+		tags: ["framework", "data fetching", "routing", "static site generation", "server side rendering"],
+	},
+	{
+		name: "Remix",
+		author: "Remix",
+		gitHubRepo: "remix-run/remix",
+		npmPackage: "remix",
+		href: "https://remix.run/",
+		description:
+			"Remix is a full stack web framework (from the creators of React Router) that lets you focus on the user interface and work back through web fundamentals to deliver a fast, slick, and resilient user experience.",
+		image:
+			"https://github.com/remix-run.png",
+		tags: ["framework", "routing", "data fetching", "server side rendering", "forms"],
+	}
 ]

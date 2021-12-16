@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css"
-import { sprinkles } from "../../../sprinkles/sprinkles.css"
+import { breakpoints, sprinkles } from "../../../sprinkles/sprinkles.css"
 import { pxToRem } from "../../../util/style-utils"
 import { vars } from "../../../themes/themes.css"
 
@@ -7,12 +7,14 @@ const cellStyle = style([
 	sprinkles({
 		borderBottom: "tableCell",
 		borderRight: "tableCell",
-		paddingX: 24,
-		paddingY: 20,
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "flex-start",
+		paddingX: { mobile: 16, tablet: 24 },
+		height: "full",
 	}),
 	{
-		minWidth: "max-content",
-		verticalAlign: "middle",
+		maxWidth: "40vw",
 	},
 ])
 
@@ -28,12 +30,21 @@ export const cellTHStyle = style([
 		zIndex: 2,
 		selectors: {
 			"&:first-of-type": {
-				borderTopLeftRadius: pxToRem(12),
 				left: 0,
 				zIndex: 3,
+				"@media": {
+					[breakpoints.tablet]: {
+						borderTopLeftRadius: pxToRem(12),
+					},
+				},
 			},
 			"&:last-of-type": {
-				borderTopRightRadius: pxToRem(12),
+				borderRightColor: "transparent",
+				"@media": {
+					[breakpoints.tablet]: {
+						borderTopRightRadius: pxToRem(12),
+					},
+				},
 			},
 		},
 	},
@@ -95,6 +106,11 @@ export const cellTDStyle = style([
 	cellStyle,
 	{
 		backgroundColor: "white",
+		selectors: {
+			"&:last-child": {
+				borderRight: "none",
+			},
+		},
 	},
 ])
 
@@ -108,12 +124,19 @@ export const cellStickyStyle = style([
 ])
 
 export const cellContentsStyle = style([
+	{
+		gridAutoFlow: "column",
+		placeItems: "center",
+		whiteSpace: "nowrap",
+		textOverflow: "ellipsis",
+		overflow: "hidden",
+	},
+])
+
+export const rowHeadingContentsStyle = style([
 	sprinkles({
 		display: "grid",
 		gap: 12,
 	}),
-	{
-		gridAutoFlow: "column",
-		placeItems: "center",
-	},
+	cellContentsStyle,
 ])
