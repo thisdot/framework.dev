@@ -112,7 +112,8 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 	{
 		name: "Framer",
 		author: "Framer",
-		description: "Framer is your tool for designing everything.",
+		description:
+			"A tool to create interactive animated prototypes and import them into your React app.",
 		image: "https://www.framer.com/images/favicons/icon.png",
 		href: "https://www.framer.com/",
 		tags: ["UI Design"],
