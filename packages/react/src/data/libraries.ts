@@ -660,7 +660,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://docs.pmnd.rs/react-three-fiber/getting-started/introduction",
 		image: "https://github.com/pmndrs.png",
 		tags: ["3D"],
-		description: "React-three-fiber is a React renderer for three.js",
+		description: "A React library for Three.js to render 3D scenes in React.",
 	},
 	{
 		name: "Drei",
@@ -681,7 +681,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://docs.pmnd.rs/zustand/introduction",
 		image: "https://github.com/pmndrs.png",
 		tags: ["state management"],
-		description: "https://docs.pmnd.rs/zustand-resources/bear.png",
+		description:
+			"A small, fast and scalable bearbones state-management solution using simplified flux principles.",
 	},
 	{
 		name: "A11y",
@@ -699,11 +700,11 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		author: "Poimandres",
 		gitHubRepo: "pmndrs/use-cannon",
 		npmPackage: "@react-three/cannon",
-		href: "https://cannon.pmnd.rs/",
+		href: "https://github.com/pmndrs/use-cannon",
 		image: "https://github.com/pmndrs.png",
 		tags: ["3D"],
 		description:
-			"React hooks for cannon-es. Use this in combination with react-three-fiber",
+			"A library to add physics to react-three-fiber components. It provides a simple API to create and update physics bodies.",
 	},
 	{
 		name: "Use Gesture",
@@ -747,8 +748,6 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image: "https://github.com/birkir.png",
 		tags: ["3D"],
 		description:
-			"@use-gesture is a set of gestures that let you bind mouse and touch events to any node.",
+			"A graphical user interface for changing variable states in React.",
 	},
 ]
-
-//https://github.com/birkir/react-three-gui
