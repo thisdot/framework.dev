@@ -113,7 +113,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		name: "Framer",
 		author: "Framer",
 		description:
-			"A tool to create interactive animated prototypes and import them into your React app.",
+			"A tool to create interactive animated prototypes and import them into your React app using framer-motion.",
 		image: "https://www.framer.com/images/favicons/icon.png",
 		href: "https://www.framer.com/",
 		tags: ["UI Design"],
