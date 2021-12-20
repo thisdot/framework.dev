@@ -23,6 +23,7 @@ import {
 import { AttributeDefinition } from "../../models/all-categories"
 import { DiscreteAttribute, DiscreteAttributeIcon } from "../discrete-attribute"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { BookDecorator } from "../book-decorator"
 
 export interface FeatureAndListProps
 	extends React.ComponentPropsWithoutRef<"div"> {
@@ -61,10 +62,12 @@ export function FeatureAndList({
 						{featured.image &&
 							(featured.image.style === "book" ? (
 								<div className={featureAndListFeatureBookContainerStyle}>
-									<img
-										className={featureAndListFeatureBookStyle}
-										src={featured.image.src}
-									/>
+									<BookDecorator>
+										<img
+											className={featureAndListFeatureBookStyle}
+											src={featured.image.src}
+										/>
+									</BookDecorator>
 								</div>
 							) : (
 								<img
@@ -94,14 +97,21 @@ export function FeatureAndList({
 				</article>
 				<div className={featureAndListListStyle}>
 					{items.slice(1).map((item) => (
-						<article key={item.title} className={featureAndListListItemStyle}>
-							<a href={item.href} target="_blank" rel="noreferrer">
+						<article key={item.title}>
+							<a
+								href={item.href}
+								target="_blank"
+								rel="noreferrer"
+								className={featureAndListListItemStyle}
+							>
 								{item.image &&
 									(item.image.style === "book" ? (
-										<img
-											className={featureAndListListBookStyle}
-											src={item.image.src}
-										/>
+										<BookDecorator>
+											<img
+												className={featureAndListListBookStyle}
+												src={item.image.src}
+											/>
+										</BookDecorator>
 									) : (
 										<img
 											className={featureAndListListImageStyle}

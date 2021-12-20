@@ -129,9 +129,12 @@ export const featureAndListListStyle = sprinkles({
 
 export const featureAndListListItemStyle = style([
 	sprinkles({
+		display: "grid",
 		gap: 12,
-		layout: "row",
 	}),
+	{
+		gridTemplateColumns: `${pxToRem(32)} 1fr`,
+	},
 ])
 
 export const featureAndListListImageStyle = style([
