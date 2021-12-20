@@ -42,13 +42,16 @@ export function ContentBanner({
 				</a>
 			</div>
 			{randomItems.map((item) => (
-				<div key={item.title}>
+				<a
+					key={item.title}
+					href={item.href}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<img className={contentBannerCardImageStyle} src={item.image} />
-					<a href={item.href} target="_blank" rel="noopener noreferrer">
-						<h3 className={contentBannerTitleStyle}>{item.title}</h3>
-					</a>
+					<h3 className={contentBannerTitleStyle}>{item.title}</h3>
 					<p className={contentBannerHostStyle}>{item.metadata}</p>
-				</div>
+				</a>
 			))}
 		</div>
 	)

@@ -46,25 +46,25 @@ export function ResourceList({
 							key={`resource-${item.title}`}
 							className={resourceListItemStyle}
 						>
-							<div className={resourceListItemHeaderStyle}>
-								{item.image && (
-									<img
-										src={item.image}
-										className={resourceListItemImageStyle}
-									/>
-								)}
-								<div>
-									<a href={item.href} target="_blank" rel="noreferrer">
+							<a href={item.href} target="_blank" rel="noreferrer">
+								<div className={resourceListItemHeaderStyle}>
+									{item.image && (
+										<img
+											src={item.image}
+											className={resourceListItemImageStyle}
+										/>
+									)}
+									<div>
 										<h3 className={resourceListItemTitleStyle}>{item.title}</h3>
-									</a>
-									<p className={resourceListItemMetadataStyle}>
-										{item.metadata}
-									</p>
+										<p className={resourceListItemMetadataStyle}>
+											{item.metadata}
+										</p>
+									</div>
 								</div>
-							</div>
-							<p className={resourceListItemDescriptionStyle}>
-								{item.description}
-							</p>
+								<p className={resourceListItemDescriptionStyle}>
+									{item.description}
+								</p>
+							</a>
 						</li>
 					)
 				})}

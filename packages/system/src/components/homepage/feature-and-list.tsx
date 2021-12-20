@@ -57,73 +57,73 @@ export function FeatureAndList({
 			<h2 className={featureAndListHeadingStyle}>{title}</h2>
 			<div className={featureAndListBoxStyle}>
 				<article className={featureAndListFeaturedStyle}>
-					{featured.image &&
-						(featured.image.style === "book" ? (
-							<div className={featureAndListFeatureBookContainerStyle}>
+					<a href={featured.href} target="_blank" rel="noreferrer">
+						{featured.image &&
+							(featured.image.style === "book" ? (
+								<div className={featureAndListFeatureBookContainerStyle}>
+									<img
+										className={featureAndListFeatureBookStyle}
+										src={featured.image.src}
+									/>
+								</div>
+							) : (
 								<img
-									className={featureAndListFeatureBookStyle}
+									className={featureAndListFeatureImageStyle}
 									src={featured.image.src}
 								/>
-							</div>
-						) : (
-							<img
-								className={featureAndListFeatureImageStyle}
-								src={featured.image.src}
-							/>
-						))}
-					<a href={featured.href} target="_blank" rel="noreferrer">
+							))}
 						<h3 className={featureAndListFeatureTitleStyle}>
 							{featured.title}
 						</h3>
+						<p className={featureAndListMetadataStyle}>{featured.metadata}</p>
+						<div className={featureAndListFeatureAttributesStyle}>
+							{featured.attributes.map((attribute) => {
+								return (
+									<DiscreteAttribute
+										key={`${featured.title}-${attribute[0]}`}
+										attribute={attribute}
+										colorize={true}
+									/>
+								)
+							})}
+						</div>
+						<p className={featureAndListFeatureDescription}>
+							{featured.description}
+						</p>
 					</a>
-					<p className={featureAndListMetadataStyle}>{featured.metadata}</p>
-					<div className={featureAndListFeatureAttributesStyle}>
-						{featured.attributes.map((attribute) => {
-							return (
-								<DiscreteAttribute
-									key={`${featured.title}-${attribute[0]}`}
-									attribute={attribute}
-									colorize={true}
-								/>
-							)
-						})}
-					</div>
-					<p className={featureAndListFeatureDescription}>
-						{featured.description}
-					</p>
 				</article>
 				<div className={featureAndListListStyle}>
 					{items.slice(1).map((item) => (
 						<article key={item.title} className={featureAndListListItemStyle}>
-							{item.image &&
-								(item.image.style === "book" ? (
-									<img
-										className={featureAndListListBookStyle}
-										src={item.image.src}
-									/>
-								) : (
-									<img
-										className={featureAndListListImageStyle}
-										src={item.image.src}
-									/>
-								))}
-							<div className={sprinkles({ layout: "stack", gap: 4 })}>
-								<a href={item.href} target="_blank" rel="noreferrer">
+							<a href={item.href} target="_blank" rel="noreferrer">
+								{item.image &&
+									(item.image.style === "book" ? (
+										<img
+											className={featureAndListListBookStyle}
+											src={item.image.src}
+										/>
+									) : (
+										<img
+											className={featureAndListListImageStyle}
+											src={item.image.src}
+										/>
+									))}
+								<div className={sprinkles({ layout: "stack", gap: 4 })}>
 									<h3 className={featureAndListListTitleStyle}>{item.title}</h3>
-								</a>
-								<div className={featureAndListListMetadataStyle}>
-									<p>{item.metadata}</p>
-									{featured.attributes.map((attribute) => {
-										return (
-											<DiscreteAttributeIcon
-												key={`${featured.title}-${attribute[0]}`}
-												attribute={attribute}
-												colorize={true}
-											/>
-										)
-									})}
+									<div className={featureAndListListMetadataStyle}>
+										<p>{item.metadata}</p>
+										{featured.attributes.map((attribute) => {
+											return (
+												<DiscreteAttributeIcon
+													key={`${featured.title}-${attribute[0]}`}
+													attribute={attribute}
+													colorize={true}
+												/>
+											)
+										})}
+									</div>
 								</div>
-							</div>
+							</a>
 						</article>
 					))}
 				</div>
