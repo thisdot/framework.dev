@@ -5,6 +5,7 @@ import { pxToRem } from "../../util/style-utils"
 export const homepageStyle = style([
 	sprinkles({
 		display: "grid",
+		marginX: "auto",
 		paddingX: {
 			mobile: 16,
 			desktop: 48,
@@ -12,6 +13,7 @@ export const homepageStyle = style([
 	}),
 	{
 		gap: pxToRem(128),
+		maxWidth: pxToRem(1200),
 		overflow: "auto",
 	},
 ])
