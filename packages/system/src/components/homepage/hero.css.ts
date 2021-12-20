@@ -18,7 +18,7 @@ export const heroStyle = style([
 
 export const heroHeadingStyle = style({
 	color: vars.themeColors.onSurface,
-	fontSize: pxToRem(88),
+	fontSize: `min(calc(4vw + 1rem), ${pxToRem(88)})`,
 	fontWeight: 700,
 	lineHeight: 1,
 	letterSpacing: "-0.02em",
