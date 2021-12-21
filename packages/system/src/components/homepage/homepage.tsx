@@ -1,6 +1,7 @@
 import classNames from "classnames"
 import React from "react"
 import { homepageStyle, homepageTwoAndOneSectionStyle } from "./homepage.css"
+import { Search } from "./search"
 import { Hero } from "./hero"
 import { FeaturedLibraries } from "./featured-libraries"
 import { Podcasts } from "./podcasts"
@@ -17,6 +18,7 @@ import { Blog } from "../../models/blog"
 import { Book } from "../../models/book"
 import { Tool } from "../../models/tool"
 import { Community } from "../../models/community"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
 
 export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
 	libraries: Library<string>[]
@@ -43,7 +45,10 @@ export function Homepage({
 }: HomepageProps) {
 	return (
 		<div className={classNames(className, homepageStyle)} {...props}>
-			<Hero />
+			<div className={sprinkles({ layout: "stack", gap: 56 })}>
+				<Search />
+				<Hero />
+			</div>
 			<FeaturedLibraries libraries={libraries} libraryTags={libraryTags} />
 			<Podcasts podcasts={podcasts} />
 			<div className={homepageTwoAndOneSectionStyle}>
