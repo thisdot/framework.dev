@@ -3,6 +3,9 @@
 - [2021-12-15] Improve site accessibility for keyboard and screen reader users
   [\#144](https://github.com/thisdot/framework.dev/pull/144)
   ([jbachhardie](https://github.com/jbachhardie))
+- [2021-12-13] Edit React books
+  [\#146](https://github.com/thisdot/framework.dev/pull/146)
+  ([jbachhardie](https://github.com/jbachhardie))
 - [2021-12-13] Improve page metadata for better SEO
   [\#141](https://github.com/thisdot/framework.dev/pull/141)
   ([jbachhardie](https://github.com/jbachhardie))
