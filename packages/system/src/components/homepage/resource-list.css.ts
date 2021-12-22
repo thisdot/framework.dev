@@ -29,6 +29,7 @@ export const resourceListListStyle = style([
 		marginBottom: 24,
 	}),
 	{
+		alignItems: "start",
 		gridAutoFlow: "row",
 	},
 ])

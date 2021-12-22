@@ -1,5 +1,6 @@
 import classNames from "classnames"
 import React from "react"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
 import {
 	resourceListStyle,
 	resourceListHeadingStyle,
@@ -39,39 +40,43 @@ export function ResourceList({
 	return (
 		<div className={classNames(className, resourceListStyle)} {...props}>
 			<h2 className={resourceListHeadingStyle}>{title}</h2>
-			<ul className={resourceListListStyle}>
-				{items.map((item) => {
-					return (
-						<li
-							key={`resource-${item.title}`}
-							className={resourceListItemStyle}
-						>
-							<a href={item.href} target="_blank" rel="noreferrer">
-								<div className={resourceListItemHeaderStyle}>
-									{item.image && (
-										<img
-											src={item.image}
-											className={resourceListItemImageStyle}
-										/>
-									)}
-									<div>
-										<h3 className={resourceListItemTitleStyle}>{item.title}</h3>
-										<p className={resourceListItemMetadataStyle}>
-											{item.metadata}
-										</p>
+			<div className={sprinkles({ layout: "stack", gap: 16 })}>
+				<ul className={resourceListListStyle}>
+					{items.map((item) => {
+						return (
+							<li
+								key={`resource-${item.title}`}
+								className={resourceListItemStyle}
+							>
+								<a href={item.href} target="_blank" rel="noreferrer">
+									<div className={resourceListItemHeaderStyle}>
+										{item.image && (
+											<img
+												src={item.image}
+												className={resourceListItemImageStyle}
+											/>
+										)}
+										<div>
+											<h3 className={resourceListItemTitleStyle}>
+												{item.title}
+											</h3>
+											<p className={resourceListItemMetadataStyle}>
+												{item.metadata}
+											</p>
+										</div>
 									</div>
-								</div>
-								<p className={resourceListItemDescriptionStyle}>
-									{item.description}
-								</p>
-							</a>
-						</li>
-					)
-				})}
-			</ul>
-			<a href={viewAll.href} className={resourceListViewAllStyle}>
-				{viewAll.title}
-			</a>
+									<p className={resourceListItemDescriptionStyle}>
+										{item.description}
+									</p>
+								</a>
+							</li>
+						)
+					})}
+				</ul>
+				<a href={viewAll.href} className={resourceListViewAllStyle}>
+					{viewAll.title}
+				</a>
+			</div>
 		</div>
 	)
 }
