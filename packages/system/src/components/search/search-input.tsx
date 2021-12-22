@@ -39,7 +39,7 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
 		return (
 			<div className={classNames(className, searchInputContainerStyle)}>
 				<div className={searchInputBoxStyle}>
-					<SearchIcon className={searchInputIconStyle} />
+					<SearchIcon className={searchInputIconStyle} aria-hidden />
 					<div className={searchInputStaticPrefixStyle}>{staticPrefix}</div>
 					<input
 						type="search"
@@ -50,6 +50,7 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
 					/>
 					<button
 						title="Reset"
+						type="button"
 						onClick={onReset}
 						className={searchInputResetButtonStyle}
 					>

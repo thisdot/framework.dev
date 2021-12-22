@@ -1,7 +1,5 @@
 import { Library } from "../../models/library"
-import {
-	libraryCardBadgeStyle,
-} from "./library-card.css"
+import { libraryCardBadgeStyle } from "./library-card.css"
 import {
 	getGitHubStarsBadge,
 	getNpmDownloadsBadge,
@@ -34,9 +32,21 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 			tags={library.tags}
 			badges={
 				<>
-					<Badge data={getGitHubStarsBadge(library.gitHubRepo)} />
-					<Badge data={getNpmDownloadsBadge(library.npmPackage)} />
-					<Badge data={getBundleSizeBadge(library.npmPackage)} />
+					<Badge
+						data={getGitHubStarsBadge(library.gitHubRepo)}
+						href={`https://www.github.com/${library.gitHubRepo}`}
+						label={`${library.name} GitHub Repository`}
+					/>
+					<Badge
+						data={getNpmDownloadsBadge(library.npmPackage)}
+						href={`https://www.npmjs.com/package/${library.npmPackage}`}
+						label={`${library.name} NPM Package`}
+					/>
+					<Badge
+						data={getBundleSizeBadge(library.npmPackage)}
+						href={`https://bundlephobia.com/package/${library.npmPackage}`}
+						label={`${library.name} Bundle Size Stats`}
+					/>
 				</>
 			}
 			{...props}
@@ -46,6 +56,16 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 	)
 }
 
-function Badge({ data }: { data: string }) {
-	return <img className={libraryCardBadgeStyle} src={data} />
+type BadgeProps = {
+	data: string
+	href: string
+	label: string
+}
+
+function Badge({ data, href, label }: BadgeProps) {
+	return (
+		<a href={href} target="_blank" rel="noreferrer">
+			<img className={libraryCardBadgeStyle} src={data} alt={label} />
+		</a>
+	)
 }

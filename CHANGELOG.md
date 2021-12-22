@@ -1,5 +1,8 @@
 # Changelog
 
+- [2021-12-15] Improve site accessibility for keyboard and screen reader users
+  [\#144](https://github.com/thisdot/framework.dev/pull/144)
+  ([jbachhardie](https://github.com/jbachhardie))
 - [2021-12-13] Edit React books
   [\#146](https://github.com/thisdot/framework.dev/pull/146)
   ([jbachhardie](https://github.com/jbachhardie))
@@ -9,7 +12,7 @@
 - [2021-12-13] Remove unused categories, add Blogs
   [\#140](https://github.com/thisdot/framework.dev/pull/135)
   ([jbachhardie](https://github.com/jbachhardie))
-- [2021-12-10] Mobile and tablet designs for search, navigation and comparison 
+- [2021-12-10] Mobile and tablet designs for search, navigation and comparison
   [\[#126](https://github.com/thisdot/framework.dev/issues/126)
   ([jbachhardie](https://github.com/jbachhardie))
 - [2021-12-10] Create blog model and add resources

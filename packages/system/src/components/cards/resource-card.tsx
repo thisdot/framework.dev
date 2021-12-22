@@ -21,6 +21,7 @@ import {
 	resourceCardTitleStyle,
 } from "./resource-card.css"
 import { Tag } from "../tag"
+import { useId } from "@reach/auto-id"
 
 export interface ResourceCardProps
 	extends Omit<
@@ -65,8 +66,10 @@ export function ResourceCard({
 	const tagsInPopup = tags.length > maxTags ? tags.slice(maxTags - 1) : []
 	const [popupOpen, setPopupOpen] = useState(false)
 	const popupButtonRef = useRef(null)
+	const titleId = useId()
 	return (
 		<article
+			aria-labelledby={titleId}
 			data-selected={onSelect ? selected : undefined}
 			className={classNames(className, resourceCardStyle[layout])}
 			{...props}
@@ -90,7 +93,9 @@ export function ResourceCard({
 			<header className={resourceCardHeaderStyle}>
 				<div className={resourceCardTitleContainerStyle}>
 					<a href={href} target="_blank" rel="noreferrer">
-						<H className={resourceCardTitleStyle}>{title}</H>
+						<H className={resourceCardTitleStyle} id={titleId}>
+							{title}
+						</H>
 					</a>
 					<p className={resourceCardSubtitleStyle}>{subtitle}</p>
 				</div>
@@ -138,12 +143,20 @@ export function ResourceCard({
 				)}
 				<div className={sprinkles({ layout: "row", gap: 4 })}>
 					{visibleTags.map((tag) => (
-						<Tag key={tag} onClick={() => onTagClick(tag)}>
+						<Tag
+							key={tag}
+							onClick={() => onTagClick(tag)}
+							aria-label={`Filter results by ${formatFieldValue(tag)}`}
+						>
 							{formatFieldValue(tag)}
 						</Tag>
 					))}
 					{tagsInPopup.length > 0 && (
-						<Tag onClick={() => setPopupOpen(true)} ref={popupButtonRef}>
+						<Tag
+							onClick={() => setPopupOpen(true)}
+							ref={popupButtonRef}
+							aria-label={`View ${tagsInPopup.length} more tags`}
+						>
 							{tagsInPopup.length}+
 						</Tag>
 					)}
@@ -160,7 +173,11 @@ export function ResourceCard({
 							})}
 						>
 							{tagsInPopup.map((tag) => (
-								<Tag key={tag} onClick={() => onTagClick(tag)}>
+								<Tag
+									key={tag}
+									onClick={() => onTagClick(tag)}
+									aria-label={`Filter results by ${formatFieldValue(tag)}`}
+								>
 									{formatFieldValue(tag)}
 								</Tag>
 							))}
