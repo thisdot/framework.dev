@@ -31,7 +31,7 @@ const { title, currentCategory, currentTag } = Astro.props
 		}
   </head>
   <body class={classNames(sprinkles({ backgroundColor: "surface4", height: "full" }), bodyWithNav)} >
-		<Sidebar className={sprinkles({ display: { mobile: "none", desktop: "block" }})}>
+		<Sidebar aria-label="primary" className={sprinkles({ display: { mobile: "none", desktop: "block" }})}>
 			<div class={sprinkles({ layout: "stack", gap: 24 })}>
 				<NavItems currentCategory={currentCategory} currentTag={currentTag} />
 			</div>
@@ -40,6 +40,7 @@ const { title, currentCategory, currentTag } = Astro.props
 			<slot />
 		</main>
 		<MobileNav 
+			aria-label="primary"
 			client:media="(max-width:1025px)"
 			currentCategory={currentCategory} 
 			currentTag={currentTag} 

@@ -64,6 +64,7 @@ export function SearchAutocomplete({
 		>
 			<ComboboxInput
 				as={SearchInput}
+				name="q"
 				ref={inputRef}
 				autocomplete={false}
 				label="Search"

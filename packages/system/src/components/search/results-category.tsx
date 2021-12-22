@@ -25,6 +25,8 @@ import {
 } from "../cards/card-layouts.css"
 import { Blog } from "../../models/blog"
 import { BlogCard } from "../cards/blog-card"
+import { visuallyHidden } from "../../styles/utilities.css"
+import { useId } from "@reach/auto-id"
 
 export type ResultsCategoryProps<T extends CategoryName> = Omit<
 	React.ComponentPropsWithoutRef<"div">,
@@ -48,6 +50,7 @@ export function ResultsCategory<T extends CategoryName>({
 	selectedItems = [],
 	...props
 }: ResultsCategoryProps<T>) {
+	const headerId = useId()
 	if (results.length === 0) return null
 	const layout = ["books", "communities", "podcasts"].includes(category)
 		? imageFirstCardGrid
@@ -64,6 +67,11 @@ export function ResultsCategory<T extends CategoryName>({
 					)}
 					{...props}
 				>
+					<ResultsCategoryHeader
+						category={category}
+						numberOfResults={results.length}
+						className={visuallyHidden}
+					/>
 					{results.map(
 						renderCard({
 							headingTag: "h3",
@@ -86,26 +94,15 @@ export function ResultsCategory<T extends CategoryName>({
 							borderRadius: 12,
 						})
 					)}
+					aria-labelledby={headerId}
+					role="region"
 					{...props}
 				>
-					<header
-						className={sprinkles({
-							layout: "row",
-							gap: 8,
-							alignItems: "center",
-						})}
-					>
-						<h2
-							className={sprinkles({
-								textStyle: "bodyShort1",
-								fontWeight: "bold",
-								paddingY: 2,
-							})}
-						>
-							{startCase(category)}
-						</h2>
-						<Counter size="small">{results.length}</Counter>
-					</header>
+					<ResultsCategoryHeader
+						category={category}
+						numberOfResults={results.length}
+						id={headerId}
+					/>
 					<div className={classNames(layout, sprinkles({ paddingTop: 24 }))}>
 						{results.map(
 							renderCard({
@@ -183,4 +180,37 @@ function renderCard<T extends CategoryName>({
 		default:
 			return assertNever(category)
 	}
+}
+
+function ResultsCategoryHeader({
+	category,
+	numberOfResults,
+	...props
+}: React.ComponentPropsWithoutRef<"header"> & {
+	category: string
+	numberOfResults: number
+}) {
+	return (
+		<header
+			className={sprinkles({
+				layout: "row",
+				gap: 8,
+				alignItems: "center",
+			})}
+			aria-live="polite"
+			aria-atomic
+			{...props}
+		>
+			<h2
+				className={sprinkles({
+					textStyle: "bodyShort1",
+					fontWeight: "bold",
+					paddingY: 2,
+				})}
+			>
+				{startCase(category)}
+			</h2>
+			<Counter size="small">{numberOfResults}</Counter>
+		</header>
+	)
 }
