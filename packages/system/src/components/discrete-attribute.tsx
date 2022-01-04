@@ -43,6 +43,28 @@ export function DiscreteAttribute({
 	)
 }
 
+export function DiscreteAttributeIcon({
+	children,
+	className,
+	attribute,
+	colorize = false,
+	...props
+}: DiscreteAttributeProps) {
+	const Icon = attributeIcon(attribute)
+	const color = attributeColor(attribute)
+	return (
+		<div
+			className={classNames(
+				className,
+				colorize && color && sprinkles({ color })
+			)}
+			{...props}
+		>
+			<Icon />
+		</div>
+	)
+}
+
 function attributeIcon(
 	attribute: AttributeDefinition
 ): React.ComponentType<IconProps> {

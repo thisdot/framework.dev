@@ -1,7 +1,7 @@
 import classNames from "classnames"
 import React from "react"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { Button } from "./button"
+import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { Button } from "../button"
 import {
 	contributorBannerStyle,
 	contributorImageStyle,
@@ -20,7 +20,20 @@ export function ContributorBanner({
 }: ContributorBannerProps) {
 	return (
 		<div className={classNames(className, contributorBannerStyle)} {...props}>
-			<div>{children}</div>
+			<div>
+				<h1
+					className={sprinkles({
+						textStyle: "sectionHeading",
+						marginBottom: 8,
+					})}
+				>
+					Build better. Together.
+				</h1>
+				<p className={sprinkles({ textStyle: "bodyText" })}>
+					Create a PR if you see mistakes, room for improvement, or new
+					opportunties to help dev team.
+				</p>
+			</div>
 			<div className={sprinkles({ layout: "row" })}>
 				{contributorImages.map((image) => (
 					<img

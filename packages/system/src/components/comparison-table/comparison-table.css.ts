@@ -9,10 +9,10 @@ export const comparisonTableStyle = style([
 		textStyle: "bodyShort2",
 	}),
 	{
-		width: "fit-content",
 		gridTemplateColumns: "repeat(6, minmax(max-content, 1fr))",
 		gridAutoRows: pxToRem(44),
 		position: "relative",
+		width: "fit-content",
 		"@media": {
 			[breakpoints.tablet]: {
 				gridAutoRows: pxToRem(56),

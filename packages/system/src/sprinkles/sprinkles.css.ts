@@ -3,7 +3,7 @@ import { vars } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
 const spaceInPixels = [
-	0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 28, 32, 40, 48, 56, 64,
+	0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 28, 32, 40, 48, 56, 64, 80,
 ] as const
 
 const spaceInRem = Object.fromEntries(
@@ -21,6 +21,7 @@ const space = {
 }
 
 const borders = {
+	none: `none`,
 	thin: `1px solid ${vars.themeColors.outline}`,
 	light: `1px solid ${vars.themeColors.surfaceVariant}`,
 	tableCell: `1px solid ${vars.palette.neutral80}`,
@@ -244,7 +245,7 @@ const layout = defineProperties({
 		},
 		minWidth: [0],
 		minHeight: [0],
-		maxHeight: ["100%"],
+		maxHeight: ["100%", "100vh"],
 		height: {
 			full: "100%",
 			auto: "auto",
@@ -270,6 +271,8 @@ const layout = defineProperties({
 })
 
 const colors = defineProperties({
+	conditions,
+	defaultCondition: "mobile",
 	properties: {
 		backgroundColor: vars.themeColors,
 		color: vars.themeColors,

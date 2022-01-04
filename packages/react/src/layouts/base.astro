@@ -20,7 +20,7 @@ const { title, currentCategory, currentTag } = Astro.props
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-33DWS64W1B"></script>
 		{
-			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" && 
+			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" &&
 			<script>
 				window.dataLayer = window.dataLayer || [];
 				function gtag(){dataLayer.push(arguments);}
@@ -31,7 +31,7 @@ const { title, currentCategory, currentTag } = Astro.props
 		}
   </head>
   <body class={classNames(sprinkles({ backgroundColor: "surface4", height: "full" }), bodyWithNav)} >
-		<Sidebar aria-label="primary" className={sprinkles({ display: { mobile: "none", desktop: "block" }})}>
+		<Sidebar aria-label="primary">
 			<div class={sprinkles({ layout: "stack", gap: 24 })}>
 				<NavItems currentCategory={currentCategory} currentTag={currentTag} />
 			</div>
@@ -39,12 +39,12 @@ const { title, currentCategory, currentTag } = Astro.props
 		<main class={shrinkable}>
 			<slot />
 		</main>
-		<MobileNav 
+		<MobileNav
 			aria-label="primary"
 			client:media="(max-width:1025px)"
-			currentCategory={currentCategory} 
-			currentTag={currentTag} 
-			className={sprinkles({ display: { mobile: "flex", desktop: "none" }})} 
+			currentCategory={currentCategory}
+			currentTag={currentTag}
+			className={sprinkles({ display: { mobile: "flex", desktop: "none" }})}
 		/>
   </body>
 </html>

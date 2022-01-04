@@ -6,6 +6,7 @@ export const searchStyle = style({
 	gridTemplateRows: `1fr min-content`,
 	gridTemplateColumns: `1fr`,
 	height: "100%",
+	position: "relative",
 })
 
 export const searchContainerStyle = style([
@@ -26,9 +27,11 @@ export const compareBarStyle = style([
 		gap: 8,
 	}),
 	{
+		bottom: 0,
 		display: "grid",
 		gridTemplateColumns: "1fr max-content max-content",
 		justifyItems: "flex-start",
+		position: "sticky",
 	},
 ])
 
