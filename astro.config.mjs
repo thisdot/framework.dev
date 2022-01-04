@@ -13,4 +13,9 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
 	buildOptions: {
 		pageUrlFormat: "file",
 	},
+	devOptions: {
+		// If pageUrlFormat is "file" this line needs to be present for it to build correctly.
+		// This is a bug in Astro: https://github.com/withastro/astro/issues/1338
+		trailingSlash: "never",
+	},
 })
