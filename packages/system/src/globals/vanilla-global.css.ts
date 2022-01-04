@@ -1,15 +1,6 @@
 import { globalStyle } from "@vanilla-extract/css"
 import { derivedAttributes } from "../themes/themes.css"
 
-globalStyle("html", {
-	position: "fixed",
-	top: 0,
-	bottom: 0,
-	left: 0,
-	right: 0,
-	overflow: "hidden",
-})
-
 globalStyle("body", {
 	fontFamily: "Inter, sans-serif",
 })

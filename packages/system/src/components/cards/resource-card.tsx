@@ -22,6 +22,7 @@ import {
 } from "./resource-card.css"
 import { Tag } from "../tag"
 import { useId } from "@reach/auto-id"
+import { BookDecorator } from "../book-decorator"
 
 export interface ResourceCardProps
 	extends Omit<
@@ -189,8 +190,10 @@ export function ResourceCard({
 	)
 }
 
-const BookImageDecoration: React.FunctionComponent = ({ children }) => (
-	<div className={resourceCardBookImageDecoration}>{children}</div>
+export const BookImageDecoration: React.FunctionComponent = ({ children }) => (
+	<BookDecorator className={resourceCardBookImageDecoration}>
+		{children}
+	</BookDecorator>
 )
 
 const maxTagsByLayout = {
