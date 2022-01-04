@@ -1,5 +1,8 @@
 # Changelog
 
+- [2022-01-04] Fix trailing slashes on URLs
+  [\#147](https://github.com/thisdot/framework.dev/pull/147)
+  ([jbachhardie](https://github.com/jbachhardie))
 - [2021-12-15] Improve site accessibility for keyboard and screen reader users
   [\#144](https://github.com/thisdot/framework.dev/pull/144)
   ([jbachhardie](https://github.com/jbachhardie))
