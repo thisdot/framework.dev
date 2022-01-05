@@ -1,5 +1,6 @@
 import classNames from "classnames"
 import React from "react"
+import { sampleSize } from "lodash"
 import {
 	contentBannerStyle,
 	contentBannerTextAreaStyle,
@@ -9,7 +10,6 @@ import {
 	contentBannerTitleStyle,
 	contentBannerHostStyle,
 } from "./content-banner.css"
-import { getRandomNumberArray } from "./utils"
 
 export interface ContentBannerProps
 	extends React.ComponentPropsWithoutRef<"div"> {
@@ -31,8 +31,7 @@ export function ContentBanner({
 	items,
 	...props
 }: ContentBannerProps) {
-	const indices = getRandomNumberArray(4, items.length)
-	const randomItems = indices.map((i) => items[i])
+	const randomItems = sampleSize(items, 4)
 	return (
 		<div className={classNames(className, contentBannerStyle)} {...props}>
 			<div className={contentBannerTextAreaStyle}>
