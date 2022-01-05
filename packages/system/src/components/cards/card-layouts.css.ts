@@ -11,7 +11,7 @@ const base = style([
 
 export const titleFirstCardGrid = style([
 	base,
-	{ gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))" },
+	{ gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" },
 ])
 
 export const imageFirstCardGrid = style([
