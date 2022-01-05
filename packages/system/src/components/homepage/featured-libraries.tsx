@@ -45,6 +45,7 @@ export function FeaturedLibraries({
 					))}
 					<ComparisonBox
 						style={{ gridArea: "compare" }}
+						imageSource="/comparison-box.svg"
 						libraryTags={libraryTags}
 					/>
 				</>

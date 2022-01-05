@@ -12,6 +12,7 @@ module.exports = {
 		"@storybook/addon-essentials",
 		"storybook-addon-themes",
 	],
+	staticDirs: ["../src/util/example-assets"],
 	webpackFinal(baseConfig, options) {
 		const { module = {}, plugins = {} } = baseConfig
 
@@ -40,6 +41,10 @@ module.exports = {
 								},
 							},
 						],
+					},
+					{
+						test: /\.svg$/i,
+						use: [{ loader: "file-loader" }],
 					},
 				],
 			},
