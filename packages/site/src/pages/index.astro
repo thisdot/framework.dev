@@ -1,0 +1,45 @@
+---
+import { formatFieldName } from "@framework/system/src/util/string-utils"
+import BaseLayout from '../layouts/base.astro'
+import Homepage from '../components/homepage.tsx'
+import { getSearchData } from '../data/search-data'
+
+const searchData = await getSearchData(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)
+const libraries = searchData.find(category => category.name === "libraries")
+const podcasts = searchData.find(category => category.name === "podcasts")
+const courses = searchData.find(category => category.name === "courses")
+const blogs = searchData.find(category => category.name === "blogs")
+const books = searchData.find(category => category.name === "books")
+const tools = searchData.find(category => category.name === "tools")
+const communities = searchData.find(category => category.name === "communities")
+
+const searchableWebsiteStructuredData = {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"url": `https://${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}.framework.dev/`,
+	"name": `${formatFieldName(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} Framework.dev`,
+	"potentialAction": {
+		"@type": "SearchAction",
+		"target": {
+			"@type": "EntryPoint",
+			"urlTemplate": `https://${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}.framework.dev/search?q={search_term_string}`
+		},
+		"query-input": "required name=search_term_string"
+	}
+}
+---
+<head>
+	{`<script type="application/ld+json">${JSON.stringify(searchableWebsiteStructuredData)}</script>`}
+</head>
+<BaseLayout title={`Featured ${formatFieldName(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} resources`}>
+	<Homepage
+		libraries={libraries?.data}
+		libraryTags={libraries?.tags}
+		podcasts={podcasts?.data}
+		courses={courses?.data}
+		blogs={blogs?.data}
+		books={books?.data}
+		tools={tools?.data}
+		communities={communities?.data}
+	/>
+</BaseLayout>

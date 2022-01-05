@@ -1,11 +1,11 @@
 version: 1
 applications:
-  - appRoot: packages/react
+  - appRoot: packages/site/data/react
     frontend:
       phases:
         preBuild:
           commands:
-            - cd ../..
+            - cd ../../../..
             - nvm install
             - nvm use
             - yarn install
@@ -20,12 +20,12 @@ applications:
         paths:
           - ../../node_modules/**/*
           - ../../packages/*/node_modules/**/*
-  - appRoot: packages/angular
+  - appRoot: packages/site/data/angular
     frontend:
       phases:
         preBuild:
           commands:
-            - cd ../..
+            - cd ../../../..
             - nvm install
             - nvm use
             - yarn install
@@ -40,12 +40,12 @@ applications:
         paths:
           - ../../node_modules/**/*
           - ../../packages/*/node_modules/**/*
-  - appRoot: packages/vue
+  - appRoot: packages/site/data/vue
     frontend:
       phases:
         preBuild:
           commands:
-            - cd ../..
+            - cd ../../../..
             - nvm install
             - nvm use
             - yarn install

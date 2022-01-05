@@ -17,8 +17,6 @@ import { ResultsCategory, ResultsCategoryProps } from "./results-category"
 import {
 	calculateAvailableFilters,
 	emptyFilterSet,
-	filterCategories,
-	filterRecords,
 	getSearchResults,
 	isEmptyFilterSet,
 	parseQueryString,
@@ -39,24 +37,16 @@ import { Logo } from "../logo"
 export interface SearchProps extends React.ComponentPropsWithoutRef<"section"> {
 	data: AllCategories[]
 	initialQuery?: string
-	preFilters?: FilterSet
+	appliedPreFilters?: FilterSet
 }
 
 export function Search({
 	className,
-	data: initialData,
+	data,
 	initialQuery = "",
-	preFilters = emptyFilterSet,
+	appliedPreFilters = emptyFilterSet,
 	...props
 }: SearchProps) {
-	const data = useMemo(() => {
-		const data = filterCategories(initialData, preFilters)
-		for (const category of data) {
-			// @ts-expect-error just a very silly "cannot iterate over a union" error here
-			category.data = filterRecords(category.data, preFilters)
-		}
-		return data
-	}, [initialData, preFilters])
 	const [query, setQuery] = useState(initialQuery)
 	const [activeQuery, setActiveQuery] = useState(initialQuery)
 	useEffect(() => {
@@ -70,8 +60,8 @@ export function Search({
 	)
 	const [comparisonTableOpen, setComparisonTableOpen] = useState(false)
 	const availableFilters = useMemo(
-		() => calculateAvailableFilters(data, preFilters),
-		[data, preFilters]
+		() => calculateAvailableFilters(data, appliedPreFilters),
+		[data, appliedPreFilters]
 	)
 	const queryParams = parseQueryString(activeQuery, availableFilters)
 	const scrollableContainerRef = useRef<null | HTMLDivElement>(null)
@@ -96,7 +86,7 @@ export function Search({
 							availableFilters={availableFilters}
 							data={data}
 							onChange={setQuery}
-							preFilters={preFilters}
+							preFilters={appliedPreFilters}
 							value={query}
 							onSubmit={(e) => {
 								e.preventDefault()
@@ -118,7 +108,7 @@ export function Search({
 								)
 								scrollableContainerRef.current?.scrollTo(0, 0)
 							}}
-							preFilters={preFilters}
+							preFilters={appliedPreFilters}
 							selectedLibraries={selectedLibraries}
 							queryParams={queryParams}
 						/>

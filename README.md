@@ -6,7 +6,8 @@ Framework.dev is a knowledge base for different frontend frameworks
 
 - `@framework/system` is the themeable design system which powers all
   framework.dev sites
-- `@framework/react` is the code for the react.framework.dev site
+- `@framework/site` is the code for the actual sites. Each site has a different
+  set of data in the `src/data` folder.
 
 ## Running locally
 
