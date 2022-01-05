@@ -10,7 +10,6 @@ export default {
 	title: "Home/Comparison Box",
 	component: ComparisonBoxComponent,
 	args: {
-		imageSource: "/comparison-box.svg",
 		libraryTags: libraryTags,
 	},
 } as Meta

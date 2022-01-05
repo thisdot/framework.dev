@@ -8,7 +8,6 @@ import {
 } from "./featured-libraries.css"
 import { Library } from "../../models/library"
 import { LibraryCard } from "../cards/library-card"
-import { ComparisonBox } from "./comparison-box"
 import { getRandomNumberArray } from "./utils"
 
 export interface FeaturedLibrariesProps
@@ -24,7 +23,7 @@ export function FeaturedLibraries({
 	libraryTags,
 	...props
 }: FeaturedLibrariesProps) {
-	const indices = getRandomNumberArray(4, libraries.length)
+	const indices = getRandomNumberArray(6, libraries.length)
 	const randomLibraries = indices.map((i) => libraries[i])
 	return (
 		<div className={classNames(className, featuredLibrariesStyle)} {...props}>
@@ -32,23 +31,16 @@ export function FeaturedLibraries({
 				Featured React Libraries
 			</h2>
 			<div className={featuredLibrariesListStyle}>
-				<>
-					{randomLibraries.map((library, i) => (
-						<LibraryCard
-							key={`featured-library-${i}`}
-							library={library}
-							headingTag="h3"
-							onTagClick={() => {
-								return null
-							}}
-						/>
-					))}
-					<ComparisonBox
-						style={{ gridArea: "compare" }}
-						imageSource="/comparison-box.svg"
-						libraryTags={libraryTags}
+				{randomLibraries.map((library, i) => (
+					<LibraryCard
+						key={`featured-library-${i}`}
+						library={library}
+						headingTag="h3"
+						onTagClick={() => {
+							return null
+						}}
 					/>
-				</>
+				))}
 			</div>
 			<a href="/categories/libraries" className={featuredLibrariesViewAllStyle}>
 				View all libraries

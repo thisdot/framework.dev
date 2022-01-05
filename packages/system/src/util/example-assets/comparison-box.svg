@@ -506,7 +506,7 @@
       y1="15.2949"
       x2="39.8995"
       y2="21.9449"
-      gradientUnits="userSpaceOnUse"
+      gradientUnits="objectBoundingBox"
     >
       <stop stopColor="white" />
       <stop offset="1" stopColor="white" stopOpacity="0" />
@@ -517,7 +517,7 @@
       y1="52.5352"
       x2="64.8376"
       y2="59.1852"
-      gradientUnits="userSpaceOnUse"
+      gradientUnits="objectBoundingBox"
     >
       <stop stopColor="white" />
       <stop offset="1" stopColor="white" stopOpacity="0" />
@@ -528,7 +528,7 @@
       y1="52.5352"
       x2="114.712"
       y2="59.1852"
-      gradientUnits="userSpaceOnUse"
+      gradientUnits="objectBoundingBox"
     >
       <stop stopColor="white" />
       <stop offset="1" stopColor="white" stopOpacity="0" />
@@ -539,7 +539,7 @@
       y1="89.7754"
       x2="70.1574"
       y2="96.4254"
-      gradientUnits="userSpaceOnUse"
+      gradientUnits="objectBoundingBox"
     >
       <stop stopColor="white" />
       <stop offset="1" stopColor="white" stopOpacity="0" />
@@ -550,7 +550,7 @@
       y1="127.016"
       x2="62.5099"
       y2="133.666"
-      gradientUnits="userSpaceOnUse"
+      gradientUnits="objectBoundingBox"
     >
       <stop stopColor="white" />
       <stop offset="1" stopColor="white" stopOpacity="0" />
@@ -561,7 +561,7 @@
       y1="15.2949"
       x2="173.232"
       y2="21.9449"
-      gradientUnits="userSpaceOnUse"
+      gradientUnits="objectBoundingBox"
     >
       <stop stopColor="white" />
       <stop offset="1" stopColor="white" stopOpacity="0" />
@@ -572,7 +572,7 @@
       y1="14.1328"
       x2="202.159"
       y2="23.1103"
-      gradientUnits="userSpaceOnUse"
+      gradientUnits="objectBoundingBox"
     >
       <stop stopColor="white" />
       <stop offset="1" stopColor="white" stopOpacity="0" />
@@ -583,7 +583,7 @@
       y1="52.5352"
       x2="181.212"
       y2="59.1852"
-      gradientUnits="userSpaceOnUse"
+      gradientUnits="objectBoundingBox"
     >
       <stop stopColor="white" />
       <stop offset="1" stopColor="white" stopOpacity="0" />
@@ -594,7 +594,7 @@
       y1="89.7754"
       x2="173.564"
       y2="96.4254"
-      gradientUnits="userSpaceOnUse"
+      gradientUnits="objectBoundingBox"
     >
       <stop stopColor="white" />
       <stop offset="1" stopColor="white" stopOpacity="0" />
@@ -605,7 +605,7 @@
       y1="127.016"
       x2="184.537"
       y2="133.666"
-      gradientUnits="userSpaceOnUse"
+      gradientUnits="objectBoundingBox"
     >
       <stop stopColor="white" />
       <stop offset="1" stopColor="white" stopOpacity="0" />
@@ -616,7 +616,7 @@
       y1="15.2949"
       x2="257.022"
       y2="21.9449"
-      gradientUnits="userSpaceOnUse"
+      gradientUnits="objectBoundingBox"
     >
       <stop stopColor="white" />
       <stop offset="1" stopColor="white" stopOpacity="0" />
@@ -627,7 +627,7 @@
       y1="14.1328"
       x2="299.25"
       y2="23.1103"
-      gradientUnits="userSpaceOnUse"
+      gradientUnits="objectBoundingBox"
     >
       <stop stopColor="white" />
       <stop offset="1" stopColor="white" stopOpacity="0" />
@@ -638,7 +638,7 @@
       y1="52.5352"
       x2="274.312"
       y2="59.1852"
-      gradientUnits="userSpaceOnUse"
+      gradientUnits="objectBoundingBox"
     >
       <stop stopColor="white" />
       <stop offset="1" stopColor="white" stopOpacity="0" />
@@ -649,7 +649,7 @@
       y1="89.7754"
       x2="270.987"
       y2="96.4254"
-      gradientUnits="userSpaceOnUse"
+      gradientUnits="objectBoundingBox"
     >
       <stop stopColor="white" />
       <stop offset="1" stopColor="white" stopOpacity="0" />
@@ -660,7 +660,7 @@
       y1="127.016"
       x2="279.632"
       y2="133.666"
-      gradientUnits="userSpaceOnUse"
+      gradientUnits="objectBoundingBox"
     >
       <stop stopColor="white" />
       <stop offset="1" stopColor="white" stopOpacity="0" />

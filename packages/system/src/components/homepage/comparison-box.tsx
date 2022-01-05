@@ -12,7 +12,7 @@ import { serializeFieldValue } from "../../util/string-utils"
 
 export interface ComparisonBoxProps
 	extends React.ComponentPropsWithoutRef<"div"> {
-	imageSource: string
+	imageSource?: string
 	libraryTags: string[]
 }
 
@@ -46,7 +46,9 @@ export function ComparisonBox({
 					</Chip>
 				))}
 			</div>
-			<img className={comparisonBoxImageStyle} src={imageSource} />
+			{imageSource && (
+				<img className={comparisonBoxImageStyle} src={imageSource} />
+			)}
 		</div>
 	)
 }
