@@ -3,7 +3,6 @@ import {
 	BookDecorator as BookDecoratorComponent,
 	BookDecoratorProps,
 } from "./book-decorator"
-import bookSrc from "../util/example-assets/book-2.png"
 
 export default {
 	title: "Book Decorator",
@@ -15,7 +14,7 @@ export default {
 
 const Template: Story<BookDecoratorProps> = (args) => (
 	<BookDecoratorComponent {...args}>
-		<img src={bookSrc} />
+		<img src="/book-2.png" />
 	</BookDecoratorComponent>
 )
 
