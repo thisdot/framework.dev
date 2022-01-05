@@ -12,9 +12,17 @@ export const homepageStyle = style([
 		},
 	}),
 	{
-		gap: pxToRem(128),
+		gap: pxToRem(64),
 		maxWidth: pxToRem(1200),
 		overflow: "auto",
+		"@media": {
+			[breakpoints.tablet]: {
+				gap: pxToRem(96),
+			},
+			[breakpoints.desktop]: {
+				gap: pxToRem(128),
+			},
+		},
 	},
 ])
 
