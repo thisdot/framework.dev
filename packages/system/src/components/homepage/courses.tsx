@@ -1,17 +1,16 @@
 import classNames from "classnames"
 import React from "react"
+import { sampleSize } from "lodash"
 import { coursesStyle } from "./courses.css"
 import { Course } from "../../models/course"
 import { FeatureAndList } from "./feature-and-list"
-import { getRandomNumberArray } from "./utils"
 
 export interface CoursesProps extends React.ComponentPropsWithoutRef<"div"> {
 	courses: Course<string>[]
 }
 
 export function Courses({ className, courses, ...props }: CoursesProps) {
-	const indices = getRandomNumberArray(6, courses.length)
-	const randomCourses = indices.map((i) => courses[i])
+	const randomCourses = sampleSize(courses, 6)
 	return (
 		<FeatureAndList
 			className={classNames(className, coursesStyle)}

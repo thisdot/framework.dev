@@ -1,17 +1,16 @@
 import classNames from "classnames"
 import React from "react"
+import { sampleSize } from "lodash"
 import { blogsStyle } from "./blogs.css"
 import { Blog } from "../../models/blog"
 import { ResourceList } from "./resource-list"
-import { getRandomNumberArray } from "./utils"
 
 export interface BlogsProps extends React.ComponentPropsWithoutRef<"div"> {
 	blogs: Blog<string>[]
 }
 
 export function Blogs({ className, blogs, ...props }: BlogsProps) {
-	const indices = getRandomNumberArray(4, blogs.length)
-	const randomBlogs = indices.map((i) => blogs[i])
+	const randomBlogs = sampleSize(blogs, 4)
 	return (
 		<ResourceList
 			className={classNames(className, blogsStyle)}

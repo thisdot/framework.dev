@@ -22,7 +22,11 @@ export const searchStyle = style([
 export const searchBoxStyle = style([
 	searchInputBoxStyle,
 	{
-		gridTemplateColumns: "min-content 1fr !important", // I can't find anything in the vanilla-extract docs about forcing the cascase in a particular order, so here we are...
+		selectors: {
+			[`${searchInputBoxStyle}&`]: {
+				gridTemplateColumns: "min-content 1fr",
+			},
+		},
 	},
 ])
 export const searchIconStyle = searchInputIconStyle
