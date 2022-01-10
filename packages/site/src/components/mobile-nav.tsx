@@ -8,12 +8,17 @@ import { NavItems, NavItemsProps } from "./nav-items"
 export function MobileNav({
 	currentCategory,
 	currentTag,
+	data,
 	...props
 }: MobileNavProps & NavItemsProps) {
 	return (
 		<MobileNavComponent {...props}>
 			<div className={sprinkles({ layout: "stack", gap: 24 })}>
-				<NavItems currentCategory={currentCategory} currentTag={currentTag} />
+				<NavItems
+					data={data}
+					currentCategory={currentCategory}
+					currentTag={currentTag}
+				/>
 			</div>
 		</MobileNavComponent>
 	)

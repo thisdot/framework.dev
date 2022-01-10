@@ -3,7 +3,6 @@ import {
 	SearchProps,
 } from "@framework/system/src/components/search/search"
 import { useEffect, useState } from "react"
-import { searchData } from "../data/search-data"
 
 export default function Search(props: SearchProps) {
 	const [initialQuery, setInitialQuery] = useState("")
@@ -15,7 +14,6 @@ export default function Search(props: SearchProps) {
 	return (
 		<_Search
 			{...props}
-			data={searchData}
 			initialQuery={initialQuery}
 			key={initialQuery ? "client-loaded" : "ssr"}
 		/>

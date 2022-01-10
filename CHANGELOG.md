@@ -1,5 +1,8 @@
 # Changelog
 
+- [2021-01-05] Add Angular and Vue sites
+  [\#142](https://github.com/thisdot/framework.dev/pull/142)
+  ([jbachhardie](https://github.com/jbachhardie))
 - [2022-01-05] Resolve known bugs created with merge of homepage content
   [\#150](https://github.com/thisdot/framework.dev/pull/150)
   ([tvanantwerp](https://github.com/tvanantwerp))

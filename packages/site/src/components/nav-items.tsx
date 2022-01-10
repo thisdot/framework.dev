@@ -1,15 +1,18 @@
 import { NavItem } from "@framework/system/src/components/nav-item"
 import { NavList, NavListItem } from "@framework/system/src/components/nav-list"
-import { CategoryName } from "@framework/system/src/models/all-categories"
+import {
+	AllCategories,
+	CategoryName,
+} from "@framework/system/src/models/all-categories"
 import {
 	formatFieldName,
 	formatFieldValue,
 	serializeFieldName,
 	serializeFieldValue,
 } from "@framework/system/src/util/string-utils"
-import { searchData } from "../data/search-data"
 
 export type NavItemsProps = {
+	data: Pick<AllCategories, "name" | "subCategories">[]
 	currentCategory?: CategoryName
 	currentTag?: string
 }
@@ -17,10 +20,11 @@ export type NavItemsProps = {
 export function NavItems({
 	currentCategory,
 	currentTag,
+	data,
 }: NavItemsProps): JSX.Element {
 	return (
 		<NavList>
-			{searchData.map((category) => (
+			{data.map((category) => (
 				<NavListItem key={category.name}>
 					<NavItem
 						aria-current={

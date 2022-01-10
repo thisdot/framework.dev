@@ -1,5 +1,13 @@
 import "../src/globals/global-styles"
-import { vars, reactTheme, reactThemeDark } from "../src/themes/themes.css"
+import {
+	vars,
+	reactTheme,
+	reactThemeDark,
+	angularTheme,
+	angularThemeDark,
+	vueTheme,
+	vueThemeDark,
+} from "../src/themes/themes.css"
 import { addDecorator } from "@storybook/react"
 import { withThemes } from "storybook-addon-themes/react"
 import { useEffect } from "react"
@@ -42,6 +50,10 @@ export const parameters = {
 		list: [
 			{ name: "react", class: reactTheme, color: "#A6EEFF" },
 			{ name: "reactDark", class: reactThemeDark, color: "#004E5C" },
+			{ name: "angular", class: angularTheme, color: "#dd0032" },
+			{ name: "angularDark", class: angularThemeDark, color: "#85001f" },
+			{ name: "vue", class: vueTheme, color: "#40b883" },
+			{ name: "vueDark", class: vueThemeDark, color: "#34495e" },
 		],
 	},
 }

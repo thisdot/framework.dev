@@ -1,17 +1,57 @@
 version: 1
 applications:
-  - appRoot: packages/react
+  - appRoot: packages/site/data/react
     frontend:
       phases:
         preBuild:
           commands:
-            - cd ../..
+            - cd ../../../..
             - nvm install
             - nvm use
             - yarn install
         build:
           commands:
             - yarn build:react
+      artifacts:
+        baseDirectory: dist
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - ../../node_modules/**/*
+          - ../../packages/*/node_modules/**/*
+  - appRoot: packages/site/data/angular
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd ../../../..
+            - nvm install
+            - nvm use
+            - yarn install
+        build:
+          commands:
+            - yarn build:angular
+      artifacts:
+        baseDirectory: dist
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - ../../node_modules/**/*
+          - ../../packages/*/node_modules/**/*
+  - appRoot: packages/site/data/vue
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd ../../../..
+            - nvm install
+            - nvm use
+            - yarn install
+        build:
+          commands:
+            - yarn build:vue
       artifacts:
         baseDirectory: dist
         files:

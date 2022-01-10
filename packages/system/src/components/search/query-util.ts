@@ -196,6 +196,19 @@ export function filterRecords<T extends AllModels>(
 	)
 }
 
+export function applyPreFilters(
+	initialData: AllCategories[],
+	preFilters: FilterSet
+): AllCategories[] {
+	return filterCategories(initialData, preFilters).map<AllCategories>(
+		<T extends AllCategories>(category: T) =>
+			({
+				...category,
+				data: filterRecords(category.data as any, preFilters),
+			} as T)
+	)
+}
+
 export function groupFieldFilters(
 	filters: AttributeDefinition[]
 ): FieldFilter[] {

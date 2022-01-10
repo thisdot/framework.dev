@@ -61,7 +61,7 @@ That's it! Thank you for your contribution!
 
 ## Content Guidelines
 
-Content should be added in the `packages/<framework-name>/src/data/<model>.ts`
+Content should be added in the `packages/site/src/data/<framework-name>/<model>.ts`
 files. Data files each contain two things: a list of tags used to tag the
 content and a list of content items. Items are type-checked to follow the
 schemata defined in `packages/system/src/models`. Those model files contain

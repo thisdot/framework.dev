@@ -18,6 +18,28 @@ export const reactThemeDark = createTheme(
 	darkThemeFromPalette(reactColorPalette)
 )
 
+// TODO: replace these with the appropriate palettes once we have them
+
+export const angularTheme = createTheme(
+	vars,
+	lightThemeFromPalette(reactColorPalette)
+)
+
+export const angularThemeDark = createTheme(
+	vars,
+	darkThemeFromPalette(reactColorPalette)
+)
+
+export const vueTheme = createTheme(
+	vars,
+	lightThemeFromPalette(reactColorPalette)
+)
+
+export const vueThemeDark = createTheme(
+	vars,
+	darkThemeFromPalette(reactColorPalette)
+)
+
 export const derivedAttributes = {
 	outline: `2px solid ${vars.themeColors.tertiary}`,
 }
