@@ -1,6 +1,6 @@
 version: 1
 applications:
-  - appRoot: packages/site/data/react
+  - appRoot: packages/site/src/data/react
     frontend:
       phases:
         preBuild:
@@ -20,7 +20,7 @@ applications:
         paths:
           - ../../node_modules/**/*
           - ../../packages/*/node_modules/**/*
-  - appRoot: packages/site/data/angular
+  - appRoot: packages/site/src/data/angular
     frontend:
       phases:
         preBuild:
@@ -40,7 +40,7 @@ applications:
         paths:
           - ../../node_modules/**/*
           - ../../packages/*/node_modules/**/*
-  - appRoot: packages/site/data/vue
+  - appRoot: packages/site/src/data/vue
     frontend:
       phases:
         preBuild:
