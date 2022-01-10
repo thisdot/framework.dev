@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { sprinkles, breakpoints } from "../../sprinkles/sprinkles.css"
 import { vars } from "../../themes/themes.css"
 import { pxToRem } from "../../util/style-utils"
 import {
@@ -18,7 +18,7 @@ export const searchInputBoxStyle = style([
 	{
 		height: pxToRem(48),
 		display: "grid",
-		gridTemplateColumns: "min-content auto minmax(130px, 1fr) min-content",
+		gridTemplateColumns: "min-content auto 1fr min-content",
 		paddingRight: 0,
 		":focus-within": {
 			borderColor: vars.themeColors.tertiary,
@@ -41,13 +41,19 @@ export const searchInputResetButtonStyle = style({
 	alignItems: "center",
 	justifyItems: "center",
 })
+
 export const searchInputStaticPrefixStyle = style([
 	sprinkles({ color: "softText" }),
 	{
 		whiteSpace: "nowrap",
 		textOverflow: "ellipsis",
 		overflow: "hidden",
+		maxWidth: pxToRem(36),
 		width: "fit-content",
-		maxWidth: "100%"
+		"@media": {
+			[breakpoints.tablet]: {
+				maxWidth: "100%",
+			},
+		},
 	},
 ])

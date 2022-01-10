@@ -11,7 +11,14 @@ const base = style([
 
 export const titleFirstCardGrid = style([
 	base,
-	{ gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))" },
+	{
+		gridTemplateColumns: "repeat(auto-fit, 1fr)",
+		"@media": {
+			[breakpoints.tablet]: {
+				gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))",
+			},
+		},
+	},
 ])
 
 export const imageFirstCardGrid = style([

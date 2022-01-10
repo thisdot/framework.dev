@@ -1,9 +1,9 @@
 import classNames from "classnames"
 import React from "react"
+import { sampleSize } from "lodash"
 import { Tool } from "../../models/tool"
 import { latestToolsStyle } from "./latest-tools.css"
 import { ResourceList } from "./resource-list"
-import { getRandomNumberArray } from "./utils"
 
 export interface LatestToolsProps
 	extends React.ComponentPropsWithoutRef<"div"> {
@@ -11,8 +11,7 @@ export interface LatestToolsProps
 }
 
 export function LatestTools({ className, tools, ...props }: LatestToolsProps) {
-	const indices = getRandomNumberArray(4, tools.length)
-	const randromTools = indices.map((i) => tools[i])
+	const randromTools = sampleSize(tools, 4)
 	return (
 		<ResourceList
 			className={classNames(className, latestToolsStyle)}

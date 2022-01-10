@@ -43,8 +43,10 @@ export default {
 	argTypes: {
 		onConfirm: { action: "confirm" },
 		params: {
-			type: {
-				summary: "QueryParams",
+			table: {
+				type: {
+					summary: "QueryParams",
+				},
 			},
 			control: {
 				type: null,

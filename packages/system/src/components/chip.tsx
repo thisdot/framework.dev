@@ -1,28 +1,22 @@
 import classNames from "classnames"
 import React from "react"
+import type * as Polymorphic from "@reach/utils/polymorphic"
 import { chipStyle } from "./chip.css"
 
 export type ChipProps = React.ComponentPropsWithoutRef<"button">
 
-export function Chip({ className, children, ...props }: ChipProps) {
+export const Chip = React.forwardRef(function Button(
+	{ as: Comp = "button", className, children, type = "button", ...props },
+	ref
+): JSX.Element {
 	return (
-		<button className={classNames(className, chipStyle)} {...props}>
+		<Comp
+			ref={ref}
+			className={classNames(className, chipStyle)}
+			type={Comp === "button" ? type : undefined}
+			{...props}
+		>
 			{children}
-		</button>
+		</Comp>
 	)
-}
-
-export type ChipLinkProps = React.ComponentPropsWithoutRef<"a">
-
-export function ChipLink({
-	className,
-	children,
-	href,
-	...props
-}: ChipLinkProps) {
-	return (
-		<a className={classNames(className, chipStyle)} href={href} {...props}>
-			{children}
-		</a>
-	)
-}
+}) as Polymorphic.ForwardRefComponent<"button">

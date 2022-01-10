@@ -1,9 +1,9 @@
 import classNames from "classnames"
 import React from "react"
+import { sampleSize } from "lodash"
 import { Community } from "../../models/community"
 import { communitiesStyle } from "./communities.css"
 import { ContentBanner } from "./content-banner"
-import { getRandomNumberArray } from "./utils"
 
 export interface CommunitiesProps
 	extends React.ComponentPropsWithoutRef<"div"> {
@@ -15,8 +15,7 @@ export function Communities({
 	communities,
 	...props
 }: CommunitiesProps) {
-	const indices = getRandomNumberArray(4, communities.length)
-	const randomCommunities = indices.map((i) => communities[i])
+	const randomCommunities = sampleSize(communities, 4)
 	return (
 		<ContentBanner
 			className={classNames(className, communitiesStyle)}

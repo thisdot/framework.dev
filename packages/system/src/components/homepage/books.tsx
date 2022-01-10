@@ -1,17 +1,16 @@
 import classNames from "classnames"
 import React from "react"
+import { sampleSize } from "lodash"
 import { Book } from "../../models/book"
 import { booksStyle } from "./books.css"
 import { FeatureAndList } from "./feature-and-list"
-import { getRandomNumberArray } from "./utils"
 
 export interface BooksProps extends React.ComponentPropsWithoutRef<"div"> {
 	books: Book<string>[]
 }
 
 export function Books({ className, books, ...props }: BooksProps) {
-	const indices = getRandomNumberArray(6, books.length)
-	const randomBooks = indices.map((i) => books[i])
+	const randomBooks = sampleSize(books, 6)
 	return (
 		<FeatureAndList
 			className={classNames(className, booksStyle)}

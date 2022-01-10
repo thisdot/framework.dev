@@ -1,6 +1,6 @@
 import React from "react"
+import { sampleSize } from "lodash"
 import { Podcast } from "../../models/podcast"
-import { getRandomNumberArray } from "./utils"
 import { ContentBanner } from "./content-banner"
 
 export interface PodcastsProps extends React.ComponentPropsWithoutRef<"div"> {
@@ -8,8 +8,7 @@ export interface PodcastsProps extends React.ComponentPropsWithoutRef<"div"> {
 }
 
 export function Podcasts({ className, podcasts, ...props }: PodcastsProps) {
-	const indices = getRandomNumberArray(4, podcasts.length)
-	const randomPodcasts = indices.map((i) => podcasts[i])
+	const randomPodcasts = sampleSize(podcasts, 4)
 	return (
 		<ContentBanner
 			title="Get smarter on the go"

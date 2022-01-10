@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css"
-import { breakpoints, sprinkles } from "../../sprinkles/sprinkles.css"
+import { breakpoints, sprinkles, borders } from "../../sprinkles/sprinkles.css"
 import { vars } from "../../themes/themes.css"
 import { pxToRem } from "../../util/style-utils"
 
@@ -50,18 +50,28 @@ export const featureAndListBoxStyle = style([
 	},
 ])
 
-export const featureAndListFeaturedStyle = sprinkles({
-	borderBottom: { mobile: "light", desktop: "none" },
-	borderRight: { mobile: "none", desktop: "light" },
-	paddingBottom: {
-		mobile: 24,
-		desktop: 0,
+export const featureAndListFeaturedStyle = style([
+	sprinkles({
+		paddingBottom: {
+			mobile: 24,
+			desktop: 0,
+		},
+		paddingRight: {
+			mobile: 0,
+			desktop: 24,
+		},
+	}),
+	{
+		borderBottom: borders.light,
+		borderRight: "none",
+		"@media": {
+			[breakpoints.desktop]: {
+				borderBottom: "none",
+				borderRight: borders.light,
+			},
+		},
 	},
-	paddingRight: {
-		mobile: 0,
-		desktop: 24,
-	},
-})
+])
 
 export const featureAndListFeatureImageStyle = sprinkles({
 	borderRadius: 8,

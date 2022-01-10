@@ -1,10 +1,8 @@
 import { style } from "@vanilla-extract/css"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { breakpoints, sprinkles } from "../../sprinkles/sprinkles.css"
+import { pxToRem } from "../../util/style-utils"
 
 export const searchStyle = style({
-	display: "grid",
-	gridTemplateRows: `1fr min-content`,
-	gridTemplateColumns: `1fr`,
 	height: "100%",
 	position: "relative",
 })
@@ -13,9 +11,12 @@ export const searchContainerStyle = style([
 	sprinkles({
 		layout: "stack",
 		gap: 24,
+		paddingBottom: { mobile: 56, desktop: 0 },
 		paddingTop: { mobile: 24, desktop: 16 },
 	}),
-	{ overflowY: "auto" },
+	{
+		overflowY: "auto",
+	},
 ])
 
 export const compareBarStyle = style([
@@ -27,11 +28,16 @@ export const compareBarStyle = style([
 		gap: 8,
 	}),
 	{
-		bottom: 0,
+		bottom: pxToRem(56),
 		display: "grid",
 		gridTemplateColumns: "1fr max-content max-content",
 		justifyItems: "flex-start",
 		position: "sticky",
+		"@media": {
+			[breakpoints.desktop]: {
+				bottom: 0,
+			},
+		},
 	},
 ])
 
