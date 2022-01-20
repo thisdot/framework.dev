@@ -46,7 +46,3 @@ export const searchMobileLogoContainerStyle = sprinkles({
 	justifyContent: "center",
 	display: { desktop: "none" },
 })
-
-export const searchMobileLogoStyle = style({
-	transform: `scale(${7 / 6})`,
-})

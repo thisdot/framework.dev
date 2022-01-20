@@ -5,7 +5,6 @@ import {
 	compareBarStyle,
 	searchContainerStyle,
 	searchMobileLogoContainerStyle,
-	searchMobileLogoStyle,
 	searchStyle,
 } from "./search.css"
 import { AllCategories, AllModelsByName } from "../../models/all-categories"
@@ -38,6 +37,7 @@ export interface SearchProps extends React.ComponentPropsWithoutRef<"section"> {
 	data: AllCategories[]
 	initialQuery?: string
 	appliedPreFilters?: FilterSet
+	siteName: string
 }
 
 export function Search({
@@ -45,6 +45,7 @@ export function Search({
 	data,
 	initialQuery = "",
 	appliedPreFilters = emptyFilterSet,
+	siteName,
 	...props
 }: SearchProps) {
 	const [query, setQuery] = useState(initialQuery)
@@ -80,7 +81,7 @@ export function Search({
 				<>
 					<div className={searchContainerStyle} ref={scrollableContainerRef}>
 						<header className={searchMobileLogoContainerStyle}>
-							<Logo className={searchMobileLogoStyle} />
+							<Logo siteName={siteName} />
 						</header>
 						<SearchBar
 							availableFilters={availableFilters}

@@ -1,28 +1,31 @@
 import { style } from "@vanilla-extract/css"
 import { sprinkles } from "../sprinkles/sprinkles.css"
-import { pxToRem } from "../util/style-utils"
+import { vars } from "../themes/themes.css"
 
 export const logoStyle = sprinkles({
 	layout: "row",
-	gap: 6,
+	gap: 10,
 	alignItems: "center",
 })
-export const logoTitleStyle = sprinkles({
-	color: "strongText",
-	textStyle: "subtitle1",
+export const wordmarkStyle = sprinkles({
+	layout: "stack",
+	gap: 2,
+	textStyle: "button",
+	fontWeight: "bold",
 })
-export const logoAccentStyle = style([
+export const sigilStyle = style([
 	sprinkles({
-		height: "full",
+		backgroundColor: "onSurface",
+		color: "white",
 		display: "flex",
 		alignItems: "center",
-		backgroundColor: "primaryContainer",
-		color: "onPrimaryContainer",
-		textStyle: "bodyShort2",
-		fontWeight: "bold",
-		paddingX: 8,
-		paddingY: 4,
-		borderRadius: 8,
+		justifyContent: "center",
 	}),
-	{ height: pxToRem(24) },
+	{
+		width: 34,
+		height: 34,
+		borderRadius: "100%",
+	},
 ])
+export const logoTitleStyle = style({ color: vars.palette.logo })
+export const logoAccentStyle = style({})

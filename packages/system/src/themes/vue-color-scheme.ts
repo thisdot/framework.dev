@@ -1,6 +1,7 @@
 import { ColorPalette } from "./theme-from-palette"
 
 export const vueColorPalette: ColorPalette = {
+	logo: "#41B883",
 	primary100: "#ffffff",
 	primary99: "#f2fff5",
 	primary95: "#bcffd8",

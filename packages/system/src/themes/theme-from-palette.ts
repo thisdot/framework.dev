@@ -1,6 +1,7 @@
 import color from "color"
 
 export const blankPalette = {
+	logo: "#ffffff",
 	primary100: "#ffffff",
 	primary99: "#ffffff",
 	primary95: "#ffffff",

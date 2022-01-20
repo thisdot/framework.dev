@@ -22,6 +22,7 @@ export default {
 				))}
 			</div>
 		),
+		siteName: "react",
 	},
 } as Meta
 
