@@ -1,5 +1,8 @@
 # Changelog
 
+- [2021-01-20] Rework color schemes
+  [\#155](https://github.com/thisdot/framework.dev/pull/155)
+  ([jbachhardie](https://github.com/jbachhardie))
 - [2021-01-05] Add Angular and Vue sites
   [\#142](https://github.com/thisdot/framework.dev/pull/142)
   ([jbachhardie](https://github.com/jbachhardie))
