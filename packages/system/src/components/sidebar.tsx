@@ -9,15 +9,22 @@ import {
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { GithubIcon } from "../icons/github-icon"
 
-export type SidebarProps = React.ComponentPropsWithoutRef<"nav">
+export type SidebarProps = React.ComponentPropsWithoutRef<"nav"> & {
+	siteName: string
+}
 
-export function Sidebar({ children, className, ...props }: SidebarProps) {
+export function Sidebar({
+	children,
+	className,
+	siteName,
+	...props
+}: SidebarProps) {
 	return (
 		<nav className={sidebarStyle} {...props}>
 			<div className={sidebarContentsStyle}>
 				<header className={sidebarHeaderStyle}>
 					<a href="/">
-						<Logo />
+						<Logo siteName={siteName} />
 					</a>
 				</header>
 				<div className={sidebarBodyStyle}>{children}</div>

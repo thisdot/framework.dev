@@ -12,6 +12,7 @@ export default {
 	args: {
 		data: exampleSearchData,
 		initialQuery: "",
+		siteName: "react",
 		preFilters: {
 			category: ["libraries"],
 			field: [],

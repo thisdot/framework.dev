@@ -9,3 +9,6 @@ export default {
 const Template: Story<LogoProps> = (args) => <LogoComponent {...args} />
 
 export const Logo: Story<LogoProps> = Template.bind({})
+Logo.args = {
+	siteName: "react",
+}

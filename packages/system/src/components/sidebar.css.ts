@@ -1,10 +1,11 @@
 import { style } from "@vanilla-extract/css"
 import { sprinkles } from "../sprinkles/sprinkles.css"
+import { vars } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
 export const sidebarStyle = style([
 	sprinkles({
-		backgroundColor: "surface",
+		backgroundColor: "white",
 		borderRight: "thin",
 		display: { mobile: "none", desktop: "block" },
 	}),
@@ -32,12 +33,10 @@ export const sidebarHeaderStyle = style([
 		alignItems: "center",
 		paddingX: 24,
 		color: "strongText",
-		borderBottom: "thin",
 	}),
 	{
+		backgroundColor: vars.palette.primary99,
 		height: pxToRem(72),
-		boxShadow:
-			"0px 4px 8px rgba(0, 0, 0, 0.02), inset 0px -1px 0px rgba(0, 0, 0, 0.08)",
 	},
 ])
 

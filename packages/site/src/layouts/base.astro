@@ -37,7 +37,7 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 		}
   </head>
   <body class={classNames(sprinkles({ backgroundColor: "surface4", height: "full" }), bodyWithNav)} >
-		<Sidebar aria-label="primary">
+		<Sidebar aria-label="primary" siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}>
 			<div class={sprinkles({ layout: "stack", gap: 24 })}>
 				<NavItems data={navData} currentCategory={currentCategory} currentTag={currentTag} />
 			</div>

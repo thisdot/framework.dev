@@ -37,5 +37,5 @@ const title = `${formatFieldName(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} ${f
 </head>
 <BaseLayout title={title} currentCategory={category} currentTag={tag}>
 	<h1 class={visuallyHidden}>{title}</h1>
-	<Search client:load {...props} />
+	<Search client:load siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK} {...props} />
 </BaseLayout>
