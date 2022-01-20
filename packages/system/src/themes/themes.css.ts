@@ -1,10 +1,12 @@
 import { createTheme, createThemeContract } from "@vanilla-extract/css"
+import { angularColorPalette } from "./angular-color-scheme"
 import { reactColorPalette } from "./react-color-scheme"
 import {
 	blankPalette,
 	darkThemeFromPalette,
 	lightThemeFromPalette,
 } from "./theme-from-palette"
+import { vueColorPalette } from "./vue-color-scheme"
 
 export const vars = createThemeContract(lightThemeFromPalette(blankPalette))
 
@@ -18,26 +20,24 @@ export const reactThemeDark = createTheme(
 	darkThemeFromPalette(reactColorPalette)
 )
 
-// TODO: replace these with the appropriate palettes once we have them
-
 export const angularTheme = createTheme(
 	vars,
-	lightThemeFromPalette(reactColorPalette)
+	lightThemeFromPalette(angularColorPalette)
 )
 
 export const angularThemeDark = createTheme(
 	vars,
-	darkThemeFromPalette(reactColorPalette)
+	darkThemeFromPalette(angularColorPalette)
 )
 
 export const vueTheme = createTheme(
 	vars,
-	lightThemeFromPalette(reactColorPalette)
+	lightThemeFromPalette(vueColorPalette)
 )
 
 export const vueThemeDark = createTheme(
 	vars,
-	darkThemeFromPalette(reactColorPalette)
+	darkThemeFromPalette(vueColorPalette)
 )
 
 export const derivedAttributes = {
