@@ -1,5 +1,8 @@
 # Changelog
 
+- [2021-01-20] Update logo
+  [\#156](https://github.com/thisdot/framework.dev/pull/156)
+  ([jbachhardie](https://github.com/jbachhardie))
 - [2021-01-20] Rework color schemes
   [\#155](https://github.com/thisdot/framework.dev/pull/155)
   ([jbachhardie](https://github.com/jbachhardie))
