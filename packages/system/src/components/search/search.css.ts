@@ -2,10 +2,15 @@ import { style } from "@vanilla-extract/css"
 import { breakpoints, sprinkles } from "../../sprinkles/sprinkles.css"
 import { pxToRem } from "../../util/style-utils"
 
-export const searchStyle = style({
-	height: "100%",
-	position: "relative",
-})
+export const searchStyle = style([
+	sprinkles({
+		layout: "stack",
+	}),
+	{
+		height: "100%",
+		position: "relative",
+	},
+])
 
 export const searchContainerStyle = style([
 	sprinkles({

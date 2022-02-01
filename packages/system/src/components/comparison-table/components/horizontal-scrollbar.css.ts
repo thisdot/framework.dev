@@ -8,6 +8,7 @@ export const horizontalScrollbarContainerStyle = style([
 		border: "tableCell",
 		layout: "stack",
 		maxHeight: "100%",
+		minHeight: 0,
 	}),
 	{
 		overflow: "hidden",

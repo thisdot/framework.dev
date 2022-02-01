@@ -11,7 +11,7 @@ import { MobileNav } from '../components/mobile-nav.tsx'
 import { NavItems } from '../components/nav-items.tsx'
 import { getSearchData } from '../data/search-data'
 
-const { title, currentCategory, currentTag } = Astro.props
+const { title, currentCategory, currentTag, className } = Astro.props
 const searchData = await getSearchData(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)
 const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 ---
@@ -42,7 +42,7 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 				<NavItems data={navData} currentCategory={currentCategory} currentTag={currentTag} />
 			</div>
 		</Sidebar>
-		<main class={shrinkable}>
+		<main class={classNames(className, shrinkable)}>
 			<slot />
 		</main>
 		<MobileNav
