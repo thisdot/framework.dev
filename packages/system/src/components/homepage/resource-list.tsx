@@ -54,6 +54,7 @@ export function ResourceList({
 											<img
 												src={item.image}
 												className={resourceListItemImageStyle}
+												alt=""
 											/>
 										)}
 										<div>

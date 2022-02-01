@@ -14,7 +14,7 @@ export default {
 
 const Template: Story<BookDecoratorProps> = (args) => (
 	<BookDecoratorComponent {...args}>
-		<img src="/book-2.png" />
+		<img src="/book-2.png" alt="" />
 	</BookDecoratorComponent>
 )
 

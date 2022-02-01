@@ -26,7 +26,7 @@ export function BookList({
 				return (
 					<article key={`book-list-${book.title}`}>
 						<header>
-							<img className={bookImage} src={book.image} />
+							<img className={bookImage} src={book.image} alt="" />
 							<a href={book.href} target="_blank" rel="noopener noreferrer">
 								<H className={bookTitle}>{book.title}</H>
 							</a>

@@ -43,7 +43,7 @@ export function CourseList({
 							<img
 								src={course.image}
 								className={sprinkles({ border: "thin" })}
-								aria-hidden
+								alt=""
 								height={40}
 								width={40}
 							/>

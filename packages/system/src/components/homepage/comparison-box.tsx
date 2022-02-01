@@ -47,7 +47,7 @@ export function ComparisonBox({
 				))}
 			</div>
 			{imageSource && (
-				<img className={comparisonBoxImageStyle} src={imageSource} />
+				<img className={comparisonBoxImageStyle} src={imageSource} alt=""/>
 			)}
 		</div>
 	)

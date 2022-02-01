@@ -66,6 +66,7 @@ export function FeatureAndList({
 										<img
 											className={featureAndListFeatureBookStyle}
 											src={featured.image.src}
+											alt=""
 										/>
 									</BookDecorator>
 								</div>
@@ -73,6 +74,7 @@ export function FeatureAndList({
 								<img
 									className={featureAndListFeatureImageStyle}
 									src={featured.image.src}
+									alt=""
 								/>
 							))}
 						<h3 className={featureAndListFeatureTitleStyle}>
@@ -110,12 +112,14 @@ export function FeatureAndList({
 											<img
 												className={featureAndListListBookStyle}
 												src={item.image.src}
+												alt=""
 											/>
 										</BookDecorator>
 									) : (
 										<img
 											className={featureAndListListImageStyle}
 											src={item.image.src}
+											alt=""
 										/>
 									))}
 								<div className={sprinkles({ layout: "stack", gap: 4 })}>
