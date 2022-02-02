@@ -42,7 +42,7 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 				<NavItems data={navData} currentCategory={currentCategory} currentTag={currentTag} />
 			</div>
 		</Sidebar>
-		<main class={classNames(className, shrinkable)}>
+		<main class={classNames(className, shrinkable)} id="main-content">
 			<slot />
 		</main>
 		<MobileNav

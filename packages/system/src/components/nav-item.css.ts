@@ -65,3 +65,17 @@ export const navItemIconStyle = style({
 		},
 	},
 })
+
+export const navItemHiddenUntilFocus = style({
+	position: "absolute",
+	left: "-10000px",
+	top: "auto",
+	width: "1px",
+	height: "1px",
+	overflow: "hidden",
+	":focus": {
+		position: "static",
+		width: "auto",
+		height: pxToRem(44),
+	},
+})
