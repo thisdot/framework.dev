@@ -24,6 +24,9 @@ export function NavItems({
 }: NavItemsProps): JSX.Element {
 	return (
 		<NavList>
+			<NavItem hiddenUntilFocus href="#main-content">
+				Skip to Content
+			</NavItem>
 			{data.map((category) => (
 				<NavListItem key={category.name}>
 					<NavItem

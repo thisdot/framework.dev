@@ -6,11 +6,13 @@ import {
 	navItemIconStyle,
 	navItemLabelStyle,
 	navItemStyle,
+	navItemHiddenUntilFocus,
 } from "./nav-item.css"
 
 export interface NavItemProps extends React.ComponentPropsWithoutRef<"a"> {
 	icon?: React.ComponentType<IconProps>
 	count?: number
+	hiddenUntilFocus?: boolean
 }
 
 export function NavItem({
@@ -18,10 +20,18 @@ export function NavItem({
 	className,
 	icon: Icon,
 	count,
+	hiddenUntilFocus,
 	...props
 }: NavItemProps) {
 	return (
-		<a className={classNames(className, navItemStyle)} {...props}>
+		<a
+			className={classNames(
+				className,
+				navItemStyle,
+				hiddenUntilFocus && navItemHiddenUntilFocus
+			)}
+			{...props}
+		>
 			{Icon && (
 				<div className={navItemIconStyle}>
 					<Icon />
