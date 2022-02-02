@@ -2,6 +2,7 @@ import color from "color"
 
 export const blankPalette = {
 	logo: "#ffffff",
+	highlight: "#ffffff",
 	primary100: "#ffffff",
 	primary99: "#ffffff",
 	primary95: "#ffffff",
@@ -87,6 +88,7 @@ export type ColorPalette = typeof blankPalette
 export type ColorTheme = {
 	palette: ColorPalette
 	themeColors: {
+		highlight: string
 		primary: string
 		onPrimary: string
 		primaryContainer: string
@@ -132,6 +134,7 @@ export function lightThemeFromPalette(p: ColorPalette): ColorTheme {
 	return {
 		palette: p,
 		themeColors: {
+			highlight: p.highlight,
 			primary: p.primary40,
 			onPrimary: p.primary100,
 			primaryContainer: p.primary90,
@@ -178,6 +181,7 @@ export function darkThemeFromPalette(p: ColorPalette): ColorTheme {
 	return {
 		palette: p,
 		themeColors: {
+			highlight: p.logo,
 			primary: p.primary80,
 			onPrimary: p.primary20,
 			primaryContainer: p.primary30,

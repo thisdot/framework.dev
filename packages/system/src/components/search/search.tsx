@@ -4,7 +4,6 @@ import Fuse from "fuse.js"
 import {
 	compareBarStyle,
 	searchContainerStyle,
-	searchMobileLogoContainerStyle,
 	searchStyle,
 } from "./search.css"
 import { AllCategories, AllModelsByName } from "../../models/all-categories"
@@ -31,7 +30,6 @@ import { ComparisonTable } from "../comparison-table"
 import { CloseIcon } from "../../icons/close-icon"
 import { ResetIcon } from "../../icons/reset-icon"
 import { AddIcon } from "../../icons/add-icon"
-import { Logo } from "../logo"
 
 export interface SearchProps extends React.ComponentPropsWithoutRef<"section"> {
 	data: AllCategories[]
@@ -80,9 +78,6 @@ export function Search({
 			) : (
 				<>
 					<div className={searchContainerStyle} ref={scrollableContainerRef}>
-						<header className={searchMobileLogoContainerStyle}>
-							<Logo siteName={siteName} />
-						</header>
 						<SearchBar
 							availableFilters={availableFilters}
 							data={data}

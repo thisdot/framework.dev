@@ -7,6 +7,7 @@ import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css'
 import * as themes from '@framework/system/src/themes/themes.css'
 import { Sidebar } from '@framework/system/src/components/sidebar.tsx'
 import { bodyWithNav, shrinkable } from '@framework/system/src/styles/layouts.css'
+import { Logo } from '@framework/system/src/components/logo.tsx'
 import { MobileNav } from '../components/mobile-nav.tsx'
 import { NavItems } from '../components/nav-items.tsx'
 import { getSearchData } from '../data/search-data'
@@ -36,13 +37,16 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 			</script>
 		}
   </head>
-  <body class={classNames(sprinkles({ backgroundColor: "surface4", height: "full" }), bodyWithNav)} >
+  <body class={classNames(sprinkles({ backgroundColor: "surface1", height: "full" }), bodyWithNav)} >
 		<Sidebar aria-label="primary" siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}>
 			<div class={sprinkles({ layout: "stack", gap: 24 })}>
 				<NavItems data={navData} currentCategory={currentCategory} currentTag={currentTag} />
 			</div>
 		</Sidebar>
 		<main class={classNames(className, shrinkable)} id="main-content">
+			<div class={sprinkles({ layout: "row", justifyContent: "center", display: { desktop: "none" }, width: "full", paddingY: 24 })}>
+				<Logo siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK} />
+			</div>
 			<slot />
 		</main>
 		<MobileNav

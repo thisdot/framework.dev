@@ -23,6 +23,7 @@ export default {
 		books: exampleBooks,
 		tools: exampleTools,
 		communities: exampleCommunities,
+		siteName: "react"
 	},
 } as Meta
 
