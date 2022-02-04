@@ -286,17 +286,6 @@ function SearchResults({
 								: [],
 							onTagClick,
 						} as const
-						if (commonProps.searchResults.length === 0) {
-							return (
-								<p
-									className={sprinkles({
-										textStyle: "h100",
-									})}
-								>
-									Sorry, no results matched your search.
-								</p>
-							)
-						}
 						if (category.name === "libraries") {
 							return (
 								<ResultsCategory
