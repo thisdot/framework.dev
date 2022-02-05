@@ -1,5 +1,8 @@
 # Changelog
 
+- [2021-02-04] Add initial content for Angular
+  [\#165](https://github.com/thisdot/framework.dev/pull/165)
+  ([brettzeidler](https://github.com/brettzeidler))
 - [2021-02-02] Add link to skip to content for screen readers and keyboard-only navigation
   [\#156162](https://github.com/thisdot/framework.dev/pull/162)
   ([tvanantwerp](https://github.com/tvanantwerp))
