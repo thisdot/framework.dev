@@ -275,6 +275,7 @@ const colors = defineProperties({
 		backgroundColor: vars.themeColors,
 		color: vars.themeColors,
 		borderColor: vars.themeColors,
+		fill: vars.themeColors,
 		borderTop: borders,
 		borderBottom: borders,
 		borderLeft: borders,

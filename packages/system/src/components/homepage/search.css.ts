@@ -13,7 +13,6 @@ export const searchStyle = style([
 	sprinkles({
 		display: "grid",
 		gap: 12,
-		marginY: 16,
 	}),
 	{
 		gridTemplateColumns: "1fr min-content",

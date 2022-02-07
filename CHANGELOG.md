@@ -1,7 +1,10 @@
 # Changelog
 
+- [2021-02-02] Update homepage hero
+  [\#163](https://github.com/thisdot/framework.dev/pull/163)
+  ([jbachhardie](https://github.com/jbachhardie))
 - [2021-02-02] Add link to skip to content for screen readers and keyboard-only navigation
-  [\#156162](https://github.com/thisdot/framework.dev/pull/162)
+  [\#162](https://github.com/thisdot/framework.dev/pull/162)
   ([tvanantwerp](https://github.com/tvanantwerp))
 - [2021-01-20] Update logo
   [\#156](https://github.com/thisdot/framework.dev/pull/156)
