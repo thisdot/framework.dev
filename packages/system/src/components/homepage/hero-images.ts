@@ -1,15 +1,11 @@
-import heroBackgroundReact from "./hero-background-react.png"
-import heroBackgroundAngular from "./hero-background-angular.png"
-import heroBackgroundVue from "./hero-background-vue.png"
-
 export function getBackgroundImage(siteName: string) {
 	switch (siteName) {
 		case "react":
-			return heroBackgroundReact
+			return "/hero-background-react.png"
 		case "angular":
-			return heroBackgroundAngular
+			return "/hero-background-angular.png"
 		case "vue":
-			return heroBackgroundVue
+			return "/hero-background-vue.png"
 		default:
 			return ""
 	}
