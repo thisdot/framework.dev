@@ -5,7 +5,6 @@ import {
 	comparisonTableLibraryIconStyle,
 } from "./comparison-table.css"
 import { ColHeading, RowHeading, TD } from "./components/cells"
-import { cellStickyStyle } from "./components/cells.css"
 import { HorizontalScrollbar } from "./components/horizontal-scrollbar"
 import { ISortConfig, ILibrary } from "./types"
 import { sortLibraries, formatPercentage, formatNumber } from "./utils"
@@ -140,7 +139,7 @@ export function ComparisonTable({
 						<tbody style={{ display: "contents" }}>
 							{libraryStats.map((library) => (
 								<tr style={{ display: "contents" }} key={library.name}>
-									<RowHeading className={cellStickyStyle} scope="row">
+									<RowHeading scope="row">
 										<img
 											alt=""
 											src={library.image}

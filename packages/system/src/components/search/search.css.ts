@@ -4,11 +4,12 @@ import { pxToRem } from "../../util/style-utils"
 
 export const searchStyle = style([
 	sprinkles({
-		layout: "stack",
+		display: "grid",
 	}),
 	{
 		height: "100%",
 		position: "relative",
+		gridTemplateRows: "1fr auto",
 	},
 ])
 
