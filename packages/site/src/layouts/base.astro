@@ -7,6 +7,7 @@ import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css'
 import * as themes from '@framework/system/src/themes/themes.css'
 import { Sidebar } from '@framework/system/src/components/sidebar.tsx'
 import { bodyWithNav, shrinkable } from '@framework/system/src/styles/layouts.css'
+import { Logo } from '@framework/system/src/components/logo.tsx'
 import { MobileNav } from '../components/mobile-nav.tsx'
 import { NavItems } from '../components/nav-items.tsx'
 import { getSearchData } from '../data/search-data'
@@ -22,6 +23,13 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
     <title>{title} | react.framework.dev</title>
 		<meta name="robots" content="noindex">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
 		<meta charset="UTF-8"/>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-33DWS64W1B"></script>
@@ -36,13 +44,16 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 			</script>
 		}
   </head>
-  <body class={classNames(sprinkles({ backgroundColor: "surface4", height: "full" }), bodyWithNav)} >
+  <body class={classNames(sprinkles({ backgroundColor: "surface1", height: "full" }), bodyWithNav)} >
 		<Sidebar aria-label="primary" siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}>
 			<div class={sprinkles({ layout: "stack", gap: 24 })}>
 				<NavItems data={navData} currentCategory={currentCategory} currentTag={currentTag} />
 			</div>
 		</Sidebar>
 		<main class={classNames(className, shrinkable)} id="main-content">
+			<div class={sprinkles({ layout: "row", justifyContent: "center", display: { desktop: "none" }, width: "full", paddingY: 24 })}>
+				<Logo siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK} />
+			</div>
 			<slot />
 		</main>
 		<MobileNav

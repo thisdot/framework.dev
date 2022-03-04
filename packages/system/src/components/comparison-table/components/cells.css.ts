@@ -30,8 +30,6 @@ export const cellTHStyle = style([
 		zIndex: 2,
 		selectors: {
 			"&:first-of-type": {
-				left: 0,
-				zIndex: 3,
 				"@media": {
 					[breakpoints.tablet]: {
 						borderTopLeftRadius: pxToRem(12),
@@ -111,15 +109,6 @@ export const cellTDStyle = style([
 				borderRight: "none",
 			},
 		},
-	},
-])
-
-export const cellStickyStyle = style([
-	cellTDStyle,
-	{
-		position: "sticky",
-		left: 0,
-		zIndex: 1,
 	},
 ])
 

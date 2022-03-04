@@ -1,6 +1,11 @@
 import classNames from "classnames"
 import React from "react"
-import { homepageStyle, homepageTwoAndOneSectionStyle } from "./homepage.css"
+import {
+	homepageContentContainerStyle,
+	homepageGutterStyle,
+	homepageStyle,
+	homepageTwoAndOneSectionStyle,
+} from "./homepage.css"
 import { Search } from "./search"
 import { Hero } from "./hero"
 import { FeaturedLibraries } from "./featured-libraries"
@@ -29,6 +34,7 @@ export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
 	books: Book<string>[]
 	tools: Tool<string>[]
 	communities: Community<string>[]
+	siteName: string
 }
 
 export function Homepage({
@@ -41,32 +47,50 @@ export function Homepage({
 	books,
 	tools,
 	communities,
+	siteName,
 	...props
 }: HomepageProps) {
 	return (
 		<div className={classNames(className, homepageStyle)} {...props}>
-			<div className={sprinkles({ layout: "stack", gap: 56 })}>
+			<div
+				className={classNames(
+					homepageGutterStyle,
+					sprinkles({
+						paddingBottom: { mobile: 24, desktop: 16 },
+						paddingTop: { mobile: 0, desktop: 16 },
+					})
+				)}
+			>
 				<Search />
-				<Hero />
 			</div>
-			<FeaturedLibraries libraries={libraries} libraryTags={libraryTags} />
-			<Podcasts podcasts={podcasts} />
-			<div className={homepageTwoAndOneSectionStyle}>
-				<Courses courses={courses} />
-				<Blogs blogs={blogs} />
+			<div className={sprinkles({ backgroundColor: "surface5" })}>
+				<Hero siteName={siteName} className={homepageGutterStyle} />
 			</div>
-			<ContributorBanner
-				contributorImages={[
-					"https://github.com/jbachhardie.png",
-					"https://github.com/tvanantwerp.png",
-					"https://github.com/markshenouda.png",
-				]}
-			></ContributorBanner>
-			<div className={homepageTwoAndOneSectionStyle}>
-				<Books books={books} />
-				<LatestTools tools={tools} />
+			<div
+				className={classNames(
+					homepageContentContainerStyle,
+					homepageGutterStyle
+				)}
+			>
+				<FeaturedLibraries libraries={libraries} libraryTags={libraryTags} />
+				<Podcasts podcasts={podcasts} />
+				<div className={homepageTwoAndOneSectionStyle}>
+					<Courses courses={courses} />
+					<Blogs blogs={blogs} />
+				</div>
+				<ContributorBanner
+					contributorImages={[
+						"https://github.com/jbachhardie.png",
+						"https://github.com/tvanantwerp.png",
+						"https://github.com/markshenouda.png",
+					]}
+				></ContributorBanner>
+				<div className={homepageTwoAndOneSectionStyle}>
+					<Books books={books} />
+					<LatestTools tools={tools} />
+				</div>
+				<Communities communities={communities} />
 			</div>
-			<Communities communities={communities} />
 		</div>
 	)
 }

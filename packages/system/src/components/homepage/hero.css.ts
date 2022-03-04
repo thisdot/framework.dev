@@ -1,31 +1,137 @@
-import { style } from "@vanilla-extract/css"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { style, styleVariants } from "@vanilla-extract/css"
+import { breakpoints, sprinkles } from "../../sprinkles/sprinkles.css"
 import { pxToRem } from "../../util/style-utils"
 import { vars } from "../../themes/themes.css"
+
+export const heroContainerStyle = sprinkles({
+	layout: "stack",
+	paddingY: { mobile: 24, tablet: 40, desktop: 64 },
+	gap: {
+		mobile: 24,
+		desktop: 40,
+	},
+})
 
 export const heroStyle = style([
 	sprinkles({
 		borderRadius: 40,
-		paddingX: 48,
+		backgroundColor: "white",
+		layout: "stack",
+		gap: 16,
+		alignItems: "center",
 	}),
 	{
-		backgroundColor: vars.palette.primary99,
-		minHeight: pxToRem(480),
-		paddingBottom: pxToRem(68),
-		paddingTop: pxToRem(68),
+		textAlign: "center",
+		position: "relative",
+		minHeight: pxToRem(424),
+		paddingTop: pxToRem(40),
+		"@media": {
+			[breakpoints.tablet]: {
+				paddingTop: pxToRem(96),
+			},
+		},
 	},
 ])
 
-export const heroHeadingStyle = style({
-	color: vars.themeColors.onSurface,
-	fontSize: `min(calc(4vw + 1rem), ${pxToRem(88)})`,
-	fontWeight: 700,
-	lineHeight: 1,
-	letterSpacing: "-0.02em",
+export const heroBackgroundStyle = style({
+	position: "absolute",
+	bottom: 0,
+	left: "50%",
+	transform: "translateX(-50%)",
+	width: "522px",
+	maxWidth: "100%",
+})
+
+const heroLinesBase = style([
+	sprinkles({ display: { mobile: "none", tablet: "block" } }),
+	{
+		color: vars.palette.primary95,
+		position: "absolute",
+		top: 0,
+		bottom: 0,
+	},
+])
+
+export const heroLinesStyle = styleVariants({
+	leftHandSide: [heroLinesBase, { left: 85 }],
+	rightHandSide: [heroLinesBase, { right: 85 }],
+})
+
+export const heroHeadingStyle = style([
+	sprinkles({
+		layout: { mobile: "stack", tablet: "row" },
+		gap: { mobile: 16, tablet: 12 },
+		alignItems: { mobile: "center", tablet: "end" },
+		justifyContent: "center",
+		textStyle: { mobile: "h400", tablet: "h500" },
+		color: "onSurface",
+		marginY: 0,
+	}),
+	{
+		textAlign: "center",
+		position: "relative",
+	},
+])
+
+export const heroHeadingSigilStyle = style([
+	sprinkles({
+		backgroundColor: "onSurface",
+		color: "white",
+		alignItems: "center",
+		justifyContent: "center",
+		display: "flex",
+	}),
+	{
+		width: 56,
+		height: 56,
+		borderRadius: "100%",
+	},
+])
+
+export const heroHeadingHighlightStyle = style({
+	color: vars.palette.logo,
 })
 
 export const heroParagraphStyle = style([
 	sprinkles({
 		textStyle: "bodyLong1",
 	}),
+	{
+		position: "relative",
+		"@media": {
+			[breakpoints.tablet]: {
+				fontSize: pxToRem(20),
+				lineHeight: pxToRem(28),
+			},
+		},
+	},
 ])
+
+export const heroFeatureHighlightRowStyle = style([
+	sprinkles({
+		gap: { mobile: 8, tablet: 24 },
+	}),
+	{
+		display: "grid",
+		gridTemplateColumns: "1fr",
+		"@media": {
+			[breakpoints.tablet]: {
+				gridTemplateColumns: "1fr 1fr 1fr",
+			},
+		},
+	},
+])
+
+export const heroFeatureHighlightStyle = sprinkles({
+	borderRadius: 40,
+	padding: 24,
+	backgroundColor: "white",
+	layout: { mobile: "row", tablet: "stack", desktop: "row" },
+	gap: { mobile: 16, desktop: 24 },
+	alignItems: "center",
+})
+
+export const heroFeatureHighlightTitleStyle = sprinkles({
+	textStyle: "bodyShort1",
+	fontWeight: "bold",
+})

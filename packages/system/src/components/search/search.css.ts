@@ -4,11 +4,12 @@ import { pxToRem } from "../../util/style-utils"
 
 export const searchStyle = style([
 	sprinkles({
-		layout: "stack",
+		display: "grid",
 	}),
 	{
 		height: "100%",
 		position: "relative",
+		gridTemplateRows: "1fr auto",
 	},
 ])
 
@@ -17,7 +18,7 @@ export const searchContainerStyle = style([
 		layout: "stack",
 		gap: 24,
 		paddingBottom: { mobile: 56, desktop: 0 },
-		paddingTop: { mobile: 24, desktop: 16 },
+		paddingTop: { mobile: 0, desktop: 16 },
 	}),
 	{
 		overflowY: "auto",
@@ -45,9 +46,3 @@ export const compareBarStyle = style([
 		},
 	},
 ])
-
-export const searchMobileLogoContainerStyle = sprinkles({
-	layout: "row",
-	justifyContent: "center",
-	display: { desktop: "none" },
-})

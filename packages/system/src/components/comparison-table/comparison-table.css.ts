@@ -12,7 +12,6 @@ export const comparisonTableStyle = style([
 		gridTemplateColumns: "repeat(6, minmax(max-content, 1fr))",
 		gridAutoRows: pxToRem(44),
 		position: "relative",
-		width: 0,
 		"@media": {
 			[breakpoints.tablet]: {
 				gridAutoRows: pxToRem(56),
