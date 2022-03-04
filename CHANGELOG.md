@@ -1,5 +1,8 @@
 # Changelog
 
+- [2021-03-04] Add initial content for Angular
+  [\#165](https://github.com/thisdot/framework.dev/pull/165)
+  ([brettzeidler](https://github.com/brettzeidler))
 - [2021-03-04] Add message indicating to user if no results were found in a category
   [\#164](https://github.com/thisdot/framework.dev/pull/164)
   ([tvanantwerp](https://github.com/tvanantwerp))
