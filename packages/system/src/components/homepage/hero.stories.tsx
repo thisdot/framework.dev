@@ -12,3 +12,6 @@ export default {
 const Template: Story<HeroProps> = (args) => <HeroComponent {...args} />
 
 export const Hero = Template.bind({})
+Hero.args = {
+	siteName: "react",
+}

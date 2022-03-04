@@ -1,6 +1,7 @@
 import { ColorPalette } from "./theme-from-palette"
 
 export const angularColorPalette: ColorPalette = {
+	highlight: "#FFB3B3",
 	logo: "#E23237",
 	primary100: "#ffffff",
 	primary99: "#fcfcfc",

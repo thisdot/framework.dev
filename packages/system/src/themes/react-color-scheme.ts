@@ -1,6 +1,7 @@
 import { ColorPalette } from "./theme-from-palette"
 
 export const reactColorPalette: ColorPalette = {
+	highlight: "#14D9FA",
 	logo: "#02D4F5",
 	primary100: "#ffffff",
 	primary99: "#f6fdff",
