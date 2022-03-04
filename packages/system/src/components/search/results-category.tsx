@@ -51,7 +51,7 @@ export function ResultsCategory<T extends CategoryName>({
 	...props
 }: ResultsCategoryProps<T>) {
 	const headerId = useId()
-	if (results.length === 0) return null
+
 	const layout = ["books", "communities", "podcasts"].includes(category)
 		? imageFirstCardGrid
 		: titleFirstCardGrid
@@ -72,14 +72,25 @@ export function ResultsCategory<T extends CategoryName>({
 						numberOfResults={results.length}
 						className={visuallyHidden}
 					/>
-					{results.map(
-						renderCard({
-							headingTag: "h3",
-							category,
-							onTagClick,
-							onSelect,
-							selectedItems,
-						})
+					{results.length > 0 ? (
+						results.map(
+							renderCard({
+								headingTag: "h3",
+								category,
+								onTagClick,
+								onSelect,
+								selectedItems,
+							})
+						)
+					) : (
+						<p
+							className={sprinkles({
+								textStyle: "h100",
+							})}
+							style={{ textAlign: "center" }}
+						>
+							{`Sorry, no ${category} matched your search.`}
+						</p>
 					)}
 				</div>
 			)
@@ -104,14 +115,25 @@ export function ResultsCategory<T extends CategoryName>({
 						id={headerId}
 					/>
 					<div className={classNames(layout, sprinkles({ paddingTop: 24 }))}>
-						{results.map(
-							renderCard({
-								headingTag: "h3",
-								category,
-								onTagClick,
-								onSelect,
-								selectedItems,
-							})
+						{results.length > 0 ? (
+							results.map(
+								renderCard({
+									headingTag: "h3",
+									category,
+									onTagClick,
+									onSelect,
+									selectedItems,
+								})
+							)
+						) : (
+							<p
+								className={sprinkles({
+									textStyle: "minorHeading",
+								})}
+								style={{ textAlign: "center" }}
+							>
+								{`Sorry, no ${category} matched your search.`}
+							</p>
 						)}
 					</div>
 				</div>
