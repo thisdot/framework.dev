@@ -1,5 +1,8 @@
 # Changelog
 
+- [2021-03-11] Add drop shadow to feature highlights
+  [\#174](https://github.com/thisdot/framework.dev/pull/174)
+  ([jbachhardie](https://github.com/jbachhardie))
 - [2022-03-10] Fix the link "View all tools" on the homepage
   [\#171](https://github.com/thisdot/framework.dev/pull/171)
   ([RinatValiullov](https://github.com/RinatValiullov))
