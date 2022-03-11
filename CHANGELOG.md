@@ -1,5 +1,8 @@
 # Changelog
 
+- [2021-02-02] Fix iOS Safari dispaly bugs
+  [\#173](https://github.com/thisdot/framework.dev/pull/173)
+  ([jbachhardie](https://github.com/jbachhardie))
 - [2021-03-04] Add initial content for Angular
   [\#165](https://github.com/thisdot/framework.dev/pull/165)
   ([brettzeidler](https://github.com/brettzeidler))
