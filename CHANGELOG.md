@@ -1,5 +1,7 @@
 # Changelog
 
+- [2022-03-10] Add Bumbag, Chakra UI, React Spectrum, Hashicorp React Component, Windmill React UI, Reach UI for React
+  [\#175](https://github.com/thisdot/framework.dev/pull/175)
 - [2022-03-10] Fix the link "View all tools" on the homepage
   [\#171](https://github.com/thisdot/framework.dev/pull/171)
   ([RinatValiullov](https://github.com/RinatValiullov))
