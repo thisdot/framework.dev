@@ -97,7 +97,6 @@ export const featureAndListFeatureBookStyle = style({
 	filter: `
 	drop-shadow(0px 8px 31px rgba(0, 0, 0, 0.13))
 	drop-shadow(0px 1.00172px 3.88168px rgba(0, 0, 0, 0.065))`,
-	height: "100%",
 })
 
 export const featureAndListFeatureTitleStyle = style([
