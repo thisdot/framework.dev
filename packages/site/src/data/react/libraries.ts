@@ -724,7 +724,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://github.com/pmndrs/valtio",
 		image: "https://github.com/pmndrs.png",
 		tags: ["state management"],
-		description: "makes proxy-state simple",
+		description: "Lightweight Proxy-Based State Management for ReactJS and VanillaJS",
 	},
 	{
 		name: "A11y",
