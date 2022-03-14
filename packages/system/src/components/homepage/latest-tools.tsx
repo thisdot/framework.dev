@@ -16,7 +16,7 @@ export function LatestTools({ className, tools, ...props }: LatestToolsProps) {
 		<ResourceList
 			className={classNames(className, latestToolsStyle)}
 			title="Latest tools"
-			viewAll={{ title: "View all tools", href: "/categories/blogs" }}
+			viewAll={{ title: "View all tools", href: "/categories/tools" }}
 			items={randromTools.map((tool) => {
 				return {
 					image: tool.image,
