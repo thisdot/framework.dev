@@ -48,9 +48,31 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		npmPackage: "redux",
 		href: "https://redux.js.org/",
 		description:
-			"A predictable, centralized, debuggable and flexible state container for JS apps inspired by the Flux and Elm architectures.",
+			"A predictable, centralized, debuggable and flexible state container for JS apps inspired by the Flux and Elm architectures. Nowadays you should be using Redux Toolkit instead.",
 		image: "https://github.com/reduxjs.png",
 		tags: ["state management", "redux"],
+	},
+	{
+		name: "Redux Toolkit",
+		author: "Mark Erikson",
+		gitHubRepo: "reduxjs/redux-toolkit",
+		npmPackage: "@reduxjs/toolkit",
+		href: "https://redux-toolkit.js.org/",
+		description:
+			"The official, opinionated, batteries-included toolset for efficient Redux development",
+		image: "https://github.com/reduxjs.png",
+		tags: ["state management", "redux"],
+	},
+	{
+		name: "RTK Query",
+		author: "Lenz Weber",
+		gitHubRepo: "reduxjs/redux-toolkit",
+		npmPackage: "@reduxjs/toolkit",
+		href: "https://redux-toolkit.js.org/rtk-query/overview",
+		description:
+			"A powerful data fetching and caching tool. It is designed to simplify common cases for loading data in a web application, eliminating the need to hand-write data fetching & caching logic yourself.",
+		image: "https://github.com/reduxjs.png",
+		tags: ["data fetching", "redux"],
 	},
 	{
 		name: "MobX",
@@ -679,10 +701,30 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		gitHubRepo: "pmndrs/zustand",
 		npmPackage: "zustand",
 		href: "https://docs.pmnd.rs/zustand/introduction",
-		image: "https://github.com/pmndrs.png",
+		image: "https://docs.pmnd.rs/zustand-resources/bear.png",
 		tags: ["state management"],
 		description:
 			"A small, fast and scalable bearbones state-management solution using simplified flux principles.",
+	},
+	{
+		name: "Jotai",
+		author: "Poimandres",
+		gitHubRepo: "pmndrs/jotai",
+		npmPackage: "jotai",
+		href: "https://jotai.org/",
+		image: "https://storage.googleapis.com/candycode/jotai/jotai-mascot.png",
+		tags: ["state management"],
+		description: "Primitive and flexible state management for React",
+	},
+	{
+		name: "Valtio",
+		author: "Poimandres",
+		gitHubRepo: "pmndrs/valtio",
+		npmPackage: "valtio",
+		href: "https://github.com/pmndrs/valtio",
+		image: "https://github.com/pmndrs.png",
+		tags: ["state management"],
+		description: "Lightweight Proxy-Based State Management for ReactJS and VanillaJS",
 	},
 	{
 		name: "A11y",
@@ -750,7 +792,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"A graphical user interface for changing variable states in React.",
 	},
-  {
+	{
 		name: "Blitz",
 		author: "Brandon Bayer",
 		gitHubRepo: "blitz-js/blitz",

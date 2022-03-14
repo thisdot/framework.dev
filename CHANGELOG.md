@@ -1,5 +1,8 @@
 # Changelog
 
+- [2021-03-14] Add Redux Toolkit, RTK Query, Jotai, Valtio
+  [\#169](https://github.com/thisdot/framework.dev/pull/169)
+  ([phryneas](https://github.com/phryneas))
 - [2021-03-11] Add drop shadow to feature highlights
   [\#174](https://github.com/thisdot/framework.dev/pull/174)
 - [2021-03-11] Fix iOS Safari dispaly bugs
