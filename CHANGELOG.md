@@ -1,5 +1,7 @@
 # Changelog
 
+- [2021-03-11] Add drop shadow to feature highlights
+  [\#174](https://github.com/thisdot/framework.dev/pull/174)
 - [2021-03-11] Fix iOS Safari dispaly bugs
   [\#173](https://github.com/thisdot/framework.dev/pull/173)
   ([jbachhardie](https://github.com/jbachhardie))
