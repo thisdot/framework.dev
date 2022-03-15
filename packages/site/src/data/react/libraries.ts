@@ -776,7 +776,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	},
   	{
 		name: "Bumbag",
-		author: "jxom",
+		author: "Jake Moxey",
 		gitHubRepo: "jxom/bumbag-ui",
 		npmPackage: "bumbag",
 		href: "https://bumbag.style/",
@@ -786,7 +786,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	},
         {
 		name: "Chakra UI",
-		author: "segunadebayo",
+		author: "Segun Adebayo",
 		gitHubRepo: "chakra-ui/chakra-ui",
 		npmPackage: "@chakra-ui/react",
 		href: "https://chakra-ui.com/",
@@ -796,7 +796,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	},
         {
 		name: "Reach UI",
-		author: "reach",
+		author: "Reach",
 		gitHubRepo: "reach/reach-ui",
 		npmPackage: "@reach/accordion",
 		href: "https://reach.tech/",
@@ -806,7 +806,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	},
         {
 		name: "HashiCorp React Component",
-		author: "hashicorp",
+		author: "HashiCorp",
 		gitHubRepo: "hashicorp/react-components",
 		npmPackage: "@hashicorp/react-accordion",
 		href: "https://react-components.vercel.app/",
@@ -816,7 +816,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	},
         {
 		name: "React Spectrum",
-		author: "adobe",
+		author: "Adobe, Inc.",
 		gitHubRepo: "adobe/react-spectrum",
 		npmPackage: "@adobe/react-spectrum",
 		href: "https://react-spectrum.adobe.com/",
@@ -826,7 +826,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	},
         {
 		name: "Windmill React UI",
-		author: "estevanmaito",
+		author: "Estevan Maito",
 		gitHubRepo: "estevanmaito/windmill-react-ui",
 		npmPackage: "@windmill/react-ui",
 		href: "https://windmillui.com/",
