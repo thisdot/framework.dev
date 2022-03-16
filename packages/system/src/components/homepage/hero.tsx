@@ -14,6 +14,7 @@ import {
 	heroFeatureHighlightRowStyle,
 	heroFeatureHighlightStyle,
 	heroFeatureHighlightTitleStyle,
+	heroFeatureHighlightIconStyle
 } from "./hero.css"
 import { getBackgroundImage } from "./hero-images"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
@@ -108,6 +109,7 @@ const BrowseFeatureHighlightIcon = () => (
 		viewBox="17 9 64 64"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
+		className={heroFeatureHighlightIconStyle}
 	>
 		<path
 			d="M81 41C81 58.6731 66.6731 73 49 73C31.3269 73 17 58.6731 17 41C17 23.3269 31.3269 9 49 9C66.6731 9 81 23.3269 81 41Z"
@@ -203,6 +205,7 @@ const SearchFeatureHighlightIcon = () => (
 		viewBox="0 0 64 64"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
+		className={heroFeatureHighlightIconStyle}
 	>
 		<path
 			d="M64 32C64 49.6731 49.6731 64 32 64C14.3269 64 0 49.6731 0 32C0 14.3269 14.3269 0 32 0C49.6731 0 64 14.3269 64 32Z"
@@ -265,6 +268,7 @@ const CompareFeatureHighlightIcon = () => (
 		viewBox="0 0 64 64"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
+		className={heroFeatureHighlightIconStyle}
 	>
 		<path
 			d="M64 32C64 49.6731 49.6731 64 32 64C14.3269 64 0 49.6731 0 32C0 14.3269 14.3269 0 32 0C49.6731 0 64 14.3269 64 32Z"

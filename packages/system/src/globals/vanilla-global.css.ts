@@ -27,3 +27,7 @@ globalStyle(
 globalStyle("*:focus-visible", {
 	outline: derivedAttributes.outline,
 })
+
+globalStyle('input[type="search"]', {
+	WebkitAppearance: "none",
+})
