@@ -3,7 +3,7 @@ import { vars } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
 const spaceInPixels = [
-	0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 28, 32, 40, 48, 56, 64, 80,
+	0, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 32, 40, 48, 56, 64,
 ] as const
 
 const spaceInRem = Object.fromEntries(
@@ -43,12 +43,6 @@ const typography = defineProperties({
 	defaultCondition: "mobile",
 	properties: {
 		textStyle: {
-			h600: {
-				fontSize: pxToRem(64),
-				fontWeight: 700,
-				letterSpacing: "-0.02em",
-				lineHeight: 1.06,
-			},
 			h500: {
 				fontSize: pxToRem(52),
 				fontWeight: 700,
@@ -57,12 +51,6 @@ const typography = defineProperties({
 			},
 			h400: {
 				fontSize: pxToRem(40),
-				fontWeight: 700,
-				letterSpacing: "-0.02em",
-				lineHeight: 1.2,
-			},
-			h300: {
-				fontSize: pxToRem(30),
 				fontWeight: 700,
 				letterSpacing: "-0.02em",
 				lineHeight: 1.2,
@@ -78,18 +66,6 @@ const typography = defineProperties({
 				fontWeight: 700,
 				letterSpacing: "-0.02em",
 				lineHeight: 1.39,
-			},
-			subtitle1: {
-				fontSize: pxToRem(20),
-				fontWeight: 600,
-				letterSpacing: "-0.02em",
-				lineHeight: 1.2,
-			},
-			subtitle2: {
-				fontSize: pxToRem(18),
-				fontWeight: 600,
-				letterSpacing: "-0.02em",
-				lineHeight: 1.12,
 			},
 			bodyShort1: {
 				fontSize: pxToRem(16),
@@ -121,12 +97,6 @@ const typography = defineProperties({
 				letterSpacing: "-0.01em",
 				lineHeight: 1.42,
 			},
-			bodyLong3: {
-				fontSize: pxToRem(12),
-				fontWeight: 400,
-				letterSpacing: "-0.01em",
-				lineHeight: 1.48,
-			},
 			caption: {
 				fontSize: pxToRem(14),
 				fontWeight: 500,
@@ -150,51 +120,7 @@ const typography = defineProperties({
 				fontSize: pxToRem(12),
 				fontWeight: 500,
 				lineHeight: 1,
-			},
-			tinyCaps: {
-				textTransform: "uppercase",
-				fontSize: pxToRem(10),
-				lineHeight: 1,
-				fontWeight: 600,
-			},
-			subHeading: {
-				fontSize: pxToRem(12),
-				lineHeight: 16 / 12,
-			},
-			bodyText: {
-				fontSize: pxToRem(14),
-				lineHeight: 20 / 14,
-				color: vars.palette.neutral20,
-			},
-			clickable: {
-				fontSize: pxToRem(14),
-				lineHeight: 16 / 14,
-				fontWeight: 600,
-			},
-			minorHeading: {
-				fontSize: pxToRem(16),
-				lineHeight: 20 / 16,
-				fontWeight: 600,
-			},
-			sectionHeading: {
-				fontSize: pxToRem(20),
-				lineHeight: 24 / 20,
-				fontWeight: 600,
-			},
-			pageHeading: {
-				fontSize: pxToRem(30),
-				lineHeight: 36 / 30,
-				fontWeight: 600,
-			},
-			siteHeading: {
-				fontSize: pxToRem(52),
-				lineHeight: 58 / 52,
-				fontWeight: 600,
-			},
-			large: {
-				fontSize: pxToRem(20),
-				lineHeight: 24 / 20,
-			},
+			}
 		},
 		fontWeight: {
 			regular: 400,
@@ -237,7 +163,7 @@ const layout = defineProperties({
 		objectFit: ["contain"],
 		display: ["none", "block", "flex", "grid"],
 		flexDirection: ["row", "column"],
-		alignItems: ["stretch", "flex-start", "center", "flex-end", "end", "start"],
+		alignItems: ["center", "end", "start"],
 		flexWrap: ["wrap", "nowrap"],
 		width: {
 			full: "100%",

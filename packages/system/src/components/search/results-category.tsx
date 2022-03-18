@@ -128,7 +128,7 @@ export function ResultsCategory<T extends CategoryName>({
 						) : (
 							<p
 								className={sprinkles({
-									textStyle: "minorHeading",
+									textStyle: "bodyShort1",
 								})}
 								style={{ textAlign: "center" }}
 							>

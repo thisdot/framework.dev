@@ -23,13 +23,13 @@ export function ContributorBanner({
 			<div>
 				<h1
 					className={sprinkles({
-						textStyle: "sectionHeading",
+						textStyle: "h100",
 						marginBottom: 8,
 					})}
 				>
 					Build better. Together.
 				</h1>
-				<p className={sprinkles({ textStyle: "bodyText" })}>
+				<p className={sprinkles({ textStyle: "bodyLong2" })}>
 					Create a PR if you see mistakes, room for improvement, or new
 					opportunties to help dev team.
 				</p>
