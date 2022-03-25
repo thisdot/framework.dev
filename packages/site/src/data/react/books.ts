@@ -20,11 +20,11 @@ export const books: Book<typeof bookTags[number]>[] = [
 		title: "The Road To Enterprise",
 		authors: ["Thomas Findlay"],
 		image: "https://theroadtoenterprise.com/images/react-book-cover-large.png",
-		description: '"React - The Road To Enterprise" is an advanced book that revolves around best practices, advanced patterns and techniques for the development of React and Next applications in TypeScript. It\'s a one-stop resource for many crucial concepts that should help you solve and avoid many pain-points when developing React applications. This book covers many advanced topics to help you build maintainable, scalable and performant React applications, such as scalable project architecture, useful techniques for handling async operations and API states, advanced component patterns, performance optimisation, local and global state management patterns, static site generation (SSG) and server side rendering (SSR) with Next.js and more.',
+		description: '"React - The Road To Enterprise" is an advanced book with advanced patterns, techniques, and best practices for developing React apps. It covers crucial topics like scalable project architecture, async operations, advanced component and state management patterns, performance optimisation, Next.js and more.',
 		yearOfPublication: 2022,
 		numberOfPages: 433,
 		level: 'advanced',
-		href: 'https://theroadtoenterprise.com/books/react-the-road-to-enterprise',
+		href: 'https://theroadtoenterprise.com/books/react-the-road-to-enterprise?utm_source=framework.dev&utm_medium=card&utm_campaign=react_books',
 		tags: ['projects', 'typescript', 'recipes', 'testing', 'routing', 'nextJS', 'redux']
 	},
 	{
