@@ -25,7 +25,7 @@ export const mobileNavStyle = style([
 export const menuButtonStyle = style([
 	sprinkles({
 		fontWeight: "bold",
-		textStyle: "clickable",
+		textStyle: "button",
 		color: "strongText",
 		display: "flex",
 		flexDirection: "row",

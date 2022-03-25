@@ -13,7 +13,7 @@ export default {
 } as Meta
 
 const Template: Story = (args) => (
-	<div className={sprinkles({ textStyle: "tinyCaps" })}>
+	<div className={sprinkles({ textStyle: "overline" })}>
 		<span>Some text</span>
 		<BulletDividerComponent {...args} />
 		<span>Other text</span>

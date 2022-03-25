@@ -92,18 +92,14 @@ export type ColorTheme = {
 		primary: string
 		onPrimary: string
 		primaryContainer: string
-		onPrimaryContainer: string
 		secondary: string
-		onSecondary: string
 		secondaryContainer: string
 		onSecondaryContainer: string
 		tertiary: string
 		onTertiary: string
 		tertiaryContainer: string
-		onTertiaryContainer: string
 		tertiaryBorder: string
 		error: string
-		onError: string
 		errorContainer: string
 		onErrorContainer: string
 		background: string
@@ -111,14 +107,11 @@ export type ColorTheme = {
 		surface: string
 		onSurface: string
 		surfaceVariant: string
-		onSurfaceVariant: string
 		outline: string
 		regularText: string
 		strongText: string
 		softText: string
 		surface1: string
-		surface2: string
-		surface3: string
 		surface4: string
 		surface5: string
 		beginner: string
@@ -138,18 +131,14 @@ export function lightThemeFromPalette(p: ColorPalette): ColorTheme {
 			primary: p.primary40,
 			onPrimary: p.primary100,
 			primaryContainer: p.primary90,
-			onPrimaryContainer: p.primary10,
 			secondary: p.secondary40,
-			onSecondary: p.secondary100,
 			secondaryContainer: p.secondary90,
 			onSecondaryContainer: p.secondary10,
 			tertiary: p.tertiary40,
 			onTertiary: p.tertiary100,
 			tertiaryContainer: p.tertiary90,
-			onTertiaryContainer: p.tertiary10,
 			tertiaryBorder: p.neutral80,
 			error: p.error40,
-			onError: p.error100,
 			errorContainer: p.error90,
 			onErrorContainer: p.error10,
 			background: p.neutral99,
@@ -157,14 +146,11 @@ export function lightThemeFromPalette(p: ColorPalette): ColorTheme {
 			surface: surface.hex(),
 			onSurface: p.neutral10,
 			surfaceVariant: p.neutralVariant90,
-			onSurfaceVariant: p.neutralVariant30,
 			outline: p.neutralVariant50,
 			regularText: p.neutral20,
 			strongText: p.neutral0,
 			softText: p.neutral60,
 			surface1: surface.mix(primary, 0.05).hex(),
-			surface2: surface.mix(primary, 0.08).hex(),
-			surface3: surface.mix(primary, 0.11).hex(),
 			surface4: surface.mix(primary, 0.12).hex(),
 			surface5: surface.mix(primary, 0.14).hex(),
 			beginner: "#4C9099",
@@ -185,18 +171,14 @@ export function darkThemeFromPalette(p: ColorPalette): ColorTheme {
 			primary: p.primary80,
 			onPrimary: p.primary20,
 			primaryContainer: p.primary30,
-			onPrimaryContainer: p.primary90,
 			secondary: p.secondary80,
-			onSecondary: p.secondary20,
 			secondaryContainer: p.secondary30,
 			onSecondaryContainer: p.secondary90,
 			tertiary: p.tertiary80,
 			onTertiary: p.tertiary20,
 			tertiaryBorder: p.neutral80,
 			tertiaryContainer: p.tertiary30,
-			onTertiaryContainer: p.tertiary90,
 			error: p.error80,
-			onError: p.error20,
 			errorContainer: p.error30,
 			onErrorContainer: p.error90,
 			background: p.neutral10,
@@ -204,14 +186,11 @@ export function darkThemeFromPalette(p: ColorPalette): ColorTheme {
 			surface: surface.hex(),
 			onSurface: p.neutral90,
 			surfaceVariant: p.neutralVariant30,
-			onSurfaceVariant: p.neutralVariant80,
 			outline: p.neutralVariant60,
 			regularText: p.neutral80,
 			strongText: p.neutral100,
 			softText: p.neutral60,
 			surface1: surface.mix(primary, 0.05).hex(),
-			surface2: surface.mix(primary, 0.08).hex(),
-			surface3: surface.mix(primary, 0.11).hex(),
 			surface4: surface.mix(primary, 0.12).hex(),
 			surface5: surface.mix(primary, 0.14).hex(),
 			beginner: "#4C9099",

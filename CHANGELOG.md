@@ -1,5 +1,8 @@
 # Changelog
 
+- [2021-03-18] Remove unused components and styles
+  [\#177](https://github.com/thisdot/framework.dev/pull/177)
+  ([jbachhardie](https://github.com/jbachhardie))
 - [2021-03-14] Add Redux Toolkit, RTK Query, Jotai, Valtio
   [\#169](https://github.com/thisdot/framework.dev/pull/169)
   ([phryneas](https://github.com/phryneas))
