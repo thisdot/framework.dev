@@ -1,5 +1,97 @@
 import { Library } from "@framework/system/src/models/library"
 
-export const libraryTags = [] as const
+export const libraryTags = [
+	"3D",
+	"a11y",
+	"state management",
+	"data fetching",
+	"graphQL",
+	"HTTP client",
+	"styling",
+	"CSS in JS",
+	"utility-first CSS",
+	"CSS processor",
+	"CSS modules",
+	"webpack",
+	"component library",
+	"forms",
+	"redux",
+	"framework",
+	"static site generation",
+	"server side rendering",
+	"documentation",
+	"testing",
+	"storybook",
+	"routing",
+	"animation",
+	"component",
+	"internationalization",
+] as const
 
-export const libraries: Library<typeof libraryTags[number]>[] = []
+export const libraries: Library<typeof libraryTags[number]>[] = [
+	{
+		name: "Quasar",
+		author: "Razvan Stoenescu",
+		gitHubRepo: "https://github.com/quasarframework/quasar",
+		npmPackage: "quasar",
+		href: "https://quasar.dev",
+		description:
+			"Effortlessly build high-performance & high-quality Vue.js 3 user interfaces in record time",
+		image: "https://upload.wikimedia.org/wikipedia/en/2/29/Quasar_Logo.png",
+		tags: ["component library"],
+	},
+	{
+		name: "Element UI",
+		author: "ElemeFE",
+		gitHubRepo: "https://github.com/ElemeFE/element",
+		npmPackage: "element-ui",
+		href: "https://element.eleme.io/",
+		description: "A Vue.js 2.0 UI Toolkit for Web.",
+		image: "https://iconape.com/wp-content/png_logo_vector/element-ui.png",
+		tags: ["component library"],
+	},
+	{
+		name: "Element Plus",
+		author: "Element Plus",
+		gitHubRepo: "https://github.com/element-plus/element-plus",
+		npmPackage: "element-plus",
+		href: "https://element-plus.org/",
+		description: "A Vue 3 based component library for designers and developers",
+		image: "https://element-plus.org/images/element-plus-logo.svg",
+		tags: ["component library"],
+	},
+	{
+		name: "Vuetify",
+		author: "John Jeremy Leider",
+		gitHubRepo: "https://github.com/vuetifyjs/vuetify",
+		npmPackage: "vuetify",
+		href: "https://vuetifyjs.com/",
+		description:
+			"Vuetify is a Vue UI Library with beautifully handcrafted Material Components. No design skills required — everything you need to create amazing applications is at your fingertips.",
+		image: "https://iconape.com/wp-content/png_logo_vector/vuetify-logo.png",
+		tags: ["component library"],
+	},
+	{
+		name: "Vuesax",
+		author: "lusaxweb",
+		gitHubRepo: "https://github.com/lusaxweb/vuesax-next",
+		npmPackage: "vuesax",
+		href: "https://vuesax.com/",
+		description:
+			"Components for Vuejs. We love what we do. Let us help you do what You love.",
+		image: "https://vuesax.com/logos/logo-vuesax-svg-7.svg",
+		tags: ["component library"],
+	},
+	{
+		name: "Bootstrap vue",
+		author: "BootstrapVue",
+		gitHubRepo: "https://github.com/bootstrap-vue/bootstrap-vue",
+		npmPackage: "bootstrap-vue",
+		href: "https://bootstrap-vue.org/",
+		description:
+			"BootstrapVue provides one of the most comprehensive implementations of the Bootstrap v4.5 component and grid system available for Vue.js v2.6, complete with extensive and automated WAI-ARIA accessibility markup.",
+		image:
+			"https://github.com/bootstrap-vue/bootstrap-vue/raw/master/static/banner.png",
+		tags: ["component library"],
+	},
+]
