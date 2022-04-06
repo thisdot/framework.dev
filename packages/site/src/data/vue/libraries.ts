@@ -184,4 +184,104 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image: "",
 		tags: ["component library"],
 	},
+
+	{
+		name: "Vue Material",
+		author: "Marcos Moura, Creative Tim & Community",
+		gitHubRepo: "http://github.com/vuematerial/vue-material",
+		npmPackage: "vue-material",
+		href: "https://vuematerial.io/",
+		description:
+			"Vue Material is Simple, lightweight and built exactly according to the Google Material Design specs",
+		image:
+			"https://camo.githubusercontent.com/046e9e47577f961eb9a8468ca73de80a0f3e8de2d15796db2797ae5211a88245/68747470733a2f2f7777772e63726561746976652d74696d2e636f6d2f7675656d6174657269616c2f6173736574732f6c6f676f2d636f6c6f722e706e67",
+		tags: ["component library"],
+	},
+	{
+		name: "Mint UI",
+		author: "mint-ui",
+		gitHubRepo: "https://github.com/ElemeFE/mint-ui",
+		npmPackage: "mint-ui",
+		href: "http://mint-ui.github.io/#!/en",
+		description: "Mobile UI elements for Vue 2.0",
+		image: "",
+		tags: ["component library"],
+	},
+
+	{
+		name: "Semantic UI Vue",
+		author: "Mario Lamacchia",
+		gitHubRepo: "https://github.com/Semantic-UI-Vue/Semantic-UI-Vue",
+		npmPackage: "semantic-ui-vue",
+		href: "https://semantic-ui-vue.github.io/",
+		description:
+			"Semantic UI Vue is the Vue integration for Semantic UI. It is highly inspired on Semantic UI React If you have used it already, you will find Semantic UI Vue's API to be almost the same.",
+		image:
+			"https://raw.githubusercontent.com/Semantic-UI-Vue/Semantic-UI-Vue/master/docs/public/static/images/logo.png",
+		tags: ["component library"],
+	},
+	{
+		name: "Vectre",
+		author: "Vadim Tiukov",
+		gitHubRepo: "https://github.com/vectrejs/vectre",
+		npmPackage: "@vectrejs/vectre",
+		href: "https://vectrejs.github.io/docs/",
+		description: "A Lightweight, Simple and Responsive Component Framework",
+		image: "https://vectrejs.github.io/docs/img/logo.3b9b2fe3.svg",
+		tags: ["component library"],
+	},
+	{
+		name: "Vant UI",
+		author: "Youzan",
+		gitHubRepo: "https://github.com/youzan/vant",
+		npmPackage: "vant",
+		href: "https://vant-contrib.gitee.io/vant/#/en-US/button",
+		description: "Mobile UI Components built on Vue",
+		image: "https://cdn.jsdelivr.net/npm/@vant/assets/logo.png",
+		tags: ["component library"],
+	},
+	{
+		name: "Naive UI",
+		author: "TuSimple",
+		gitHubRepo: "https://github.com/TuSimple/naive-ui",
+		npmPackage: "naive-ui",
+		href: "https://www.naiveui.com/",
+		description:
+			"A Vue 3 Component Library. Fairly Complete, Customizable Themes, Uses TypeScript, Not Too Slow. Kinda Interesting.",
+		image: "https://www.naiveui.com/assets/naivelogo.93278402.svg",
+		tags: ["component library"],
+	},
+	{
+		name: "Vuestic UI",
+		author: "Epicmax",
+		gitHubRepo: "https://github.com/epicmaxco/vuestic-ui",
+		npmPackage: "vuestic-ui",
+		href: "https://vuestic.dev/",
+		description: "Vue 3.0 UI Framework",
+		image: "",
+		tags: ["component library"],
+	},
+	{
+		name: "Agnostic UI",
+		author: "AgnosticUI",
+		gitHubRepo: "https://github.com/AgnosticUI/agnosticui/",
+		npmPackage: "agnostic-vue",
+		href: "https://www.agnosticui.com/",
+		description:
+			"AgnosticUI is a set of UI primitives that start their lives in clean HTML and CSS. These standards compliant components are then copied to our framework implementations in: React, Vue 3, Svelte, and Angular (experimental).",
+		image: "",
+		tags: ["component library"],
+	},
+	{
+		name: "AT-UI",
+		author: "O2Team",
+		gitHubRepo: "https://github.com/at-ui/at-ui",
+		npmPackage: "at-ui",
+		href: "https://github.com/at-ui/at-ui",
+		description:
+			"AT-UI is a modular front-end UI framework for developing fast and powerful web interfaces based on Vue.js.",
+		image:
+			"https://camo.githubusercontent.com/1c853ebd899a4287544a0c9268ff5455f6ea42af19f38ce47a68ac1c05552a25/687474703a2f2f73746f726167652e333630627579696d672e636f6d2f6d74642f686f6d652f6c6f676f2d6174313530323731383232313638362e737667",
+		tags: ["component library"],
+	},
 ]
