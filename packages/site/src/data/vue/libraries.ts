@@ -94,4 +94,94 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"https://github.com/bootstrap-vue/bootstrap-vue/raw/master/static/banner.png",
 		tags: ["component library"],
 	},
+	{
+		name: "Keen UI",
+		author: "Josephus Paye II",
+		gitHubRepo: "https://github.com/JosephusPaye/Keen-UI",
+		npmPackage: "keen-ui",
+		href: "https://josephuspaye.github.io/Keen-UI",
+		description:
+			"Keen UI is a Vue 2 UI library with a simple API, inspired by Google's Material Design.",
+		image: "",
+		tags: ["component library"],
+	},
+	{
+		name: "Ant Design Vue",
+		author: "ant-design-vue",
+		gitHubRepo: "https://github.com/vueComponent/ant-design-vue",
+		npmPackage: "ant-design-vue",
+		href: "https://www.antdv.com/docs/vue/introduce/",
+		description:
+			"Following the Ant Design specification, we developed a Vue UI library antd that contains a set of high quality components and demos for building rich, interactive user interfaces.",
+		image:
+			"https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
+		tags: ["component library"],
+	},
+	{
+		name: "Fish UI",
+		author: "myliang",
+		gitHubRepo: "https://github.com/myliang/fish-ui",
+		npmPackage: "fish-ui",
+		href: "https://myliang.github.io/fish-ui/#/components/index",
+		description: "A Vue 2 UI Toolkit for Web.",
+		image:
+			"https://github.com/myliang/fish-ui/raw/master/static/logo.png?raw=true",
+		tags: ["component library"],
+	},
+	{
+		name: "Equal",
+		author: "quatrochan",
+		gitHubRepo: "https://github.com/quatrochan/Equal",
+		npmPackage: "equal-vue",
+		href: "https://quatrochan.github.io/Equal/",
+		description:
+			"Equal UI is a Vue 3 components library with 30+ components based on TypeScript and personal design system.",
+		image: "https://quatrochan.github.io/Equal/eqqqual.png",
+		tags: ["component library"],
+	},
+	{
+		name: "Buefy",
+		author: "Rafael Beraldo",
+		gitHubRepo: "https://github.com/vueComponent/ant-design-vue",
+		npmPackage: "buefy",
+		href: "https://buefy.org/",
+		description:
+			"Following the Ant Design specification, we developed a Vue UI library antd that contains a set of high quality components and demos for building rich, interactive user interfaces.",
+		image: "https://buefy.org/static/img/buefy.1d65c18.png",
+		tags: ["component library"],
+	},
+	{
+		name: "PrimeVUE",
+		author: "PrimeTek",
+		gitHubRepo: "https://github.com/primefaces/primevue",
+		npmPackage: "primevue",
+		href: "https://www.primefaces.org/primevue/",
+		description:
+			"PrimeVue is a rich set of open source UI Components for Vue. See PrimeVue homepage for live showcase and documentation.",
+		image:
+			"https://www.primefaces.org/primevue/demo/images/primevue-logo-dark.svg",
+		tags: ["component library"],
+	},
+	{
+		name: "Vuikit",
+		author: "Miljan Aleksic",
+		gitHubRepo: "https://github.com/vuikit/vuikit",
+		npmPackage: "vuikit",
+		href: "https://vuikit.js.org/",
+		description:
+			"A responsive Vue 2 UI library for web site interfaces based on the UIkit 3 framework.",
+		image: "https://vuikit.js.org/img/vuikit-logo-large.1eeb1a0a.svg",
+		tags: ["component library"],
+	},
+	{
+		name: "Chakra UI",
+		author: "Jonathan Bakebwa",
+		gitHubRepo: "https://github.com/chakra-ui/chakra-ui-vue",
+		npmPackage: "@chakra-ui/vue",
+		href: "https://vue.chakra-ui.com/",
+		description:
+			"Chakra UI gives you a set of accessible and composable Vue components that you can use to build your favourite applications and sites. Made for Vue 2.X",
+		image: "",
+		tags: ["component library"],
+	},
 ]
