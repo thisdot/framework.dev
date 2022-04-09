@@ -1,6 +1,6 @@
 import { Tool } from "@framework/system/src/models/tool"
 
-export const toolTags = ["Chrome", "VSCode"] as const
+export const toolTags = ["Chrome", "VSCode", "RxJS"] as const
 
 export const tools: Tool<typeof toolTags[number]>[] = [
 	{
@@ -28,5 +28,13 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		image: "https://github.com/angular.png",
 		href: "https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2",
 		tags: ["VSCode"],
+	},
+	{
+		name: "RxJS Operator Decision Tree",
+		author: "RxJS",
+		description: "Need help deciding which operator you need? This can help!",
+		image: "https://rxjs.dev/assets/images/logos/Rx_Logo_S.png",
+		href: "https://rxjs.dev/operator-decision-tree",
+		tags: ["RxJS"],
 	},
 ]
