@@ -27,7 +27,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		],
 		description:
 			"A weekly discussion among Vue developers about Vue and it's ecosystem.",
-		rss: "",
+		rss: "https://viewsonvue.com/rss",
 		href: "https://viewsonvue.com/",
 		tags: ["vuejs"],
 	},
@@ -37,9 +37,9 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/9f/0f/44/9f0f44f5-2478-96a8-af41-91d0fd87c9f6/mza_8437862612976381859.jpg/313x0w.webp",
 		hosts: ["Vue Mastery"],
 		description:
-			"We cover the latest Vue news and tutorials in about 5 minutes. Our goal is to give you the information you need to stay on top of your game as a Vue developer. Links to all the stories we talk about can be found in our weekly newsletter and on http://news.vuejs.org",
-		rss: "",
-		href: "https://podcasts.apple.com/us/podcast/the-official-vue-news/id1329151772",
+			"This podcast covers the latest Vue news and tutorials in about 5 minutes. Our goal is to give you the information you need to stay on top of your game as a Vue developer. Links to all the stories we talk about can be found in our weekly newsletter and on http://news.vuejs.org",
+		rss: "https://news.vuejs.org/feed.xml",
+		href: "http://news.vuejs.org",
 		tags: ["vuejs"],
 	},
 	{
@@ -53,25 +53,14 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		tags: ["vuejs"],
 	},
 	{
-		title: "Request for Commits",
-		image:
-			"https://is2-ssl.mzstatic.com/image/thumb/Podcasts113/v4/1b/6c/94/1b6c9424-dcea-147a-6341-1638d59b6f90/mza_1968081058311845870.png/313x0w.webp",
-		hosts: ["Nadia Eghbal", "Mikeal Rogers"],
-		description:
-			"Request For Commits explored different perspectives in open source sustainability (retired). Hosts Nadia Eghbal and Mikeal Rogers dive deep into the trials and tribulations of being an open source maintainer, building communities, and navigating the business side of software.",
-		rss: "",
-		href: "https://podcasts.apple.com/us/podcast/request-for-commits/id1141345001",
-		tags: ["general"],
-	},
-	{
 		title: "After Talk by Vue.js Berlin",
 		image:
 			"https://is2-ssl.mzstatic.com/image/thumb/Podcasts125/v4/3f/90/f5/3f90f5f9-e23d-73c1-403a-742279b040e5/mza_5117638571604012425.png/313x0w.webp",
 		hosts: ["vuejsberlin"],
 		description:
 			"Vue.js // Berlin Podcast with interesting people from Vue.js and Programming Community.",
-		rss: "",
-		href: "https://podcasts.apple.com/us/podcast/after-talk-by-vue-js-berlin/id1514370430",
+		rss: "https://anchor.fm/s/2f6e7074/podcast/rss",
+		href: "https://vuejs.berlin/",
 		tags: ["vuejs"],
 	},
 	{
@@ -79,9 +68,10 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		image:
 			"https://images.transistor.fm/file/transistor/images/show/20124/thumb_1617845833-artwork.jpg",
 		hosts: ["Luke Diebold"],
-		description: "",
-		rss: "",
-		href: "",
+		description:
+			"This show is for coders who want to learn the mindset, and life skills behind being a Web Developer. Learn from Luke Diebold. Core Quasar Team member, and creator of QuasarCast.Com",
+		rss: "https://feeds.transistor.fm/quasar-vue-life",
+		href: "https://quasarcast.com/podcasts/quasar-life",
 		tags: ["vuejs", "quasar"],
 	},
 ]
