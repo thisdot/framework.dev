@@ -11,14 +11,17 @@ export const homepageContentContainerStyle = style([
 	{
 		gap: pxToRem(64),
 		paddingTop: pxToRem(64),
+		paddingBottom: pxToRem(64),
 		"@media": {
 			[breakpoints.tablet]: {
 				gap: pxToRem(96),
 				paddingTop: pxToRem(96),
+				paddingBottom: pxToRem(96),
 			},
 			[breakpoints.desktop]: {
 				gap: pxToRem(128),
 				paddingTop: pxToRem(128),
+				paddingBottom: pxToRem(128),
 			},
 		},
 	},
