@@ -11,4 +11,13 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		href: "discord.gg/angular",
 		tags: [],
 	},
+	{
+		name: "Angular Meetup / State of Angular",
+		description:
+			"This Dot hosted events with members of the Angular community. Live chats about the current state of Angular, upcoming features, and mentoring.",
+		image: "https://github.com/thisdot.png",
+		type: "Live Events",
+		href: "https://www.angularmeetup.com/",
+		tags: [],
+	},
 ]

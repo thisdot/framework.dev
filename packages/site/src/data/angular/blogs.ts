@@ -14,7 +14,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 	},
 	{
 		title: "This is Angular",
-		author: "",
+		author: "Dev.to Contributors",
 		description: "Free, open and honest Angular education.",
 		image:
 			"https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/3316/b77c881d-527b-4295-9e3c-3aa9072a4671.png",
@@ -23,7 +23,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 	},
 	{
 		title: "InDepthDev",
-		author: "",
+		author: "InDepthDev",
 		description:
 			"inDepthDev is a community of experienced software engineers with a common goal of constant professional growth and inclination to help others.",
 		image: "https://github.com/indepth-dev.png",
@@ -31,7 +31,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		tags: [],
 	},
 	{
-		title: "Angular University ",
+		title: "Angular University",
 		author: "Vasco Cavalheiro",
 		description: "Premium Quality Tutorials on Angular and its Ecosystem.",
 		image:
