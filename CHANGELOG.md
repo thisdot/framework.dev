@@ -1,12 +1,15 @@
 # Changelog
 
+- [2022-04-13] Added new Angular content
+  [\#185](https://github.com/thisdot/framework.dev/pull/185)
 - [2021-03-18] Remove unused components and styles
   [\#177](https://github.com/thisdot/framework.dev/pull/177)
   ([jbachhardie](https://github.com/jbachhardie))
 - [2021-03-14] Add Redux Toolkit, RTK Query, Jotai, Valtio
   [\#169](https://github.com/thisdot/framework.dev/pull/169)
   ([phryneas](https://github.com/phryneas))
-- [2022-03-13] Add Bumbag, Chakra UI, React Spectrum, Hashicorp React Component, Windmill React UI, Reach UI for React
+- [2022-03-13] Add Bumbag, Chakra UI, React Spectrum, Hashicorp React Component,
+  Windmill React UI, Reach UI for React
   [\#175](https://github.com/thisdot/framework.dev/pull/175)
   ([sprabowo](https://github.com/sprabowo))
 - [2021-03-11] Add drop shadow to feature highlights
@@ -20,14 +23,14 @@
 - [2021-03-04] Add initial content for Angular
   [\#165](https://github.com/thisdot/framework.dev/pull/165)
   ([brettzeidler](https://github.com/brettzeidler))
-- [2021-03-04] Add message indicating to user if no results were found in a category
-  [\#164](https://github.com/thisdot/framework.dev/pull/164)
+- [2021-03-04] Add message indicating to user if no results were found in a
+  category [\#164](https://github.com/thisdot/framework.dev/pull/164)
   ([tvanantwerp](https://github.com/tvanantwerp))
 - [2021-02-02] Update homepage hero
   [\#163](https://github.com/thisdot/framework.dev/pull/163)
   ([jbachhardie](https://github.com/jbachhardie))
-- [2021-02-02] Add link to skip to content for screen readers and keyboard-only navigation
-  [\#162](https://github.com/thisdot/framework.dev/pull/162)
+- [2021-02-02] Add link to skip to content for screen readers and keyboard-only
+  navigation [\#162](https://github.com/thisdot/framework.dev/pull/162)
   ([tvanantwerp](https://github.com/tvanantwerp))
 - [2021-01-20] Update logo
   [\#156](https://github.com/thisdot/framework.dev/pull/156)
@@ -44,7 +47,7 @@
 - [2022-01-04] Fix trailing slashes on URLs
   [\#147](https://github.com/thisdot/framework.dev/pull/147)
   ([jbachhardie](https://github.com/jbachhardie))
-- [2021-12-22] Add components and content for home page 
+- [2021-12-22] Add components and content for home page
   [\#145](https://github.com/thisdot/framework.dev/pull/145)
   ([tvanantwerp](https://github.com/tvanantwerp))
 - [2021-12-15] Improve site accessibility for keyboard and screen reader users
