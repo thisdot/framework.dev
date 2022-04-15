@@ -2,6 +2,9 @@
 
 - [2022-04-13] Added new Angular content
   [\#185](https://github.com/thisdot/framework.dev/pull/185)
+- [2021-04-12] Added bottom padding to `homepageContentContainerStyle`
+  [\#183](https://github.com/thisdot/framework.dev/pull/183)
+  ([iaremarkus](https://github.com/iaremarkus))
 - [2021-03-18] Remove unused components and styles
   [\#177](https://github.com/thisdot/framework.dev/pull/177)
   ([jbachhardie](https://github.com/jbachhardie))
