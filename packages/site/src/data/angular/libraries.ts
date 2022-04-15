@@ -97,4 +97,14 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image: "https://github.com/compodoc.png",
 		tags: ["documentation"],
 	},
+	{
+		name: "Scully",
+		author: "HeroDevs, LLC",
+		gitHubRepo: "scullyio/scully",
+		npmPackage: "@scullyio/scully",
+		href: "https://scully.io/",
+		description: "Static site generator for Angular",
+		image: "https://github.com/scullyio.png",
+		tags: ["framework"],
+	},
 ]

@@ -7,6 +7,7 @@ export const courseTags = [
 	"routing",
 	"testing",
 	"services",
+	"rxjs",
 ] as const
 
 export const courses: Course<typeof courseTags[number]>[] = [
@@ -39,5 +40,17 @@ export const courses: Course<typeof courseTags[number]>[] = [
 			"routing",
 			"services",
 		],
+	},
+	{
+		title: "Rxjs fruits",
+		author: "Gregor Biswanger",
+		image: "https://www.rxjs-fruits.com/assets/Rx_Logo_S.png",
+		description:
+			"Learn the basics of how Reactive Extensions work by mixing your own fruit juice!",
+		paymentType: "free",
+		level: "beginner",
+		format: "interactive",
+		href: "https://www.rxjs-fruits.com/subscribe",
+		tags: ["rxjs"],
 	},
 ]
