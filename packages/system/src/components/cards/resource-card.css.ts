@@ -121,7 +121,7 @@ export const resourceCardBookImageDecoration = style({
 export const resourceCardImageStyle = style([
 	sprinkles({ borderRadius: 8 }),
 	{
-		maxHeight: "100%",
+		maxHeight: "180px",
 		selectors: {
 			[`${bookImageContainerStyle} &`]: {
 				borderRadius: 0,
