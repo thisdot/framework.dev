@@ -72,7 +72,11 @@ export function Homepage({
 					homepageGutterStyle
 				)}
 			>
-				<FeaturedLibraries libraries={libraries} libraryTags={libraryTags} />
+				<FeaturedLibraries
+					libraries={libraries}
+					libraryTags={libraryTags}
+					siteName={siteName}
+				/>
 				<Podcasts podcasts={podcasts} />
 				<div className={homepageTwoAndOneSectionStyle}>
 					<Courses courses={courses} />
