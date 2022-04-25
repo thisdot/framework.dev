@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import React from "react"
-import { sampleSize } from "lodash"
+import { sampleSize, capitalize } from "lodash"
 import {
 	featuredLibrariesStyle,
 	featuredLibrariesHeadingStyle,
@@ -24,10 +24,11 @@ export function FeaturedLibraries({
 	...props
 }: FeaturedLibrariesProps) {
 	const randomLibraries = sampleSize(libraries, 6)
+
 	return (
 		<div className={classNames(className, featuredLibrariesStyle)} {...props}>
 			<h2 className={featuredLibrariesHeadingStyle}>
-				Featured React Libraries
+				Featured {capitalize(process.env.SNOWPACK_PUBLIC_FRAMEWORK)} Libraries
 			</h2>
 			<div className={featuredLibrariesListStyle}>
 				{randomLibraries.map((library, i) => (
