@@ -10,6 +10,7 @@
 	"license": "ISC",
 	"scripts": {
 		"dev:system": "yarn workspace @framework/system dev",
+		"dev:landing": "yarn workspace @framework/landing-site dev",
 		"dev:react": "cross-env SNOWPACK_PUBLIC_FRAMEWORK=react yarn workspace @framework/site dev",
 		"dev:angular": "cross-env SNOWPACK_PUBLIC_FRAMEWORK=angular yarn workspace @framework/site dev",
 		"dev:vue": "cross-env SNOWPACK_PUBLIC_FRAMEWORK=vue yarn workspace @framework/site dev",
