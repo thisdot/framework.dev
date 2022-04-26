@@ -12,14 +12,14 @@ export interface PitchCardProps extends React.ComponentPropsWithoutRef<"div"> {
 		highlightedText: string
 		softText: string
 	}
-	image?: string
+	imageUrl: string
 }
 
 export function PitchCard({
 	children,
 	className,
 	pitchText,
-	image,
+	imageUrl,
 	...props
 }: PitchCardProps) {
 	return (
@@ -30,7 +30,7 @@ export function PitchCard({
 			</h2>
 			
 			<div className={pitchCardImage}>
-				<img src={image} alt={pitchText.highlightedText} />
+				<img src={imageUrl} alt={pitchText.highlightedText} />
 			</div>
 		</div>
 	)

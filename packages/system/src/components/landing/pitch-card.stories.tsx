@@ -13,10 +13,10 @@ const Template: Story<PitchCardProps> = (args) => (
 	<PitchCardComponent
 		{...args}
 		pitchText={{
-			highlightedText: "Wow, such moves",
-			softText: "much pitch, much info much pitch, much info much pitch, much info much pitch, much info much pitch, much info ",
+			highlightedText: "Diferent channels",
+			softText: "Browse books, podcasts, libraries, curses and more",
 		}}
-		image="/pitch-image-1.png"
+		imageUrl="/pitch-image-1.png"
 	/>
 )
 
