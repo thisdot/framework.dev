@@ -6,14 +6,13 @@ export default {
 	component: LinkCardComponent,
 } as Meta
 
-const Template: Story<LinkCardProps> = (args) => (
-	<LinkCardComponent
-		{...args}
-		title="React Resources"
-		href="https://react.framework.dev/"
-		icon="/icon-react.svg"
-		backgroundColor="#00BCDA"
-	/>
-)
+const Template: Story<LinkCardProps> = (args) => <LinkCardComponent {...args} />
 
 export const LinkCard = Template.bind({})
+
+LinkCard.args = {
+	title: "React Resources",
+	href: "https://react.framework.dev/",
+	icon: "/icon-react.svg",
+	backgroundColor: "#00BCDA",
+}
