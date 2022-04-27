@@ -1,7 +1,7 @@
 import classNames from "classnames"
 import React from "react"
 import {
-	resourcesInfoBannerCards,
+	resourcesInfoBannerCardsStyle,
 	resourcesInfoBannerDescriptionStyle,
 	resourcesInfoBannerHeadingStyle,
 	resourcesInfoBannerStyle,
@@ -31,7 +31,7 @@ export function ResourcesInfoBanner({
 			<h4 className={resourcesInfoBannerHeadingStyle}>{title}</h4>
 			<p className={resourcesInfoBannerDescriptionStyle}>{description}</p>
 			<LinkCardGroupComponent
-				className={resourcesInfoBannerCards}
+				className={resourcesInfoBannerCardsStyle}
 				cards={cardResources}
 			/>
 		</div>

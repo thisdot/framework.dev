@@ -7,8 +7,7 @@ export const pitchCardStyle = style([
 		layout: { desktop: "row", mobile: "stack" },
 		alignItems: "center",
 		gap: { desktop: 64, mobile: 32 },
-		paddingX: { desktop: 64, mobile: "auto" },
-		paddingY: 48,
+		marginY: 48,
 		justifyContent: 'center'
 	}),
 

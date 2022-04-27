@@ -11,6 +11,7 @@ export const resourcesInfoBannerStyle = style([
 		padding: { desktop: 56, mobile: "auto" },
 	}),
 	{
+		margin: "0 auto",
 		maxWidth: pxToRem(1080),
 		"@media": {
 			[breakpoints.desktop]: {
@@ -37,11 +38,16 @@ export const resourcesInfoBannerDescriptionStyle = style([
 	},
 ])
 
-export const resourcesInfoBannerCards = style({
-	"@media": {
-		[breakpoints.desktop]: {
-			display: "grid",
-			gridTemplateColumns: "repeat(auto-fit, minmax(192px, 1fr))",
+export const resourcesInfoBannerCardsStyle = style([
+	sprinkles({
+		marginTop: { desktop: 48, mobile: 32 },
+	}),
+	{
+		"@media": {
+			[breakpoints.desktop]: {
+				display: "grid",
+				gridTemplateColumns: "repeat(auto-fit, minmax(192px, 1fr))",
+			},
 		},
 	},
-})
+])
