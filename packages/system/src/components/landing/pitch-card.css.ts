@@ -18,7 +18,7 @@ export const pitchCardHeadingStyle = style([
 	sprinkles({
 		color: "regularText",
 		paddingRight: 16,
-		textStyle: { desktop: "h400", mobile: 'h200' },
+		textStyle: { desktop: "h400", mobile: 'h300' },
 	}),
 	{
 		maxWidth: pxToRem(436),
