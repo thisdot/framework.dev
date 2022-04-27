@@ -55,6 +55,12 @@ const typography = defineProperties({
 				letterSpacing: "-0.02em",
 				lineHeight: 1.2,
 			},
+			h300: {
+				fontSize: pxToRem(32),
+				fontWeight: 700,
+				letterSpacing: "-0.02em",
+				lineHeight: 1.32,
+			},
 			h200: {
 				fontSize: pxToRem(24),
 				fontWeight: 700,
@@ -165,6 +171,9 @@ const layout = defineProperties({
 		flexDirection: ["row", "column"],
 		alignItems: ["center", "end", "start"],
 		flexWrap: ["wrap", "nowrap"],
+		flex: {
+
+		},
 		width: {
 			full: "100%",
 			auto: "auto",
