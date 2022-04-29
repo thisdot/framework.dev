@@ -5,6 +5,9 @@
 - [2021-04-12] Added bottom padding to `homepageContentContainerStyle`
   [\#183](https://github.com/thisdot/framework.dev/pull/183)
   ([iaremarkus](https://github.com/iaremarkus))
+- [2022-04-05] Added initial VueJS podcasts
+  [\#180](https://github.com/thisdot/framework.dev/pull/180)
+  ([AllanJeremy](https://github.com/AllanJeremy))
 - [2021-03-18] Remove unused components and styles
   [\#177](https://github.com/thisdot/framework.dev/pull/177)
   ([jbachhardie](https://github.com/jbachhardie))
