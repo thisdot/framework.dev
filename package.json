@@ -15,6 +15,7 @@
 		"dev:angular": "cross-env SNOWPACK_PUBLIC_FRAMEWORK=angular yarn workspace @framework/site dev",
 		"dev:vue": "cross-env SNOWPACK_PUBLIC_FRAMEWORK=vue yarn workspace @framework/site dev",
 		"build:system": "yarn workspace @framework/system build",
+		"build:landing": "yarn workspace @framework/landing-site build",
 		"build:react": "cross-env SNOWPACK_PUBLIC_FRAMEWORK=react yarn workspace @framework/site build",
 		"build:angular": "cross-env SNOWPACK_PUBLIC_FRAMEWORK=angular yarn workspace @framework/site build",
 		"build:vue": "cross-env SNOWPACK_PUBLIC_FRAMEWORK=vue yarn workspace @framework/site build",
@@ -22,6 +23,7 @@
 		"verify": "run-s verify:*",
 		"verify:types": "tsc",
 		"verify:site": "yarn workspace @framework/site verify",
+		"verify:landing": "yarn workspace @framework/landing-site verify",
 		"new": "plop"
 	},
 	"devDependencies": {

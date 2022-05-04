@@ -13,7 +13,7 @@ export const heroStyle = style([
 		width: "full",
 	}),
 	{
-		backgroundColor: vars.palette.primary99,
+		backgroundColor: vars.palette.neutralVariant99,
 		"@media": {
 			[breakpoints.desktop]: {
 				paddingBottom: pxToRem(76),

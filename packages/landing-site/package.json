@@ -1,16 +1,14 @@
 {
-  "name": "@framework/landing-site",
-  "version": "1.0.0",
-  "private": true,
-  "author": "ThisDotLabs",
+	"name": "@framework/landing-site",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"author": "ThisDotLabs",
 	"license": "ISC",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
-  },
-  "devDependencies": {
-    "astro": "^1.0.0-beta.17"
-  }
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"verify": "astro check"
+	}
 }

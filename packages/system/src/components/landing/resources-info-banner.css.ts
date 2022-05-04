@@ -8,7 +8,8 @@ export const resourcesInfoBannerStyle = style([
 		borderRadius: 12,
 		layout: "stack",
 		gap: 20,
-		padding: { desktop: 56, mobile: "auto" },
+		paddingY: { desktop: 56, mobile: "auto" },
+		paddingX: { mobile: 16, desktop: 56 },
 	}),
 	{
 		margin: "0 auto",
