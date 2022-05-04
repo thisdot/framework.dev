@@ -9,7 +9,7 @@ import { FieldFilter } from "../../models/all-categories"
 import { ChipSelector } from "../chip-selector"
 import { DiscreteAttribute } from "../discrete-attribute"
 import { ungroupFieldFilter } from "./query-util"
-import { without } from "lodash"
+import { without } from "lodash-es"
 import { formatFieldName } from "../../util/string-utils"
 
 export interface FilterProps<T extends FieldFilter = FieldFilter>

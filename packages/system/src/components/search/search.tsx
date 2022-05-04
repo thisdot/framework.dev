@@ -23,7 +23,7 @@ import {
 import { SearchAutocomplete } from "./search-autocomplete"
 import { FilterIcon } from "../../icons/filter-icon"
 import { FilterSet, QueryParams } from "./types"
-import { uniq, map, sortBy, take, without } from "lodash"
+import { uniq, map, sortBy, take, without } from "lodash-es"
 import { Library } from "../../models/library"
 import { OpenIcon } from "../../icons/open-icon"
 import { ComparisonTable } from "../comparison-table"

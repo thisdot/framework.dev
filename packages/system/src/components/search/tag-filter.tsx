@@ -28,7 +28,7 @@ import { Chip } from "../chip"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { Tag } from "../tag"
 import Fuse from "fuse.js"
-import { map, take } from "lodash"
+import { map, take } from "lodash-es"
 
 export interface TagFilterProps<T extends string>
 	extends React.ComponentPropsWithoutRef<"fieldset"> {

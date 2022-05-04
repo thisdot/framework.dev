@@ -1,8 +1,8 @@
 ---
 import '@framework/system/src/globals/global-styles';
 import classNames from 'classnames'
-import { pick } from 'lodash'
-import { fontHeadTags } from '@framework/system/src/globals/font-import.mjs'
+import { pick } from 'lodash-es'
+// import { fontHeadTags } from '@framework/system/src/globals/font-import.mjs'
 import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css'
 import * as themes from '@framework/system/src/themes/themes.css'
 import { Sidebar } from '@framework/system/src/components/sidebar.tsx'
@@ -13,13 +13,14 @@ import { NavItems } from '../components/nav-items.tsx'
 import { getSearchData } from '../data/search-data'
 
 const { title, currentCategory, currentTag, className } = Astro.props
-const searchData = await getSearchData(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)
+const searchData = await getSearchData(import.meta.env.PUBLIC_FRAMEWORK)
 const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 ---
 <!DOCTYPE html>
-<html class={themes[`${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}Theme`]} lang="en">
+<html class={themes[`${import.meta.env.PUBLIC_FRAMEWORK}Theme`]} lang="en">
   <head>
-		{fontHeadTags}
+		<!-- TODO: check later -->
+		<!-- {fontHeadTags} -->
     <title>{title} | react.framework.dev</title>
 		<meta name="robots" content="noindex">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +35,9 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-33DWS64W1B"></script>
 		{
-			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" && 
+			// TODO: check this later
+			// import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" && 
+			import.meta.env.MODE === "production" && 
 			<script>
 				window.dataLayer = window.dataLayer || [];
 				function gtag(){dataLayer.push(arguments);}
@@ -45,14 +48,14 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 		}
   </head>
   <body class={classNames(sprinkles({ backgroundColor: "surface1", height: "full" }), bodyWithNav)} >
-		<Sidebar aria-label="primary" siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}>
+		<Sidebar aria-label="primary" siteName={import.meta.env.PUBLIC_FRAMEWORK}>
 			<div class={sprinkles({ layout: "stack", gap: 24 })}>
 				<NavItems data={navData} currentCategory={currentCategory} currentTag={currentTag} />
 			</div>
 		</Sidebar>
 		<main class={classNames(className, shrinkable)} id="main-content">
 			<div class={sprinkles({ layout: "row", justifyContent: "center", display: { desktop: "none" }, width: "full", paddingY: 24 })}>
-				<Logo siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK} />
+				<Logo siteName={import.meta.env.PUBLIC_FRAMEWORK} />
 			</div>
 			<slot />
 		</main>

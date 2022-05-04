@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import React from "react"
-import { sampleSize } from "lodash"
+import { sampleSize } from "lodash-es"
 import { Tool } from "../../models/tool"
 import { latestToolsStyle } from "./latest-tools.css"
 import { ResourceList } from "./resource-list"

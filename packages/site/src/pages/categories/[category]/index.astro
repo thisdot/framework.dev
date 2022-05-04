@@ -10,7 +10,7 @@ import { applyPreFilters } from '@framework/system/src/components/search/query-u
 import Search from '../../../components/search.tsx'
 
 export async function getStaticPaths() {
-	const searchData = await getSearchData(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)
+	const searchData = await getSearchData(import.meta.env.PUBLIC_FRAMEWORK)
 	return searchData.map(category => { 
 		const preFilters = { category: [category.name], tag: [], field: [] };
 		return ({
@@ -24,12 +24,12 @@ export async function getStaticPaths() {
 
 const { category, ...props } = Astro.props
 
-const title = `${formatFieldName(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} ${formatFieldName(category)}`
+const title = `${formatFieldName(import.meta.env.PUBLIC_FRAMEWORK)} ${formatFieldName(category)}`
 ---
 <head>
 	<meta name="description" content={`Browse and search through relevant ${title}`}/>
 </head>
 <BaseLayout title={title} currentCategory={category}>
 	<h1 class={visuallyHidden}>{title}</h1>
-	<Search client:load {...props} siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK} />
+	<Search client:load {...props} siteName={import.meta.env.PUBLIC_FRAMEWORK} />
 </BaseLayout>
