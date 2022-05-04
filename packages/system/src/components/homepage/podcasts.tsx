@@ -1,5 +1,5 @@
 import React from "react"
-import { sampleSize } from "lodash"
+import { sampleSize } from "lodash-es"
 import { Podcast } from "../../models/podcast"
 import { ContentBanner } from "./content-banner"
 

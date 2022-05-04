@@ -1,5 +1,5 @@
 import { Story, Meta } from "@storybook/react"
-import { startCase } from "lodash"
+import { startCase } from "lodash-es"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { Sidebar as SidebarComponent, SidebarProps } from "./sidebar"
 import { NavItem } from "./nav-item"

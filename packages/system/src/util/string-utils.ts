@@ -1,4 +1,4 @@
-import { camelCase, kebabCase, startCase } from "lodash"
+import { camelCase, kebabCase, startCase } from "lodash-es"
 import { titleCase } from "title-case"
 
 export function deserializeFieldValue<T extends string>(

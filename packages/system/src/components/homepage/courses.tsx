@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import React from "react"
-import { sampleSize } from "lodash"
+import { sampleSize } from "lodash-es"
 import { coursesStyle } from "./courses.css"
 import { Course } from "../../models/course"
 import { FeatureAndList } from "./feature-and-list"

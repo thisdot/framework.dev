@@ -5,12 +5,12 @@ import BaseLayout from '../layouts/base.astro'
 import Search from '../components/search.tsx'
 import { getSearchData } from '../data/search-data'
 
-const searchData = await getSearchData(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)
+const searchData = await getSearchData(import.meta.env.PUBLIC_FRAMEWORK)
 ---
 <head>
-	<meta name="description" content={`Search ${formatFieldName(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} resources`}/>
+	<meta name="description" content={`Search ${formatFieldName(import.meta.env.PUBLIC_FRAMEWORK)} resources`}/>
 </head>
 <BaseLayout title="Search">
 	<h1 class={visuallyHidden}>Search</h1>
-	<Search data={searchData} siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK} client:load />
+	<Search data={searchData} siteName={import.meta.env.PUBLIC_FRAMEWORK} client:load />
 </BaseLayout>

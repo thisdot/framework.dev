@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import classNames from "classnames"
 import React from "react"
-import { startCase } from "lodash"
+import { startCase } from "lodash-es"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { BookCard } from "../cards/book-card"
 import { Book } from "../../models/book"

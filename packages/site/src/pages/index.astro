@@ -5,7 +5,7 @@ import BaseLayout from '../layouts/base.astro'
 import Homepage from '../components/homepage.tsx'
 import { getSearchData } from '../data/search-data'
 
-const searchData = await getSearchData(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)
+const searchData = await getSearchData(import.meta.env.PUBLIC_FRAMEWORK)
 const libraries = searchData.find(category => category.name === "libraries")
 const podcasts = searchData.find(category => category.name === "podcasts")
 const courses = searchData.find(category => category.name === "courses")
@@ -17,13 +17,13 @@ const communities = searchData.find(category => category.name === "communities")
 const searchableWebsiteStructuredData = {
 	"@context": "https://schema.org",
 	"@type": "WebSite",
-	"url": `https://${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}.framework.dev/`,
-	"name": `${formatFieldName(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} Framework.dev`,
+	"url": `https://${import.meta.env.PUBLIC_FRAMEWORK}.framework.dev/`,
+	"name": `${formatFieldName(import.meta.env.PUBLIC_FRAMEWORK)} Framework.dev`,
 	"potentialAction": {
 		"@type": "SearchAction",
 		"target": {
 			"@type": "EntryPoint",
-			"urlTemplate": `https://${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}.framework.dev/search?q={search_term_string}`
+			"urlTemplate": `https://${import.meta.env.PUBLIC_FRAMEWORK}.framework.dev/search?q={search_term_string}`
 		},
 		"query-input": "required name=search_term_string"
 	}
@@ -32,7 +32,7 @@ const searchableWebsiteStructuredData = {
 <head>
 	{`<script type="application/ld+json">${JSON.stringify(searchableWebsiteStructuredData)}</script>`}
 </head>
-<BaseLayout title={`Featured ${formatFieldName(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} resources`} className={scrollable}>
+<BaseLayout title={`Featured ${formatFieldName(import.meta.env.PUBLIC_FRAMEWORK)} resources`} className={scrollable}>
 	<Homepage
 		libraries={libraries?.data}
 		libraryTags={libraries?.tags}
@@ -42,6 +42,6 @@ const searchableWebsiteStructuredData = {
 		books={books?.data}
 		tools={tools?.data}
 		communities={communities?.data}
-		siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}
+		siteName={import.meta.env.PUBLIC_FRAMEWORK}
 	/>
 </BaseLayout>

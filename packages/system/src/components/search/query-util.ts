@@ -1,5 +1,5 @@
 import Fuse from "fuse.js"
-import { groupBy, map, mapValues, toPairs, uniq, without } from "lodash"
+import { groupBy, map, mapValues, toPairs, uniq, without } from "lodash-es"
 import {
 	AllCategories,
 	AllModels,
