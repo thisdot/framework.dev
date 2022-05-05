@@ -1,4 +1,7 @@
 # Changelog
+- [2022-05-05] Add deploy configs
+  [\#194](https://github.com/thisdot/framework.dev/pull/194)
+  ([jesus4497](https://github.com/jesus4497))
 - [2022-05-05] Add new landing site package
   [\#193](https://github.com/thisdot/framework.dev/pull/193)
   ([jesus4497](https://github.com/jesus4497))
