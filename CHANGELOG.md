@@ -1,5 +1,7 @@
 # Changelog
-
+- [2022-05-05] Add new landing site package
+  [\#193](https://github.com/thisdot/framework.dev/pull/193)
+  ([jesus4497](https://github.com/jesus4497))
 - [2022-04-13] Added new Angular content
   [\#185](https://github.com/thisdot/framework.dev/pull/185)
 - [2021-04-12] Added bottom padding to `homepageContentContainerStyle`
