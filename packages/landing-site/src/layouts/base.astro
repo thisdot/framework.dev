@@ -6,6 +6,9 @@ import PitchCards from '../components/pitch-cards'
 import Footer from '../components/footer';
 import '@framework/system/src/globals/global-styles';
 import { landingTheme } from '@framework/system/src/themes/themes.css'
+import { landingBody } from '@framework/system/src/styles/layouts.css'
+import classNames from 'classnames'
+import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css'
 
 const { title } = Astro.props
 ---
@@ -25,8 +28,8 @@ const { title } = Astro.props
 		<meta name="theme-color" content="#ffffff">
 		<meta charset="UTF-8"/>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-33DWS64W1B"></script> -->
-		<!-- {
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-33DWS64W1B"></script>
+		{
 			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" && 
 			<script>
 				window.dataLayer = window.dataLayer || [];
@@ -35,12 +38,14 @@ const { title } = Astro.props
 
 				gtag('config', 'G-33DWS64W1B');
 			</script>
-		} -->
+		}
   </head>
-  <body>
+  <body >
 		<Hero />
-		<PitchCards />
-		<ResourcesInfoBanner />
-		<Footer />
+		<section class={landingBody}>
+			<PitchCards />
+			<ResourcesInfoBanner />
+			<Footer />
+		</section>
   </body>
 </html>

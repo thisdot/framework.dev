@@ -11,6 +11,7 @@ import {
 	heroTitleStyle,
 	heroSoftTitleStyle,
 	heroSubtitleStyle,
+	linkCardGroupStyle,
 } from "./hero.css"
 
 export interface HeroProps extends React.ComponentPropsWithoutRef<"header"> {
@@ -45,7 +46,7 @@ export function Hero({ className, heroText, linkCards, ...props }: HeroProps) {
 						<p className={heroSubtitleStyle}>{heroText.subtitle}</p>
 					)}
 				</div>
-				{linkCards && <LinkCardGroup cards={linkCards} />}
+				{linkCards && <LinkCardGroup cards={linkCards} className={linkCardGroupStyle} />}
 			</div>
 		</header>
 	)

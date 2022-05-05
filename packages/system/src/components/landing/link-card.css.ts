@@ -7,17 +7,33 @@ export const linkCardStyle = style([
 		alignItems: "center",
 		borderRadius: 12,
 		layout: "row",
-		flexWrap: { desktop: "wrap", mobile: "nowrap" },
+		flexDirection: { desktop: "column", mobile: "row" },
+		justifyContent: { desktop: "space-between", mobile: "flex-start" },
 		paddingLeft: 16,
 		paddingRight: { desktop: 16, mobile: 64 },
 		paddingY: 16,
 	}),
 	{
 		backgroundColor: "var(--card-background)",
+		alignItems: "center",
 		filter: "brightness(100%)",
 		overflow: "hidden",
 		position: "relative",
+		"@media": {
+			[breakpoints.desktop]: {
+				gap: pxToRem(38),
+				alignItems: "flex-start",
+			},
+		},
 		selectors: {
+			"&.bigSize": {
+				"@media": {
+					[breakpoints.desktop]: {
+						gap: pxToRem(100),
+						alignItems: "flex-start",
+					},
+				},
+			},
 			"&:before": {
 				backgroundColor: "var(--link-card-background)",
 				content: "''",
@@ -92,10 +108,8 @@ export const linkCardTitleStyle = style([
 		width: { desktop: "full", mobile: "auto" },
 	}),
 	{
-		flex: 1,
 		"@media": {
 			[breakpoints.desktop]: {
-				flex: "unset",
 				fontSize: pxToRem(18),
 			},
 		},

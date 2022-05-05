@@ -15,4 +15,5 @@ LinkCard.args = {
 	href: "https://react.framework.dev/",
 	icon: "/icon-react.svg",
 	backgroundColor: "#00BCDA",
+	bigSize: true,
 }

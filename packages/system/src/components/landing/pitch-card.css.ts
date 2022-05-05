@@ -6,10 +6,8 @@ export const pitchCardStyle = style([
 	sprinkles({
 		layout: { desktop: "row", mobile: "stack" },
 		alignItems: "center",
-		gap: { desktop: 64, mobile: 32 },
-		marginY: 48,
-		justifyContent: 'center',
-		paddingX: { mobile: 16, desktop: 0 },
+		gap: { mobile: 32 },
+		justifyContent: 'space-between',
 	}),
 
 ])
@@ -31,6 +29,6 @@ export const pitchCardHeadingSoftStyle = sprinkles({
 })
 
 export const pitchCardImage = style({
-	maxWidth: pxToRem(451),
-	maxHeight: pxToRem(580),
+	maxWidth: pxToRem(580),
+	maxHeight: pxToRem(481),
 })

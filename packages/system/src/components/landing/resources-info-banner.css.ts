@@ -8,11 +8,9 @@ export const resourcesInfoBannerStyle = style([
 		borderRadius: 12,
 		layout: "stack",
 		gap: 20,
-		paddingY: { desktop: 56, mobile: "auto" },
-		paddingX: { mobile: 16, desktop: 56 },
+		padding: { desktop: 56, mobile: "auto" },
 	}),
 	{
-		margin: "0 auto",
 		maxWidth: pxToRem(1080),
 		"@media": {
 			[breakpoints.desktop]: {

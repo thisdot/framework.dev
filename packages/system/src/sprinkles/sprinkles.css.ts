@@ -3,7 +3,7 @@ import { vars } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
 const spaceInPixels = [
-	0, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 32, 40, 48, 56, 64,
+	0, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 32, 40, 48, 56, 64, 152
 ] as const
 
 const spaceInRem = Object.fromEntries(

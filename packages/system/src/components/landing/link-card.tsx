@@ -10,10 +10,11 @@ import {
 import { ExternalLinkIcon } from "../../icons/external-link"
 
 export interface LinkCardProps extends React.ComponentPropsWithoutRef<"a"> {
-	title: string
-	href: string
-	icon?: string
-	backgroundColor?: string
+	title: string;
+	href: string;
+	bigSize?: boolean;
+	icon?: string;
+	backgroundColor?: string;
 }
 
 export function LinkCard({
@@ -21,12 +22,13 @@ export function LinkCard({
 	title,
 	href,
 	icon,
+	bigSize,
 	backgroundColor,
 	...props
 }: LinkCardProps) {
 	return (
 		<a
-			className={classNames(className, linkCardStyle)}
+			className={classNames(className, linkCardStyle, { bigSize })}
 			href={href}
 			{...props}
 			style={

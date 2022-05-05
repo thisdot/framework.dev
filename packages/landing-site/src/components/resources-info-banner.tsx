@@ -1,4 +1,5 @@
 import { ResourcesInfoBanner as _ResourcesInfoBanner } from "@framework/system/src/components/landing/resources-info-banner"
+import { sprinkles } from "@framework/system/src/sprinkles/sprinkles.css"
 
 export default function ResourcesInfoBanner() {
 	const cardResources = [
@@ -27,6 +28,9 @@ export default function ResourcesInfoBanner() {
 			title="Get started now"
 			description="Explore some of the top resources added by a community to learn or be up to date with your framework"
 			cardResources={cardResources}
+			className={sprinkles({
+				marginTop: { mobile: 56, desktop: 152 }
+			})}
 		/>
 	)
 }

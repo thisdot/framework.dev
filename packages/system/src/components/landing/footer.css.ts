@@ -7,8 +7,7 @@ export const footerStyle = style([
 		justifyContent: { desktop: "space-between", mobile: "center" },
 		alignItems: 'center',
 		gap: { desktop: 0, mobile: 16 },
-		paddingY: 32,
-		paddingX: 64,
+		paddingY: 56,
 	}),
 	{
 		backgroundColor: 'white',

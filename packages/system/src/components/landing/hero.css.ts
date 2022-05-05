@@ -105,3 +105,14 @@ export const heroSubtitleStyle = style([
 		},
 	},
 ])
+
+export const linkCardGroupStyle = style([
+	{
+		"@media": {
+			[breakpoints.desktop]: {
+				display: "grid",
+				gridTemplateColumns: "repeat(auto-fit, minmax(192px, 1fr))",
+			},
+		},
+	},
+])

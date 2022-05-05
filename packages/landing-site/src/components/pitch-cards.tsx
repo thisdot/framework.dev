@@ -1,8 +1,16 @@
 import { PitchCard } from "@framework/system/src/components/landing/pitch-card"
+import { sprinkles } from "@framework/system/src/sprinkles/sprinkles.css"
 
 export default function PitchCards() {
 	return (
-		<>
+		<div
+			className={sprinkles({
+				marginTop: { desktop: 152, mobile: 56 },
+				display: "flex",
+				flexDirection: "column",
+				gap: 64,
+			})}
+		>
 			<PitchCard
 				pitchText={{
 					highlightedText: "Diferent channels",
@@ -26,6 +34,6 @@ export default function PitchCards() {
 				}}
 				imageUrl="/pitch-image-3.png"
 			/>
-		</>
+		</div>
 	)
 }
