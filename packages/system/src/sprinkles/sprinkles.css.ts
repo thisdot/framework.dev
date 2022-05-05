@@ -3,7 +3,7 @@ import { vars } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
 const spaceInPixels = [
-	0, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 32, 40, 48, 56, 64,
+	0, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 32, 40, 48, 56, 64, 152
 ] as const
 
 const spaceInRem = Object.fromEntries(
@@ -54,6 +54,12 @@ const typography = defineProperties({
 				fontWeight: 700,
 				letterSpacing: "-0.02em",
 				lineHeight: 1.2,
+			},
+			h300: {
+				fontSize: pxToRem(32),
+				fontWeight: 700,
+				letterSpacing: "-0.02em",
+				lineHeight: 1.32,
 			},
 			h200: {
 				fontSize: pxToRem(24),
@@ -165,6 +171,9 @@ const layout = defineProperties({
 		flexDirection: ["row", "column"],
 		alignItems: ["center", "end", "start"],
 		flexWrap: ["wrap", "nowrap"],
+		flex: {
+
+		},
 		width: {
 			full: "100%",
 			auto: "auto",

@@ -10,7 +10,7 @@ import {
 } from "./logo.css"
 
 export type LogoProps = React.ComponentPropsWithoutRef<"div"> & {
-	siteName: string
+	siteName?: string
 }
 
 export function Logo({ className, siteName }: LogoProps) {
@@ -20,7 +20,7 @@ export function Logo({ className, siteName }: LogoProps) {
 				<FrameworkDevIcon />
 			</div>
 			<div className={wordmarkStyle}>
-				<span className={logoTitleStyle}>{siteName}</span>
+				{siteName && <span className={logoTitleStyle}>{siteName}</span>}
 				<span className={logoAccentStyle}>framework.dev</span>
 			</div>
 		</div>
