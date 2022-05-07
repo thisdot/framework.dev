@@ -1,4 +1,6 @@
 # Changelog
+- [2022-05-06] Fix amplify landing basedirectory
+  [\#196](https://github.com/thisdot/framework.dev/pull/196)
 - [2022-05-06] Adding initial content for blogs, books, communities, courses and tools for the vue site
   [\#195](https://github.com/thisdot/framework.dev/pull/195)
   ([jesus4497](https://github.com/jesus4497))
