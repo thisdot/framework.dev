@@ -39,7 +39,7 @@ export function Hero({ className, siteName, ...props }: HeroProps) {
 						<FrameworkDevIcon size="large" />
 					</div>
 					<div>
-						<span className={heroHeadingHighlightStyle}>{siteName}</span>{" "}
+						<span className={heroHeadingHighlightStyle}>{siteName}.</span>
 						framework.dev
 					</div>
 				</h1>
