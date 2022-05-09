@@ -12,6 +12,7 @@ import { LibraryCard } from "../cards/library-card"
 
 export interface FeaturedLibrariesProps
 	extends React.ComponentPropsWithoutRef<"div"> {
+	title: string
 	libraries: Library<string>[]
 	libraryTags: string[]
 }
@@ -19,6 +20,7 @@ export interface FeaturedLibrariesProps
 export function FeaturedLibraries({
 	children,
 	className,
+	title,
 	libraries,
 	libraryTags,
 	...props
@@ -27,7 +29,7 @@ export function FeaturedLibraries({
 	return (
 		<div className={classNames(className, featuredLibrariesStyle)} {...props}>
 			<h2 className={featuredLibrariesHeadingStyle}>
-				Featured React Libraries
+				{title}
 			</h2>
 			<div className={featuredLibrariesListStyle}>
 				{randomLibraries.map((library, i) => (

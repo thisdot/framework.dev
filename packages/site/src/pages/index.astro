@@ -34,6 +34,7 @@ const searchableWebsiteStructuredData = {
 </head>
 <BaseLayout title={`Featured ${formatFieldName(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} resources`} className={scrollable}>
 	<Homepage
+		librariesTitle={`Featured ${formatFieldName(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} Libraries`}
 		libraries={libraries?.data}
 		libraryTags={libraries?.tags}
 		podcasts={podcasts?.data}

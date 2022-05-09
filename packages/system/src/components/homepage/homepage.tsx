@@ -26,6 +26,7 @@ import { Community } from "../../models/community"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 
 export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
+	librariesTitle: string
 	libraries: Library<string>[]
 	libraryTags: string[]
 	podcasts: Podcast<string>[]
@@ -39,6 +40,7 @@ export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
 
 export function Homepage({
 	className,
+	librariesTitle,
 	libraries,
 	libraryTags,
 	podcasts,
@@ -72,7 +74,7 @@ export function Homepage({
 					homepageGutterStyle
 				)}
 			>
-				<FeaturedLibraries libraries={libraries} libraryTags={libraryTags} />
+				<FeaturedLibraries libraries={libraries} libraryTags={libraryTags} title={librariesTitle} />
 				<Podcasts podcasts={podcasts} />
 				<div className={homepageTwoAndOneSectionStyle}>
 					<Courses courses={courses} />
