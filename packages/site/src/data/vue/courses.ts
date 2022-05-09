@@ -15,8 +15,8 @@ export const courseTags = [
 	"typescript",
 	"tailwind",
 	"material ui",
-    "Vue.js 2",
-    "Vue.js 3",
+    "Vue 2",
+    "Vue 3",
 ] as const
 
 export const courses: Course<typeof courseTags[number]>[] = [
@@ -30,6 +30,6 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://www.udemy.com/course/vuejs-2-the-complete-guide/",
-		tags: ["state management", "data fetching", "routing", "Vue.js 2", "Vue.js 3", "vuex", "authentication", "forms"],
+		tags: ["state management", "data fetching", "routing", "Vue 2", "Vue 3", "vuex", "authentication", "forms"],
     }
 ]
