@@ -20,7 +20,7 @@ export function Logo({ className, siteName }: LogoProps) {
 				<FrameworkDevIcon />
 			</div>
 			<div className={wordmarkStyle}>
-				{siteName && <span className={logoTitleStyle}>{siteName}</span>}
+				{siteName && <span className={logoTitleStyle}>{siteName}.</span>}
 				<span className={logoAccentStyle}>framework.dev</span>
 			</div>
 		</div>
