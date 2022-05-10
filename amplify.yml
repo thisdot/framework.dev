@@ -73,7 +73,7 @@ applications:
           commands:
             - yarn build:landing
       artifacts:
-        baseDirectory: ../site/dist
+        baseDirectory: dist
         files:
           - "**/*"
       cache:
