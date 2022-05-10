@@ -5,8 +5,8 @@ export const bookTags = [
     'vuex',
     'routing',
     'testing',
-	"Vue.js 2",
-    "Vue.js 3",
+	"Vue 2",
+    "Vue 3",
 ] as const
 
 export const books: Book<typeof bookTags[number]>[] = [
@@ -19,6 +19,6 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 174,
 		level: 'beginner',
 		href: 'https://www.oreilly.com/library/view/vuejs-up-and/9781491997239/',
-		tags: ['projects', 'vuex', 'routing', 'testing', "Vue.js 2"]
+		tags: ['projects', 'vuex', 'routing', 'testing', "Vue 2"]
 	},
 ]
