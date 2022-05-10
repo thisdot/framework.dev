@@ -49,7 +49,7 @@ export function TagFilter<T extends string>({
 }: TagFilterProps<T>) {
 	const [tagSearch, setTagSearch] = useState("")
 	const searchIndex = useMemo(
-		() => new Fuse(options, { threshold: 0.8 }),
+		() => new Fuse(options, { threshold: 0.3 }),
 		[options]
 	)
 	const searchResults = take(
