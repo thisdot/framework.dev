@@ -122,14 +122,24 @@ export const heroFeatureHighlightRowStyle = style([
 	},
 ])
 
-export const heroFeatureHighlightStyle = sprinkles({
-	borderRadius: 40,
-	padding: 24,
-	backgroundColor: "white",
-	layout: { mobile: "row", tablet: "stack", desktop: "row" },
-	gap: { mobile: 16, desktop: 24 },
-	alignItems: "center",
-})
+export const heroFeatureHighlightStyle = style([
+	sprinkles({
+		border: "thin",
+		borderRadius: 40,
+		padding: 24,
+		backgroundColor: "white",
+		layout: { mobile: "row", tablet: "stack", desktop: "row" },
+		gap: { mobile: 16, desktop: 24 },
+		alignItems: "center",
+	}),
+	{
+		selectors: {
+			"&:not(:hover)": {
+				borderColor: "transparent",
+			},
+		},
+	},
+])
 
 export const heroFeatureHighlightTitleStyle = sprinkles({
 	textStyle: "bodyShort1",
@@ -137,5 +147,6 @@ export const heroFeatureHighlightTitleStyle = sprinkles({
 })
 
 export const heroFeatureHighlightIconStyle = style({
-	filter: "drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2)) drop-shadow(0px 8px 17px rgba(0, 0, 0, 0.07)) drop-shadow(0px 2.92013px 6.20528px rgba(0, 0, 0, 0.0482987)) drop-shadow(0px 1.41767px 3.01255px rgba(0, 0, 0, 0.0389404)) drop-shadow(0px 0.694968px 1.47681px rgba(0, 0, 0, 0.0310596)) drop-shadow(0px 0.274791px 0.583932px rgba(0, 0, 0, 0.0217013))",
+	filter:
+		"drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2)) drop-shadow(0px 8px 17px rgba(0, 0, 0, 0.07)) drop-shadow(0px 2.92013px 6.20528px rgba(0, 0, 0, 0.0482987)) drop-shadow(0px 1.41767px 3.01255px rgba(0, 0, 0, 0.0389404)) drop-shadow(0px 0.694968px 1.47681px rgba(0, 0, 0, 0.0310596)) drop-shadow(0px 0.274791px 0.583932px rgba(0, 0, 0, 0.0217013))",
 })

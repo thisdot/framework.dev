@@ -1,5 +1,10 @@
 # Changelog
-- [2022-05-06] Adding initial content for blogs, books, communities, courses and tools for the vue site
+
+- [2022-05-09] Added links to home page highlights and updated header text.
+  [\#189](https://github.com/thisdot/framework.dev/pull/189)
+  ([jhmsly](https://github.com/jhmsly))
+- [2022-05-06] Adding initial content for blogs, books, communities, courses and
+  tools for the vue site
   [\#195](https://github.com/thisdot/framework.dev/pull/195)
   ([jesus4497](https://github.com/jesus4497))
 - [2022-05-05] Add deploy configs

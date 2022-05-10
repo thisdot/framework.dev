@@ -14,7 +14,7 @@ import {
 	heroFeatureHighlightRowStyle,
 	heroFeatureHighlightStyle,
 	heroFeatureHighlightTitleStyle,
-	heroFeatureHighlightIconStyle
+	heroFeatureHighlightIconStyle,
 } from "./hero.css"
 import { getBackgroundImage } from "./hero-images"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
@@ -39,28 +39,38 @@ export function Hero({ className, siteName, ...props }: HeroProps) {
 						<FrameworkDevIcon size="large" />
 					</div>
 					<div>
-						<span className={heroHeadingHighlightStyle}>{siteName}</span>{" "}
+						<span className={heroHeadingHighlightStyle}>{siteName}.</span>
 						framework.dev
 					</div>
 				</h1>
 				<p className={heroParagraphStyle}>
-					Explore our community driven list of top resources in{" "}
+					Search, compare, and discover top {formatFieldName(siteName)}{" "}
+					libraries and community driven resources in{" "}
 					{formatFieldName(siteName)}.
 				</p>
 			</div>
 			<div className={heroFeatureHighlightRowStyle}>
-				<div className={heroFeatureHighlightStyle}>
-					<BrowseFeatureHighlightIcon />
-					<p className={heroFeatureHighlightTitleStyle}>Browse</p>
-				</div>
-				<div className={heroFeatureHighlightStyle}>
+				<a
+					className={heroFeatureHighlightStyle}
+					href="https://react.framework.dev/categories/libraries"
+				>
 					<SearchFeatureHighlightIcon />
 					<p className={heroFeatureHighlightTitleStyle}>Search</p>
-				</div>
-				<div className={heroFeatureHighlightStyle}>
+				</a>
+				<a
+					className={heroFeatureHighlightStyle}
+					href="https://react.framework.dev/categories/libraries"
+				>
 					<CompareFeatureHighlightIcon />
 					<p className={heroFeatureHighlightTitleStyle}>Compare</p>
-				</div>
+				</a>
+				<a
+					className={heroFeatureHighlightStyle}
+					href="https://react.framework.dev/categories/libraries"
+				>
+					<BrowseFeatureHighlightIcon />
+					<p className={heroFeatureHighlightTitleStyle}>Discover</p>
+				</a>
 			</div>
 		</header>
 	)
