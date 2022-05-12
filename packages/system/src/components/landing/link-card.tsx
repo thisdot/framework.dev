@@ -30,6 +30,8 @@ export function LinkCard({
 		<a
 			className={classNames(className, linkCardStyle, { bigSize })}
 			href={href}
+			target="_blank"
+			rel="noreferrer noopener"
 			{...props}
 			style={
 				{ "--link-card-background": backgroundColor } as React.CSSProperties

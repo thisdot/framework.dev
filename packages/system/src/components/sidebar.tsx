@@ -46,6 +46,8 @@ export function Sidebar({
 							gap: 12,
 						})}
 						href="https://github.com/thisdot/framework.dev"
+						target="_blank"
+						rel="noreferrer noopener"
 					>
 						<GithubIcon size="large" />
 						Submit a PR
