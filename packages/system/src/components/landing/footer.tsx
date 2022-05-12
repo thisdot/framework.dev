@@ -11,6 +11,8 @@ export function Footer({ children, className, ...props }: FooterProps) {
 			<a
 				className={footerLinkStyle}
 				href="https://github.com/thisdot/framework.dev"
+				target="_blank"
+				rel="noreferrer noopener"
 			>
 				<GithubIcon size="large" />
 				Submit a PR
