@@ -78,7 +78,6 @@ export const linkCardIconContainerStyle = style([
 		backgroundColor: "white",
 		borderRadius: { desktop: 56, mobile: 48 },
 		display: "block",
-		marginBottom: { mobile: 0, desktop: 32 },
 		marginRight: 16,
 	}),
 	{
