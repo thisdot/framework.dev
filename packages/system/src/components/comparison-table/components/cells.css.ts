@@ -114,6 +114,8 @@ export const cellTDStyle = style([
 
 export const cellContentsStyle = style([
 	{
+		display: "grid",
+		gap: 12,
 		gridAutoFlow: "column",
 		placeItems: "center",
 		whiteSpace: "nowrap",

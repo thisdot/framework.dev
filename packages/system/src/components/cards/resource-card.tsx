@@ -103,7 +103,11 @@ export function ResourceCard({
 				{onSelect && (
 					<CardSelector
 						checked={selected}
-						onChange={(e) => onSelect(e.target.checked)}
+						onChange={(e) => {
+							e.stopPropagation()
+
+							return onSelect(e.target.checked)
+						}}
 					/>
 				)}
 			</header>

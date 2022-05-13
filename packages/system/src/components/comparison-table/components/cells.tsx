@@ -10,9 +10,9 @@ import {
 } from "./cells.css"
 
 type ColHeadingProps = {
-	name: Headings
-	sort: ISortConfig
-	onClick: React.MouseEventHandler<HTMLButtonElement>
+	name?: Headings
+	sort?: ISortConfig
+	onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
 export const ColHeading = ({
@@ -24,7 +24,7 @@ export const ColHeading = ({
 	...props
 }: ColHeadingProps & React.ComponentPropsWithoutRef<"th">) => {
 	let sorted = {}
-	if (sort.by === name) {
+	if (sort && sort.by === name) {
 		sorted = { "aria-sort": sort.asc ? "ascending" : "descending" }
 	}
 	return (
@@ -34,13 +34,15 @@ export const ColHeading = ({
 			{...sorted}
 			scope="col"
 		>
-			<button
-				className={classNames(cellTHButtonStyle)}
-				onClick={onClick}
-				aria-roledescription="sort button"
-			>
-				{children}
-			</button>
+			{sort && (
+				<button
+					className={classNames(cellTHButtonStyle)}
+					onClick={onClick}
+					aria-roledescription="sort button"
+				>
+					{children}
+				</button>
+			)}
 		</th>
 	)
 }
