@@ -10,6 +10,17 @@ export const podcastTags = [
 
 export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	{
+		title: "Modern Web",
+		image:
+			"https://pbcdn1.podbean.com/imglogo/image-logo/984467/modern_web_9bpnd.jpg",
+		hosts: ["ThisDot Labs"],
+		description:
+			"Modern Web is a podcast that explores next generation frameworks, standards, and techniques.",
+		rss: "https://www.podbean.com/site/podcatcher/index/blog/7YqKYcoGcvP",
+		href: "https://modernweb.podbean.com/",
+		tags: ["general"],
+	},
+	{
 		title: "React Podcast",
 		image:
 			"https://image.simplecastcdn.com/images/bdb43d4d-bd1d-4fbc-bd60-40f1e3299aa3/20f97d0b-6dab-4005-a995-0ab8fc2cf31c/640x640/1550288890-artwork.jpg",
