@@ -124,6 +124,19 @@ export const cellContentsStyle = style([
 	},
 ])
 
+export const rowHeadingStyle = style([
+	cellStyle,
+	{
+		backgroundColor: "white",
+		justifyContent: "center",
+		selectors: {
+			"&:last-child": {
+				borderRight: "none",
+			},
+		},
+	},
+])
+
 export const rowHeadingContentsStyle = style([
 	sprinkles({
 		display: "grid",

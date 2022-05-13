@@ -139,11 +139,10 @@ export function ComparisonTable({
 							</tr>
 						</thead>
 						<tbody style={{ display: "contents" }}>
-							{libraryStats.map((library, index) => (
+							{libraryStats.map((library) => (
 								<tr style={{ display: "contents" }} key={library.name}>
 									<RowHeading>
 										<CardSelector
-											id={"xlibrary-" + index}
 											checked={true}
 											onChange={(e) => {
 												e.stopPropagation()
