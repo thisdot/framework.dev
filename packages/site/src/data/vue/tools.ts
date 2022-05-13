@@ -7,9 +7,37 @@ export const toolTags = [
 	"Edge",
 	"Safari",
 	"UI Design",
+	"Development"
 ] as const
 
 export const tools: Tool<typeof toolTags[number]>[] = [
+	{
+		name: "Vue CLI",
+		author: "Yuxi (Evan) You",
+		description:
+			"Standard Tooling for Vue.js Development",
+		image: "https://github.com/vuejs.png",
+		href: "https://cli.vuejs.org/",
+		tags: ["Development"],
+	},
+	{
+		name: "Vite",
+		author: "Yuxi (Evan) You and Vite contributors",
+		description:
+			"Next Generation Frontend Tooling",
+		image: "https://vitejs.dev/logo.svg",
+		href: "https://github.com/vitejs/vite",
+		tags: ["Development"],
+	},
+	{
+		name: "Vue.js devtools",
+		author: "Vue.js",
+		description:
+			"Browser DevTools extension for debugging Vue.js applications.",
+		image: "https://github.com/vuejs.png",
+		href: "https://devtools.vuejs.org/guide/installation.html",
+		tags: ["Chrome", "Firefox", "Edge"],
+	},
 	{
 		name: "Vue.js devtools",
 		author: "Vue.js",
