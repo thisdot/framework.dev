@@ -36,16 +36,9 @@ export const heroHeaderStyle = style([
 		marginBottom: { mobile: 24 },
 	}),
 	{
-		selectors: {
-			"&:last-child": {
-				marginBottom: 0,
-			},
-		},
-		"@media": {
-			[breakpoints.desktop]: {
-				marginBottom: pxToRem(76),
-			},
-		},
+		width: pxToRem(156),
+		height: pxToRem(36),
+		
 	},
 ])
 

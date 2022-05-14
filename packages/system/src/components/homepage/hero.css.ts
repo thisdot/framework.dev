@@ -59,38 +59,15 @@ export const heroLinesStyle = styleVariants({
 
 export const heroHeadingStyle = style([
 	sprinkles({
-		layout: { mobile: "stack", tablet: "row" },
-		gap: { mobile: 16, tablet: 12 },
-		alignItems: { mobile: "center", tablet: "end" },
-		justifyContent: "center",
-		textStyle: { mobile: "h400", tablet: "h500" },
-		color: "onSurface",
-		marginY: 0,
+		paddingX: { mobile: 10, }
 	}),
 	{
+		height: pxToRem(80),
 		textAlign: "center",
 		position: "relative",
 	},
 ])
 
-export const heroHeadingSigilStyle = style([
-	sprinkles({
-		backgroundColor: "onSurface",
-		color: "white",
-		alignItems: "center",
-		justifyContent: "center",
-		display: "flex",
-	}),
-	{
-		width: 56,
-		height: 56,
-		borderRadius: "100%",
-	},
-])
-
-export const heroHeadingHighlightStyle = style({
-	color: vars.palette.logo,
-})
 
 export const heroParagraphStyle = style([
 	sprinkles({
