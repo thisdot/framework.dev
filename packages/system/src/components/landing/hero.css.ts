@@ -106,6 +106,17 @@ export const heroSubtitleStyle = style([
 	},
 ])
 
+export const heroIconTyle = style({
+	display: "inline-block",
+	height: '0.8em',
+	width: 'auto',
+	"@media": {
+		[breakpoints.desktop]: {
+			height: '0.86em',
+		},
+	},
+})
+
 export const linkCardGroupStyle = style([
 	{
 		"@media": {

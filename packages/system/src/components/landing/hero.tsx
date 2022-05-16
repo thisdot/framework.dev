@@ -12,11 +12,13 @@ import {
 	heroSoftTitleStyle,
 	heroSubtitleStyle,
 	linkCardGroupStyle,
+	heroIconTyle,
 } from "./hero.css"
 
 export interface HeroProps extends React.ComponentPropsWithoutRef<"header"> {
 	heroText: {
 		highlightedTitle?: string
+		icon?: JSX.Element
 		softTitle?: string
 		subtitle?: string
 	}
@@ -34,6 +36,9 @@ export function Hero({ className, heroText, linkCards, ...props }: HeroProps) {
 					{(heroText.highlightedTitle || heroText.softTitle) && (
 						<h1 className={heroTitleStyle}>
 							{heroText.highlightedTitle}
+
+							{heroText.icon && <span className={heroIconTyle}>{heroText.icon}</span>}
+
 							{heroText.softTitle && (
 								<span className={heroSoftTitleStyle}>
 									{" "}
@@ -46,7 +51,9 @@ export function Hero({ className, heroText, linkCards, ...props }: HeroProps) {
 						<p className={heroSubtitleStyle}>{heroText.subtitle}</p>
 					)}
 				</div>
-				{linkCards && <LinkCardGroup cards={linkCards} className={linkCardGroupStyle} />}
+				{linkCards && (
+					<LinkCardGroup cards={linkCards} className={linkCardGroupStyle} />
+				)}
 			</div>
 		</header>
 	)
