@@ -4,16 +4,16 @@ import { sprinkles } from "@framework/system/src/sprinkles/sprinkles.css"
 export default function ResourcesInfoBanner() {
 	const cardResources = [
 		{
-			title: "React Resources",
-			href: "https://react.framework.dev/",
-			icon: "/icon-react.svg",
-			backgroundColor: "#00BCDA",
-		},
-		{
 			title: "Angular Resources",
 			href: "https://angular.framework.dev/",
 			icon: "/icon-angular.svg",
 			backgroundColor: "#C3002F",
+		},
+		{
+			title: "React Resources",
+			href: "https://react.framework.dev/",
+			icon: "/icon-react.svg",
+			backgroundColor: "#00BCDA",
 		},
 		{
 			title: "Vue Resources",
@@ -25,8 +25,8 @@ export default function ResourcesInfoBanner() {
 
 	return (
 		<_ResourcesInfoBanner
-			title="Get started now"
-			description="Explore some of the top resources added by a community to learn or be up to date with your framework"
+			title="Get Started"
+			description="Select one of the frameworks below to begin exploring framework.dev!"
 			cardResources={cardResources}
 			className={sprinkles({
 				marginTop: { mobile: 56, desktop: 152 }

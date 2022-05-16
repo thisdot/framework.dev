@@ -13,26 +13,26 @@ export default function PitchCards() {
 		>
 			<PitchCard
 				pitchText={{
-					highlightedText: "Diferent channels",
-					softText: "Browse books, podcasts, libraries, curses and more",
-				}}
-				imageUrl="/pitch-image-1.png"
-			/>
-
-			<PitchCard
-				pitchText={{
 					highlightedText: "Search",
-					softText: "for the resources you are interested in",
+					softText: "for libraries and resources based on your interests.",
 				}}
 				imageUrl="/pitch-image-2.png"
 			/>
 
 			<PitchCard
 				pitchText={{
-					highlightedText: "Compare libraries",
-					softText: "you're considering using key data points",
+					highlightedText: "Compare",
+					softText: "libraries using key data points to understand what's best for your use case.",
 				}}
 				imageUrl="/pitch-image-3.png"
+			/>
+
+			<PitchCard
+				pitchText={{
+					highlightedText: "Discover",
+					softText: "books, podcasts, libraries, courses and more by exploring the collection of resources!",
+				}}
+				imageUrl="/pitch-image-1.png"
 			/>
 		</div>
 	)
