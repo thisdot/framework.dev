@@ -38,7 +38,11 @@ export const heroHeaderStyle = style([
 	{
 		width: pxToRem(156),
 		height: pxToRem(36),
-		
+		"@media": {
+			[breakpoints.desktop]: {
+				marginBottom: pxToRem(76),
+			},
+		},
 	},
 ])
 
@@ -65,6 +69,10 @@ export const heroTitleStyle = style([
 		color: "regularText",
 		marginBottom: { mobile: 16, desktop: 24 },
 		textStyle: { desktop: "h500", mobile: "h400" },
+		layout: { mobile: "row" },
+		alignItems: "center",
+		gap: 10,
+		flexWrap: "wrap",
 	}),
 	{
 		selectors: {
@@ -101,13 +109,8 @@ export const heroSubtitleStyle = style([
 
 export const heroIconTyle = style({
 	display: "inline-block",
-	height: '0.8em',
-	width: 'auto',
-	"@media": {
-		[breakpoints.desktop]: {
-			height: '0.86em',
-		},
-	},
+	height: "1.5em",
+	width: "auto",
 })
 
 export const linkCardGroupStyle = style([
