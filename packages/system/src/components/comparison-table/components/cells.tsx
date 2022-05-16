@@ -6,13 +6,14 @@ import {
 	cellTDStyle,
 	cellTHButtonStyle,
 	cellContentsStyle,
+	rowHeadingStyle,
 	rowHeadingContentsStyle,
 } from "./cells.css"
 
 type ColHeadingProps = {
-	name: Headings
-	sort: ISortConfig
-	onClick: React.MouseEventHandler<HTMLButtonElement>
+	name?: Headings
+	sort?: ISortConfig
+	onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
 export const ColHeading = ({
@@ -24,7 +25,7 @@ export const ColHeading = ({
 	...props
 }: ColHeadingProps & React.ComponentPropsWithoutRef<"th">) => {
 	let sorted = {}
-	if (sort.by === name) {
+	if (sort && sort.by === name) {
 		sorted = { "aria-sort": sort.asc ? "ascending" : "descending" }
 	}
 	return (
@@ -34,13 +35,15 @@ export const ColHeading = ({
 			{...sorted}
 			scope="col"
 		>
-			<button
-				className={classNames(cellTHButtonStyle)}
-				onClick={onClick}
-				aria-roledescription="sort button"
-			>
-				{children}
-			</button>
+			{sort && (
+				<button
+					className={classNames(cellTHButtonStyle)}
+					onClick={onClick}
+					aria-roledescription="sort button"
+				>
+					{children}
+				</button>
+			)}
 		</th>
 	)
 }
@@ -51,7 +54,11 @@ export const RowHeading = ({
 	...props
 }: React.ComponentPropsWithoutRef<"th">) => {
 	return (
-		<th className={classNames(cellTDStyle, className)} {...props} scope="row">
+		<th
+			className={classNames(rowHeadingStyle, className)}
+			{...props}
+			scope="row"
+		>
 			<div className={rowHeadingContentsStyle}>{children}</div>
 		</th>
 	)

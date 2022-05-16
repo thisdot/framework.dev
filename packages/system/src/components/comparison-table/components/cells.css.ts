@@ -114,11 +114,26 @@ export const cellTDStyle = style([
 
 export const cellContentsStyle = style([
 	{
+		display: "grid",
+		gap: 12,
 		gridAutoFlow: "column",
 		placeItems: "center",
 		whiteSpace: "nowrap",
 		textOverflow: "ellipsis",
 		overflow: "hidden",
+	},
+])
+
+export const rowHeadingStyle = style([
+	cellStyle,
+	{
+		backgroundColor: "white",
+		justifyContent: "center",
+		selectors: {
+			"&:last-child": {
+				borderRight: "none",
+			},
+		},
 	},
 ])
 

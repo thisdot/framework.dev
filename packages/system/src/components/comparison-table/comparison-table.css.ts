@@ -9,7 +9,7 @@ export const comparisonTableStyle = style([
 		textStyle: "bodyShort2",
 	}),
 	{
-		gridTemplateColumns: "repeat(6, minmax(max-content, 1fr))",
+		gridTemplateColumns: "0.5fr repeat(6, minmax(max-content, 1fr))",
 		gridAutoRows: pxToRem(44),
 		position: "relative",
 		"@media": {

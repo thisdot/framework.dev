@@ -8,6 +8,7 @@ import { ColHeading, RowHeading, TD } from "./components/cells"
 import { HorizontalScrollbar } from "./components/horizontal-scrollbar"
 import { ISortConfig, ILibrary } from "./types"
 import { sortLibraries, formatPercentage, formatNumber } from "./utils"
+import { CardSelector } from "./../cards/card-selector"
 
 export interface ComparisonTableProps
 	extends React.ComponentPropsWithoutRef<"div"> {
@@ -92,6 +93,7 @@ export function ComparisonTable({
 					<table className={comparisonTableStyle}>
 						<thead style={{ display: "contents" }}>
 							<tr style={{ display: "contents" }}>
+								<ColHeading></ColHeading>
 								<ColHeading
 									name="name"
 									sort={sortConfig}
@@ -139,7 +141,26 @@ export function ComparisonTable({
 						<tbody style={{ display: "contents" }}>
 							{libraryStats.map((library) => (
 								<tr style={{ display: "contents" }} key={library.name}>
-									<RowHeading scope="row">
+									<RowHeading>
+										<CardSelector
+											checked={true}
+											onChange={(e) => {
+												e.stopPropagation()
+
+												if (!e.target.checked) {
+													const updatedLibraryStats = libraryStats
+
+													updatedLibraryStats.splice(
+														updatedLibraryStats.indexOf(library),
+														1
+													)
+
+													setData(updatedLibraryStats)
+												}
+											}}
+										/>
+									</RowHeading>
+									<TD>
 										<img
 											alt=""
 											src={library.image}
@@ -152,7 +173,7 @@ export function ComparisonTable({
 										>
 											{library.name}
 										</a>
-									</RowHeading>
+									</TD>
 									<TD>{library.author}</TD>
 									<TD>{formatPercentage(library.coverage) || "N/A"}</TD>
 									<TD>{formatNumber(library.downloads) || "N/A"}</TD>

@@ -18,6 +18,7 @@ export const tooltipStyle = style([
 		position: "absolute",
 		backgroundColor: vars.palette.neutral20,
 		color: vars.palette.neutral95,
+		zIndex: 10,
 	},
 ])
 
