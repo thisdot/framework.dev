@@ -33,6 +33,7 @@ export function ResourcesInfoBanner({
 			<LinkCardGroupComponent
 				className={resourcesInfoBannerCardsStyle}
 				cards={cardResources}
+				bigSizeGroup={false}
 			/>
 		</div>
 	)
