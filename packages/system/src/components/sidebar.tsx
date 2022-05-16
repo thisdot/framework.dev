@@ -8,6 +8,7 @@ import {
 } from "./sidebar.css"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { GithubIcon } from "../icons/github-icon"
+import { CURRENT_BUILD_YEAR } from "../globals/global-constants"
 
 export type SidebarProps = React.ComponentPropsWithoutRef<"nav"> & {
 	siteName: string
@@ -19,8 +20,6 @@ export function Sidebar({
 	siteName,
 	...props
 }: SidebarProps) {
-	const currentBuildYear = new Date().getFullYear()
-
 	return (
 		<nav className={sidebarStyle} {...props}>
 			<div className={sidebarContentsStyle}>
@@ -60,7 +59,7 @@ export function Sidebar({
 							color: "softText",
 						})}
 					>
-						© {currentBuildYear} This Dot, Inc.
+						© {CURRENT_BUILD_YEAR} This Dot, Inc.
 					</p>
 				</footer>
 			</div>

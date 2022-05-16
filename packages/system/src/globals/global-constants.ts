@@ -1,0 +1,1 @@
+export const CURRENT_BUILD_YEAR = new Date().getFullYear()

@@ -12,6 +12,7 @@ import { BurgerIcon } from "../icons/burger-icon"
 import { CloseBurgerIcon } from "../icons/close-burger-icon"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { GithubIcon } from "../icons/github-icon"
+import { CURRENT_BUILD_YEAR } from "../globals/global-constants"
 
 type MenuState = "open" | "closed"
 
@@ -28,7 +29,6 @@ export function MobileNav({
 	...props
 }: MobileNavProps) {
 	const [menuState, setMenuState] = useState(initialMenuState)
-	const currentBuildYear = new Date().getFullYear()
 
 	return (
 		<nav className={classNames(className, mobileNavStyle)} {...props}>
@@ -103,7 +103,7 @@ export function MobileNav({
 							color: "softText",
 						})}
 					>
-						© {currentBuildYear} This Dot, Inc.
+						© {CURRENT_BUILD_YEAR} This Dot, Inc.
 					</p>
 					<a
 						className={sprinkles({
