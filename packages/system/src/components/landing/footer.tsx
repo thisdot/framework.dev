@@ -6,6 +6,8 @@ import { footerLinkStyle, footerStyle, footerTextStyle } from "./footer.css"
 export interface FooterProps extends React.ComponentPropsWithoutRef<"footer"> {}
 
 export function Footer({ children, className, ...props }: FooterProps) {
+	const currentBuildYear = new Date().getFullYear()
+
 	return (
 		<footer className={classNames(className, footerStyle)} {...props}>
 			<a
@@ -17,7 +19,7 @@ export function Footer({ children, className, ...props }: FooterProps) {
 				<GithubIcon size="large" />
 				Submit a PR
 			</a>
-			<p className={footerTextStyle}>© 2022 This Dot, Inc.</p>
+			<p className={footerTextStyle}>© {currentBuildYear} This Dot, Inc.</p>
 		</footer>
 	)
 }

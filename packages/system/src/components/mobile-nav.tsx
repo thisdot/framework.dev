@@ -28,6 +28,8 @@ export function MobileNav({
 	...props
 }: MobileNavProps) {
 	const [menuState, setMenuState] = useState(initialMenuState)
+	const currentBuildYear = new Date().getFullYear()
+
 	return (
 		<nav className={classNames(className, mobileNavStyle)} {...props}>
 			{menuState === "closed" ? (
@@ -101,7 +103,7 @@ export function MobileNav({
 							color: "softText",
 						})}
 					>
-						© 2021 This Dot, Inc.
+						© {currentBuildYear} This Dot, Inc.
 					</p>
 					<a
 						className={sprinkles({

@@ -19,6 +19,8 @@ export function Sidebar({
 	siteName,
 	...props
 }: SidebarProps) {
+	const currentBuildYear = new Date().getFullYear()
+
 	return (
 		<nav className={sidebarStyle} {...props}>
 			<div className={sidebarContentsStyle}>
@@ -58,7 +60,7 @@ export function Sidebar({
 							color: "softText",
 						})}
 					>
-						© 2021 This Dot, Inc.
+						© {currentBuildYear} This Dot, Inc.
 					</p>
 				</footer>
 			</div>
