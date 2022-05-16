@@ -1,5 +1,6 @@
 import classNames from "classnames"
 import React from "react"
+import { CURRENT_BUILD_YEAR } from "../../globals/global-constants"
 import { GithubIcon } from "../../icons/github-icon"
 import { footerLinkStyle, footerStyle, footerTextStyle } from "./footer.css"
 
@@ -17,7 +18,7 @@ export function Footer({ children, className, ...props }: FooterProps) {
 				<GithubIcon size="large" />
 				Submit a PR
 			</a>
-			<p className={footerTextStyle}>© 2022 This Dot, Itc.</p>
+			<p className={footerTextStyle}>© {CURRENT_BUILD_YEAR} This Dot, Inc.</p>
 		</footer>
 	)
 }

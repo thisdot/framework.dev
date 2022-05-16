@@ -13,6 +13,10 @@ export const iconStyle = recipe({
 				height: pxToRem(24),
 				width: pxToRem(24),
 			},
+			full: {
+				height: '100%',
+				width: '100%',
+			}
 		},
 	},
 	defaultVariants: {
