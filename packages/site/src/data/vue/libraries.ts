@@ -28,13 +28,14 @@ export const libraryTags = [
 	"animation",
 	"component",
 	"internationalization",
+	"nuxt",
 ] as const
 
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Quasar",
 		author: "Razvan Stoenescu",
-		gitHubRepo: "https://github.com/quasarframework/quasar",
+		gitHubRepo: "quasarframework/quasar",
 		npmPackage: "quasar",
 		href: "https://quasar.dev",
 		description:
@@ -45,7 +46,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Element UI",
 		author: "ElemeFE",
-		gitHubRepo: "https://github.com/ElemeFE/element",
+		gitHubRepo: "ElemeFE/element",
 		npmPackage: "element-ui",
 		href: "https://element.eleme.io/",
 		description: "A Vue.js 2.0 UI Toolkit for Web.",
@@ -55,7 +56,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Element Plus",
 		author: "Element Plus",
-		gitHubRepo: "https://github.com/element-plus/element-plus",
+		gitHubRepo: "element-plus/element-plus",
 		npmPackage: "element-plus",
 		href: "https://element-plus.org/",
 		description: "A Vue 3 based component library for designers and developers",
@@ -65,7 +66,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Vuetify",
 		author: "John Jeremy Leider",
-		gitHubRepo: "https://github.com/vuetifyjs/vuetify",
+		gitHubRepo: "vuetifyjs/vuetify",
 		npmPackage: "vuetify",
 		href: "https://vuetifyjs.com/",
 		description:
@@ -76,7 +77,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Vuesax",
 		author: "lusaxweb",
-		gitHubRepo: "https://github.com/lusaxweb/vuesax-next",
+		gitHubRepo: "lusaxweb/vuesax-next",
 		npmPackage: "vuesax",
 		href: "https://vuesax.com/",
 		description:
@@ -87,7 +88,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Bootstrap vue",
 		author: "BootstrapVue",
-		gitHubRepo: "https://github.com/bootstrap-vue/bootstrap-vue",
+		gitHubRepo: "bootstrap-vue/bootstrap-vue",
 		npmPackage: "bootstrap-vue",
 		href: "https://bootstrap-vue.org/",
 		description:
@@ -99,7 +100,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Keen UI",
 		author: "Josephus Paye II",
-		gitHubRepo: "https://github.com/JosephusPaye/Keen-UI",
+		gitHubRepo: "JosephusPaye/Keen-UI",
 		npmPackage: "keen-ui",
 		href: "https://josephuspaye.github.io/Keen-UI",
 		description:
@@ -110,7 +111,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Ant Design Vue",
 		author: "ant-design-vue",
-		gitHubRepo: "https://github.com/vueComponent/ant-design-vue",
+		gitHubRepo: "vueComponent/ant-design-vue",
 		npmPackage: "ant-design-vue",
 		href: "https://www.antdv.com/docs/vue/introduce/",
 		description:
@@ -122,7 +123,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Fish UI",
 		author: "myliang",
-		gitHubRepo: "https://github.com/myliang/fish-ui",
+		gitHubRepo: "myliang/fish-ui",
 		npmPackage: "fish-ui",
 		href: "https://myliang.github.io/fish-ui/#/components/index",
 		description: "A Vue 2 UI Toolkit for Web.",
@@ -133,7 +134,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Equal",
 		author: "quatrochan",
-		gitHubRepo: "https://github.com/quatrochan/Equal",
+		gitHubRepo: "quatrochan/Equal",
 		npmPackage: "equal-vue",
 		href: "https://quatrochan.github.io/Equal/",
 		description:
@@ -144,7 +145,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Buefy",
 		author: "Rafael Beraldo",
-		gitHubRepo: "https://github.com/vueComponent/ant-design-vue",
+		gitHubRepo: "vueComponent/ant-design-vue",
 		npmPackage: "buefy",
 		href: "https://buefy.org/",
 		description:
@@ -155,7 +156,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "PrimeVUE",
 		author: "PrimeTek",
-		gitHubRepo: "https://github.com/primefaces/primevue",
+		gitHubRepo: "primefaces/primevue",
 		npmPackage: "primevue",
 		href: "https://www.primefaces.org/primevue/",
 		description:
@@ -167,7 +168,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Vuikit",
 		author: "Miljan Aleksic",
-		gitHubRepo: "https://github.com/vuikit/vuikit",
+		gitHubRepo: "vuikit/vuikit",
 		npmPackage: "vuikit",
 		href: "https://vuikit.js.org/",
 		description:
@@ -178,7 +179,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Chakra UI",
 		author: "Jonathan Bakebwa",
-		gitHubRepo: "https://github.com/chakra-ui/chakra-ui-vue",
+		gitHubRepo: "chakra-ui/chakra-ui-vue",
 		npmPackage: "@chakra-ui/vue",
 		href: "https://vue.chakra-ui.com/",
 		description:
@@ -190,7 +191,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Vue Material",
 		author: "Marcos Moura, Creative Tim & Community",
-		gitHubRepo: "http://github.com/vuematerial/vue-material",
+		gitHubRepo: "vuematerial/vue-material",
 		npmPackage: "vue-material",
 		href: "https://vuematerial.io/",
 		description:
@@ -202,7 +203,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Mint UI",
 		author: "mint-ui",
-		gitHubRepo: "https://github.com/ElemeFE/mint-ui",
+		gitHubRepo: "ElemeFE/mint-ui",
 		npmPackage: "mint-ui",
 		href: "http://mint-ui.github.io/#!/en",
 		description: "Mobile UI elements for Vue 2.0",
@@ -213,7 +214,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Semantic UI Vue",
 		author: "Mario Lamacchia",
-		gitHubRepo: "https://github.com/Semantic-UI-Vue/Semantic-UI-Vue",
+		gitHubRepo: "Semantic-UI-Vue/Semantic-UI-Vue",
 		npmPackage: "semantic-ui-vue",
 		href: "https://semantic-ui-vue.github.io/",
 		description:
@@ -225,7 +226,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Vectre",
 		author: "Vadim Tiukov",
-		gitHubRepo: "https://github.com/vectrejs/vectre",
+		gitHubRepo: "vectrejs/vectre",
 		npmPackage: "@vectrejs/vectre",
 		href: "https://vectrejs.github.io/docs/",
 		description: "A Lightweight, Simple and Responsive Component Framework",
@@ -235,7 +236,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Vant UI",
 		author: "Youzan",
-		gitHubRepo: "https://github.com/youzan/vant",
+		gitHubRepo: "youzan/vant",
 		npmPackage: "vant",
 		href: "https://vant-contrib.gitee.io/vant/#/en-US/",
 		description: "Mobile UI Components built on Vue",
@@ -245,7 +246,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Naive UI",
 		author: "TuSimple",
-		gitHubRepo: "https://github.com/TuSimple/naive-ui",
+		gitHubRepo: "TuSimple/naive-ui",
 		npmPackage: "naive-ui",
 		href: "https://www.naiveui.com/",
 		description:
@@ -256,7 +257,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Vuestic UI",
 		author: "Epicmax",
-		gitHubRepo: "https://github.com/epicmaxco/vuestic-ui",
+		gitHubRepo: "epicmaxco/vuestic-ui",
 		npmPackage: "vuestic-ui",
 		href: "https://vuestic.dev/",
 		description: "Vue 3.0 UI Framework",
@@ -266,7 +267,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Agnostic UI",
 		author: "AgnosticUI",
-		gitHubRepo: "https://github.com/AgnosticUI/agnosticui/",
+		gitHubRepo: "AgnosticUI/agnosticui",
 		npmPackage: "agnostic-vue",
 		href: "https://www.agnosticui.com/",
 		description:
@@ -277,7 +278,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "AT-UI",
 		author: "O2Team",
-		gitHubRepo: "https://github.com/at-ui/at-ui",
+		gitHubRepo: "at-ui/at-ui",
 		npmPackage: "at-ui",
 		href: "https://github.com/at-ui/at-ui",
 		description:
@@ -285,5 +286,156 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://camo.githubusercontent.com/1c853ebd899a4287544a0c9268ff5455f6ea42af19f38ce47a68ac1c05552a25/687474703a2f2f73746f726167652e333630627579696d672e636f6d2f6d74642f686f6d652f6c6f676f2d6174313530323731383232313638362e737667",
 		tags: ["component library", "Vue 2"],
+	},
+	{
+		name: "Pinia",
+		author: "Eduardo San Martin Morote",
+		gitHubRepo: "vuejs/pinia",
+		npmPackage: "pinia",
+		href: "https://pinia.vuejs.org/",
+		description: "The Vue Store that you will enjoy using",
+		image: "https://pinia.vuejs.org/logo.svg",
+		tags: ["state management", "Vue 2", "Vue 3"],
+	},
+	{
+		name: "Vuex",
+		author: "Evan You",
+		gitHubRepo: "vuejs/vuex",
+		npmPackage: "vuex",
+		href: "https://vuex.vuejs.org/",
+		description: "Vuex is a state management pattern + library for Vue.js applications.",
+		image: "https://github.com/vuejs.png",
+		tags: ["state management", "Vue 2", "Vue 3"],
+	},
+	{
+		name: "Vue Apollo",
+		author: "Apollo GraphQL, Guillaume Chau",
+		gitHubRepo: "vuejs/apollo",
+		npmPackage: "@vue/apollo-composable",
+		href: "https://v4.apollo.vuejs.org/",
+		description: "Integrate GraphQL in your Vue.js apps!",
+		image: "https://github.com/apollographql.png",
+		tags: ["state management", "Vue 2", "Vue 3"],
+	},
+	{
+		name: "XState",
+		author: "David Khourshid",
+		gitHubRepo: "statelyai/xstate",
+		npmPackage: "xstate",
+		href: "https://xstate.js.org/docs/packages/xstate-vue/#xstate-vue",
+		description:
+			"JavaScript and TypeScript finite state machines and statecharts for the modern web.",
+		image: "https://github.com/statelyai.png",
+		tags: ["state management", "Vue 2", "Vue 3"],
+	},
+	{
+		name: "Swrv",
+		author: "Kong",
+		gitHubRepo: "Kong/swrv",
+		npmPackage: "swrv",
+		href: "https://xstate.js.org/docs/packages/xstate-vue/#xstate-vue",
+		description:
+			"Stale-while-revalidate data fetching for Vue.",
+		image: "https://raw.githubusercontent.com/Kong/swrv/master/logo.png",
+		tags: ["data fetching", "Vue 3"],
+	},
+	{
+		name: "TailwindCSS",
+		author: "Adam Wathan & Jonathan Reinink",
+		gitHubRepo: "tailwindlabs/tailwindcss",
+		npmPackage: "tailwindcss",
+		href: "https://tailwindcss.com/docs/guides/vite",
+		description:
+			"A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
+		image: "https://github.com/tailwindlabs.png",
+		tags: ["styling", "utility-first CSS", "Vue 2", "Vue 3"],
+	},
+	{
+		name: "Sass",
+		author: "Google",
+		gitHubRepo: "sass/dart-sass",
+		npmPackage: "sass",
+		href: "https://sass-lang.com/",
+		description:
+			"Sass is a very mature, stable, and powerful professional grade CSS extension language. It provides a superset of CSS with features like nesting, variables, imports and mixins.",
+		image: "https://github.com/sass.png",
+		tags: ["styling", "CSS processor", "Vue 2", "Vue 3"],
+	},
+	{
+		name: "Vanilla Extract",
+		author: "SEEK",
+		gitHubRepo: "seek-oss/vanilla-extract",
+		npmPackage: "@vanilla-extract/css",
+		href: "https://vanilla-extract.style/",
+		description:
+			"Use TypeScript as your preprocessor. Write type‑safe, locally scoped classes, variables and themes, then generate static CSS files at build time.",
+		image: "https://github.com/seek-oss.png",
+		tags: ["styling", "CSS processor", "CSS in JS", "CSS modules", "Vue 2", "Vue 3"],
+	},
+	{
+		name: "styled-components",
+		author: "Glen Maddern & Maximilian Stoiber",
+		gitHubRepo: "styled-components/styled-components",
+		npmPackage: "styled-components",
+		href: "https://www.styled-components.com/",
+		description:
+			"Utilising tagged template literals (a recent addition to JavaScript) and the power of CSS, styled-components allows you to write actual CSS code to style your components. It also removes the mapping between components and styles – using components as a low-level styling construct could not be easier!",
+		image: "https://github.com/styled-components.png",
+		tags: ["styling", "CSS in JS", "Vue 2", "Vue 3"],
+	},
+	{
+		name: "Vuelidate",
+		author: "Vuelidate",
+		gitHubRepo: "vuelidate/vuelidate",
+		npmPackage: "vuelidate",
+		href: "https://vuelidate-next.netlify.app/",
+		description:
+			"Vuelidate 2 is a simple, but powerful, lightweight model-based validation for Vue.js 3 and 2.",
+		image: "https://github.com/vuelidate.png",
+		tags: ["forms"],
+	},
+	{
+		name: "FormKit",
+		author: "FormKit, Inc",
+		gitHubRepo: "formkit/formkit",
+		npmPackage: "@formkit/vue",
+		href: "https://formkit.com/",
+		description:
+			"A Vue form building framework that simplifies form structure, generation, validation, theming, submission, error handling, and more.",
+		image: "https://github.com/formkit.png",
+		tags: ["forms"],
+	},
+	{
+		name: "Astro",
+		author: "Fred K. Schott",
+		gitHubRepo: "withastro/astro",
+		npmPackage: "astro",
+		href: "https://astro.build/",
+		image: "https://github.com/withastro.png",
+		tags: ["framework", "static site generation"],
+		description:
+			"Astro is a fresh but familiar approach to building websites. Astro combines decades of proven performance best practices with the DX improvements of the component-oriented era. Use your favorite JavaScript framework and automatically ship the bare-minimum amount of JavaScript—by default.",
+	},
+	{
+		name: "NuxtJs",
+		author: "Nuxt Team",
+		gitHubRepo: "nuxt",
+		npmPackage: "nuxt",
+		href: "https://nuxtjs.org/",
+		image: "https://github.com/nuxt.png",
+		tags: ["framework", "server side rendering", "static site generation"],
+		description:
+			"Build your next Vue.js application with confidence using Nuxt. An open source framework making web development simple and powerful.",
+	},
+	{
+		name: "Vue I18n",
+		author: "Kazuya Kawaguchi",
+		gitHubRepo: "kazupon/vue-i18n",
+		npmPackage: "vue-i18n",
+		href: "https://kazupon.github.io/vue-i18n/",
+		image: "https://kazupon.github.io/vue-i18n/vue-i18n-logo.png",
+		tags: ["internationalization"],
+		description:
+			"Vue I18n is internationalization plugin for Vue.js",
 	},
 ]

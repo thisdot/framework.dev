@@ -1,7 +1,7 @@
 import { Course } from "@framework/system/src/models/course"
 
 export const courseTags = [
-    "state management",
+	"state management",
 	"data fetching",
 	"routing",
 	"testing",
@@ -15,13 +15,16 @@ export const courseTags = [
 	"typescript",
 	"tailwind",
 	"material ui",
-    "Vue 2",
-    "Vue 3",
+	"Vue 2",
+	"Vue 3",
+	"nuxt 2",
+	"component design",
+	"pwa",
 ] as const
 
 export const courses: Course<typeof courseTags[number]>[] = [
-    {
-        title: "Vue - The Complete Guide (incl. Router & Composition API)",
+	{
+		title: "Vue - The Complete Guide (incl. Router & Composition API)",
 		author: "Maximilian Schwarzmüller",
 		image: "https://github.com/maxschwarzmueller.png",
 		description:
@@ -30,6 +33,93 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://www.udemy.com/course/vuejs-2-the-complete-guide/",
-		tags: ["state management", "data fetching", "routing", "Vue 2", "Vue 3", "vuex", "authentication", "forms"],
-    }
+		tags: [
+			"state management",
+			"data fetching",
+			"routing",
+			"Vue 2",
+			"Vue 3",
+			"vuex",
+			"authentication",
+			"forms",
+		],
+	},
+	{
+		title: "Advanced Vue Component Design",
+		author: "Adam Wathan",
+		image: "https://github.com/adamwathan.png",
+		description:
+			"Learn how to design simpler, more flexible components that are both more powerful and easier to maintain.",
+		paymentType: "paid",
+		level: "advanced",
+		format: "video",
+		href: "https://adamwathan.me/advanced-vue-component-design/",
+		tags: ["component design", "Vue 2"],
+	},
+	{
+		title: "Vue Foundations",
+		author: "Anthony Gore",
+		image: "https://github.com/anthonygore.png",
+		description:
+			"Learn Vue 3 from scratch by building real-world web apps. Plus key tools like Vue CLI and Vue Router.",
+		paymentType: "paid",
+		level: "beginner",
+		format: "video",
+		href: "https://vuejsdevelopers.com/courses/foundations/",
+		tags: ["data fetching", "Vue 3", "routing"],
+	},
+	{
+		title: "Learn Vue 2 in 65 Minutes",
+		author: "Gary Simon",
+		image: "https://github.com/designcourse.png",
+		description:
+			"This tutorial teaches you how to build Vue apps through nine interactive screencasts. You'll learn basic Vue.js concepts, and also take part in building two super fun apps: Schrödingers Div and the Emoji Color Picker!",
+		paymentType: "free",
+		level: "beginner",
+		format: "video",
+		href: "https://www.youtube.com/watch?v=78tNYZUS-ps",
+		tags: ["css", "Vue 2", "forms", "routing"],
+	},
+	{
+		title: "Nuxt.js 2 - Vue.js on Steroids",
+		author: "Maximilian Schwarzmüller",
+		image: "https://github.com/maxschwarzmueller.png",
+		description:
+			"Build highly engaging Vue JS apps with Nuxt.js. Nuxt adds easy server-side-rendering and a folder-based config approach.",
+		paymentType: "paid",
+		level: "intermediate",
+		format: "video",
+		href: "https://www.udemy.com/course/nuxtjs-vuejs-on-steroids/",
+		tags: [
+			"css",
+			"nuxt 2",
+			"forms",
+			"routing",
+			"data fetching",
+			"authentication",
+		],
+	},
+	{
+		title: "Complete Vue Developer in 2022",
+		author: "Luis Ramirez Jr & Andrei Neagoie",
+		image: "https://github.com/aneagoie.png",
+		description:
+			"The only Vue.js tutorial + projects course you need to learn Vue (including all new Vue 3 features), build large-scale Vue applications from scratch, and get hired as a Vue developer in 2022. Go from Zero To VUE Mastery.",
+		paymentType: "paid",
+		level: "beginner",
+		format: "video",
+		href: "https://zerotomastery.io/courses/learn-vue-js/",
+		tags: [
+			"pwa",
+			"Vue 3",
+			"testing",
+			"routing",
+			"vuex",
+			"authentication",
+			"forms",
+			"component design",
+			"css",
+		],
+	},
+	
 ]
