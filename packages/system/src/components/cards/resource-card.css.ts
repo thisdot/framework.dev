@@ -93,7 +93,7 @@ export const resourceCardImageContainerStyle = style([
 		gridArea: "image",
 		overflow: "hidden",
 		display: "grid",
-		alignItems: "start",
+		alignItems: "center",
 		justifyItems: "center",
 		selectors: {
 			[`${titleFirst} &`]: {
@@ -106,7 +106,10 @@ export const resourceCardImageContainerStyle = style([
 				minHeight: pxToRem(144),
 			},
 		},
-	},
+	}, 
+	{
+		height: '12rem',
+	}
 ])
 
 export const bookImageContainerStyle = style({
