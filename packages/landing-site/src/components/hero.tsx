@@ -11,7 +11,7 @@ export default function Hero() {
 				subtitle:
 					"Search for top web technologies, compare key features, and discover community-curated resources to help you learn!",
 			}}
-			linkCards={FRAMEWORK_RESOURCES}
+			linkCards={FRAMEWORK_RESOURCES({ bigSize: true })}
 		/>
 	)
 }

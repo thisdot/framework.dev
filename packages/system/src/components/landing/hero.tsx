@@ -52,7 +52,7 @@ export function Hero({ className, heroText, linkCards, ...props }: HeroProps) {
 					)}
 				</div>
 				{linkCards && (
-					<LinkCardGroup bigSizeGroup cards={linkCards} className={linkCardGroupStyle} />
+					<LinkCardGroup cards={linkCards} className={linkCardGroupStyle} />
 				)}
 			</div>
 		</header>

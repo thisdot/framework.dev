@@ -45,7 +45,7 @@ export const linkCardStyle = style([
 				zIndex: -1,
 			},
 			"&:hover&:before": {
-				filter: "brightness(90%)",
+				filter: "brightness(80%)",
 			},
 		},
 	},
@@ -53,10 +53,10 @@ export const linkCardStyle = style([
 
 export const linkCardIndicatorIconStyle = style([
 	sprinkles({
-		color: "white",
 		height: "auto",
 	}),
 	{
+		color: "var(--link-card-color-theme)",
 		pointerEvents: "none",
 		position: "absolute",
 		right: pxToRem(20),
@@ -81,9 +81,18 @@ export const linkCardIconContainerStyle = style([
 		marginRight: 16,
 	}),
 	{
-		height: pxToRem(48),
+		height: pxToRem(56),
 		position: "relative",
-		width: pxToRem(48),
+		width: pxToRem(56),
+	},
+])
+
+export const linkCardRawIconContainerStyle = style([
+	{
+		marginRight: 16,
+		height: pxToRem(56),
+		position: "relative",
+		width: pxToRem(56),
 	},
 ])
 
@@ -102,11 +111,12 @@ export const linkCardIconStyle = style([
 
 export const linkCardTitleStyle = style([
 	sprinkles({
-		color: "white",
 		textStyle: { desktop: "h400", mobile: "h100" },
 		width: { desktop: "full", mobile: "auto" },
 	}),
 	{
+		color: "var(--link-card-color-theme)",
+
 		"@media": {
 			[breakpoints.desktop]: {
 				fontSize: pxToRem(18),

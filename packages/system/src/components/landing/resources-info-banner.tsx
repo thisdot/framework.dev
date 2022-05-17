@@ -10,12 +10,14 @@ import {
 // Test
 import { LinkCardGroup as LinkCardGroupComponent } from "./link-card-group"
 import { LinkCardProps } from "./link-card"
+import { vars } from "../../themes/themes.css"
 
 export interface ResourcesInfoBannerProps
 	extends React.ComponentPropsWithoutRef<"div"> {
 	title: string
 	description: string
 	cardResources: LinkCardProps[]
+	backgroundColor?: string
 }
 
 export function ResourcesInfoBanner({
@@ -24,16 +26,22 @@ export function ResourcesInfoBanner({
 	cardResources,
 	title,
 	description,
+	backgroundColor = '',
 	...props
 }: ResourcesInfoBannerProps) {
 	return (
-		<div className={classNames(className, resourcesInfoBannerStyle)} {...props}>
+		<div
+			{...props}
+			className={classNames(className, resourcesInfoBannerStyle)}
+			style={
+				{ "--banner-background": backgroundColor || vars.palette.neutralVariant99 } as React.CSSProperties
+			}
+		>
 			<h4 className={resourcesInfoBannerHeadingStyle}>{title}</h4>
 			<p className={resourcesInfoBannerDescriptionStyle}>{description}</p>
 			<LinkCardGroupComponent
 				className={resourcesInfoBannerCardsStyle}
 				cards={cardResources}
-				bigSizeGroup={false}
 			/>
 		</div>
 	)

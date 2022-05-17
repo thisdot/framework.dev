@@ -24,6 +24,8 @@ import { Book } from "../../models/book"
 import { Tool } from "../../models/tool"
 import { Community } from "../../models/community"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { ResourcesInfoBanner } from "../landing/resources-info-banner"
+import { LinkCardProps } from "../landing/link-card"
 
 export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
 	librariesTitle: string
@@ -36,6 +38,7 @@ export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
 	tools: Tool<string>[]
 	communities: Community<string>[]
 	siteName: string
+	cardResources: LinkCardProps[]
 }
 
 export function Homepage({
@@ -50,6 +53,7 @@ export function Homepage({
 	tools,
 	communities,
 	siteName,
+	cardResources,
 	...props
 }: HomepageProps) {
 	return (
@@ -74,7 +78,11 @@ export function Homepage({
 					homepageGutterStyle
 				)}
 			>
-				<FeaturedLibraries libraries={libraries} libraryTags={libraryTags} title={librariesTitle} />
+				<FeaturedLibraries
+					libraries={libraries}
+					libraryTags={libraryTags}
+					title={librariesTitle}
+				/>
 				<Podcasts podcasts={podcasts} />
 				<div className={homepageTwoAndOneSectionStyle}>
 					<Courses courses={courses} />
@@ -92,6 +100,16 @@ export function Homepage({
 					<LatestTools tools={tools} />
 				</div>
 				<Communities communities={communities} />
+
+				<ResourcesInfoBanner
+					title="Other Frameworks"
+					description="Explore some of the top resources added by a community to learn or be up to date with your framework"
+					cardResources={cardResources}
+					backgroundColor="#00687a1f"
+					className={sprinkles({
+						borderRadius: 40,
+					})}
+				/>
 			</div>
 		</div>
 	)
