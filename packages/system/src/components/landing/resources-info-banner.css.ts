@@ -7,8 +7,7 @@ export const resourcesInfoBannerStyle = style([
 		borderRadius: 12,
 		layout: "stack",
 		gap: 20,
-		paddingY: { desktop: 56, mobile: "auto" },
-		paddingX: { desktop: 56, mobile: "auto" },
+		padding: { desktop: 56, mobile: "auto" },
 	}),
 	{
 		"@media": {

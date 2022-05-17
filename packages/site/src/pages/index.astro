@@ -30,7 +30,7 @@ const searchableWebsiteStructuredData = {
 	}
 }
 
-const cardResources = FRAMEWORK_RESOURCES({ bigSize: false }).filter((resource) => 
+const cardResources = FRAMEWORK_RESOURCES().filter((resource) => 
 	!resource.title.toLowerCase().includes(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)
 )
 ---

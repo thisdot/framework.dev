@@ -58,7 +58,7 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 		</main>
 		<MobileNav
 			aria-label="primary"
-			client:media="(max-width:1025px)"
+			client:visible
 			data={navData}
 			currentCategory={currentCategory}
 			currentTag={currentTag}

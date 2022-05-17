@@ -4,9 +4,9 @@ import { pxToRem } from "../../util/style-utils"
 
 export const linkCardStyle = style([
 	sprinkles({
-		alignItems: "center",
-		borderRadius: 12,
 		layout: "row",
+		borderRadius: 12,
+		alignItems: { desktop: 'start', mobile: 'center' },
 		flexDirection: { desktop: "column", mobile: "row" },
 		justifyContent: { desktop: "space-between", mobile: "flex-start" },
 		paddingLeft: 16,
@@ -14,15 +14,13 @@ export const linkCardStyle = style([
 		paddingY: 16,
 	}),
 	{
+		position: "relative",
 		backgroundColor: "var(--card-background)",
-		alignItems: "center",
 		filter: "brightness(100%)",
 		overflow: "hidden",
-		position: "relative",
 		"@media": {
 			[breakpoints.desktop]: {
 				gap: pxToRem(38),
-				alignItems: "flex-start",
 			},
 		},
 		selectors: {
@@ -111,16 +109,10 @@ export const linkCardIconStyle = style([
 
 export const linkCardTitleStyle = style([
 	sprinkles({
-		textStyle: { desktop: "h400", mobile: "h100" },
+		textStyle: { desktop: "h100", mobile: "h100" },
 		width: { desktop: "full", mobile: "auto" },
 	}),
 	{
 		color: "var(--link-card-color-theme)",
-
-		"@media": {
-			[breakpoints.desktop]: {
-				fontSize: pxToRem(18),
-			},
-		},
 	},
 ])

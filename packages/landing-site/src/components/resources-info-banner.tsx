@@ -7,7 +7,7 @@ export default function ResourcesInfoBanner() {
 		<_ResourcesInfoBanner
 			title="Get Started"
 			description="Select one of the frameworks below to begin exploring framework.dev!"
-			cardResources={FRAMEWORK_RESOURCES({ bigSize: false })}
+			cardResources={FRAMEWORK_RESOURCES()}
 			className={sprinkles({
 				marginTop: { mobile: 56, desktop: 152 },
 			})}
