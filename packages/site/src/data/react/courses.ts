@@ -18,6 +18,16 @@ export const courseTags = [
 	"typescript",
 	"tailwind",
 	"material ui",
+	"vite",
+	"javascript marathon",
+	"aws",
+	"netlify",
+	"continuous integration",
+	"gatsbyJS",
+	"ssg",
+	"component design",
+	"apollo",
+	"faunaDB"
 ] as const
 
 export const courses: Course<typeof courseTags[number]>[] = [
@@ -293,5 +303,101 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		format: "video",
 		href: "https://egghead.io/courses/the-beginner-s-guide-to-react",
 		tags: ["state management", "data fetching", "forms", "hooks"],
+	},
+	{
+		title: "JavaScript Marathon | Vite Training with Anthony",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"In this training session, Anthony Fu will walk you through getting started with Vite! Learn how it works, how it'll benefit you and your workflow, and why it's a must-use library! Use Vite with React, Svelte, and more!",
+		paymentType: "free",
+		level: "beginner",
+		format: "video",
+		href: "https://youtu.be/ecpvIo4NIoY",
+		tags: ["vite",  "javascript marathon"],
+	},
+	{
+		title: "1 Hour to Learn React - JavaScript Marathon",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"Learning React is easy. We're going to create a new project using the Create React App CLI and introduce the JSX templating syntax.",
+		paymentType: "free",
+		level: "beginner",
+		format: "video",
+		href: "https://youtu.be/n21XU0Fzr1o",
+		tags: ["hooks", "data fetching", "css", "javascript marathon"],
+	},
+	{
+		title: "React... Suspense… - JavaScript Marathon",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"React Suspense is coming and it's going to be awesome. It's currently in alpha and you can play around with it. In this tutorial we'll focus on the fundamentals of how React Suspense works (in its experimental form) and how that can help improve the user experience.",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "https://youtu.be/xk_EWd11T94",
+		tags: ["data fetching", "javascript marathon"],
+	},
+	{
+		title: "JavaScript Marathon: Fullstack React + GraphQL in 60 Minutes",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"In this session we will learn how to build a fullstack serverless React + GraphQL app from scratch with authentication, storage, and multiplayer realtime collaboration, all atop infinitely scalable AWS components, with AWS Amplify! It's never been this easy to go from idea to prototype, and each piece will be livecoded in front of your very eyes!",
+		paymentType: "free",
+		level: "advanced",
+		format: "video",
+		href: "https://youtu.be/0Js5O5a4bQ4",
+		tags: ["graphQL", "authentication", "aws", "data fetching", "javascript marathon"],
+	},
+	{
+		title: "An Introduction to Netlify with React - JavaScript Marathon",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"Netlify is a service for automating your site's hosting, continuous integration, continuous deployment, and serverless requirements.",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "https://youtu.be/DX3zlPwZqk4",
+		tags: ["netlify", "continuous integration", "javascript marathon"],
+	},
+	{
+		title: "An Introduction to Gatsby with React - JavaScript Marathon",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"Static site generators are one of the hottest technologies, and GatsbyJS is one of the most popular static site generators (especially for React).",
+		paymentType: "free",
+		level: "beginner",
+		format: "video",
+		href: "https://youtu.be/ldGJmqtpHh8",
+		tags: ["gatsbyJS", "ssg", "javascript marathon"],
+	},
+	{
+		title: "Using GraphQL with React - JavaScript Marathon",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"This training will focus on the GraphQL system, libs we can use to interact with GraphQL APIs, structuring our components to think in our graph type system, and using this type system to build resilient components.",
+		paymentType: "free",
+		level: "beginner",
+		format: "video",
+		href: "https://youtu.be/JmVdgtjGo5Q",
+		tags: ["graphQL", "data fetching", "component design", "apollo", "javascript marathon"],
+	},
+	{
+		title: "Databases made easy in React with GraphQL and FaunaDB",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"In this training, we will learn how to build stateful applications with ReachJS using FaunaDB as the serverless datastore. We will setup an efficient GraphQL endpoint in minutes and plug it into a ReactJS frontend to fetch user profiles for our app.",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "https://youtu.be/_kEDBitNbnY",
+		tags: ["graphQL", "data fetching", "faunaDB", "javascript marathon"],
 	},
 ]

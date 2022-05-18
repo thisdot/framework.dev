@@ -8,6 +8,7 @@ export const courseTags = [
 	"forms",
 	"graphQL",
 	"vuex",
+	"vue cli",
 	"authentication",
 	"scss",
 	"css",
@@ -20,6 +21,12 @@ export const courseTags = [
 	"nuxt 2",
 	"component design",
 	"pwa",
+	"aws",
+	"devOps",
+	"continuous integration",
+	"vite",
+	"debugging",
+	"javascript marathon",
 ] as const
 
 export const courses: Course<typeof courseTags[number]>[] = [
@@ -121,5 +128,114 @@ export const courses: Course<typeof courseTags[number]>[] = [
 			"css",
 		],
 	},
-	
+	{
+		title: "1 Hour to Learn Vue - JavaScript Marathon",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"In this Vue.js training, you will learn how to create a sample blog application from the ground up. This training includes how to set up a project with the Vue CLI, a basic understanding of the framework structure, understanding async data loading, mixins and much more.",
+		paymentType: "free",
+		level: "beginner",
+		format: "video",
+		href: "https://youtu.be/XItC-JBL3kw",
+		tags: [
+			"vue cli",
+			"Vue 2",
+			"scss",
+			"data fetching",
+			"component design",
+			"javascript marathon",
+		],
+	},
+	{
+		title: "Master PWA in Vue - JavaScript Marathon",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"Progressive web apps have recently become an industry standard, and in this training, we are going to learn all the steps necessary to add this feature to a Vue application.",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "https://youtu.be/15Yr-J4X34M",
+		tags: ["pwa", "vue cli", "Vue 2", "javascript marathon"],
+	},
+	{
+		title: "Master State Management in Vue with VueX - JavaScript Marathon",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"State management is an extremely important feature of web applications. In this training, we are going to walk through VueX. Topic covered will include: Installation, basic usage, best practices, modules and much more.",
+		paymentType: "free",
+		level: "beginner",
+		format: "video",
+		href: "https://youtu.be/15Yr-J4X34M",
+		tags: ["Vue 2", "vuex", "state management", "javascript marathon"],
+	},
+	{
+		title: "Learning Unit Testing in Vue - JavaScript Marathon",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"TDD (Test driven development), is every developer’s dream. This training will teach you how to do testing right in Vue.js with the help of vue-test-util and jest. We will also cover a variety of test scenarios to support you in improving your testing knowledge.",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "https://youtu.be/-CJDcjxXEaY",
+		tags: ["Vue 2", "testing", "javascript marathon"],
+	},
+	{
+		title: "Pro Tips on Using AWS with Vue - JavaScript Marathon",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"Cloud infrastructure can be scary, but AWS makes this task so much easier.In this training, we are going to walk you through how to set up your Vue.js application on AWS with Amplify.",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "https://youtu.be/7XWraodmPAk",
+		tags: [
+			"aws",
+			"devOps",
+			"continuous integration",
+			"Vue 2",
+			"javascript marathon",
+		],
+	},
+	{
+		title: "JavaScript Marathon | Vite Training with Anthony",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"In this training session, Anthony Fu will walk you through getting started with Vite! Learn how it works, how it'll benefit you and your workflow, and why it's a must-use library! Use Vite with React, Svelte, and more!",
+		paymentType: "free",
+		level: "beginner",
+		format: "video",
+		href: "https://youtu.be/ecpvIo4NIoY",
+		tags: ["vite", "Vue 2", "Vue 3", "javascript marathon"],
+	},
+	{
+		title:
+			"Effectively Using the New Vue Composition API - JavaScript Marathon",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"Come join us as we walk through the new Composition API that will be released as part of Vue 3. The Composition API is a way to abstract functionality in your application, using some new internal APIs that Vue is exposing. Inspired by React Hooks, it makes it much easier to share logic, data, and methods across components in your app.",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "https://youtu.be/E6hjtY3e8H0",
+		tags: ["Vue 3", "javascript marathon"],
+	},
+	{
+		title: "Debugging Vue: Quick Tips and Tricks - JavaScript Marathon",
+		author: "This Dot Labs",
+		image: "https://github.com/thisdot.png",
+		description:
+			"Let's face it - our code is never perfect! There are times when debugging is necessary, and debugging a Vue.js application has never been easier. This session is going to show you how to debug your code using Vue Devtools and Visual Studio Code. ",
+		paymentType: "free",
+		level: "beginner",
+		format: "video",
+		href: "https://youtu.be/wXFcRDsFSEU",
+		tags: ["Vue 2", "debugging", "javascript marathon"],
+	},
 ]
