@@ -129,8 +129,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		],
 	},
 	{
-		title: "1 Hour to Learn Vue - JavaScript Marathon",
-		author: "This Dot Labs",
+		title: "1 Hour to Learn Vue",
+		author: "Simone Cuomo",
 		image: "https://github.com/thisdot.png",
 		description:
 			"In this Vue.js training, you will learn how to create a sample blog application from the ground up. This training includes how to set up a project with the Vue CLI, a basic understanding of the framework structure, understanding async data loading, mixins and much more.",
@@ -148,8 +148,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		],
 	},
 	{
-		title: "Master PWA in Vue - JavaScript Marathon",
-		author: "This Dot Labs",
+		title: "Master PWA in Vue",
+		author: "Simone Cuomo",
 		image: "https://github.com/thisdot.png",
 		description:
 			"Progressive web apps have recently become an industry standard, and in this training, we are going to learn all the steps necessary to add this feature to a Vue application.",
@@ -160,8 +160,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["pwa", "vue cli", "Vue 2", "javascript marathon"],
 	},
 	{
-		title: "Master State Management in Vue with VueX - JavaScript Marathon",
-		author: "This Dot Labs",
+		title: "Master State Management in Vue with VueX",
+		author: "Simone Cuomo",
 		image: "https://github.com/thisdot.png",
 		description:
 			"State management is an extremely important feature of web applications. In this training, we are going to walk through VueX. Topic covered will include: Installation, basic usage, best practices, modules and much more.",
@@ -172,8 +172,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["Vue 2", "vuex", "state management", "javascript marathon"],
 	},
 	{
-		title: "Learning Unit Testing in Vue - JavaScript Marathon",
-		author: "This Dot Labs",
+		title: "Learning Unit Testing in Vue",
+		author: "Simone Cuomo",
 		image: "https://github.com/thisdot.png",
 		description:
 			"TDD (Test driven development), is every developer’s dream. This training will teach you how to do testing right in Vue.js with the help of vue-test-util and jest. We will also cover a variety of test scenarios to support you in improving your testing knowledge.",
@@ -184,8 +184,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["Vue 2", "testing", "javascript marathon"],
 	},
 	{
-		title: "Pro Tips on Using AWS with Vue - JavaScript Marathon",
-		author: "This Dot Labs",
+		title: "Pro Tips on Using AWS with Vue",
+		author: "Simone Cuomo",
 		image: "https://github.com/thisdot.png",
 		description:
 			"Cloud infrastructure can be scary, but AWS makes this task so much easier.In this training, we are going to walk you through how to set up your Vue.js application on AWS with Amplify.",
@@ -202,8 +202,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		],
 	},
 	{
-		title: "JavaScript Marathon | Vite Training with Anthony",
-		author: "This Dot Labs",
+		title: "Vite Training with Anthony",
+		author: "Anthony Fu",
 		image: "https://github.com/thisdot.png",
 		description:
 			"In this training session, Anthony Fu will walk you through getting started with Vite! Learn how it works, how it'll benefit you and your workflow, and why it's a must-use library! Use Vite with React, Svelte, and more!",
@@ -214,9 +214,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["vite", "Vue 2", "Vue 3", "javascript marathon"],
 	},
 	{
-		title:
-			"Effectively Using the New Vue Composition API - JavaScript Marathon",
-		author: "This Dot Labs",
+		title: "Effectively Using the New Vue Composition API",
+		author: "Jake Dohm",
 		image: "https://github.com/thisdot.png",
 		description:
 			"Come join us as we walk through the new Composition API that will be released as part of Vue 3. The Composition API is a way to abstract functionality in your application, using some new internal APIs that Vue is exposing. Inspired by React Hooks, it makes it much easier to share logic, data, and methods across components in your app.",
@@ -227,8 +226,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["Vue 3", "javascript marathon"],
 	},
 	{
-		title: "Debugging Vue: Quick Tips and Tricks - JavaScript Marathon",
-		author: "This Dot Labs",
+		title: "Debugging Vue: Quick Tips and Tricks",
+		author: "Simone Cuomo",
 		image: "https://github.com/thisdot.png",
 		description:
 			"Let's face it - our code is never perfect! There are times when debugging is necessary, and debugging a Vue.js application has never been easier. This session is going to show you how to debug your code using Vue Devtools and Visual Studio Code. ",

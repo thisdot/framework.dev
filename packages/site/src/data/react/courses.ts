@@ -305,8 +305,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["state management", "data fetching", "forms", "hooks"],
 	},
 	{
-		title: "JavaScript Marathon | Vite Training with Anthony",
-		author: "This Dot Labs",
+		title: "Vite Training with Anthony",
+		author: "Anthony Fu",
 		image: "https://github.com/thisdot.png",
 		description:
 			"In this training session, Anthony Fu will walk you through getting started with Vite! Learn how it works, how it'll benefit you and your workflow, and why it's a must-use library! Use Vite with React, Svelte, and more!",
@@ -317,8 +317,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["vite",  "javascript marathon"],
 	},
 	{
-		title: "1 Hour to Learn React - JavaScript Marathon",
-		author: "This Dot Labs",
+		title: "1 Hour to Learn React",
+		author: "Rob Ocel",
 		image: "https://github.com/thisdot.png",
 		description:
 			"Learning React is easy. We're going to create a new project using the Create React App CLI and introduce the JSX templating syntax.",
@@ -329,8 +329,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["hooks", "data fetching", "css", "javascript marathon"],
 	},
 	{
-		title: "React... Suspense… - JavaScript Marathon",
-		author: "This Dot Labs",
+		title: "React... Suspense…",
+		author: "Kent C. Dodds",
 		image: "https://github.com/thisdot.png",
 		description:
 			"React Suspense is coming and it's going to be awesome. It's currently in alpha and you can play around with it. In this tutorial we'll focus on the fundamentals of how React Suspense works (in its experimental form) and how that can help improve the user experience.",
@@ -341,8 +341,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["data fetching", "javascript marathon"],
 	},
 	{
-		title: "JavaScript Marathon: Fullstack React + GraphQL in 60 Minutes",
-		author: "This Dot Labs",
+		title: "Fullstack React + GraphQL in 60 Minutes",
+		author: "Shawn Wang",
 		image: "https://github.com/thisdot.png",
 		description:
 			"In this session we will learn how to build a fullstack serverless React + GraphQL app from scratch with authentication, storage, and multiplayer realtime collaboration, all atop infinitely scalable AWS components, with AWS Amplify! It's never been this easy to go from idea to prototype, and each piece will be livecoded in front of your very eyes!",
@@ -353,8 +353,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["graphQL", "authentication", "aws", "data fetching", "javascript marathon"],
 	},
 	{
-		title: "An Introduction to Netlify with React - JavaScript Marathon",
-		author: "This Dot Labs",
+		title: "An Introduction to Netlify with React",
+		author: "Rob Ocel",
 		image: "https://github.com/thisdot.png",
 		description:
 			"Netlify is a service for automating your site's hosting, continuous integration, continuous deployment, and serverless requirements.",
@@ -365,8 +365,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["netlify", "continuous integration", "javascript marathon"],
 	},
 	{
-		title: "An Introduction to Gatsby with React - JavaScript Marathon",
-		author: "This Dot Labs",
+		title: "An Introduction to Gatsby with React",
+		author: "Rob Ocel",
 		image: "https://github.com/thisdot.png",
 		description:
 			"Static site generators are one of the hottest technologies, and GatsbyJS is one of the most popular static site generators (especially for React).",
@@ -377,8 +377,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["gatsbyJS", "ssg", "javascript marathon"],
 	},
 	{
-		title: "Using GraphQL with React - JavaScript Marathon",
-		author: "This Dot Labs",
+		title: "Using GraphQL with React",
+		author: "Chris Whited",
 		image: "https://github.com/thisdot.png",
 		description:
 			"This training will focus on the GraphQL system, libs we can use to interact with GraphQL APIs, structuring our components to think in our graph type system, and using this type system to build resilient components.",
@@ -390,7 +390,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	},
 	{
 		title: "Databases made easy in React with GraphQL and FaunaDB",
-		author: "This Dot Labs",
+		author: "Brecht De Rooms",
 		image: "https://github.com/thisdot.png",
 		description:
 			"In this training, we will learn how to build stateful applications with ReachJS using FaunaDB as the serverless datastore. We will setup an efficient GraphQL endpoint in minutes and plug it into a ReactJS frontend to fetch user profiles for our app.",
