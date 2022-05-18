@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css"
 import { breakpoints, sprinkles } from "../../sprinkles/sprinkles.css"
+import { vars } from "../../themes/themes.css"
 import { pxToRem } from "../../util/style-utils"
 
 export const resourcesInfoBannerStyle = style([
@@ -8,11 +9,12 @@ export const resourcesInfoBannerStyle = style([
 		layout: "stack",
 		gap: 20,
 		padding: { desktop: 56, mobile: "auto" },
+		// backgroundColor:  'surface5'
 	}),
 	{
 		"@media": {
 			[breakpoints.desktop]: {
-				backgroundColor: "var(--banner-background)",
+				backgroundColor: vars.themeColors.surface5,
 			},
 		},
 	},

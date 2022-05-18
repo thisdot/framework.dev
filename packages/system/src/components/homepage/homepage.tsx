@@ -116,7 +116,6 @@ export function Homepage({
 					title="Other Frameworks"
 					description="Explore some of the top resources added by a community to learn or be up to date with your framework"
 					resourceCards={resourceCards}
-					backgroundColor="#00687a1f"
 					className={sprinkles({
 						borderRadius: 40,
 					})}

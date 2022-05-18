@@ -6,11 +6,8 @@ import {
 	resourcesInfoBannerHeadingStyle,
 	resourcesInfoBannerStyle,
 } from "./resources-info-banner.css"
-
-// Test
 import { LinkCardGroup as LinkCardGroupComponent } from "./link-card-group"
 import { LinkCardProps } from "./link-card"
-import { vars } from "../../themes/themes.css"
 
 export interface ResourcesInfoBannerProps
 	extends React.ComponentPropsWithoutRef<"div"> {
@@ -26,16 +23,12 @@ export function ResourcesInfoBanner({
 	resourceCards,
 	title,
 	description,
-	backgroundColor = '',
 	...props
 }: ResourcesInfoBannerProps) {
 	return (
 		<div
 			{...props}
 			className={classNames(className, resourcesInfoBannerStyle)}
-			style={
-				{ "--banner-background": backgroundColor || vars.palette.neutralVariant99 } as React.CSSProperties
-			}
 		>
 			<h4 className={resourcesInfoBannerHeadingStyle}>{title}</h4>
 			<p className={resourcesInfoBannerDescriptionStyle}>{description}</p>
