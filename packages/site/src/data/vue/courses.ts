@@ -168,7 +168,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		paymentType: "free",
 		level: "beginner",
 		format: "video",
-		href: "https://youtu.be/15Yr-J4X34M",
+		href: "https://youtu.be/KO4KQ2tjG_M",
 		tags: ["Vue 2", "vuex", "state management", "javascript marathon"],
 	},
 	{
