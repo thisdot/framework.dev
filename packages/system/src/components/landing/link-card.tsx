@@ -9,13 +9,14 @@ import {
 	linkCardRawIconContainerStyle,
 } from "./link-card.css"
 import { ExternalLinkIcon } from "../../icons/external-link"
+import { IconProps } from "../../icons/shared-icon-types"
 
 export interface LinkCardProps extends React.ComponentPropsWithoutRef<"a"> {
 	title: string
 	href: string
 	bigSize?: boolean
-	icon?: string
-	rawIcon?: string
+	Icon?: (props: IconProps) => JSX.Element
+	RawIcon?: (props: IconProps) => JSX.Element
 	backgroundColor?: string
 	color?: string
 }
@@ -24,11 +25,11 @@ export function LinkCard({
 	className,
 	title,
 	href,
-	icon,
-	rawIcon,
+	Icon,
+	RawIcon,
 	bigSize,
 	backgroundColor,
-	color = 'white',
+	color = "white",
 	...props
 }: LinkCardProps) {
 	return (
@@ -39,18 +40,21 @@ export function LinkCard({
 			rel="noreferrer noopener"
 			{...props}
 			style={
-				{ "--link-card-background": backgroundColor, "--link-card-color-theme": color } as React.CSSProperties
+				{
+					"--link-card-background": backgroundColor,
+					"--link-card-color-theme": color,
+				} as React.CSSProperties
 			}
 		>
-			{icon && (
+			{Icon && (
 				<span className={linkCardIconContainerStyle}>
-					<img className={linkCardIconStyle} src={icon} alt={title} />
+					<Icon size="full" className={linkCardIconStyle} />
 				</span>
 			)}
 
-			{rawIcon && (
+			{RawIcon && (
 				<span className={linkCardRawIconContainerStyle}>
-					<img src={rawIcon} alt={title} />
+					<RawIcon size="full" />
 				</span>
 			)}
 

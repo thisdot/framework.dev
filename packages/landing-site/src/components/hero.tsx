@@ -1,6 +1,6 @@
 import { Hero as _Hero } from "@framework/system/src/components/landing/hero"
+import { FRAMEWORK_RESOURCES } from "@framework/system/src/globals/global-constants"
 import { FrameworkDevRawIcon } from "@framework/system/src/icons/framework-dev-raw-icon"
-import { FRAMEWORK_RESOURCES } from "../constants"
 
 export default function Hero() {
 	return (

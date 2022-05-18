@@ -1,4 +1,5 @@
 import { Story, Meta } from "@storybook/react"
+import { ReactIcon } from "../../icons/react-icon"
 import { LinkCard as LinkCardComponent, LinkCardProps } from "./link-card"
 
 export default {
@@ -13,7 +14,9 @@ export const LinkCard = Template.bind({})
 LinkCard.args = {
 	title: "React Resources",
 	href: "https://react.framework.dev/",
-	icon: "/icon-react.svg",
+	Icon(props) {
+		return <ReactIcon {...props} />
+	},
 	backgroundColor: "#00BCDA",
 	bigSize: true,
 }

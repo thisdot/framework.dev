@@ -4,7 +4,7 @@ import { scrollable } from '@framework/system/src/styles/layouts.css'
 import BaseLayout from '../layouts/base.astro'
 import Homepage from '../components/homepage.tsx'
 import { getSearchData } from '../data/search-data'
-import { FRAMEWORK_RESOURCES } from "../constants"
+import { FRAMEWORK_RESOURCES } from "@framework/system/src/globals/global-constants"
 
 const searchData = await getSearchData(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)
 const libraries = searchData.find(category => category.name === "libraries")
@@ -30,8 +30,11 @@ const searchableWebsiteStructuredData = {
 	}
 }
 
-const cardResources = FRAMEWORK_RESOURCES().filter((resource) => 
-	!resource.title.toLowerCase().includes(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)
+const resourceCards = FRAMEWORK_RESOURCES().filter(
+	(resource) =>
+		!resource.title
+			.toLowerCase()
+			.includes(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)
 )
 ---
 <head>
@@ -49,6 +52,6 @@ const cardResources = FRAMEWORK_RESOURCES().filter((resource) =>
 		tools={tools?.data}
 		communities={communities?.data}
 		siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}
-		cardResources={cardResources}
+		resourceCards={resourceCards}
 	/>
 </BaseLayout>

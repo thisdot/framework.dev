@@ -26,6 +26,7 @@ import { Community } from "../../models/community"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { ResourcesInfoBanner } from "../landing/resources-info-banner"
 import { LinkCardProps } from "../landing/link-card"
+import { LogoIcon } from "../../icons/logo-icon"
 
 export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
 	librariesTitle: string
@@ -38,7 +39,7 @@ export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
 	tools: Tool<string>[]
 	communities: Community<string>[]
 	siteName: string
-	cardResources: LinkCardProps[]
+	resourceCards: LinkCardProps[]
 }
 
 export function Homepage({
@@ -53,9 +54,19 @@ export function Homepage({
 	tools,
 	communities,
 	siteName,
-	cardResources,
+	resourceCards,
 	...props
 }: HomepageProps) {
+	resourceCards.unshift({
+		title: "Framework.dev",
+		href: "https://framework.dev/",
+		RawIcon(props) {
+			return <LogoIcon {...props} />
+		},
+		backgroundColor: "#F6FDFF",
+		color: "#2E3132",
+	})
+
 	return (
 		<div className={classNames(className, homepageStyle)} {...props}>
 			<div
@@ -104,7 +115,7 @@ export function Homepage({
 				<ResourcesInfoBanner
 					title="Other Frameworks"
 					description="Explore some of the top resources added by a community to learn or be up to date with your framework"
-					cardResources={cardResources}
+					resourceCards={resourceCards}
 					backgroundColor="#00687a1f"
 					className={sprinkles({
 						borderRadius: 40,

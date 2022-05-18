@@ -1,4 +1,7 @@
 import { Story, Meta } from "@storybook/react"
+import { AngularIcon } from "../../icons/angular-icon"
+import { ReactIcon } from "../../icons/react-icon"
+import { VueIcon } from "../../icons/vue-icon"
 import { Hero as HeroComponent, HeroProps } from "./hero"
 
 export default {
@@ -19,21 +22,27 @@ Hero.args = {
 	},
 	linkCards: [
 		{
-			title: "React Resources",
-			href: "https://react.framework.dev/",
-			icon: "/icon-react.svg",
-			backgroundColor: "#00BCDA",
-		},
-		{
 			title: "Angular Resources",
 			href: "https://angular.framework.dev/",
-			icon: "/icon-angular.svg",
+			Icon(props) {
+				return <AngularIcon {...props} />
+			},
 			backgroundColor: "#C3002F",
+		},
+		{
+			title: "React Resources",
+			href: "https://react.framework.dev/",
+			Icon(props) {
+				return <ReactIcon {...props} />
+			},
+			backgroundColor: "#00BCDA",
 		},
 		{
 			title: "Vue Resources",
 			href: "https://vue.framework.dev/",
-			icon: "/icon-vue.svg",
+			Icon(props) {
+				return <VueIcon {...props} />
+			},
 			backgroundColor: "#41B883",
 		},
 	],

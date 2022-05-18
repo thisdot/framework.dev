@@ -16,14 +16,14 @@ export interface ResourcesInfoBannerProps
 	extends React.ComponentPropsWithoutRef<"div"> {
 	title: string
 	description: string
-	cardResources: LinkCardProps[]
+	resourceCards: LinkCardProps[]
 	backgroundColor?: string
 }
 
 export function ResourcesInfoBanner({
 	children,
 	className,
-	cardResources,
+	resourceCards,
 	title,
 	description,
 	backgroundColor = '',
@@ -41,7 +41,7 @@ export function ResourcesInfoBanner({
 			<p className={resourcesInfoBannerDescriptionStyle}>{description}</p>
 			<LinkCardGroupComponent
 				className={resourcesInfoBannerCardsStyle}
-				cards={cardResources}
+				cards={resourceCards}
 			/>
 		</div>
 	)
