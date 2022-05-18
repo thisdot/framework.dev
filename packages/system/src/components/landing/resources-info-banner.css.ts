@@ -9,7 +9,6 @@ export const resourcesInfoBannerStyle = style([
 		layout: "stack",
 		gap: 20,
 		padding: { desktop: 56, mobile: "auto" },
-		// backgroundColor:  'surface5'
 	}),
 	{
 		"@media": {
