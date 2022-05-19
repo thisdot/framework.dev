@@ -7,14 +7,14 @@ export const courseTags = [
 	"routing",
 	"testing",
 	"services",
-	"rxjs",
+	"RxJS",
 	"ngRx",
 	"javascript marathon",
 	"nx monorepo",
-	"ignite ui",
+	"ignite UI",
 	"ivy",
-	"pwa",
-	"a11y",
+	"PWA",
+	"A11Y",
 	"pipes",
 	"angular patterns",
 ] as const
@@ -60,7 +60,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "interactive",
 		href: "https://www.rxjs-fruits.com/subscribe",
-		tags: ["rxjs"],
+		tags: ["RxJS"],
 	},
 	{
 		title: "Using Angular Libraries in an Nx Monorepo",
@@ -84,7 +84,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/oFDVf0shWYE",
-		tags: ["rxjs", "javascript marathon"],
+		tags: ["RxJS", "javascript marathon"],
 	},
 	{
 		title: "1 Hour to Learn Angular",
@@ -113,7 +113,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/Yvgfk5EAFws",
-		tags: ["rxjs", "javascript marathon"],
+		tags: ["RxJS", "javascript marathon"],
 	},
 	{
 		title: "Build Angular Apps in Minutes",
@@ -125,7 +125,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/kOYO3_L_zJM",
-		tags: ["ignite ui", "javascript marathon"],
+		tags: ["ignite UI", "javascript marathon"],
 	},
 	{
 		title: "Advanced NgRx: Complex Angular State Management",
@@ -161,7 +161,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/9hL0WabUoSc",
-		tags: ["pwa", "javascript marathon"],
+		tags: ["PWA", "javascript marathon"],
 	},
 	{
 		title: "Easy Angular Unit Testing in NgRx",
@@ -185,7 +185,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/JsS052A1CVg",
-		tags: ["a11y", "javascript marathon"],
+		tags: ["A11Y", "javascript marathon"],
 	},
 	{
 		title: "A Guide to Advanced Angular Patterns (Route Guards, Pipes, Interceptors & more)",
