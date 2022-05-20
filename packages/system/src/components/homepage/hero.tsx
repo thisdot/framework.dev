@@ -52,21 +52,21 @@ export function Hero({ className, siteName, ...props }: HeroProps) {
 			<div className={heroFeatureHighlightRowStyle}>
 				<a
 					className={heroFeatureHighlightStyle}
-					href="https://react.framework.dev/categories/libraries"
+					href="/categories/libraries"
 				>
 					<SearchFeatureHighlightIcon />
 					<p className={heroFeatureHighlightTitleStyle}>Search</p>
 				</a>
 				<a
 					className={heroFeatureHighlightStyle}
-					href="https://react.framework.dev/categories/libraries"
+					href="/categories/libraries"
 				>
 					<CompareFeatureHighlightIcon />
 					<p className={heroFeatureHighlightTitleStyle}>Compare</p>
 				</a>
 				<a
 					className={heroFeatureHighlightStyle}
-					href="https://react.framework.dev/categories/libraries"
+					href="/categories/libraries"
 				>
 					<BrowseFeatureHighlightIcon />
 					<p className={heroFeatureHighlightTitleStyle}>Discover</p>
