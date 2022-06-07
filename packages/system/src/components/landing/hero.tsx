@@ -37,7 +37,9 @@ export function Hero({ className, heroText, linkCards, ...props }: HeroProps) {
 						<h1 className={heroTitleStyle}>
 							{heroText.highlightedTitle}
 
-							{heroText.icon && <span className={heroIconTyle}>{heroText.icon}</span>}
+							{heroText.icon && (
+								<span className={heroIconTyle}>{heroText.icon}</span>
+							)}
 
 							{heroText.softTitle && (
 								<span className={heroSoftTitleStyle}>
