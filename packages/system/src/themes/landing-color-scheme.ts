@@ -11,7 +11,7 @@ export const landingColorPalette: ColorPalette = {
 	primary70: "#00bcda",
 	primary60: "#009fb9",
 	primary50: "#008399",
-	primary40: "#00687a",
+	primary40: "#f6fdff",
 	primary30: "#004e5c",
 	primary20: "#003640",
 	primary10: "#001f26",

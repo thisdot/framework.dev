@@ -1,6 +1,6 @@
 import { Hero as _Hero } from "@framework/system/src/components/landing/hero"
+import { FRAMEWORK_RESOURCES } from "@framework/system/src/globals/global-constants"
 import { FrameworkDevIcon } from "@framework/system/src/icons/framework-dev-icon"
-import { FRAMEWORK_RESOURCES } from "../constants"
 
 export default function Hero() {
 	return (
@@ -11,7 +11,7 @@ export default function Hero() {
 				subtitle:
 					"Search for top web technologies, compare key features, and discover community-curated resources to help you learn!",
 			}}
-			linkCards={FRAMEWORK_RESOURCES}
+			linkCards={FRAMEWORK_RESOURCES(true)}
 		/>
 	)
 }

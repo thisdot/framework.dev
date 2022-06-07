@@ -4,9 +4,9 @@ import { pxToRem } from "../../util/style-utils"
 
 export const linkCardStyle = style([
 	sprinkles({
-		alignItems: "center",
-		borderRadius: 12,
 		layout: "row",
+		borderRadius: 12,
+		alignItems: { desktop: 'start', mobile: 'center' },
 		flexDirection: { desktop: "column", mobile: "row" },
 		justifyContent: { desktop: "space-between", mobile: "flex-start" },
 		paddingLeft: 16,
@@ -14,15 +14,13 @@ export const linkCardStyle = style([
 		paddingY: 16,
 	}),
 	{
+		position: "relative",
 		backgroundColor: "var(--card-background)",
-		alignItems: "center",
 		filter: "brightness(100%)",
 		overflow: "hidden",
-		position: "relative",
 		"@media": {
 			[breakpoints.desktop]: {
 				gap: pxToRem(38),
-				alignItems: "flex-start",
 			},
 		},
 		selectors: {
@@ -45,7 +43,7 @@ export const linkCardStyle = style([
 				zIndex: -1,
 			},
 			"&:hover&:before": {
-				filter: "brightness(90%)",
+				filter: "brightness(80%)",
 			},
 		},
 	},
@@ -53,10 +51,10 @@ export const linkCardStyle = style([
 
 export const linkCardIndicatorIconStyle = style([
 	sprinkles({
-		color: "white",
 		height: "auto",
 	}),
 	{
+		color: "var(--link-card-color-theme)",
 		pointerEvents: "none",
 		position: "absolute",
 		right: pxToRem(20),
@@ -81,9 +79,18 @@ export const linkCardIconContainerStyle = style([
 		marginRight: 16,
 	}),
 	{
-		height: pxToRem(48),
+		height: pxToRem(56),
 		position: "relative",
-		width: pxToRem(48),
+		width: pxToRem(56),
+	},
+])
+
+export const linkCardRawIconContainerStyle = style([
+	{
+		marginRight: 16,
+		height: pxToRem(56),
+		position: "relative",
+		width: pxToRem(56),
 	},
 ])
 
@@ -102,15 +109,10 @@ export const linkCardIconStyle = style([
 
 export const linkCardTitleStyle = style([
 	sprinkles({
-		color: "white",
-		textStyle: { desktop: "h400", mobile: "h100" },
+		textStyle: { desktop: "h100", mobile: "h100" },
 		width: { desktop: "full", mobile: "auto" },
 	}),
 	{
-		"@media": {
-			[breakpoints.desktop]: {
-				fontSize: pxToRem(18),
-			},
-		},
+		color: "var(--link-card-color-theme)",
 	},
 ])
