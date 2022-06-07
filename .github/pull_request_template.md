@@ -16,7 +16,7 @@
 
 <!-- Delete if your change is not a content addition -->
 
-- [ ] The changes follow the [contributing guidelines](../CONTRIBUTING.md)
+- [ ] The changes follow the [contributing guidelines](https://github.com/thisdot/framework.dev/blob/main/CONTRIBUTING.md)
 - [ ] I have searched all existing content and verified my additions are novel
       and unique
 - [ ] The content was added to the end of the appropriate data list
@@ -26,7 +26,7 @@
 <!-- Delete if your change is not a bug fix -->
 
 - [ ] This fix resolves #<!-- replace with issue number -->
-- [ ] The changes follow the [contributing guidelines](../CONTRIBUTING.md)
+- [ ] The changes follow the [contributing guidelines](https://github.com/thisdot/framework.dev/blob/main/CONTRIBUTING.md)
 - [ ] I have verified the fix works and introduces no further errors
 
 <!-- Delete if your change is not a behaviour change -->
@@ -34,7 +34,7 @@
 - [ ] This change resolves #<!-- replace with issue number -->
 - [ ] I have confirmed with a maintainer that this change is desired and been
       given the go-ahead to work on it in the relevant issue discussion
-- [ ] The changes follow the [contributing guidelines](../CONTRIBUTING.md)
+- [ ] The changes follow the [contributing guidelines](https://github.com/thisdot/framework.dev/blob/main/CONTRIBUTING.md)
 - [ ] I have verified the change and the rest of the site works as expected
 - [ ] If the change introduces new components, these have been added to
       `packages/system/src/components` with a `.stories.tsx` file that

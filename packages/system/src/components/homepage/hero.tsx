@@ -1,13 +1,10 @@
 import classNames from "classnames"
 import React from "react"
-import { FrameworkDevIcon } from "../../icons/framework-dev-icon"
 import { formatFieldName } from "../../util/string-utils"
 import {
 	heroStyle,
 	heroHeadingStyle,
 	heroParagraphStyle,
-	heroHeadingHighlightStyle,
-	heroHeadingSigilStyle,
 	heroLinesStyle,
 	heroBackgroundStyle,
 	heroContainerStyle,
@@ -18,6 +15,7 @@ import {
 } from "./hero.css"
 import { getBackgroundImage } from "./hero-images"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { Logo } from "../logo"
 
 export interface HeroProps extends React.ComponentPropsWithoutRef<"div"> {
 	siteName: string
@@ -34,15 +32,7 @@ export function Hero({ className, siteName, ...props }: HeroProps) {
 					alt=""
 					className={heroBackgroundStyle}
 				/>
-				<h1 className={heroHeadingStyle}>
-					<div className={heroHeadingSigilStyle}>
-						<FrameworkDevIcon size="large" />
-					</div>
-					<div>
-						<span className={heroHeadingHighlightStyle}>{siteName}.</span>
-						framework.dev
-					</div>
-				</h1>
+				<Logo className={heroHeadingStyle} siteName={siteName} stretched />
 				<p className={heroParagraphStyle}>
 					Search, compare, and discover top {formatFieldName(siteName)}{" "}
 					libraries and community driven resources in{" "}
@@ -52,21 +42,21 @@ export function Hero({ className, siteName, ...props }: HeroProps) {
 			<div className={heroFeatureHighlightRowStyle}>
 				<a
 					className={heroFeatureHighlightStyle}
-					href="https://react.framework.dev/categories/libraries"
+					href="/categories/libraries"
 				>
 					<SearchFeatureHighlightIcon />
 					<p className={heroFeatureHighlightTitleStyle}>Search</p>
 				</a>
 				<a
 					className={heroFeatureHighlightStyle}
-					href="https://react.framework.dev/categories/libraries"
+					href="/categories/libraries"
 				>
 					<CompareFeatureHighlightIcon />
 					<p className={heroFeatureHighlightTitleStyle}>Compare</p>
 				</a>
 				<a
 					className={heroFeatureHighlightStyle}
-					href="https://react.framework.dev/categories/libraries"
+					href="/categories/libraries"
 				>
 					<BrowseFeatureHighlightIcon />
 					<p className={heroFeatureHighlightTitleStyle}>Discover</p>

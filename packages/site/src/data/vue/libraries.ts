@@ -438,4 +438,14 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Vue I18n is internationalization plugin for Vue.js",
 	},
+	{
+		name: "Harlem",
+		author: "Andrew Courtice",
+		gitHubRepo: "andrewcourtice/harlem",
+		npmPackage: "@harlem/core",
+		href: "https://harlemjs.com/",
+		image: "https://harlemjs.com/assets/images/logo-192.svg",
+		tags: ["state management", "Vue 3"],
+		description: "Simple, unopinionated, lightweight and extensible state management for Vue 3",
+	},
 ]
