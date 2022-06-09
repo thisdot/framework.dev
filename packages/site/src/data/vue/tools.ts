@@ -39,15 +39,6 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		tags: ["Chrome", "Firefox", "Edge"],
 	},
 	{
-		name: "Vue.js devtools",
-		author: "Vue.js",
-		description:
-			"Browser DevTools extension for debugging Vue.js applications.",
-		image: "https://github.com/vuejs.png",
-		href: "https://devtools.vuejs.org/guide/installation.html",
-		tags: ["Chrome", "Firefox", "Edge"],
-	},
-	{
 		name: "Volar",
 		author: "Johnson Chu",
 		description:
