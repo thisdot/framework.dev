@@ -28,6 +28,7 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 			title={library.name}
 			subtitle={library.author}
 			image={library.image}
+			darkImageBackground={library.darkImageBackground}
 			href={library.href}
 			tags={library.tags}
 			badges={
