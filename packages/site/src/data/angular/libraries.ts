@@ -410,18 +410,6 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["framework"],
 	},
 	{
-		name: "angular-prerender",
-		author: "Christoph Guttandin",
-		gitHubRepo: "chrisguttandin/angular-prerender",
-		npmPackage: "angular-prerender",
-		href: "https://github.com/chrisguttandin/angular-prerender",
-		description:
-			"This command line tool is meant to simplify the build process of static Angular apps. It works by analyzing the config file created by the Angular CLI.",
-		image:
-			"https://repository-images.githubusercontent.com/142886533/bd323700-e8ff-11e9-9645-75bc009ee359",
-		tags: ["framework"],
-	},
-	{
 		name: "Ionic",
 		author: "Ionic",
 		gitHubRepo: "ionic-team/ionic-framework",
