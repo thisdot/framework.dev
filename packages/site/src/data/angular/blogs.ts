@@ -39,4 +39,13 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		href: "https://blog.angular-university.io/",
 		tags: [],
 	},
+	{
+		title: "Blog @ Ultimate Courses",
+		author: "Todd Motto",
+		description: "Todd Motto wrote hundreds of blog posts revolving around Angular and covering various topics explained in a concise, beginner-friendly way.",
+		image:
+			"https://ultimatecourses.com/assets/logo-ef24a2d3b6a0febba9ff80a1b01d632db750feb083442d0071dff7426762e0c2.svg",
+		href: "https://ultimatecourses.com/blog/",
+		tags: [],
+	},
 ]
