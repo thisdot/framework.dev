@@ -400,4 +400,16 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		href: "https://youtu.be/_kEDBitNbnY",
 		tags: ["graphQL", "data fetching", "faunaDB", "javascript marathon"],
 	},
+	{
+		title: "Build a Full-Stack App with Next.js, Supabase & Prisma",
+		author: "Grégory D'Angelo",
+		image: "https://github.com/alterclassio.png",
+		description:
+			"Learn to build a full-stack application from scratch using some of the best modern web technologies: React / Next.js, Prisma, and Supabase.",
+		paymentType: "free",
+		level: "beginner",
+		format: "interactive",
+		href: "https://themodern.dev/courses/build-a-fullstack-app-with-nextjs-supabase-and-prisma-322389284337222224",
+		tags: ["state management", "data fetching", "routing", "forms", "authentication", "hooks", "tailwind", "SSG"],
+	},
 ]
