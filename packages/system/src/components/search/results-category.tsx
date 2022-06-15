@@ -27,6 +27,7 @@ import { Blog } from "../../models/blog"
 import { BlogCard } from "../cards/blog-card"
 import { visuallyHidden } from "../../styles/utilities.css"
 import { useId } from "@reach/auto-id"
+import { BannerTooltip } from "../banner-tooltip"
 
 export type ResultsCategoryProps<T extends CategoryName> = Omit<
 	React.ComponentPropsWithoutRef<"div">,
@@ -56,42 +57,55 @@ export function ResultsCategory<T extends CategoryName>({
 		? imageFirstCardGrid
 		: titleFirstCardGrid
 
+	const showBannerTooltip = results.length > 0 && category === "libraries"
+
 	switch (variant) {
 		case "bare":
 			return (
-				<div
-					className={classNames(
-						className,
-						layout,
-						sprinkles({ padding: { mobile: 0, desktop: 24 } })
-					)}
-					{...props}
-				>
-					<ResultsCategoryHeader
-						category={category}
-						numberOfResults={results.length}
-						className={visuallyHidden}
-					/>
-					{results.length > 0 ? (
-						results.map(
-							renderCard({
-								headingTag: "h3",
-								category,
-								onTagClick,
-								onSelect,
-								selectedItems,
-							})
-						)
-					) : (
-						<p
+				<div className={sprinkles({ padding: { mobile: 0, desktop: 24 } })}>
+					{showBannerTooltip && (
+						<BannerTooltip
+							onClick={() => {
+								console.log("click")
+							}}
+							pitchText={{
+								highlightedText: "Compare and select libraries",
+								softText: "based on your needs",
+							}}
+							explanatoryText="Click on icon to add the lib to comparison"
 							className={sprinkles({
-								textStyle: "h100",
+								marginBottom: { mobile: 24, desktop: 40 },
 							})}
-							style={{ textAlign: "center" }}
-						>
-							{`Sorry, no ${category} matched your search.`}
-						</p>
+						/>
 					)}
+
+					<div className={classNames(className, layout)} {...props}>
+						<ResultsCategoryHeader
+							category={category}
+							numberOfResults={results.length}
+							className={visuallyHidden}
+						/>
+						{results.length > 0 ? (
+							results.map(
+								renderCard({
+									headingTag: "h3",
+									category,
+									onTagClick,
+									onSelect,
+									selectedItems,
+								})
+							)
+						) : (
+							<p
+								className={sprinkles({
+									textStyle: "h100",
+								})}
+								style={{ textAlign: "center" }}
+							>
+								{`Sorry, no ${category} matched your search.`}
+							</p>
+						)}
+					</div>
 				</div>
 			)
 		case "withHeading":

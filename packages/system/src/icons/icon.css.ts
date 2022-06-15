@@ -5,6 +5,7 @@ import { pxToRem } from "../util/style-utils"
 export const iconStyle = recipe({
 	variants: {
 		size: {
+			none: {},
 			medium: {
 				height: pxToRem(18),
 				width: pxToRem(18),
@@ -14,9 +15,9 @@ export const iconStyle = recipe({
 				width: pxToRem(24),
 			},
 			full: {
-				height: '100%',
-				width: '100%',
-			}
+				height: "100%",
+				width: "100%",
+			},
 		},
 	},
 	defaultVariants: {
