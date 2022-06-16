@@ -23,5 +23,9 @@ export function formatPercentage(value: number) {
 }
 
 export function formatNumber(value: number) {
+	if (!value) {
+		return
+	}
+
 	return new Intl.NumberFormat().format(value)
 }
