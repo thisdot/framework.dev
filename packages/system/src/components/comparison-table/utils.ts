@@ -23,7 +23,7 @@ export function formatPercentage(value: number) {
 }
 
 export function formatNumber(value: number) {
-	if (!value) {
+	if (value === undefined || value === null) {
 		return
 	}
 
