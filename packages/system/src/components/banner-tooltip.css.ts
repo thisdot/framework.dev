@@ -7,10 +7,10 @@ export const bannerTooltipStyle = style([
 		borderRadius: 40,
 		backgroundColor: "secondaryContainer",
 		display: "flex",
-		gap: { desktop: 64, mobile: 32 },
+		gap: { tablet: 10, mobile: 32, desktop: 20 },
 		flexDirection: { mobile: "column", desktop: "row" },
 		paddingX: { mobile: 24, desktop: 0 },
-		paddingY: { mobile: 32, desktop: 0 },
+		paddingTop: { mobile: 32, desktop: 0 },
 	}),
 	{
 		position: "relative",
@@ -51,46 +51,77 @@ export const bannerTooltipHeadingSoftStyle = sprinkles({
 export const bannerTooltipIconStyle = style([
 	sprinkles({
 		paddingTop: { desktop: 20 },
-		display: "flex",
-		gap: 12,
-		justifyContent: { mobile: "center", desktop: "flex-start" },
+		display: "grid",
 	}),
+	{
+		gridTemplateColumns: "1fr 1fr",
+		gridTemplateRows: "min-content",
+		gap: 10,
+		alignItems: "center",
+		"@media": {
+			[breakpoints.tablet]: {
+				width: "50%",
+				margin: "0 auto",
+			},
+			[breakpoints.desktop]: {
+				maxWidth: pxToRem(340),
+				margin: 0,
+				marginLeft: "auto",
+			},
+		},
+	},
 ])
 
 export const bannerTooltipExplanatoryText = style([
 	sprinkles({
 		color: "secondary",
-		marginBottom: 56,
 		textStyle: "bodyShort2",
+		marginLeft: { desktop: 20 },
 	}),
 	{
 		width: pxToRem(143),
-		marginLeft: 20,
 		textAlign: "center",
+		justifySelf: "end",
+		"@media": {
+			[breakpoints.tablet]: {
+				justifySelf: "start",
+			},
+		},
 	},
 ])
 
-export const bannerTooltipCardIcon = style([
+export const bannerTooltipWavyArrowIcon = style([
 	sprinkles({
-		width: { desktop: "auto", mobile: "full" },
+		width: { tablet: "auto" },
 	}),
 	{
-		bottom: "0",
-		position: "absolute",
+		"@media": {
+			[breakpoints.tablet]: {
+				justifySelf: "end",
+				marginRight: pxToRem(24),
+			},
+			[breakpoints.desktop]: {
+				width: pxToRem(130),
+			},
+		},
 	},
 ])
 
+export const bannerTooltipCardIcon = style({
+	gridColumn: "1/3",
+	alignSelf: "end",
+	justifySelf: "center",
+})
+
 export const bannerTooltipCloseIcon = style({
-	alignSelf: "center",
-	width: pxToRem(25),
 	position: "absolute",
-	right: pxToRem(20),
 	top: "5%",
+	right: pxToRem(20),
 	"@media": {
 		[breakpoints.desktop]: {
-			position: "relative",
-			right: 0,
-			top: 0,
+			alignSelf: "center",
+			justifySelf: "end",
+			position: "static",
 			marginLeft: "auto",
 			marginRight: 32,
 		},

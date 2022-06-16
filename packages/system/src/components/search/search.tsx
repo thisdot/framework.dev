@@ -25,7 +25,6 @@ import { FilterIcon } from "../../icons/filter-icon"
 import { FilterSet, QueryParams } from "./types"
 import { uniq, map, sortBy, take, without } from "lodash"
 import { Library } from "../../models/library"
-import { OpenIcon } from "../../icons/open-icon"
 import { ComparisonTable } from "../comparison-table"
 import { CloseIcon } from "../../icons/close-icon"
 import { ResetIcon } from "../../icons/reset-icon"
@@ -331,20 +330,6 @@ function ComparisonBar({
 			className={compareBarStyle}
 			aria-label={`Compare ${selectedLibraries.length} libraries`}
 		>
-			<button
-				className={sprinkles({
-					textStyle: "button",
-					layout: "row",
-					alignItems: "center",
-					gap: 4,
-				})}
-				type="submit"
-			>
-				<OpenIcon size="large" /> Compare ({selectedLibraries.length})
-			</button>
-			<Button color="tertiary" onClick={() => onSelectionChange(allLibraries)}>
-				Select all
-			</Button>
 			<div
 				className={sprinkles({ display: { mobile: "none", desktop: "block" } })}
 			>
@@ -362,6 +347,24 @@ function ComparisonBar({
 					<ResetIcon />
 				</Button>
 			</div>
+
+			<Button color="tertiary" onClick={() => onSelectionChange(allLibraries)}>
+				Select all
+			</Button>
+
+			<Button
+				color="secondary"
+				className={sprinkles({
+					textStyle: "button",
+					layout: "row",
+					alignItems: "center",
+					gap: 4,
+				})}
+				type="submit"
+				onClick={() => onSelectionChange(allLibraries)}
+			>
+				 Compare ({selectedLibraries.length})
+			</Button>
 		</form>
 	)
 }

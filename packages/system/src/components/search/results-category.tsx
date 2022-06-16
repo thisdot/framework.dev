@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import classNames from "classnames"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { startCase } from "lodash"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { BookCard } from "../cards/book-card"
@@ -28,6 +28,7 @@ import { BlogCard } from "../cards/blog-card"
 import { visuallyHidden } from "../../styles/utilities.css"
 import { useId } from "@reach/auto-id"
 import { BannerTooltip } from "../banner-tooltip"
+import { LocalStorageItems } from "../../models/common"
 
 export type ResultsCategoryProps<T extends CategoryName> = Omit<
 	React.ComponentPropsWithoutRef<"div">,
@@ -51,13 +52,18 @@ export function ResultsCategory<T extends CategoryName>({
 	selectedItems = [],
 	...props
 }: ResultsCategoryProps<T>) {
+	const [showBannerTooltip, setShowBannerTooltip] = useState<boolean>(false)
 	const headerId = useId()
 
 	const layout = ["books", "communities", "podcasts"].includes(category)
 		? imageFirstCardGrid
 		: titleFirstCardGrid
 
-	const showBannerTooltip = results.length > 0 && category === "libraries"
+		useEffect(() => {
+			setShowBannerTooltip(results.length > 0 &&
+				category === "libraries" &&
+				!localStorage.getItem(LocalStorageItems.CompareToolTip))
+		}, [category, results.length])
 
 	switch (variant) {
 		case "bare":
@@ -66,7 +72,8 @@ export function ResultsCategory<T extends CategoryName>({
 					{showBannerTooltip && (
 						<BannerTooltip
 							onClick={() => {
-								console.log("click")
+								setShowBannerTooltip(false);
+								localStorage.setItem(LocalStorageItems.CompareToolTip, "true")
 							}}
 							pitchText={{
 								highlightedText: "Compare and select libraries",

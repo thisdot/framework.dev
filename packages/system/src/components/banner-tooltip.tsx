@@ -11,6 +11,7 @@ import {
 	bannerTooltipCardIcon,
 	bannerTooltipExplanatoryText,
 	bannerTooltipCloseIcon,
+	bannerTooltipWavyArrowIcon,
 } from "./banner-tooltip.css"
 
 export interface BannerTooltipProps
@@ -43,14 +44,9 @@ export function BannerTooltip({
 			<div className={bannerTooltipIconStyle}>
 				<p className={bannerTooltipExplanatoryText}>{explanatoryText}</p>
 
-				<WavyArrowIcon size="none" width="137" height="39" />
+				<WavyArrowIcon size="full" className={bannerTooltipWavyArrowIcon} />
 
-				<LibraryCardIcon
-					className={bannerTooltipCardIcon}
-					size="none"
-					width="340"
-					height="64"
-				/>
+				<LibraryCardIcon size="full" className={bannerTooltipCardIcon}  />
 			</div>
 
 			<button className={bannerTooltipCloseIcon} onClick={onClick}>
