@@ -17,6 +17,10 @@ export function sortLibraries(
 }
 
 export function formatPercentage(value: number) {
+	if (value === undefined || value === null) {
+		return
+	}
+
 	return new Intl.NumberFormat([], {
 		style: "percent",
 	}).format(value)
