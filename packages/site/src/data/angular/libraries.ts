@@ -7,7 +7,7 @@ export const libraryTags = [
 	"documentation",
 	"styling",
 	"component",
-	"loggin",
+	"logging",
 	"RxJS",
 	"performance tools",
 	"redux",
@@ -131,7 +131,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Lumberjack is a versatile Angular logging library, specifically designed to be extended and customized. It provides a few simple log drivers (logging mechanisms, transports, log drivers) out-of-the-box.",
 		image:
 			"https://raw.githubusercontent.com/ngworker/lumberjack/main/logo.svg",
-		tags: ["loggin"],
+		tags: ["logging"],
 	},
 	{
 		name: "RxAngular",
