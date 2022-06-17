@@ -1,9 +1,10 @@
 import { style, keyframes, styleVariants } from "@vanilla-extract/css"
+import { vars } from "../themes/themes.css"
 import { pxToRem } from "../util/style-utils"
 
 const base = style({
-	height: "var(--skeleton-height)" || "auto",
-	width: "var(--skeleton-width)" || "auto",
+	height: "var(--skeleton-height)",
+	width: "var(--skeleton-width)",
 })
 
 export const skeletonVariants = styleVariants({
@@ -24,10 +25,10 @@ export const skeletonVariants = styleVariants({
 
 const skeletonLoading = keyframes({
 	"0%": {
-		backgroundColor: "lightgray",
+		backgroundColor:vars.palette.neutral60,
 	},
 	"100%": {
-		backgroundColor: "gray",
+		backgroundColor: vars.palette.neutral40,
 	},
 })
 

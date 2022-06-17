@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import React from "react"
-import { sprinkles } from "../sprinkles/sprinkles.css"
+import { pxToRem } from "../util/style-utils"
 import { skeletonAnimated, skeletonVariants } from "./skeleton.css"
 
 type VariantOptions = "circle" | "text"
@@ -21,18 +21,11 @@ export function Skeleton({
 }: SkeletonProps) {
 	return (
 		<div
-			className={classNames(
-				skeletonAnimated,
-				skeletonVariants[variant],
-				sprinkles({
-					height: "auto",
-					width: "auto",
-				})
-			)}
+			className={classNames(skeletonAnimated, skeletonVariants[variant])}
 			style={
 				{
-					"--skeleton-height": height,
-					"--skeleton-width": width,
+					"--skeleton-height": height ? pxToRem(height) : '100%',
+					"--skeleton-width": width ? pxToRem(width) : '100%',
 				} as React.CSSProperties
 			}
 			{...props}

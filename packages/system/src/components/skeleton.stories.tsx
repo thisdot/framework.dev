@@ -5,14 +5,12 @@ export default {
 	title: "Skeleton",
 	component: SkeletonComponent,
 	args: {
-		children: "Hello world",
-	}
+		variant: "circle",
+		height: 20,
+		width: 20,
+	},
 } as Meta
 
 const Template: Story<SkeletonProps> = (args) => <SkeletonComponent {...args} />
 
 export const Skeleton = Template.bind({})
-
-Skeleton.args = {
-	variant: 'circle',
-}
