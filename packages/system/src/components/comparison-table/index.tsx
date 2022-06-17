@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useCallback, useEffect, useRef, useState } from "react"
 import { Library } from "../../models/library"
 import {
 	comparisonTableStyle,
@@ -9,6 +9,7 @@ import { HorizontalScrollbar } from "./components/horizontal-scrollbar"
 import { ISortConfig, ILibrary } from "./types"
 import { sortLibraries, formatPercentage, formatNumber } from "./utils"
 import { CardSelector } from "./../cards/card-selector"
+import { Skeleton } from "../skeleton"
 
 export interface ComparisonTableProps
 	extends React.ComponentPropsWithoutRef<"div"> {
@@ -20,15 +21,34 @@ export function ComparisonTable({
 	className,
 	...props
 }: ComparisonTableProps) {
+	const [loading, setLoading] = useState<boolean>(false)
+	const mountedRef = useRef<boolean>(false)
 	const [data, setData] = useState<ILibrary[]>([])
 	const [sortConfig, setSortConfig] = useState<ISortConfig>({
 		by: "name",
 		asc: false,
 	})
 
+	const handleSort = useCallback(
+		(heading: typeof sortConfig.by) => {
+			setSortConfig((prevSort) => {
+				if (prevSort.by === heading) {
+					return { by: heading, asc: !prevSort.asc }
+				}
+				if (heading === "name" || heading === "author") {
+					return { by: heading, asc: true }
+				}
+				return { by: heading, asc: false }
+			})
+		},
+		[sortConfig]
+	)
+
 	useEffect(() => {
 		const abortController = new AbortController()
+
 		async function fetchData() {
+			setLoading(true)
 			const npmsio = await fetch(`https://api.npms.io/v2/package/mget`, {
 				method: "POST",
 				headers: {
@@ -59,31 +79,103 @@ export function ComparisonTable({
 			})
 			setData(data)
 		}
-		fetchData()
-			.then(() => handleSort("name"))
-			.catch((error) => {
-				if (error.name === "AbortError") {
-					return
-				}
-			})
+
+		if (!mountedRef.current) {
+			mountedRef.current = true
+
+			fetchData()
+				.then(() => {
+					handleSort("name")
+				})
+				.catch((error) => {
+					if (error.name === "AbortError") {
+						return
+					}
+				})
+				.finally(() => {
+					setLoading(false)
+				})
+		}
+
 		return () => abortController.abort()
-	}, [libraries])
+	}, [handleSort, libraries])
 
 	const libraryStats = React.useMemo(
 		() => sortLibraries(data, sortConfig),
 		[data, sortConfig]
 	)
 
-	function handleSort(heading: typeof sortConfig.by) {
-		setSortConfig((prevSort) => {
-			if (prevSort.by === heading) {
-				return { by: heading, asc: !prevSort.asc }
-			}
-			if (heading === "name" || heading === "author") {
-				return { by: heading, asc: true }
-			}
-			return { by: heading, asc: false }
-		})
+	function handleTableRows() {
+		if (loading) {
+			// Return 3 times
+			return Array.from({ length: 3 }, () => (
+				<>
+					<tr style={{ display: "contents" }}>
+						<RowHeading>
+							<Skeleton variant="circle" width={20} height={20} />
+						</RowHeading>
+
+						<TD>
+							<Skeleton variant="text" height={20} width={100} />
+						</TD>
+						<TD>
+							<Skeleton variant="text" height={20} width={100} />
+						</TD>
+						<TD>
+							<Skeleton variant="text" height={20} width={150} />
+						</TD>
+						<TD>
+							<Skeleton variant="text" height={20} width={150} />
+						</TD>
+						<TD>
+							<Skeleton variant="text" height={20} width={100} />
+						</TD>
+						<TD>
+							<Skeleton variant="text" height={20} width={100} />
+						</TD>
+					</tr>
+				</>
+			))
+		}
+
+		return libraryStats.map((library) => (
+			<tr style={{ display: "contents" }} key={library.name}>
+				<RowHeading>
+					<CardSelector
+						checked={true}
+						onChange={(e) => {
+							e.stopPropagation()
+
+							if (!e.target.checked) {
+								const updatedLibraryStats = libraryStats
+
+								updatedLibraryStats.splice(
+									updatedLibraryStats.indexOf(library),
+									1
+								)
+
+								setData(updatedLibraryStats)
+							}
+						}}
+					/>
+				</RowHeading>
+				<TD>
+					<img
+						alt=""
+						src={library.image}
+						className={comparisonTableLibraryIconStyle}
+					/>
+					<a href={library.href} target="_blank" rel="noopener noreferrer">
+						{library.name}
+					</a>
+				</TD>
+				<TD>{library.author}</TD>
+				<TD>{formatPercentage(library.coverage) || "N/A"}</TD>
+				<TD>{formatNumber(library.downloads) || "N/A"}</TD>
+				<TD>{formatPercentage(library.health) || "N/A"}</TD>
+				<TD>{formatNumber(library.stars) || "N/A"}</TD>
+			</tr>
+		))
 	}
 
 	return (
@@ -138,50 +230,7 @@ export function ComparisonTable({
 								</ColHeading>
 							</tr>
 						</thead>
-						<tbody style={{ display: "contents" }}>
-							{libraryStats.map((library) => (
-								<tr style={{ display: "contents" }} key={library.name}>
-									<RowHeading>
-										<CardSelector
-											checked={true}
-											onChange={(e) => {
-												e.stopPropagation()
-
-												if (!e.target.checked) {
-													const updatedLibraryStats = libraryStats
-
-													updatedLibraryStats.splice(
-														updatedLibraryStats.indexOf(library),
-														1
-													)
-
-													setData(updatedLibraryStats)
-												}
-											}}
-										/>
-									</RowHeading>
-									<TD>
-										<img
-											alt=""
-											src={library.image}
-											className={comparisonTableLibraryIconStyle}
-										/>
-										<a
-											href={library.href}
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											{library.name}
-										</a>
-									</TD>
-									<TD>{library.author}</TD>
-									<TD>{formatPercentage(library.coverage) || "N/A"}</TD>
-									<TD>{formatNumber(library.downloads) || "N/A"}</TD>
-									<TD>{formatPercentage(library.health) || "N/A"}</TD>
-									<TD>{formatNumber(library.stars) || "N/A"}</TD>
-								</tr>
-							))}
-						</tbody>
+						<tbody style={{ display: "contents" }}>{handleTableRows()}</tbody>
 					</table>
 				</HorizontalScrollbar>
 			)}
