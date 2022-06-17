@@ -361,7 +361,6 @@ function ComparisonBar({
 					gap: 4,
 				})}
 				type="submit"
-				onClick={() => onSelectionChange(allLibraries)}
 			>
 				 Compare ({selectedLibraries.length})
 			</Button>
