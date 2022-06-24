@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import classNames from "classnames"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { startCase } from "lodash"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { BookCard } from "../cards/book-card"
@@ -27,6 +27,8 @@ import { Blog } from "../../models/blog"
 import { BlogCard } from "../cards/blog-card"
 import { visuallyHidden } from "../../styles/utilities.css"
 import { useId } from "@reach/auto-id"
+import { BannerTooltip } from "../banner-tooltip"
+import { LocalStorageItems } from "../../models/common"
 
 export type ResultsCategoryProps<T extends CategoryName> = Omit<
 	React.ComponentPropsWithoutRef<"div">,
@@ -50,48 +52,67 @@ export function ResultsCategory<T extends CategoryName>({
 	selectedItems = [],
 	...props
 }: ResultsCategoryProps<T>) {
+	const [showBannerTooltip, setShowBannerTooltip] = useState<boolean>(false)
 	const headerId = useId()
 
 	const layout = ["books", "communities", "podcasts"].includes(category)
 		? imageFirstCardGrid
 		: titleFirstCardGrid
 
+		useEffect(() => {
+			setShowBannerTooltip(results.length > 0 &&
+				category === "libraries" &&
+				!localStorage.getItem(LocalStorageItems.CompareToolTip))
+		}, [category, results.length])
+
 	switch (variant) {
 		case "bare":
 			return (
-				<div
-					className={classNames(
-						className,
-						layout,
-						sprinkles({ padding: { mobile: 0, desktop: 24 } })
-					)}
-					{...props}
-				>
-					<ResultsCategoryHeader
-						category={category}
-						numberOfResults={results.length}
-						className={visuallyHidden}
-					/>
-					{results.length > 0 ? (
-						results.map(
-							renderCard({
-								headingTag: "h3",
-								category,
-								onTagClick,
-								onSelect,
-								selectedItems,
-							})
-						)
-					) : (
-						<p
+				<div className={sprinkles({ padding: { mobile: 0, desktop: 24 } })}>
+					{showBannerTooltip && (
+						<BannerTooltip
+							onClick={() => {
+								setShowBannerTooltip(false);
+								localStorage.setItem(LocalStorageItems.CompareToolTip, "true")
+							}}
+							pitchText={{
+								highlightedText: "Compare and select libraries",
+								softText: "based on your needs",
+							}}
+							explanatoryText="Click on icon to add the lib to comparison"
 							className={sprinkles({
-								textStyle: "h100",
+								marginBottom: { mobile: 24, desktop: 40 },
 							})}
-							style={{ textAlign: "center" }}
-						>
-							{`Sorry, no ${category} matched your search.`}
-						</p>
+						/>
 					)}
+
+					<div className={classNames(className, layout)} {...props}>
+						<ResultsCategoryHeader
+							category={category}
+							numberOfResults={results.length}
+							className={visuallyHidden}
+						/>
+						{results.length > 0 ? (
+							results.map(
+								renderCard({
+									headingTag: "h3",
+									category,
+									onTagClick,
+									onSelect,
+									selectedItems,
+								})
+							)
+						) : (
+							<p
+								className={sprinkles({
+									textStyle: "h100",
+								})}
+								style={{ textAlign: "center" }}
+							>
+								{`Sorry, no ${category} matched your search.`}
+							</p>
+						)}
+					</div>
 				</div>
 			)
 		case "withHeading":

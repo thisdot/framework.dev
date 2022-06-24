@@ -14,9 +14,9 @@ export const iconStyle = recipe({
 				width: pxToRem(24),
 			},
 			full: {
-				height: '100%',
-				width: '100%',
-			}
+				height: "100%",
+				width: "100%",
+			},
 		},
 	},
 	defaultVariants: {
