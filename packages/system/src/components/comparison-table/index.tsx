@@ -170,10 +170,10 @@ export function ComparisonTable({
 					</a>
 				</TD>
 				<TD>{library.author}</TD>
-				<TD>{formatPercentage(library.coverage) || "N/A"}</TD>
-				<TD>{formatNumber(library.downloads) || "N/A"}</TD>
-				<TD>{formatPercentage(library.health) || "N/A"}</TD>
-				<TD>{formatNumber(library.stars) || "N/A"}</TD>
+				<TD>{library.coverage ? formatPercentage(library.coverage) : "N/A"}</TD>
+				<TD>{library.downloads ? formatNumber(library.downloads) : "N/A"}</TD>
+				<TD>{library.health ? formatPercentage(library.health) : "N/A"}</TD>
+				<TD>{library.stars ? formatNumber(library.stars) : "N/A"}</TD>
 			</tr>
 		))
 	}
