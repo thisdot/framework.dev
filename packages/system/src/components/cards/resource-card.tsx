@@ -37,6 +37,7 @@ export interface ResourceCardProps
 	attributes?: AttributeDefinition[]
 	layout?: "titleFirst" | "imageFirst"
 	imageLayout?: "logo" | "book"
+	darkImageBackground?: boolean
 	href: string
 	tags: string[]
 	selected?: boolean
@@ -53,6 +54,7 @@ export function ResourceCard({
 	image,
 	layout = "titleFirst",
 	imageLayout = "logo",
+	darkImageBackground,
 	href,
 	tags,
 	attributes = [],
@@ -79,15 +81,18 @@ export function ResourceCard({
 				<div
 					className={classNames(
 						resourceCardImageContainerStyle,
-						imageLayout === "book" && bookImageContainerStyle
+						imageLayout === "book" && bookImageContainerStyle,
+						{
+							darkBackground: darkImageBackground,
+						}
 					)}
 				>
 					{imageLayout === "book" && layout === "imageFirst" ? (
 						<BookImageDecoration>
-							<img src={image} className={resourceCardImageStyle} alt="" />
+							<img src={image} className={resourceCardImageStyle} alt="logo" />
 						</BookImageDecoration>
 					) : (
-						<img src={image} className={resourceCardImageStyle} alt="" />
+						<img src={image} className={resourceCardImageStyle} alt="logo" />
 					)}
 				</div>
 			)}

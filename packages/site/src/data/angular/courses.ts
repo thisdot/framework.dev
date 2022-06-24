@@ -17,6 +17,7 @@ export const courseTags = [
 	"A11Y",
 	"pipes",
 	"angular patterns",
+	"typescript"
 ] as const
 
 export const courses: Course<typeof courseTags[number]>[] = [
@@ -198,5 +199,29 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		format: "video",
 		href: "https://youtu.be/wWEJnolhb_s",
 		tags: ["routing", "pipes", "angular patterns", "javascript marathon"],
-	}, 
+	},
+	{
+		title: "Decoded Frontend",
+		author: "Dmytro Mezhenskyi",
+		image: "https://yt3.ggpht.com/ytc/AKedOLTRAN09hQv5mKM-q_dPdOo57tg14n3qKnx-bQNu0Q=s88-c-k-c0x00ffffff-no-rj",
+		description:
+			"Decoded Training is a series of video tutorials about Angular and generally about web development. New videos are published on a biweekly basis.",
+		paymentType: "free",
+		level: "beginner",
+		format: "video",
+		href: "https://www.youtube.com/c/DecodedFrontend/videos",
+		tags: ["state management", "routing", "services"],
+	},
+	{
+		title: "Ultimate Courses",
+		author: "Todd Motto",
+		image: "https://ultimatecourses.com/assets/logo-ef24a2d3b6a0febba9ff80a1b01d632db750feb083442d0071dff7426762e0c2.svg",
+		description:
+			"Ultimate Courses has a collection of video courses covering beginner and advanced Angular, TypeScript, RxJS, and NgRX.",
+		paymentType: "paid",
+		level: "beginner",
+		format: "video",
+		href: "https://ultimatecourses.com/",
+		tags: ["RxJS", "typescript", "ngRx"],
+	},
 ]

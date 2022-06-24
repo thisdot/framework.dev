@@ -7,7 +7,7 @@ export const toolTags = [
 	"Edge",
 	"Safari",
 	"UI Design",
-	"Development"
+	"development"
 ] as const
 
 export const tools: Tool<typeof toolTags[number]>[] = [
@@ -18,7 +18,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 			"Standard Tooling for Vue.js Development",
 		image: "https://github.com/vuejs.png",
 		href: "https://cli.vuejs.org/",
-		tags: ["Development"],
+		tags: ["development"],
 	},
 	{
 		name: "Vite",
@@ -27,7 +27,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 			"Next Generation Frontend Tooling",
 		image: "https://vitejs.dev/logo.svg",
 		href: "https://github.com/vitejs/vite",
-		tags: ["Development"],
+		tags: ["development"],
 	},
 	{
 		name: "Vue.js devtools",
@@ -89,5 +89,14 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		image: "https://github.com/apollographql.png",
 		href: "https://addons.mozilla.org/en-US/firefox/addon/apollo-developer-tools",
 		tags: ["Firefox"],
+	},
+	{
+		name: "Storybook",
+		author: "Storybook",
+		href: "https://storybook.js.org/tutorials/intro-to-storybook/vue/en/get-started/",
+		description:
+			"Storybook runs alongside your app in development mode. It helps you build UI components isolated from the business logic and context of your app.",
+		image: "https://github.com/storybookjs.png",
+		tags: ["UI Design", "development"],
 	},
 ]

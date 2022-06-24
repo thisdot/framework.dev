@@ -13,6 +13,8 @@ export interface Library<T extends string> extends SearchableRecord<T> {
 	author: string
 	/** A small (40x40) image, usually a logo, to represent the library */
 	image: string
+	/** Option to add a dark color to the background of the image */
+	darkImageBackground?: boolean
 	/** Short description for display */
 	description: string
 	/**

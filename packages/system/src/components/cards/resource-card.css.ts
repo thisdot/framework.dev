@@ -105,6 +105,9 @@ export const resourceCardImageContainerStyle = style([
 			[`${imageFirst} &`]: {
 				minHeight: pxToRem(144),
 			},
+			'&.darkBackground': {
+				backgroundColor: vars.palette.primary0,
+			}
 		},
 	}, 
 	{
