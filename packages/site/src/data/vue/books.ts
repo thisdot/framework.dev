@@ -65,7 +65,7 @@ export const books: Book<Tags[number]>[] = [
 			"vue 2",
 			"vue 3",
 			"routing",
-			"typescript",
+			"TypeScript",
 			"GraphQL",
 		],
 	},
@@ -83,7 +83,7 @@ export const books: Book<Tags[number]>[] = [
 		tags: [
 			"best practices",
 			"vue 3",
-			"typescript",
+			"TypeScript",
 			"vite",
 			"routing",
 			"testing",

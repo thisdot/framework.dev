@@ -203,6 +203,6 @@ export const courses: Course<Tags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://ultimatecourses.com/",
-		tags: ["RxJS", "typescript", "NgRx"],
+		tags: ["RxJS", "TypeScript", "NgRx"],
 	},
 ]

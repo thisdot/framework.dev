@@ -80,7 +80,7 @@ export const courses: Course<Tags[number]>[] = [
 			"routing",
 			"forms",
 			"redux",
-			"SCSS",
+			"sass",
 			"bootstrap",
 		],
 	},
@@ -194,7 +194,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/Z5iWr6Srsj8",
-		tags: ["hooks", "forms", "state management", "typescript"],
+		tags: ["hooks", "forms", "state management", "TypeScript"],
 	},
 	{
 		title: "React Typescript Tutorial - Build a Quiz App",
@@ -212,7 +212,7 @@ export const courses: Course<Tags[number]>[] = [
 			"state management",
 			"CSS",
 			"data fetching",
-			"typescript",
+			"TypeScript",
 		],
 	},
 	{
@@ -225,7 +225,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtube.com/playlist?list=PLYSZyzpwBEWSe71-aLlq71B2LPZzTNO8a",
-		tags: ["hooks", "forms", "state management", "data fetching", "typescript"],
+		tags: ["hooks", "forms", "state management", "data fetching", "TypeScript"],
 	},
 	{
 		title: "Tailwind CSS React Tutorial",

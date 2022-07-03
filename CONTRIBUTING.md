@@ -61,12 +61,27 @@ That's it! Thank you for your contribution!
 
 ## Content Guidelines
 
-Content should be added in the `packages/site/src/data/<framework-name>/<model>.ts`
-files. Data files each contain two things: a list of tags used to tag the
-content and a list of content items. Items are type-checked to follow the
-schemata defined in `packages/system/src/models`. Those model files contain
-additional documentation on how each field should be populated, so consult them
-before filling out new content.
+Content should be added in the
+`packages/site/src/data/<framework-name>/<model>.ts` files. Data files each
+contain a list of content items. Items are type-checked to follow the schemata
+defined in `packages/system/src/models`. Those model files contain additional
+documentation on how each field should be populated, so consult them before
+filling out new content.
+
+Each list of content items have as well a list of tags used to tag the content,
+such tags are type-checked which types can be found in
+`packages/site/src/models/tags.ts`. There are certain rules in order to add a
+new tag:
+
+- **Naming convention** - The name of the tag will always have the first letter
+  capitalized, so when adding a new tag its name doesn't have to be wrote with
+  capitalize letters if the only capital letter is the first one e.g., the tag
+  name for 'React', can just be 'react'. However if your tag name has more than
+  one capital letter in its name, then it should be specified e.g., 'typescript'
+  should be 'TypeScript'.
+- **Repeated tags** - A tag you are planning to add might already exists, in
+  order to avoid repeated tags, when adding a new one content types should be
+  checked for similarly tags previosly added and copied if appropriate.
 
 New content should be appended to data files at the end of the appropriate list.
 Do not reorder the lists, the order is irrelevant and keeping it stable helps

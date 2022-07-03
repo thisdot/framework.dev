@@ -113,7 +113,7 @@ export const courses: Course<Tags[number]>[] = [
 		tags: [
 			"vue CLI",
 			"vue 2",
-			"SCSS",
+			"sass",
 			"data fetching",
 			"components",
 			"javascript marathon",
