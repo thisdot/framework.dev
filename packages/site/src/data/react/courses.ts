@@ -1,36 +1,7 @@
 import { Course } from "@framework/system/src/models/course"
+import { Tags } from "../../models/tags"
 
-export const courseTags = [
-	"state management",
-	"data fetching",
-	"routing",
-	"testing",
-	"forms",
-	"graphQL",
-	"native",
-	"redux",
-	"authentication",
-	"SCSS",
-	"CSS",
-	"bootstrap",
-	"react context",
-	"hooks",
-	"typescript",
-	"tailwind",
-	"material UI",
-	"vite",
-	"javascript marathon",
-	"AWS",
-	"netlify",
-	"continuous integration",
-	"gatsbyJS",
-	"SSG",
-	"component design",
-	"apollo",
-	"faunaDB"
-] as const
-
-export const courses: Course<typeof courseTags[number]>[] = [
+export const courses: Course<Tags[number]>[] = [
 	{
 		title: "Code 15 React Projects - Complete Course",
 		author: "John Smilga",
@@ -56,7 +27,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: [
 			"routing",
 			"testing",
-			"graphQL",
+			"GraphQL",
 			"native",
 			"forms",
 			"state management",
@@ -350,7 +321,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "advanced",
 		format: "video",
 		href: "https://youtu.be/0Js5O5a4bQ4",
-		tags: ["graphQL", "authentication", "AWS", "data fetching", "javascript marathon"],
+		tags: ["GraphQL", "authentication", "AWS", "data fetching", "javascript marathon"],
 	},
 	{
 		title: "An Introduction to Netlify with React",
@@ -374,7 +345,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/ldGJmqtpHh8",
-		tags: ["gatsbyJS", "SSG", "javascript marathon"],
+		tags: ["GatsbyJS", "static site generation", "javascript marathon"],
 	},
 	{
 		title: "Using GraphQL with React",
@@ -386,7 +357,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/JmVdgtjGo5Q",
-		tags: ["graphQL", "data fetching", "component design", "apollo", "javascript marathon"],
+		tags: ["GraphQL", "data fetching", "components", "apollo", "javascript marathon"],
 	},
 	{
 		title: "Databases made easy in React with GraphQL and FaunaDB",
@@ -398,7 +369,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/_kEDBitNbnY",
-		tags: ["graphQL", "data fetching", "faunaDB", "javascript marathon"],
+		tags: ["GraphQL", "data fetching", "faunaDB", "javascript marathon"],
 	},
 	{
 		title: "Build a Full-Stack App with Next.js, Supabase & Prisma",
@@ -410,6 +381,6 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "interactive",
 		href: "https://themodern.dev/courses/build-a-fullstack-app-with-nextjs-supabase-and-prisma-322389284337222224",
-		tags: ["state management", "data fetching", "routing", "forms", "authentication", "hooks", "tailwind", "SSG"],
+		tags: ["state management", "data fetching", "routing", "forms", "authentication", "hooks", "tailwind", "static site generation"],
 	},
 ]

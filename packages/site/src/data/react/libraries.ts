@@ -1,34 +1,7 @@
 import { Library } from "@framework/system/src/models/library"
+import { Tags } from "../../models/tags"
 
-export const libraryTags = [
-	"3D",
-	"a11y",
-	"state management",
-	"data fetching",
-	"graphQL",
-	"HTTP client",
-	"styling",
-	"CSS in JS",
-	"utility-first CSS",
-	"CSS processor",
-	"CSS modules",
-	"webpack",
-	"component library",
-	"forms",
-	"redux",
-	"framework",
-	"static site generation",
-	"server side rendering",
-	"documentation",
-	"testing",
-	"storybook",
-	"routing",
-	"animation",
-	"component",
-	"internationalization",
-] as const
-
-export const libraries: Library<typeof libraryTags[number]>[] = [
+export const libraries: Library<Tags[number]>[] = [
 	{
 		name: "Flux",
 		author: "Facebook",
@@ -95,7 +68,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"A fully-featured caching GraphQL client with integrations for React that also has functionality for managing local state.",
 		image: "https://github.com/apollographql.png",
-		tags: ["state management", "data fetching", "graphQL"],
+		tags: ["state management", "data fetching", "GraphQL"],
 	},
 	{
 		name: "XState",
@@ -229,7 +202,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
 		image: "https://github.com/tailwindlabs.png",
-		tags: ["styling", "utility-first CSS"],
+		tags: ["styling", "Utility-First CSS"],
 	},
 	{
 		name: "styled-components",
@@ -317,7 +290,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Generate a static set of custom utility classes and compose them either statically at build time, or dynamically at runtime, without the usual style generation overhead of CSS-in-JS. Basically, it’s like building your own zero-runtime, type-safe version of Tailwind, Styled System, etc.",
 		image: "https://github.com/seek-oss.png",
-		tags: ["styling", "utility-first CSS", "CSS in JS"],
+		tags: ["styling", "Utility-First CSS", "CSS in JS"],
 	},
 	{
 		name: "MUI",
@@ -526,7 +499,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		npmPackage: "gatsby",
 		href: "https://www.gatsbyjs.com/",
 		image: "https://github.com/gatsbyjs.png",
-		tags: ["framework", "static site generation", "graphQL"],
+		tags: ["framework", "static site generation", "GraphQL"],
 		description:
 			"Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps.   It combines the control and scalability of dynamically rendered sites with the speed of static-site generation, creating a whole new web of possibilities.",
 	},
@@ -616,7 +589,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		npmPackage: "react-toastify",
 		href: "https://fkhadra.github.io/react-toastify/introduction",
 		image: "https://github.com/fkhadra.png",
-		tags: ["component"],
+		tags: ["components"],
 		description:
 			"React-Toastify allows you to add notifications to your app with ease.",
 	},
@@ -733,7 +706,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		npmPackage: "@react-three/a11y",
 		href: "https://docs.pmnd.rs/a11y/introduction",
 		image: "https://github.com/pmndrs.png",
-		tags: ["3D", "a11y"],
+		tags: ["3D", "A11Y"],
 		description:
 			"@react-three/a11y brings accessibility to webGL with easy-to-use react-three-fiber components",
 	},

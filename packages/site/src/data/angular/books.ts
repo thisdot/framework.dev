@@ -1,19 +1,7 @@
 import { Book } from "@framework/system/src/models/book"
+import { Tags } from "../../models/tags"
 
-export const bookTags = [
-	"nx",
-	"recipes",
-	"monorepo",
-	"state management",
-	"NgRx",
-	"testing",
-	"PWA",
-	"routing",
-	"components",
-	"data binding",
-] as const
-
-export const books: Book<typeof bookTags[number]>[] = [
+export const books: Book<Tags[number]>[] = [
 	{
 		title: "Angular Projects - Second Edition",
 		authors: ["Aristeidis Bampakos"],

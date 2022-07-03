@@ -1,21 +1,7 @@
 import { Book } from "@framework/system/src/models/book"
+import { Tags } from "../../models/tags"
 
-export const bookTags = [
-	"graphQL",
-	"redux",
-	"routing",
-	"projects",
-	"recipes",
-	"accessibility",
-	"authentication",
-	"typescript",
-	"testing",
-	"material UI",
-	"nextJS",
-	"flow",
-] as const
-
-export const books: Book<typeof bookTags[number]>[] = [
+export const books: Book<Tags[number]>[] = [
 	{
 		title: "The Road To Enterprise",
 		authors: ["Thomas Findlay"],
@@ -25,7 +11,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 433,
 		level: 'advanced',
 		href: 'https://theroadtoenterprise.com/books/react-the-road-to-enterprise?utm_source=framework.dev&utm_medium=card&utm_campaign=react_books',
-		tags: ['projects', 'typescript', 'recipes', 'testing', 'routing', 'nextJS', 'redux']
+		tags: ['projects', 'typescript', 'recipes', 'testing', 'routing', 'NextJS', 'redux']
 	},
 	{
 		title: "Learning React",
@@ -49,7 +35,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 577,
 		level: "intermediate",
 		href: "https://www.oreilly.com/library/view/react-cookbook/9781492085836/",
-		tags: ["recipes", "authentication", "accessibility", "graphQL"],
+		tags: ["recipes", "authentication", "A11Y", "GraphQL"],
 	},
 	{
 		title: "Full-Stack React, TypeScript, and Node",
@@ -61,7 +47,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 627,
 		level: "advanced",
 		href: "https://www.oreilly.com/library/view/full-stack-react-typescript/9781839219931/",
-		tags: ["typescript", "graphQL"],
+		tags: ["typescript", "GraphQL"],
 	},
 	{
 		title: "React Hooks in Action",
@@ -85,7 +71,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 353,
 		level: "advanced",
 		href: "https://www.oreilly.com/library/view/react-17-design/9781800560444/",
-		tags: ["graphQL", "recipes"],
+		tags: ["GraphQL", "recipes"],
 	},
 	{
 		title: "React: Up & Running",
@@ -237,7 +223,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 541,
 		level: "beginner",
 		href: "https://www.oreilly.com/library/view/learn-react-with/9781789610253/",
-		tags: ["typescript", "graphQL", "routing", "redux"],
+		tags: ["typescript", "GraphQL", "routing", "redux"],
 	},
 	{
 		title: "Pro React 16",
@@ -249,7 +235,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 966,
 		level: "beginner",
 		href: "https://www.oreilly.com/library/view/pro-react-16/9781484244517/",
-		tags: ["graphQL"],
+		tags: ["GraphQL"],
 	},
 	{
 		title: "Learn React Hooks",
@@ -285,7 +271,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 194,
 		level: "beginner",
 		href: "https://www.oreilly.com/library/view/building-react-apps/9781484258699/",
-		tags: ["nextJS"],
+		tags: ["NextJS"],
 	},
 	{
 		title: "Learning React",

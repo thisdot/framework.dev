@@ -1,26 +1,7 @@
 import { Course } from "@framework/system/src/models/course"
+import { Tags } from "../../models/tags"
 
-export const courseTags = [
-	"state management",
-	"components",
-	"data fetching",
-	"routing",
-	"testing",
-	"services",
-	"RxJS",
-	"ngRx",
-	"javascript marathon",
-	"nx monorepo",
-	"ignite UI",
-	"ivy",
-	"PWA",
-	"A11Y",
-	"pipes",
-	"angular patterns",
-	"typescript"
-] as const
-
-export const courses: Course<typeof courseTags[number]>[] = [
+export const courses: Course<Tags[number]>[] = [
 	{
 		title: "Getting started with Angular",
 		author: "Google",
@@ -73,7 +54,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/frswk1syMiw",
-		tags: ["nx monorepo", "javascript marathon"],
+		tags: ["nx", "javascript marathon"],
 	},
 	{
 		title: "Learning RxJS in 1 Hour",
@@ -138,7 +119,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/JP4dEM4bjE8",
-		tags: ["ngRx", "javascript marathon"],
+		tags: ["NgRx", "javascript marathon"],
 	},
 	{
 		title: "Fully zone-less - High Performance in post IVY",
@@ -174,7 +155,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/NOT-nJLDnyg",
-		tags: ["ngRx", "testing", "javascript marathon"],
+		tags: ["NgRx", "testing", "javascript marathon"],
 	},
 	{
 		title: "The Best Pro Tips for A11Y in Angular",
@@ -198,7 +179,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "advanced",
 		format: "video",
 		href: "https://youtu.be/wWEJnolhb_s",
-		tags: ["routing", "pipes", "angular patterns", "javascript marathon"],
+		tags: ["routing", "pipes", "patterns", "javascript marathon"],
 	},
 	{
 		title: "Decoded Frontend",
@@ -222,6 +203,6 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://ultimatecourses.com/",
-		tags: ["RxJS", "typescript", "ngRx"],
+		tags: ["RxJS", "typescript", "NgRx"],
 	},
 ]

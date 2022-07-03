@@ -1,35 +1,7 @@
 import { Course } from "@framework/system/src/models/course"
+import { Tags } from "../../models/tags"
 
-export const courseTags = [
-	"state management",
-	"data fetching",
-	"routing",
-	"testing",
-	"forms",
-	"graphQL",
-	"vuex",
-	"vue CLI",
-	"authentication",
-	"SCSS",
-	"CSS",
-	"bootstrap",
-	"typescript",
-	"tailwind",
-	"material UI",
-	"Vue 2",
-	"Vue 3",
-	"nuxt 2",
-	"component design",
-	"PWA",
-	"AWS",
-	"devOps",
-	"continuous integration",
-	"vite",
-	"debugging",
-	"javascript marathon",
-] as const
-
-export const courses: Course<typeof courseTags[number]>[] = [
+export const courses: Course<Tags[number]>[] = [
 	{
 		title: "Vue - The Complete Guide (incl. Router & Composition API)",
 		author: "Maximilian Schwarzmüller",
@@ -44,8 +16,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 			"state management",
 			"data fetching",
 			"routing",
-			"Vue 2",
-			"Vue 3",
+			"vue 2",
+			"vue 3",
 			"vuex",
 			"authentication",
 			"forms",
@@ -61,7 +33,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "advanced",
 		format: "video",
 		href: "https://adamwathan.me/advanced-vue-component-design/",
-		tags: ["component design", "Vue 2"],
+		tags: ["components", "vue 2"],
 	},
 	{
 		title: "Vue Foundations",
@@ -73,7 +45,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://vuejsdevelopers.com/courses/foundations/",
-		tags: ["data fetching", "Vue 3", "routing"],
+		tags: ["data fetching", "vue 3", "routing"],
 	},
 	{
 		title: "Learn Vue 2 in 65 Minutes",
@@ -85,7 +57,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://www.youtube.com/watch?v=78tNYZUS-ps",
-		tags: ["CSS", "Vue 2", "forms", "routing"],
+		tags: ["CSS", "vue 2", "forms", "routing"],
 	},
 	{
 		title: "Nuxt.js 2 - Vue.js on Steroids",
@@ -118,13 +90,13 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		href: "https://zerotomastery.io/courses/learn-vue-js/",
 		tags: [
 			"PWA",
-			"Vue 3",
+			"vue 3",
 			"testing",
 			"routing",
 			"vuex",
 			"authentication",
 			"forms",
-			"component design",
+			"components",
 			"CSS",
 		],
 	},
@@ -140,10 +112,10 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		href: "https://youtu.be/XItC-JBL3kw",
 		tags: [
 			"vue CLI",
-			"Vue 2",
+			"vue 2",
 			"SCSS",
 			"data fetching",
-			"component design",
+			"components",
 			"javascript marathon",
 		],
 	},
@@ -157,7 +129,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/15Yr-J4X34M",
-		tags: ["PWA", "vue CLI", "Vue 2", "javascript marathon"],
+		tags: ["PWA", "vue CLI", "vue 2", "javascript marathon"],
 	},
 	{
 		title: "Master State Management in Vue with VueX",
@@ -169,7 +141,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/KO4KQ2tjG_M",
-		tags: ["Vue 2", "vuex", "state management", "javascript marathon"],
+		tags: ["vue 2", "vuex", "state management", "javascript marathon"],
 	},
 	{
 		title: "Learning Unit Testing in Vue",
@@ -181,7 +153,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/-CJDcjxXEaY",
-		tags: ["Vue 2", "testing", "javascript marathon"],
+		tags: ["vue 2", "testing", "javascript marathon"],
 	},
 	{
 		title: "Pro Tips on Using AWS with Vue",
@@ -195,9 +167,9 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		href: "https://youtu.be/7XWraodmPAk",
 		tags: [
 			"AWS",
-			"devOps",
+			"DevOps",
 			"continuous integration",
-			"Vue 2",
+			"vue 2",
 			"javascript marathon",
 		],
 	},
@@ -211,7 +183,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/ecpvIo4NIoY",
-		tags: ["vite", "Vue 2", "Vue 3", "javascript marathon"],
+		tags: ["vite", "vue 2", "vue 3", "javascript marathon"],
 	},
 	{
 		title: "Effectively Using the New Vue Composition API",
@@ -223,7 +195,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/E6hjtY3e8H0",
-		tags: ["Vue 3", "javascript marathon"],
+		tags: ["vue 3", "javascript marathon"],
 	},
 	{
 		title: "Debugging Vue: Quick Tips and Tricks",
@@ -235,6 +207,6 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/wXFcRDsFSEU",
-		tags: ["Vue 2", "debugging", "javascript marathon"],
+		tags: ["vue 2", "debugging", "javascript marathon"],
 	},
 ]

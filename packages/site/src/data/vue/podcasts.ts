@@ -1,8 +1,7 @@
 import { Podcast } from "@framework/system/src/models/podcast"
+import { Tags } from "../../models/tags"
 
-export const podcastTags = ["general", "graphQL", "vuejs", "quasar"] as const
-
-export const podcasts: Podcast<typeof podcastTags[number]>[] = [
+export const podcasts: Podcast<Tags[number]>[] = [
 	{
 		title: "Modern Web",
 		image:

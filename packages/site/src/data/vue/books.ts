@@ -1,23 +1,7 @@
 import { Book } from "@framework/system/src/models/book"
+import { Tags } from "../../models/tags"
 
-export const bookTags = [
-	"projects",
-	"vuex",
-	"routing",
-	"testing",
-	"authentication",
-	"best practices",
-	"patterns",
-	"state management",
-	"forms",
-	"Vue 2",
-	"Vue 3",
-	"vite",
-	"typescript",
-	"graphQL",
-] as const
-
-export const books: Book<typeof bookTags[number]>[] = [
+export const books: Book<Tags[number]>[] = [
 	{
 		title: "Vue.js: Up and Running",
 		authors: ["Callum Macrae"],
@@ -28,7 +12,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 174,
 		level: "beginner",
 		href: "https://www.oreilly.com/library/view/vuejs-up-and/9781491997239/",
-		tags: ["projects", "vuex", "routing", "testing", "Vue 2"],
+		tags: ["projects", "vuex", "routing", "testing", "vue 2"],
 	},
 	{
 		title: "Vue The Road To Enterprise",
@@ -46,8 +30,8 @@ export const books: Book<typeof bookTags[number]>[] = [
 			"patterns",
 			"testing",
 			"authentication",
-			"Vue 2",
-			"Vue 3",
+			"vue 2",
+			"vue 3",
 		],
 	},
 	{
@@ -61,7 +45,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 110,
 		level: "beginner",
 		href: "https://www.amazon.com/Building-Forms-Vue-js-Patterns-building-ebook/dp/B07YY7MGDD",
-		tags: ["vuex", "forms", "patterns", "Vue 2"],
+		tags: ["vuex", "forms", "patterns", "vue 2"],
 	},
 	{
 		title: "Fullstack Vue",
@@ -78,11 +62,11 @@ export const books: Book<typeof bookTags[number]>[] = [
 			"vuex",
 			"forms",
 			"testing",
-			"Vue 2",
-			"Vue 3",
+			"vue 2",
+			"vue 3",
 			"routing",
 			"typescript",
-			"graphQL",
+			"GraphQL",
 		],
 	},
 	{
@@ -98,7 +82,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		href: "https://books.ninja-squad.com/vue",
 		tags: [
 			"best practices",
-			"Vue 3",
+			"vue 3",
 			"typescript",
 			"vite",
 			"routing",
