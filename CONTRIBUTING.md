@@ -81,7 +81,7 @@ new tag:
   should be 'TypeScript'.
 - **Repeated tags** - A tag you are planning to add might already exists, in
   order to avoid repeated tags, when adding a new one content types should be
-  checked for similarly tags previosly added and copied if appropriate.
+  checked for similarly tags previously added and copied if appropriate.
 
 New content should be appended to data files at the end of the appropriate list.
 Do not reorder the lists, the order is irrelevant and keeping it stable helps
