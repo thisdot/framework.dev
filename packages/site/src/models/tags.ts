@@ -1,3 +1,4 @@
+// NOTE: Please when adding a new tag make sure to have read the CONTRIBUTING.md file 📄
 type CommonTagsNames =
 	| "state management"
 	| "data fetching"
@@ -98,4 +99,3 @@ type TagsNames =
 	| VueTagsNames
 
 export type Tags = readonly TagsNames[]
-
