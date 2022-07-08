@@ -1,19 +1,19 @@
-import classNames from "classnames"
-import React from "react"
+import classNames from 'classnames'
+import React from 'react'
 import {
 	filterCheckboxesStyle,
 	filterStyle,
 	filterTitleStyle,
-} from "./filter.css"
-import { FieldFilter } from "../../models/all-categories"
-import { ChipSelector } from "../chip-selector"
-import { DiscreteAttribute } from "../discrete-attribute"
-import { ungroupFieldFilter } from "./query-util"
-import { without } from "lodash"
-import { formatFieldName } from "../../util/string-utils"
+} from './filter.css'
+import { FieldFilter } from '../../models/all-categories'
+import { ChipSelector } from '../chip-selector'
+import { DiscreteAttribute } from '../discrete-attribute'
+import { ungroupFieldFilter } from './query-util'
+import { without } from 'lodash'
+import { formatFieldName } from '../../util/string-utils'
 
 export interface FilterProps<T extends FieldFilter = FieldFilter>
-	extends React.ComponentPropsWithoutRef<"fieldset"> {
+	extends React.ComponentPropsWithoutRef<'fieldset'> {
 	options: T
 	value: T
 	onUpdate: (newValue: T) => void

@@ -1,17 +1,17 @@
-import classNames from "classnames"
-import React, { useEffect, useMemo, useRef, useState } from "react"
-import Fuse from "fuse.js"
+import classNames from 'classnames'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
+import Fuse from 'fuse.js'
 import {
 	compareBarStyle,
 	searchContainerStyle,
 	searchStyle,
-} from "./search.css"
-import { AllCategories, AllModelsByName } from "../../models/all-categories"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { FilterMenu } from "./filter-menu"
-import { SideDialog } from "../side-dialog"
-import { Button } from "../button"
-import { ResultsCategory, ResultsCategoryProps } from "./results-category"
+} from './search.css'
+import { AllCategories, AllModelsByName } from '../../models/all-categories'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { FilterMenu } from './filter-menu'
+import { SideDialog } from '../side-dialog'
+import { Button } from '../button'
+import { ResultsCategory, ResultsCategoryProps } from './results-category'
 import {
 	calculateAvailableFilters,
 	emptyFilterSet,
@@ -19,18 +19,18 @@ import {
 	isEmptyFilterSet,
 	parseQueryString,
 	serializeQueryParams,
-} from "./query-util"
-import { SearchAutocomplete } from "./search-autocomplete"
-import { FilterIcon } from "../../icons/filter-icon"
-import { FilterSet, QueryParams } from "./types"
-import { uniq, map, sortBy, take, without } from "lodash"
-import { Library } from "../../models/library"
-import { ComparisonTable } from "../comparison-table"
-import { CloseIcon } from "../../icons/close-icon"
-import { ResetIcon } from "../../icons/reset-icon"
-import { AddIcon } from "../../icons/add-icon"
+} from './query-util'
+import { SearchAutocomplete } from './search-autocomplete'
+import { FilterIcon } from '../../icons/filter-icon'
+import { FilterSet, QueryParams } from './types'
+import { uniq, map, sortBy, take, without } from 'lodash'
+import { Library } from '../../models/library'
+import { ComparisonTable } from '../comparison-table'
+import { CloseIcon } from '../../icons/close-icon'
+import { ResetIcon } from '../../icons/reset-icon'
+import { AddIcon } from '../../icons/add-icon'
 
-export interface SearchProps extends React.ComponentPropsWithoutRef<"section"> {
+export interface SearchProps extends React.ComponentPropsWithoutRef<'section'> {
 	data: AllCategories[]
 	initialQuery?: string
 	appliedPreFilters?: FilterSet
@@ -40,7 +40,7 @@ export interface SearchProps extends React.ComponentPropsWithoutRef<"section"> {
 export function Search({
 	className,
 	data,
-	initialQuery = "",
+	initialQuery = '',
 	appliedPreFilters = emptyFilterSet,
 	siteName,
 	...props
@@ -114,7 +114,7 @@ export function Search({
 							selectedLibraries={selectedLibraries}
 							onSelectionChange={setSelectedLibraries}
 							allLibraries={
-								(data.find((c) => c.name === "libraries")
+								(data.find((c) => c.name === 'libraries')
 									?.data as Library<string>[]) ?? []
 							}
 						/>
@@ -150,7 +150,7 @@ function SearchBar({
 			role="search"
 			onSubmit={onSubmit}
 			className={sprinkles({
-				layout: "row",
+				layout: 'row',
 				gap: 12,
 				paddingX: { mobile: 16, desktop: 48 },
 			})}
@@ -158,16 +158,16 @@ function SearchBar({
 			<SearchAutocomplete
 				staticPrefix={serializeQueryParams({
 					filters: preFilters,
-					textSearch: "",
+					textSearch: '',
 				})}
 				availableFilters={availableFilters}
-				className={sprinkles({ width: "full" })}
+				className={sprinkles({ width: 'full' })}
 				onChange={onChange}
 				value={value}
 				data={data}
 			/>
 			<div
-				className={sprinkles({ display: { mobile: "none", desktop: "block" } })}
+				className={sprinkles({ display: { mobile: 'none', desktop: 'block' } })}
 			>
 				<Button
 					as="button"
@@ -179,7 +179,7 @@ function SearchBar({
 				</Button>
 			</div>
 			<div
-				className={sprinkles({ display: { mobile: "block", desktop: "none" } })}
+				className={sprinkles({ display: { mobile: 'block', desktop: 'none' } })}
 			>
 				<Button
 					as="button"
@@ -235,7 +235,7 @@ function SearchResults({
 			Object.fromEntries(
 				data.map((category) => [
 					category.name,
-					new Fuse<AllCategories["data"][number]>(category.data, {
+					new Fuse<AllCategories['data'][number]>(category.data, {
 						keys: [...category.indexMetadata.searchableFields],
 						ignoreLocation: true,
 						includeScore: true,
@@ -249,7 +249,7 @@ function SearchResults({
 	return (
 		<div
 			className={sprinkles({
-				layout: "stack",
+				layout: 'stack',
 				gap: 8,
 				paddingBottom: 24,
 				paddingX: { mobile: 16, desktop: 24 },
@@ -269,7 +269,7 @@ function SearchResults({
 						const commonProps = {
 							category: category.name,
 							variant:
-								preFilters.category.length === 1 ? "bare" : "withHeading",
+								preFilters.category.length === 1 ? 'bare' : 'withHeading',
 							searchResults: searchIndex
 								? getSearchResults({
 										category: category.name,
@@ -280,7 +280,7 @@ function SearchResults({
 								: [],
 							onTagClick,
 						} as const
-						if (category.name === "libraries") {
+						if (category.name === 'libraries') {
 							return (
 								<ResultsCategory
 									key={category.name}
@@ -292,7 +292,7 @@ function SearchResults({
 										)
 									}
 									selectedItems={selectedLibraries}
-									{...(commonProps as ResultsCategoryProps<"libraries">)}
+									{...(commonProps as ResultsCategoryProps<'libraries'>)}
 								/>
 							)
 						}
@@ -331,13 +331,13 @@ function ComparisonBar({
 			aria-label={`Compare ${selectedLibraries.length} libraries`}
 		>
 			<div
-				className={sprinkles({ display: { mobile: "none", desktop: "block" } })}
+				className={sprinkles({ display: { mobile: 'none', desktop: 'block' } })}
 			>
 				<Button color="destructive" onClick={() => onSelectionChange([])}>
 					Reset <ResetIcon />
 				</Button>
 			</div>
-			<div className={sprinkles({ display: { desktop: "none" } })}>
+			<div className={sprinkles({ display: { desktop: 'none' } })}>
 				<Button
 					size="square"
 					color="destructive"
@@ -355,14 +355,14 @@ function ComparisonBar({
 			<Button
 				color="secondary"
 				className={sprinkles({
-					textStyle: "button",
-					layout: "row",
-					alignItems: "center",
+					textStyle: 'button',
+					layout: 'row',
+					alignItems: 'center',
 					gap: 4,
 				})}
 				type="submit"
 			>
-				 Compare ({selectedLibraries.length})
+				Compare ({selectedLibraries.length})
 			</Button>
 		</form>
 	)
@@ -396,21 +396,21 @@ function LibraryComparison({
 			className={sprinkles({
 				minWidth: 0,
 				minHeight: 0,
-				maxHeight: "100vh",
-				layout: "stack",
+				maxHeight: '100vh',
+				layout: 'stack',
 				paddingY: { mobile: 24, tablet: 40, desktop: 48 },
 			})}
 		>
 			<div
 				className={sprinkles({
-					layout: "row",
-					alignItems: "center",
-					justifyContent: "space-between",
+					layout: 'row',
+					alignItems: 'center',
+					justifyContent: 'space-between',
 					paddingBottom: { mobile: 16, tablet: 24 },
 					paddingX: { mobile: 16, tablet: 24, desktop: 64 },
 				})}
 			>
-				<h2 className={sprinkles({ textStyle: "h200" })}>Library comparison</h2>
+				<h2 className={sprinkles({ textStyle: 'h200' })}>Library comparison</h2>
 				<Button color="primary" size="square" onClick={onClose} title="Close">
 					<CloseIcon />
 				</Button>
@@ -419,14 +419,14 @@ function LibraryComparison({
 				className={sprinkles({
 					paddingX: { mobile: 0, tablet: 24, desktop: 64 },
 					minHeight: 0,
-					layout: "stack",
+					layout: 'stack',
 				})}
 				libraries={selectedLibraries}
 			/>
 			<div
 				className={sprinkles({
-					layout: "row",
-					justifyContent: "flex-end",
+					layout: 'row',
+					justifyContent: 'flex-end',
 					gap: 12,
 					paddingTop: 16,
 					paddingX: { mobile: 16, tablet: 24, desktop: 64 },

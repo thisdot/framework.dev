@@ -1,6 +1,6 @@
-import { style } from "@vanilla-extract/css"
+import { style } from '@vanilla-extract/css'
 
 export const libraryCardBadgeStyle = style({
 	height: 20,
-	maxWidth: "100%",
+	maxWidth: '100%',
 })

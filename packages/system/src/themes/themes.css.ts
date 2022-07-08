@@ -1,13 +1,13 @@
-import { createTheme, createThemeContract } from "@vanilla-extract/css"
-import { angularColorPalette } from "./angular-color-scheme"
-import { landingColorPalette } from "./landing-color-scheme"
-import { reactColorPalette } from "./react-color-scheme"
+import { createTheme, createThemeContract } from '@vanilla-extract/css'
+import { angularColorPalette } from './angular-color-scheme'
+import { landingColorPalette } from './landing-color-scheme'
+import { reactColorPalette } from './react-color-scheme'
 import {
 	blankPalette,
 	darkThemeFromPalette,
 	lightThemeFromPalette,
-} from "./theme-from-palette"
-import { vueColorPalette } from "./vue-color-scheme"
+} from './theme-from-palette'
+import { vueColorPalette } from './vue-color-scheme'
 
 export const vars = createThemeContract(lightThemeFromPalette(blankPalette))
 

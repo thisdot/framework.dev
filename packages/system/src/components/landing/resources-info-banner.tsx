@@ -1,16 +1,16 @@
-import classNames from "classnames"
-import React from "react"
+import classNames from 'classnames'
+import React from 'react'
 import {
 	resourcesInfoBannerCardsStyle,
 	resourcesInfoBannerDescriptionStyle,
 	resourcesInfoBannerHeadingStyle,
 	resourcesInfoBannerStyle,
-} from "./resources-info-banner.css"
-import { LinkCardGroup as LinkCardGroupComponent } from "./link-card-group"
-import { LinkCardProps } from "./link-card"
+} from './resources-info-banner.css'
+import { LinkCardGroup as LinkCardGroupComponent } from './link-card-group'
+import { LinkCardProps } from './link-card'
 
 export interface ResourcesInfoBannerProps
-	extends React.ComponentPropsWithoutRef<"div"> {
+	extends React.ComponentPropsWithoutRef<'div'> {
 	title: string
 	description: string
 	resourceCards: LinkCardProps[]
@@ -26,10 +26,7 @@ export function ResourcesInfoBanner({
 	...props
 }: ResourcesInfoBannerProps) {
 	return (
-		<div
-			{...props}
-			className={classNames(className, resourcesInfoBannerStyle)}
-		>
+		<div {...props} className={classNames(className, resourcesInfoBannerStyle)}>
 			<h4 className={resourcesInfoBannerHeadingStyle}>{title}</h4>
 			<p className={resourcesInfoBannerDescriptionStyle}>{description}</p>
 			<LinkCardGroupComponent

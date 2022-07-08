@@ -1,14 +1,14 @@
-import classNames from "classnames"
-import React from "react"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { Button } from "../button"
+import classNames from 'classnames'
+import React from 'react'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { Button } from '../button'
 import {
 	contributorBannerStyle,
 	contributorImageStyle,
-} from "./contributor-banner.css"
+} from './contributor-banner.css'
 
 export interface ContributorBannerProps
-	extends React.ComponentPropsWithoutRef<"div"> {
+	extends React.ComponentPropsWithoutRef<'div'> {
 	contributorImages: string[]
 }
 
@@ -23,18 +23,18 @@ export function ContributorBanner({
 			<div>
 				<h1
 					className={sprinkles({
-						textStyle: "h100",
+						textStyle: 'h100',
 						marginBottom: 8,
 					})}
 				>
 					Build better. Together.
 				</h1>
-				<p className={sprinkles({ textStyle: "bodyLong2" })}>
+				<p className={sprinkles({ textStyle: 'bodyLong2' })}>
 					Create a PR if you see mistakes, room for improvement, or new
 					opportunties to help dev team.
 				</p>
 			</div>
-			<div className={sprinkles({ layout: "row" })}>
+			<div className={sprinkles({ layout: 'row' })}>
 				{contributorImages.map((image) => (
 					<img
 						className={contributorImageStyle}

@@ -1,7 +1,7 @@
-import classNames from "classnames"
-import React from "react"
-import { iconStyle } from "./icon.css"
-import { IconProps } from "./shared-icon-types"
+import classNames from 'classnames'
+import React from 'react'
+import { iconStyle } from './icon.css'
+import { IconProps } from './shared-icon-types'
 
 export const VueIcon = React.forwardRef<SVGSVGElement, IconProps>(
 	function VueIcon({ className, size, ...props }, ref) {

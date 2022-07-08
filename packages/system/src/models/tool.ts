@@ -1,4 +1,4 @@
-import { SearchableRecord } from "./search"
+import { SearchableRecord } from './search'
 
 /**
  * Represents an IDE plugin, linter or other
@@ -20,7 +20,7 @@ export interface Tool<T extends string> extends SearchableRecord<T> {
 }
 
 export const toolIndexMetadata = {
-	name: "tools",
-	searchableFields: ["author", "description", "name"],
+	name: 'tools',
+	searchableFields: ['author', 'description', 'name'],
 	filterableFields: {},
 } as const

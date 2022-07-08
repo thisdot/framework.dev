@@ -1,45 +1,45 @@
-import { Story, Meta } from "@storybook/react"
-import { AngularIcon } from "../../icons/angular-icon"
-import { ReactIcon } from "../../icons/react-icon"
-import { VueIcon } from "../../icons/vue-icon"
-import { LinkCardProps } from "./link-card"
+import { Story, Meta } from '@storybook/react'
+import { AngularIcon } from '../../icons/angular-icon'
+import { ReactIcon } from '../../icons/react-icon'
+import { VueIcon } from '../../icons/vue-icon'
+import { LinkCardProps } from './link-card'
 import {
 	ResourcesInfoBanner as ResourcesInfoBannerComponent,
 	ResourcesInfoBannerProps,
-} from "./resources-info-banner"
+} from './resources-info-banner'
 
 export default {
-	title: "Landing/Resources Info Banner",
+	title: 'Landing/Resources Info Banner',
 	component: ResourcesInfoBannerComponent,
 	args: {
-		children: "Hello world",
+		children: 'Hello world',
 	},
 } as Meta
 
 const resourceCards: LinkCardProps[] = [
 	{
-		title: "Angular Resources",
-		href: "https://angular.framework.dev/",
+		title: 'Angular Resources',
+		href: 'https://angular.framework.dev/',
 		Icon(props) {
 			return <AngularIcon {...props} />
 		},
-		backgroundColor: "#C3002F",
+		backgroundColor: '#C3002F',
 	},
 	{
-		title: "React Resources",
-		href: "https://react.framework.dev/",
+		title: 'React Resources',
+		href: 'https://react.framework.dev/',
 		Icon(props) {
 			return <ReactIcon {...props} />
 		},
-		backgroundColor: "#00BCDA",
+		backgroundColor: '#00BCDA',
 	},
 	{
-		title: "Vue Resources",
-		href: "https://vue.framework.dev/",
+		title: 'Vue Resources',
+		href: 'https://vue.framework.dev/',
 		Icon(props) {
 			return <VueIcon {...props} />
 		},
-		backgroundColor: "#41B883",
+		backgroundColor: '#41B883',
 	},
 ]
 

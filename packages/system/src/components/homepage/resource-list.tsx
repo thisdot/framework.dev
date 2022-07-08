@@ -1,6 +1,6 @@
-import classNames from "classnames"
-import React from "react"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
+import classNames from 'classnames'
+import React from 'react'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
 import {
 	resourceListStyle,
 	resourceListHeadingStyle,
@@ -12,10 +12,10 @@ import {
 	resourceListItemImageStyle,
 	resourceListItemDescriptionStyle,
 	resourceListViewAllStyle,
-} from "./resource-list.css"
+} from './resource-list.css'
 
 export interface ResourceListProps
-	extends React.ComponentPropsWithoutRef<"div"> {
+	extends React.ComponentPropsWithoutRef<'div'> {
 	title: string
 	viewAll: {
 		title: string
@@ -40,7 +40,7 @@ export function ResourceList({
 	return (
 		<div className={classNames(className, resourceListStyle)} {...props}>
 			<h2 className={resourceListHeadingStyle}>{title}</h2>
-			<div className={sprinkles({ layout: "stack", gap: 16 })}>
+			<div className={sprinkles({ layout: 'stack', gap: 16 })}>
 				<ul className={resourceListListStyle}>
 					{items.map((item) => {
 						return (

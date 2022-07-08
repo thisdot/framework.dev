@@ -1,13 +1,13 @@
-import classNames from "classnames"
-import React from "react"
+import classNames from 'classnames'
+import React from 'react'
 import {
 	LinkCardGroupItemStyle,
 	LinkCardGroupStyle,
-} from "./link-card-group.css"
-import { LinkCard, LinkCardProps } from "./link-card"
+} from './link-card-group.css'
+import { LinkCard, LinkCardProps } from './link-card'
 
 export interface LinkCardGroupProps
-	extends React.ComponentPropsWithoutRef<"div"> {
+	extends React.ComponentPropsWithoutRef<'div'> {
 	cards: LinkCardProps[]
 	columns?: number
 }

@@ -1,5 +1,5 @@
-import { camelCase, kebabCase, startCase } from "lodash"
-import { titleCase } from "title-case"
+import { camelCase, kebabCase, startCase } from 'lodash'
+import { titleCase } from 'title-case'
 
 export function deserializeFieldValue<T extends string>(
 	inputValue: string,

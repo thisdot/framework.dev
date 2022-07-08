@@ -1,24 +1,24 @@
-import { Story, Meta } from "@storybook/react"
-import { startCase } from "lodash"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { NavItem } from "./nav-item"
-import { MobileNav as MobileNavComponent, MobileNavProps } from "./mobile-nav"
-import { allCategoryNames } from "../models/all-categories"
-import { bodyWithNav, fullscreen } from "../styles/layouts.css"
-import classNames from "classnames"
+import { Story, Meta } from '@storybook/react'
+import { startCase } from 'lodash'
+import { sprinkles } from '../sprinkles/sprinkles.css'
+import { NavItem } from './nav-item'
+import { MobileNav as MobileNavComponent, MobileNavProps } from './mobile-nav'
+import { allCategoryNames } from '../models/all-categories'
+import { bodyWithNav, fullscreen } from '../styles/layouts.css'
+import classNames from 'classnames'
 
 export default {
-	title: "Mobile Nav",
+	title: 'Mobile Nav',
 	component: MobileNavComponent,
 	parameters: {
-		layout: "fullscreen",
+		layout: 'fullscreen',
 		viewport: {
-			defaultViewport: "mobile2",
+			defaultViewport: 'mobile2',
 		},
 	},
 	args: {
 		children: (
-			<div className={sprinkles({ layout: "stack", gap: 8 })}>
+			<div className={sprinkles({ layout: 'stack', gap: 8 })}>
 				{allCategoryNames.map((category) => (
 					<NavItem href={`#${category}`} key={category}>
 						{startCase(category)}
@@ -49,7 +49,7 @@ export const MobileNav: Story<MobileNavProps> = Template.bind({})
 MobileNav.parameters = {
 	percy: {
 		additionalSnapshots: [
-			{ suffix: " with burger menu open", args: { initialMenuState: "open" } },
+			{ suffix: ' with burger menu open', args: { initialMenuState: 'open' } },
 		],
 	},
 }

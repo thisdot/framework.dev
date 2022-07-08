@@ -1,42 +1,42 @@
 /* eslint-disable react/display-name */
-import classNames from "classnames"
-import React, { useEffect, useState } from "react"
-import { startCase } from "lodash"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { BookCard } from "../cards/book-card"
-import { Book } from "../../models/book"
-import { CommunityCard } from "../cards/community-card"
-import { Community } from "../../models/community"
-import { CourseCard } from "../cards/course-card"
-import { Course } from "../../models/course"
-import { LibraryCard } from "../cards/library-card"
-import { Library } from "../../models/library"
-import { PodcastCard } from "../cards/podcast-card"
-import { Podcast } from "../../models/podcast"
-import { ToolCard } from "../cards/tool-card"
-import { Tool } from "../../models/tool"
-import { Counter } from "../counter"
-import { CategoryName, Model } from "../../models/all-categories"
-import assertNever from "assert-never"
-import { ResourceCardProps } from "../cards/resource-card"
+import classNames from 'classnames'
+import React, { useEffect, useState } from 'react'
+import { startCase } from 'lodash'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { BookCard } from '../cards/book-card'
+import { Book } from '../../models/book'
+import { CommunityCard } from '../cards/community-card'
+import { Community } from '../../models/community'
+import { CourseCard } from '../cards/course-card'
+import { Course } from '../../models/course'
+import { LibraryCard } from '../cards/library-card'
+import { Library } from '../../models/library'
+import { PodcastCard } from '../cards/podcast-card'
+import { Podcast } from '../../models/podcast'
+import { ToolCard } from '../cards/tool-card'
+import { Tool } from '../../models/tool'
+import { Counter } from '../counter'
+import { CategoryName, Model } from '../../models/all-categories'
+import assertNever from 'assert-never'
+import { ResourceCardProps } from '../cards/resource-card'
 import {
 	imageFirstCardGrid,
 	titleFirstCardGrid,
-} from "../cards/card-layouts.css"
-import { Blog } from "../../models/blog"
-import { BlogCard } from "../cards/blog-card"
-import { visuallyHidden } from "../../styles/utilities.css"
-import { useId } from "@reach/auto-id"
-import { BannerTooltip } from "../banner-tooltip"
-import { LocalStorageItems } from "../../models/common"
+} from '../cards/card-layouts.css'
+import { Blog } from '../../models/blog'
+import { BlogCard } from '../cards/blog-card'
+import { visuallyHidden } from '../../styles/utilities.css'
+import { useId } from '@reach/auto-id'
+import { BannerTooltip } from '../banner-tooltip'
+import { LocalStorageItems } from '../../models/common'
 
 export type ResultsCategoryProps<T extends CategoryName> = Omit<
-	React.ComponentPropsWithoutRef<"div">,
-	"onSelect"
+	React.ComponentPropsWithoutRef<'div'>,
+	'onSelect'
 > & {
 	category: T
 	searchResults: Model<T>[]
-	variant: "withHeading" | "bare"
+	variant: 'withHeading' | 'bare'
 	onTagClick: (tag: string) => void
 	onSelect?: (item: Model<T>, selected: boolean) => void
 	selectedItems?: Model<T>[]
@@ -55,29 +55,31 @@ export function ResultsCategory<T extends CategoryName>({
 	const [showBannerTooltip, setShowBannerTooltip] = useState<boolean>(false)
 	const headerId = useId()
 
-	const layout = ["books", "communities", "podcasts"].includes(category)
+	const layout = ['books', 'communities', 'podcasts'].includes(category)
 		? imageFirstCardGrid
 		: titleFirstCardGrid
 
-		useEffect(() => {
-			setShowBannerTooltip(results.length > 0 &&
-				category === "libraries" &&
-				!localStorage.getItem(LocalStorageItems.CompareToolTip))
-		}, [category, results.length])
+	useEffect(() => {
+		setShowBannerTooltip(
+			results.length > 0 &&
+				category === 'libraries' &&
+				!localStorage.getItem(LocalStorageItems.CompareToolTip)
+		)
+	}, [category, results.length])
 
 	switch (variant) {
-		case "bare":
+		case 'bare':
 			return (
 				<div className={sprinkles({ padding: { mobile: 0, desktop: 24 } })}>
 					{showBannerTooltip && (
 						<BannerTooltip
 							onClick={() => {
-								setShowBannerTooltip(false);
-								localStorage.setItem(LocalStorageItems.CompareToolTip, "true")
+								setShowBannerTooltip(false)
+								localStorage.setItem(LocalStorageItems.CompareToolTip, 'true')
 							}}
 							pitchText={{
-								highlightedText: "Compare and select libraries",
-								softText: "based on your needs",
+								highlightedText: 'Compare and select libraries',
+								softText: 'based on your needs',
 							}}
 							explanatoryText="Click on icon to add the lib to comparison"
 							className={sprinkles({
@@ -95,7 +97,7 @@ export function ResultsCategory<T extends CategoryName>({
 						{results.length > 0 ? (
 							results.map(
 								renderCard({
-									headingTag: "h3",
+									headingTag: 'h3',
 									category,
 									onTagClick,
 									onSelect,
@@ -105,9 +107,9 @@ export function ResultsCategory<T extends CategoryName>({
 						) : (
 							<p
 								className={sprinkles({
-									textStyle: "h100",
+									textStyle: 'h100',
 								})}
-								style={{ textAlign: "center" }}
+								style={{ textAlign: 'center' }}
 							>
 								{`Sorry, no ${category} matched your search.`}
 							</p>
@@ -115,13 +117,13 @@ export function ResultsCategory<T extends CategoryName>({
 					</div>
 				</div>
 			)
-		case "withHeading":
+		case 'withHeading':
 			return (
 				<div
 					className={classNames(
 						className,
 						sprinkles({
-							backgroundColor: "surface1",
+							backgroundColor: 'surface1',
 							padding: 24,
 							borderRadius: 12,
 						})
@@ -139,7 +141,7 @@ export function ResultsCategory<T extends CategoryName>({
 						{results.length > 0 ? (
 							results.map(
 								renderCard({
-									headingTag: "h3",
+									headingTag: 'h3',
 									category,
 									onTagClick,
 									onSelect,
@@ -149,9 +151,9 @@ export function ResultsCategory<T extends CategoryName>({
 						) : (
 							<p
 								className={sprinkles({
-									textStyle: "bodyShort1",
+									textStyle: 'bodyShort1',
 								})}
-								style={{ textAlign: "center" }}
+								style={{ textAlign: 'center' }}
 							>
 								{`Sorry, no ${category} matched your search.`}
 							</p>
@@ -170,7 +172,7 @@ type RenderCardFn<T extends CategoryName> = (
 ) => JSX.Element
 
 type RenderCardProps<T extends CategoryName> = {
-	headingTag: ResourceCardProps["headingTag"]
+	headingTag: ResourceCardProps['headingTag']
 	category: T
 	selectedItems: Model<T>[]
 	onTagClick: (tag: string) => void
@@ -184,23 +186,23 @@ function renderCard<T extends CategoryName>({
 	...props
 }: RenderCardProps<T>): RenderCardFn<T> {
 	switch (category) {
-		case "books":
+		case 'books':
 			return ((record: Book<string>, index: number) => (
 				<BookCard key={index} book={record} {...props} />
 			)) as RenderCardFn<T>
-		case "blogs":
+		case 'blogs':
 			return ((record: Blog<string>, index: number) => (
 				<BlogCard key={index} blog={record} {...props} />
 			)) as RenderCardFn<T>
-		case "communities":
+		case 'communities':
 			return ((record: Community<string>, index: number) => (
 				<CommunityCard key={index} community={record} {...props} />
 			)) as RenderCardFn<T>
-		case "courses":
+		case 'courses':
 			return ((record: Course<string>, index: number) => (
 				<CourseCard key={index} course={record} {...props} />
 			)) as RenderCardFn<T>
-		case "libraries":
+		case 'libraries':
 			return ((record: Library<string>, index: number) => (
 				<LibraryCard
 					key={index}
@@ -212,11 +214,11 @@ function renderCard<T extends CategoryName>({
 					{...props}
 				/>
 			)) as RenderCardFn<T>
-		case "podcasts":
+		case 'podcasts':
 			return ((record: Podcast<string>, index: number) => (
 				<PodcastCard key={index} podcast={record} {...props} />
 			)) as RenderCardFn<T>
-		case "tools":
+		case 'tools':
 			return ((record: Tool<string>, index: number) => (
 				<ToolCard key={index} tool={record} {...props} />
 			)) as RenderCardFn<T>
@@ -229,16 +231,16 @@ function ResultsCategoryHeader({
 	category,
 	numberOfResults,
 	...props
-}: React.ComponentPropsWithoutRef<"header"> & {
+}: React.ComponentPropsWithoutRef<'header'> & {
 	category: string
 	numberOfResults: number
 }) {
 	return (
 		<header
 			className={sprinkles({
-				layout: "row",
+				layout: 'row',
 				gap: 8,
-				alignItems: "center",
+				alignItems: 'center',
 			})}
 			aria-live="polite"
 			aria-atomic
@@ -246,8 +248,8 @@ function ResultsCategoryHeader({
 		>
 			<h2
 				className={sprinkles({
-					textStyle: "bodyShort1",
-					fontWeight: "bold",
+					textStyle: 'bodyShort1',
+					fontWeight: 'bold',
 					paddingY: 2,
 				})}
 			>

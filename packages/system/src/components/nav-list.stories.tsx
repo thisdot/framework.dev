@@ -1,81 +1,81 @@
-import { Story, Meta } from "@storybook/react"
-import { useState } from "react"
-import { bodyWithNav } from "../styles/layouts.css"
-import { NavItem } from "./nav-item"
+import { Story, Meta } from '@storybook/react'
+import { useState } from 'react'
+import { bodyWithNav } from '../styles/layouts.css'
+import { NavItem } from './nav-item'
 import {
 	NavList as NavListComponent,
 	NavListProps,
 	NavListItem,
-} from "./nav-list"
+} from './nav-list'
 
 export default {
-	title: "Nav List",
+	title: 'Nav List',
 	component: NavListComponent,
 	args: {
-		children: "Hello world",
+		children: 'Hello world',
 	},
 } as Meta
 
 const Template: Story<NavListProps> = (args) => {
 	const [current, setCurrent] = useState<string | null>(null)
-	const isCurrent = (name: string) => (name === current ? "page" : undefined)
+	const isCurrent = (name: string) => (name === current ? 'page' : undefined)
 	return (
 		<div className={bodyWithNav}>
 			<NavListComponent {...args}>
 				<NavListItem>
 					<NavItem
-						aria-current={isCurrent("Libraries")}
+						aria-current={isCurrent('Libraries')}
 						aria-expanded={
 							!!(
-								isCurrent("Libraries") ||
-								isCurrent("Data fetching") ||
-								isCurrent("Component library") ||
-								isCurrent("Styling") ||
-								isCurrent("Internationalization") ||
-								isCurrent("State")
+								isCurrent('Libraries') ||
+								isCurrent('Data fetching') ||
+								isCurrent('Component library') ||
+								isCurrent('Styling') ||
+								isCurrent('Internationalization') ||
+								isCurrent('State')
 							)
 						}
-						onClick={() => setCurrent("Libraries")}
+						onClick={() => setCurrent('Libraries')}
 					>
 						Libraries
 					</NavItem>
 					<NavListComponent>
 						<NavListItem>
 							<NavItem
-								aria-current={isCurrent("Data fetching")}
-								onClick={() => setCurrent("Data fetching")}
+								aria-current={isCurrent('Data fetching')}
+								onClick={() => setCurrent('Data fetching')}
 							>
 								Data fetching
 							</NavItem>
 						</NavListItem>
 						<NavListItem>
 							<NavItem
-								aria-current={isCurrent("Component library")}
-								onClick={() => setCurrent("Component library")}
+								aria-current={isCurrent('Component library')}
+								onClick={() => setCurrent('Component library')}
 							>
 								Component library
 							</NavItem>
 						</NavListItem>
 						<NavListItem>
 							<NavItem
-								aria-current={isCurrent("Styling")}
-								onClick={() => setCurrent("Styling")}
+								aria-current={isCurrent('Styling')}
+								onClick={() => setCurrent('Styling')}
 							>
 								Styling
 							</NavItem>
 						</NavListItem>
 						<NavListItem>
 							<NavItem
-								aria-current={isCurrent("Internationalization")}
-								onClick={() => setCurrent("Internationalization")}
+								aria-current={isCurrent('Internationalization')}
+								onClick={() => setCurrent('Internationalization')}
 							>
 								Internationalization
 							</NavItem>
 						</NavListItem>
 						<NavListItem>
 							<NavItem
-								aria-current={isCurrent("State")}
-								onClick={() => setCurrent("State")}
+								aria-current={isCurrent('State')}
+								onClick={() => setCurrent('State')}
 							>
 								State Management
 							</NavItem>
@@ -84,56 +84,56 @@ const Template: Story<NavListProps> = (args) => {
 				</NavListItem>
 				<NavListItem>
 					<NavItem
-						aria-current={isCurrent("Tools")}
-						onClick={() => setCurrent("Tools")}
+						aria-current={isCurrent('Tools')}
+						onClick={() => setCurrent('Tools')}
 					>
 						Tools
 					</NavItem>
 				</NavListItem>
 				<NavListItem>
 					<NavItem
-						aria-current={isCurrent("Snippets")}
-						onClick={() => setCurrent("Snippets")}
+						aria-current={isCurrent('Snippets')}
+						onClick={() => setCurrent('Snippets')}
 					>
 						Snippets
 					</NavItem>
 				</NavListItem>
 				<NavListItem>
 					<NavItem
-						aria-current={isCurrent("Courses")}
-						onClick={() => setCurrent("Courses")}
+						aria-current={isCurrent('Courses')}
+						onClick={() => setCurrent('Courses')}
 					>
 						Courses
 					</NavItem>
 				</NavListItem>
 				<NavListItem>
 					<NavItem
-						aria-current={isCurrent("Communities")}
-						onClick={() => setCurrent("Communities")}
+						aria-current={isCurrent('Communities')}
+						onClick={() => setCurrent('Communities')}
 					>
 						Communities
 					</NavItem>
 				</NavListItem>
 				<NavListItem>
 					<NavItem
-						aria-current={isCurrent("Podcasts")}
-						onClick={() => setCurrent("Podcasts")}
+						aria-current={isCurrent('Podcasts')}
+						onClick={() => setCurrent('Podcasts')}
 					>
 						Podcasts
 					</NavItem>
 				</NavListItem>
 				<NavListItem>
 					<NavItem
-						aria-current={isCurrent("Books")}
-						onClick={() => setCurrent("Books")}
+						aria-current={isCurrent('Books')}
+						onClick={() => setCurrent('Books')}
 					>
 						Books
 					</NavItem>
 				</NavListItem>
 				<NavListItem>
 					<NavItem
-						aria-current={isCurrent("Companies")}
-						onClick={() => setCurrent("Companies")}
+						aria-current={isCurrent('Companies')}
+						onClick={() => setCurrent('Companies')}
 					>
 						Companies
 					</NavItem>

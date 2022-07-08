@@ -1,20 +1,20 @@
-import { Story, Meta } from "@storybook/react"
-import { fullscreen } from "../../styles/layouts.css"
-import { exampleSearchData } from "../../util/example-content"
-import { Search as SearchComponent, SearchProps } from "./search"
+import { Story, Meta } from '@storybook/react'
+import { fullscreen } from '../../styles/layouts.css'
+import { exampleSearchData } from '../../util/example-content'
+import { Search as SearchComponent, SearchProps } from './search'
 
 export default {
-	title: "Search/Search",
+	title: 'Search/Search',
 	component: SearchComponent,
 	parameters: {
-		layout: "fullscreen",
+		layout: 'fullscreen',
 	},
 	args: {
 		data: exampleSearchData,
-		initialQuery: "",
-		siteName: "react",
+		initialQuery: '',
+		siteName: 'react',
 		preFilters: {
-			category: ["libraries"],
+			category: ['libraries'],
 			field: [],
 			tag: [],
 		},

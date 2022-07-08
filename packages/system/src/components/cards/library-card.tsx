@@ -1,23 +1,23 @@
-import { Library } from "../../models/library"
-import { libraryCardBadgeStyle } from "./library-card.css"
+import { Library } from '../../models/library'
+import { libraryCardBadgeStyle } from './library-card.css'
 import {
 	getGitHubStarsBadge,
 	getNpmDownloadsBadge,
 	getBundleSizeBadge,
-} from "../../util/stats-util"
-import { ResourceCard, ResourceCardProps } from "./resource-card"
+} from '../../util/stats-util'
+import { ResourceCard, ResourceCardProps } from './resource-card'
 
 export type LibraryCardProps = Omit<
 	ResourceCardProps,
-	| "title"
-	| "subtitle"
-	| "image"
-	| "layout"
-	| "imageLayout"
-	| "href"
-	| "tags"
-	| "attributes"
-	| "children"
+	| 'title'
+	| 'subtitle'
+	| 'image'
+	| 'layout'
+	| 'imageLayout'
+	| 'href'
+	| 'tags'
+	| 'attributes'
+	| 'children'
 > & {
 	library: Library<string>
 }

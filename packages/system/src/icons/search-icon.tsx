@@ -1,7 +1,7 @@
-import classNames from "classnames"
-import React from "react"
-import { iconStyle } from "./icon.css"
-import { IconProps } from "./shared-icon-types"
+import classNames from 'classnames'
+import React from 'react'
+import { iconStyle } from './icon.css'
+import { IconProps } from './shared-icon-types'
 
 export const SearchIcon = React.forwardRef<SVGSVGElement, IconProps>(
 	function SearchIcon({ className, size, ...props }, ref) {

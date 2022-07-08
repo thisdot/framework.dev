@@ -2,14 +2,14 @@ import {
 	ArrayElement,
 	RecordElement,
 	UnionToIntersection,
-} from "../util/type-utils"
-import { Blog, blogIndexMetadata } from "./blog"
-import { Book, bookIndexMetadata } from "./book"
-import { Community, communityIndexMetadata } from "./community"
-import { Course, courseIndexMetadata } from "./course"
-import { Library, libraryIndexMetadata } from "./library"
-import { Podcast, podcastIndexMetadata } from "./podcast"
-import { Tool, toolIndexMetadata } from "./tool"
+} from '../util/type-utils'
+import { Blog, blogIndexMetadata } from './blog'
+import { Book, bookIndexMetadata } from './book'
+import { Community, communityIndexMetadata } from './community'
+import { Course, courseIndexMetadata } from './course'
+import { Library, libraryIndexMetadata } from './library'
+import { Podcast, podcastIndexMetadata } from './podcast'
+import { Tool, toolIndexMetadata } from './tool'
 
 export const allCategoriesMetadata = {
 	[bookIndexMetadata.name]: bookIndexMetadata,
@@ -65,9 +65,9 @@ export type AllCategories = AllCategoriesByName[keyof AllCategoriesByName]
 type AllFilterableFields<M = CategoryMetadata<CategoryName>> =
 	M extends CategoryMetadata<CategoryName>
 		? {
-				[FieldName in keyof M["filterableFields"]]: [
+				[FieldName in keyof M['filterableFields']]: [
 					FieldName,
-					ArrayElement<M["filterableFields"][FieldName]>
+					ArrayElement<M['filterableFields'][FieldName]>
 				]
 		  }
 		: never
@@ -79,9 +79,9 @@ export type AttributeDefinition = Readonly<
 type AllFieldFilters<M = CategoryMetadata<CategoryName>> =
 	M extends CategoryMetadata<CategoryName>
 		? {
-				[FieldName in keyof M["filterableFields"]]: [
+				[FieldName in keyof M['filterableFields']]: [
 					FieldName,
-					Readonly<ArrayElement<M["filterableFields"][FieldName]>[]>
+					Readonly<ArrayElement<M['filterableFields'][FieldName]>[]>
 				]
 		  }
 		: never

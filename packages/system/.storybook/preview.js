@@ -1,4 +1,4 @@
-import "../src/globals/global-styles"
+import '../src/globals/global-styles'
 import {
 	vars,
 	reactTheme,
@@ -7,10 +7,10 @@ import {
 	angularThemeDark,
 	vueTheme,
 	vueThemeDark,
-} from "../src/themes/themes.css"
-import { addDecorator } from "@storybook/react"
-import { withThemes } from "storybook-addon-themes/react"
-import { useEffect } from "react"
+} from '../src/themes/themes.css'
+import { addDecorator } from '@storybook/react'
+import { withThemes } from 'storybook-addon-themes/react'
+import { useEffect } from 'react'
 
 addDecorator(withThemes)
 
@@ -22,7 +22,7 @@ function Decorator({ themeClasses, children }) {
 }
 
 export const parameters = {
-	actions: { argTypesRegex: "^on[A-Z].*" },
+	actions: { argTypesRegex: '^on[A-Z].*' },
 	controls: {
 		matchers: {
 			color: /(background|color)$/i,
@@ -30,15 +30,15 @@ export const parameters = {
 		},
 	},
 	backgrounds: {
-		default: "Surface",
+		default: 'Surface',
 		values: [
 			{
-				name: "Surface",
+				name: 'Surface',
 				value: vars.themeColors.surface4,
 				default: true,
 			},
 			{
-				name: "White",
+				name: 'White',
 				value: vars.themeColors.white,
 				default: true,
 			},
@@ -46,14 +46,14 @@ export const parameters = {
 	},
 	themes: {
 		Decorator,
-		default: "react",
+		default: 'react',
 		list: [
-			{ name: "react", class: reactTheme, color: "#A6EEFF" },
-			{ name: "reactDark", class: reactThemeDark, color: "#004E5C" },
-			{ name: "angular", class: angularTheme, color: "#dd0032" },
-			{ name: "angularDark", class: angularThemeDark, color: "#85001f" },
-			{ name: "vue", class: vueTheme, color: "#40b883" },
-			{ name: "vueDark", class: vueThemeDark, color: "#34495e" },
+			{ name: 'react', class: reactTheme, color: '#A6EEFF' },
+			{ name: 'reactDark', class: reactThemeDark, color: '#004E5C' },
+			{ name: 'angular', class: angularTheme, color: '#dd0032' },
+			{ name: 'angularDark', class: angularThemeDark, color: '#85001f' },
+			{ name: 'vue', class: vueTheme, color: '#40b883' },
+			{ name: 'vueDark', class: vueThemeDark, color: '#34495e' },
 		],
 	},
 }

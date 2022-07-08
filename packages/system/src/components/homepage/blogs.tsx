@@ -1,11 +1,11 @@
-import classNames from "classnames"
-import React from "react"
-import { sampleSize } from "lodash"
-import { blogsStyle } from "./blogs.css"
-import { Blog } from "../../models/blog"
-import { ResourceList } from "./resource-list"
+import classNames from 'classnames'
+import React from 'react'
+import { sampleSize } from 'lodash'
+import { blogsStyle } from './blogs.css'
+import { Blog } from '../../models/blog'
+import { ResourceList } from './resource-list'
 
-export interface BlogsProps extends React.ComponentPropsWithoutRef<"div"> {
+export interface BlogsProps extends React.ComponentPropsWithoutRef<'div'> {
 	blogs: Blog<string>[]
 }
 
@@ -15,7 +15,7 @@ export function Blogs({ className, blogs, ...props }: BlogsProps) {
 		<ResourceList
 			className={classNames(className, blogsStyle)}
 			title="Useful blogs"
-			viewAll={{ title: "View all blogs", href: "/categories/blogs" }}
+			viewAll={{ title: 'View all blogs', href: '/categories/blogs' }}
 			items={randomBlogs.map((blog) => {
 				return {
 					image: blog.image,

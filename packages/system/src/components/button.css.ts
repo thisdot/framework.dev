@@ -1,8 +1,8 @@
-import { recipe } from "@vanilla-extract/recipes"
-import type { VariantSelection } from "@vanilla-extract/recipes/dist/declarations/src/types"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { vars } from "../themes/themes.css"
-import { pxToRem } from "../util/style-utils"
+import { recipe } from '@vanilla-extract/recipes'
+import type { VariantSelection } from '@vanilla-extract/recipes/dist/declarations/src/types'
+import { sprinkles } from '../sprinkles/sprinkles.css'
+import { vars } from '../themes/themes.css'
+import { pxToRem } from '../util/style-utils'
 
 const buttonVariants = {
 	size: {
@@ -25,16 +25,16 @@ const buttonVariants = {
 		primary: {
 			color: vars.themeColors.onTertiary,
 			backgroundColor: vars.themeColors.tertiary,
-			":focus": {
+			':focus': {
 				backgroundColor: vars.palette.tertiary50,
 			},
-			":hover": {
+			':hover': {
 				backgroundColor: vars.palette.tertiary50,
 			},
-			":active": {
+			':active': {
 				backgroundColor: vars.palette.tertiary30,
 			},
-			":disabled": {
+			':disabled': {
 				backgroundColor: vars.palette.neutral90,
 				color: vars.palette.neutral70,
 			},
@@ -42,16 +42,16 @@ const buttonVariants = {
 		secondary: {
 			color: vars.themeColors.onSecondaryContainer,
 			backgroundColor: vars.themeColors.secondaryContainer,
-			":focus": {
+			':focus': {
 				backgroundColor: vars.palette.secondary80,
 			},
-			":hover": {
+			':hover': {
 				backgroundColor: vars.palette.secondary80,
 			},
-			":active": {
+			':active': {
 				backgroundColor: vars.palette.secondary70,
 			},
-			":disabled": {
+			':disabled': {
 				backgroundColor: vars.palette.neutral90,
 				color: vars.palette.neutral70,
 			},
@@ -60,16 +60,16 @@ const buttonVariants = {
 			color: vars.themeColors.onSurface,
 			backgroundColor: vars.themeColors.surface,
 			borderColor: vars.themeColors.tertiaryBorder,
-			":focus": {
+			':focus': {
 				backgroundColor: vars.palette.neutralVariant99,
 			},
-			":hover": {
+			':hover': {
 				backgroundColor: vars.palette.neutralVariant99,
 			},
-			":active": {
+			':active': {
 				backgroundColor: vars.palette.neutral90,
 			},
-			":disabled": {
+			':disabled': {
 				backgroundColor: vars.palette.neutral90,
 				color: vars.palette.neutral70,
 			},
@@ -77,16 +77,16 @@ const buttonVariants = {
 		plain: {
 			color: vars.themeColors.tertiary,
 			backgroundColor: vars.themeColors.onTertiary,
-			":focus": {
+			':focus': {
 				backgroundColor: vars.palette.neutral99,
 			},
-			":hover": {
+			':hover': {
 				backgroundColor: vars.palette.neutral99,
 			},
-			":active": {
+			':active': {
 				backgroundColor: vars.palette.neutral90,
 			},
-			":disabled": {
+			':disabled': {
 				backgroundColor: vars.themeColors.onTertiary,
 				color: vars.palette.neutral70,
 			},
@@ -94,16 +94,16 @@ const buttonVariants = {
 		destructive: {
 			color: vars.themeColors.onErrorContainer,
 			backgroundColor: vars.themeColors.errorContainer,
-			":focus": {
+			':focus': {
 				backgroundColor: vars.palette.error80,
 			},
-			":hover": {
+			':hover': {
 				backgroundColor: vars.palette.error80,
 			},
-			":active": {
+			':active': {
 				backgroundColor: vars.palette.error70,
 			},
-			":disabled": {
+			':disabled': {
 				backgroundColor: vars.palette.neutral90,
 				color: vars.palette.neutral70,
 			},
@@ -116,29 +116,29 @@ export type ButtonVariants = VariantSelection<typeof buttonVariants>
 export const buttonStyle = recipe({
 	base: [
 		sprinkles({
-			textStyle: "button",
+			textStyle: 'button',
 			gap: 8,
 			borderRadius: 12,
 		}),
 		{
-			borderColor: "transparent",
-			borderStyle: "solid",
+			borderColor: 'transparent',
+			borderStyle: 'solid',
 			borderWidth: pxToRem(1),
-			display: "inline-grid",
-			justifyContent: "center",
-			alignContent: "center",
-			alignItems: "center",
-			cursor: "pointer",
-			gridAutoFlow: "column",
-			transition: "background 0.15s ease-in-out, color 0.15s ease-in-out",
-			":disabled": {
-				cursor: "not-allowed",
+			display: 'inline-grid',
+			justifyContent: 'center',
+			alignContent: 'center',
+			alignItems: 'center',
+			cursor: 'pointer',
+			gridAutoFlow: 'column',
+			transition: 'background 0.15s ease-in-out, color 0.15s ease-in-out',
+			':disabled': {
+				cursor: 'not-allowed',
 			},
 		},
 	],
 	variants: buttonVariants,
 	defaultVariants: {
-		size: "medium",
-		color: "primary",
+		size: 'medium',
+		color: 'primary',
 	},
 })

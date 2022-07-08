@@ -1,17 +1,17 @@
-import { Blog } from "../../models/blog"
-import { ResourceCardProps, ResourceCard } from "./resource-card"
+import { Blog } from '../../models/blog'
+import { ResourceCardProps, ResourceCard } from './resource-card'
 
 export type BlogCardProps = Omit<
 	ResourceCardProps,
-	| "title"
-	| "subtitle"
-	| "image"
-	| "layout"
-	| "imageLayout"
-	| "href"
-	| "tags"
-	| "attributes"
-	| "children"
+	| 'title'
+	| 'subtitle'
+	| 'image'
+	| 'layout'
+	| 'imageLayout'
+	| 'href'
+	| 'tags'
+	| 'attributes'
+	| 'children'
 > & {
 	blog: Blog<string>
 }
