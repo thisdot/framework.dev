@@ -876,4 +876,14 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["component library"],
 		description: "🧩 The component library for fast and accessible development of gorgeous interfaces.",
 	},
+	{
+		name: "React Testing Library",
+		author: "testing-library",
+		gitHubRepo: "testing-library/react-testing-library",
+		npmPackage: "@testing-library/react",
+		href: "https://testing-library.com/docs/react-testing-library/intro/",
+		image: "https://raw.githubusercontent.com/testing-library/react-testing-library/main/other/goat.png",
+		tags: ["testing"],
+		description: "🐐 Simple and complete React DOM testing utilities that encourage good testing practices.",
+	},
 ]
