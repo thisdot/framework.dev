@@ -106,4 +106,20 @@ export const books: Book<typeof bookTags[number]>[] = [
 			"state management",
 		],
 	},
+	{
+		title: "Vue.js设计与实现",
+		authors: ["霍春阳（HcySunYang）"],
+		image:
+			"https://file.ituring.com.cn/LargeCover/220221aede71623dcf92",
+		description:
+			"本书基于Vue.js 3，从规范出发，以源码为基础，并结合大量直观的配图，循序渐进地讲解Vue.js中各个功能模块的实现，细致剖析框架设计原理。",
+		yearOfPublication: 2022,
+		numberOfPages: 501,
+		level: "intermediate",
+		href: "https://www.ituring.com.cn/book/2953",
+		tags: [
+			"vue 3",
+			"source code"
+		],
+	},
 ]
