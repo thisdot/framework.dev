@@ -1,16 +1,7 @@
 import { Tool } from "@framework/system/src/models/tool"
+import { Tags } from "../../models/tags"
 
-export const toolTags = [
-	"VSCode",
-	"Chrome",
-	"Firefox",
-	"Edge",
-	"Safari",
-	"UI Design",
-	"development"
-] as const
-
-export const tools: Tool<typeof toolTags[number]>[] = [
+export const tools: Tool<Tags[number]>[] = [
 	{
 		name: "Vue CLI",
 		author: "Yuxi (Evan) You",
@@ -36,7 +27,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 			"Browser DevTools extension for debugging Vue.js applications.",
 		image: "https://github.com/vuejs.png",
 		href: "https://devtools.vuejs.org/guide/installation.html",
-		tags: ["Chrome", "Firefox", "Edge"],
+		tags: ["chrome", "firefox", "Edge"],
 	},
 	{
 		name: "Volar",
@@ -63,7 +54,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		image:
 			"https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg",
 		href: "https://chrome.google.com/webstore/detail/graphql-playground-for-ch/kjhjcgclphafojaeeickcokfbhlegecd?hl=en",
-		tags: ["Chrome"],
+		tags: ["chrome"],
 	},
 	{
 		name: "GraphQL Playground for Firefox",
@@ -72,7 +63,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		image:
 			"https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg",
 		href: "https://addons.mozilla.org/en-US/firefox/addon/graphql-developer-tools/",
-		tags: ["Firefox"],
+		tags: ["firefox"],
 	},
 	{
 		name: "Apollo Client Devtools for Chrome",
@@ -80,7 +71,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		description: "GraphQL debugging tools for Apollo Client.",
 		image: "https://github.com/apollographql.png",
 		href: "https://chrome.google.com/webstore/detail/apollo-client-devtools/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en",
-		tags: ["Chrome"],
+		tags: ["chrome"],
 	},
 	{
 		name: "Apollo Client Devtools for Firefox",
@@ -88,7 +79,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		description: "GraphQL debugging tools for Apollo Client.",
 		image: "https://github.com/apollographql.png",
 		href: "https://addons.mozilla.org/en-US/firefox/addon/apollo-developer-tools",
-		tags: ["Firefox"],
+		tags: ["firefox"],
 	},
 	{
 		name: "Storybook",

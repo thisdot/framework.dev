@@ -1,29 +1,7 @@
 import { Library } from "@framework/system/src/models/library"
+import { Tags } from "../../models/tags"
 
-export const libraryTags = [
-	"state management",
-	"internationalization",
-	"framework",
-	"documentation",
-	"styling",
-	"component",
-	"logging",
-	"RxJS",
-	"performance tools",
-	"redux",
-	"firebase",
-	"data fetching",
-	"GraphQL",
-	"Utility-First CSS",
-	"CSS in JS",
-	"component library",
-	"bootstrap",
-	"forms",
-	"reactive forms",
-	"testing",
-] as const
-
-export const libraries: Library<typeof libraryTags[number]>[] = [
+export const libraries: Library<Tags[number]>[] = [
 	{
 		name: "Angular CLI",
 		author: "Google",
@@ -98,7 +76,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://material.angular.io/guide/getting-started",
 		description: "Material Design UI components for Angular applications.",
 		image: "https://github.com/angular.png",
-		tags: ["styling", "component"],
+		tags: ["styling", "components"],
 	},
 	{
 		name: "Compodoc",
@@ -472,7 +450,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"AG Grid is a fully-featured and highly customizable JavaScript data grid.",
 		image: "https://github.com/ag-grid.png",
-		tags: ["component"],
+		tags: ["components"],
 	},
 	{
 		name: "AGM - Angular Google Maps",
@@ -483,7 +461,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "Angular components for Google Maps.",
 		image:
 			"https://raw.githubusercontent.com/SebastianM/angular-google-maps/master/assets/images/angular-google-maps-logo.png",
-		tags: ["component"],
+		tags: ["components"],
 	},
 	{
 		name: "NGX Skeleton loader",
@@ -494,6 +472,6 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Make beautiful, animated loading skeletons that automatically adapt to your Angular apps.",
 		image: "https://github.com/willmendesneto.png",
-		tags: ["component"],
+		tags: ["components"],
 	},
 ]

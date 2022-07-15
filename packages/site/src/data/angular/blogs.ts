@@ -1,8 +1,7 @@
 import { Blog } from "@framework/system/src/models/blog"
+import { Tags } from "../../models/tags"
 
-export const blogTags = [] as const
-
-export const blogs: Blog<typeof blogTags[number]>[] = [
+export const blogs: Blog<Tags[number]>[] = [
 	{
 		title: "This Dot Blog",
 		author: "This Dot Labs",

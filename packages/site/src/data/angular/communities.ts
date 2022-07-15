@@ -1,8 +1,7 @@
 import { Community } from "@framework/system/src/models/community"
+import { Tags } from "../../models/tags"
 
-export const communityTags = [] as const
-
-export const communities: Community<typeof communityTags[number]>[] = [
+export const communities: Community<Tags[number]>[] = [
 	{
 		name: "Angular Community",
 		description: "A community-ran Discord for all things Angular.",
