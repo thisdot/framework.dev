@@ -15,7 +15,7 @@ applications:
       artifacts:
         baseDirectory: ../site/dist
         files:
-          - "**/*"
+          - '**/*'
       cache:
         paths:
           - ../../node_modules/**/*
@@ -35,7 +35,7 @@ applications:
       artifacts:
         baseDirectory: ../site/dist
         files:
-          - "**/*"
+          - '**/*'
       cache:
         paths:
           - ../../node_modules/**/*
@@ -55,7 +55,7 @@ applications:
       artifacts:
         baseDirectory: ../site/dist
         files:
-          - "**/*"
+          - '**/*'
       cache:
         paths:
           - ../../node_modules/**/*
@@ -75,7 +75,7 @@ applications:
       artifacts:
         baseDirectory: dist
         files:
-          - "**/*"
+          - '**/*'
       cache:
         paths:
           - ../../node_modules/**/*
@@ -98,7 +98,7 @@ applications:
       artifacts:
         baseDirectory: dist
         files:
-          - "**/*"
+          - '**/*'
       cache:
         paths:
           - ../../node_modules/**/*

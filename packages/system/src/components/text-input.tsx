@@ -1,15 +1,15 @@
-import classNames from "classnames"
-import React from "react"
-import { useId } from "@reach/auto-id"
+import classNames from 'classnames'
+import React from 'react'
+import { useId } from '@reach/auto-id'
 import {
 	textInputBoxStyle,
 	textInputContainerStyle,
 	textInputLabelStyle,
-} from "./text-input.css"
-import { visuallyHidden } from "../styles/utilities.css"
+} from './text-input.css'
+import { visuallyHidden } from '../styles/utilities.css'
 
 export interface TextInputProps
-	extends React.ComponentPropsWithoutRef<"input"> {
+	extends React.ComponentPropsWithoutRef<'input'> {
 	label: string
 	hideLabel?: boolean
 }

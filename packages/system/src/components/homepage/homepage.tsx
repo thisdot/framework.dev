@@ -1,34 +1,34 @@
-import classNames from "classnames"
-import React from "react"
+import classNames from 'classnames'
+import React from 'react'
 import {
 	homepageContentContainerStyle,
 	homepageGutterStyle,
 	homepageStyle,
 	homepageTwoAndOneSectionStyle,
-} from "./homepage.css"
-import { Search } from "./search"
-import { Hero } from "./hero"
-import { FeaturedLibraries } from "./featured-libraries"
-import { Podcasts } from "./podcasts"
-import { Courses } from "./courses"
-import { Blogs } from "./blogs"
-import { ContributorBanner } from "./contributor-banner"
-import { Books } from "./books"
-import { LatestTools } from "./latest-tools"
-import { Communities } from "./communities"
-import { Library } from "../../models/library"
-import { Podcast } from "../../models/podcast"
-import { Course } from "../../models/course"
-import { Blog } from "../../models/blog"
-import { Book } from "../../models/book"
-import { Tool } from "../../models/tool"
-import { Community } from "../../models/community"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { ResourcesInfoBanner } from "../landing/resources-info-banner"
-import { LinkCardProps } from "../landing/link-card"
-import { LogoIcon } from "../../icons/logo-icon"
+} from './homepage.css'
+import { Search } from './search'
+import { Hero } from './hero'
+import { FeaturedLibraries } from './featured-libraries'
+import { Podcasts } from './podcasts'
+import { Courses } from './courses'
+import { Blogs } from './blogs'
+import { ContributorBanner } from './contributor-banner'
+import { Books } from './books'
+import { LatestTools } from './latest-tools'
+import { Communities } from './communities'
+import { Library } from '../../models/library'
+import { Podcast } from '../../models/podcast'
+import { Course } from '../../models/course'
+import { Blog } from '../../models/blog'
+import { Book } from '../../models/book'
+import { Tool } from '../../models/tool'
+import { Community } from '../../models/community'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { ResourcesInfoBanner } from '../landing/resources-info-banner'
+import { LinkCardProps } from '../landing/link-card'
+import { LogoIcon } from '../../icons/logo-icon'
 
-export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
+export interface HomepageProps extends React.ComponentPropsWithoutRef<'div'> {
 	librariesTitle: string
 	libraries: Library<string>[]
 	libraryTags: string[]
@@ -58,13 +58,13 @@ export function Homepage({
 	...props
 }: HomepageProps) {
 	resourceCards.unshift({
-		title: "Framework.dev",
-		href: "https://framework.dev/",
+		title: 'Framework.dev',
+		href: 'https://framework.dev/',
 		RawIcon(props) {
 			return <LogoIcon {...props} />
 		},
-		backgroundColor: "#F6FDFF",
-		color: "#2E3132",
+		backgroundColor: '#F6FDFF',
+		color: '#2E3132',
 	})
 
 	return (
@@ -80,7 +80,7 @@ export function Homepage({
 			>
 				<Search />
 			</div>
-			<div className={sprinkles({ backgroundColor: "surface5" })}>
+			<div className={sprinkles({ backgroundColor: 'surface5' })}>
 				<Hero siteName={siteName} className={homepageGutterStyle} />
 			</div>
 			<div
@@ -101,9 +101,9 @@ export function Homepage({
 				</div>
 				<ContributorBanner
 					contributorImages={[
-						"https://github.com/jbachhardie.png",
-						"https://github.com/tvanantwerp.png",
-						"https://github.com/markshenouda.png",
+						'https://github.com/jbachhardie.png',
+						'https://github.com/tvanantwerp.png',
+						'https://github.com/markshenouda.png',
 					]}
 				></ContributorBanner>
 				<div className={homepageTwoAndOneSectionStyle}>

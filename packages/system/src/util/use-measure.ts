@@ -1,4 +1,4 @@
-import { useLayoutEffect, useMemo, useState } from "react"
+import { useLayoutEffect, useMemo, useState } from 'react'
 
 export type UseMeasureRect = ResizeObserverSize
 export type UseMeasureRef<E extends Element = Element> = (element: E) => void
@@ -23,7 +23,7 @@ function useMeasure<E extends Element = Element>(
 			new window.ResizeObserver((entries) => {
 				if (entries[0]) {
 					setRect(
-						options?.box === "border-box"
+						options?.box === 'border-box'
 							? entries[0].borderBoxSize[0]
 							: entries[0].contentBoxSize[0]
 					)
@@ -43,7 +43,7 @@ function useMeasure<E extends Element = Element>(
 	return [ref, rect]
 }
 
-export default typeof window !== "undefined" &&
-typeof window.ResizeObserver !== "undefined"
+export default typeof window !== 'undefined' &&
+typeof window.ResizeObserver !== 'undefined'
 	? useMeasure
 	: ((() => [() => null, defaultState]) as typeof useMeasure)

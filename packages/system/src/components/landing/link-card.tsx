@@ -1,5 +1,5 @@
-import classNames from "classnames"
-import React from "react"
+import classNames from 'classnames'
+import React from 'react'
 import {
 	linkCardStyle,
 	linkCardIndicatorIconStyle,
@@ -7,11 +7,11 @@ import {
 	linkCardIconStyle,
 	linkCardTitleStyle,
 	linkCardRawIconContainerStyle,
-} from "./link-card.css"
-import { ExternalLinkIcon } from "../../icons/external-link"
-import { IconProps } from "../../icons/shared-icon-types"
+} from './link-card.css'
+import { ExternalLinkIcon } from '../../icons/external-link'
+import { IconProps } from '../../icons/shared-icon-types'
 
-export interface LinkCardProps extends React.ComponentPropsWithoutRef<"a"> {
+export interface LinkCardProps extends React.ComponentPropsWithoutRef<'a'> {
 	title: string
 	href: string
 	bigSize?: boolean
@@ -29,7 +29,7 @@ export function LinkCard({
 	RawIcon,
 	bigSize,
 	backgroundColor,
-	color = "white",
+	color = 'white',
 	...props
 }: LinkCardProps) {
 	return (
@@ -41,8 +41,8 @@ export function LinkCard({
 			{...props}
 			style={
 				{
-					"--link-card-background": backgroundColor,
-					"--link-card-color-theme": color,
+					'--link-card-background': backgroundColor,
+					'--link-card-color-theme': color,
 				} as React.CSSProperties
 			}
 		>

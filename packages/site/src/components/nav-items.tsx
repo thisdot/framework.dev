@@ -1,18 +1,18 @@
-import { NavItem } from "@framework/system/src/components/nav-item"
-import { NavList, NavListItem } from "@framework/system/src/components/nav-list"
+import { NavItem } from '@framework/system/src/components/nav-item'
+import { NavList, NavListItem } from '@framework/system/src/components/nav-list'
 import {
 	AllCategories,
 	CategoryName,
-} from "@framework/system/src/models/all-categories"
+} from '@framework/system/src/models/all-categories'
 import {
 	formatFieldName,
 	formatFieldValue,
 	serializeFieldName,
 	serializeFieldValue,
-} from "@framework/system/src/util/string-utils"
+} from '@framework/system/src/util/string-utils'
 
 export type NavItemsProps = {
-	data: Pick<AllCategories, "name" | "subCategories">[]
+	data: Pick<AllCategories, 'name' | 'subCategories'>[]
 	currentCategory?: CategoryName
 	currentTag?: string
 }
@@ -32,7 +32,7 @@ export function NavItems({
 					<NavItem
 						aria-current={
 							currentCategory === category.name && !currentTag
-								? "page"
+								? 'page'
 								: undefined
 						}
 						aria-expanded={
@@ -52,7 +52,7 @@ export function NavItems({
 										aria-current={
 											currentCategory === category.name &&
 											currentTag === subCategory
-												? "page"
+												? 'page'
 												: undefined
 										}
 										href={`/categories/${serializeFieldName(

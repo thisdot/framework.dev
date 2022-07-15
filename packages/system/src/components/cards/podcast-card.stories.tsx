@@ -1,32 +1,32 @@
-import { Story, Meta } from "@storybook/react"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { examplePodcasts } from "../../util/example-content"
-import { imageFirstCardGrid } from "./card-layouts.css"
+import { Story, Meta } from '@storybook/react'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { examplePodcasts } from '../../util/example-content'
+import { imageFirstCardGrid } from './card-layouts.css'
 import {
 	PodcastCard as PodcastCardComponent,
 	PodcastCardProps,
-} from "./podcast-card"
+} from './podcast-card'
 
 export default {
-	title: "Cards/Podcast Card",
+	title: 'Cards/Podcast Card',
 	component: PodcastCardComponent,
 	args: {
-		headingTag: "h1",
+		headingTag: 'h1',
 	},
 	argTypes: {
 		onTagClick: {
-			action: "onTagClick",
+			action: 'onTagClick',
 		},
 	},
 	parameters: {
-		layout: "fullscreen",
+		layout: 'fullscreen',
 	},
 } as Meta
 
 const Template: Story<PodcastCardProps> = (args) => (
 	<div
 		className={sprinkles({
-			backgroundColor: "surface4",
+			backgroundColor: 'surface4',
 			padding: 16,
 		})}
 	>

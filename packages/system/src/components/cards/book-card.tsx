@@ -1,18 +1,18 @@
-import { Book } from "../../models/book"
-import { BulletDivider } from "../bullet-divider"
-import { ResourceCard, ResourceCardProps } from "./resource-card"
+import { Book } from '../../models/book'
+import { BulletDivider } from '../bullet-divider'
+import { ResourceCard, ResourceCardProps } from './resource-card'
 
 export type BookCardProps = Omit<
 	ResourceCardProps,
-	| "title"
-	| "subtitle"
-	| "image"
-	| "layout"
-	| "imageLayout"
-	| "href"
-	| "tags"
-	| "attributes"
-	| "children"
+	| 'title'
+	| 'subtitle'
+	| 'image'
+	| 'layout'
+	| 'imageLayout'
+	| 'href'
+	| 'tags'
+	| 'attributes'
+	| 'children'
 > & {
 	book: Book<string>
 }
@@ -23,7 +23,7 @@ export function BookCard({ book, ...props }: BookCardProps) {
 			title={book.title}
 			subtitle={
 				<>
-					{book.authors.join(", ")}
+					{book.authors.join(', ')}
 					<BulletDivider />
 					{book.yearOfPublication}
 					<BulletDivider />
@@ -35,7 +35,7 @@ export function BookCard({ book, ...props }: BookCardProps) {
 			imageLayout="book"
 			href={book.href}
 			tags={book.tags}
-			attributes={[["level", book.level]]}
+			attributes={[['level', book.level]]}
 			{...props}
 		>
 			{book.description}

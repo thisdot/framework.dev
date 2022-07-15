@@ -1,6 +1,6 @@
-import { SearchableRecord } from "./search"
+import { SearchableRecord } from './search'
 
-export const bookLevels = ["beginner", "intermediate", "advanced"] as const
+export const bookLevels = ['beginner', 'intermediate', 'advanced'] as const
 
 /**
  * Represents a book that might be of interest to
@@ -20,7 +20,7 @@ export interface Book<T extends string> extends SearchableRecord<T> {
 	/** Length of the book, in number of pages */
 	numberOfPages: number
 	/** Target audience by experience level */
-	level: "beginner" | "intermediate" | "advanced"
+	level: 'beginner' | 'intermediate' | 'advanced'
 	/**
 	 * Link to a website for the book. This should be
 	 * as close as possible to a link to the author
@@ -31,7 +31,7 @@ export interface Book<T extends string> extends SearchableRecord<T> {
 }
 
 export const bookIndexMetadata = {
-	name: "books",
-	searchableFields: ["authors", "description", "title"],
-	filterableFields: { level: ["beginner", "intermediate", "advanced"] },
+	name: 'books',
+	searchableFields: ['authors', 'description', 'title'],
+	filterableFields: { level: ['beginner', 'intermediate', 'advanced'] },
 } as const

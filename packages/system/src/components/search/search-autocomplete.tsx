@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useRef } from 'react'
 import {
 	Combobox,
 	ComboboxInput,
@@ -6,20 +6,20 @@ import {
 	ComboboxOption,
 	ComboboxOptionText,
 	ComboboxPopover,
-} from "@reach/combobox"
-import { SearchInput } from "./search-input"
-import { getWordCoordinatesAt } from "./query-util"
-import { FilterSet } from "./types"
-import { AllCategories } from "../../models/all-categories"
+} from '@reach/combobox'
+import { SearchInput } from './search-input'
+import { getWordCoordinatesAt } from './query-util'
+import { FilterSet } from './types'
+import { AllCategories } from '../../models/all-categories'
 import {
 	formatFieldName,
 	serializeFieldName,
 	serializeFieldValue,
-} from "../../util/string-utils"
+} from '../../util/string-utils'
 import {
 	searchAutocompleteOptionStyle,
 	searchAutocompletePopoverStyle,
-} from "./search-autocomplete.css"
+} from './search-autocomplete.css'
 
 export interface SearchAutocompleteProps {
 	staticPrefix?: string
@@ -74,7 +74,7 @@ export function SearchAutocomplete({
 				onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
 					onChange(e.target.value)
 				}}
-				onReset={() => onChange("")}
+				onReset={() => onChange('')}
 			/>
 			{autoCompleteResults.length > 0 && (
 				<ComboboxPopover className={searchAutocompletePopoverStyle}>

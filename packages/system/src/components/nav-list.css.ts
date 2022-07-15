@@ -1,6 +1,6 @@
-import { style } from "@vanilla-extract/css"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { pxToRem } from "../util/style-utils"
+import { style } from '@vanilla-extract/css'
+import { sprinkles } from '../sprinkles/sprinkles.css'
+import { pxToRem } from '../util/style-utils'
 
 export const navListItemStyle = style([
 	sprinkles({
@@ -11,17 +11,17 @@ export const navListItemStyle = style([
 
 export const navListStyle = style([
 	sprinkles({
-		layout: "stack",
+		layout: 'stack',
 		gap: 2,
 	}),
 	{
 		selectors: {
 			[`${navListItemStyle} > &`]: {
 				paddingLeft: pxToRem(12),
-				display: "none",
+				display: 'none',
 			},
 			[`${navListItemStyle} > a[aria-expanded="true"] + &`]: {
-				display: "flex",
+				display: 'flex',
 			},
 		},
 	},

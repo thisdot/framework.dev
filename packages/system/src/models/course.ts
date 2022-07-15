@@ -1,8 +1,8 @@
-import { SearchableRecord } from "./search"
+import { SearchableRecord } from './search'
 
-export const courseLevels = ["beginner", "intermediate", "advanced"] as const
-export const coursePaymentTypes = ["free", "paid"] as const
-export const courseFormats = ["text", "interactive", "video"] as const
+export const courseLevels = ['beginner', 'intermediate', 'advanced'] as const
+export const coursePaymentTypes = ['free', 'paid'] as const
+export const courseFormats = ['text', 'interactive', 'video'] as const
 
 /**
  * Represents an online course, e.g.
@@ -28,8 +28,8 @@ export interface Course<T extends string> extends SearchableRecord<T> {
 }
 
 export const courseIndexMetadata = {
-	name: "courses",
-	searchableFields: ["author", "description", "title"],
+	name: 'courses',
+	searchableFields: ['author', 'description', 'title'],
 	filterableFields: {
 		level: courseLevels,
 		paymentType: coursePaymentTypes,

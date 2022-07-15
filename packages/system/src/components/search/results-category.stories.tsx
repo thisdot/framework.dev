@@ -1,26 +1,26 @@
-import { Story, Meta } from "@storybook/react"
-import { allCategoryNames, CategoryName } from "../../models/all-categories"
-import { exampleSearchData } from "../../util/example-content"
+import { Story, Meta } from '@storybook/react'
+import { allCategoryNames, CategoryName } from '../../models/all-categories'
+import { exampleSearchData } from '../../util/example-content'
 import {
 	ResultsCategory as ResultsCategoryComponent,
 	ResultsCategoryProps,
-} from "./results-category"
+} from './results-category'
 
 export default {
-	title: "Search/Results Category",
+	title: 'Search/Results Category',
 	component: ResultsCategoryComponent,
 	args: {
-		category: "books",
-		variant: "withHeading",
+		category: 'books',
+		variant: 'withHeading',
 	},
 	argTypes: {
 		variant: {
-			options: ["withHeading", "bare"],
-			control: "inline-radio",
+			options: ['withHeading', 'bare'],
+			control: 'inline-radio',
 		},
 		category: {
 			options: allCategoryNames,
-			control: "select",
+			control: 'select',
 		},
 	},
 } as Meta

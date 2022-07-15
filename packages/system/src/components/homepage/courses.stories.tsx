@@ -1,10 +1,10 @@
-import { Story, Meta } from "@storybook/react"
-import { Courses as CoursesComponent, CoursesProps } from "./courses"
-import { exampleCourses } from "../../util/example-content"
-import { pxToRem } from "../../util/style-utils"
+import { Story, Meta } from '@storybook/react'
+import { Courses as CoursesComponent, CoursesProps } from './courses'
+import { exampleCourses } from '../../util/example-content'
+import { pxToRem } from '../../util/style-utils'
 
 export default {
-	title: "Home/Courses",
+	title: 'Home/Courses',
 	component: CoursesComponent,
 	args: {
 		courses: exampleCourses,

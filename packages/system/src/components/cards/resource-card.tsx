@@ -1,12 +1,12 @@
-import classNames from "classnames"
-import React, { useRef, useState } from "react"
-import { AttributeDefinition } from "../../models/all-categories"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { formatFieldValue } from "../../util/string-utils"
-import { CardDivider } from "../card-divider"
-import { CardSelector } from "./card-selector"
-import { DiscreteAttribute } from "../discrete-attribute"
-import { InfoPopup } from "../info-popup"
+import classNames from 'classnames'
+import React, { useRef, useState } from 'react'
+import { AttributeDefinition } from '../../models/all-categories'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { formatFieldValue } from '../../util/string-utils'
+import { CardDivider } from '../card-divider'
+import { CardSelector } from './card-selector'
+import { DiscreteAttribute } from '../discrete-attribute'
+import { InfoPopup } from '../info-popup'
 import {
 	bookImageContainerStyle,
 	resourceCardBodyStyle,
@@ -19,24 +19,24 @@ import {
 	resourceCardSubtitleStyle,
 	resourceCardTitleContainerStyle,
 	resourceCardTitleStyle,
-} from "./resource-card.css"
-import { Tag } from "../tag"
-import { useId } from "@reach/auto-id"
-import { BookDecorator } from "../book-decorator"
+} from './resource-card.css'
+import { Tag } from '../tag'
+import { useId } from '@reach/auto-id'
+import { BookDecorator } from '../book-decorator'
 
 export interface ResourceCardProps
 	extends Omit<
-		React.ComponentPropsWithoutRef<"article">,
-		"onSelect" | "title"
+		React.ComponentPropsWithoutRef<'article'>,
+		'onSelect' | 'title'
 	> {
-	headingTag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+	headingTag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 	title: React.ReactNode
 	subtitle: React.ReactNode
 	badges?: React.ReactNode
 	image?: string
 	attributes?: AttributeDefinition[]
-	layout?: "titleFirst" | "imageFirst"
-	imageLayout?: "logo" | "book"
+	layout?: 'titleFirst' | 'imageFirst'
+	imageLayout?: 'logo' | 'book'
 	darkImageBackground?: boolean
 	href: string
 	tags: string[]
@@ -52,8 +52,8 @@ export function ResourceCard({
 	title,
 	subtitle,
 	image,
-	layout = "titleFirst",
-	imageLayout = "logo",
+	layout = 'titleFirst',
+	imageLayout = 'logo',
 	darkImageBackground,
 	href,
 	tags,
@@ -81,13 +81,13 @@ export function ResourceCard({
 				<div
 					className={classNames(
 						resourceCardImageContainerStyle,
-						imageLayout === "book" && bookImageContainerStyle,
+						imageLayout === 'book' && bookImageContainerStyle,
 						{
 							darkBackground: darkImageBackground,
 						}
 					)}
 				>
-					{imageLayout === "book" && layout === "imageFirst" ? (
+					{imageLayout === 'book' && layout === 'imageFirst' ? (
 						<BookImageDecoration>
 							<img src={image} className={resourceCardImageStyle} alt="logo" />
 						</BookImageDecoration>
@@ -119,7 +119,7 @@ export function ResourceCard({
 			<div className={resourceCardBodyStyle}>
 				{attributes.length > 0 && (
 					<div
-						className={sprinkles({ layout: "row", gap: 12, color: "softText" })}
+						className={sprinkles({ layout: 'row', gap: 12, color: 'softText' })}
 					>
 						{attributes.map((attribute, index) => (
 							<DiscreteAttribute colorize attribute={attribute} key={index} />
@@ -134,12 +134,12 @@ export function ResourceCard({
 						<div
 							className={classNames(
 								sprinkles({
-									layout: "row",
+									layout: 'row',
 									gap: 4,
 									paddingBottom: 12,
-									flexWrap: "wrap",
+									flexWrap: 'wrap',
 								}),
-								"hide-in-percy"
+								'hide-in-percy'
 							)}
 						>
 							{badges}
@@ -151,7 +151,7 @@ export function ResourceCard({
 						/>
 					</>
 				)}
-				<div className={sprinkles({ layout: "row", gap: 4 })}>
+				<div className={sprinkles({ layout: 'row', gap: 4 })}>
 					{visibleTags.map((tag) => (
 						<Tag
 							key={tag}
@@ -177,9 +177,9 @@ export function ResourceCard({
 					>
 						<div
 							className={sprinkles({
-								layout: "row",
+								layout: 'row',
 								gap: 4,
-								flexWrap: "wrap",
+								flexWrap: 'wrap',
 							})}
 						>
 							{tagsInPopup.map((tag) => (

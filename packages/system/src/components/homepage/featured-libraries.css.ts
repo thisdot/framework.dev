@@ -1,7 +1,7 @@
-import { style } from "@vanilla-extract/css"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { vars } from "../../themes/themes.css"
-import { breakpoints } from "../../sprinkles/sprinkles.css"
+import { style } from '@vanilla-extract/css'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { vars } from '../../themes/themes.css'
+import { breakpoints } from '../../sprinkles/sprinkles.css'
 
 export const featuredLibrariesStyle = style([
 	sprinkles({
@@ -15,7 +15,7 @@ export const featuredLibrariesStyle = style([
 export const featuredLibrariesHeadingStyle = style([
 	sprinkles({
 		marginBottom: 16,
-		textStyle: "h100",
+		textStyle: 'h100',
 	}),
 	{
 		color: vars.palette.neutralVariant20,
@@ -24,12 +24,12 @@ export const featuredLibrariesHeadingStyle = style([
 
 export const featuredLibrariesListStyle = style([
 	sprinkles({
-		display: "grid",
+		display: 'grid',
 		gap: 24,
 		marginBottom: 24,
 	}),
 	{
-		gridTemplateColumns: "1fr",
+		gridTemplateColumns: '1fr',
 		gridTemplateAreas: `
 			"compare"
 			"compare"
@@ -38,9 +38,9 @@ export const featuredLibrariesListStyle = style([
 			"cards"
 			"cards"
 		`,
-		"@media": {
+		'@media': {
 			[breakpoints.tablet]: {
-				gridTemplateColumns: "repeat(2, 1fr)",
+				gridTemplateColumns: 'repeat(2, 1fr)',
 				gridTemplateAreas: `
 				"compare cards"
 				"compare cards"
@@ -48,7 +48,7 @@ export const featuredLibrariesListStyle = style([
 				`,
 			},
 			[breakpoints.desktop]: {
-				gridTemplateColumns: "repeat(3, 1fr)",
+				gridTemplateColumns: 'repeat(3, 1fr)',
 				gridTemplateAreas: `
 				"cards cards compare"
 				"cards cards compare"
@@ -59,6 +59,6 @@ export const featuredLibrariesListStyle = style([
 ])
 
 export const featuredLibrariesViewAllStyle = sprinkles({
-	color: "tertiary",
-	textStyle: "button",
+	color: 'tertiary',
+	textStyle: 'button',
 })

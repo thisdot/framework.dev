@@ -1,12 +1,12 @@
-import { Story, Meta } from "@storybook/react"
-import { sprinkles } from "../sprinkles/sprinkles.css"
+import { Story, Meta } from '@storybook/react'
+import { sprinkles } from '../sprinkles/sprinkles.css'
 import {
 	CardDivider as CardDividerComponent,
 	CardDividerProps,
-} from "./card-divider"
+} from './card-divider'
 
 export default {
-	title: "Card Divider",
+	title: 'Card Divider',
 	component: CardDividerComponent,
 	args: {
 		className: sprinkles({ marginY: 12 }),

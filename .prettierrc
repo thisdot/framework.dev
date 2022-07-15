@@ -2,5 +2,6 @@
 	"semi": false,
 	"arrowParens": "always",
 	"useTabs": true,
-	"proseWrap": "always"
+	"proseWrap": "always",
+	"singleQuote": true
 }

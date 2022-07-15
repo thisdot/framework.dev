@@ -3,17 +3,17 @@ import {
 	TooltipPopup,
 	TooltipPopupProps,
 	useTooltip,
-} from "@reach/tooltip"
-import { Portal } from "@reach/portal"
-import classNames from "classnames"
-import React, { CSSProperties } from "react"
-import { tooltipStyle, tooltipTriangleStyle } from "./tooltip.css"
-import { Position } from "@reach/popover"
+} from '@reach/tooltip'
+import { Portal } from '@reach/portal'
+import classNames from 'classnames'
+import React, { CSSProperties } from 'react'
+import { tooltipStyle, tooltipTriangleStyle } from './tooltip.css'
+import { Position } from '@reach/popover'
 
-type TooltipPosition = "top" | "bottom" | "left" | "right"
+type TooltipPosition = 'top' | 'bottom' | 'left' | 'right'
 
 export interface TooltipProps
-	extends Omit<TooltipPopupProps, keyof TooltipParams | "position"> {
+	extends Omit<TooltipPopupProps, keyof TooltipParams | 'position'> {
 	children: React.ReactElement
 	position?: TooltipPosition
 	className?: string
@@ -22,7 +22,7 @@ export interface TooltipProps
 export function Tooltip({
 	children,
 	className,
-	position = "top",
+	position = 'top',
 	...props
 }: TooltipProps) {
 	// get the props from useTooltip
@@ -53,7 +53,7 @@ export function Tooltip({
 	)
 }
 
-const Triangle = (props: React.ComponentPropsWithoutRef<"svg">) => (
+const Triangle = (props: React.ComponentPropsWithoutRef<'svg'>) => (
 	<svg width="20" height="8" viewBox="0 0 20 8" fill="currentColor" {...props}>
 		<path d="M10 0C13 0 15.9999 8 20 8H0C3.9749 8 7 0 10 0Z" />
 	</svg>
@@ -75,7 +75,7 @@ const tooltipPosition =
 	(triggerRect, tooltipRect) => {
 		if (!triggerRect || !tooltipRect) return { left: 0, top: 0 }
 		switch (orientation) {
-			case "bottom":
+			case 'bottom':
 				return {
 					left:
 						center(
@@ -86,7 +86,7 @@ const tooltipPosition =
 						) + window.scrollX,
 					top: triggerRect.bottom + 8 + window.scrollY,
 				}
-			case "top":
+			case 'top':
 				return {
 					left:
 						center(
@@ -97,7 +97,7 @@ const tooltipPosition =
 						) + window.scrollX,
 					bottom: window.innerHeight - triggerRect.top + 8 - window.scrollY,
 				}
-			case "right":
+			case 'right':
 				return {
 					top:
 						center(
@@ -108,7 +108,7 @@ const tooltipPosition =
 						) + window.scrollY,
 					left: triggerRect.right + 8 + window.scrollX,
 				}
-			case "left":
+			case 'left':
 				return {
 					top:
 						center(
@@ -127,30 +127,30 @@ const trianglePosition =
 	(triggerRect: DOMRect | null): CSSProperties => {
 		if (!triggerRect) return {}
 		switch (orientation) {
-			case "bottom":
+			case 'bottom':
 				return {
 					left: triggerRect.left - 10 + triggerRect.width / 2,
 					top: triggerRect.bottom + window.scrollY,
 				}
-			case "top":
+			case 'top':
 				return {
 					left: triggerRect.left - 10 + triggerRect.width / 2,
 					bottom: window.innerHeight - triggerRect.top + window.scrollY,
-					transform: "rotate(180deg)",
+					transform: 'rotate(180deg)',
 				}
-			case "right":
+			case 'right':
 				return {
 					top: triggerRect.top - 10 + triggerRect.height / 2,
 					left: triggerRect.right + window.scrollX,
-					transform: "rotate(270deg)",
-					transformOrigin: "bottom",
+					transform: 'rotate(270deg)',
+					transformOrigin: 'bottom',
 				}
-			case "left":
+			case 'left':
 				return {
 					top: triggerRect.top - 10 + triggerRect.height / 2,
 					right: window.innerWidth - triggerRect.left + window.scrollX,
-					transform: "rotate(90deg)",
-					transformOrigin: "bottom",
+					transform: 'rotate(90deg)',
+					transformOrigin: 'bottom',
 				}
 		}
 	}

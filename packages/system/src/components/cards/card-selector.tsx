@@ -1,14 +1,14 @@
-import { useId } from "@reach/auto-id"
-import React from "react"
-import { SelectIcon } from "../../icons/select-icon"
-import { UnselectIcon } from "../../icons/unselect-icon"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { cardSelectorLabelStyle } from "./card-selector.css"
-import { Tooltip } from "../tooltip"
-import { visuallyHidden } from "../../styles/utilities.css"
+import { useId } from '@reach/auto-id'
+import React from 'react'
+import { SelectIcon } from '../../icons/select-icon'
+import { UnselectIcon } from '../../icons/unselect-icon'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { cardSelectorLabelStyle } from './card-selector.css'
+import { Tooltip } from '../tooltip'
+import { visuallyHidden } from '../../styles/utilities.css'
 
 export interface CardSelectorProps
-	extends React.ComponentPropsWithoutRef<"input"> {}
+	extends React.ComponentPropsWithoutRef<'input'> {}
 
 export function CardSelector({
 	children,
@@ -19,7 +19,7 @@ export function CardSelector({
 }: CardSelectorProps) {
 	const id = useId(customIdFromProps)
 	return (
-		<Tooltip label={checked ? "Remove from comparison" : "Add to comparison"}>
+		<Tooltip label={checked ? 'Remove from comparison' : 'Add to comparison'}>
 			<div className={className} {...props}>
 				<input
 					type="checkbox"
@@ -32,12 +32,12 @@ export function CardSelector({
 					<div className={visuallyHidden}>Add to comparison</div>
 					{checked ? (
 						<UnselectIcon
-							className={sprinkles({ color: "error" })}
+							className={sprinkles({ color: 'error' })}
 							size="large"
 						/>
 					) : (
 						<SelectIcon
-							className={sprinkles({ color: "tertiary" })}
+							className={sprinkles({ color: 'tertiary' })}
 							size="large"
 						/>
 					)}

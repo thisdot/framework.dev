@@ -1,4 +1,4 @@
-import { SearchableRecord } from "./search"
+import { SearchableRecord } from './search'
 
 /**
  * Represents a snippet or code example that
@@ -16,7 +16,7 @@ export interface CodeExample<T extends string> extends SearchableRecord<T> {
 }
 
 export const codeExampleIndexMetadata = {
-	name: "codeExamples",
-	searchableFields: ["author", "description", "title"],
+	name: 'codeExamples',
+	searchableFields: ['author', 'description', 'title'],
 	filterableFields: {},
 } as const

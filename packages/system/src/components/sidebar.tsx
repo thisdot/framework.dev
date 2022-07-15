@@ -1,16 +1,16 @@
-import React from "react"
-import { Logo } from "./logo"
+import React from 'react'
+import { Logo } from './logo'
 import {
 	sidebarStyle,
 	sidebarContentsStyle,
 	sidebarHeaderStyle,
 	sidebarBodyStyle,
-} from "./sidebar.css"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { GithubIcon } from "../icons/github-icon"
-import { CURRENT_BUILD_YEAR } from "../globals/global-constants"
+} from './sidebar.css'
+import { sprinkles } from '../sprinkles/sprinkles.css'
+import { GithubIcon } from '../icons/github-icon'
+import { CURRENT_BUILD_YEAR } from '../globals/global-constants'
 
-export type SidebarProps = React.ComponentPropsWithoutRef<"nav"> & {
+export type SidebarProps = React.ComponentPropsWithoutRef<'nav'> & {
 	siteName: string
 }
 
@@ -33,17 +33,17 @@ export function Sidebar({
 					className={sprinkles({
 						paddingY: 24,
 						paddingX: 32,
-						layout: "stack",
+						layout: 'stack',
 						gap: 14,
 					})}
 				>
 					<a
 						className={sprinkles({
-							textStyle: "bodyShort2",
-							fontWeight: "bold",
-							color: "softText",
-							layout: "row",
-							alignItems: "center",
+							textStyle: 'bodyShort2',
+							fontWeight: 'bold',
+							color: 'softText',
+							layout: 'row',
+							alignItems: 'center',
 							gap: 12,
 						})}
 						href="https://github.com/thisdot/framework.dev"
@@ -55,8 +55,8 @@ export function Sidebar({
 					</a>
 					<p
 						className={sprinkles({
-							textStyle: "bodyShort3",
-							color: "softText",
+							textStyle: 'bodyShort3',
+							color: 'softText',
 						})}
 					>
 						© {CURRENT_BUILD_YEAR} This Dot, Inc.

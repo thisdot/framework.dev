@@ -1,18 +1,18 @@
-import { Story, Meta } from "@storybook/react"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { exampleTools } from "../../util/example-content"
-import { titleFirstCardGrid } from "./card-layouts.css"
-import { ToolCard as ToolCardComponent, ToolCardProps } from "./tool-card"
+import { Story, Meta } from '@storybook/react'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { exampleTools } from '../../util/example-content'
+import { titleFirstCardGrid } from './card-layouts.css'
+import { ToolCard as ToolCardComponent, ToolCardProps } from './tool-card'
 
 export default {
-	title: "Cards/Tool Card",
+	title: 'Cards/Tool Card',
 	component: ToolCardComponent,
 	args: {
-		headingTag: "h1",
+		headingTag: 'h1',
 	},
 	argTypes: {
 		onTagClick: {
-			action: "onTagClick",
+			action: 'onTagClick',
 		},
 	},
 } as Meta
@@ -20,7 +20,7 @@ export default {
 const Template: Story<ToolCardProps> = (args) => (
 	<div
 		className={sprinkles({
-			backgroundColor: "surface4",
+			backgroundColor: 'surface4',
 			padding: 16,
 		})}
 	>

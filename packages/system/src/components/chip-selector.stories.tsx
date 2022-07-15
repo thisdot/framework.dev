@@ -1,14 +1,14 @@
-import { Story, Meta } from "@storybook/react"
+import { Story, Meta } from '@storybook/react'
 import {
 	ChipSelector as ChipSelectorComponent,
 	ChipSelectorProps,
-} from "./chip-selector"
+} from './chip-selector'
 
 export default {
-	title: "Chip Selector",
+	title: 'Chip Selector',
 	component: ChipSelectorComponent,
 	args: {
-		label: "Hello world",
+		label: 'Hello world',
 	},
 } as Meta
 

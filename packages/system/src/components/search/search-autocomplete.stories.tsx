@@ -1,26 +1,26 @@
-import { Story, Meta } from "@storybook/react"
-import { useState } from "react"
-import { exampleSearchData } from "../../util/example-content"
+import { Story, Meta } from '@storybook/react'
+import { useState } from 'react'
+import { exampleSearchData } from '../../util/example-content'
 import {
 	SearchAutocomplete as SearchAutocompleteComponent,
 	SearchAutocompleteProps,
-} from "./search-autocomplete"
+} from './search-autocomplete'
 
 export default {
-	title: "Search/Search Autocomplete",
+	title: 'Search/Search Autocomplete',
 	component: SearchAutocompleteComponent,
 	args: {
 		data: exampleSearchData,
 		availableFilters: {
-			category: ["books", "courses"],
-			tag: ["redux", "data fetching"],
-			field: [["level", ["beginner", "intermediate", "advanced"]]],
+			category: ['books', 'courses'],
+			tag: ['redux', 'data fetching'],
+			field: [['level', ['beginner', 'intermediate', 'advanced']]],
 		},
 	},
 } as Meta
 
 const Template: Story<SearchAutocompleteProps> = (args) => {
-	const [value, setValue] = useState("")
+	const [value, setValue] = useState('')
 	return (
 		<SearchAutocompleteComponent {...args} value={value} onChange={setValue} />
 	)

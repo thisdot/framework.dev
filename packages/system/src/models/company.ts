@@ -3,7 +3,7 @@
  * to help with a given framework.
  */
 
-import { SearchableRecord } from "./search"
+import { SearchableRecord } from './search'
 
 export interface Company<T extends string> extends SearchableRecord<T> {
 	/** Company name */
@@ -14,17 +14,17 @@ export interface Company<T extends string> extends SearchableRecord<T> {
 	image: string
 	/** Size of the company, in number of employees */
 	numberOfEmployees:
-		| "1 to 10"
-		| "10 to 50"
-		| "50 to 250"
-		| "250 to 1,000"
-		| "More than 1,000"
+		| '1 to 10'
+		| '10 to 50'
+		| '50 to 250'
+		| '250 to 1,000'
+		| 'More than 1,000'
 	/** Link to the company's website */
 	href: string
 }
 
 export const companyIndexMetadata = {
-	name: "companies",
-	searchableFields: ["description", "name"],
+	name: 'companies',
+	searchableFields: ['description', 'name'],
 	filterableFields: {},
 } as const

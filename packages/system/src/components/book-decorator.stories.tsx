@@ -1,14 +1,14 @@
-import { Story, Meta } from "@storybook/react"
+import { Story, Meta } from '@storybook/react'
 import {
 	BookDecorator as BookDecoratorComponent,
 	BookDecoratorProps,
-} from "./book-decorator"
+} from './book-decorator'
 
 export default {
-	title: "Book Decorator",
+	title: 'Book Decorator',
 	component: BookDecoratorComponent,
 	args: {
-		children: "Hello world",
+		children: 'Hello world',
 	},
 } as Meta
 

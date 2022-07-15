@@ -1,44 +1,44 @@
-import { style } from "@vanilla-extract/css"
-import { breakpoints, sprinkles } from "../../../sprinkles/sprinkles.css"
-import { pxToRem } from "../../../util/style-utils"
-import { vars } from "../../../themes/themes.css"
+import { style } from '@vanilla-extract/css'
+import { breakpoints, sprinkles } from '../../../sprinkles/sprinkles.css'
+import { pxToRem } from '../../../util/style-utils'
+import { vars } from '../../../themes/themes.css'
 
 const cellStyle = style([
 	sprinkles({
-		borderBottom: "tableCell",
-		borderRight: "tableCell",
-		display: "flex",
-		alignItems: "center",
-		justifyContent: "flex-start",
+		borderBottom: 'tableCell',
+		borderRight: 'tableCell',
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'flex-start',
 		paddingX: { mobile: 16, tablet: 24 },
-		height: "full",
+		height: 'full',
 	}),
 	{
-		maxWidth: "40vw",
+		maxWidth: '40vw',
 	},
 ])
 
 export const cellTHStyle = style([
 	cellStyle,
 	sprinkles({
-		fontWeight: "bold",
+		fontWeight: 'bold',
 	}),
 	{
 		backgroundColor: vars.palette.neutralVariant99,
-		position: "sticky",
+		position: 'sticky',
 		top: 0,
 		zIndex: 2,
 		selectors: {
-			"&:first-of-type": {
-				"@media": {
+			'&:first-of-type': {
+				'@media': {
 					[breakpoints.tablet]: {
 						borderTopLeftRadius: pxToRem(12),
 					},
 				},
 			},
-			"&:last-of-type": {
-				borderRightColor: "transparent",
-				"@media": {
+			'&:last-of-type': {
+				borderRightColor: 'transparent',
+				'@media': {
 					[breakpoints.tablet]: {
 						borderTopRightRadius: pxToRem(12),
 					},
@@ -53,28 +53,28 @@ export const cellTHButtonStyle = style([
 		paddingRight: 12,
 	}),
 	{
-		position: "relative",
-		textAlign: "center",
-		width: "100%",
+		position: 'relative',
+		textAlign: 'center',
+		width: '100%',
 		selectors: {
-			"&:before,&:after": {
-				position: "absolute",
-				content: "",
+			'&:before,&:after': {
+				position: 'absolute',
+				content: '',
 				right: pxToRem(-10),
 				width: 0,
 				height: 0,
-				border: "solid 5px transparent",
-				background: "transparent",
+				border: 'solid 5px transparent',
+				background: 'transparent',
 			},
-			"&:before": {
+			'&:before': {
 				borderBottom: `solid 7px ${vars.palette.neutral80}`,
 				borderTopWidth: 0,
-				top: "calc(50% - 9px)",
+				top: 'calc(50% - 9px)',
 			},
-			"&:after": {
+			'&:after': {
 				borderTop: `solid 7px ${vars.palette.neutral80}`,
 				borderBottomWidth: 0,
-				bottom: "calc(50% - 9px)",
+				bottom: 'calc(50% - 9px)',
 			},
 			[`${cellStyle}[aria-sort="ascending"] &:before`]: {
 				borderBottom: `solid 7px ${vars.palette.neutral40}`,
@@ -103,10 +103,10 @@ export const cellTHButtonStyle = style([
 export const cellTDStyle = style([
 	cellStyle,
 	{
-		backgroundColor: "white",
+		backgroundColor: 'white',
 		selectors: {
-			"&:last-child": {
-				borderRight: "none",
+			'&:last-child': {
+				borderRight: 'none',
 			},
 		},
 	},
@@ -114,24 +114,24 @@ export const cellTDStyle = style([
 
 export const cellContentsStyle = style([
 	{
-		display: "grid",
+		display: 'grid',
 		gap: 12,
-		gridAutoFlow: "column",
-		placeItems: "center",
-		whiteSpace: "nowrap",
-		textOverflow: "ellipsis",
-		overflow: "hidden",
+		gridAutoFlow: 'column',
+		placeItems: 'center',
+		whiteSpace: 'nowrap',
+		textOverflow: 'ellipsis',
+		overflow: 'hidden',
 	},
 ])
 
 export const rowHeadingStyle = style([
 	cellStyle,
 	{
-		backgroundColor: "white",
-		justifyContent: "center",
+		backgroundColor: 'white',
+		justifyContent: 'center',
 		selectors: {
-			"&:last-child": {
-				borderRight: "none",
+			'&:last-child': {
+				borderRight: 'none',
 			},
 		},
 	},
@@ -139,7 +139,7 @@ export const rowHeadingStyle = style([
 
 export const rowHeadingContentsStyle = style([
 	sprinkles({
-		display: "grid",
+		display: 'grid',
 		gap: 12,
 	}),
 	cellContentsStyle,

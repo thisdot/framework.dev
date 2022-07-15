@@ -1,44 +1,44 @@
-import { globalStyle, style } from "@vanilla-extract/css"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { vars } from "../../themes/themes.css"
-import { pxToRem } from "../../util/style-utils"
+import { globalStyle, style } from '@vanilla-extract/css'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { vars } from '../../themes/themes.css'
+import { pxToRem } from '../../util/style-utils'
 
-globalStyle(":root", {
+globalStyle(':root', {
 	vars: {
-		"--reach-combobox": "1",
+		'--reach-combobox': '1',
 	},
 })
 
 export const tagFilterStyle = sprinkles({ paddingX: 16, paddingY: 12 })
 
 export const tagFilterTitleStyle = sprinkles({
-	textStyle: "caption",
-	color: "softText",
+	textStyle: 'caption',
+	color: 'softText',
 })
 
-export const tagFilterBodyStyle = sprinkles({ layout: "stack", gap: 16 })
+export const tagFilterBodyStyle = sprinkles({ layout: 'stack', gap: 16 })
 
 export const tagFilterSearchStyle = style([
 	sprinkles({ padding: 0 }),
 	{
 		selectors: {
 			'[data-reach-combobox]:not([data-state="idle"]) + &': {
-				display: "none",
+				display: 'none',
 			},
 		},
 	},
 ])
 
 export const tagFilterSearchTitleStyle = sprinkles({
-	textStyle: "overline",
-	color: "softText",
+	textStyle: 'overline',
+	color: 'softText',
 	paddingBottom: 8,
 })
 
 export const tagFilterSearchBodyStyle = sprinkles({
-	layout: "row",
+	layout: 'row',
 	gap: 4,
-	flexWrap: "wrap",
+	flexWrap: 'wrap',
 })
 
 export const tagFilterListboxStyle = style([
@@ -47,11 +47,11 @@ export const tagFilterListboxStyle = style([
 ])
 
 export const tagFilterListboxOptionStyle = style([
-	sprinkles({ paddingX: 16, paddingY: 12, textStyle: "bodyShort2" }),
+	sprinkles({ paddingX: 16, paddingY: 12, textStyle: 'bodyShort2' }),
 	{
-		cursor: "pointer",
+		cursor: 'pointer',
 		selectors: {
-			"&[data-highlighted], &:hover": {
+			'&[data-highlighted], &:hover': {
 				background: vars.themeColors.primaryContainer,
 			},
 		},

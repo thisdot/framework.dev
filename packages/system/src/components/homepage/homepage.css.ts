@@ -1,18 +1,18 @@
-import { style } from "@vanilla-extract/css"
-import { breakpoints, sprinkles } from "../../sprinkles/sprinkles.css"
-import { pxToRem } from "../../util/style-utils"
+import { style } from '@vanilla-extract/css'
+import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css'
+import { pxToRem } from '../../util/style-utils'
 
-export const homepageStyle = style({ overflow: "auto" })
+export const homepageStyle = style({ overflow: 'auto' })
 
 export const homepageContentContainerStyle = style([
 	sprinkles({
-		display: "grid",
+		display: 'grid',
 	}),
 	{
 		gap: pxToRem(64),
 		paddingTop: pxToRem(64),
 		paddingBottom: pxToRem(64),
-		"@media": {
+		'@media': {
 			[breakpoints.tablet]: {
 				gap: pxToRem(96),
 				paddingTop: pxToRem(96),
@@ -29,7 +29,7 @@ export const homepageContentContainerStyle = style([
 
 export const homepageGutterStyle = style([
 	sprinkles({
-		marginX: "auto",
+		marginX: 'auto',
 		paddingX: {
 			mobile: 16,
 			desktop: 48,
@@ -43,13 +43,13 @@ export const homepageGutterStyle = style([
 export const homepageTwoAndOneSectionStyle = style([
 	sprinkles({
 		gap: 48,
-		display: "grid",
+		display: 'grid',
 	}),
 	{
-		gridTemplate: "repeat(2, auto) / 1fr",
-		"@media": {
+		gridTemplate: 'repeat(2, auto) / 1fr',
+		'@media': {
 			[breakpoints.desktop]: {
-				gridTemplate: "auto / 2fr 1fr",
+				gridTemplate: 'auto / 2fr 1fr',
 			},
 		},
 	},

@@ -1,11 +1,11 @@
-import { Story, Meta } from "@storybook/react"
-import { Footer as FooterComponent, FooterProps } from "./footer"
+import { Story, Meta } from '@storybook/react'
+import { Footer as FooterComponent, FooterProps } from './footer'
 
 export default {
-	title: "Landing/Footer",
+	title: 'Landing/Footer',
 	component: FooterComponent,
 	args: {
-		children: "Hello world",
+		children: 'Hello world',
 	},
 } as Meta
 

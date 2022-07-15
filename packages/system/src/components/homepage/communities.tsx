@@ -1,12 +1,12 @@
-import classNames from "classnames"
-import React from "react"
-import { sampleSize } from "lodash"
-import { Community } from "../../models/community"
-import { communitiesStyle } from "./communities.css"
-import { ContentBanner } from "./content-banner"
+import classNames from 'classnames'
+import React from 'react'
+import { sampleSize } from 'lodash'
+import { Community } from '../../models/community'
+import { communitiesStyle } from './communities.css'
+import { ContentBanner } from './content-banner'
 
 export interface CommunitiesProps
-	extends React.ComponentPropsWithoutRef<"div"> {
+	extends React.ComponentPropsWithoutRef<'div'> {
 	communities: Community<string>[]
 }
 
@@ -21,8 +21,8 @@ export function Communities({
 			className={classNames(className, communitiesStyle)}
 			title="Connect with the React Community"
 			viewAll={{
-				title: "View all communities",
-				href: "/categories/communities",
+				title: 'View all communities',
+				href: '/categories/communities',
 			}}
 			items={randomCommunities.map((community) => {
 				return {

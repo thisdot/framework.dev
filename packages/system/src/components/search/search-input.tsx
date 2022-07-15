@@ -1,6 +1,6 @@
-import classNames from "classnames"
-import React from "react"
-import { useId } from "@reach/auto-id"
+import classNames from 'classnames'
+import React from 'react'
+import { useId } from '@reach/auto-id'
 import {
 	searchInputBoxStyle,
 	searchInputContainerStyle,
@@ -9,13 +9,13 @@ import {
 	searchInputLabelStyle,
 	searchInputResetButtonStyle,
 	searchInputStaticPrefixStyle,
-} from "./search-input.css"
-import { SearchIcon } from "../../icons/search-icon"
-import { CloseIcon } from "../../icons/close-icon"
-import { visuallyHidden } from "../../styles/utilities.css"
+} from './search-input.css'
+import { SearchIcon } from '../../icons/search-icon'
+import { CloseIcon } from '../../icons/close-icon'
+import { visuallyHidden } from '../../styles/utilities.css'
 
 export interface SearchInputProps
-	extends React.ComponentPropsWithoutRef<"input"> {
+	extends React.ComponentPropsWithoutRef<'input'> {
 	label: string
 	staticPrefix?: string
 	hideLabel?: boolean
@@ -29,7 +29,7 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
 			label,
 			hideLabel = false,
 			id: customIdFromProps,
-			staticPrefix = "",
+			staticPrefix = '',
 			onReset,
 			...props
 		}: SearchInputProps,

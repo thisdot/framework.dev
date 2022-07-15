@@ -1,28 +1,28 @@
-import { Story, Meta } from "@storybook/react"
-import { HorizontalScrollbar as HorizontalScrollbarComponent } from "./horizontal-scrollbar"
-import { vars } from "../../../themes/themes.css"
-import { exampleScrollbarTableData } from "./example-data"
-import React from "react"
+import { Story, Meta } from '@storybook/react'
+import { HorizontalScrollbar as HorizontalScrollbarComponent } from './horizontal-scrollbar'
+import { vars } from '../../../themes/themes.css'
+import { exampleScrollbarTableData } from './example-data'
+import React from 'react'
 
 export default {
-	title: "Horizontal Scrollbar",
+	title: 'Horizontal Scrollbar',
 	component: HorizontalScrollbarComponent,
 	parameters: {
 		backgrounds: {
-			default: "Light Theme Background",
+			default: 'Light Theme Background',
 			values: [
 				{
-					name: "Light Theme Background",
+					name: 'Light Theme Background',
 					value: vars.themeColors.surface4,
 					default: true,
 				},
 			],
 		},
-		viewport: { defaultViewport: "tablet" },
+		viewport: { defaultViewport: 'tablet' },
 	},
 } as Meta
 
-const Template: Story<React.ComponentPropsWithoutRef<"div">> = () => (
+const Template: Story<React.ComponentPropsWithoutRef<'div'>> = () => (
 	<HorizontalScrollbarComponent>
 		<table>
 			<tbody>
@@ -31,7 +31,7 @@ const Template: Story<React.ComponentPropsWithoutRef<"div">> = () => (
 						{Object.entries(row).map(([key, value]) => (
 							<td
 								key={`row-${row.id}-${key}`}
-								style={{ background: "white", padding: "12px" }}
+								style={{ background: 'white', padding: '12px' }}
 							>
 								{value}
 							</td>

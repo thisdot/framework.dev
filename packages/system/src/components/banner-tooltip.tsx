@@ -1,8 +1,8 @@
-import classNames from "classnames"
-import React from "react"
-import { CloseIcon } from "../icons/close-icon"
-import { LibraryCardIcon } from "../icons/library-card-icon"
-import { WavyArrowIcon } from "../icons/wavy-arrow-icon"
+import classNames from 'classnames'
+import React from 'react'
+import { CloseIcon } from '../icons/close-icon'
+import { LibraryCardIcon } from '../icons/library-card-icon'
+import { WavyArrowIcon } from '../icons/wavy-arrow-icon'
 import {
 	bannerTooltipStyle,
 	bannerTooltipHeadingStyle,
@@ -12,10 +12,10 @@ import {
 	bannerTooltipExplanatoryText,
 	bannerTooltipCloseIcon,
 	bannerTooltipWavyArrowIcon,
-} from "./banner-tooltip.css"
+} from './banner-tooltip.css'
 
 export interface BannerTooltipProps
-	extends React.ComponentPropsWithoutRef<"div"> {
+	extends React.ComponentPropsWithoutRef<'div'> {
 	pitchText: {
 		highlightedText: string
 		softText: string
@@ -35,7 +35,7 @@ export function BannerTooltip({
 	return (
 		<div className={classNames(className, bannerTooltipStyle)} {...props}>
 			<h3 className={bannerTooltipHeadingStyle}>
-				{pitchText.highlightedText}{" "}
+				{pitchText.highlightedText}{' '}
 				<span className={bannerTooltipHeadingSoftStyle}>
 					{pitchText.softText}
 				</span>
@@ -46,7 +46,7 @@ export function BannerTooltip({
 
 				<WavyArrowIcon size="full" className={bannerTooltipWavyArrowIcon} />
 
-				<LibraryCardIcon size="full" className={bannerTooltipCardIcon}  />
+				<LibraryCardIcon size="full" className={bannerTooltipCardIcon} />
 			</div>
 
 			<button className={bannerTooltipCloseIcon} onClick={onClick}>

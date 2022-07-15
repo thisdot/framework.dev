@@ -1,4 +1,4 @@
-import { CategoryName, FieldFilter } from "../../models/all-categories"
+import { CategoryName, FieldFilter } from '../../models/all-categories'
 
 export type FilterSet = {
 	category: CategoryName[]

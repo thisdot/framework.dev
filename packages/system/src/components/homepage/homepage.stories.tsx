@@ -1,5 +1,5 @@
-import { Story, Meta } from "@storybook/react"
-import { Homepage as HomepageComponent, HomepageProps } from "./homepage"
+import { Story, Meta } from '@storybook/react'
+import { Homepage as HomepageComponent, HomepageProps } from './homepage'
 import {
 	exampleBlogs,
 	exampleBooks,
@@ -9,10 +9,10 @@ import {
 	examplePodcasts,
 	exampleTags,
 	exampleTools,
-} from "../../util/example-content"
+} from '../../util/example-content'
 
 export default {
-	title: "Home/Homepage",
+	title: 'Home/Homepage',
 	component: HomepageComponent,
 	args: {
 		libraries: exampleLibraries,
@@ -23,7 +23,7 @@ export default {
 		books: exampleBooks,
 		tools: exampleTools,
 		communities: exampleCommunities,
-		siteName: "react"
+		siteName: 'react',
 	},
 } as Meta
 

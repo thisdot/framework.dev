@@ -1,41 +1,39 @@
-import { Meta, Story } from "@storybook/react"
-import { Button as ButtonComponent, ButtonProps } from "./button"
+import { Meta, Story } from '@storybook/react'
+import { Button as ButtonComponent, ButtonProps } from './button'
 
 export default {
-	title: "Button",
+	title: 'Button',
 	component: ButtonComponent,
 	args: {
-		as: "button",
-		size: "medium",
-		color: "primary",
+		as: 'button',
+		size: 'medium',
+		color: 'primary',
 		disabled: false,
-		children: "Click me!",
+		children: 'Click me!',
 	},
 	argTypes: {
-		onClick: { action: "clicked" },
+		onClick: { action: 'clicked' },
 		as: {
-			options: ["button", "a"],
-			control: { type: "radio" },
+			options: ['button', 'a'],
+			control: { type: 'radio' },
 		},
 		size: {
-			options: ["medium", "large", "square", "largeSquare"],
-			control: { type: "radio" },
+			options: ['medium', 'large', 'square', 'largeSquare'],
+			control: { type: 'radio' },
 		},
 		color: {
-			options: ["primary", "secondary", "tertiary", "plain", "destructive"],
-			control: { type: "radio" },
+			options: ['primary', 'secondary', 'tertiary', 'plain', 'destructive'],
+			control: { type: 'radio' },
 		},
 	},
 } as Meta
 
-const Template: Story<ButtonProps> = (args) => (
-	<ButtonComponent {...args} />
-)
+const Template: Story<ButtonProps> = (args) => <ButtonComponent {...args} />
 
 export const Button = Template.bind({})
 
 Button.parameters = {
 	percy: {
-		additionalSnapshots: [{ suffix: " as anchor", args: { as: "a" } }],
+		additionalSnapshots: [{ suffix: ' as anchor', args: { as: 'a' } }],
 	},
 }

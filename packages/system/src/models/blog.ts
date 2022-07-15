@@ -1,4 +1,4 @@
-import { SearchableRecord } from "./search"
+import { SearchableRecord } from './search'
 
 /**
  * Represents a blog or article
@@ -19,7 +19,7 @@ export interface Blog<T extends string> extends SearchableRecord<T> {
 }
 
 export const blogIndexMetadata = {
-	name: "blogs",
-	searchableFields: ["author", "description", "name"],
+	name: 'blogs',
+	searchableFields: ['author', 'description', 'name'],
 	filterableFields: {},
 } as const

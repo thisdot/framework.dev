@@ -1,6 +1,6 @@
-import React from "react"
-import classNames from "classnames"
-import { Headings, ISortConfig } from "../types"
+import React from 'react'
+import classNames from 'classnames'
+import { Headings, ISortConfig } from '../types'
 import {
 	cellTHStyle,
 	cellTDStyle,
@@ -8,7 +8,7 @@ import {
 	cellContentsStyle,
 	rowHeadingStyle,
 	rowHeadingContentsStyle,
-} from "./cells.css"
+} from './cells.css'
 
 type ColHeadingProps = {
 	name?: Headings
@@ -23,10 +23,10 @@ export const ColHeading = ({
 	sort,
 	onClick,
 	...props
-}: ColHeadingProps & React.ComponentPropsWithoutRef<"th">) => {
+}: ColHeadingProps & React.ComponentPropsWithoutRef<'th'>) => {
 	let sorted = {}
 	if (sort && sort.by === name) {
-		sorted = { "aria-sort": sort.asc ? "ascending" : "descending" }
+		sorted = { 'aria-sort': sort.asc ? 'ascending' : 'descending' }
 	}
 	return (
 		<th
@@ -52,7 +52,7 @@ export const RowHeading = ({
 	children,
 	className,
 	...props
-}: React.ComponentPropsWithoutRef<"th">) => {
+}: React.ComponentPropsWithoutRef<'th'>) => {
 	return (
 		<th
 			className={classNames(rowHeadingStyle, className)}
@@ -68,7 +68,7 @@ export const TD = ({
 	children,
 	className,
 	...props
-}: React.ComponentPropsWithoutRef<"td">) => (
+}: React.ComponentPropsWithoutRef<'td'>) => (
 	<td className={classNames(cellTDStyle, className)} {...props}>
 		<div className={cellContentsStyle}>{children}</div>
 	</td>

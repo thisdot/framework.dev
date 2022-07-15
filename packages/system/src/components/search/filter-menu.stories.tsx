@@ -1,11 +1,11 @@
-import { Story, Meta } from "@storybook/react"
-import { allCategoryNames } from "../../models/all-categories"
-import { exampleTags } from "../../util/example-content"
+import { Story, Meta } from '@storybook/react'
+import { allCategoryNames } from '../../models/all-categories'
+import { exampleTags } from '../../util/example-content'
 import {
 	FilterMenu as FilterMenuComponent,
 	FilterMenuProps,
-} from "./filter-menu"
-import { FilterSet, QueryParams } from "./types"
+} from './filter-menu'
+import { FilterSet, QueryParams } from './types'
 
 const params: QueryParams = {
 	filters: {
@@ -13,26 +13,26 @@ const params: QueryParams = {
 		field: [],
 		tag: [],
 	},
-	textSearch: "",
+	textSearch: '',
 }
 
 const availableFilters: FilterSet = {
 	category: allCategoryNames,
 	tag: [...exampleTags],
 	field: [
-		["level", ["beginner", "intermediate", "advanced"]],
-		["paymentType", ["free", "paid"]],
-		["format", ["text", "video", "interactive"]],
+		['level', ['beginner', 'intermediate', 'advanced']],
+		['paymentType', ['free', 'paid']],
+		['format', ['text', 'video', 'interactive']],
 	],
 }
 
 export default {
-	title: "Search/Filter Menu",
+	title: 'Search/Filter Menu',
 	component: FilterMenuComponent,
 	parameters: {
-		layout: "fullscreen",
+		layout: 'fullscreen',
 		viewport: {
-			defaultViewport: "mobile2",
+			defaultViewport: 'mobile2',
 		},
 	},
 	args: {
@@ -41,11 +41,11 @@ export default {
 		popularTags: exampleTags,
 	},
 	argTypes: {
-		onConfirm: { action: "confirm" },
+		onConfirm: { action: 'confirm' },
 		params: {
 			table: {
 				type: {
-					summary: "QueryParams",
+					summary: 'QueryParams',
 				},
 			},
 			control: {

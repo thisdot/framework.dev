@@ -1,13 +1,13 @@
-import classNames from "classnames"
-import React, { useMemo, useState } from "react"
+import classNames from 'classnames'
+import React, { useMemo, useState } from 'react'
 import {
 	Combobox,
 	ComboboxInput,
 	ComboboxList,
 	ComboboxOption,
 	ComboboxPopover,
-} from "@reach/combobox"
-import { TextInput } from "../text-input"
+} from '@reach/combobox'
+import { TextInput } from '../text-input'
 import {
 	tagFilterBodyStyle,
 	tagFilterListboxOptionStyle,
@@ -17,21 +17,21 @@ import {
 	tagFilterSearchTitleStyle,
 	tagFilterStyle,
 	tagFilterTitleStyle,
-} from "./tag-filter.css"
+} from './tag-filter.css'
 import {
 	deserializeFieldValue,
 	formatFieldValue,
 	serializeFieldValue,
-} from "../../util/string-utils"
-import { CloseIcon } from "../../icons/close-icon"
-import { Chip } from "../chip"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { Tag } from "../tag"
-import Fuse from "fuse.js"
-import { map, take } from "lodash"
+} from '../../util/string-utils'
+import { CloseIcon } from '../../icons/close-icon'
+import { Chip } from '../chip'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { Tag } from '../tag'
+import Fuse from 'fuse.js'
+import { map, take } from 'lodash'
 
 export interface TagFilterProps<T extends string>
-	extends React.ComponentPropsWithoutRef<"fieldset"> {
+	extends React.ComponentPropsWithoutRef<'fieldset'> {
 	options: T[]
 	value: T[]
 	suggestions?: T[]
@@ -47,13 +47,13 @@ export function TagFilter<T extends string>({
 	value,
 	...props
 }: TagFilterProps<T>) {
-	const [tagSearch, setTagSearch] = useState("")
+	const [tagSearch, setTagSearch] = useState('')
 	const searchIndex = useMemo(
 		() => new Fuse(options, { threshold: 0.3 }),
 		[options]
 	)
 	const searchResults = take(
-		map(searchIndex.search(tagSearch), "item").filter(
+		map(searchIndex.search(tagSearch), 'item').filter(
 			(o) => !value.includes(o)
 		),
 		5
@@ -64,7 +64,7 @@ export function TagFilter<T extends string>({
 			<div className={tagFilterBodyStyle}>
 				<Combobox
 					onSelect={(selection: string) => {
-						setTagSearch("")
+						setTagSearch('')
 						const deserializedSelection = deserializeFieldValue(
 							serializeFieldValue(selection),
 							options
@@ -115,8 +115,8 @@ export function TagFilter<T extends string>({
 							type="button"
 							onClick={() => onUpdate([])}
 							className={sprinkles({
-								color: "tertiary",
-								textStyle: "button",
+								color: 'tertiary',
+								textStyle: 'button',
 								paddingTop: 16,
 							})}
 						>
