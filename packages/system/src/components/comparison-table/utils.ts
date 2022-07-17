@@ -4,7 +4,7 @@ export function sortLibraries(
 	libraries: ILibrary[],
 	sortConfig: ISortConfig
 ): ILibrary[] {
-	return libraries.sort((a, b) => {
+	return [...libraries].sort((a, b) => {
 		const valueA =
 			typeof a[sortConfig.by] === "string"
 				? (a[sortConfig.by] as string).toUpperCase()
