@@ -123,7 +123,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Query",
 		author: "Tanner Linsley",
-		gitHubRepo: "TanStack/react-query",
+		gitHubRepo: "TanStack/query",
 		npmPackage: "react-query",
 		href: "https://react-query.tanstack.com/",
 		description:
