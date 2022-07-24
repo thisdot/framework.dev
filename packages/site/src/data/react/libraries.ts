@@ -123,13 +123,12 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Query",
 		author: "Tanner Linsley",
-		gitHubRepo: "tannerlinsley/react-query",
+		gitHubRepo: "TanStack/query",
 		npmPackage: "react-query",
 		href: "https://react-query.tanstack.com/",
 		description:
 			"Writing your data fetching logic by hand is over. Tell React Query where to get your data and how fresh you need it to be and the rest is automatic. React Query handles caching, background updates and stale data out of the box with zero-configuration.",
-		image:
-			"https://react-query.tanstack.com/_next/static/images/emblem-light-628080660fddb35787ff6c77e97ca43e.svg",
+		image: "https://raw.githubusercontent.com/TanStack/query/main/media/emblem-light.svg",
 		tags: ["data fetching", "state management"],
 	},
 	{
