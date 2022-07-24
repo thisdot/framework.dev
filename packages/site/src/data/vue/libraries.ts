@@ -303,7 +303,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		gitHubRepo: "vuejs/vuex",
 		npmPackage: "vuex",
 		href: "https://vuex.vuejs.org/",
-		description: "Vuex is a state management pattern + library for Vue.js applications.",
+		description:
+			"Vuex is a state management pattern + library for Vue.js applications.",
 		image: "https://github.com/vuejs.png",
 		tags: ["state management", "Vue 2", "Vue 3"],
 	},
@@ -334,8 +335,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		gitHubRepo: "Kong/swrv",
 		npmPackage: "swrv",
 		href: "https://xstate.js.org/docs/packages/xstate-vue/#xstate-vue",
-		description:
-			"Stale-while-revalidate data fetching for Vue.",
+		description: "Stale-while-revalidate data fetching for Vue.",
 		image: "https://raw.githubusercontent.com/Kong/swrv/master/logo.png",
 		tags: ["data fetching", "Vue 3"],
 	},
@@ -370,7 +370,14 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Use TypeScript as your preprocessor. Write type‑safe, locally scoped classes, variables and themes, then generate static CSS files at build time.",
 		image: "https://github.com/seek-oss.png",
-		tags: ["styling", "CSS processor", "CSS in JS", "CSS modules", "Vue 2", "Vue 3"],
+		tags: [
+			"styling",
+			"CSS processor",
+			"CSS in JS",
+			"CSS modules",
+			"Vue 2",
+			"Vue 3",
+		],
 	},
 	{
 		name: "styled-components",
@@ -435,8 +442,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://kazupon.github.io/vue-i18n/",
 		image: "https://kazupon.github.io/vue-i18n/vue-i18n-logo.png",
 		tags: ["internationalization"],
-		description:
-			"Vue I18n is internationalization plugin for Vue.js",
+		description: "Vue I18n is internationalization plugin for Vue.js",
 	},
 	{
 		name: "Harlem",
@@ -446,6 +452,51 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://harlemjs.com/",
 		image: "https://harlemjs.com/assets/images/logo-192.svg",
 		tags: ["state management", "Vue 3"],
-		description: "Simple, unopinionated, lightweight and extensible state management for Vue 3",
+		description:
+			"Simple, unopinionated, lightweight and extensible state management for Vue 3",
+	},
+	{
+		name: "Vue Testing Library",
+		author: "testing-library",
+		gitHubRepo: "testing-library/vue-testing-library",
+		npmPackage: "@testing-library/vue",
+		href: "https://testing-library.com/docs/vue-testing-library/intro",
+		image: "https://github.com/testing-library.png",
+		tags: ["testing", "Vue 2", "Vue 3"],
+		description:
+			"Simple and complete Vue.js testing utilities that encourage good testing practices.",
+	},
+	{
+		name: "Vitest",
+		author: "Vitest",
+		gitHubRepo: "vitest-dev/vitest",
+		npmPackage: "vitest",
+		href: "https://vitest.dev/",
+		image: "https://github.com/vitest-dev.png",
+		tags: ["testing", "Vue 2", "Vue 3"],
+		description: "A blazing fast unit test framework powered by Vite.",
+	},
+	{
+		name: "Cypress",
+		author: "Cypress",
+		gitHubRepo: "cypress-io/cypress",
+		npmPackage: "cypress",
+		href: "https://www.cypress.io/",
+		image: "https://github.com/cypress-io.png",
+		tags: ["testing", "Vue 2", "Vue 3"],
+		description:
+			"Fast, easy and reliable testing for anything that runs in a browser.",
+	},
+	{
+		name: "Jest",
+		author: "Meta",
+		gitHubRepo: "facebook/jest",
+		npmPackage: "jest",
+		href: "https://jestjs.io/",
+		image:
+			"https://raw.githubusercontent.com/facebook/jest/main/website/static/img/jest.png",
+		tags: ["testing", "Vue 2", "Vue 3"],
+		description:
+			"Jest is a delightful JavaScript Testing Framework with a focus on simplicity.",
 	},
 ]

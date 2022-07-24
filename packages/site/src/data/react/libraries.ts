@@ -128,7 +128,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://react-query.tanstack.com/",
 		description:
 			"Writing your data fetching logic by hand is over. Tell React Query where to get your data and how fresh you need it to be and the rest is automatic. React Query handles caching, background updates and stale data out of the box with zero-configuration.",
-		image: "https://raw.githubusercontent.com/TanStack/query/main/media/emblem-light.svg",
+		image:
+			"https://raw.githubusercontent.com/TanStack/query/main/media/emblem-light.svg",
 		tags: ["data fetching", "state management"],
 	},
 	{
@@ -723,7 +724,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://github.com/pmndrs/valtio",
 		image: "https://github.com/pmndrs.png",
 		tags: ["state management"],
-		description: "Lightweight Proxy-Based State Management for ReactJS and VanillaJS",
+		description:
+			"Lightweight Proxy-Based State Management for ReactJS and VanillaJS",
 	},
 	{
 		name: "A11y",
@@ -798,10 +800,15 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		npmPackage: "blitz",
 		href: "https://blitzjs.com/",
 		description:
-			"Blitz is a batteries-included framework that's inspired by Ruby on Rails, is built on Next.js, and features a \"Zero-API\" data layer abstraction that eliminates the need for REST/GraphQL.",
-		image:
-			"https://github.com/blitz-js.png",
-		tags: ["framework", "data fetching", "routing", "static site generation", "server side rendering"],
+			'Blitz is a batteries-included framework that\'s inspired by Ruby on Rails, is built on Next.js, and features a "Zero-API" data layer abstraction that eliminates the need for REST/GraphQL.',
+		image: "https://github.com/blitz-js.png",
+		tags: [
+			"framework",
+			"data fetching",
+			"routing",
+			"static site generation",
+			"server side rendering",
+		],
 	},
 	{
 		name: "Remix",
@@ -811,9 +818,14 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://remix.run/",
 		description:
 			"Remix is a full stack web framework (from the creators of React Router) that lets you focus on the user interface and work back through web fundamentals to deliver a fast, slick, and resilient user experience.",
-		image:
-			"https://github.com/remix-run.png",
-		tags: ["framework", "routing", "data fetching", "server side rendering", "forms"],
+		image: "https://github.com/remix-run.png",
+		tags: [
+			"framework",
+			"routing",
+			"data fetching",
+			"server side rendering",
+			"forms",
+		],
 	},
 	{
 		name: "Bumbag",
@@ -823,7 +835,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://bumbag.style/",
 		image: "https://github.com/jxom.png",
 		tags: ["component library"],
-		description: "Build themeable React & React Native applications with your Bumbag",
+		description:
+			"Build themeable React & React Native applications with your Bumbag",
 	},
 	{
 		name: "Chakra UI",
@@ -833,7 +846,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://chakra-ui.com/",
 		image: "https://github.com/chakra-ui.png",
 		tags: ["component library"],
-		description: "⚡️ Simple, Modular & Accessible UI Components for your React Applications",
+		description:
+			"⚡️ Simple, Modular & Accessible UI Components for your React Applications",
 	},
 	{
 		name: "Reach UI",
@@ -853,7 +867,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://react-components.vercel.app/",
 		image: "https://github.com/hashicorp.png",
 		tags: ["component library"],
-		description: "A set of HashiCorp branded react components currently maintained and used by the marketing dev team",
+		description:
+			"A set of HashiCorp branded react components currently maintained and used by the marketing dev team",
 	},
 	{
 		name: "React Spectrum",
@@ -863,7 +878,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://react-spectrum.adobe.com/",
 		image: "https://github.com/adobe.png",
 		tags: ["component library"],
-		description: "A collection of libraries and tools that help you build adaptive, accessible, and robust user experiences.",
+		description:
+			"A collection of libraries and tools that help you build adaptive, accessible, and robust user experiences.",
 	},
 	{
 		name: "Windmill React UI",
@@ -873,7 +889,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://windmillui.com/",
 		image: "https://github.com/estevanmaito.png",
 		tags: ["component library"],
-		description: "🧩 The component library for fast and accessible development of gorgeous interfaces.",
+		description:
+			"🧩 The component library for fast and accessible development of gorgeous interfaces.",
 	},
 	{
 		name: "React Testing Library",
@@ -881,8 +898,55 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		gitHubRepo: "testing-library/react-testing-library",
 		npmPackage: "@testing-library/react",
 		href: "https://testing-library.com/docs/react-testing-library/intro/",
-		image: "https://raw.githubusercontent.com/testing-library/react-testing-library/main/other/goat.png",
+		image:
+			"https://raw.githubusercontent.com/testing-library/react-testing-library/main/other/goat.png",
 		tags: ["testing"],
-		description: "🐐 Simple and complete React DOM testing utilities that encourage good testing practices.",
+		description:
+			"🐐 Simple and complete React DOM testing utilities that encourage good testing practices.",
+	},
+	{
+		name: "Vitest",
+		author: "Vitest",
+		gitHubRepo: "vitest-dev/vitest",
+		npmPackage: "vitest",
+		href: "https://vitest.dev/",
+		image: "https://github.com/vitest-dev.png",
+		tags: ["testing"],
+		description: "A blazing fast unit test framework powered by Vite.",
+	},
+	{
+		name: "Cypress",
+		author: "Cypress",
+		gitHubRepo: "cypress-io/cypress",
+		npmPackage: "cypress",
+		href: "https://www.cypress.io/",
+		image: "https://github.com/cypress-io.png",
+		tags: ["testing"],
+		description:
+			"Fast, easy and reliable testing for anything that runs in a browser.",
+	},
+	{
+		name: "Jest",
+		author: "Meta",
+		gitHubRepo: "facebook/jest",
+		npmPackage: "jest",
+		href: "https://jestjs.io/",
+		image:
+			"https://raw.githubusercontent.com/facebook/jest/main/website/static/img/jest.png",
+		tags: ["testing"],
+		description:
+			"Jest is a delightful JavaScript Testing Framework with a focus on simplicity.",
+	},
+	{
+		name: "Enzyme",
+		author: "Jordan Harband",
+		gitHubRepo: "enzymejs/enzyme",
+		npmPackage: "enzyme",
+		href: "https://enzymejs.github.io/enzyme/",
+		image:
+			"https://github.com/enzymejs.png",
+		tags: ["testing"],
+		description:
+			"Enzyme is a JavaScript Testing utility for React that makes it easier to test your React Components' output.",
 	},
 ]
