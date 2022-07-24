@@ -496,4 +496,38 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image: "https://github.com/willmendesneto.png",
 		tags: ["component"],
 	},
+	{
+		name: "Angular Testing Library",
+		author: "testing-library",
+		gitHubRepo: "testing-library/angular-testing-library",
+		npmPackage: "@testing-library/angular",
+		href: "https://testing-library.com/docs/angular-testing-library/intro/",
+		image: "https://github.com/testing-library.png",
+		tags: ["testing"],
+		description:
+			"Simple and complete Angular testing utilities that encourage good testing practices.",
+	},
+	{
+		name: "Cypress",
+		author: "Cypress",
+		gitHubRepo: "cypress-io/cypress",
+		npmPackage: "cypress",
+		href: "https://www.cypress.io/",
+		image: "https://github.com/cypress-io.png",
+		tags: ["testing"],
+		description:
+			"Fast, easy and reliable testing for anything that runs in a browser.",
+	},
+	{
+		name: "Jest",
+		author: "Meta",
+		gitHubRepo: "facebook/jest",
+		npmPackage: "jest",
+		href: "https://jestjs.io/",
+		image:
+			"https://raw.githubusercontent.com/facebook/jest/main/website/static/img/jest.png",
+		tags: ["testing"],
+		description:
+			"Jest is a delightful JavaScript Testing Framework with a focus on simplicity.",
+	},
 ]
