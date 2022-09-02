@@ -3,8 +3,6 @@ import { AngularIcon } from "../icons/angular-icon"
 import { ReactIcon } from "../icons/react-icon"
 import { VueIcon } from "../icons/vue-icon"
 
-export const CURRENT_BUILD_YEAR = new Date().getFullYear()
-
 export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 	{
 		title: "Angular Resources",
