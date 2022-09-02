@@ -35,7 +35,7 @@ export function Sidebar({
 						paddingY: 24,
 						paddingX: 32,
 						layout: "stack",
-						gap: 14,
+						gap: 32,
 					})}
 				>
 					<a
