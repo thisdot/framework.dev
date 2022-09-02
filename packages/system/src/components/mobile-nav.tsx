@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import {
 	menuButtonStyle,
 	mobileNavDialogStyle,
+	mobileNavSponorIconContainerStyle,
 	mobileNavStyle,
 } from "./mobile-nav.css"
 import { SideDialog } from "./side-dialog"
@@ -12,7 +13,7 @@ import { BurgerIcon } from "../icons/burger-icon"
 import { CloseBurgerIcon } from "../icons/close-burger-icon"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { GithubIcon } from "../icons/github-icon"
-import { CURRENT_BUILD_YEAR } from "../globals/global-constants"
+import { SponsorIcon } from "../icons/sponsor-icon"
 
 type MenuState = "open" | "closed"
 
@@ -97,14 +98,9 @@ export function MobileNav({
 						gap: 14,
 					})}
 				>
-					<p
-						className={sprinkles({
-							textStyle: "bodyShort3",
-							color: "softText",
-						})}
-					>
-						© {CURRENT_BUILD_YEAR} This Dot, Inc.
-					</p>
+					<div className={mobileNavSponorIconContainerStyle}>
+						<SponsorIcon size="full" />
+					</div>
 					<a
 						className={sprinkles({
 							textStyle: "bodyShort2",

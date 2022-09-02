@@ -5,10 +5,11 @@ import {
 	sidebarContentsStyle,
 	sidebarHeaderStyle,
 	sidebarBodyStyle,
+	sidebarSponsorIconContainerStyle,
 } from "./sidebar.css"
 import { sprinkles } from "../sprinkles/sprinkles.css"
 import { GithubIcon } from "../icons/github-icon"
-import { CURRENT_BUILD_YEAR } from "../globals/global-constants"
+import { SponsorIcon } from "../icons/sponsor-icon"
 
 export type SidebarProps = React.ComponentPropsWithoutRef<"nav"> & {
 	siteName: string
@@ -53,14 +54,10 @@ export function Sidebar({
 						<GithubIcon size="large" />
 						Submit a PR
 					</a>
-					<p
-						className={sprinkles({
-							textStyle: "bodyShort3",
-							color: "softText",
-						})}
-					>
-						© {CURRENT_BUILD_YEAR} This Dot, Inc.
-					</p>
+
+					<div className={sidebarSponsorIconContainerStyle}>
+						<SponsorIcon size="full" />
+					</div>
 				</footer>
 			</div>
 		</nav>
