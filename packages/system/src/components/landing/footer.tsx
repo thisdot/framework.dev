@@ -1,8 +1,8 @@
 import classNames from "classnames"
 import React from "react"
-import { CURRENT_BUILD_YEAR } from "../../globals/global-constants"
 import { GithubIcon } from "../../icons/github-icon"
-import { footerLinkStyle, footerStyle, footerTextStyle } from "./footer.css"
+import { SponsorIcon } from "../../icons/sponsor-icon"
+import { footerLinkStyle, footerSponsorIconContainerStyle, footerStyle } from "./footer.css"
 
 export interface FooterProps extends React.ComponentPropsWithoutRef<"footer"> {}
 
@@ -18,7 +18,9 @@ export function Footer({ children, className, ...props }: FooterProps) {
 				<GithubIcon size="large" />
 				Submit a PR
 			</a>
-			<p className={footerTextStyle}>© {CURRENT_BUILD_YEAR} This Dot, Inc.</p>
+			<div className={footerSponsorIconContainerStyle}>
+				<SponsorIcon size="full" />
+			</div>
 		</footer>
 	)
 }

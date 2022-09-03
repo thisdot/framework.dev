@@ -38,3 +38,6 @@ export const mobileNavDialogStyle = style({
 	maxHeight: "calc(100vh - 56px)",
 	overflowY: "auto",
 })
+
+
+export const mobileNavSponorIconContainerStyle = style({ maxWidth: pxToRem(131) })
