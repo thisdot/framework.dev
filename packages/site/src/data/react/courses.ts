@@ -136,7 +136,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "Learn React Today",
 		author: "Web Dev Simplified",
-		image: "https://github.com/WebDevSimplified",
+		image: "https://github.com/WebDevSimplified.png",
 		description:
 			"Learn React and all its modern features such as hooks and context in less than a day with this highly focused React course",
 		paymentType: "paid",
