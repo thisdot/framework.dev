@@ -420,7 +420,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 			"Learn to build real-world applications using modern React! Much more than an intro, you’ll start from the ground up, getting to using the latest features in React, including hooks, effects, context, and portals. Throughout the course, you’ll piece together tools from the entire React ecosystem (like Parcel, ESLint, TailwindCSS, and React Router) to build a complete application to browse adoptable pets!",
 		paymentType: "paid",
 		level: "beginner",
-		format: "interactive",
+		format: "video",
 		href: "https://frontendmasters.com/courses/complete-react-v7/",
 		tags: ["state management", "data fetching", "forms", "routing", "authentication", "hooks", "tailwind",],
 	},
