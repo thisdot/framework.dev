@@ -700,8 +700,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		author: "Poimandres",
 		gitHubRepo: "pmndrs/zustand",
 		npmPackage: "zustand",
-		href: "https://docs.pmnd.rs/zustand/introduction",
-		image: "https://docs.pmnd.rs/zustand-resources/bear.png",
+		href: "https://zustand-demo.pmnd.rs",
+		image: "https://raw.githubusercontent.com/pmndrs/zustand/main/bear.jpg",
 		tags: ["state management"],
 		description:
 			"A small, fast and scalable bearbones state-management solution using simplified flux principles.",
