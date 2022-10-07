@@ -532,7 +532,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		title: "React Explained",
 		authors: ["Zac Gordon"],
 		href: "https://www.ostraining.com/books/react/",
-		image: "https://www.ostraining.com/cdn/images/books-club/react.jpg",
+		image: "https://ostraining.com/wp-content/uploads/elementor/thumbs/react-p0jzqaebb74zxlnj7jsgs7v7th7cqjwvb2rn97o2ns.jpg",
 		description: "React Explained is a fun and enjoyable introduction to React, which is the Javascript framework of choice for WordPress, Drupal, Magento, and thousands of developers.",
 		yearOfPublication: 2018,
 		numberOfPages: 212,

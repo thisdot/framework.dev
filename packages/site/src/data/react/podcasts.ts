@@ -63,7 +63,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	{
 		title: "React Round Up",
 		image:
-			"https://assets.fireside.fm/file/fireside-images/podcasts/images/4/45ac7cd2-9fff-46c9-842c-2d7e0d34cd4b/cover_small.jpg?v=1",
+			"https://production.listennotes.com/podcasts/react-round-up-top-end-devs-uxyF8zV_NUA-2KadMTpoqxD.1400x1400.jpg",
 		hosts: [
 			"Carl Mungazi",
 			"Charles Max Wood",
