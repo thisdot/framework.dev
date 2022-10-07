@@ -63,7 +63,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	{
 		title: "React Round Up",
 		image:
-			"https://topenddevs.nyc3.digitaloceanspaces.com/ktszo9706o6v5yqqy3s9sor1rgkq?response-content-disposition=inline%3B%20filename%3D%22reactroundup-1-scaled.jpeg%22%3B%20filename%2A%3DUTF-8%27%27reactroundup-1-scaled.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=STO4LZNRL5TU6SLCP4ZY%2F20221006%2Funused%2Fs3%2Faws4_request&X-Amz-Date=20221006T220027Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=bb8192309c86957c7578b49c3e1f8afebadb4a744a2ccdc111546a935d16385d",
+			"https://production.listennotes.com/podcasts/react-round-up-top-end-devs-uxyF8zV_NUA-2KadMTpoqxD.1400x1400.jpg",
 		hosts: [
 			"Carl Mungazi",
 			"Charles Max Wood",
