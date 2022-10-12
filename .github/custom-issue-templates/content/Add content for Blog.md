@@ -7,7 +7,7 @@ As a visitor of the framework specific Framework.dev site I would like to have t
 ## Acceptance
 
 
-- [ ] Research a list of Blogs (at least 3-5 blogs)
+- [ ] Research a list of Blogs (at least 8-10 blogs)
 - [ ] Add the blog information in the data files
 - [ ] Test each individual look and external link
 

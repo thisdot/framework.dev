@@ -13,3 +13,4 @@ As a visitor of the framework specific Framework.dev site I would like to have t
 
 NOTE:
 - This task is timeboxed to a maximum of 4 hours.
+- O'Really is a very good resource for this.
