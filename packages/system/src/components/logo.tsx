@@ -16,6 +16,7 @@ export function Logo({ className, siteName, stretched }: LogoProps) {
 		react: <ReactFrameworkIcon size="full" stretched={stretched} />,
 		angular: <AngularFrameworkIcon size="full" stretched={stretched} />,
 		vue: <VueFrameworkIcon size="full" stretched={stretched} />,
+		// solidjs: <VueFrameworkIcon size="full" stretched={stretched} />,
 	}
 
 	const renderLogo = () => {

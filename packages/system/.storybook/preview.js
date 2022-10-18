@@ -7,6 +7,8 @@ import {
 	angularThemeDark,
 	vueTheme,
 	vueThemeDark,
+	solidJSTheme,
+	solidJSThemeDark,
 } from "../src/themes/themes.css"
 import { addDecorator } from "@storybook/react"
 import { withThemes } from "storybook-addon-themes/react"
@@ -54,6 +56,9 @@ export const parameters = {
 			{ name: "angularDark", class: angularThemeDark, color: "#85001f" },
 			{ name: "vue", class: vueTheme, color: "#40b883" },
 			{ name: "vueDark", class: vueThemeDark, color: "#34495e" },
+
+			{ name: "solidjs", class: solidJSTheme, color: "#2c4f7c" },
+			{ name: "solidjsdark", class: solidJSThemeDark, color: "#004E5C" },
 		],
 	},
 }
