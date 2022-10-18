@@ -7,6 +7,8 @@ import {
 	angularThemeDark,
 	vueTheme,
 	vueThemeDark,
+	qwikTheme,
+	qwikThemeDark,
 } from "../src/themes/themes.css"
 import { addDecorator } from "@storybook/react"
 import { withThemes } from "storybook-addon-themes/react"
@@ -54,6 +56,8 @@ export const parameters = {
 			{ name: "angularDark", class: angularThemeDark, color: "#85001f" },
 			{ name: "vue", class: vueTheme, color: "#40b883" },
 			{ name: "vueDark", class: vueThemeDark, color: "#34495e" },
+			{ name: "qwik", class: qwikTheme, color: "#18b6f6" },
+			{ name: "qwikDark", class: qwikThemeDark, color: "#0e201a" },
 		],
 	},
 }
