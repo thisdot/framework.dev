@@ -1,5 +1,6 @@
 import { createTheme, createThemeContract } from "@vanilla-extract/css"
 import { angularColorPalette } from "./angular-color-scheme"
+import { qwikColorPalette } from "./qwik-color-scheme"
 import { landingColorPalette } from "./landing-color-scheme"
 import { reactColorPalette } from "./react-color-scheme"
 import { solidJSColorPalette } from "./solidjs-color-scheme"
@@ -50,6 +51,16 @@ export const vueTheme = createTheme(
 export const vueThemeDark = createTheme(
 	vars,
 	darkThemeFromPalette(vueColorPalette)
+)
+
+export const qwikTheme = createTheme(
+	vars,
+	lightThemeFromPalette(qwikColorPalette)
+)
+
+export const qwikThemeDark = createTheme(
+	vars,
+	darkThemeFromPalette(qwikColorPalette)
 )
 
 export const landingTheme = createTheme(
