@@ -9,6 +9,7 @@ import {
 	lightThemeFromPalette,
 } from "./theme-from-palette"
 import { vueColorPalette } from "./vue-color-scheme"
+import { svelteColorPalette } from "./svelte-color-scheme"
 
 export const vars = createThemeContract(lightThemeFromPalette(blankPalette))
 
@@ -50,6 +51,16 @@ export const qwikTheme = createTheme(
 export const qwikThemeDark = createTheme(
 	vars,
 	darkThemeFromPalette(qwikColorPalette)
+)
+
+export const svelteTheme = createTheme(
+	vars,
+	lightThemeFromPalette(svelteColorPalette)
+)
+
+export const svelteThemeDark = createTheme(
+	vars,
+	darkThemeFromPalette(svelteColorPalette)
 )
 
 export const landingTheme = createTheme(
