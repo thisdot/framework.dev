@@ -40,6 +40,26 @@ applications:
         paths:
           - ../../node_modules/**/*
           - ../../packages/*/node_modules/**/*
+  - appRoot: packages/qwik
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd ../..
+            - nvm install
+            - nvm use
+            - yarn install
+        build:
+          commands:
+            - yarn build:qwik
+      artifacts:
+        baseDirectory: ../site/dist
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - ../../node_modules/**/*
+          - ../../packages/*/node_modules/**/*
   - appRoot: packages/vue
     frontend:
       phases:
