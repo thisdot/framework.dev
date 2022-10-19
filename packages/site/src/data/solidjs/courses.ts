@@ -65,7 +65,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		],
 	},
 	{
-		title: "Lets Learn Solid JS",
+		title: "Let's Learn Solid JS",
 		author: "Ryan Carniato",
 		image: "https://github.com/ryansolid.png",
 		description:
@@ -89,7 +89,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["state management", "routing", "data fetching"],
 	},
 	{
-		title: "Lets Learn SolidJS",
+		title: "Let's Learn SolidJS",
 		author: "Ryan Carniato",
 		image: "https://github.com/ryansolid.png",
 		description:
@@ -107,7 +107,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		],
 	},
 	{
-		title: "SolidJS Crash Course ",
+		title: "SolidJS Crash Course",
 		author: "Ebenezer Don",
 		image: "https://github.com/ebenezerdon.png",
 		description:
@@ -119,7 +119,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["state management", "routing", "data fetching"],
 	},
 	{
-		title: "SolidJS Official Tutorial ",
+		title: "SolidJS Official Tutorial",
 		author: "SolidJS",
 		image: "https://github.com/solidjs.png",
 		description:
