@@ -12,6 +12,7 @@ import { MobileNav } from '../components/mobile-nav.tsx'
 import { NavItems } from '../components/nav-items.tsx'
 import {SocialMetaTags} from '../components/social-meta-tags';
 import { getSearchData } from '../data/search-data'
+import { descriptions } from '../data/descriptions'
 
 const { title, currentCategory, currentTag, className } = Astro.props
 const searchData = await getSearchData(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)
