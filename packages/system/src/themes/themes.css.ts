@@ -3,6 +3,7 @@ import { angularColorPalette } from "./angular-color-scheme"
 import { qwikColorPalette } from "./qwik-color-scheme"
 import { landingColorPalette } from "./landing-color-scheme"
 import { reactColorPalette } from "./react-color-scheme"
+import { solidJSColorPalette } from "./solidjs-color-scheme"
 import {
 	blankPalette,
 	darkThemeFromPalette,
@@ -20,6 +21,16 @@ export const reactTheme = createTheme(
 export const reactThemeDark = createTheme(
 	vars,
 	darkThemeFromPalette(reactColorPalette)
+)
+
+export const solidjsTheme = createTheme(
+	vars,
+	lightThemeFromPalette(solidJSColorPalette)
+)
+
+export const solidjsThemeDark = createTheme(
+	vars,
+	darkThemeFromPalette(solidJSColorPalette)
 )
 
 export const angularTheme = createTheme(

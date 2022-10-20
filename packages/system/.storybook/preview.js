@@ -7,6 +7,8 @@ import {
 	angularThemeDark,
 	vueTheme,
 	vueThemeDark,
+	solidJSTheme,
+	solidJSThemeDark,
 	qwikTheme,
 	qwikThemeDark,
 } from "../src/themes/themes.css"
@@ -56,6 +58,8 @@ export const parameters = {
 			{ name: "angularDark", class: angularThemeDark, color: "#85001f" },
 			{ name: "vue", class: vueTheme, color: "#40b883" },
 			{ name: "vueDark", class: vueThemeDark, color: "#34495e" },
+			{ name: "solidjs", class: solidJSTheme, color: "#2c4f7c" },
+			{ name: "solidjsdark", class: solidJSThemeDark, color: "#004E5C" },
 			{ name: "qwik", class: qwikTheme, color: "#18b6f6" },
 			{ name: "qwikDark", class: qwikThemeDark, color: "#0e201a" },
 		],
