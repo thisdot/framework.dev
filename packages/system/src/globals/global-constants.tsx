@@ -35,7 +35,6 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 		title: "SolidJS Resources",
 		href: "https://solidjs.framework.dev/",
 		Icon(props) {
-			// return props;
 			return <ReactIcon {...props} />
 		},
 		backgroundColor: "#2c4f7c",
