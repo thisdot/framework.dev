@@ -1,4 +1,4 @@
-import { formatFieldName } from "@framework/system/src/util/string-utils"
+import { descriptions } from "../data/descriptions"
 
 type SocialMetaTagsProps = {
 	title: string
@@ -6,11 +6,9 @@ type SocialMetaTagsProps = {
 }
 
 export function SocialMetaTags({ siteName, title }: SocialMetaTagsProps) {
-	const description = `Search, compare, and discover top ${formatFieldName(
-		siteName
-	)} libraries and community driven resources in ${formatFieldName(siteName)}.`
+	const description = descriptions[siteName];
 	const url = `https://${siteName}.framework.dev`
-  const imageUrl = `${url}/${siteName}-homepage-screenshot.png`;
+  	const imageUrl = `${url}/${siteName}-homepage-screenshot.png`;
 
 	return (
 		<>
