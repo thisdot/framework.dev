@@ -30,7 +30,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 	{
 		title: "Hydration is Pure Overhead",
 		author: "Miško Hevery",
-    	description: "CTO at builderio creator of QwikDev, @angula, @angularjs, co-creator of karmajs, talks about hydration.",
+    	description: "CTO at builderio creator of QwikDev, @angular, @angularjs, co-creator of karmajs, talks about hydration.",
 		image: "https://pbs.twimg.com/profile_images/1389683812968194049/MhsEUijj_400x400.jpg",
 		href: "https://www.builder.io/blog/hydration-is-pure-overhead",
 		tags: [],
