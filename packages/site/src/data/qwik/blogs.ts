@@ -22,7 +22,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 	{
 		title: "Qwik and Qwik City have reached beta! 🎉",
 		author: "Miško Hevery",
-    	description: "CTO at builderio creator of QwikDev, @angula, @angularjs, co-creator of karmajs, shares an update on Qwik framework.",
+    	description: "CTO at builderio creator of QwikDev, @angular, @angularjs, co-creator of karmajs, shares an update on Qwik framework.",
 		image: "https://pbs.twimg.com/profile_images/1389683812968194049/MhsEUijj_400x400.jpg",
 		href: "https://www.builder.io/blog/qwik-and-qwik-city-have-reached-beta",
 		tags: [],
