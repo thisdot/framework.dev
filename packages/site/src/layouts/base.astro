@@ -10,6 +10,7 @@ import { bodyWithNav, shrinkable } from '@framework/system/src/styles/layouts.cs
 import { Logo } from '@framework/system/src/components/logo.tsx'
 import { MobileNav } from '../components/mobile-nav.tsx'
 import { NavItems } from '../components/nav-items.tsx'
+import {SocialMetaTags} from '../components/social-meta-tags';
 import { getSearchData } from '../data/search-data'
 import { descriptions } from '../data/descriptions'
 
@@ -25,10 +26,7 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 		
 		<meta name="robots" content="noindex">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta property="og:url" content={`${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}.framework.dev`}>
-		<meta property="og:title" content={`${title} | ${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}.framework.dev`}>
-		<meta property="og:image" content={`${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}.framework.dev/${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}-social-img.png`} /> 
-		<meta property="og:description" content={descriptions[import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK]} /> 
+		<SocialMetaTags title={title} siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK} />
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 		<meta charset="UTF-8"/>
