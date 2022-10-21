@@ -28,7 +28,7 @@ const { title } = Astro.props
 		<meta name="theme-color" content="#ffffff">
 		<meta charset="UTF-8"/>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-33DWS64W1B"></script>
+		<script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.SNOWPACK_PUBLIC_GOOGLE_ANALYTICS}`}></script>
 		{
 			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" && 
 			<script>
@@ -36,7 +36,7 @@ const { title } = Astro.props
 				function gtag(){dataLayer.push(arguments);}
 				gtag('js', new Date());
 
-				gtag('config', 'G-33DWS64W1B');
+				gtag('config', import.meta.env.SNOWPACK_PUBLIC_GOOGLE_ANALYTICS);
 			</script>
 		}
   </head>
