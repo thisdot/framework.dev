@@ -28,7 +28,7 @@ const { title } = Astro.props
 		<meta name="theme-color" content="#ffffff">
 		<meta charset="UTF-8"/>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src=`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.SNOWPACK_PUBLIC_GOOGLE_ANALYTICS}`></script>
+		<script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.SNOWPACK_PUBLIC_GOOGLE_ANALYTICS}`}></script>
 		{
 			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" && 
 			<script>
