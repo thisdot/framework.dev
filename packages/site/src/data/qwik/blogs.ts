@@ -46,7 +46,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 	{
 		title: "Our current frameworks are O(n); we need O(1)",
 		author: "Miško Hevery",
-    	description: "CTO at builderio creator of QwikDev, @angula, @angularjs, co-creator of karmajs, compares Qwik to other framework in terms of BigO notation.",
+    	description: "CTO at builderio creator of QwikDev, @angular, @angularjs, co-creator of karmajs, compares Qwik to other framework in terms of BigO notation.",
 		image: "https://pbs.twimg.com/profile_images/1389683812968194049/MhsEUijj_400x400.jpg",
 		href: "https://www.builder.io/blog/why-progressive-hydration-is-harder-than-you-think",
 		tags: [],
