@@ -6,7 +6,7 @@ type SocialMetaTagsProps = {
 }
 
 export function SocialMetaTags({ siteName, title }: SocialMetaTagsProps) {
-	const description = descriptions[siteName];
+	const description = descriptions[siteName as keyof typeof descriptions];
 	const url = `https://${siteName}.framework.dev`
   	const imageUrl = `${url}/${siteName}-homepage-screenshot.png`;
 
