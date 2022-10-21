@@ -38,7 +38,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 	{
 		title: "Why Progressive Hydration is Harder than You Think",
 		author: "Miško Hevery",
-    	description: "CTO at builderio creator of QwikDev, @angula, @angularjs, co-creator of karmajs, talks about progressive hydration.",
+    	description: "CTO at builderio creator of QwikDev, @angular, @angularjs, co-creator of karmajs, talks about progressive hydration.",
 		image: "https://pbs.twimg.com/profile_images/1389683812968194049/MhsEUijj_400x400.jpg",
 		href: "https://www.builder.io/blog/why-progressive-hydration-is-harder-than-you-think",
 		tags: [],
