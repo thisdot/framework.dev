@@ -14,7 +14,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 	{
 		title: "A first look at Qwik - the HTML first framework (8 part Series)",
 		author: "Miško Hevery",
-    	description: "CTO at builderio creator of QwikDev, @angula, @angularjs, co-creator of karmajs, shares an 8 series on Qwik.",
+    	description: "CTO at builderio creator of QwikDev, @angular, @angularjs, co-creator of karmajs, shares an 8 series on Qwik.",
 		image: "https://pbs.twimg.com/profile_images/1389683812968194049/MhsEUijj_400x400.jpg",
 		href: "https://dev.to/builderio/a-first-look-at-qwik-the-html-first-framework-af",
 		tags: [],
