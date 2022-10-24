@@ -31,4 +31,12 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		href: "https://www.digitalocean.com/community/tags/vue-js",
 		tags: [],
 	},
+	{
+		name: "",
+		description: "",
+		image: "",
+		type: "Live Events",
+		href: "",
+		tags: ["conferences"],
+	},
 ]
