@@ -25,7 +25,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		description:
 			"Angular Community is a virtual meetup that is held twice a month: once for European and African time zones, and once for American timezones.",
 		image:
-			"https://angularcommunity.net/assets/images/favicon/ACM_globe_logo.png",
+			"https://angularcommunity.net/assets/images/ACM_logo_main%20copy.png",
 		type: "Live Events",
 		href: "https://angularcommunity.net/home",
 		tags: ["meetups"],
@@ -41,7 +41,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	},
 	{
 		name: "NgPoland",
-		description: "One of the largest Angular conferences in Europe",
+		description: "One of the largest Angular conferences in Europe.",
 		image: "http://ng-poland.pl/images/logos/logo-small.png",
 		type: "Live and online events",
 		href: "http://ng-poland.pl/",
@@ -49,7 +49,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	},
 	{
 		name: "NgRome",
-		description: "The largest Italian Angular conference",
+		description: "The largest Italian Angular conference.",
 		image: "https://ngrome.io/assets/logo/logo-horizontal.svg",
 		type: "Live Events",
 		href: "https://ngrome.io/home",
@@ -57,7 +57,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	},
 	{
 		name: "ng-India",
-		description: "India's largest Angular conference",
+		description: "India's largest Angular conference.",
 		image: "https://www.ng-ind.com/assets/images/ng-ind-logo.jpeg",
 		type: "Live Events",
 		href: "https://www.ng-ind.com/",
@@ -65,7 +65,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	},
 	{
 		name: "NG-BE 2023",
-		description: "Belgium's Angular conference",
+		description: "Belgium's Angular conference.",
 		image:
 			"https://images.squarespace-cdn.com/content/v1/5b7b64d52714e503eebf914c/1534819802976-CJNVLSR6NCPX4XODKL0N/ng-be-logo.png?format=1500w",
 		type: "Live Events",
