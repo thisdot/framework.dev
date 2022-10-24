@@ -3,6 +3,7 @@ import { AngularIcon } from "../icons/angular-icon"
 import { ReactIcon } from "../icons/react-icon"
 import { VueIcon } from "../icons/vue-icon"
 import { QwikIcon } from "../icons/qwik-icon"
+import { SvelteIcon } from "../icons/svelte-icon"
 
 export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 	{
@@ -39,6 +40,15 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 			return <QwikIcon {...props} />
 		},
 		backgroundColor: "#5468ff",
+		bigSize,
+	},
+	{
+		title: "Svelte Resources",
+		href: "https://svelte.framework.dev/",
+		Icon(props) {
+			return <SvelteIcon {...props} />
+		},
+		backgroundColor: "#ff3e00",
 		bigSize,
 	},
 ]
