@@ -32,11 +32,58 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		tags: [],
 	},
 	{
-		name: "",
-		description: "",
-		image: "",
+		name: "VueConf Toronto",
+		description:
+			"VueConf Toronto is a Canadian conference with talks and workshops from Vue.js core team members and industry experts.",
+		image:
+			"https://forum.vuejs.org/uploads/default/original/2X/5/555257b8c5e7ecf34ce4f9b952eeaf006adfa339.png",
 		type: "Live Events",
-		href: "",
+		href: "https://www.vuetoronto.com/",
+		tags: ["conferences"],
+	},
+	{
+		name: "Nuxt Nation",
+		description: "One of the largest Nuxt conferences in the world.",
+		image:
+			"https://forum.vuejs.org/uploads/default/original/2X/5/555257b8c5e7ecf34ce4f9b952eeaf006adfa339.png",
+		type: "Online Events",
+		href: "https://nuxtnation.com/",
+		tags: ["conferences"],
+	},
+	{
+		name: "Vue Day",
+		description:
+			"This is an online and in person conference dedicated to all things Vue",
+		image:
+			"https://forum.vuejs.org/uploads/default/original/2X/5/555257b8c5e7ecf34ce4f9b952eeaf006adfa339.png",
+		type: "Online and Live Events",
+		href: "https://2022.vueday.it/",
+		tags: ["conferences"],
+	},
+	{
+		name: "Vuejs Amsterdam",
+		description: "One of the largest Vue conferences in the world",
+		image:
+			"https://img2.storyblok.com/277x0/filters:format(png)/f/84560/2388x414/23d8eb4b8d/vue-amsterdam-with-name.png",
+		type: "Live Events",
+		href: "https://vuejs.amsterdam/",
+		tags: ["conferences"],
+	},
+	{
+		name: "Vuejs Global Summit",
+		description: "Online global summit to discuss all things Vue.",
+		image: "https://events.geekle.us/vuejs/static/media/logo.579e43d2.svg",
+		type: "Online Events",
+		href: "https://events.geekle.us/vuejs/",
+		tags: ["conferences"],
+	},
+	{
+		name: "Vuejs Live",
+		description: "Online and in person conference to discuss all things Vue.",
+		image:
+			"https://forum.vuejs.org/uploads/default/original/2X/5/555257b8c5e7ecf34ce4f9b952eeaf006adfa339.png",
+		type: "Online and Live Events",
+		href: "https://vuejslive.com/",
 		tags: ["conferences"],
 	},
 ]
