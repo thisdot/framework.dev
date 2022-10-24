@@ -26,7 +26,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		author: "Nick Scialli",
 		description:
 			"I'm Nick Scialli, a software engineer with 14+ years of experience currently working as a senior UI engineer at Microsoft. I am a full stack developer with a focus on front-end technologies like JavaScript, Typescript, and React.",
-		image: "https://github.com/ryansolid.png",
+		image: "https://github.com/nas5w.png",
 		href: "https://typeofnan.dev/solid-js-feels-like-what-i-always-wanted-react-to-be/",
 		tags: [],
 	},
