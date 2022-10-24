@@ -39,9 +39,11 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		{
-			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" && (
-			<>
+			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" &&
 				<script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.SNOWPACK_PUBLIC_GOOGLE_ANALYTICS}`}></script>
+		}
+		{
+			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" &&
 				<script>
 					window.dataLayer = window.dataLayer || [];
 					function gtag(){dataLayer.push(arguments);}
@@ -49,8 +51,6 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 
 					gtag('config', import.meta.env.SNOWPACK_PUBLIC_GOOGLE_ANALYTICS);
 				</script>
-			</>
-			)
 		}
   </head>
   <body class={classNames(sprinkles({ backgroundColor: "surface1", height: "full" }), bodyWithNav)} >
