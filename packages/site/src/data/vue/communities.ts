@@ -20,7 +20,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		image: "https://github.com/thisdot.png",
 		type: "Live Events",
 		href: "https://www.vuemeetup.com/",
-		tags: [],
+		tags: ["meetups"],
 	},
 	{
 		name: "DigitalOcean Community",

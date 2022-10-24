@@ -18,7 +18,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		image: "https://github.com/thisdot.png",
 		type: "Live Events",
 		href: "https://www.angularmeetup.com/",
-		tags: [],
+		tags: ["meetups"],
 	},
 	{
 		name: "Angular Community Meetup",
@@ -28,7 +28,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 			"https://angularcommunity.net/assets/images/favicon/ACM_globe_logo.png",
 		type: "Live Events",
 		href: "https://angularcommunity.net/home",
-		tags: [],
+		tags: ["meetups"],
 	},
 	{
 		name: "Angular @ Reddit",
@@ -38,5 +38,38 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		type: "Reddit",
 		href: "https://www.reddit.com/r/Angular2/",
 		tags: [],
+	},
+	{
+		name: "NgPoland",
+		description: "One of the largest Angular conferences in Europe",
+		image: "http://ng-poland.pl/images/logos/logo-small.png",
+		type: "Live and online events",
+		href: "http://ng-poland.pl/",
+		tags: ["conferences"],
+	},
+	{
+		name: "NgRome",
+		description: "The largest Italian Angular conference",
+		image: "https://ngrome.io/assets/logo/logo-horizontal.svg",
+		type: "Live Events",
+		href: "https://ngrome.io/home",
+		tags: ["conferences"],
+	},
+	{
+		name: "ng-India",
+		description: "India's largest Angular conference",
+		image: "https://www.ng-ind.com/assets/images/ng-ind-logo.jpeg",
+		type: "Live Events",
+		href: "https://www.ng-ind.com/",
+		tags: ["conferences"],
+	},
+	{
+		name: "NG-BE 2023",
+		description: "Belgium's Angular conference",
+		image:
+			"https://images.squarespace-cdn.com/content/v1/5b7b64d52714e503eebf914c/1534819802976-CJNVLSR6NCPX4XODKL0N/ng-be-logo.png?format=1500w",
+		type: "Live Events",
+		href: "https://ng-be.org/",
+		tags: ["conferences"],
 	},
 ]
