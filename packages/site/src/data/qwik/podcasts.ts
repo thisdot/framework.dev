@@ -44,4 +44,34 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		href: "https://www.youtube.com/watch?v=7MgNMIPISY4",
 		tags: ["qwik"],
 	},
+	{
+		title: "Tony Alicea",
+		image: "https://i3.ytimg.com/vi/LbMRs7l4czI/hqdefault.jpg",
+		hosts: ["Tony Alicea - Misko Hevery"],
+		description:
+			"Resumable Apps in Qwik w/ Miško Hevery (creator of Angular!)",
+		rss: "https://www.youtube.com/watch?v=LbMRs7l4czI",
+		href: "https://www.youtube.com/watch?v=LbMRs7l4czI",
+		tags: ["qwik"],
+	},
+	{
+		title: "Javascript Marathon",
+		image: "https://i3.ytimg.com/vi/LbMRs7l4czI/hqdefault.jpg",
+		hosts: ["Sarah Ronau - Misko Hevery"],
+		description:
+			"Qwik: A no-hydration instant-on personalized web applications.",
+		rss: "https://www.youtube.com/watch?v=0tCuUQe_ZA0",
+		href: "https://www.youtube.com/watch?v=0tCuUQe_ZA0",
+		tags: ["qwik"],
+	},
+	{
+		title: "Bundling: Qwik",
+		image: "https://qwik.builder.io/logos/social-card.png?v=3",
+		hosts: ["Misko Hevery"],
+		description:
+			"Bundling: Qwik + Slow networks => Fast interaction",
+		rss: "https://www.loom.com/share/f9455ea557754594a28591212fd9012f",
+		href: "https://www.loom.com/share/f9455ea557754594a28591212fd9012f",
+		tags: ["qwik"],
+	}
 ]
