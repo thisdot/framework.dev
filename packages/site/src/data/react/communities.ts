@@ -33,7 +33,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	},
 	{
 		name: "Remix Conf EU",
-		description: "The biggest Remix conference in the cloud",
+		description: "The biggest Remix conference in the cloud.",
 		image: "https://remixconf.eu/img/logo.svg",
 		type: "Live Events",
 		href: "https://remixconf.eu/",
@@ -41,7 +41,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	},
 	{
 		name: "React Day Berlin",
-		description: "Conference dedicated to all things React",
+		description: "Conference dedicated to all things React.",
 		image: "https://reactday.berlin/img/favicon.png",
 		type: "Live Events",
 		href: "https://reactday.berlin/",
@@ -49,7 +49,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	},
 	{
 		name: "React New York",
-		description: "Level up your React chops at this New York conference",
+		description: "Level up your React chops at this New York conference.",
 		image: "https://www.reactnewyork.com/favicon/apple-touch-icon.png",
 		type: "Live Events",
 		href: "https://www.reactnewyork.com/",
@@ -57,7 +57,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	},
 	{
 		name: "Remix Conf",
-		description: "Conference dedicated to all things Remix",
+		description: "Conference dedicated to all things Remix.",
 		image: "https://remix.run/conf-images/2023/og_image.jpg",
 		type: "Live Events",
 		href: "https://remix.run/conf",
@@ -65,7 +65,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	},
 	{
 		name: "React Summit",
-		description: "The biggest React conference in the world",
+		description: "The biggest React conference in the world.",
 		image: "https://reactsummit.com/img/favicon.png",
 		type: "Live Events",
 		href: "https://reactsummit.com/",
@@ -91,7 +91,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	},
 	{
 		name: "DevOps Days Brazil",
-		description: "Conference dedicated to all things DevOps",
+		description: "Conference dedicated to all things DevOps.",
 		image:
 			"https://d33wubrfki0l68.cloudfront.net/7a77fd38eb1462fc4832f0ada827477cb17d5cbd/ae21b/events/2022-rio-de-janeiro/logo-square.jpg",
 		type: "Live Events",
