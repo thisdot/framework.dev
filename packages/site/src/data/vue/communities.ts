@@ -44,8 +44,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	{
 		name: "Nuxt Nation",
 		description: "One of the largest Nuxt conferences in the world.",
-		image:
-			"https://forum.vuejs.org/uploads/default/original/2X/5/555257b8c5e7ecf34ce4f9b952eeaf006adfa339.png",
+		image: "https://nuxtnation.com/images/thumbnail2.jpg",
 		type: "Online Events",
 		href: "https://nuxtnation.com/",
 		tags: ["conferences"],
@@ -54,8 +53,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		name: "Vue Day",
 		description:
 			"This is an online and in person conference dedicated to all things Vue",
-		image:
-			"https://forum.vuejs.org/uploads/default/original/2X/5/555257b8c5e7ecf34ce4f9b952eeaf006adfa339.png",
+		image: "https://2022.vueday.it/assets/favicons/apple-touch-icon.png",
 		type: "Online and Live Events",
 		href: "https://2022.vueday.it/",
 		tags: ["conferences"],
@@ -80,8 +78,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	{
 		name: "Vuejs Live",
 		description: "Online and in person conference to discuss all things Vue.",
-		image:
-			"https://forum.vuejs.org/uploads/default/original/2X/5/555257b8c5e7ecf34ce4f9b952eeaf006adfa339.png",
+		image: "https://media.graphassets.com/PPiw9QmiRNOPj7mTQFTq",
 		type: "Online and Live Events",
 		href: "https://vuejslive.com/",
 		tags: ["conferences"],
