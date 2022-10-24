@@ -27,4 +27,13 @@ export const communities: Community<typeof communityTags[number]>[] = [
     href: "https://www.reddit.com/r/solidjs/",
     tags: []
   },
+  {
+    name: "Events",
+    description:
+        "SolidJS Official Events.",
+    image: "https://assets.brandfolder.com/logo_images_v2/organizations/pjqost-dus1fs-bbjqqj/1549042902/Eventbrite_symbol_orange-400x400.png",
+    type: "Live Events",
+    href: "https://www.eventbrite.com/o/solidjs-official-events-47844139913",
+    tags: [],
+  },
 ]
