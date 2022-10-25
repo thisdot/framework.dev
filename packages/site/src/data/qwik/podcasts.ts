@@ -36,7 +36,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	},
 	{
 		title: "JS Poland",
-		image: "	https://i3.ytimg.com/vi/7MgNMIPISY4/hqdefault.jpg",
+		image: "https://i3.ytimg.com/vi/7MgNMIPISY4/hqdefault.jpg",
 		hosts: ["Misko Hevery"],
 		description:
 			"QWIK - Set of great demos by Misko Hevery.",
