@@ -4,7 +4,7 @@ export const blogTags = [] as const
 
 export const blogs: Blog<typeof blogTags[number]>[] = [
 	{
-		title: "Ryan Carniatos' blog",
+		title: "Ryan Carniato on dev.to",
 		author: "Ryan Carniato",
 		description:
 			"Frontend performance enthusiast and Fine-Grained Reactivity super fan. Author of the SolidJS UI library and MarkoJS Core Team Member.",
