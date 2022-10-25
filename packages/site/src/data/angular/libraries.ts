@@ -460,7 +460,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "http://www.protractortest.org/#/",
 		description:
 			"Protractor is an end-to-end test framework for Angular and AngularJS applications. Protractor runs tests against your application running in a real browser, interacting with it as a user would.",
-		image: "https://protractor.angular.io/images/protractor.png",
+		image: "https://www.protractortest.org/img/favicon.ico",
 		tags: ["testing"],
 	},
 	{
