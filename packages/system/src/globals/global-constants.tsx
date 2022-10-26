@@ -3,6 +3,7 @@ import { AngularIcon } from "../icons/angular-icon"
 import { ReactIcon } from "../icons/react-icon"
 import { VueIcon } from "../icons/vue-icon"
 import { SolidJSIcon } from "../icons/solidjs-icon"
+import { QwikIcon } from "../icons/qwik-icon"
 
 export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 	{
@@ -39,6 +40,15 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 			return <SolidJSIcon {...props} />
 		},
 		backgroundColor: "#2c4f7c",
+    bigSize,
+  },
+  {
+		title: "Qwik Resources",
+		href: "https://qwik.framework.dev/",
+		Icon(props) {
+			return <QwikIcon {...props} />
+		},
+		backgroundColor: "#5468ff",
 		bigSize,
 	},
 ]
