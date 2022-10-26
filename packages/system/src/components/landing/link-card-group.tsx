@@ -21,7 +21,6 @@ export function LinkCardGroup({
 	return (
 		<div className={classNames(className, LinkCardGroupStyle)} {...props}>
 			{cards
-				.filter((resource) => !resource.disabled)
 				.map((card, index) => (
 					<LinkCard key={index} className={LinkCardGroupItemStyle} {...card} />
 				))}

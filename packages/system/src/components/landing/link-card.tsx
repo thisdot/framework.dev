@@ -19,7 +19,6 @@ export interface LinkCardProps extends React.ComponentPropsWithoutRef<"a"> {
 	RawIcon?: (props: IconProps) => JSX.Element
 	backgroundColor?: string
 	color?: string
-	disabled?: boolean
 }
 
 export function LinkCard({
