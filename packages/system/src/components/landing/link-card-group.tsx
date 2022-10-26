@@ -20,9 +20,11 @@ export function LinkCardGroup({
 }: LinkCardGroupProps) {
 	return (
 		<div className={classNames(className, LinkCardGroupStyle)} {...props}>
-			{cards.map((card, index) => (
-				<LinkCard key={index} className={LinkCardGroupItemStyle} {...card} />
-			))}
+			{cards
+				.filter((resource) => !resource.disabled)
+				.map((card, index) => (
+					<LinkCard key={index} className={LinkCardGroupItemStyle} {...card} />
+				))}
 		</div>
 	)
 }
