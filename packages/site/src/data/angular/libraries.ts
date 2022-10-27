@@ -541,4 +541,15 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"RxIDB is a library for storing and retrieving data from indexedDB databases, using an RxJS based API.",
 	},
+	{
+		name: "Route Config",
+		author: "This Dot Labs",
+		gitHubRepo: "thisdot/open-source",
+		npmPackage: "@this-dot/route-config",
+		href: "https://www.npmjs.com/package/@this-dot/route-config",
+		image: "https://github.com/thisdot.png",
+		tags: ["performance tools"],
+		description:
+			"Route Config is an Angular library that provides tools to easily set and access the properties defined in RouterModule configuration. It offers some built in tools that work out of the box but also is easily extensible via data property of Angular's Route configuration object.",
+	},
 ]
