@@ -500,7 +500,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Jest is a delightful JavaScript Testing Framework with a focus on simplicity.",
 	},
 	{
-		name: "Cypress IndexedDB helpers ",
+		name: "Cypress IndexedDB helpers",
 		author: "This Dot Labs",
 		gitHubRepo: "thisdot/open-source",
 		npmPackage: "@this-dot/cypress-indexeddb",

@@ -949,7 +949,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Enzyme is a JavaScript Testing utility for React that makes it easier to test your React Components' output.",
 	},
 	{
-		name: "Cypress IndexedDB helpers ",
+		name: "Cypress IndexedDB helpers",
 		author: "This Dot Labs",
 		gitHubRepo: "thisdot/open-source",
 		npmPackage: "@this-dot/cypress-indexeddb",

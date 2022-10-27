@@ -564,7 +564,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Ng Utils is a collection of Angular utils which we would like to continuously extend and improve.",
 	},
 	{
-		name: "Cypress IndexedDB helpers ",
+		name: "Cypress IndexedDB helpers",
 		author: "This Dot Labs",
 		gitHubRepo: "thisdot/open-source",
 		npmPackage: "@this-dot/cypress-indexeddb",
