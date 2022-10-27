@@ -237,4 +237,16 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		href: "https://youtu.be/wXFcRDsFSEU",
 		tags: ["Vue 2", "debugging", "javascript marathon"],
 	},
+	{
+		title: "JS Drops",
+		author: "Various",
+		image: "https://github.com/thisdot.png",
+		description:
+			"JS Drops is a weekly series of online courses on Vue, React, TypeScript, GraphQL, and other topics in the JS ecosystem. Learn about leading web development technologies and concepts!",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "https://dropjs.com/",
+		tags: ["javascript marathon"],
+	},
 ]
