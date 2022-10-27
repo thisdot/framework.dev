@@ -31,4 +31,13 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		href: "https://vueschool.io/articles/",
 		tags: [],
 	},
+	{
+		title: "This Dot Blog",
+		author: "This Dot Labs",
+		description:
+			"Variety of topics related to Vue, written by the team at This Dot",
+		image: "https://github.com/thisdot.png",
+		href: "https://www.thisdot.co/blog/?filter=VueJS#result",
+		tags: [],
+	},
 ]
