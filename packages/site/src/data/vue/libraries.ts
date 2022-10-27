@@ -510,4 +510,15 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Cypress IndexedDB helpers are a set of custom cypress commands that helps you handle indexedDB related operations in your Cypress tests.",
 	},
+	{
+		name: "Vue Route Guard",
+		author: "This Dot Labs",
+		gitHubRepo: "thisdot/open-source",
+		npmPackage: "@this-dot/vue-route-guard",
+		href: "https://www.npmjs.com/package/@this-dot/vue-route-guard",
+		image: "https://github.com/thisdot.png",
+		tags: ["routing"],
+		description:
+			"Vue Route Guard is an Vue library that wraps around the vue-router and extends it to provide helpful methods to handle page guards via token authorization and permissions.",
+	},
 ]
