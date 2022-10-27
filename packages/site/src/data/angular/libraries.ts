@@ -552,4 +552,15 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Route Config is an Angular library that provides tools to easily set and access the properties defined in RouterModule configuration. It offers some built in tools that work out of the box but also is easily extensible via data property of Angular's Route configuration object.",
 	},
+	{
+		name: "Ng Utils",
+		author: "This Dot Labs",
+		gitHubRepo: "thisdot/open-source",
+		npmPackage: "@this-dot/ng-utils",
+		href: "https://www.npmjs.com/package/@this-dot/ng-utils",
+		image: "https://github.com/thisdot.png",
+		tags: ["performance tools"],
+		description:
+			"Ng Utils is a collection of Angular utils which we would like to continuously extend and improve.",
+	},
 ]
