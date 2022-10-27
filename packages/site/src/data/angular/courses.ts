@@ -17,7 +17,7 @@ export const courseTags = [
 	"A11Y",
 	"pipes",
 	"angular patterns",
-	"typescript"
+	"typescript",
 ] as const
 
 export const courses: Course<typeof courseTags[number]>[] = [
@@ -189,7 +189,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["A11Y", "javascript marathon"],
 	},
 	{
-		title: "A Guide to Advanced Angular Patterns (Route Guards, Pipes, Interceptors & more)",
+		title:
+			"A Guide to Advanced Angular Patterns (Route Guards, Pipes, Interceptors & more)",
 		author: "Rob Ocel",
 		image: "https://github.com/thisdot.png",
 		description:
@@ -203,7 +204,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "Decoded Frontend",
 		author: "Dmytro Mezhenskyi",
-		image: "https://yt3.ggpht.com/ytc/AKedOLTRAN09hQv5mKM-q_dPdOo57tg14n3qKnx-bQNu0Q=s88-c-k-c0x00ffffff-no-rj",
+		image:
+			"https://yt3.ggpht.com/ytc/AKedOLTRAN09hQv5mKM-q_dPdOo57tg14n3qKnx-bQNu0Q=s88-c-k-c0x00ffffff-no-rj",
 		description:
 			"Decoded Training is a series of video tutorials about Angular and generally about web development. New videos are published on a biweekly basis.",
 		paymentType: "free",
@@ -215,7 +217,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "Ultimate Courses",
 		author: "Todd Motto",
-		image: "https://ultimatecourses.com/assets/logo-ef24a2d3b6a0febba9ff80a1b01d632db750feb083442d0071dff7426762e0c2.svg",
+		image:
+			"https://ultimatecourses.com/assets/logo-ef24a2d3b6a0febba9ff80a1b01d632db750feb083442d0071dff7426762e0c2.svg",
 		description:
 			"Ultimate Courses has a collection of video courses covering beginner and advanced Angular, TypeScript, RxJS, and NgRX.",
 		paymentType: "paid",
@@ -223,5 +226,17 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		format: "video",
 		href: "https://ultimatecourses.com/",
 		tags: ["RxJS", "typescript", "ngRx"],
+	},
+	{
+		title: "JS Drops",
+		author: "Various",
+		image: "https://github.com/thisdot.png",
+		description:
+			"JS Drops is a weekly series of online courses on Angular, React, TypeScript, GraphQL, and other topics in the JS ecosystem. Learn about leading web development technologies and concepts!",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "https://dropjs.com/",
+		tags: ["javascript marathon"],
 	},
 ]

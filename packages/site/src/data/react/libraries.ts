@@ -943,10 +943,20 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		gitHubRepo: "enzymejs/enzyme",
 		npmPackage: "enzyme",
 		href: "https://enzymejs.github.io/enzyme/",
-		image:
-			"https://github.com/enzymejs.png",
+		image: "https://github.com/enzymejs.png",
 		tags: ["testing"],
 		description:
 			"Enzyme is a JavaScript Testing utility for React that makes it easier to test your React Components' output.",
+	},
+	{
+		name: "Cypress IndexedDB helpers",
+		author: "This Dot Labs",
+		gitHubRepo: "thisdot/open-source",
+		npmPackage: "@this-dot/cypress-indexeddb",
+		href: "https://www.npmjs.com/package/@this-dot/cypress-indexeddb",
+		image: "https://github.com/thisdot.png",
+		tags: ["testing"],
+		description:
+			"Cypress IndexedDB helpers are a set of custom cypress commands that helps you handle indexedDB related operations in your Cypress tests.",
 	},
 ]

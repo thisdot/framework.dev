@@ -27,7 +27,7 @@ export const courseTags = [
 	"SSG",
 	"component design",
 	"apollo",
-	"faunaDB"
+	"faunaDB",
 ] as const
 
 export const courses: Course<typeof courseTags[number]>[] = [
@@ -314,7 +314,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/ecpvIo4NIoY",
-		tags: ["vite",  "javascript marathon"],
+		tags: ["vite", "javascript marathon"],
 	},
 	{
 		title: "1 Hour to Learn React",
@@ -350,7 +350,13 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "advanced",
 		format: "video",
 		href: "https://youtu.be/0Js5O5a4bQ4",
-		tags: ["graphQL", "authentication", "AWS", "data fetching", "javascript marathon"],
+		tags: [
+			"graphQL",
+			"authentication",
+			"AWS",
+			"data fetching",
+			"javascript marathon",
+		],
 	},
 	{
 		title: "An Introduction to Netlify with React",
@@ -386,7 +392,13 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/JmVdgtjGo5Q",
-		tags: ["graphQL", "data fetching", "component design", "apollo", "javascript marathon"],
+		tags: [
+			"graphQL",
+			"data fetching",
+			"component design",
+			"apollo",
+			"javascript marathon",
+		],
 	},
 	{
 		title: "Databases made easy in React with GraphQL and FaunaDB",
@@ -410,7 +422,16 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "interactive",
 		href: "https://themodern.dev/courses/build-a-fullstack-app-with-nextjs-supabase-and-prisma-322389284337222224",
-		tags: ["state management", "data fetching", "routing", "forms", "authentication", "hooks", "tailwind", "SSG"],
+		tags: [
+			"state management",
+			"data fetching",
+			"routing",
+			"forms",
+			"authentication",
+			"hooks",
+			"tailwind",
+			"SSG",
+		],
 	},
 	{
 		title: "Complete Intro to React, v7",
@@ -422,6 +443,26 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://frontendmasters.com/courses/complete-react-v7/",
-		tags: ["state management", "data fetching", "forms", "routing", "authentication", "hooks", "tailwind",],
+		tags: [
+			"state management",
+			"data fetching",
+			"forms",
+			"routing",
+			"authentication",
+			"hooks",
+			"tailwind",
+		],
+	},
+	{
+		title: "JS Drops",
+		author: "Various",
+		image: "https://github.com/thisdot.png",
+		description:
+			"JS Drops is a weekly series of online courses on React, TypeScript, GraphQL, and other topics in the JS ecosystem. Learn about leading web development technologies and concepts!",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "https://dropjs.com/",
+		tags: ["javascript marathon"],
 	},
 ]
