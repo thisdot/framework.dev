@@ -530,4 +530,15 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Jest is a delightful JavaScript Testing Framework with a focus on simplicity.",
 	},
+	{
+		name: "RxIDB",
+		author: "This Dot Labs",
+		gitHubRepo: "thisdot/open-source",
+		npmPackage: "@this-dot/rxidb",
+		href: "https://www.npmjs.com/package/@this-dot/rxidb",
+		image: "https://github.com/thisdot.png",
+		tags: ["RxJS"],
+		description:
+			"RxIDB is a library for storing and retrieving data from indexedDB databases, using an RxJS based API.",
+	},
 ]
