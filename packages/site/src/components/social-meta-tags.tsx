@@ -1,14 +1,20 @@
 import { descriptions } from "../data/descriptions"
 
+type SiteName = keyof typeof descriptions
+
 type SocialMetaTagsProps = {
 	title: string
 	siteName: string
 }
 
 export function SocialMetaTags({ siteName, title }: SocialMetaTagsProps) {
-	const description = descriptions[siteName as keyof typeof descriptions];
-	const url = `https://${siteName}.framework.dev`
-  	const imageUrl = `${url}/${siteName}-homepage-screenshot.png`;
+	const description = descriptions[siteName as SiteName]
+
+	const url =
+		siteName === "landing"
+			? `https://framework.dev`
+			: `https://${siteName}.framework.dev`
+	const imageUrl = `${url}/${siteName}-homepage-screenshot.png`
 
 	return (
 		<>
