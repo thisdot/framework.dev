@@ -9,7 +9,7 @@ export function SocialMetaTags({ siteName, title }: SocialMetaTagsProps) {
 	const titleCasedName = titleCase(siteName)
 	const description =
 		siteName === "landing"
-			? `Search, compare, and discover top libraries and community-driven resources in.`
+			? `Search, compare, and discover top libraries and community-driven resources.`
 			: `Search, compare, and discover top ${titleCasedName} libraries and community-driven resources in ${titleCasedName}.`
 	const url =
 		siteName === "landing"
