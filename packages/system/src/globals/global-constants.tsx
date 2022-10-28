@@ -34,15 +34,15 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 		bigSize,
 	},
 	{
-    title: "SolidJS Resources",
-    href: "https://solidjs.framework.dev/",
-    Icon(props) {
-      return <SolidJSIcon {...props} />
-    },
-    backgroundColor: "#2c4f7c",
-    bigSize,
-  },
-  {
+	        title: "SolidJS Resources",
+		href: "https://solidjs.framework.dev/",
+		Icon(props) {
+			return <SolidJSIcon {...props} />
+		},
+		backgroundColor: "#2c4f7c",
+		bigSize,
+  	},
+  	{
 		title: "Qwik Resources",
 		href: "https://qwik.framework.dev/",
 		Icon(props) {
