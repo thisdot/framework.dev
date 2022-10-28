@@ -530,4 +530,48 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Jest is a delightful JavaScript Testing Framework with a focus on simplicity.",
 	},
+	{
+		name: "RxIDB",
+		author: "This Dot Labs",
+		gitHubRepo: "thisdot/open-source",
+		npmPackage: "@this-dot/rxidb",
+		href: "https://www.npmjs.com/package/@this-dot/rxidb",
+		image: "https://github.com/thisdot.png",
+		tags: ["RxJS"],
+		description:
+			"RxIDB is a library for storing and retrieving data from indexedDB databases, using an RxJS based API.",
+	},
+	{
+		name: "Route Config",
+		author: "This Dot Labs",
+		gitHubRepo: "thisdot/open-source",
+		npmPackage: "@this-dot/route-config",
+		href: "https://www.npmjs.com/package/@this-dot/route-config",
+		image: "https://github.com/thisdot.png",
+		tags: ["performance tools"],
+		description:
+			"Route Config is an Angular library that provides tools to easily set and access the properties defined in RouterModule configuration. It offers some built in tools that work out of the box but also is easily extensible via data property of Angular's Route configuration object.",
+	},
+	{
+		name: "Ng Utils",
+		author: "This Dot Labs",
+		gitHubRepo: "thisdot/open-source",
+		npmPackage: "@this-dot/ng-utils",
+		href: "https://www.npmjs.com/package/@this-dot/ng-utils",
+		image: "https://github.com/thisdot.png",
+		tags: ["performance tools"],
+		description:
+			"Ng Utils is a collection of Angular utils which we would like to continuously extend and improve.",
+	},
+	{
+		name: "Cypress IndexedDB helpers",
+		author: "This Dot Labs",
+		gitHubRepo: "thisdot/open-source",
+		npmPackage: "@this-dot/cypress-indexeddb",
+		href: "https://www.npmjs.com/package/@this-dot/cypress-indexeddb",
+		image: "https://github.com/thisdot.png",
+		tags: ["testing"],
+		description:
+			"Cypress IndexedDB helpers are a set of custom cypress commands that helps you handle indexedDB related operations in your Cypress tests.",
+	},
 ]
