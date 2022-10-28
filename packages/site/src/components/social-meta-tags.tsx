@@ -1,10 +1,16 @@
+import { titleCase } from "title-case"
+
 type SocialMetaTagsProps = {
 	title: string
 	siteName: string
 }
 
 export function SocialMetaTags({ siteName, title }: SocialMetaTagsProps) {
-	const description = `Search, compare, and discover top libraries and community-driven resources in ${siteName}`
+	const titleCasedName = titleCase(siteName)
+	const description =
+		siteName === "landing"
+			? `Search, compare, and discover top libraries and community-driven resources in.`
+			: `Search, compare, and discover top ${titleCasedName} libraries and community-driven resources in ${titleCasedName}.`
 	const url =
 		siteName === "landing"
 			? `https://framework.dev`

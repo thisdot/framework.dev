@@ -1,6 +1,6 @@
 ---
-import { Logo } from '@framework/system/src/components/logo';
-import { Sidebar } from '@framework/system/src/components/sidebar';
+import { Logo } from '@framework/system/src/components/logo.tsx';
+import { Sidebar } from '@framework/system/src/components/sidebar.tsx';
 import { fontHeadTags } from '@framework/system/src/globals/font-import.mjs';
 import '@framework/system/src/globals/global-styles';
 import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css';
@@ -8,9 +8,8 @@ import { bodyWithNav,shrinkable } from '@framework/system/src/styles/layouts.css
 import * as themes from '@framework/system/src/themes/themes.css';
 import classNames from 'classnames';
 import { pick } from 'lodash';
-import { titleCase } from "title-case";
-import { MobileNav } from '../components/mobile-nav';
-import { NavItems } from '../components/nav-items';
+import { MobileNav } from '../components/mobile-nav.tsx';
+import { NavItems } from '../components/nav-items.tsx';
 import { SocialMetaTags } from '../components/social-meta-tags';
 import { getSearchData } from '../data/search-data';
 
@@ -26,7 +25,7 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 		
 		<meta name="robots" content="noindex">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<SocialMetaTags title={title} siteName={titleCase(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} />
+		<SocialMetaTags title={title} siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK} />
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 		<meta charset="UTF-8"/>
