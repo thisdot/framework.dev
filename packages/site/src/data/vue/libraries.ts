@@ -272,7 +272,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://www.agnosticui.com/",
 		description:
 			"AgnosticUI is a set of UI primitives that start their lives in clean HTML and CSS. These standards compliant components are then copied to our framework implementations in: React, Vue 3, Svelte, and Angular (experimental).",
-		image: "",
+		image: "https://github.com/AgnosticUI/agnosticui/blob/master/site/docs/images/agnosticui-illo.svg",
 		tags: ["component library", "Vue 3"],
 	},
 	{
