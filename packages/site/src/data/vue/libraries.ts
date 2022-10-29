@@ -105,7 +105,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://josephuspaye.github.io/Keen-UI",
 		description:
 			"Keen UI is a Vue 2 UI library with a simple API, inspired by Google's Material Design.",
-		image: "",
+		image: "https://madewithnetworkfra.fra1.digitaloceanspaces.com/spatie-space-production/1157/keen.jpg",
 		tags: ["component library", "Vue 2"],
 	},
 	{
