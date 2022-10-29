@@ -82,15 +82,6 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		tags: ["conferences"],
 	},
 	{
-		name: "DevOps Days Brazil",
-		description: "Conference dedicated to all things DevOps",
-		image:
-			"https://d33wubrfki0l68.cloudfront.net/7a77fd38eb1462fc4832f0ada827477cb17d5cbd/ae21b/events/2022-rio-de-janeiro/logo-square.jpg",
-		type: "Live Events",
-		href: "https://devopsdays.org/events/2022-rio-de-janeiro/welcome/",
-		tags: ["conferences"],
-	},
-	{
 		name: "Connect.Tech",
 		description: "The largest Frontend framework conference in the USA.",
 		image: "https://2022.connect.tech/_nuxt/img/ctlogo.fb612ee.png",
@@ -117,35 +108,6 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		tags: ["conferences"],
 	},
 	{
-		name: "PASS Data Community Summit 2022",
-		description:
-			"Reconnect with old friends, build new relationships, gain new skills, and get the world-class training you need to take that next step in your data career.",
-		image:
-			"https://passdatacommunitysummit.com/assets/images/pass-2022-logo-microsoft--dark.svg",
-		type: "Live Events",
-		href: "https://passdatacommunitysummit.com/",
-		tags: ["conferences"],
-	},
-	{
-		name: "DevOps Days India",
-		description:
-			"DevopsDays India is a technical event run by volunteers from India as part of the worldwide DevOpsDays series covering topics such as software development, IT infrastructure operations, and the intersection between them.",
-		image: "https://devopsdaysindia.org/img/sprites/logo.svg",
-		type: "Live Events",
-		href: "https://devopsdaysindia.org/",
-		tags: ["conferences"],
-	},
-	{
-		name: "Data Science Global Summit",
-		description:
-			"3 days of the most valuable trends of the last 6 months from the best community of Data Scientists.",
-		image:
-			"https://events.geekle.us/data-science2/static/media/creative.c008843b.png",
-		type: "Live Events",
-		href: "https://events.geekle.us/data-science2/",
-		tags: ["conferences"],
-	},
-	{
 		name: "Xtremejs",
 		description:
 			"Professional development conference dedicated to all things JavaScript.",
@@ -153,16 +115,6 @@ export const communities: Community<typeof communityTags[number]>[] = [
 			"https://xtremejs.dev/2022/wp-content/uploads/2022/04/xtremejs_new_logo-1.png",
 		type: "Online Events",
 		href: "https://xtremejs.dev/",
-		tags: ["conferences"],
-	},
-	{
-		name: "Cyber Security & Cloud Congress Global",
-		description:
-			"Expand your knowledge and gain the security skills needed to steer your organization to a more secure future.",
-		image:
-			"https://www.cybersecuritycloudexpo.com/global/wp-content/uploads/2018/07/cyber-cloud-icon-200x200.png",
-		type: "Live Events",
-		href: "https://www.cybersecuritycloudexpo.com/global/",
 		tags: ["conferences"],
 	},
 	{
@@ -211,7 +163,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		tags: ["conferences"],
 	},
 	{
-		name: "Global Summit for Node.js 23",
+		name: "Global Summit for Node.js",
 		description: "This conference is dedicated to all things Node.js.",
 		image:
 			"https://events.geekle.us/nodejs2/static/media/creative.7cd9e67b.png",
@@ -220,7 +172,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		tags: ["conferences"],
 	},
 	{
-		name: "Js World Conf",
+		name: "JSWORLD Conference USA",
 		description:
 			"Global conference connecting JavaScript leaders from around the world.",
 		image:
@@ -275,40 +227,12 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		tags: ["conferences"],
 	},
 	{
-		name: "DevOps Day LA",
-		description: "Los Angeles based event dedicated to all things DevOps.",
-		image:
-			"https://d33wubrfki0l68.cloudfront.net/fba174b19270a1db8de8910558e38b4fdabc4dcc/5515d/img/devopsdays-brain.png",
-		type: "Live Events",
-		href: "https://devopsdays.org/events/2023-los-angeles/welcome/",
-		tags: ["conferences"],
-	},
-	{
-		name: "SXSW",
-		description:
-			"The SXSW Conference provides an opportunity for the global community of digital creatives to encounter cutting-edge ideas, discover new interests, and network with other professionals who share a similar appetite for forward-focused experiences.",
-		image: "https://www.sxsw.com/wp-content/themes/wp-theme-sxsw/favicon.png",
-		type: "Live Events",
-		href: "https://www.sxsw.com/conference/",
-		tags: ["conferences"],
-	},
-	{
 		name: "Web3 Tech Summit",
 		description: "A tech summit dedicated to all things Web3.",
 		image:
 			"https://events.geekle.us/data-science2/static/media/creative.c008843b.png",
 		type: "Live Events",
 		href: "https://events.geekle.us/web3/",
-		tags: ["conferences"],
-	},
-	{
-		name: "Javaland 2023",
-		description:
-			"A conference packed with lectures, community activities, an accompanying exhibition, workshops, exchange and networking with a unique amusement park flair.",
-		image:
-			"https://www.javaland.eu/typo3conf/ext/doag/Resources/Public/Images/logo_javaland.png",
-		type: "Live Events",
-		href: "https://www.javaland.eu/de/home/",
 		tags: ["conferences"],
 	},
 	{
@@ -349,17 +273,17 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		tags: ["conferences"],
 	},
 	{
-		name: "JsNation 2023",
+		name: "JSNation Conference",
 		description:
 			"A conference dedicated to the latest trends in JavaScript development.",
 		image:
 			"https://d33wubrfki0l68.cloudfront.net/9e3b2b2e7d375ad7003010a688bf021e994fc591/1b06b/img/logo.svg",
 		type: "Live Events",
-		href: "jsnation.com",
+		href: "https://jsnation.com/",
 		tags: ["conferences"],
 	},
 	{
-		name: "JSDay IE Ireland",
+		name: "JSDayIE",
 		description:
 			"A tech conference dedicated to the JavaScript community in Ireland.",
 		image: "https://www.jsday.ie//media/jslogo.png?imwidth=64",
