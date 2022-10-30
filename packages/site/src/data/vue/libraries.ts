@@ -261,7 +261,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		npmPackage: "vuestic-ui",
 		href: "https://vuestic.dev/",
 		description: "Vue 3.0 UI Framework",
-		image: "https://raw.githubusercontent.com/epicmaxco/vuestic-ui/develop/packages/ui/src/assets/vuestic-ui-logo.png",
+		image: "https://vuestic.dev/favicon-16x16.png",
 		tags: ["component library", "Vue 3"],
 	},
 	{
