@@ -207,7 +207,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		npmPackage: "mint-ui",
 		href: "http://mint-ui.github.io/#!/en",
 		description: "Mobile UI elements for Vue 2.0",
-		image: "",
+		image: "https://i.ibb.co/sR3BGbk/mint-ui-logo.png",
 		tags: ["component library", "Vue 2"],
 	},
 
