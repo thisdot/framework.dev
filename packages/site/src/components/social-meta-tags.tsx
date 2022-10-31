@@ -15,7 +15,7 @@ export function SocialMetaTags({ siteName, title }: SocialMetaTagsProps) {
 		siteName === "landing"
 			? `https://framework.dev`
 			: `https://${siteName}.framework.dev`
-	const imageUrl = `${url}/${siteName}-homepage-screenshot.png`
+	const imageUrl = `${url}/${siteName}-framework-1200x630.png`
 
 	return (
 		<>
