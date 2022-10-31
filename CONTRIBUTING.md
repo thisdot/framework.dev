@@ -1,14 +1,16 @@
-# Contributing to Framework.dev
+# Contributing to Framework.dev<!-- omit in toc -->
 
 Please [read our Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this
 repository, you are agreeing to its rules.
 
-Contents
+## Table of contents<!-- omit in toc -->
 
-- [Contributing to Framework.dev](#contributing-to-frameworkdev)
-  - [Submitting a Pull Request (PR)](#submitting-a-pull-request-pr)
-  - [Content Guidelines](#content-guidelines)
-  - [Code Guidelines](#code-guidelines)
+- [Submitting a Pull Request (PR)](#submitting-a-pull-request-pr)
+- [Guidelines for content submission](#guidelines-for-content-submission)
+  - [Courses](#courses)
+  - [Blogs](#blogs)
+- [How to add content to framework.dev](#how-to-add-content-to-frameworkdev)
+- [Code Guidelines](#code-guidelines)
 
 ---
 
@@ -59,14 +61,35 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 That's it! Thank you for your contribution!
 
-## Content Guidelines
+## Guidelines for content submission
 
-Content should be added in the `packages/site/src/data/<framework-name>/<model>.ts`
-files. Data files each contain two things: a list of tags used to tag the
-content and a list of content items. Items are type-checked to follow the
-schemata defined in `packages/system/src/models`. Those model files contain
-additional documentation on how each field should be populated, so consult them
-before filling out new content.
+Thank you for your interest in contributing content to framework.dev! Please
+read through the following guidelines for what kinds of submissions we are
+looking for.
+
+### Courses
+
+- All Udemy, Edx or Coursera course suggestions must have a 4.5 rating or higher
+- All course suggestions will be reviewed based on reputation in the community
+  and view metrics
+- Any paid course must have a valid checkout process through PayPal or Stripe
+
+### Blogs
+
+- All blog submissions will be reviewed based on reputation in the community and
+  view metrics
+- Any blog with excessive amounts of advertising where it interferes with the
+  reading experience, will not be accepted either
+
+## How to add content to framework.dev
+
+Content should be added in the
+`packages/site/src/data/<framework-name>/<model>.ts` files. Data files each
+contain two things: a list of tags used to tag the content and a list of content
+items. Items are type-checked to follow the schemata defined in
+`packages/system/src/models`. Those model files contain additional documentation
+on how each field should be populated, so consult them before filling out new
+content.
 
 New content should be appended to data files at the end of the appropriate list.
 Do not reorder the lists, the order is irrelevant and keeping it stable helps
