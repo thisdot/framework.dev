@@ -1,23 +1,23 @@
 import { Course } from "@framework/system/src/models/course"
 
 export const courseTags = [
-	"state management",
-	"components",
 	"data fetching",
-	"routing",
 	"testing",
 	"services",
-	"RxJS",
-	"ngRx",
-	"javascript marathon",
-	"nx monorepo",
-	"ignite UI",
-	"ivy",
-	"PWA",
-	"A11Y",
-	"pipes",
-	"angular patterns",
 	"typescript",
+	"events",
 ] as const
 
-export const courses: Course<typeof courseTags[number]>[] = []
+export const courses: Course<typeof courseTags[number]>[] = [
+	{
+		title: "",
+		author: "",
+		image: "",
+		description: "",
+		paymentType: "free",
+		level: "beginner",
+		format: "interactive",
+		href: "",
+		tags: [],
+	},
+]
