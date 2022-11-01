@@ -184,7 +184,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://vue.chakra-ui.com/",
 		description:
 			"Chakra UI gives you a set of accessible and composable Vue components that you can use to build your favourite applications and sites. Made for Vue 2.X",
-		image: "",
+		image: "https://raw.githubusercontent.com/chakra-ui/chakra-ui/f0e3fb61e3064f03e64222650cf0f1570843a146/logo/logo-colored.svg",
 		tags: ["component library", "Vue 2"],
 	},
 
