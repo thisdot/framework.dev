@@ -4,6 +4,7 @@ import { ReactIcon } from "../icons/react-icon"
 import { VueIcon } from "../icons/vue-icon"
 import { SolidJSIcon } from "../icons/solidjs-icon"
 import { QwikIcon } from "../icons/qwik-icon"
+import { NodejsIcon } from "../icons/nodejs-icon"
 
 export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 	{
@@ -34,21 +35,30 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 		bigSize,
 	},
 	{
-	        title: "SolidJS Resources",
+		title: "SolidJS Resources",
 		href: "https://solidjs.framework.dev/",
 		Icon(props) {
 			return <SolidJSIcon {...props} />
 		},
 		backgroundColor: "#2c4f7c",
 		bigSize,
-  	},
-  	{
+	},
+	{
 		title: "Qwik Resources",
 		href: "https://qwik.framework.dev/",
 		Icon(props) {
 			return <QwikIcon {...props} />
 		},
 		backgroundColor: "#5468ff",
+		bigSize,
+	},
+	{
+		title: "NodeJS Resources",
+		href: "https://nodejs.framework.dev/",
+		Icon(props) {
+			return <NodejsIcon {...props} />
+		},
+		backgroundColor: "#539e43",
 		bigSize,
 	},
 ]
