@@ -1,5 +1,6 @@
 import { LinkCardProps } from "@framework/system/src/components/landing/link-card"
 import { AngularIcon } from "../icons/angular-icon"
+import { QwikIcon } from "../icons/qwik-icon"
 import { ReactIcon } from "../icons/react-icon"
 import { VueIcon } from "../icons/vue-icon"
 // import { SolidJSIcon } from "../icons/solidjs-icon"
