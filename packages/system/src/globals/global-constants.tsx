@@ -48,7 +48,7 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 		Icon(props) {
 			return <QwikIcon {...props} />
 		},
-		backgroundColor: "#5468ff",
+		backgroundColor: "#AC7EF4",
 		bigSize,
 	},
 ]
