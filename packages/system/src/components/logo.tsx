@@ -2,6 +2,7 @@ import classnames from "classnames"
 import React from "react"
 import { AngularFrameworkIcon } from "../icons/angular-framework-icon"
 import { FrameworkDevIcon } from "../icons/framework-dev-icon"
+import { NodejsFrameworkIcon } from "../icons/nodejs-framework-icon"
 import { ReactFrameworkIcon } from "../icons/react-framework-icon"
 import { VueFrameworkIcon } from "../icons/vue-framework-icon"
 import { logoStyle } from "./logo.css"
@@ -16,6 +17,7 @@ export function Logo({ className, siteName, stretched }: LogoProps) {
 		react: <ReactFrameworkIcon size="full" stretched={stretched} />,
 		angular: <AngularFrameworkIcon size="full" stretched={stretched} />,
 		vue: <VueFrameworkIcon size="full" stretched={stretched} />,
+		nodejs: <NodejsFrameworkIcon size="full" stretched={stretched} />,
 	}
 
 	const renderLogo = () => {

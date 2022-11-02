@@ -13,6 +13,8 @@ import {
 	qwikThemeDark,
 	svelteTheme,
 	svelteThemeDark,
+	nodejsTheme,
+	nodejsThemeDark,
 } from "../src/themes/themes.css"
 import { addDecorator } from "@storybook/react"
 import { withThemes } from "storybook-addon-themes/react"
@@ -66,6 +68,8 @@ export const parameters = {
 			{ name: "qwikDark", class: qwikThemeDark, color: "#0e201a" },
 			{ name: "svelte", class: svelteTheme, color: "#18b6f6" },
 			{ name: "svelteDark", class: svelteThemeDark, color: "#0e201a" },
+			{ name: "nodejs", class: nodejsTheme, color: "#18b6f6" },
+			{ name: "nodejsDark", class: nodejsThemeDark, color: "#0e201a" },
 		],
 	},
 }
