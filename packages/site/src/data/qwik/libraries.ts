@@ -49,7 +49,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		name: "Partytown",
 		author: "BuilderIO",
 		gitHubRepo: "BuilderIO/partytown",
-		npmPackage: "",
+		npmPackage: "@builder.io/partytown",
 		href: "https://github.com/BuilderIO/partytown",
 		image: "https://qwik.builder.io/logos/social-card.png?v=3",
 		tags: ["web-workers"],
