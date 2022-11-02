@@ -10,7 +10,7 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 		title: "Angular Resources",
 		href: "https://angular.framework.dev/",
 		Icon(props) {
-			return <AngularIcon {...props} size="large" />
+			return <AngularIcon {...props} />
 		},
 		backgroundColor: "#C3002F",
 		bigSize,
@@ -19,7 +19,7 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 		title: "React Resources",
 		href: "https://react.framework.dev/",
 		Icon(props) {
-			return <ReactIcon {...props} size="large" />
+			return <ReactIcon {...props} />
 		},
 		backgroundColor: "#00BCDA",
 		bigSize,
@@ -28,7 +28,7 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 		title: "Vue Resources",
 		href: "https://vue.framework.dev/",
 		Icon(props) {
-			return <VueIcon {...props} size="large" />
+			return <VueIcon {...props} />
 		},
 		backgroundColor: "#41B883",
 		bigSize,
@@ -46,7 +46,7 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 		title: "Qwik Resources",
 		href: "https://qwik.framework.dev/",
 		Icon(props) {
-			return <QwikIcon {...props} size="large" />
+			return <QwikIcon {...props} />
 		},
 		backgroundColor: "#AC7EF4",
 		bigSize,
