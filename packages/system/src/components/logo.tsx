@@ -3,9 +3,10 @@ import React from "react"
 import { AngularFrameworkIcon } from "../icons/angular-framework-icon"
 import { FrameworkDevIcon } from "../icons/framework-dev-icon"
 import { NodejsFrameworkIcon } from "../icons/nodejs-framework-icon"
-import { ReactFrameworkIcon } from "../icons/react-framework-icon"
-import { VueFrameworkIcon } from "../icons/vue-framework-icon"
 import { QwikFrameworkIcon } from "../icons/qwik-framework-icon"
+import { ReactFrameworkIcon } from "../icons/react-framework-icon"
+import { SolidJSFrameworkIcon } from "../icons/solidjs-framework-icon"
+import { VueFrameworkIcon } from "../icons/vue-framework-icon"
 import { logoStyle } from "./logo.css"
 
 export type LogoProps = React.ComponentPropsWithoutRef<"div"> & {
@@ -19,6 +20,7 @@ export function Logo({ className, siteName, stretched }: LogoProps) {
 		angular: <AngularFrameworkIcon size="full" stretched={stretched} />,
 		vue: <VueFrameworkIcon size="full" stretched={stretched} />,
 		qwik: <QwikFrameworkIcon size="full" stretched={stretched} />,
+		solidjs: <SolidJSFrameworkIcon size="full" stretched={stretched} />,
 		nodejs: <NodejsFrameworkIcon size="full" stretched={stretched} />,
 	}
 
