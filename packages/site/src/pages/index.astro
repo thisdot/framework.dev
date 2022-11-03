@@ -40,7 +40,7 @@ const resourceCards = FRAMEWORK_RESOURCES().filter(
 <head>
 	{`<script type="application/ld+json">${JSON.stringify(searchableWebsiteStructuredData)}</script>`}
 </head>
-<BaseLayout title="Featured resources" className={scrollable}>
+<BaseLayout title={`Featured Resources | ${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}.framework.dev`} className={scrollable}>
 	<Homepage
 		librariesTitle={`Featured ${formatFieldName(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} Libraries`}
 		libraries={libraries?.data}
