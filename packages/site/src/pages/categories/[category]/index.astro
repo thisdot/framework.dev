@@ -25,7 +25,8 @@ export async function getStaticPaths() {
 
 const { category, ...props } = Astro.props
 
-const title = `${formatFieldName(category)} | ${titleCase(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} Framework.dev`
+const title = `Featured ${formatFieldName(category)} | ${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}.framework.dev`
+
 ---
 <head>
 	<meta name="description" content={`Browse and search through relevant ${title}`}/>
