@@ -18,6 +18,7 @@ export const courseTags = [
 	"pipes",
 	"angular patterns",
 	"typescript",
+	"backend",
 ] as const
 
 export const courses: Course<typeof courseTags[number]>[] = [
@@ -32,7 +33,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://www.pluralsight.com/courses/nodejs-getting-started",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "Node.js 12: The Big Picture",
@@ -45,7 +46,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://www.pluralsight.com/courses/nodejs-big-picture",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "Getting Started with Express.js",
@@ -58,7 +59,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://egghead.io/courses/getting-started-with-express-js",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "Learn the Fundamentals of Node.js for Beginners",
@@ -71,7 +72,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://egghead.io/courses/learn-the-fundamentals-of-node-js-for-beginners-7b6f4282",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "Introduction to MongoDB",
@@ -83,7 +84,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://frontendmasters.com/courses/mongodb/",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "Node.js and Express.js - Full Course",
@@ -95,7 +96,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://www.youtube.com/watch?v=Oe421EPjeBE",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "Node.js Tutorial for Beginners: Learn Node in 1 Hour",
@@ -108,7 +109,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://www.youtube.com/watch?v=TlB_eWDSMt4",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title:
@@ -122,7 +123,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://www.youtube.com/watch?v=f2EqECiTBL8",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "Modern Application Development with Node.js on AWS Specialization",
@@ -135,7 +136,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://www.coursera.org/learn/building-modern-node-applications-on-aws?specialization=aws-nodejs-serverless-development",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "Server-side Development with NodeJS, Express and MongoDB",
@@ -148,7 +149,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://www.coursera.org/learn/server-side-nodejs",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "JSON Web Token (JWT) Authentication with Node.js and Auth0",
@@ -161,7 +162,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://egghead.io/courses/json-web-token-jwt-authentication-with-node-js-and-auth0",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "Learn Node.js",
@@ -173,7 +174,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://www.codecademy.com/learn/learn-node-js",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "Connecting Front-End to Back-End",
@@ -185,7 +186,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://www.codecademy.com/learn/connecting-front-end-to-back-end",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title:
@@ -198,7 +199,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://www.codecademy.com/learn/defending-express-applications-from-sql-injection-xss-csrf-attacks",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "DynamoDB: The Node.js DocumentClient",
@@ -211,7 +212,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://egghead.io/courses/dynamodb-the-node-js-documentclient-1396",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "Build a Backend with Prisma in a TypeScript Node Project",
@@ -224,7 +225,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://egghead.io/courses/build-a-backend-with-prisma-in-a-typescript-node-project-ca6628d3",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "How to Build Microservices with Node.js",
@@ -237,7 +238,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://www.oreilly.com/videos/how-to-build/10000MNHV202232/",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "JavaScript Marathon: Serverless Training 101 with Dustin Goodman",
@@ -274,7 +275,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "advanced",
 		format: "video",
 		href: "https://www.pluralsight.com/courses/nodejs-advanced",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "Build a Twelve-Factor Node.js App with Docker",
@@ -287,7 +288,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "advanced",
 		format: "video",
 		href: "https://egghead.io/courses/build-a-twelve-factor-node-js-app-with-docker",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "Web Security Esentials: MITM, CSRF, and XSS",
@@ -300,7 +301,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "advanced",
 		format: "video",
 		href: "https://egghead.io/courses/web-security-essentials-mitm-csrf-and-xss",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "Build a Node.js REST API with LoopBack",
@@ -313,7 +314,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "advanced",
 		format: "video",
 		href: "https://egghead.io/courses/build-a-node-js-rest-api-with-loopback",
-		tags: [],
+		tags: ["backend"],
 	},
 	{
 		title: "Advanced Node Training - JS Marathon",
