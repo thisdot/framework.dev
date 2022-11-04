@@ -126,7 +126,58 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["backend"],
 	},
 	{
-		title: "Modern Application Development with Node.js on AWS Specialization",
+		title: "Build a Node.js API - tutorial",
+		author: "Beau Carnes",
+		image: "https://github.com/freeCodeCamp.png",
+		description:
+			"Learn how to create basic CRUD routes with Node.js, Express, and MongoDB.",
+		paymentType: "free",
+		level: "beginner",
+		format: "video",
+		href: "https://www.youtube.com/watch?v=fsCjFHuMXj0",
+		tags: ["backend"],
+	},
+	{
+		title:
+			"Node.js Tutorial for Beginners - Getting Started with NodeJS Basics",
+		author: "Academind",
+		image:
+			"https://yt3.ggpht.com/ytc/AMLnZu_Uksjq0hZKO8HU1hqf8LTFE91m1CeiSOe__5L8BA=s88-c-k-c0x00ffffff-no-rj",
+		description: "Learn the basics of Node.js with this free 2 hour video.",
+		paymentType: "free",
+		level: "beginner",
+		format: "video",
+		href: "https://www.youtube.com/watch?v=C7TFgfY7JdE",
+		tags: ["backend"],
+	},
+	{
+		title: "Learn and Understand NodeJS",
+		author: "Anthony Alicea",
+		image:
+			"https://egghead.io/_next/image?url=https%3A%2F%2Fd2eip9sf3oo6c2.cloudfront.net%2Ftags%2Fimages%2F000%2F000%2F256%2Fsquare_480%2Fnodejslogo.png&w=640&q=100",
+		description:
+			"Dive deep under the hood of NodeJS. Learn V8, Express, the MEAN stack, core Javascript concepts, and more.",
+		paymentType: "paid",
+		level: "beginner",
+		format: "video",
+		href: "https://www.udemy.com/course/understand-nodejs/",
+		tags: ["backend"],
+	},
+	{
+		title: "Learn Node.js: The Complete Course for Beginners",
+		author: "Educative",
+		image:
+			"https://egghead.io/_next/image?url=https%3A%2F%2Fd2eip9sf3oo6c2.cloudfront.net%2Ftags%2Fimages%2F000%2F000%2F256%2Fsquare_480%2Fnodejslogo.png&w=640&q=100",
+		description:
+			"Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a web browser. This course is your guide for learning the fundamentals of Node.js.",
+		paymentType: "paid",
+		level: "beginner",
+		format: "video",
+		href: "https://www.educative.io/courses/learn-nodejs-complete-course-for-beginners",
+		tags: ["backend"],
+	},
+	{
+		title: "Building Modern Node.js Applications on AWS",
 		author: "Coursera",
 		image:
 			"https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/android-chrome-v2-192x192.png",
@@ -265,6 +316,69 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["javascript marathon"],
 	},
 	{
+		title: "Digging Into Node.js",
+		author: "Kyle Simpson",
+		image:
+			"https://static.frontendmasters.com/assets/teachers/simpson/thumb@2x.webp",
+		description:
+			"Node.js has taken the JavaScript world by storm, but where do you start when all you see are tens of thousands of packages/frameworks on npm? The best place to start is always at the foundation, and that's what this course focuses on. In this course, you’ll get to know the fundamental concepts in Node.js: CLI programming, file system access, streams, HTTP servers & routing, database persistence, and child processes.",
+		paymentType: "paid",
+		level: "intermediate",
+		format: "video",
+		href: "https://frontendmasters.com/courses/digging-into-node/",
+		tags: ["backend"],
+	},
+	{
+		title: "User Authentication in Node.js with Passport.js and JWT",
+		author: "Zach Gollwitzer",
+		image: "https://github.com/freeCodeCamp.png",
+		description:
+			"In this full course for beginners, you will learn how to implement user authentication from scratch in your web apps. You will learn how to use Passport.js in a Node / Express app.",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "https://www.youtube.com/watch?v=F-sFp_AvHc8",
+		tags: ["backend"],
+	},
+	{
+		title: "Node.js Essential Training",
+		author: "Eve Porcello",
+		image:
+			"https://media.licdn.com/dms/image/C560DAQHctDFCWfBf5Q/learning-public-crop_675_1200/0/1654187660358?e=2147483647&v=beta&t=C7sbLH53b6xtLr2T5PbBcFPgBQOG5zIVPcPXFwFnN-w",
+		description:
+			"Node.js is a powerful tool for controlling servers, building web applications, and creating event-driven programs. And it takes JavaScript—a language familiar to all web developers—out of the browser. With Node.js, you can build applications that run on your laptop or even the cloud. In this course, learn the essentials of Node.js and start creating your own JavaScript applications. ",
+		paymentType: "paid",
+		level: "intermediate",
+		format: "video",
+		href: "https://www.linkedin.com/learning/node-js-essential-training-14888164?replacementOf=node-js-essential-training-2019",
+		tags: ["backend"],
+	},
+	{
+		title: "The Complete Node.js Developer Course",
+		author: "Andrew Mead",
+		image: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+		description:
+			"Learn Node.js by building real-world applications with Node JS, Express, MongoDB, Jest, and more!",
+		paymentType: "paid",
+		level: "intermediate",
+		format: "video",
+		href: "https://www.udemy.com/course/the-complete-nodejs-developer-course-2/",
+		tags: ["backend"],
+	},
+	{
+		title: "Become a Node.js Developer",
+		author: "Educative",
+		image:
+			"https://egghead.io/_next/image?url=https%3A%2F%2Fd2eip9sf3oo6c2.cloudfront.net%2Ftags%2Fimages%2F000%2F000%2F256%2Fsquare_480%2Fnodejslogo.png&w=640&q=100",
+		description:
+			"Node.js is a server-side JavaScript runtime environment that executes JavaScript code outside of a browser. Node.js is commonly used by developers and is often used for enterprise applications. This path will take you from the basics of Node.js to its advanced concepts.",
+		paymentType: "paid",
+		level: "intermediate",
+		format: "video",
+		href: "https://www.educative.io/path/become-a-node-js-developer",
+		tags: ["backend"],
+	},
+	{
 		title: "Advanced Node.js 12",
 		author: "Samer Buna",
 		image:
@@ -327,5 +441,53 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		format: "video",
 		href: "https://www.youtube.com/watch?v=rUFUTdQALrk",
 		tags: ["javascript marathon"],
+	},
+	{
+		title: "The Hard Parts of Servers & Node.js",
+		author: "Will Sentence",
+		image:
+			"https://static.frontendmasters.com/assets/teachers/sentance/thumb@2x.webp",
+		description:
+			"In this course you'll go under the hood of Node.js in two contrasting ways - by understanding how to develop servers from intuitive first-principles (HTTP, TCP/IP, Ports, Loopback, SSH) and by understanding the JavaScript features that make up Node (the event loop, streams, buffers, asynchronicity, prototypes). ",
+		paymentType: "paid",
+		level: "advanced",
+		format: "video",
+		href: "https://frontendmasters.com/courses/servers-node-js/",
+		tags: ["backend"],
+	},
+	{
+		title: "Node JS: Advanced Concepts",
+		author: "Stephen Grider",
+		image: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+		description:
+			"Get advanced with Node.Js! Learn caching with Redis, speed up through clustering, and add image upload with S3 and Node!",
+		paymentType: "paid",
+		level: "advanced",
+		format: "video",
+		href: "https://www.udemy.com/course/advanced-node-for-developers/",
+		tags: ["backend"],
+	},
+	{
+		title: "Node.js API Masterclass With Express & MongoDB",
+		author: "Brad Traversy",
+		image: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+		description: "Create a real world backend for a bootcamp directory app",
+		paymentType: "paid",
+		level: "advanced",
+		format: "video",
+		href: "https://www.udemy.com/course/nodejs-api-masterclass/",
+		tags: ["backend"],
+	},
+	{
+		title: "Node.js / Express Course - Build 4 Projects",
+		author: "John Smilga",
+		image: "https://github.com/freeCodeCamp.png",
+		description:
+			"Node.js and Express.js are popular technologies used for JavaScript backend web development. In this course, you will improve your skills by building four projects using Node and Express.",
+		paymentType: "free",
+		level: "advanced",
+		format: "video",
+		href: "https://www.youtube.com/watch?v=qwfE7fSVaZM&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&index=4",
+		tags: ["backend"],
 	},
 ]
