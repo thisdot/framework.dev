@@ -14,13 +14,13 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		href: "https://modernweb.podbean.com",
 		tags: ["general"],
 	},
-	{
-		title: "",
-		image: "",
-		hosts: [""],
-		description: "",
-		rss: "",
-		href: "",
-		tags: ["general"],
-	},
+	// {
+	// 	title: "",
+	// 	image: "",
+	// 	hosts: [""],
+	// 	description: "",
+	// 	rss: "",
+	// 	href: "",
+	// 	tags: ["general"],
+	// },
 ]
