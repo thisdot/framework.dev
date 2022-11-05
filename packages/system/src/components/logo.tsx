@@ -6,6 +6,7 @@ import { NodejsFrameworkIcon } from "../icons/nodejs-framework-icon"
 import { QwikFrameworkIcon } from "../icons/qwik-framework-icon"
 import { ReactFrameworkIcon } from "../icons/react-framework-icon"
 import { SolidJSFrameworkIcon } from "../icons/solidjs-framework-icon"
+import { SvelteFrameworkIcon } from "../icons/svelte-framework-icon"
 import { VueFrameworkIcon } from "../icons/vue-framework-icon"
 import { logoStyle } from "./logo.css"
 
@@ -22,6 +23,7 @@ export function Logo({ className, siteName, stretched }: LogoProps) {
 		qwik: <QwikFrameworkIcon size="full" stretched={stretched} />,
 		solidjs: <SolidJSFrameworkIcon size="full" stretched={stretched} />,
 		nodejs: <NodejsFrameworkIcon size="full" stretched={stretched} />,
+		svelte: <SvelteFrameworkIcon size="full" stretched={stretched} />,
 	}
 
 	const renderLogo = () => {
