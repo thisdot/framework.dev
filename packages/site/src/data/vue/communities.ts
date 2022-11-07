@@ -233,7 +233,8 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		name: "ConFoo",
 		description:
 			"ConFoo Montreal is a multi-technology conference for developers.",
-		image: "https://confoo.ca/images/design/logo.gif",
+		image:
+			"https://pbs.twimg.com/profile_images/1135229757031964672/sLiCXiCn_400x400.png",
 		type: "Live Events",
 		href: "https://confoo.ca",
 		tags: ["conferences"],
