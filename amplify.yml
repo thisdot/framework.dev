@@ -1,6 +1,6 @@
 version: 1
 applications:
-- appRoot: packages/graphql
+  - appRoot: packages/graphql
     frontend:
       phases:
         preBuild:
