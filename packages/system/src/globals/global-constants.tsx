@@ -40,7 +40,7 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 		Icon(props) {
 			return <SolidJSIcon {...props} />
 		},
-		backgroundColor: "#2B4E8B",
+		backgroundColor: "#446b9e",
 		bigSize,
 	},
 	{
