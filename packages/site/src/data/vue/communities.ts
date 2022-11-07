@@ -178,7 +178,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		description:
 			"A technology conference focusing on the tools, processes and the people making open source responsible.",
 		image:
-			"https://www.allthingsopen.org/wp-content/themes/ato_2020/favicon-32.png",
+			"https://pbs.twimg.com/profile_images/1414585849862397956/PJmkGMLk_400x400.jpg",
 		type: "Live Events",
 		href: "https://allthingsopen.org/",
 		tags: ["conferences"],
