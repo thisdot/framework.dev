@@ -25,7 +25,7 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 		
 		<meta name="robots" content="noindex">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<SocialMetaTags title={`${currentCategory ? currentCategory : title} | ${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}.framework.dev`} siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK} />
+		<SocialMetaTags title={`${currentCategory ? currentCategory : ''} | ${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}.framework.dev`} siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK} />
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 		<meta charset="UTF-8"/>
