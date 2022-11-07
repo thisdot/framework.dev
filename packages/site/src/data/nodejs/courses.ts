@@ -7,6 +7,7 @@ export const courseTags = [
 	"typescript",
 	"backend",
 	"events",
+	"javascript marathon",
 ] as const
 
 export const courses: Course<typeof courseTags[number]>[] = [
@@ -430,52 +431,52 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		href: "https://www.youtube.com/watch?v=rUFUTdQALrk",
 		tags: ["javascript marathon"],
 	},
-	// {
-	// 	title: "The Hard Parts of Servers & Node.js",
-	// 	author: "Will Sentence",
-	// 	image:
-	// 		"https://static.frontendmasters.com/assets/teachers/sentance/thumb@2x.webp",
-	// 	description:
-	// 		"In this course you'll go under the hood of Node.js in two contrasting ways - by understanding how to develop servers from intuitive first-principles (HTTP, TCP/IP, Ports, Loopback, SSH) and by understanding the JavaScript features that make up Node (the event loop, streams, buffers, asynchronicity, prototypes). ",
-	// 	paymentType: "paid",
-	// 	level: "advanced",
-	// 	format: "video",
-	// 	href: "https://frontendmasters.com/courses/servers-node-js/",
-	// 	tags: ["backend"],
-	// },
-	// {
-	// 	title: "Node JS: Advanced Concepts",
-	// 	author: "Stephen Grider",
-	// 	image: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
-	// 	description:
-	// 		"Get advanced with Node.Js! Learn caching with Redis, speed up through clustering, and add image upload with S3 and Node!",
-	// 	paymentType: "paid",
-	// 	level: "advanced",
-	// 	format: "video",
-	// 	href: "https://www.udemy.com/course/advanced-node-for-developers/",
-	// 	tags: ["backend"],
-	// },
-	// {
-	// 	title: "Node.js API Masterclass With Express & MongoDB",
-	// 	author: "Brad Traversy",
-	// 	image: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
-	// 	description: "Create a real world backend for a bootcamp directory app",
-	// 	paymentType: "paid",
-	// 	level: "advanced",
-	// 	format: "video",
-	// 	href: "https://www.udemy.com/course/nodejs-api-masterclass/",
-	// 	tags: ["backend"],
-	// },
-	// {
-	// 	title: "Node.js / Express Course - Build 4 Projects",
-	// 	author: "John Smilga",
-	// 	image: "https://github.com/freeCodeCamp.png",
-	// 	description:
-	// 		"Node.js and Express.js are popular technologies used for JavaScript backend web development. In this course, you will improve your skills by building four projects using Node and Express.",
-	// 	paymentType: "free",
-	// 	level: "advanced",
-	// 	format: "video",
-	// 	href: "https://www.youtube.com/watch?v=qwfE7fSVaZM&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&index=4",
-	// 	tags: ["backend"],
-	// },
+	{
+		title: "The Hard Parts of Servers & Node.js",
+		author: "Will Sentence",
+		image:
+			"https://static.frontendmasters.com/assets/teachers/sentance/thumb@2x.webp",
+		description:
+			"In this course you'll go under the hood of Node.js in two contrasting ways - by understanding how to develop servers from intuitive first-principles (HTTP, TCP/IP, Ports, Loopback, SSH) and by understanding the JavaScript features that make up Node (the event loop, streams, buffers, asynchronicity, prototypes). ",
+		paymentType: "paid",
+		level: "advanced",
+		format: "video",
+		href: "https://frontendmasters.com/courses/servers-node-js/",
+		tags: ["backend"],
+	},
+	{
+		title: "Node JS: Advanced Concepts",
+		author: "Stephen Grider",
+		image: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+		description:
+			"Get advanced with Node.Js! Learn caching with Redis, speed up through clustering, and add image upload with S3 and Node!",
+		paymentType: "paid",
+		level: "advanced",
+		format: "video",
+		href: "https://www.udemy.com/course/advanced-node-for-developers/",
+		tags: ["backend"],
+	},
+	{
+		title: "Node.js API Masterclass With Express & MongoDB",
+		author: "Brad Traversy",
+		image: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+		description: "Create a real world backend for a bootcamp directory app",
+		paymentType: "paid",
+		level: "advanced",
+		format: "video",
+		href: "https://www.udemy.com/course/nodejs-api-masterclass/",
+		tags: ["backend"],
+	},
+	{
+		title: "Node.js / Express Course - Build 4 Projects",
+		author: "John Smilga",
+		image: "https://github.com/freeCodeCamp.png",
+		description:
+			"Node.js and Express.js are popular technologies used for JavaScript backend web development. In this course, you will improve your skills by building four projects using Node and Express.",
+		paymentType: "free",
+		level: "advanced",
+		format: "video",
+		href: "https://www.youtube.com/watch?v=qwfE7fSVaZM&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&index=4",
+		tags: ["backend"],
+	},
 ]

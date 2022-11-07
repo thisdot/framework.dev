@@ -12,7 +12,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"Modern Web is a podcast that explores next generation frameworks, standards, and techniques.",
 		rss: "https://feed.podbean.com/modernweb/feed.xml",
 		href: "https://modernweb.podbean.com",
-		tags: ["general"],
+		tags: ["general, node, full stack"],
 	},
 	{
 		title: "Node University",
@@ -23,7 +23,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"Short lectures on software development with Node.js, JavaScript, and React.",
 		rss: "https://feeds.simplecast.com/GlwKW4VA",
 		href: "https://nodeuniversity.simplecast.com/",
-		tags: ["general"],
+		tags: ["general, node, full stack"],
 	},
 	{
 		title: "The Backend Engineering Show with Hussein Nasser",
@@ -34,7 +34,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"Welcome to the Backend Engineering Show podcast with your host Hussein Nasser. If you like software engineering you’ve come to the right place. I discuss all sorts of software engineering technologies and news with specific focus on the backend.",
 		rss: "https://anchor.fm/s/1eb6d14/podcast/rss",
 		href: "https://anchor.fm/hnasr",
-		tags: ["general"],
+		tags: ["general, node, full stack"],
 	},
 	{
 		title:
@@ -46,7 +46,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"Welcome to the Select* Podcast, hosted by HarperDB. Featuring guests across a wide range of backgrounds & topics, with the goal of being your resource for coding tips, best practices, edge computing, machine learning, diversity & inclusion, tech trends, career advice, & much, much more!",
 		rss: "https://media.rss.com/harperdb-select-star/feed.xml",
 		href: "https://rss.com/podcasts/harperdb-select-star/",
-		tags: ["general"],
+		tags: ["general, node, full stack"],
 	},
 	{
 		title: "PodRocket",
@@ -57,7 +57,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"PodRocket covers everything you need to know about frontend web development on a weekly basis. Join LogRocket cofounder Ben Edelstein, the LogRocket engineering team, and more, as they interview experienced developers about all the libraries, frameworks, and tech industry issues they deal with every day.",
 		rss: "https://feeds.fireside.fm/podrocket/rss",
 		href: "https://podrocket.logrocket.com/",
-		tags: ["general"],
+		tags: ["general, node, full stack"],
 	},
 	{
 		title: "Syntax",
@@ -66,7 +66,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		description: "A Tasty Treats Podcast for Web Developers.",
 		rss: "https://feed.syntax.fm/rss",
 		href: "https://syntax.fm/",
-		tags: ["general"],
+		tags: ["general, node, full stack"],
 	},
 	{
 		title: "ShopTalk",
@@ -77,7 +77,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"A weekly podcast about just building websites from Dave Rupert and Chris Coyier.",
 		rss: "https://shoptalkshow.com/feed/podcast/",
 		href: "https://shoptalkshow.com/",
-		tags: ["general"],
+		tags: ["general, node, full stack"],
 	},
 	{
 		title: "CodeNewbie",
@@ -88,7 +88,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"The most supportive community of programmers and people learning to code.",
 		rss: "http://feeds.codenewbie.org/cnpodcast.xml",
 		href: "https://www.codenewbie.org/podcast",
-		tags: ["general"],
+		tags: ["general, node, full stack"],
 	},
 	{
 		title: "devMode.fm",
@@ -99,7 +99,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"devMode.fm is a bi-weekly podcast dedicated to the tools, techniques, and technologies used in modern web development.",
 		rss: "https://devmode.fm/rss",
 		href: "https://devmode.fm/",
-		tags: ["general"],
+		tags: ["general, node, full stack"],
 	},
 	{
 		title: "Coding Blocks",
@@ -110,7 +110,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"Pragmatic talk about software design best practices: design patterns, software architecture, coding for performance, object oriented programming, database design and implementation, tips, tricks and a whole lot more.",
 		rss: "https://www.codingblocks.net/podcast-feed.xml",
 		href: "https://www.codingblocks.net/",
-		tags: ["general"],
+		tags: ["general, node, full stack"],
 	},
 	{
 		title: "Code Chefs - Hungry Web Developer Podcast",
@@ -121,7 +121,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"Looking to expand your skills as a Web Developer? Vincent Tang and German Gamboa break down topics in Javascript, NodeJS, CSS, DevOps, AWS, and career development!",
 		rss: "https://www.codechefs.dev/rss.xml",
 		href: "https://www.codechefs.dev/",
-		tags: ["general"],
+		tags: ["general, node, full stack"],
 	},
 	{
 		title: "Full Stack Journey - Packet Pushers",
@@ -132,7 +132,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"Full Stack Journey tells personal stories about the ongoing quest to become a full stack engineer: an IT pro who can move among multiple silos and work across multiple layers of the modern data center.",
 		rss: "https://feeds.packetpushers.net/fullstackjourney",
 		href: "https://packetpushers.net/series/full-stack-journey/",
-		tags: ["general"],
+		tags: ["general, node, full stack"],
 	},
 	{
 		title: "The Undefined Podcast",
@@ -143,7 +143,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"The only engineering podcast with a 2 drink minimum! Full stack developers Jared Palmer and Ken Wheeler have peer-to-peer conversations with world-class engineers about software development.",
 		rss: "https://feeds.simplecast.com/8lcA0Is7",
 		href: "https://player.fm/series/the-undefined-podcast",
-		tags: ["general"],
+		tags: ["general, node, full stack"],
 	},
 	{
 		title: "Clever Programmer",
@@ -154,7 +154,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"How to become a full-stack developer in the next 6 months & change your life with code.",
 		rss: "https://anchor.fm/s/555a834/podcast/rss",
 		href: "https://player.fm/series/clever-programmer-3072276",
-		tags: ["general"],
+		tags: ["general, node, full stack"],
 	},
 	{
 		title: "Full Stack Leader",
@@ -165,6 +165,6 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"Full Stack Leader is a series of interviews with today's leading technology leaders. The show will cover how they work across some of the main concepts in organizational leadership and resourcing, with a slant toward the digital space. In each episode we sit down with a different leader to hear key stories about their leadership journey as well as run through their Top 5 Tips for inspiring a great team of creators, builders, and innovative thinkers.",
 		rss: "https://feeds.buzzsprout.com/1815739.rss",
 		href: "https://player.fm/series/full-stack-leader",
-		tags: ["general"],
+		tags: ["general, node, full stack"],
 	},
 ]
