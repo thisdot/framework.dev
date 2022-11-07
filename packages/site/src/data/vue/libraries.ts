@@ -105,7 +105,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://josephuspaye.github.io/Keen-UI",
 		description:
 			"Keen UI is a Vue 2 UI library with a simple API, inspired by Google's Material Design.",
-		image: "",
+		image: "https://madewithnetworkfra.fra1.digitaloceanspaces.com/spatie-space-production/1157/keen.jpg",
 		tags: ["component library", "Vue 2"],
 	},
 	{
@@ -207,7 +207,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		npmPackage: "mint-ui",
 		href: "http://mint-ui.github.io/#!/en",
 		description: "Mobile UI elements for Vue 2.0",
-		image: "",
+		image: "https://i.ibb.co/sR3BGbk/mint-ui-logo.png",
 		tags: ["component library", "Vue 2"],
 	},
 
@@ -261,7 +261,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		npmPackage: "vuestic-ui",
 		href: "https://vuestic.dev/",
 		description: "Vue 3.0 UI Framework",
-		image: "",
+		image: "https://vuestic.dev/favicon-16x16.png",
 		tags: ["component library", "Vue 3"],
 	},
 	{
@@ -272,7 +272,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://www.agnosticui.com/",
 		description:
 			"AgnosticUI is a set of UI primitives that start their lives in clean HTML and CSS. These standards compliant components are then copied to our framework implementations in: React, Vue 3, Svelte, and Angular (experimental).",
-		image: "",
+		image: "https://raw.githubusercontent.com/AgnosticUI/agnosticui/master/graphics/AgnosticUI%20Logo%20300x300.png",
 		tags: ["component library", "Vue 3"],
 	},
 	{
@@ -498,5 +498,27 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["testing", "Vue 2", "Vue 3"],
 		description:
 			"Jest is a delightful JavaScript Testing Framework with a focus on simplicity.",
+	},
+	{
+		name: "Cypress IndexedDB helpers",
+		author: "This Dot Labs",
+		gitHubRepo: "thisdot/open-source",
+		npmPackage: "@this-dot/cypress-indexeddb",
+		href: "https://www.npmjs.com/package/@this-dot/cypress-indexeddb",
+		image: "https://github.com/thisdot.png",
+		tags: ["testing"],
+		description:
+			"Cypress IndexedDB helpers are a set of custom cypress commands that helps you handle indexedDB related operations in your Cypress tests.",
+	},
+	{
+		name: "Vue Route Guard",
+		author: "This Dot Labs",
+		gitHubRepo: "thisdot/open-source",
+		npmPackage: "@this-dot/vue-route-guard",
+		href: "https://www.npmjs.com/package/@this-dot/vue-route-guard",
+		image: "https://github.com/thisdot.png",
+		tags: ["routing"],
+		description:
+			"Vue Route Guard is an Vue library that wraps around the vue-router and extends it to provide helpful methods to handle page guards via token authorization and permissions.",
 	},
 ]

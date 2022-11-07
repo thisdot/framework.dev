@@ -53,98 +53,109 @@ export function FeatureAndList({
 	...props
 }: FeatureAndListProps) {
 	const featured = items[0]
+	const isEmpty = items.length === 0
 	return (
 		<div className={classNames(className, featureAndListStyle)} {...props}>
 			<h2 className={featureAndListHeadingStyle}>{title}</h2>
-			<div className={featureAndListBoxStyle}>
-				<article className={featureAndListFeaturedStyle}>
-					<a href={featured.href} target="_blank" rel="noreferrer">
-						{featured.image &&
-							(featured.image.style === "book" ? (
-								<div className={featureAndListFeatureBookContainerStyle}>
-									<BookDecorator>
+			{!isEmpty ? (
+				<>
+					<div className={featureAndListBoxStyle}>
+						<article className={featureAndListFeaturedStyle}>
+							<a href={featured.href} target="_blank" rel="noreferrer">
+								{featured.image &&
+									(featured.image.style === "book" ? (
+										<div className={featureAndListFeatureBookContainerStyle}>
+											<BookDecorator>
+												<img
+													className={featureAndListFeatureBookStyle}
+													src={featured.image.src}
+													alt=""
+												/>
+											</BookDecorator>
+										</div>
+									) : (
 										<img
-											className={featureAndListFeatureBookStyle}
+											className={featureAndListFeatureImageStyle}
 											src={featured.image.src}
 											alt=""
 										/>
-									</BookDecorator>
-								</div>
-							) : (
-								<img
-									className={featureAndListFeatureImageStyle}
-									src={featured.image.src}
-									alt=""
-								/>
-							))}
-						<h3 className={featureAndListFeatureTitleStyle}>
-							{featured.title}
-						</h3>
-						<p className={featureAndListMetadataStyle}>{featured.metadata}</p>
-						<div className={featureAndListFeatureAttributesStyle}>
-							{featured.attributes.map((attribute) => {
-								return (
-									<DiscreteAttribute
-										key={`${featured.title}-${attribute[0]}`}
-										attribute={attribute}
-										colorize={true}
-									/>
-								)
-							})}
-						</div>
-						<p className={featureAndListFeatureDescription}>
-							{featured.description}
-						</p>
-					</a>
-				</article>
-				<div className={featureAndListListStyle}>
-					{items.slice(1).map((item) => (
-						<article key={item.title}>
-							<a
-								href={item.href}
-								target="_blank"
-								rel="noreferrer"
-								className={featureAndListListItemStyle}
-							>
-								{item.image &&
-									(item.image.style === "book" ? (
-										<BookDecorator>
-											<img
-												className={featureAndListListBookStyle}
-												src={item.image.src}
-												alt=""
-											/>
-										</BookDecorator>
-									) : (
-										<img
-											className={featureAndListListImageStyle}
-											src={item.image.src}
-											alt=""
-										/>
 									))}
-								<div className={sprinkles({ layout: "stack", gap: 4 })}>
-									<h3 className={featureAndListListTitleStyle}>{item.title}</h3>
-									<div className={featureAndListListMetadataStyle}>
-										<p>{item.metadata}</p>
-										{featured.attributes.map((attribute) => {
-											return (
-												<DiscreteAttributeIcon
-													key={`${featured.title}-${attribute[0]}`}
-													attribute={attribute}
-													colorize={true}
-												/>
-											)
-										})}
-									</div>
+								<h3 className={featureAndListFeatureTitleStyle}>
+									{featured.title}
+								</h3>
+								<p className={featureAndListMetadataStyle}>
+									{featured.metadata}
+								</p>
+								<div className={featureAndListFeatureAttributesStyle}>
+									{featured.attributes.map((attribute) => {
+										return (
+											<DiscreteAttribute
+												key={`${featured.title}-${attribute[0]}`}
+												attribute={attribute}
+												colorize={true}
+											/>
+										)
+									})}
 								</div>
+								<p className={featureAndListFeatureDescription}>
+									{featured.description}
+								</p>
 							</a>
 						</article>
-					))}
-				</div>
-			</div>
-			<a href={viewAll.href} className={featureAndListViewAllStyle}>
-				{viewAll.title}
-			</a>
+						<div className={featureAndListListStyle}>
+							{items.slice(1).map((item) => (
+								<article key={item.title}>
+									<a
+										href={item.href}
+										target="_blank"
+										rel="noreferrer"
+										className={featureAndListListItemStyle}
+									>
+										{item.image &&
+											(item.image.style === "book" ? (
+												<BookDecorator>
+													<img
+														className={featureAndListListBookStyle}
+														src={item.image.src}
+														alt=""
+													/>
+												</BookDecorator>
+											) : (
+												<img
+													className={featureAndListListImageStyle}
+													src={item.image.src}
+													alt=""
+												/>
+											))}
+										<div className={sprinkles({ layout: "stack", gap: 4 })}>
+											<h3 className={featureAndListListTitleStyle}>
+												{item.title}
+											</h3>
+											<div className={featureAndListListMetadataStyle}>
+												<p>{item.metadata}</p>
+												{featured.attributes.map((attribute) => {
+													return (
+														<DiscreteAttributeIcon
+															key={`${featured.title}-${attribute[0]}`}
+															attribute={attribute}
+															colorize={true}
+														/>
+													)
+												})}
+											</div>
+										</div>
+									</a>
+								</article>
+							))}
+						</div>
+					</div>
+					<a href={viewAll.href} className={featureAndListViewAllStyle}>
+						{viewAll.title}
+					</a>
+				</>
+			) : (
+				<p>No featured item yet</p>
+			)}
 		</div>
 	)
 }

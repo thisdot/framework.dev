@@ -581,7 +581,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		npmPackage: "framer-motion",
 		href: "https://www.framer.com/docs/",
 		image:
-			"https://user-images.githubusercontent.com/22095598/123793419-f5528800-d8e1-11eb-8c5f-e2dad45a9c81.png",
+			"https://camo.githubusercontent.com/179d66ab2b0321726c88a586c4ad38802e7113a3c98c6fd3f0156c01c98cfd14/68747470733a2f2f6672616d657275736572636f6e74656e742e636f6d2f696d616765732f34386861395a52396f5a51475136675a38595566456c50335430412e706e67",
 		tags: ["animation"],
 		description:
 			"Motion is a production-ready motion library for React from Framer. It brings declarative animations, effortless layout transitions and gestures while maintaining HTML and SVG semantics.",
@@ -943,10 +943,20 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		gitHubRepo: "enzymejs/enzyme",
 		npmPackage: "enzyme",
 		href: "https://enzymejs.github.io/enzyme/",
-		image:
-			"https://github.com/enzymejs.png",
+		image: "https://github.com/enzymejs.png",
 		tags: ["testing"],
 		description:
 			"Enzyme is a JavaScript Testing utility for React that makes it easier to test your React Components' output.",
+	},
+	{
+		name: "Cypress IndexedDB helpers",
+		author: "This Dot Labs",
+		gitHubRepo: "thisdot/open-source",
+		npmPackage: "@this-dot/cypress-indexeddb",
+		href: "https://www.npmjs.com/package/@this-dot/cypress-indexeddb",
+		image: "https://github.com/thisdot.png",
+		tags: ["testing"],
+		description:
+			"Cypress IndexedDB helpers are a set of custom cypress commands that helps you handle indexedDB related operations in your Cypress tests.",
 	},
 ]

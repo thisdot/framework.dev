@@ -17,7 +17,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	{
 		title: "Views on Vue",
 		image:
-			"https://assets.fireside.fm/file/fireside-images/podcasts/images/4/4b532b8f-dc99-4b48-90f1-023bd6c0cd90/cover_medium.jpg?v=0",
+			"https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/e1/ee/cd/e1eecd5c-7c90-05e7-19d2-9a2476d82c54/mza_2587166457306830649.jpg/626x0w.webp",
 		hosts: [
 			"Lindsay Wardell",
 			"Luke Diebold",

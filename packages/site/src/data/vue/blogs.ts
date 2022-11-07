@@ -27,8 +27,17 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		description:
 			"Vue School aims to help the Vue.js community and framework grow, and all our content is in-depth, relevant, and expertly created.",
 		image:
-			"https://vueschool.io/articles/wp-content/uploads/2019/04/logo-multi-positive-1.gif",
+			"https://github.com/anandb235/framework.dev/blob/e659c063426b6a066c24128e06300d51b692b5ff/packages/site/public/vue-school-logo.png?raw=true",
 		href: "https://vueschool.io/articles/",
+		tags: [],
+	},
+	{
+		title: "This Dot Blog",
+		author: "This Dot Labs",
+		description:
+			"Variety of topics related to Vue, written by the team at This Dot",
+		image: "https://github.com/thisdot.png",
+		href: "https://www.thisdot.co/blog/?filter=VueJS#result",
 		tags: [],
 	},
 ]

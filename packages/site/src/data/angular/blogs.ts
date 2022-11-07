@@ -9,7 +9,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		description:
 			"Variety of topics related to Angular, written by the team at This Dot",
 		image: "https://github.com/thisdot.png",
-		href: "https://www.thisdot.co/blog?filter=Angular#result",
+		href: "https://www.thisdot.co/blog/?filter=Angular#result",
 		tags: [],
 	},
 	{
@@ -42,7 +42,8 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 	{
 		title: "Blog @ Ultimate Courses",
 		author: "Todd Motto",
-		description: "Todd Motto wrote hundreds of blog posts revolving around Angular and covering various topics explained in a concise, beginner-friendly way.",
+		description:
+			"Todd Motto wrote hundreds of blog posts revolving around Angular and covering various topics explained in a concise, beginner-friendly way.",
 		image:
 			"https://ultimatecourses.com/assets/logo-ef24a2d3b6a0febba9ff80a1b01d632db750feb083442d0071dff7426762e0c2.svg",
 		href: "https://ultimatecourses.com/blog/",

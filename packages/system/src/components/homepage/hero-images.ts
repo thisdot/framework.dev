@@ -1,12 +1,7 @@
-export function getBackgroundImage(siteName: string) {
-	switch (siteName) {
-		case "react":
-			return "/hero-background-react.png"
-		case "angular":
-			return "/hero-background-angular.png"
-		case "vue":
-			return "/hero-background-vue.png"
-		default:
-			return ""
+export function getBackgroundImage(siteName: string): string | undefined {
+	if (!siteName) {
+		return undefined
 	}
+
+	return `/hero-background-${siteName}.png`
 }

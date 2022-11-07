@@ -1,8 +1,9 @@
 import { LinkCardProps } from "@framework/system/src/components/landing/link-card"
 import { AngularIcon } from "../icons/angular-icon"
-import { ReactIcon } from "../icons/react-icon"
-import { VueIcon } from "../icons/vue-icon"
 import { QwikIcon } from "../icons/qwik-icon"
+import { ReactIcon } from "../icons/react-icon"
+import { SolidJSIcon } from "../icons/solidjs-icon"
+import { VueIcon } from "../icons/vue-icon"
 import { SvelteIcon } from "../icons/svelte-icon"
 
 export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
@@ -34,12 +35,21 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 		bigSize,
 	},
 	{
+		title: "SolidJS Resources",
+		href: "https://solidjs.framework.dev/",
+		Icon(props) {
+			return <SolidJSIcon {...props} />
+		},
+		backgroundColor: "#2B4E8B",
+		bigSize,
+	},
+	{
 		title: "Qwik Resources",
 		href: "https://qwik.framework.dev/",
 		Icon(props) {
 			return <QwikIcon {...props} />
 		},
-		backgroundColor: "#5468ff",
+		backgroundColor: "#AC7EF4",
 		bigSize,
 	},
 	{
