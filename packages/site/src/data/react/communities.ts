@@ -270,7 +270,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		description:
 			"An Atlanta conference covering all things Design/CSS, Leadership & Entrepreneurship, Product & Project Management, Web/Mobile Software Engineering, and so much more.",
 		image:
-			"https://s.mkswft.com/RmlsZTo0MDE3YzM4OC1hYjdkLTRlZWEtOWUyMi0wNTgxMmI5YjJjZDU=/favicon.png",
+			"https://pbs.twimg.com/profile_images/1541542075598077954/Lsvki9i6_400x400.jpg",
 		type: "Live Events",
 		href: "https://www.renderatl.com/",
 		tags: ["conferences"],
