@@ -259,7 +259,8 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		name: "CSS Day Conf",
 		description:
 			"CSS Day Conf features a mix of CSS designers, developers, spec writers and browser vendors, who take pride in what they know and do.",
-		image: "https://cssday.nl/_img/2022/sold-out-2.png",
+		image:
+			"https://pbs.twimg.com/profile_images/3086361545/375adf0a29fbd0e21eb6315f3fd681c6_400x400.png",
 		type: "Live Events",
 		href: "https://cssday.nl/2022",
 		tags: ["conferences"],
