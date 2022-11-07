@@ -4,6 +4,7 @@ import { QwikIcon } from "../icons/qwik-icon"
 import { NodejsIcon } from "../icons/nodejs-icon"
 import { ReactIcon } from "../icons/react-icon"
 import { SolidJSIcon } from "../icons/solidjs-icon"
+import { SvelteIcon } from "../icons/svelte-icon"
 import { VueIcon } from "../icons/vue-icon"
 
 export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
@@ -40,7 +41,7 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 		Icon(props) {
 			return <SolidJSIcon {...props} />
 		},
-		backgroundColor: "#2B4E8B",
+		backgroundColor: "#446b9e",
 		bigSize,
 	},
 	{
@@ -58,7 +59,17 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 		Icon(props) {
 			return <NodejsIcon {...props} />
 		},
+
 		backgroundColor: "#539e43",
+		bigSize,
+	},
+	{
+		title: "Svelte Resources",
+		href: "https://svelte.framework.dev/",
+		Icon(props) {
+			return <SvelteIcon {...props} />
+		},
+		backgroundColor: "#ff3e00",
 		bigSize,
 	},
 ]
