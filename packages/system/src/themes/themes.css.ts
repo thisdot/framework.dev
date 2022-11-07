@@ -6,6 +6,7 @@ import { qwikColorPalette } from "./qwik-color-scheme"
 import { reactColorPalette } from "./react-color-scheme"
 import { solidJSColorPalette } from "./solidjs-color-scheme"
 import { svelteColorPalette } from "./svelte-color-scheme"
+import { graphqlColorPalette } from "./graphql-color-scheme"
 import {
 	blankPalette,
 	darkThemeFromPalette,
@@ -83,6 +84,16 @@ export const nodejsTheme = createTheme(
 export const nodejsThemeDark = createTheme(
 	vars,
 	darkThemeFromPalette(nodejsColorPalette)
+)
+
+export const graphqlTheme = createTheme(
+	vars,
+	lightThemeFromPalette(graphqlColorPalette)
+)
+
+export const graphqlThemeDark = createTheme(
+	vars,
+	darkThemeFromPalette(graphqlColorPalette)
 )
 
 export const landingTheme = createTheme(
