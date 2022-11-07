@@ -42,7 +42,8 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	{
 		name: "React Day Berlin",
 		description: "Conference dedicated to all things React.",
-		image: "https://reactday.berlin/img/favicon.png",
+		image:
+			"https://pbs.twimg.com/profile_images/909710573885181952/Doe05-jp_400x400.jpg",
 		type: "Live Events",
 		href: "https://reactday.berlin/",
 		tags: ["conferences"],
