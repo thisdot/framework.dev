@@ -60,7 +60,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		image:
 			"https://i1.wp.com/softwareengineeringdaily.com/wp-content/uploads/2022/01/cropped-logo-new.png?fit=296%2C139&ssl=1",
 		hosts: ["SE Daily"],
-		description: "The world through the lens of software",
+		description: "The world through the lens of software.",
 		rss: "https://softwareengineeringdaily.com/feed/podcast/",
 		href: "https://softwareengineeringdaily.com/",
 		tags: ["general"],
@@ -68,7 +68,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	{
 		title: "JavaScript Jabber",
 		image:
-			"https://topenddevs.nyc3.digitaloceanspaces.com/p83d88m208a3rdbo6qcfjdikc7b5?response-content-disposition=inline%3B%20filename%3D%22javascript_jabber_thumb.jpeg%22%3B%20filename%2A%3DUTF-8%27%27javascript_jabber_thumb.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=STO4LZNRL5TU6SLCP4ZY%2F20221107%2Funused%2Fs3%2Faws4_request&X-Amz-Date=20221107T223130Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=c0d01e578c09088b391d2f297790f2108b4ab0773cec147b1e6bbf7c2a09c1bf",
+			"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSq5OFUB2C1otCwDgmsaktFo38QpGmBFkLyzQG3jfTdjyt4OSp5",
 		hosts: [
 			"AJ ONeal",
 			"Charles Max Wood",
@@ -99,7 +99,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"Matthew Arbesfeld",
 		],
 		description:
-			"PodRocket covers everything you need to know about frontend web development on a weekly basis",
+			"PodRocket covers everything you need to know about frontend web development on a weekly basis.",
 		rss: "https://feeds.fireside.fm/podrocket/rss",
 		href: "https://podrocket.logrocket.com/",
 		tags: ["general"],
