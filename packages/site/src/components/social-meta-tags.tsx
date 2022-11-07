@@ -6,11 +6,12 @@ type SocialMetaTagsProps = {
 }
 
 export function SocialMetaTags({ siteName, title }: SocialMetaTagsProps) {
-	const titleCasedName = titleCase(siteName)
+	const titleCasedSiteName = titleCase(siteName)
+	const titleCasedTitle = titleCase(title)
 	const description =
 		siteName === "landing"
 			? `Search, compare, and discover top libraries and community-driven resources.`
-			: `Search, compare, and discover top ${titleCasedName} libraries and community-driven resources in ${titleCasedName}.`
+			: `Search, compare, and discover top ${titleCasedSiteName} libraries and community-driven resources in ${titleCasedSiteName}.`
 	const url =
 		siteName === "landing"
 			? `https://framework.dev`
@@ -19,18 +20,18 @@ export function SocialMetaTags({ siteName, title }: SocialMetaTagsProps) {
 
 	return (
 		<>
-			<meta name="title" content={title} />
+			<meta name="title" content={titleCasedTitle} />
 			<meta name="description" content={description} />
 
 			<meta property="og:type" content="website" />
 			<meta property="og:url" content={url} />
-			<meta property="og:title" content={title} />
+			<meta property="og:title" content={titleCasedTitle} />
 			<meta property="og:description" content={description} />
 			<meta property="og:image" content={imageUrl} />
 
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:url" content={url} />
-			<meta name="twitter:title" content={title} />
+			<meta name="twitter:title" content={titleCasedTitle} />
 			<meta name="twitter:description" content={description} />
 			<meta name="twitter:image" content={imageUrl} />
 		</>
