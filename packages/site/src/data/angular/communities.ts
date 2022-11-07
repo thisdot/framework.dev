@@ -112,7 +112,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		description:
 			"Professional development conference dedicated to all things JavaScript.",
 		image:
-			"https://xtremejs.dev/2022/wp-content/uploads/2022/04/xtremejs_new_logo-1.png",
+			"https://pbs.twimg.com/profile_images/1355572943552655362/QpnPItbv_400x400.jpg",
 		type: "Online Events",
 		href: "https://xtremejs.dev/",
 		tags: ["conferences"],
