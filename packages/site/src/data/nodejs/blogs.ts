@@ -17,7 +17,8 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		author: "Node.js",
 		description:
 			"The latest Node.js news, case studies, tutorials, and resources.",
-		image: "",
+		image:
+			"https://pbs.twimg.com/profile_images/1262824892535373825/BiXDFDDp_400x400.jpg",
 		href: "https://nodejs.dev/en/blog/",
 		tags: [],
 	},
