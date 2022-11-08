@@ -47,7 +47,11 @@ export function ContentBanner({
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<img className={contentBannerCardImageStyle} src={item.image} alt="" />
+					<img
+						className={contentBannerCardImageStyle}
+						src={item.image}
+						alt=""
+					/>
 					<h3 className={contentBannerTitleStyle}>{item.title}</h3>
 					<p className={contentBannerHostStyle}>{item.metadata}</p>
 				</a>
