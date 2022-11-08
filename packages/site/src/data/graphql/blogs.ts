@@ -7,9 +7,9 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		title: "This Dot Blog",
 		author: "This Dot Labs",
 		description:
-			"Variety of topics related to Angular, written by the team at This Dot",
+			"Variety of topics related to GraphQL, written by the team at This Dot",
 		image: "https://github.com/thisdot.png",
-		href: "https://www.thisdot.co/blog/?filter=Angular#result",
+		href: "https://www.thisdot.co/blog/?filter=GraphQL#result",
 		tags: [],
 	},
 	{
