@@ -42,7 +42,8 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	{
 		name: "React Day Berlin",
 		description: "Conference dedicated to all things React.",
-		image: "https://reactday.berlin/img/favicon.png",
+		image:
+			"https://pbs.twimg.com/profile_images/909710573885181952/Doe05-jp_400x400.jpg",
 		type: "Live Events",
 		href: "https://reactday.berlin/",
 		tags: ["conferences"],
@@ -130,7 +131,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		description:
 			"Professional development conference dedicated to all things JavaScript.",
 		image:
-			"https://xtremejs.dev/2022/wp-content/uploads/2022/04/xtremejs_new_logo-1.png",
+			"https://pbs.twimg.com/profile_images/1355572943552655362/QpnPItbv_400x400.jpg",
 		type: "Online Events",
 		href: "https://xtremejs.dev/",
 		tags: ["conferences"],
@@ -156,7 +157,8 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		name: "QConfSF",
 		description:
 			"QCon San Francisco brings together the world's most innovative senior software engineers, architects and team leads across multiple domains to share their real-world implementation of emerging trends and practices.",
-		image: "https://qconsf.com/sites/qcon_sf/files/favicon_0.ico",
+		image:
+			"https://pbs.twimg.com/profile_images/1410535228645548036/9wadAp_L_400x400.png",
 		type: "Live Events",
 		href: "https://qconsf.com/",
 		tags: ["conferences"],
@@ -165,7 +167,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		name: "International Javascript Conference",
 		description: "Conference dedicated to full stack JavaScript development",
 		image:
-			"https://javascript-conference.com/wp-content/uploads/2019/10/IJS_London20_Website_Logo_Header_53632_v1.png",
+			"https://pbs.twimg.com/profile_images/841217931455401984/uzU4VfwA_400x400.jpg",
 		type: "Live Events",
 		href: "https://javascript-conference.com/",
 		tags: ["conferences"],
@@ -175,7 +177,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		description:
 			"A technology conference focusing on the tools, processes and the people making open source responsible.",
 		image:
-			"https://www.allthingsopen.org/wp-content/themes/ato_2020/favicon-32.png",
+			"https://pbs.twimg.com/profile_images/1414585849862397956/PJmkGMLk_400x400.jpg",
 		type: "Live Events",
 		href: "https://allthingsopen.org/",
 		tags: ["conferences"],
@@ -230,7 +232,8 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		name: "ConFoo",
 		description:
 			"ConFoo Montreal is a multi-technology conference for developers.",
-		image: "https://confoo.ca/images/design/logo.gif",
+		image:
+			"https://pbs.twimg.com/profile_images/1135229757031964672/sLiCXiCn_400x400.png",
 		type: "Live Events",
 		href: "https://confoo.ca",
 		tags: ["conferences"],
@@ -268,7 +271,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		description:
 			"An Atlanta conference covering all things Design/CSS, Leadership & Entrepreneurship, Product & Project Management, Web/Mobile Software Engineering, and so much more.",
 		image:
-			"https://s.mkswft.com/RmlsZTo0MDE3YzM4OC1hYjdkLTRlZWEtOWUyMi0wNTgxMmI5YjJjZDU=/favicon.png",
+			"https://pbs.twimg.com/profile_images/1541542075598077954/Lsvki9i6_400x400.jpg",
 		type: "Live Events",
 		href: "https://www.renderatl.com/",
 		tags: ["conferences"],
@@ -277,7 +280,8 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		name: "CSS Day Conf",
 		description:
 			"CSS Day Conf features a mix of CSS designers, developers, spec writers and browser vendors, who take pride in what they know and do.",
-		image: "https://cssday.nl/_img/2022/sold-out-2.png",
+		image:
+			"https://pbs.twimg.com/profile_images/3086361545/375adf0a29fbd0e21eb6315f3fd681c6_400x400.png",
 		type: "Live Events",
 		href: "https://cssday.nl/2022",
 		tags: ["conferences"],
