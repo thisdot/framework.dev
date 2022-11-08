@@ -76,7 +76,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		title: "Using GraphQL with React",
 		author: "This Dot Media",
 		image:
-			"https://yt3.ggpht.com/ytc/AMLnZu_Sjvd6kKOz-SPH5QhcnCjr8vHBKz8NTHFgUrcopg=s88-c-k-c0x00ffffff-no-rj",
+			"https://pbs.twimg.com/profile_images/1249804296469778433/uRRNm6-n_400x400.png",
 		description:
 			"GraphQL provides a strong-typing system to better understand and utilize our API to retrieve and interact with our data. ",
 		paymentType: "free",
@@ -193,7 +193,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		title: "Migrating from REST to GraphQL",
 		author: "This Dot Media",
 		image:
-			"https://yt3.ggpht.com/ytc/AMLnZu_Sjvd6kKOz-SPH5QhcnCjr8vHBKz8NTHFgUrcopg=s88-c-k-c0x00ffffff-no-rj",
+			"https://pbs.twimg.com/profile_images/1249804296469778433/uRRNm6-n_400x400.png",
 		description:
 			"Are you ready to start using GraphQL but don't have time to rewrite your legacy REST API? In this session, we'll show you some strategies for incrementally porting your APIs to start using GraphQL that allows you to leverage your existing REST APIs.",
 		paymentType: "free",
@@ -213,7 +213,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		title: "Scaling GraphQL APIs with Apollo Federation ",
 		author: "This Dot Media",
 		image:
-			"https://yt3.ggpht.com/ytc/AMLnZu_Sjvd6kKOz-SPH5QhcnCjr8vHBKz8NTHFgUrcopg=s88-c-k-c0x00ffffff-no-rj",
+			"https://pbs.twimg.com/profile_images/1249804296469778433/uRRNm6-n_400x400.png",
 		description:
 			"In this workshop, you'll go beyond the basics of GraphQL to learn about some of the commonly used tools and techniques that will help you build powerful applications at scale.",
 		paymentType: "free",
@@ -239,7 +239,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		title: "Resolving GraphQL Entities",
 		author: "This Dot Media",
 		image:
-			"https://yt3.ggpht.com/ytc/AMLnZu_Sjvd6kKOz-SPH5QhcnCjr8vHBKz8NTHFgUrcopg=s88-c-k-c0x00ffffff-no-rj",
+			"https://pbs.twimg.com/profile_images/1249804296469778433/uRRNm6-n_400x400.png",
 		description:
 			"Learn how to connect different data types so you can connect data across services. In this training, we create a user entity with the @key to connect across services and connect back to our users through our service. We'll also look at our index file, and make some adjustments to our color.",
 		paymentType: "free",
@@ -253,7 +253,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		author: "Rares Matei",
 		image:
 			"https://egghead.io/_next/image?url=https%3A%2F%2Fd2eip9sf3oo6c2.cloudfront.net%2Finstructors%2Favatars%2F000%2F000%2F193%2Fmedium%2F20171119_144415.jpg&w=3840&q=100",
-		description: "",
+		description:
+			"At the core of a good client-side GraphQL library is a cache. The cache is very important for improving the efficiency of your data retrieval and providing your users with a clean user experience.",
 		paymentType: "paid",
 		level: "intermediate",
 		format: "interactive",
