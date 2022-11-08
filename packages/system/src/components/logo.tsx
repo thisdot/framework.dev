@@ -8,6 +8,7 @@ import { ReactFrameworkIcon } from "../icons/react-framework-icon"
 import { SolidJSFrameworkIcon } from "../icons/solidjs-framework-icon"
 import { SvelteFrameworkIcon } from "../icons/svelte-framework-icon"
 import { VueFrameworkIcon } from "../icons/vue-framework-icon"
+import { GraphQLFrameworkIcon } from "../icons/graphql-framework-icon"
 import { logoStyle } from "./logo.css"
 
 export type LogoProps = React.ComponentPropsWithoutRef<"div"> & {
@@ -24,6 +25,7 @@ export function Logo({ className, siteName, stretched }: LogoProps) {
 		solidjs: <SolidJSFrameworkIcon size="full" stretched={stretched} />,
 		nodejs: <NodejsFrameworkIcon size="full" stretched={stretched} />,
 		svelte: <SvelteFrameworkIcon size="full" stretched={stretched} />,
+		graphql: <GraphQLFrameworkIcon size="full" stretched={stretched} />,
 	}
 
 	const renderLogo = () => {
