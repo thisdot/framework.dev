@@ -7,9 +7,9 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		title: "This Dot Blog",
 		author: "This Dot Labs",
 		description:
-			"Variety of topics related to Angular, written by the team at This Dot",
+			"Variety of topics related to Node.js, written by the team at This Dot",
 		image: "https://github.com/thisdot.png",
-		href: "https://www.thisdot.co/blog/?filter=Angular#result",
+		href: "https://www.thisdot.co/blog",
 		tags: [],
 	},
 	{
@@ -38,7 +38,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		description:
 			"Renowned JavaScript and React educator, Kent C. Dodds, shares his React knowledge through his blog.",
 		image: "https://github.com/kentcdodds.png",
-		href: "https://kentcdodds.com/blog?q=react",
+		href: "https://kentcdodds.com/blog?q=node",
 		tags: [],
 	},
 	{
@@ -59,15 +59,6 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		image:
 			"https://wesbos.com/static/46c8f12c015f9bdd7cccd17d294da646/497c6/logo.png",
 		href: "https://wesbos.com/blog",
-		tags: [],
-	},
-	{
-		title: "Overreacted",
-		author: "Dan Abramov",
-		description: "Personal developer blog of React creator, Dan Abramov.",
-		image:
-			"https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg",
-		href: "https://overreacted.io/",
 		tags: [],
 	},
 ]

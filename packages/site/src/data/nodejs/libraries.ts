@@ -7,7 +7,7 @@ export const libraryTags = [
 	"performance tools",
 	"data fetching",
 	"testing",
-	"orm",
+	"ORM",
 	"API",
 ] as const
 
