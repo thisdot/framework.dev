@@ -57,7 +57,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	{
 		title: "Software Engineering Daily",
 		image:
-			"https://play-lh.googleusercontent.com/VWaFdsPlMSMrxflmJqrFXqwnJztQ8tqffmCvXXK1MO2nc8_i5zj8-HRlAusTPnwpYg",
+			"https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/272759018_1675033572828553_5594405914840993192_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=XjCKm-Hd8V0AX8YjMH3&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAQ2zydkAy9gH92BIod9CTKaB0Avc-d5zGxAfZtkyaEFQ&oe=637120B2",
 		hosts: ["SE Daily"],
 		description: "The world through the lens of software.",
 		rss: "https://softwareengineeringdaily.com/feed/podcast/",
