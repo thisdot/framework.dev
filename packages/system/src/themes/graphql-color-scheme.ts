@@ -2,7 +2,7 @@ import { ColorPalette } from "./theme-from-palette"
 
 export const graphqlColorPalette: ColorPalette = {
 	highlight: "#E10098",
-	logo: "#e535ab",
+	logo: "#E10098",
 	primary100: "#ffffff",
 	primary99: "#fffbff",
 	primary95: "#ffecf2",
