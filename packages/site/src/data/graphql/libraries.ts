@@ -104,7 +104,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://www.the-guild.dev/graphql/yoga-server",
 		description:
 			"Fully-featured GraphQL Server with focus on easy setup, performance & great developer experience",
-		image: "",
+		image: "https://github.com/dotansimha.png",
 		tags: ["Servers"],
 	},
 	{
@@ -112,7 +112,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		author: "",
 		gitHubRepo: "https://github.com/graphql-dotnet/graphql-dotnet",
 		npmPackage: "",
-		href: "https://graphql-dotnet.github.io/",
+		href: "https://graphql-dotnet.github.io/docs/getting-started/introduction",
 		description: "This is an implementation of Facebook's GraphQL in .NET.",
 		image: "https://github.com/graphql-dotnet.png",
 		tags: ["Servers"],
@@ -124,7 +124,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		npmPackage: "",
 		href: "https://github.com/nearform/graphql-hooks",
 		description: "Minimal hooks-first GraphQL client.",
-		image: "graphql-hooks",
+		image: "https://github.com/nearform.png",
 		tags: ["Clients"],
 	},
 	{
@@ -135,7 +135,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://github.com/prisma-labs/graphql-request",
 		description:
 			"Minimal GraphQL client supporting Node and browsers for scripts or simple apps",
-		image: "",
+		image: "https://github.com/prisma-labs.png",
 		tags: ["Clients"],
 	},
 	{
@@ -201,7 +201,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "swift-graphql.com",
 		description:
 			"SwiftGraphQL comes with a lightweight client that supports queries, mutations and subscriptions. And they all work the same way.",
-		image: "",
+		image: "https://github.com/maticzav.png",
 		tags: ["Clients"],
 	},
 	{
@@ -211,7 +211,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		npmPackage: "react-relay",
 		href: "https://relay.dev/",
 		description: "The GraphQL client that scales with you.",
-		image: "",
+		image: "https://github.com/facebook.png",
 		tags: ["Clients"],
 	},
 	{
@@ -246,7 +246,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://pothos-graphql.dev/",
 		description:
 			"Pothos is a plugin based GraphQL schema builder for typescript.",
-		image: "",
+		image: "https://github.com/hayes.png",
 		tags: ["Schema Builders"],
 	},
 	{
@@ -299,7 +299,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		npmPackage: "@genql/cli",
 		href: "https://genql.vercel.app/",
 		description: "Generate your own graphql SDK in seconds",
-		image: "",
+		image: "https://github.com/remorses.png",
 		tags: ["Schema Builders"],
 	},
 	{
@@ -341,7 +341,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://www.the-guild.dev/graphql/tools",
 		description:
 			"GraphQL Tools is a set of NPM packages and an opinionated structure for how to build a GraphQL schema and resolvers in JavaScript, following the GraphQL-first development workflow.",
-		image: "",
+		image: "https://github.com/ardatan.png",
 		tags: ["Combining Schemas"],
 	},
 	{
@@ -352,7 +352,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://www.the-guild.dev/graphql/modules",
 		description:
 			"GraphQL Modules is a toolset of libraries and guidelines dedicated to create reusable, maintainable, testable and extendable modules out of your GraphQL server.",
-		image: "",
+		image: "https://github.com/Urigo.png",
 		tags: ["Combining Schemas"],
 	},
 	{
@@ -363,7 +363,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://hasura.io/docs/latest/data-federation/index/",
 		description:
 			"Hasura's data federation capabilities allow you to compose data from different sources that reside in independent data stores but are semantically related.",
-		image: "",
+		image: "https://github.com/hasura.png",
 		tags: ["Combining Schemas"],
 	},
 	{
@@ -374,7 +374,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://www.the-guild.dev/graphql/mesh",
 		description:
 			"The Graph of Everything Federated architecture for any API service",
-		image: "",
+		image: "https://github.com/Urigo.png",
 		tags: ["Combining Schemas"],
 	},
 	{
@@ -396,7 +396,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://stepzen.com/",
 		description:
 			"Build GraphQL Easily Optimize & Scale GraphQL Automatically, The only declarative approach for federated access to data!",
-		image: "",
+		image: "https://github.com/steprz.png",
 		tags: ["Combining Schemas"],
 	},
 	{
@@ -428,7 +428,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		npmPackage: "graphql-scalars",
 		href: "https://www.the-guild.dev/graphql/scalars",
 		description: "Data Integrity and Strict Validations on GraphQL",
-		image: "",
+		image: "https://github.com/urigo.png",
 		tags: ["Misc"],
 	},
 	{
@@ -439,7 +439,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://www.apollographql.com/docs/apollo-server/v2/data/data-sources/",
 		description:
 			"Data sources are classes that Apollo Server can use to encapsulate fetching data from a particular source, such as a database or a REST API. ",
-		image: "",
+		image: "https://github.com/apollographql.png",
 		tags: ["Misc"],
 	},
 	{
