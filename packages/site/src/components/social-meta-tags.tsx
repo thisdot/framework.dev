@@ -11,7 +11,9 @@ export function SocialMetaTags({ siteName, title }: SocialMetaTagsProps) {
 	const description =
 		siteName === "landing"
 			? `Search, compare, and discover top libraries and community-driven resources.`
-			: `Search, compare, and discover top ${titleCasedSiteName} libraries and community-driven resources in ${titleCasedSiteName}.`
+			: `Search, compare, and discover top ${
+					siteName === "graphql" ? "GraphQL" : titleCasedSiteName
+			  } libraries and community-driven resources in ${titleCasedSiteName}.`
 	const url =
 		siteName === "landing"
 			? `https://framework.dev`
