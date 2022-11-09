@@ -161,7 +161,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		description:
 			"Apollo Client Devtools is a Chrome extension for the open-source GraphQL client, Apollo Client.",
 		image:
-			"https://lh3.googleusercontent.com/T2x07f8UK9VlXmqQF-8pBfwEpVl5XJe7GzQ_GZPL0rvFpvru19rz28l65ncAeZqVsNVuNvqu6Yi-P0yMo1wnN5jYVfs=w128-h128-e365-rj-sc0x00ffffff",
+			"https://pbs.twimg.com/profile_images/1498346889724317697/qzxJVuVR_400x400.png",
 		href: "https://chrome.google.com/webstore/detail/apollo-client-devtools/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US",
 		tags: ["schemas", "frontend", "backend", "development"],
 	},
@@ -200,7 +200,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		description:
 			"Apollo Workbench is a VS Code extension that helps you design and reason about your organization's graph without writing any server code.",
 		image:
-			"https://lh3.googleusercontent.com/T2x07f8UK9VlXmqQF-8pBfwEpVl5XJe7GzQ_GZPL0rvFpvru19rz28l65ncAeZqVsNVuNvqu6Yi-P0yMo1wnN5jYVfs=w128-h128-e365-rj-sc0x00ffffff",
+			"https://pbs.twimg.com/profile_images/1498346889724317697/qzxJVuVR_400x400.png",
 		href: "https://www.apollographql.com/docs/federation/v1/workbench/overview/",
 		tags: ["schemas", "frontend", "backend", "development"],
 	},
