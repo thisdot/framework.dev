@@ -3,10 +3,8 @@ import { Tool } from "@framework/system/src/models/tool"
 export const toolTags = [
 	"Chrome",
 	"VSCode",
-	"RxJS",
 	"development",
 	"testing",
-	"UI Design",
 	"schemas",
 	"frontend",
 	"backend",
