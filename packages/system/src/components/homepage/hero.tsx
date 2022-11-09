@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import React from "react"
-import { formatFieldName } from "../../util/string-utils"
+import { checkGraphqlName } from "../../util/string-utils"
 import {
 	heroStyle,
 	heroHeadingStyle,
@@ -34,9 +34,9 @@ export function Hero({ className, siteName, ...props }: HeroProps) {
 				/>
 				<Logo className={heroHeadingStyle} siteName={siteName} stretched />
 				<p className={heroParagraphStyle}>
-					Search, compare, and discover top {formatFieldName(siteName)}{" "}
+					Search, compare, and discover top {checkGraphqlName(siteName)}{" "}
 					libraries and community-driven resources in{" "}
-					{formatFieldName(siteName)}.
+					{checkGraphqlName(siteName)}.
 				</p>
 			</div>
 			<div className={heroFeatureHighlightRowStyle}>
