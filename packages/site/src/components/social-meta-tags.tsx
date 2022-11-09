@@ -13,7 +13,7 @@ export function SocialMetaTags({ siteName, title }: SocialMetaTagsProps) {
 	const description =
 		siteName === "landing"
 			? `Search, compare, and discover top libraries and community-driven resources.`
-			: `Search, compare, and discover top ${formatAllFrameworkTitles} libraries and community-driven resources in ${formatAllFrameworkTitles}.`
+			: `Search, compare, and discover top ${formatAllFrameworkTitles()} libraries and community-driven resources in ${formatAllFrameworkTitles()}.`
 	const url =
 		siteName === "landing"
 			? `https://framework.dev`
