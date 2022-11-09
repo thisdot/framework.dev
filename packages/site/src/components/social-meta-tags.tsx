@@ -8,8 +8,10 @@ type SocialMetaTagsProps = {
 export function SocialMetaTags({ siteName, title }: SocialMetaTagsProps) {
 	const titleCasedSiteName = titleCase(siteName)
 	const titleCasedTitle = titleCase(title)
-	const formatAllFrameworkTitles = () =>
-		siteName === "graphql" ? "GraphQL" : titleCasedSiteName
+	function formatAllFrameworkTitles() {
+		return siteName === "graphql" ? "GraphQL" : titleCasedSiteName
+	}
+
 	const description =
 		siteName === "landing"
 			? `Search, compare, and discover top libraries and community-driven resources.`
