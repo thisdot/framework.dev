@@ -6,8 +6,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	{
 		name: "GraphQLfm",
 		description: "Welcome to GraphQL.FM, a Twitch Channel all about GraphQL.",
-		image:
-			"https://panels.twitch.tv/panel-563129908-image-35e79e85-7e57-44bb-9882-21a7c6f1b22e",
+		image: "https://i.scdn.co/image/b77065accb9282396ed06fd4f5424f4d94f1622b",
 		type: "Twitch",
 		href: "https://www.twitch.tv/graphqlfm",
 		tags: [],
@@ -25,7 +24,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		description:
 			"Extensible high-performance automatic GraphQL API for PostgreSQL",
 		image:
-			"https://www.graphile.org/static/postgres_postgraphile_graphql-4b238552d875fe06196ba3bda74c6d2b.png",
+			"https://pbs.twimg.com/profile_images/1400856803831910404/CEGohPSo_400x400.jpg",
 		type: "Documentation",
 		href: "https://www.graphile.org/",
 		tags: [],
