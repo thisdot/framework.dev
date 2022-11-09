@@ -25,8 +25,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	},
 	{
 		title: "GraphQLfm",
-		image:
-			"https://panels.twitch.tv/panel-563129908-image-35e79e85-7e57-44bb-9882-21a7c6f1b22e",
+		image: "https://i.scdn.co/image/b77065accb9282396ed06fd4f5424f4d94f1622b",
 		hosts: ["Marc-Andre Giroux", "Tony Ghita"],
 		description: "Welcome to GraphQL.FM, a Twitch Channel all about GraphQL.",
 		rss: "https://twitchrss.appspot.com/vod/graphqlfm",
@@ -58,7 +57,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	{
 		title: "Software Engineering Daily",
 		image:
-			"https://i1.wp.com/softwareengineeringdaily.com/wp-content/uploads/2022/01/cropped-logo-new.png?fit=296%2C139&ssl=1",
+			"https://play-lh.googleusercontent.com/VWaFdsPlMSMrxflmJqrFXqwnJztQ8tqffmCvXXK1MO2nc8_i5zj8-HRlAusTPnwpYg",
 		hosts: ["SE Daily"],
 		description: "The world through the lens of software.",
 		rss: "https://softwareengineeringdaily.com/feed/podcast/",

@@ -150,8 +150,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		author: "AWS",
 		description:
 			"Accelerate application development with serverless GraphQL and Pub/Sub APIs",
-		image:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png?20170912170050",
+		image: "https://appirio.com/images/partners/aws_logo-1.png",
 		href: "https://aws.amazon.com/appsync/",
 		tags: ["schemas", "frontend", "backend", "development"],
 	},
