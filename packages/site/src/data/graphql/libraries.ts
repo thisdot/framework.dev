@@ -1,12 +1,6 @@
 import { Library } from "@framework/system/src/models/library"
 
-export const libraryTags = [
-	"Servers",
-	"Clients",
-	"Schema Builders",
-	"Combining Schemas",
-	"Misc",
-] as const
+export const libraryTags = ["Servers", "Client", "Schema"] as const
 
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
@@ -125,7 +119,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://github.com/nearform/graphql-hooks",
 		description: "Minimal hooks-first GraphQL client.",
 		image: "https://github.com/nearform.png",
-		tags: ["Clients"],
+		tags: ["Client"],
 	},
 	{
 		name: "GraphQL-request",
@@ -136,7 +130,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Minimal GraphQL client supporting Node and browsers for scripts or simple apps",
 		image: "https://github.com/prisma-labs.png",
-		tags: ["Clients"],
+		tags: ["Client"],
 	},
 	{
 		name: "React Query",
@@ -147,7 +141,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Powerful asynchronous state management for TS/JS, React, Solid, Vue and Svelte",
 		image: "https://github.com/TanStack.png",
-		tags: ["Clients"],
+		tags: ["Client"],
 	},
 	{
 		name: "URQL",
@@ -155,10 +149,10 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		gitHubRepo: "FormidableLabs/urql",
 		npmPackage: "urql",
 		href: "https://formidable.com/open-source/urql/",
-		description: "A highly customisable and versatile GraphQL client",
+		description: "A highly customizable and versatile GraphQL client",
 		image:
 			"https://raw.githubusercontent.com/FormidableLabs/urql/main/packages/site/src/assets/sidebar-badge.svg",
-		tags: ["Clients"],
+		tags: ["Client"],
 	},
 	{
 		name: "Apollo Kotlin",
@@ -167,9 +161,9 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		npmPackage: "",
 		href: "https://www.apollographql.com/docs/kotlin/",
 		description:
-			"A strongly-typed, caching GraphQL client for Java and Kotlin multiplatform",
+			"A strongly-typed, caching GraphQL client for Java and Kotlin multi-platform",
 		image: "https://github.com/apollographql.png",
-		tags: ["Clients"],
+		tags: ["Client"],
 	},
 	{
 		name: "Apollo Client",
@@ -180,7 +174,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Apollo Client is a comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL. Use it to fetch, cache, and modify application data, all while automatically updating your UI.",
 		image: "https://github.com/apollographql.png",
-		tags: ["Clients"],
+		tags: ["Client"],
 	},
 	{
 		name: "Apollo iOS",
@@ -191,7 +185,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Apollo iOS is a strongly-typed, caching GraphQL client, written in Swift.",
 		image: "https://github.com/apollographql.png",
-		tags: ["Clients"],
+		tags: ["Client"],
 	},
 	{
 		name: "Swift GraphQL",
@@ -202,7 +196,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"SwiftGraphQL comes with a lightweight client that supports queries, mutations and subscriptions. And they all work the same way.",
 		image: "https://github.com/maticzav.png",
-		tags: ["Clients"],
+		tags: ["Client"],
 	},
 	{
 		name: "Relay",
@@ -212,7 +206,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://relay.dev/",
 		description: "The GraphQL client that scales with you.",
 		image: "https://github.com/facebook.png",
-		tags: ["Clients"],
+		tags: ["Client"],
 	},
 	{
 		name: "Graph Code Generator",
@@ -224,7 +218,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"GraphQL Code Generator is a tool that generates code out of your GraphQL schema.",
 		image:
 			"https://raw.githubusercontent.com/dotansimha/graphql-code-generator/master/logo.svg",
-		tags: ["Schema Builders"],
+		tags: ["Schema"],
 	},
 	{
 		name: "gqlgen",
@@ -236,7 +230,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"gqlgen is a Go library for building GraphQL servers without any fuss.",
 		image:
 			"https://user-images.githubusercontent.com/980499/133180111-d064b38c-6eb9-444b-a60f-7005a6e68222.png",
-		tags: ["Schema Builders"],
+		tags: ["Schema"],
 	},
 	{
 		name: "Pothos",
@@ -247,7 +241,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Pothos is a plugin based GraphQL schema builder for typescript.",
 		image: "https://github.com/hayes.png",
-		tags: ["Schema Builders"],
+		tags: ["Schema"],
 	},
 	{
 		name: "GraphQL Java",
@@ -257,7 +251,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://www.graphql-java.com/",
 		description: "GraphQL server implementation for Java/JVM",
 		image: "https://github.com/graphql-java.png",
-		tags: ["Schema Builders"],
+		tags: ["Schema"],
 	},
 	{
 		name: "TypeGraphQL",
@@ -268,7 +262,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "Modern framework for GraphQL API in Node.js",
 		image:
 			"https://raw.githubusercontent.com/MichalLytek/type-graphql/master/img/logo.png",
-		tags: ["Schema Builders"],
+		tags: ["Schema"],
 	},
 	{
 		name: "Nexus",
@@ -279,7 +273,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Declarative, code-first and strongly typed GraphQL schema construction for TypeScript & JavaScript.",
 		image: "https://github.com/graphql-nexus.png",
-		tags: ["Schema Builders"],
+		tags: ["Schema"],
 	},
 	{
 		name: "Strawberry",
@@ -290,7 +284,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Strawberry is a new GraphQL library for Python 3, inspired by dataclasses.",
 		image: "https://github.com/strawberry-graphql.png",
-		tags: ["Schema Builders"],
+		tags: ["Schema"],
 	},
 	{
 		name: "Genql",
@@ -300,7 +294,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://genql.vercel.app/",
 		description: "Generate your own graphql SDK in seconds",
 		image: "https://github.com/remorses.png",
-		tags: ["Schema Builders"],
+		tags: ["Schema"],
 	},
 	{
 		name: "Sangria",
@@ -310,7 +304,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://sangria-graphql.github.io/",
 		description: "Sangria is a scala GraphQL library.",
 		image: "https://github.com/sangria-graphql.png",
-		tags: ["Schema Builders"],
+		tags: ["Schema"],
 	},
 	{
 		name: "GraphQL Zeus",
@@ -321,7 +315,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "Strongly Typed GraphQL from the team at GraphQL Editor",
 		image:
 			"https://raw.githubusercontent.com/graphql-editor/graphql-zeus/master/images/zeus-logo.png",
-		tags: ["Schema Builders"],
+		tags: ["Schema"],
 	},
 	{
 		name: "Apollo Federation",
@@ -331,7 +325,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://www.apollographql.com/docs/federation/",
 		description: "Combine GraphQL APIs into a unified supergraph",
 		image: "https://github.com/apollographql.png",
-		tags: ["Combining Schemas"],
+		tags: ["Schema"],
 	},
 	{
 		name: "Schema Stitching - GraphQL Tools",
@@ -342,7 +336,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"GraphQL Tools is a set of NPM packages and an opinionated structure for how to build a GraphQL schema and resolvers in JavaScript, following the GraphQL-first development workflow.",
 		image: "https://github.com/ardatan.png",
-		tags: ["Combining Schemas"],
+		tags: ["Schema"],
 	},
 	{
 		name: "GraphQL Modules",
@@ -353,7 +347,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"GraphQL Modules is a toolset of libraries and guidelines dedicated to create reusable, maintainable, testable and extendable modules out of your GraphQL server.",
 		image: "https://github.com/Urigo.png",
-		tags: ["Combining Schemas"],
+		tags: ["Schema"],
 	},
 	{
 		name: "Hasura Data Federation",
@@ -364,7 +358,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Hasura's data federation capabilities allow you to compose data from different sources that reside in independent data stores but are semantically related.",
 		image: "https://github.com/hasura.png",
-		tags: ["Combining Schemas"],
+		tags: ["Schema"],
 	},
 	{
 		name: "GraphQL Mesh",
@@ -375,7 +369,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"The Graph of Everything Federated architecture for any API service",
 		image: "https://github.com/Urigo.png",
-		tags: ["Combining Schemas"],
+		tags: ["Schema"],
 	},
 	{
 		name: "WunderGraph",
@@ -386,7 +380,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"WunderGraph is the Serverless API Developer Platform with a focus on Developer Experience.",
 		image: "https://github.com/wundergraph.png",
-		tags: ["Combining Schemas"],
+		tags: ["Schema"],
 	},
 	{
 		name: "StepZen",
@@ -397,7 +391,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Build GraphQL Easily Optimize & Scale GraphQL Automatically, The only declarative approach for federated access to data!",
 		image: "https://github.com/steprz.png",
-		tags: ["Combining Schemas"],
+		tags: ["Schema"],
 	},
 	{
 		name: "MuleSoft",
@@ -409,7 +403,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Deliver end-to-end automation and orchestrate across all of your systems to deliver connected customer experiences, faster.",
 		image:
 			"https://mma.prnewswire.com/media/1512177/MuleSoft_Logo.jpg?p=twitter",
-		tags: ["Combining Schemas"],
+		tags: ["Schema"],
 	},
 	{
 		name: "GraphQL ESLint",
@@ -420,7 +414,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"This project integrates GraphQL and ESLint, for a better developer experience.",
 		image: "https://github.com/B2o5T/graphql-eslint/raw/master/logo.png",
-		tags: ["Misc"],
+		tags: ["Schema"],
 	},
 	{
 		name: "GraphQL Scalars",
@@ -430,7 +424,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://www.the-guild.dev/graphql/scalars",
 		description: "Data Integrity and Strict Validations on GraphQL",
 		image: "https://github.com/urigo.png",
-		tags: ["Misc"],
+		tags: ["Schema"],
 	},
 	{
 		name: "Apollo Data Sources",
@@ -441,7 +435,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Data sources are classes that Apollo Server can use to encapsulate fetching data from a particular source, such as a database or a REST API. ",
 		image: "https://github.com/apollographql.png",
-		tags: ["Misc"],
+		tags: ["Servers"],
 	},
 	{
 		name: "GraphQL Shield",
@@ -453,7 +447,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Implement your server permissions in a clear and deterministic way and let it guard access to your schema.",
 		image:
 			"https://github.com/dimatill/graphql-shield/raw/master/media/shield.jpg",
-		tags: ["Misc"],
+		tags: ["Servers"],
 	},
 	{
 		name: "Envelop",
@@ -464,7 +458,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Develop and share plugins that are usable with any GraphQL server framework or schema.",
 		image: "https://github.com/n1ru4l/envelop/raw/main/logo.png",
-		tags: ["Misc"],
+		tags: ["Servers", "Schema"],
 	},
 	{
 		name: "Dataloader",
@@ -475,7 +469,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"DataLoader is a generic utility to be used as part of your application's data fetching layer to provide a simplified and consistent API over various remote data sources such as databases or web services via batching and caching.",
 		image: "https://github.com/graphql.png",
-		tags: ["Misc"],
+		tags: ["Client"],
 	},
 	{
 		name: "Prisma",
@@ -486,6 +480,6 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Simple Database Access in GraphQL servers Query data from MySQL, PostgreSQL & SQL Server databases in GraphQL with Prisma - a better ORM for JavaScript and TypeScript.",
 		image: "https://github.com/prisma.png",
-		tags: ["Misc"],
+		tags: ["Schema"],
 	},
 ]
