@@ -12,7 +12,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "DGS",
 		author: "Netflix",
-		gitHubRepo: "https://github.com/netflix/dgs-framework",
+		gitHubRepo: "netflix/dgs-framework",
 		npmPackage: "",
 		href: "https://netflix.github.io/dgs/",
 		description:
@@ -23,7 +23,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Absinthe",
 		author: "Christian Meunier & Mauro Gabriel Titimoli",
-		gitHubRepo: "https://github.com/absinthe-graphql/absinthe",
+		gitHubRepo: "absinthe-graphql/absinthe",
 		npmPackage: "",
 		href: "http://absinthe-graphql.org/",
 		description: "The GraphQL toolkit for Elixir",
@@ -33,7 +33,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "GraphQL.js",
 		author: "Meta",
-		gitHubRepo: "https://github.com/graphql/graphql-js",
+		gitHubRepo: "graphql/graphql-js",
 		npmPackage: "graphql",
 		href: "https://graphql.org/graphql-js/",
 		description:
@@ -44,7 +44,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Mercurius",
 		author: "Pablo Sáez",
-		gitHubRepo: "https://github.com/mercurius-js/mercurius",
+		gitHubRepo: "mercurius-js/mercurius",
 		npmPackage: "mercurius",
 		href: "https://mercurius.dev/",
 		description: "Mercurius is a GraphQL adapter for Fastify",
@@ -54,7 +54,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Apollo Server",
 		author: "Apollo GraphQL",
-		gitHubRepo: "https://github.com/apollographql/apollo-server",
+		gitHubRepo: "apollographql/apollo-server",
 		npmPackage: "@apollo/server",
 		href: "https://www.apollographql.com/docs/apollo-server/",
 		description:
@@ -65,7 +65,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Helix",
 		author: "Contra",
-		gitHubRepo: "https://github.com/contra/graphql-helix",
+		gitHubRepo: "contra/graphql-helix",
 		npmPackage: "graphql-helix",
 		href: "https://www.graphql-helix.com/",
 		description:
@@ -77,7 +77,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Express-GraphQL",
 		author: "Meta",
-		gitHubRepo: "https://github.com/graphql/express-graphql",
+		gitHubRepo: "graphql/express-graphql",
 		npmPackage: "express-graphql",
 		href: "https://github.com/graphql/express-graphql",
 		description:
@@ -88,7 +88,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "GraphQL-Go",
 		author: "graph-gophers",
-		gitHubRepo: "https://github.com/graph-gophers/graphql-go",
+		gitHubRepo: "graph-gophers/graphql-go",
 		npmPackage: "",
 		href: "https://github.com/graph-gophers/graphql-go",
 		description:
@@ -99,8 +99,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Yoga",
 		author: "Dotan Simha",
-		gitHubRepo: "https://github.com/dotansimha/graphql-yoga",
-		npmPackage: "graphql-yoga@three",
+		gitHubRepo: "dotansimha/graphql-yoga",
+		npmPackage: "graphql-yoga",
 		href: "https://www.the-guild.dev/graphql/yoga-server",
 		description:
 			"Fully-featured GraphQL Server with focus on easy setup, performance & great developer experience",
@@ -110,7 +110,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "GraphQL .NET",
 		author: "",
-		gitHubRepo: "https://github.com/graphql-dotnet/graphql-dotnet",
+		gitHubRepo: "graphql-dotnet/graphql-dotnet",
 		npmPackage: "",
 		href: "https://graphql-dotnet.github.io/docs/getting-started/introduction",
 		description: "This is an implementation of Facebook's GraphQL in .NET.",
@@ -120,7 +120,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "GraphQL Hooks",
 		author: "NearForm",
-		gitHubRepo: "https://github.com/nearform/graphql-hooks",
+		gitHubRepo: "nearform/graphql-hooks",
 		npmPackage: "",
 		href: "https://github.com/nearform/graphql-hooks",
 		description: "Minimal hooks-first GraphQL client.",
@@ -130,7 +130,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "GraphQL-request",
 		author: "Prisma Labs",
-		gitHubRepo: "https://github.com/prisma-labs/graphql-request",
+		gitHubRepo: "prisma-labs/graphql-request",
 		npmPackage: "graphql-request",
 		href: "https://github.com/prisma-labs/graphql-request",
 		description:
@@ -141,7 +141,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Query",
 		author: "TanStack",
-		gitHubRepo: "https://github.com/tanstack/query",
+		gitHubRepo: "tanstack/query",
 		npmPackage: "@tanstack/react-query",
 		href: "https://tanstack.com/query/v4/",
 		description:
@@ -152,7 +152,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "URQL",
 		author: "Formidable",
-		gitHubRepo: "https://github.com/FormidableLabs/urql",
+		gitHubRepo: "FormidableLabs/urql",
 		npmPackage: "urql",
 		href: "https://formidable.com/open-source/urql/",
 		description: "A highly customisable and versatile GraphQL client",
@@ -163,7 +163,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Apollo Kotlin",
 		author: "Apollo GraphQL",
-		gitHubRepo: "https://github.com/apollographql/apollo-kotlin",
+		gitHubRepo: "apollographql/apollo-kotlin",
 		npmPackage: "",
 		href: "https://www.apollographql.com/docs/kotlin/",
 		description:
@@ -174,7 +174,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Apollo Client",
 		author: "Apollo GraphQL",
-		gitHubRepo: "https://github.com/apollographql/apollo-client",
+		gitHubRepo: "apollographql/apollo-client",
 		npmPackage: "@apollo/client",
 		href: "https://www.apollographql.com/docs/react/",
 		description:
@@ -185,7 +185,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Apollo iOS",
 		author: "Apollo GraphQL",
-		gitHubRepo: "https://github.com/apollographql/apollo-ios",
+		gitHubRepo: "apollographql/apollo-ios",
 		npmPackage: "",
 		href: "https://www.apollographql.com/docs/ios/",
 		description:
@@ -196,9 +196,9 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Swift GraphQL",
 		author: "Matic Zavadlal",
-		gitHubRepo: "https://github.com/maticzav/swift-graphql",
+		gitHubRepo: "maticzav/swift-graphql",
 		npmPackage: "",
-		href: "swift-graphql.com",
+		href: "https://swift-graphql.com",
 		description:
 			"SwiftGraphQL comes with a lightweight client that supports queries, mutations and subscriptions. And they all work the same way.",
 		image: "https://github.com/maticzav.png",
@@ -207,7 +207,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Relay",
 		author: "Meta",
-		gitHubRepo: "https://github.com/facebook/relay",
+		gitHubRepo: "facebook/relay",
 		npmPackage: "react-relay",
 		href: "https://relay.dev/",
 		description: "The GraphQL client that scales with you.",
@@ -217,7 +217,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Graph Code Generator",
 		author: "Dotan Simha",
-		gitHubRepo: "https://github.com/dotansimha/graphql-code-generator",
+		gitHubRepo: "dotansimha/graphql-code-generator",
 		npmPackage: "@graphql-codegen/cli",
 		href: "https://www.the-guild.dev/graphql/codegen",
 		description:
@@ -229,7 +229,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "gqlgen",
 		author: "99designs",
-		gitHubRepo: "https://github.com/99designs/gqlgen",
+		gitHubRepo: "99designs/gqlgen",
 		npmPackage: "",
 		href: "https://gqlgen.com/",
 		description:
@@ -241,7 +241,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Pothos",
 		author: "Michael Hayes",
-		gitHubRepo: "https://github.com/hayes/pothos",
+		gitHubRepo: "hayes/pothos",
 		npmPackage: "@pothos/core",
 		href: "https://pothos-graphql.dev/",
 		description:
@@ -252,7 +252,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "GraphQL Java",
 		author: "GraphQL Java",
-		gitHubRepo: "https://github.com/graphql-java/graphql-java",
+		gitHubRepo: "graphql-java/graphql-java",
 		npmPackage: "",
 		href: "https://www.graphql-java.com/",
 		description: "GraphQL server implementation for Java/JVM",
@@ -262,7 +262,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "TypeGraphQL",
 		author: "Michał Lytek",
-		gitHubRepo: "https://github.com/MichalLytek/type-graphql",
+		gitHubRepo: "MichalLytek/type-graphql",
 		npmPackage: "type-graphql",
 		href: "https://typegraphql.com/",
 		description: "Modern framework for GraphQL API in Node.js",
@@ -273,7 +273,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Nexus",
 		author: "GraphQL Nexus",
-		gitHubRepo: "https://github.com/graphql-nexus/nexus",
+		gitHubRepo: "graphql-nexus/nexus",
 		npmPackage: "nexus",
 		href: "https://nexusjs.org/",
 		description:
@@ -284,7 +284,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Strawberry",
 		author: "Strawberry GraphQL",
-		gitHubRepo: "https://github.com/strawberry-graphql/strawberry",
+		gitHubRepo: "strawberry-graphql/strawberry",
 		npmPackage: "",
 		href: "https://strawberry.rocks/",
 		description:
@@ -295,7 +295,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Genql",
 		author: "Tommaso De Rossi",
-		gitHubRepo: "https://github.com/remorses/genql",
+		gitHubRepo: "remorses/genql",
 		npmPackage: "@genql/cli",
 		href: "https://genql.vercel.app/",
 		description: "Generate your own graphql SDK in seconds",
@@ -305,7 +305,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Sangria",
 		author: "Sangria",
-		gitHubRepo: "https://github.com/sangria-graphql/sangria",
+		gitHubRepo: "sangria-graphql/sangria",
 		npmPackage: "",
 		href: "https://sangria-graphql.github.io/",
 		description: "Sangria is a scala GraphQL library.",
@@ -315,7 +315,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "GraphQL Zeus",
 		author: "GraphQL Editor",
-		gitHubRepo: "https://github.com/graphql-editor/graphql-zeus",
+		gitHubRepo: "graphql-editor/graphql-zeus",
 		npmPackage: "graphql-zeus",
 		href: "https://zeus.graphqleditor.com/",
 		description: "Strongly Typed GraphQL from the team at GraphQL Editor",
@@ -326,7 +326,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Apollo Federation",
 		author: "Apollo GraphQL",
-		gitHubRepo: "https://github.com/apollographql/federation",
+		gitHubRepo: "apollographql/federation",
 		npmPackage: "",
 		href: "https://www.apollographql.com/docs/federation/",
 		description: "Combine GraphQL APIs into a unified supergraph",
@@ -336,7 +336,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Schema Stitching - GraphQL Tools",
 		author: "Arda TANRIKULU",
-		gitHubRepo: "https://github.com/ardatan/graphql-tools",
+		gitHubRepo: "ardatan/graphql-tools",
 		npmPackage: "@graphql-tools/schema",
 		href: "https://www.the-guild.dev/graphql/tools",
 		description:
@@ -347,7 +347,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "GraphQL Modules",
 		author: "Uri Goldshtein",
-		gitHubRepo: "https://github.com/Urigo/graphql-modules",
+		gitHubRepo: "Urigo/graphql-modules",
 		npmPackage: "graphql-modules",
 		href: "https://www.the-guild.dev/graphql/modules",
 		description:
@@ -358,7 +358,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Hasura Data Federation",
 		author: "Hasura",
-		gitHubRepo: "https://github.com/hasura/graphql-engine",
+		gitHubRepo: "hasura/graphql-engine",
 		npmPackage: "",
 		href: "https://hasura.io/docs/latest/data-federation/index/",
 		description:
@@ -369,7 +369,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "GraphQL Mesh",
 		author: "Uri Goldshtein",
-		gitHubRepo: "https://github.com/Urigo/graphql-mesh",
+		gitHubRepo: "Urigo/graphql-mesh",
 		npmPackage: "@graphql-mesh/cli",
 		href: "https://www.the-guild.dev/graphql/mesh",
 		description:
@@ -380,7 +380,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "WunderGraph",
 		author: "WunderGraph",
-		gitHubRepo: "https://github.com/wundergraph/wundergraph",
+		gitHubRepo: "wundergraph/wundergraph",
 		npmPackage: "@wundergraph/sdk",
 		href: "https://wundergraph.com/",
 		description:
@@ -391,7 +391,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "StepZen",
 		author: "StepZen",
-		gitHubRepo: "https://github.com/steprz/stepzen-schemas",
+		gitHubRepo: "steprz/stepzen-schemas",
 		npmPackage: "",
 		href: "https://stepzen.com/",
 		description:
@@ -407,13 +407,14 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://www.mulesoft.com/",
 		description:
 			"Deliver end-to-end automation and orchestrate across all of your systems to deliver connected customer experiences, faster.",
-		image: "",
+		image:
+			"https://mma.prnewswire.com/media/1512177/MuleSoft_Logo.jpg?p=twitter",
 		tags: ["Combining Schemas"],
 	},
 	{
 		name: "GraphQL ESLint",
 		author: "Dimitri POSTOLOV",
-		gitHubRepo: "https://github.com/B2o5T/graphql-eslint",
+		gitHubRepo: "B2o5T/graphql-eslint",
 		npmPackage: "@graphql-eslint/eslint-plugin",
 		href: "https://github.com/B2o5T/graphql-eslint",
 		description:
@@ -424,7 +425,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "GraphQL Scalars",
 		author: "Uri Goldshtein",
-		gitHubRepo: "https://github.com/urigo/graphql-scalars",
+		gitHubRepo: "urigo/graphql-scalars",
 		npmPackage: "graphql-scalars",
 		href: "https://www.the-guild.dev/graphql/scalars",
 		description: "Data Integrity and Strict Validations on GraphQL",
@@ -434,8 +435,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Apollo Data Sources",
 		author: "Apollo GraphQL",
-		gitHubRepo: "https://github.com/apollographql/apollo-server/tree/version-2",
-		npmPackage: "apollo-server-<integration>",
+		gitHubRepo: "apollographql/apollo-server/tree/version-2",
+		npmPackage: "apollo-server",
 		href: "https://www.apollographql.com/docs/apollo-server/v2/data/data-sources/",
 		description:
 			"Data sources are classes that Apollo Server can use to encapsulate fetching data from a particular source, such as a database or a REST API. ",
@@ -445,7 +446,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "GraphQL Shield",
 		author: "Dmitry Til",
-		gitHubRepo: "https://github.com/dimatill/graphql-shield",
+		gitHubRepo: "dimatill/graphql-shield",
 		npmPackage: "graphql-shield",
 		href: "https://www.the-guild.dev/graphql/shield",
 		description:
@@ -457,7 +458,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Envelop",
 		author: "Laurin Quast",
-		gitHubRepo: "https://github.com/n1ru4l/envelop",
+		gitHubRepo: "n1ru4l/envelop",
 		npmPackage: "@envelop/core",
 		href: "https://www.the-guild.dev/graphql/envelop",
 		description:
@@ -468,7 +469,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Dataloader",
 		author: "Meta",
-		gitHubRepo: "https://github.com/graphql/dataloader",
+		gitHubRepo: "graphql/dataloader",
 		npmPackage: "dataloader",
 		href: "https://github.com/graphql/dataloader",
 		description:
@@ -479,7 +480,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Prisma",
 		author: "Prisma",
-		gitHubRepo: "https://github.com/prisma/prisma",
+		gitHubRepo: "prisma/prisma",
 		npmPackage: "@prisma/client",
 		href: "https://www.prisma.io/graphql",
 		description:
