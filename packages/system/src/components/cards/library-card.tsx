@@ -38,16 +38,21 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 						href={`https://www.github.com/${library.gitHubRepo}`}
 						label={`${library.name} GitHub Repository`}
 					/>
-					<Badge
-						data={getNpmDownloadsBadge(library.npmPackage)}
-						href={`https://www.npmjs.com/package/${library.npmPackage}`}
-						label={`${library.name} NPM Package`}
-					/>
-					<Badge
-						data={getBundleSizeBadge(library.npmPackage)}
-						href={`https://bundlephobia.com/package/${library.npmPackage}`}
-						label={`${library.name} Bundle Size Stats`}
-					/>
+
+					{library?.npmPackage === "" ? null : (
+						<>
+							<Badge
+								data={getNpmDownloadsBadge(library.npmPackage)}
+								href={`https://www.npmjs.com/package/${library.npmPackage}`}
+								label={`${library.name} NPM Package`}
+							/>
+							<Badge
+								data={getBundleSizeBadge(library.npmPackage)}
+								href={`https://bundlephobia.com/package/${library.npmPackage}`}
+								label={`${library.name} Bundle Size Stats`}
+							/>
+						</>
+					)}
 				</>
 			}
 			{...props}
