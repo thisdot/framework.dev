@@ -15,7 +15,7 @@ export function Books({ className, books, ...props }: BooksProps) {
 		<FeatureAndList
 			className={classNames(className, booksStyle)}
 			title="Top-tier books to read"
-			viewAll={{ title: "View all books", href: "/categories/courses" }}
+			viewAll={{ title: "View all books", href: "/categories/books" }}
 			items={randomBooks.map((book) => {
 				return {
 					image: { src: book.image, style: "book" },
