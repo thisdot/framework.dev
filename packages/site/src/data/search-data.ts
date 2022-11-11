@@ -28,7 +28,7 @@ export async function getSearchData(
 			tags: libraryTags,
 			subCategories:
 				framework === "graphql"
-					? (libraryTags as typeof libraryTags[number][])
+					? ["Servers", "Client", "Schema"]
 					: ([
 							"state management",
 							"data fetching",
