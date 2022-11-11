@@ -26,7 +26,18 @@ export async function getSearchData(
 			indexMetadata: libraryIndexMetadata,
 			name: libraryIndexMetadata.name,
 			tags: libraryTags,
-			subCategories: libraryTags as typeof libraryTags[number][],
+			subCategories:
+				framework === "graphql"
+					? (libraryTags as typeof libraryTags[number][])
+					: ([
+							"state management",
+							"data fetching",
+							"styling",
+							"component library",
+							"forms",
+							"framework",
+							"internationalization",
+					  ] as typeof libraryTags[number][]),
 		},
 		{
 			data: tools,
