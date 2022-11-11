@@ -238,7 +238,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"GraphQL Code Generator is a tool that generates code out of your GraphQL schema.",
 		image:
 			"https://raw.githubusercontent.com/dotansimha/graphql-code-generator/master/logo.svg",
-		tags: ["Schema", "JavaScript", "NodeJS", "Java"],
+		tags: ["Schema", "JavaScript", "NodeJS"],
 	},
 	{
 		name: "gqlgen",
