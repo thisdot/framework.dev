@@ -8,6 +8,10 @@ export const libraryTags = [
 	"Misc",
 ] as const
 
+// The default image here for use
+// on libraries that don't have an image
+const defaultImage = "https://github.com/graphql.png"
+
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "DGS",
@@ -38,7 +42,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://graphql.org/graphql-js/",
 		description:
 			"The JavaScript reference implementation for GraphQL, a query language for APIs created by Facebook.",
-		image: "https://github.com/graphql.png",
+		image: defaultImage,
 		tags: ["Servers"],
 	},
 	{
@@ -82,7 +86,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://github.com/graphql/express-graphql",
 		description:
 			"Create a GraphQL HTTP server with any HTTP web framework that supports connect styled middleware, including Connect itself, Express and Restify.",
-		image: "https://github.com/graphql.png",
+		image: defaultImage,
 		tags: ["Servers"],
 	},
 	{
@@ -474,7 +478,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://github.com/graphql/dataloader",
 		description:
 			"DataLoader is a generic utility to be used as part of your application's data fetching layer to provide a simplified and consistent API over various remote data sources such as databases or web services via batching and caching.",
-		image: "https://github.com/graphql.png",
+		image: defaultImage,
 		tags: ["Misc"],
 	},
 	{

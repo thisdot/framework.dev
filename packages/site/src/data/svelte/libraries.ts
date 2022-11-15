@@ -15,6 +15,11 @@ export const libraryTags = [
 	"preprocessor",
 ] as const
 
+// The default image here for use
+// on libraries that don't have an image
+const defaultImage =
+	"https://avatars.githubusercontent.com/u/23617963?s=200&v=4"
+
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Axios",
@@ -99,7 +104,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://sapper.svelte.dev/",
 		description:
 			"Sapper is a framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.",
-		image: "https://avatars.githubusercontent.com/u/23617963?s=200&v=4",
+		image: defaultImage,
 		tags: ["framework"],
 	},
 	{
@@ -119,7 +124,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://www.github.com/sveltejs/language-tools",
 		package: "https://www.npmjs.com/package/svelte-check",
 		href: "https://github.com/sveltejs/language-tools",
-		image: "https://avatars.githubusercontent.com/u/23617963?s=200&v=4",
+		image: defaultImage,
 		tags: ["linting", "a11y"],
 		description:
 			"Svelte Language Tools contains a library implementing the Language Server Protocol (LSP). LSP powers the VSCode extension, which is also hosted in this repository. Additionally, LSP is capable of powering plugins for numerous other IDEs.",
@@ -130,7 +135,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://www.github.com/sveltejs/svelte-preprocess",
 		package: "https://www.npmjs.com/package/svelte-check",
 		href: "https://github.com/sveltejs/svelte-preprocess",
-		image: "https://avatars.githubusercontent.com/u/23617963?s=200&v=4",
+		image: defaultImage,
 		tags: ["preprocessor"],
 		description:
 			"A Svelte preprocessor with sensible defaults and support for: PostCSS, SCSS, Less, Stylus, CoffeeScript, TypeScript, Pug and much more.",

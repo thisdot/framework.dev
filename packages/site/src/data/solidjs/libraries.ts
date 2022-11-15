@@ -10,6 +10,11 @@ export const libraryTags = [
 	"internationalization",
 ] as const
 
+// The default image here for use
+// on libraries that don't have an image
+const defaultImage =
+	"https://repository-images.githubusercontent.com/130884470/ad63fd00-7ab2-11ea-9c57-6c114391183a"
+
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Solid Store",
@@ -19,8 +24,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://www.solidjs.com/tutorial/stores_createstore",
 		description:
 			"This submodules contains the means for handling deeps nested reactivity.",
-		image:
-			"https://repository-images.githubusercontent.com/130884470/ad63fd00-7ab2-11ea-9c57-6c114391183a",
+		image: defaultImage,
 		tags: ["state management"],
 	},
 	{
@@ -66,8 +70,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://www.solidjs.com/tutorial/async_resources",
 		description:
 			"Resources are special Signals designed specifically to handle Async loading.",
-		image:
-			"https://repository-images.githubusercontent.com/130884470/ad63fd00-7ab2-11ea-9c57-6c114391183a",
+		image: defaultImage,
 		tags: ["data fetching"],
 	},
 	{

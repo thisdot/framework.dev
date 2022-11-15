@@ -28,6 +28,12 @@ export const libraryTags = [
 	"internationalization",
 ] as const
 
+// The default image here for use
+// on libraries that don't have an image
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const defaultImage =
+	"https://w7.pngwing.com/pngs/79/518/png-transparent-js-react-js-logo-react-react-native-logos-icon-thumbnail.png"
+
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Flux",

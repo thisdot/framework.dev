@@ -31,6 +31,12 @@ export const libraryTags = [
 	"nuxt",
 ] as const
 
+// The default image here for use
+// on libraries that don't have an image
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const defaultImage =
+	"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/555px-Vue.js_Logo_2.svg.png"
+
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Quasar",

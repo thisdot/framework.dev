@@ -23,6 +23,10 @@ export const libraryTags = [
 	"testing",
 ] as const
 
+// The default image here for use
+// on libraries that don't have an image
+const defaultImage = "https://github.com/angular.png"
+
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Angular CLI",
@@ -32,7 +36,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://angular.io/cli",
 		description:
 			"The Angular CLI is a command-line interface tool that you use to initialize, develop, scaffold, and maintain Angular applications directly from a command shell",
-		image: "https://github.com/angular.png",
+		image: defaultImage,
 		tags: ["framework"],
 	},
 	{
@@ -97,7 +101,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		package: "https://www.npmjs.com/package/@angular/material",
 		href: "https://material.angular.io/guide/getting-started",
 		description: "Material Design UI components for Angular applications.",
-		image: "https://github.com/angular.png",
+		image: defaultImage,
 		tags: ["styling", "component"],
 	},
 	{
@@ -406,7 +410,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://angular.io/guide/developer-guide-overview",
 		description:
 			"Angular is a development platform for building mobile and desktop web applications using Typescript/JavaScript and other languages.",
-		image: "https://github.com/angular.png",
+		image: defaultImage,
 		tags: ["framework"],
 	},
 	{

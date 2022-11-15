@@ -11,6 +11,10 @@ export const libraryTags = [
 	"react",
 ] as const
 
+// The default image here for use
+// on libraries that don't have an image
+const defaultImage = "https://qwik.builder.io/logos/social-card.png?v=3"
+
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "TailwindCSS",
@@ -40,7 +44,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://www.github.com/mhevery/qwik-i18n",
 		package: "",
 		href: "https://github.com/mhevery/qwik-i18n",
-		image: "https://qwik.builder.io/logos/social-card.png?v=3",
+		image: defaultImage,
 		tags: ["internationalization"],
 		description:
 			"Qwik is unique in that it has fine-grained lazy loading of code. The classical way to do translation is at runtime by looking up the translation strings in the translation map.",
@@ -51,7 +55,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://www.github.com/BuilderIO/partytown",
 		package: "https://www.npmjs.com/package/@builder.io/partytown",
 		href: "https://github.com/BuilderIO/partytown",
-		image: "https://qwik.builder.io/logos/social-card.png?v=3",
+		image: defaultImage,
 		tags: ["web-workers"],
 		description:
 			"Partytown is a lazy-loaded library to help relocate resource intensive scripts into a web worker, and off of the main thread. Its goal is to help speed up sites by dedicating the main thread to your code, and offloading third-party scripts to a web worker.",
