@@ -19,8 +19,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Axios",
 		author: "Matt Zabriskie",
-		gitHubRepo: "axios/axios",
-		npmPackage: "axios",
+		repo: "https://www.github.com/axios/axios",
+		package: "https://www.npmjs.com/package/axios",
 		href: "https://axios-http.com/",
 		description:
 			"Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a simple to use library in a small package with a very extensible interface.",
@@ -30,8 +30,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "TailwindCSS",
 		author: "Adam Wathan & Jonathan Reinink",
-		gitHubRepo: "tailwindlabs/tailwindcss",
-		npmPackage: "tailwindcss",
+		repo: "https://www.github.com/tailwindlabs/tailwindcss",
+		package: "https://www.npmjs.com/package/tailwindcss",
 		href: "https://tailwindcss.com/",
 		description:
 			"A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
@@ -41,8 +41,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Svelte Material UI",
 		author: "hperrin",
-		gitHubRepo: "hperrin/svelte-material-ui",
-		npmPackage: "svelte-material-ui",
+		repo: "https://www.github.com/hperrin/svelte-material-ui",
+		package: "https://www.npmjs.com/package/svelte-material-ui",
 		href: "https://sveltematerialui.com/",
 		description:
 			"A library of Svelte Material UI components, based on Material Design Components - Web.",
@@ -52,8 +52,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Sveltestrap",
 		author: "bestguy",
-		gitHubRepo: "bestguy/sveltestrap",
-		npmPackage: "sveltestrap",
+		repo: "https://www.github.com/bestguy/sveltestrap",
+		package: "https://www.npmjs.com/package/sveltestrap",
 		href: "https://sveltestrap.js.org/?path=/story/components--get-started",
 		description:
 			"A library that provides all Bootstrap 5 components for a Svelte app, without needing to use Bootstrap component classes or needing to include Bootstrap's JavaScript.",
@@ -63,8 +63,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Svelte Forms",
 		author: "chainlist",
-		gitHubRepo: "chainlist/svelte-forms",
-		npmPackage: "svelte-forms",
+		repo: "https://www.github.com/chainlist/svelte-forms",
+		package: "https://www.npmjs.com/package/svelte-forms",
 		href: "https://chainlist.github.io/svelte-forms/",
 		description: "A form validation library for Svelte.",
 		image: "https://github.com/chainlist.png",
@@ -73,8 +73,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Svelte Formly",
 		author: "dyaliCode",
-		gitHubRepo: "dyaliCode/svelte-formly",
-		npmPackage: "svelte-formly",
+		repo: "https://www.github.com/dyaliCode/svelte-formly",
+		package: "https://www.npmjs.com/package/svelte-formly",
 		href: "https://svelte-formly-ts-documentation.netlify.app/",
 		description:
 			"A good solution to generate and control a dynamic forms using core and custom rules with customize styles.",
@@ -84,8 +84,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "rx-svelte-forms",
 		author: "MohamedElmdary",
-		gitHubRepo: "MohamedElmdary/rx-svelte-forms",
-		npmPackage: "rx-svelte-forms",
+		repo: "https://www.github.com/MohamedElmdary/rx-svelte-forms",
+		package: "https://www.npmjs.com/package/rx-svelte-forms",
 		href: "https://github.com/MohamedElmdary/rx-svelte-forms",
 		description: "Reactive svelte forms inspired by angular reactive forms.",
 		image: "https://github.com/MohamedElmdary.png",
@@ -94,8 +94,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Sapper",
 		author: "Svelte",
-		gitHubRepo: "sveltejs/sapper",
-		npmPackage: "sapper",
+		repo: "https://www.github.com/sveltejs/sapper",
+		package: "https://www.npmjs.com/package/sapper",
 		href: "https://sapper.svelte.dev/",
 		description:
 			"Sapper is a framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.",
@@ -105,8 +105,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "svelte-i18n",
 		author: "kaisermann",
-		gitHubRepo: "kaisermann/svelte-i18n",
-		npmPackage: "svelte-i18n",
+		repo: "https://www.github.com/kaisermann/svelte-i18n",
+		package: "https://www.npmjs.com/package/svelte-i18n",
 		href: "https://github.com/kaisermann/svelte-i18n",
 		image: "https://github.com/kaisermann.png",
 		tags: ["internationalization"],
@@ -116,8 +116,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "svelte-check",
 		author: "Svelte",
-		gitHubRepo: "sveltejs/language-tools",
-		npmPackage: "svelte-check",
+		repo: "https://www.github.com/sveltejs/language-tools",
+		package: "https://www.npmjs.com/package/svelte-check",
 		href: "https://github.com/sveltejs/language-tools",
 		image: "https://avatars.githubusercontent.com/u/23617963?s=200&v=4",
 		tags: ["linting", "a11y"],
@@ -127,8 +127,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Svelte Preprocess",
 		author: "Svelte",
-		gitHubRepo: "sveltejs/svelte-preprocess",
-		npmPackage: "svelte-check",
+		repo: "https://www.github.com/sveltejs/svelte-preprocess",
+		package: "https://www.npmjs.com/package/svelte-check",
 		href: "https://github.com/sveltejs/svelte-preprocess",
 		image: "https://avatars.githubusercontent.com/u/23617963?s=200&v=4",
 		tags: ["preprocessor"],

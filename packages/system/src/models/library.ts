@@ -18,17 +18,17 @@ export interface Library<T extends string> extends SearchableRecord<T> {
 	/** Short description for display */
 	description: string
 	/**
-	 * GitHub repo, in :author/:repoName format.
-	 * For displaying star count and linking
+	 * Repo, in full href format.
+	 * For displaying star count and or linking
 	 * back to the repo.
 	 */
-	gitHubRepo: string
+	repo: string
 	/**
-	 * NPM package name, for displaying download
+	 * Package name, for displaying download
 	 * count, bundle size, and SO question count
 	 * as well as for linking back to NPM.
 	 */
-	npmPackage: string
+	package: string
 	/**
 	 * Link to the library's page so that users can
 	 * go and learn more. This can be a link to the

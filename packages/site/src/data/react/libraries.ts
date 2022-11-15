@@ -32,8 +32,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Flux",
 		author: "Facebook",
-		gitHubRepo: "facebook/flux",
-		npmPackage: "flux",
+		repo: "https://www.github.com/facebook/flux",
+		package: "https://www.npmjs.com/package/flux",
 		href: "https://facebook.github.io/flux/",
 		description:
 			"The original state management architecture for React utilizing a unidirectional data flow. Now deprecated and in maintenance mode.",
@@ -44,8 +44,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Redux",
 		author: "Dan Abramov",
-		gitHubRepo: "reduxjs/redux",
-		npmPackage: "redux",
+		repo: "https://www.github.com/reduxjs/redux",
+		package: "https://www.npmjs.com/package/redux",
 		href: "https://redux.js.org/",
 		description:
 			"A predictable, centralized, debuggable and flexible state container for JS apps inspired by the Flux and Elm architectures. Nowadays you should be using Redux Toolkit instead.",
@@ -55,8 +55,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Redux Toolkit",
 		author: "Mark Erikson",
-		gitHubRepo: "reduxjs/redux-toolkit",
-		npmPackage: "@reduxjs/toolkit",
+		repo: "https://www.github.com/reduxjs/redux-toolkit",
+		package: "https://www.npmjs.com/package/@reduxjs/toolkit",
 		href: "https://redux-toolkit.js.org/",
 		description:
 			"The official, opinionated, batteries-included toolset for efficient Redux development",
@@ -66,8 +66,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "RTK Query",
 		author: "Lenz Weber",
-		gitHubRepo: "reduxjs/redux-toolkit",
-		npmPackage: "@reduxjs/toolkit",
+		repo: "https://www.github.com/reduxjs/redux-toolkit",
+		package: "https://www.npmjs.com/package/@reduxjs/toolkit",
 		href: "https://redux-toolkit.js.org/rtk-query/overview",
 		description:
 			"A powerful data fetching and caching tool. It is designed to simplify common cases for loading data in a web application, eliminating the need to hand-write data fetching & caching logic yourself.",
@@ -77,8 +77,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "MobX",
 		author: "Michel Weststrate",
-		gitHubRepo: "mobxjs/mobx",
-		npmPackage: "mobx",
+		repo: "https://www.github.com/mobxjs/mobx",
+		package: "https://www.npmjs.com/package/mobx",
 		href: "https://mobx.js.org/",
 		description:
 			"A battle tested library that makes state management simple and scalable by transparently applying functional reactive programming. Uses observable data structures instead of actions and reducers.",
@@ -89,8 +89,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Apollo Client",
 		author: "Apollo GraphQL",
-		gitHubRepo: "apollographql/apollo-client",
-		npmPackage: "@apollo/client",
+		repo: "https://www.github.com/apollographql/apollo-client",
+		package: "https://www.npmjs.com/package/@apollo/client",
 		href: "https://www.apollographql.com/docs/react/",
 		description:
 			"A fully-featured caching GraphQL client with integrations for React that also has functionality for managing local state.",
@@ -100,8 +100,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "XState",
 		author: "David Khourshid",
-		gitHubRepo: "statelyai/xstate",
-		npmPackage: "xstate",
+		repo: "https://www.github.com/statelyai/xstate",
+		package: "https://www.npmjs.com/package/xstate",
 		href: "https://xstate.js.org/docs/",
 		description:
 			"JavaScript and TypeScript finite state machines and statecharts for the modern web.",
@@ -111,8 +111,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Recoil",
 		author: "Facebook",
-		gitHubRepo: "facebookexperimental/Recoil",
-		npmPackage: "recoil",
+		repo: "https://www.github.com/facebookexperimental/Recoil",
+		package: "https://www.npmjs.com/package/recoil",
 		href: "https://recoiljs.org/",
 		description:
 			"Recoil lets you create a data-flow graph that flows from atoms (shared state) through selectors (pure functions) and down into your React components. Atoms are units of state that components can subscribe to. Selectors transform this state either synchronously or asynchronously.",
@@ -123,8 +123,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Query",
 		author: "Tanner Linsley",
-		gitHubRepo: "TanStack/query",
-		npmPackage: "react-query",
+		repo: "https://www.github.com/TanStack/query",
+		package: "https://www.npmjs.com/package/react-query",
 		href: "https://react-query.tanstack.com/",
 		description:
 			"Writing your data fetching logic by hand is over. Tell React Query where to get your data and how fresh you need it to be and the rest is automatic. React Query handles caching, background updates and stale data out of the box with zero-configuration.",
@@ -135,8 +135,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "SWR",
 		author: "Vercel",
-		gitHubRepo: "vercel/swr",
-		npmPackage: "swr",
+		repo: "https://www.github.com/vercel/swr",
+		package: "https://www.npmjs.com/package/swr",
 		href: "https://swr.vercel.app/",
 		description:
 			"The name “SWR” is derived from stale-while-revalidate, a HTTP cache invalidation strategy popularized by HTTP RFC 5861. SWR is a strategy to first return the data from cache (stale), then send the fetch request (revalidate), and finally come with the up-to-date data.",
@@ -146,8 +146,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Fetching Library",
 		author: "Marcin Piela",
-		gitHubRepo: "marcin-piela/react-fetching-library",
-		npmPackage: "react-fetching-library",
+		repo: "https://www.github.com/marcin-piela/react-fetching-library",
+		package: "https://www.npmjs.com/package/react-fetching-library",
 		href: "https://marcin-piela.github.io/react-fetching-library",
 		description:
 			"Use hooks or FACC's (Function as Child Component) to fetch data in an easy way. No dependencies! Just React under the hood. Request and response interceptors allows you to easily customize connection with API (add authorization, refresh token, cache, etc). It uses Fetch API so it can be used in SSR apps (i.e. with isomorphic-fetch).",
@@ -157,8 +157,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Axios",
 		author: "Matt Zabriskie",
-		gitHubRepo: "axios/axios",
-		npmPackage: "axios",
+		repo: "https://www.github.com/axios/axios",
+		package: "https://www.npmjs.com/package/axios",
 		href: "https://axios-http.com/",
 		description:
 			"Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a simple to use library in a small package with a very extensible interface.",
@@ -168,8 +168,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Superagent",
 		author: "TJ Holowaychuk",
-		gitHubRepo: "visionmedia/superagent",
-		npmPackage: "superagent",
+		repo: "https://www.github.com/visionmedia/superagent",
+		package: "https://www.npmjs.com/package/superagent",
 		href: "https://github.com/visionmedia/superagent",
 		description:
 			"Small progressive client-side HTTP request library, and Node.js module with the same API, supporting many high-level HTTP client features.",
@@ -179,8 +179,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Ky",
 		author: "Sindre Sorhus",
-		gitHubRepo: "sindresorhus/ky",
-		npmPackage: "ky",
+		repo: "https://www.github.com/sindresorhus/ky",
+		package: "https://www.npmjs.com/package/ky",
 		href: "https://github.com/sindresorhus/ky",
 		description:
 			"Ky is a tiny and elegant HTTP client based on the browser Fetch API. Ky targets modern browsers and Deno. It's just a tiny file with no dependencies.",
@@ -190,8 +190,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Popsicle",
 		author: "Blake Embrey",
-		gitHubRepo: "serviejs/popsicle",
-		npmPackage: "popsicle",
+		repo: "https://www.github.com/serviejs/popsicle",
+		package: "https://www.npmjs.com/package/popsicle",
 		href: "https://github.com/serviejs/popsicle",
 		description:
 			"Advanced HTTP requests in node.js and browsers, using Servie, a set of standard, framework-agnostic HTTP interfaces for JavaScript servers and clients",
@@ -201,8 +201,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Stream HTTP",
 		author: "John Hiesey",
-		gitHubRepo: "jhiesey/stream-http",
-		npmPackage: "stream-http",
+		repo: "https://www.github.com/jhiesey/stream-http",
+		package: "https://www.npmjs.com/package/stream-http",
 		href: "https://github.com/jhiesey/stream-http",
 		description:
 			"This module is an implementation of Node's native http module for the browser. It tries to match Node's API and behavior as closely as possible, but some features aren't available, since browsers don't give nearly as much control over requests.",
@@ -212,8 +212,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Emotion",
 		author: "Emotion Team",
-		gitHubRepo: "emotion-js/emotion",
-		npmPackage: "@emotion/react",
+		repo: "https://www.github.com/emotion-js/emotion",
+		package: "https://www.npmjs.com/package/@emotion/react",
 		href: "https://emotion.sh/",
 		description:
 			"Emotion is a performant and flexible CSS-in-JS library. Building on many other CSS-in-JS libraries, it allows you to style apps quickly with string or object styles. It has predictable composition to avoid specificity issues with CSS. With source maps and labels, Emotion has a great developer experience and great performance with heavy caching in production.",
@@ -223,8 +223,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "TailwindCSS",
 		author: "Adam Wathan & Jonathan Reinink",
-		gitHubRepo: "tailwindlabs/tailwindcss",
-		npmPackage: "tailwindcss",
+		repo: "https://www.github.com/tailwindlabs/tailwindcss",
+		package: "https://www.npmjs.com/package/tailwindcss",
 		href: "https://tailwindcss.com/",
 		description:
 			"A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
@@ -234,8 +234,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "styled-components",
 		author: "Glen Maddern & Maximilian Stoiber",
-		gitHubRepo: "styled-components/styled-components",
-		npmPackage: "styled-components",
+		repo: "https://www.github.com/styled-components/styled-components",
+		package: "https://www.npmjs.com/package/styled-components",
 		href: "https://www.styled-components.com/",
 		description:
 			"Utilising tagged template literals (a recent addition to JavaScript) and the power of CSS, styled-components allows you to write actual CSS code to style your components. It also removes the mapping between components and styles – using components as a low-level styling construct could not be easier!",
@@ -245,8 +245,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "CSS Loader",
 		author: "OpenJS Foundation",
-		gitHubRepo: "webpack-contrib/css-loader",
-		npmPackage: "css-loader",
+		repo: "https://www.github.com/webpack-contrib/css-loader",
+		package: "https://www.npmjs.com/package/css-loader",
 		href: "https://github.com/webpack-contrib/css-loader",
 		description:
 			"Allows the use of CSS Modules in projects built using Webpack. Also interprets @import and url() like import/require() and will resolve them.",
@@ -256,8 +256,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "PostCSS",
 		author: "Andrey Sitnik",
-		gitHubRepo: "postcss/postcss",
-		npmPackage: "postcss",
+		repo: "https://www.github.com/postcss/postcss",
+		package: "https://www.npmjs.com/package/postcss",
 		href: "https://github.com/postcss/postcss",
 		description:
 			"PostCSS takes a CSS file and provides an API to analyze and modify its rules (by transforming them into an Abstract Syntax Tree). This API can then be used by plugins to do a lot of useful things, e.g., to find errors automatically, or to insert vendor prefixes.",
@@ -267,8 +267,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Sass",
 		author: "Google",
-		gitHubRepo: "sass/dart-sass",
-		npmPackage: "sass",
+		repo: "https://www.github.com/sass/dart-sass",
+		package: "https://www.npmjs.com/package/sass",
 		href: "https://sass-lang.com/",
 		description:
 			"Sass is a very mature, stable, and powerful professional grade CSS extension language. It provides a superset of CSS with features like nesting, variables, imports and mixins.",
@@ -278,8 +278,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Aphrodite",
 		author: "Khan Academy",
-		gitHubRepo: "Khan/aphrodite",
-		npmPackage: "aphrodite",
+		repo: "https://www.github.com/Khan/aphrodite",
+		package: "https://www.npmjs.com/package/aphrodite",
 		href: "https://github.com/Khan/aphrodite",
 		description:
 			"Framework-agnostic CSS-in-JS with support for server-side rendering, browser prefixing, and minimum CSS generation.",
@@ -289,8 +289,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Radium",
 		author: "Formidable Labs",
-		gitHubRepo: "formidablelabs/radium",
-		npmPackage: "radium",
+		repo: "https://www.github.com/formidablelabs/radium",
+		package: "https://www.npmjs.com/package/radium",
 		href: "https://github.com/formidablelabs/radium",
 		description:
 			"Radium is a set of tools to manage inline styles on React elements. It gives you powerful styling capabilities without CSS.",
@@ -300,8 +300,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Vanilla Extract",
 		author: "SEEK",
-		gitHubRepo: "seek-oss/vanilla-extract",
-		npmPackage: "@vanilla-extract/css",
+		repo: "https://www.github.com/seek-oss/vanilla-extract",
+		package: "https://www.npmjs.com/package/@vanilla-extract/css",
 		href: "https://vanilla-extract.style/",
 		description:
 			"Use TypeScript as your preprocessor. Write type‑safe, locally scoped classes, variables and themes, then generate static CSS files at build time.",
@@ -311,8 +311,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Sprinkles",
 		author: "SEEK",
-		gitHubRepo: "seek-oss/vanilla-extract",
-		npmPackage: "@vanilla-extract/sprinkles",
+		repo: "https://www.github.com/seek-oss/vanilla-extract",
+		package: "https://www.npmjs.com/package/@vanilla-extract/sprinkles",
 		href: "https://vanilla-extract.style/",
 		description:
 			"Generate a static set of custom utility classes and compose them either statically at build time, or dynamically at runtime, without the usual style generation overhead of CSS-in-JS. Basically, it’s like building your own zero-runtime, type-safe version of Tailwind, Styled System, etc.",
@@ -322,8 +322,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "MUI",
 		author: "Material-UI",
-		gitHubRepo: "mui-org/material-ui",
-		npmPackage: "@mui/material",
+		repo: "https://www.github.com/mui-org/material-ui",
+		package: "https://www.npmjs.com/package/@mui/material",
 		href: "https://mui.com/",
 		description:
 			"MUI is a simple and customizable component library to build faster, beautiful, and more accessible React applications. Follow your own design system, or start with Material Design.",
@@ -333,8 +333,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Bootstrap",
 		author: "Stephen J. Collings, Matthew Honnibal, Pieter Vanderwerff",
-		gitHubRepo: "react-bootstrap/react-bootstrap",
-		npmPackage: "react-bootstrap",
+		repo: "https://www.github.com/react-bootstrap/react-bootstrap",
+		package: "https://www.npmjs.com/package/react-bootstrap",
 		href: "https://react-bootstrap.github.io/",
 		description:
 			"The most popular front-end framework rebuilt for React. Each component has been built from scratch as a true React component, without unneeded dependencies like jQuery.",
@@ -344,8 +344,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Fluent UI React",
 		author: "Microsoft",
-		gitHubRepo: "microsoft/fluentui",
-		npmPackage: "@fluentui/react",
+		repo: "https://www.github.com/microsoft/fluentui",
+		package: "https://www.npmjs.com/package/@fluentui/react",
 		href: "https://aka.ms/fluentui-react",
 		description:
 			"Fluent UI web represents a collection of utilities, React components, and web components for building web applications. It is the web version of Microsoft's cross-platform Fluent UI design framework.",
@@ -355,8 +355,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Blueprint",
 		author: "Palantir",
-		gitHubRepo: "palantir/blueprint",
-		npmPackage: "@blueprintjs/core",
+		repo: "https://www.github.com/palantir/blueprint",
+		package: "https://www.npmjs.com/package/@blueprintjs/core",
 		href: "http://blueprintjs.com/docs",
 		image:
 			"https://cloud.githubusercontent.com/assets/464822/20228152/d3f36dc2-a804-11e6-80ff-51ada2d13ea7.png",
@@ -367,8 +367,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Semantic UI React",
 		author: "Semantic Org",
-		gitHubRepo: "Semantic-Org/Semantic-UI-React",
-		npmPackage: "semantic-ui-react",
+		repo: "https://www.github.com/Semantic-Org/Semantic-UI-React",
+		package: "https://www.npmjs.com/package/semantic-ui-react",
 		href: "https://react.semantic-ui.com/",
 		image:
 			"https://github.com/Semantic-Org/Semantic-UI-React/raw/master/docs/public/logo.png",
@@ -379,8 +379,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Headless UI",
 		author: "Tailwind Labs",
-		gitHubRepo: "tailwindlabs/headlessui",
-		npmPackage: "@headlessui/react",
+		repo: "https://www.github.com/tailwindlabs/headlessui",
+		package: "https://www.npmjs.com/package/@headlessui/react",
 		href: "https://headlessui.dev/",
 		image: "https://github.com/tailwindlabs.png",
 		tags: ["component library"],
@@ -390,8 +390,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Ant Design",
 		author: "Ant",
-		gitHubRepo: "ant-design/ant-design",
-		npmPackage: "antd",
+		repo: "https://www.github.com/ant-design/ant-design",
+		package: "https://www.npmjs.com/package/antd",
 		href: "https://ant.design/",
 		image: "https://github.com/ant-design.png",
 		tags: ["component library"],
@@ -400,8 +400,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Radix Primitives",
 		author: "Modulz",
-		gitHubRepo: "radix-ui/primitives",
-		npmPackage: "@radix-ui/react-primitive",
+		repo: "https://www.github.com/radix-ui/primitives",
+		package: "https://www.npmjs.com/package/@radix-ui/react-primitive",
 		href: "https://radix-ui.com/docs/primitives",
 		image: "https://github.com/radix-ui.png",
 		tags: ["component library"],
@@ -411,8 +411,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Formik",
 		author: "Formium",
-		gitHubRepo: "formium/formik",
-		npmPackage: "formik",
+		repo: "https://www.github.com/formium/formik",
+		package: "https://www.npmjs.com/package/formik",
 		href: "https://formik.org/",
 		image: "https://github.com/formium.png",
 		tags: ["forms"],
@@ -422,8 +422,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Formsy React",
 		author: "The Formsy Authors",
-		gitHubRepo: "formsy/formsy-react",
-		npmPackage: "formsy-react",
+		repo: "https://www.github.com/formsy/formsy-react",
+		package: "https://www.npmjs.com/package/formsy-react",
 		href: "https://github.com/formsy/formsy-react",
 		image: "https://github.com/formsy.png",
 		tags: ["forms"],
@@ -433,8 +433,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Final Form",
 		author: "Erik Rasmussen",
-		gitHubRepo: "final-form/react-final-form",
-		npmPackage: "react-final-form",
+		repo: "https://www.github.com/final-form/react-final-form",
+		package: "https://www.npmjs.com/package/react-final-form",
 		href: "https://final-form.org/react",
 		image: "https://github.com/final-form.png",
 		tags: ["forms"],
@@ -444,8 +444,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Hook Form",
 		author: "Beier (Bill) Luo",
-		gitHubRepo: "react-hook-form/react-hook-form",
-		npmPackage: "react-hook-form",
+		repo: "https://www.github.com/react-hook-form/react-hook-form",
+		package: "https://www.npmjs.com/package/react-hook-form",
 		href: "https://react-hook-form.com/",
 		image: "https://github.com/react-hook-form.png",
 		tags: ["forms"],
@@ -455,8 +455,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "KendoReact UI",
 		author: "Telerik",
-		gitHubRepo: "telerik/kendo-react",
-		npmPackage: "@progress/kendo-react-all",
+		repo: "https://www.github.com/telerik/kendo-react",
+		package: "https://www.npmjs.com/package/@progress/kendo-react-all",
 		href: "https://www.telerik.com/kendo-react-ui",
 		image: "https://github.com/telerik.png",
 		tags: ["component library"],
@@ -466,8 +466,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Redux Form",
 		author: "Erik Rasmussen",
-		gitHubRepo: "redux-form/redux-form",
-		npmPackage: "redux-form",
+		repo: "https://www.github.com/redux-form/redux-form",
+		package: "https://www.npmjs.com/package/redux-form",
 		href: "https://redux-form.com/8.3.0/",
 		image: "https://github.com/redux-form.png",
 		tags: ["forms", "redux"],
@@ -477,8 +477,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Astro",
 		author: "Fred K. Schott",
-		gitHubRepo: "withastro/astro",
-		npmPackage: "astro",
+		repo: "https://www.github.com/withastro/astro",
+		package: "https://www.npmjs.com/package/astro",
 		href: "https://astro.build/",
 		image: "https://github.com/withastro.png",
 		tags: ["framework", "static site generation"],
@@ -488,8 +488,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Redwood",
 		author: "Redwood",
-		gitHubRepo: "redwoodjs/redwood",
-		npmPackage: "@redwoodjs/core",
+		repo: "https://www.github.com/redwoodjs/redwood",
+		package: "https://www.npmjs.com/package/@redwoodjs/core",
 		href: "https://redwoodjs.com/",
 		image: "https://github.com/redwoodjs.png",
 		tags: ["framework"],
@@ -499,8 +499,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Create React App",
 		author: "Facebook",
-		gitHubRepo: "facebook/create-react-app",
-		npmPackage: "create-react-app",
+		repo: "https://www.github.com/facebook/create-react-app",
+		package: "https://www.npmjs.com/package/create-react-app",
 		href: "https://create-react-app.dev/",
 		image: "https://create-react-app.dev/img/logo.svg",
 		tags: ["framework"],
@@ -510,8 +510,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Next.js",
 		author: "Vercel",
-		gitHubRepo: "vercel/next.js",
-		npmPackage: "next",
+		repo: "https://www.github.com/vercel/next.js",
+		package: "https://www.npmjs.com/package/next",
 		href: "https://nextjs.org/",
 		image:
 			"https://camo.githubusercontent.com/92ec9eb7eeab7db4f5919e3205918918c42e6772562afb4112a2909c1aaaa875/68747470733a2f2f6173736574732e76657263656c2e636f6d2f696d6167652f75706c6f61642f76313630373535343338352f7265706f7369746f726965732f6e6578742d6a732f6e6578742d6c6f676f2e706e67",
@@ -522,8 +522,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Gatsby",
 		author: "Gatsbyjs",
-		gitHubRepo: "gatsbyjs/gatsby",
-		npmPackage: "gatsby",
+		repo: "https://www.github.com/gatsbyjs/gatsby",
+		package: "https://www.npmjs.com/package/gatsby",
 		href: "https://www.gatsbyjs.com/",
 		image: "https://github.com/gatsbyjs.png",
 		tags: ["framework", "static site generation", "graphQL"],
@@ -533,8 +533,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Eleventy",
 		author: "Zach Leatherman",
-		gitHubRepo: "11ty/eleventy",
-		npmPackage: "@11ty/eleventy",
+		repo: "https://www.github.com/11ty/eleventy",
+		package: "https://www.npmjs.com/package/@11ty/eleventy",
 		href: "https://www.11ty.dev/",
 		image: "https://github.com/11ty.png",
 		tags: ["static site generation"],
@@ -544,8 +544,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Storybook",
 		author: "Storybook",
-		gitHubRepo: "storybookjs/storybook",
-		npmPackage: "@storybook/react",
+		repo: "https://www.github.com/storybookjs/storybook",
+		package: "https://www.npmjs.com/package/@storybook/react",
 		href: "https://storybook.js.org/",
 		image: "https://github.com/storybookjs.png",
 		tags: ["documentation", "testing", "storybook"],
@@ -555,8 +555,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Router",
 		author: "Remix Software",
-		gitHubRepo: "remix-run/react-router",
-		npmPackage: "react-router",
+		repo: "https://www.github.com/remix-run/react-router",
+		package: "https://www.npmjs.com/package/react-router",
 		href: "https://github.com/remix-run/react-router",
 		image: "https://github.com/remix-run.png",
 		tags: ["routing"],
@@ -566,8 +566,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Reach Router",
 		author: "Ryan Florence",
-		gitHubRepo: "reach/router",
-		npmPackage: "@reach/router",
+		repo: "https://www.github.com/reach/router",
+		package: "https://www.npmjs.com/package/@reach/router",
 		href: "https://reach.tech/router",
 		image: "https://github.com/reach.png",
 		tags: ["routing"],
@@ -577,8 +577,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Framer Motion",
 		author: "Framer",
-		gitHubRepo: "framer/motion",
-		npmPackage: "framer-motion",
+		repo: "https://www.github.com/framer/motion",
+		package: "https://www.npmjs.com/package/framer-motion",
 		href: "https://www.framer.com/docs/",
 		image:
 			"https://camo.githubusercontent.com/179d66ab2b0321726c88a586c4ad38802e7113a3c98c6fd3f0156c01c98cfd14/68747470733a2f2f6672616d657275736572636f6e74656e742e636f6d2f696d616765732f34386861395a52396f5a51475136675a38595566456c50335430412e706e67",
@@ -589,8 +589,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Spring",
 		author: "Paul Henschel and contributors",
-		gitHubRepo: "pmndrs/react-spring",
-		npmPackage: "react-spring",
+		repo: "https://www.github.com/pmndrs/react-spring",
+		package: "https://www.npmjs.com/package/react-spring",
 		href: "https://www.react-spring.io/",
 		image:
 			"https://camo.githubusercontent.com/973c99d17e4ce72d08c4433449045d8391948711f11ac5f328a585e2a7bc8663/68747470733a2f2f692e696d6775722e636f6d2f515a6f776e68672e706e67",
@@ -601,8 +601,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Motion",
 		author: "Multiple contributors",
-		gitHubRepo: "chenglou/react-motion",
-		npmPackage: "react-motion",
+		repo: "https://www.github.com/chenglou/react-motion",
+		package: "https://www.npmjs.com/package/react-motion",
 		href: "https://github.com/chenglou/react-motion",
 		image: "https://github.com/chenglou.png",
 		tags: ["animation"],
@@ -612,8 +612,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Toastify",
 		author: "Fadi Khadra",
-		gitHubRepo: "fkhadra/react-toastify",
-		npmPackage: "react-toastify",
+		repo: "https://www.github.com/fkhadra/react-toastify",
+		package: "https://www.npmjs.com/package/react-toastify",
 		href: "https://fkhadra.github.io/react-toastify/introduction",
 		image: "https://github.com/fkhadra.png",
 		tags: ["component"],
@@ -623,8 +623,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Intl",
 		author: "Oath",
-		gitHubRepo: "formatjs/formatjs",
-		npmPackage: "react-intl",
+		repo: "https://www.github.com/formatjs/formatjs",
+		package: "https://www.npmjs.com/package/react-intl",
 		href: "https://formatjs.io/docs/getting-started/installation/",
 		image: "https://github.com/formatjs.png",
 		tags: ["internationalization"],
@@ -634,8 +634,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Next Intl",
 		author: "Jan Amann",
-		gitHubRepo: "amannn/next-intl",
-		npmPackage: "next-intl",
+		repo: "https://www.github.com/amannn/next-intl",
+		package: "https://www.npmjs.com/package/next-intl",
 		href: "https://github.com/amannn/next-intl",
 		image: "https://github.com/amannn.png",
 		tags: ["internationalization"],
@@ -645,8 +645,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React i18next",
 		author: "i18next",
-		gitHubRepo: "i18next/react-i18next",
-		npmPackage: "react-i18next",
+		repo: "https://www.github.com/i18next/react-i18next",
+		package: "https://www.npmjs.com/package/react-i18next",
 		href: "https://react.i18next.com/",
 		image: "https://github.com/i18next.png",
 		tags: ["internationalization"],
@@ -656,8 +656,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "LinguiJS",
 		author: "Tomáš Ehrlich",
-		gitHubRepo: "lingui/js-lingui",
-		npmPackage: "@lingui/react",
+		repo: "https://www.github.com/lingui/js-lingui",
+		package: "https://www.npmjs.com/package/@lingui/react",
 		href: "https://lingui.js.org/",
 		image: "https://github.com/lingui.png",
 		tags: ["internationalization"],
@@ -667,8 +667,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Rosetta",
 		author: "Luke Edwards",
-		gitHubRepo: "lukeed/rosetta",
-		npmPackage: "rosetta",
+		repo: "https://www.github.com/lukeed/rosetta",
+		package: "https://www.npmjs.com/package/rosetta",
 		href: "https://github.com/lukeed/rosetta",
 		image: "https://github.com/lukeed.png",
 		tags: ["internationalization"],
@@ -677,8 +677,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Three Fiber",
 		author: "Poimandres",
-		gitHubRepo: "pmndrs/react-three-fiber",
-		npmPackage: "@react-three/fiber",
+		repo: "https://www.github.com/pmndrs/react-three-fiber",
+		package: "https://www.npmjs.com/package/@react-three/fiber",
 		href: "https://docs.pmnd.rs/react-three-fiber/getting-started/introduction",
 		image: "https://github.com/pmndrs.png",
 		tags: ["3D"],
@@ -687,8 +687,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Drei",
 		author: "Poimandres",
-		gitHubRepo: "pmndrs/drei",
-		npmPackage: "@react-three/drei",
+		repo: "https://www.github.com/pmndrs/drei",
+		package: "https://www.npmjs.com/package/@react-three/drei",
 		href: "https://docs.pmnd.rs/drei/introduction",
 		image: "https://github.com/pmndrs.png",
 		tags: ["3D"],
@@ -698,8 +698,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Zustand",
 		author: "Poimandres",
-		gitHubRepo: "pmndrs/zustand",
-		npmPackage: "zustand",
+		repo: "https://www.github.com/pmndrs/zustand",
+		package: "https://www.npmjs.com/package/zustand",
 		href: "https://zustand-demo.pmnd.rs",
 		image: "https://raw.githubusercontent.com/pmndrs/zustand/main/bear.jpg",
 		tags: ["state management"],
@@ -709,8 +709,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Jotai",
 		author: "Poimandres",
-		gitHubRepo: "pmndrs/jotai",
-		npmPackage: "jotai",
+		repo: "https://www.github.com/pmndrs/jotai",
+		package: "https://www.npmjs.com/package/jotai",
 		href: "https://jotai.org/",
 		image: "https://storage.googleapis.com/candycode/jotai/jotai-mascot.png",
 		tags: ["state management"],
@@ -719,8 +719,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Valtio",
 		author: "Poimandres",
-		gitHubRepo: "pmndrs/valtio",
-		npmPackage: "valtio",
+		repo: "https://www.github.com/pmndrs/valtio",
+		package: "https://www.npmjs.com/package/valtio",
 		href: "https://github.com/pmndrs/valtio",
 		image: "https://github.com/pmndrs.png",
 		tags: ["state management"],
@@ -730,8 +730,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "A11y",
 		author: "Poimandres",
-		gitHubRepo: "pmndrs/a11y",
-		npmPackage: "@react-three/a11y",
+		repo: "https://www.github.com/pmndrs/a11y",
+		package: "https://www.npmjs.com/package/@react-three/a11y",
 		href: "https://docs.pmnd.rs/a11y/introduction",
 		image: "https://github.com/pmndrs.png",
 		tags: ["3D", "a11y"],
@@ -741,8 +741,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Cannon",
 		author: "Poimandres",
-		gitHubRepo: "pmndrs/use-cannon",
-		npmPackage: "@react-three/cannon",
+		repo: "https://www.github.com/pmndrs/use-cannon",
+		package: "https://www.npmjs.com/package/@react-three/cannon",
 		href: "https://github.com/pmndrs/use-cannon",
 		image: "https://github.com/pmndrs.png",
 		tags: ["3D"],
@@ -752,8 +752,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Use Gesture",
 		author: "Poimandres",
-		gitHubRepo: "pmndrs/use-gesture",
-		npmPackage: "@use-gesture/react",
+		repo: "https://www.github.com/pmndrs/use-gesture",
+		package: "https://www.npmjs.com/package/@use-gesture/react",
 		href: "https://use-gesture.netlify.app/",
 		image: "https://github.com/pmndrs.png",
 		tags: ["3D"],
@@ -763,8 +763,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React XR",
 		author: "Poimandres",
-		gitHubRepo: "pmndrs/react-xr",
-		npmPackage: "@react-three/xr",
+		repo: "https://www.github.com/pmndrs/react-xr",
+		package: "https://www.npmjs.com/package/@react-three/xr",
 		href: "https://github.com/pmndrs/react-xr",
 		image: "https://github.com/pmndrs.png",
 		tags: ["3D"],
@@ -774,8 +774,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Postprocessing",
 		author: "Poimandres",
-		gitHubRepo: "pmndrs/react-postprocessing",
-		npmPackage: "@react-three/postprocessing",
+		repo: "https://www.github.com/pmndrs/react-postprocessing",
+		package: "https://www.npmjs.com/package/@react-three/postprocessing",
 		href: "https://docs.pmnd.rs/react-postprocessing/introduction",
 		image: "https://github.com/pmndrs.png",
 		tags: ["3D"],
@@ -785,8 +785,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Three GUI",
 		author: "Birkir Gudjonsson",
-		gitHubRepo: "birkir/react-three-gui",
-		npmPackage: "react-three-gui",
+		repo: "https://www.github.com/birkir/react-three-gui",
+		package: "https://www.npmjs.com/package/react-three-gui",
 		href: "https://github.com/birkir/react-three-gui",
 		image: "https://github.com/birkir.png",
 		tags: ["3D"],
@@ -796,8 +796,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Blitz",
 		author: "Brandon Bayer",
-		gitHubRepo: "blitz-js/blitz",
-		npmPackage: "blitz",
+		repo: "https://www.github.com/blitz-js/blitz",
+		package: "https://www.npmjs.com/package/blitz",
 		href: "https://blitzjs.com/",
 		description:
 			'Blitz is a batteries-included framework that\'s inspired by Ruby on Rails, is built on Next.js, and features a "Zero-API" data layer abstraction that eliminates the need for REST/GraphQL.',
@@ -813,8 +813,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Remix",
 		author: "Remix",
-		gitHubRepo: "remix-run/remix",
-		npmPackage: "remix",
+		repo: "https://www.github.com/remix-run/remix",
+		package: "https://www.npmjs.com/package/remix",
 		href: "https://remix.run/",
 		description:
 			"Remix is a full stack web framework (from the creators of React Router) that lets you focus on the user interface and work back through web fundamentals to deliver a fast, slick, and resilient user experience.",
@@ -830,8 +830,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Bumbag",
 		author: "Jake Moxey",
-		gitHubRepo: "jxom/bumbag-ui",
-		npmPackage: "bumbag",
+		repo: "https://www.github.com/jxom/bumbag-ui",
+		package: "https://www.npmjs.com/package/bumbag",
 		href: "https://bumbag.style/",
 		image: "https://github.com/jxom.png",
 		tags: ["component library"],
@@ -841,8 +841,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Chakra UI",
 		author: "Segun Adebayo",
-		gitHubRepo: "chakra-ui/chakra-ui",
-		npmPackage: "@chakra-ui/react",
+		repo: "https://www.github.com/chakra-ui/chakra-ui",
+		package: "https://www.npmjs.com/package/@chakra-ui/react",
 		href: "https://chakra-ui.com/",
 		image: "https://github.com/chakra-ui.png",
 		tags: ["component library"],
@@ -852,8 +852,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Reach UI",
 		author: "Reach",
-		gitHubRepo: "reach/reach-ui",
-		npmPackage: "@reach/accordion",
+		repo: "https://www.github.com/reach/reach-ui",
+		package: "https://www.npmjs.com/package/@reach/accordion",
 		href: "https://reach.tech/",
 		image: "https://github.com/reach.png",
 		tags: ["component library"],
@@ -862,8 +862,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "HashiCorp React Component",
 		author: "HashiCorp",
-		gitHubRepo: "hashicorp/react-components",
-		npmPackage: "@hashicorp/react-accordion",
+		repo: "https://www.github.com/hashicorp/react-components",
+		package: "https://www.npmjs.com/package/@hashicorp/react-accordion",
 		href: "https://react-components.vercel.app/",
 		image: "https://github.com/hashicorp.png",
 		tags: ["component library"],
@@ -873,8 +873,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Spectrum",
 		author: "Adobe, Inc.",
-		gitHubRepo: "adobe/react-spectrum",
-		npmPackage: "@adobe/react-spectrum",
+		repo: "https://www.github.com/adobe/react-spectrum",
+		package: "https://www.npmjs.com/package/@adobe/react-spectrum",
 		href: "https://react-spectrum.adobe.com/",
 		image: "https://github.com/adobe.png",
 		tags: ["component library"],
@@ -884,8 +884,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Windmill React UI",
 		author: "Estevan Maito",
-		gitHubRepo: "estevanmaito/windmill-react-ui",
-		npmPackage: "@windmill/react-ui",
+		repo: "https://www.github.com/estevanmaito/windmill-react-ui",
+		package: "https://www.npmjs.com/package/@windmill/react-ui",
 		href: "https://windmillui.com/",
 		image: "https://github.com/estevanmaito.png",
 		tags: ["component library"],
@@ -895,8 +895,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React Testing Library",
 		author: "testing-library",
-		gitHubRepo: "testing-library/react-testing-library",
-		npmPackage: "@testing-library/react",
+		repo: "https://www.github.com/testing-library/react-testing-library",
+		package: "https://www.npmjs.com/package/@testing-library/react",
 		href: "https://testing-library.com/docs/react-testing-library/intro/",
 		image:
 			"https://raw.githubusercontent.com/testing-library/react-testing-library/main/other/goat.png",
@@ -907,8 +907,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Vitest",
 		author: "Vitest",
-		gitHubRepo: "vitest-dev/vitest",
-		npmPackage: "vitest",
+		repo: "https://www.github.com/vitest-dev/vitest",
+		package: "https://www.npmjs.com/package/vitest",
 		href: "https://vitest.dev/",
 		image: "https://github.com/vitest-dev.png",
 		tags: ["testing"],
@@ -917,8 +917,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Cypress",
 		author: "Cypress",
-		gitHubRepo: "cypress-io/cypress",
-		npmPackage: "cypress",
+		repo: "https://www.github.com/cypress-io/cypress",
+		package: "https://www.npmjs.com/package/cypress",
 		href: "https://www.cypress.io/",
 		image: "https://github.com/cypress-io.png",
 		tags: ["testing"],
@@ -928,8 +928,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Jest",
 		author: "Meta",
-		gitHubRepo: "facebook/jest",
-		npmPackage: "jest",
+		repo: "https://www.github.com/facebook/jest",
+		package: "https://www.npmjs.com/package/jest",
 		href: "https://jestjs.io/",
 		image:
 			"https://raw.githubusercontent.com/facebook/jest/main/website/static/img/jest.png",
@@ -940,8 +940,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Enzyme",
 		author: "Jordan Harband",
-		gitHubRepo: "enzymejs/enzyme",
-		npmPackage: "enzyme",
+		repo: "https://www.github.com/enzymejs/enzyme",
+		package: "https://www.npmjs.com/package/enzyme",
 		href: "https://enzymejs.github.io/enzyme/",
 		image: "https://github.com/enzymejs.png",
 		tags: ["testing"],
@@ -951,8 +951,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Cypress IndexedDB helpers",
 		author: "This Dot Labs",
-		gitHubRepo: "thisdot/open-source",
-		npmPackage: "@this-dot/cypress-indexeddb",
+		repo: "https://www.github.com/thisdot/open-source",
+		package: "https://www.npmjs.com/package/@this-dot/cypress-indexeddb",
 		href: "https://www.npmjs.com/package/@this-dot/cypress-indexeddb",
 		image: "https://github.com/thisdot.png",
 		tags: ["testing"],

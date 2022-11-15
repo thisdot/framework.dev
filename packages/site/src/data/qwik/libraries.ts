@@ -8,15 +8,15 @@ export const libraryTags = [
 	"testing",
 	"storybook",
 	"internationalization",
-	"react"
+	"react",
 ] as const
 
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "TailwindCSS",
 		author: "Adam Wathan & Jonathan Reinink",
-		gitHubRepo: "tailwindlabs/tailwindcss",
-		npmPackage: "tailwindcss",
+		repo: "https://www.github.com/tailwindlabs/tailwindcss",
+		package: "https://www.npmjs.com/package/tailwindcss",
 		href: "https://tailwindcss.com/",
 		description:
 			"A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
@@ -26,8 +26,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Storybook",
 		author: "Storybook",
-		gitHubRepo: "storybookjs/storybook",
-		npmPackage: "@storybook/react",
+		repo: "https://www.github.com/storybookjs/storybook",
+		package: "https://www.npmjs.com/package/@storybook/react",
 		href: "https://storybook.js.org/",
 		image: "https://github.com/storybookjs.png",
 		tags: ["documentation", "testing", "storybook"],
@@ -37,8 +37,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Qwik i18n",
 		author: "i18next",
-		gitHubRepo: "mhevery/qwik-i18n",
-		npmPackage: "",
+		repo: "https://www.github.com/mhevery/qwik-i18n",
+		package: "",
 		href: "https://github.com/mhevery/qwik-i18n",
 		image: "https://qwik.builder.io/logos/social-card.png?v=3",
 		tags: ["internationalization"],
@@ -48,8 +48,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Partytown",
 		author: "BuilderIO",
-		gitHubRepo: "BuilderIO/partytown",
-		npmPackage: "@builder.io/partytown",
+		repo: "https://www.github.com/BuilderIO/partytown",
+		package: "https://www.npmjs.com/package/@builder.io/partytown",
 		href: "https://github.com/BuilderIO/partytown",
 		image: "https://qwik.builder.io/logos/social-card.png?v=3",
 		tags: ["web-workers"],
@@ -59,12 +59,11 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "React",
 		author: "facebook",
-		gitHubRepo: "facebook/react",
-		npmPackage: "@facebook/react",
+		repo: "https://www.github.com/facebook/react",
+		package: "https://www.npmjs.com/package/@facebook/react",
 		href: "https://reactjs.org/",
 		image: "https://github.com/react.png",
 		tags: ["react"],
-		description:
-			"React is a JavaScript library for building user interfaces.",
+		description: "React is a JavaScript library for building user interfaces.",
 	},
 ]

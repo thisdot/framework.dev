@@ -33,26 +33,38 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 			tags={library.tags}
 			badges={
 				<>
-					<Badge
-						data={getGitHubStarsBadge(library.gitHubRepo)}
-						href={`https://www.github.com/${library.gitHubRepo}`}
-						label={`${library.name} GitHub Repository`}
-					/>
-
-					{library?.npmPackage === "" ? null : (
+					{/* TODO: For others not using GitHub decide what kind of badge to show */}
+					{library?.repo.includes("github.com") ? (
+						<Badge
+							data={getGitHubStarsBadge(
+								library.repo.replace("https://www.github.com/", "")
+							)}
+							href={library.repo}
+							label={`${library.name} GitHub Repository`}
+						/>
+					) : null}
+					{/* TODO: For others not using npm decide what kind of badge to show */}
+					{library?.package.includes("npmjs") ? (
 						<>
 							<Badge
-								data={getNpmDownloadsBadge(library.npmPackage)}
-								href={`https://www.npmjs.com/package/${library.npmPackage}`}
+								data={getNpmDownloadsBadge(
+									library.package.replace("https://www.npmjs.com/package/", "")
+								)}
+								href={library.package}
 								label={`${library.name} NPM Package`}
 							/>
 							<Badge
-								data={getBundleSizeBadge(library.npmPackage)}
-								href={`https://bundlephobia.com/package/${library.npmPackage}`}
+								data={getBundleSizeBadge(
+									library.package.replace("https://www.npmjs.com/package/", "")
+								)}
+								href={`https://bundlephobia.com/package/${library.package.replace(
+									"https://www.npmjs.com/package/",
+									""
+								)}`}
 								label={`${library.name} Bundle Size Stats`}
 							/>
 						</>
-					)}
+					) : null}
 				</>
 			}
 			{...props}
