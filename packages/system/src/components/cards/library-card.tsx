@@ -33,7 +33,6 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 			tags={library.tags}
 			badges={
 				<>
-					{/* TODO: For others not using GitHub decide what kind of badge to show */}
 					{library?.repo.includes("github.com") ? (
 						<Badge
 							data={getGitHubStarsBadge(
@@ -42,8 +41,14 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 							href={library.repo}
 							label={`${library.name} GitHub Repository`}
 						/>
+					) : library?.repo !== "" ? (
+						// TODO: Have other frameworks decide what image to use if not GitHub
+						<Badge
+							data={""}
+							href={library.repo}
+							label={`${library.name} GitHub Repository`}
+						/>
 					) : null}
-					{/* TODO: For others not using npm decide what kind of badge to show */}
 					{library?.package.includes("npmjs") ? (
 						<>
 							<Badge
@@ -64,6 +69,13 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 								label={`${library.name} Bundle Size Stats`}
 							/>
 						</>
+					) : library?.package !== "" ? (
+						// TODO: Have other frameworks decide what image to use if not npm
+						<Badge
+							data={""}
+							href={library.package}
+							label={`${library.name} Package`}
+						/>
 					) : null}
 				</>
 			}
@@ -75,7 +87,7 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 }
 
 type BadgeProps = {
-	data: string
+	data?: string
 	href: string
 	label: string
 }
