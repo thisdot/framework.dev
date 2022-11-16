@@ -26,6 +26,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
 		image: "https://github.com/tailwindlabs.png",
 		tags: ["styling", "utility-first CSS"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Storybook",
@@ -37,6 +38,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["documentation", "testing", "storybook"],
 		description:
 			"Storybook is a development environment for UI components. It allows you to browse a component library, view the different states of each component, and interactively develop and test components.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Qwik i18n",
@@ -48,6 +50,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["internationalization"],
 		description:
 			"Qwik is unique in that it has fine-grained lazy loading of code. The classical way to do translation is at runtime by looking up the translation strings in the translation map.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Partytown",
@@ -59,6 +62,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["web-workers"],
 		description:
 			"Partytown is a lazy-loaded library to help relocate resource intensive scripts into a web worker, and off of the main thread. Its goal is to help speed up sites by dedicating the main thread to your code, and offloading third-party scripts to a web worker.",
+		language: libraryTags[0],
 	},
 	{
 		name: "React",
@@ -69,5 +73,6 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image: "https://github.com/react.png",
 		tags: ["react"],
 		description: "React is a JavaScript library for building user interfaces.",
+		language: libraryTags[0],
 	},
 ]

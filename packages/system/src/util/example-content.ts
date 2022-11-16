@@ -102,6 +102,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://camo.githubusercontent.com/d281ce16f30146daddb2800415d6c177fccf9a7f198d21aacfe81f0f6ebb1490/68747470733a2f2f66616365626f6f6b2e6769746875622e696f2f666c75782f696d672f666c75782d6c6f676f2d636f6c6f722e737667",
 		tags: ["state management"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Redux",
@@ -113,6 +114,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"A predictable, centralized, debuggable and flexible state container for JS apps inspired by the Flux and Elm architectures.",
 		image: "https://github.com/reduxjs.png",
 		tags: ["state management", "redux"],
+		language: libraryTags[0],
 	},
 	{
 		name: "MobX",
@@ -125,6 +127,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://camo.githubusercontent.com/0dc3b9afa37acc792f49624b1f8dd364b55c9107167fd291ffde1d81917aceba/68747470733a2f2f6d6f62782e6a732e6f72672f6173736574732f6d6f62782e706e67",
 		tags: ["state management"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Apollo Client",
@@ -136,6 +139,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"A fully-featured caching GraphQL client with integrations for React that also has functionality for managing local state.",
 		image: "https://github.com/apollographql.png",
 		tags: ["state management", "data fetching", "graphQL"],
+		language: libraryTags[0],
 	},
 	{
 		name: "XState",
@@ -147,6 +151,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"JavaScript and TypeScript finite state machines and statecharts for the modern web.",
 		image: "https://github.com/statelyai.png",
 		tags: ["state management"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Recoil",
@@ -159,6 +164,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://pbs.twimg.com/profile_images/1377116487933030410/kyyHFjc2_400x400.jpg",
 		tags: ["state management"],
+		language: libraryTags[0],
 	},
 	{
 		name: "React Query",
@@ -171,6 +177,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://react-query.tanstack.com/_next/static/images/emblem-light-628080660fddb35787ff6c77e97ca43e.svg",
 		tags: ["data fetching", "state management"],
+		language: libraryTags[0],
 	},
 	{
 		name: "SWR",
@@ -182,6 +189,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"The name “SWR” is derived from stale-while-revalidate, a HTTP cache invalidation strategy popularized by HTTP RFC 5861. SWR is a strategy to first return the data from cache (stale), then send the fetch request (revalidate), and finally come with the up-to-date data.",
 		image: "https://github.com/vercel.png",
 		tags: ["data fetching"],
+		language: libraryTags[0],
 	},
 	{
 		name: "React Fetching Library",
@@ -193,6 +201,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"Use hooks or FACC's (Function as Child Component) to fetch data in an easy way. No dependencies! Just React under the hood. Request and response interceptors allows you to easily customize connection with API (add authorization, refresh token, cache, etc). It uses Fetch API so it can be used in SSR apps (i.e. with isomorphic-fetch).",
 		image: "https://github.com/marcin-piela.png",
 		tags: ["data fetching"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Axios",
@@ -204,6 +213,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a simple to use library in a small package with a very extensible interface.",
 		image: "https://github.com/axios.png",
 		tags: ["data fetching", "HTTP client"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Superagent",
@@ -215,6 +225,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"Small progressive client-side HTTP request library, and Node.js module with the same API, supporting many high-level HTTP client features.",
 		image: "https://github.com/tj.png",
 		tags: ["data fetching", "HTTP client"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Ky",
@@ -226,6 +237,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"Ky is a tiny and elegant HTTP client based on the browser Fetch API. Ky targets modern browsers and Deno. It's just a tiny file with no dependencies.",
 		image: "https://github.com/sindresorhus.png",
 		tags: ["data fetching", "HTTP client"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Popsicle",
@@ -237,6 +249,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"Advanced HTTP requests in node.js and browsers, using Servie, a set of standard, framework-agnostic HTTP interfaces for JavaScript servers and clients",
 		image: "https://github.com/serviejs.png",
 		tags: ["data fetching", "HTTP client"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Stream HTTP",
@@ -248,6 +261,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"This module is an implementation of Node's native http module for the browser. It tries to match Node's API and behavior as closely as possible, but some features aren't available, since browsers don't give nearly as much control over requests.",
 		image: "https://github.com/jhiesey.png",
 		tags: ["data fetching", "HTTP client"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Emotion",
@@ -259,6 +273,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"Emotion is a performant and flexible CSS-in-JS library. Building on many other CSS-in-JS libraries, it allows you to style apps quickly with string or object styles. It has predictable composition to avoid specificity issues with CSS. With source maps and labels, Emotion has a great developer experience and great performance with heavy caching in production.",
 		image: "https://github.com/emotion-js.png",
 		tags: ["styling", "CSS in JS"],
+		language: libraryTags[0],
 	},
 	{
 		name: "TailwindCSS",
@@ -270,6 +285,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
 		image: "https://github.com/tailwindlabs.png",
 		tags: ["styling", "utility-first CSS"],
+		language: libraryTags[0],
 	},
 	{
 		name: "styled-components",
@@ -281,6 +297,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"Utilising tagged template literals (a recent addition to JavaScript) and the power of CSS, styled-components allows you to write actual CSS code to style your components. It also removes the mapping between components and styles – using components as a low-level styling construct could not be easier!",
 		image: "https://github.com/styled-components.png",
 		tags: ["styling", "CSS in JS"],
+		language: libraryTags[0],
 	},
 	{
 		name: "CSS Loader",
@@ -292,6 +309,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"Allows the use of CSS Modules in projects built using Webpack. Also interprets @import and url() like import/require() and will resolve them.",
 		image: "https://github.com/webpack-contrib.png",
 		tags: ["styling", "CSS modules", "CSS processor", "webpack"],
+		language: libraryTags[0],
 	},
 	{
 		name: "PostCSS",
@@ -303,6 +321,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"PostCSS takes a CSS file and provides an API to analyze and modify its rules (by transforming them into an Abstract Syntax Tree). This API can then be used by plugins to do a lot of useful things, e.g., to find errors automatically, or to insert vendor prefixes.",
 		image: "https://github.com/postcss.png",
 		tags: ["styling", "CSS processor"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Sass",
@@ -314,6 +333,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"Sass is a very mature, stable, and powerful professional grade CSS extension language. It provides a superset of CSS with features like nesting, variables, imports and mixins.",
 		image: "https://github.com/sass.png",
 		tags: ["styling", "CSS processor"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Aphrodite",
@@ -325,6 +345,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"Framework-agnostic CSS-in-JS with support for server-side rendering, browser prefixing, and minimum CSS generation.",
 		image: "https://github.com/Khan.png",
 		tags: ["styling", "CSS in JS"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Radium",
@@ -336,6 +357,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"Radium is a set of tools to manage inline styles on React elements. It gives you powerful styling capabilities without CSS.",
 		image: "https://github.com/FormidableLabs.png",
 		tags: ["styling", "CSS in JS"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Vanilla Extract",
@@ -347,6 +369,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"Use TypeScript as your preprocessor. Write type‑safe, locally scoped classes, variables and themes, then generate static CSS files at build time.",
 		image: "https://github.com/seek-oss.png",
 		tags: ["styling", "CSS processor", "CSS in JS", "CSS modules"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Sprinkles",
@@ -358,6 +381,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"Generate a static set of custom utility classes and compose them either statically at build time, or dynamically at runtime, without the usual style generation overhead of CSS-in-JS. Basically, it’s like building your own zero-runtime, type-safe version of Tailwind, Styled System, etc.",
 		image: "https://github.com/seek-oss.png",
 		tags: ["styling", "utility-first CSS", "CSS in JS"],
+		language: libraryTags[0],
 	},
 	{
 		name: "MUI",
@@ -369,6 +393,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"MUI is a simple and customizable component library to build faster, beautiful, and more accessible React applications. Follow your own design system, or start with Material Design.",
 		image: "https://github.com/mui-org.png",
 		tags: ["component library"],
+		language: libraryTags[0],
 	},
 	{
 		name: "React Bootstrap",
@@ -380,6 +405,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"The most popular front-end framework rebuilt for React. Each component has been built from scratch as a true React component, without unneeded dependencies like jQuery.",
 		image: "https://github.com/react-bootstrap.png",
 		tags: ["component library"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Fluent UI React",
@@ -391,6 +417,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 			"Fluent UI web represents a collection of utilities, React components, and web components for building web applications. It is the web version of Microsoft's cross-platform Fluent UI design framework.",
 		image: "https://github.com/microsoft.png",
 		tags: ["component library"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Blueprint",
@@ -403,6 +430,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["component library"],
 		description:
 			"Blueprint is a React-based UI toolkit for the web. It is optimized for building complex, data-dense web interfaces for desktop applications which run in modern browsers and IE11. This is not a mobile-first UI toolkit.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Semantic UI React",
@@ -415,6 +443,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["component library"],
 		description:
 			"Semantic UI React is the official React integration for Semantic UI, a popular UI development framework.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Headless UI",
@@ -426,6 +455,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["component library"],
 		description:
 			"A set of completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Ant Design",
@@ -436,6 +466,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		image: "https://github.com/ant-design.png",
 		tags: ["component library"],
 		description: "An enterprise-class UI design language and React UI library.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Radix Primitives",
@@ -447,6 +478,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["component library"],
 		description:
 			"Radix Primitives is a low-level UI component library with a focus on accessibility, customization and developer experience. You can use these components either as the base layer of your design system, or adopt them incrementally.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Formik",
@@ -458,6 +490,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["forms"],
 		description:
 			"Build forms in React, without the tears. Formik takes care of the repetitive and annoying stuff—keeping track of values/errors/visited fields, orchestrating validation, and handling submission—so you don't have to. This means you spend less time wiring up state and change handlers and more time focusing on your business logic.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Formsy React",
@@ -469,6 +502,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["forms"],
 		description:
 			"christianalfoni wrote an article on forms and validation with React, Nailing that validation with React JS, the result of that was this library. The main concept is that forms, inputs, and validation are done very differently across developers and projects. This React component aims to be that “sweet spot” between flexibility and reusability.",
+		language: libraryTags[0],
 	},
 	{
 		name: "React Final Form",
@@ -480,6 +514,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["forms"],
 		description:
 			"High performance, zero-dependency subscription-based form state management for React",
+		language: libraryTags[0],
 	},
 	{
 		name: "React Hook Form",
@@ -491,6 +526,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["forms"],
 		description:
 			"Performant, flexible and extensible forms with easy-to-use validation. React Hook Form reduces the amount of code you need to write while removing unnecessary re-renders.",
+		language: libraryTags[0],
 	},
 	{
 		name: "KendoReact UI",
@@ -502,6 +538,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["component library"],
 		description:
 			"KendoReact is a commercial UI library designed and built for developing business applications with React. Every UI component in the KendoReact suite has been built from the ground-up specifically for React. Please keep in mind that in order to use the npm packages you should either sign up for a 30-day free trial, or be a licensed developer, as KendoReact has a commercial license.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Redux Form",
@@ -513,6 +550,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["forms", "redux"],
 		description:
 			"Manage your form state in Redux. This library is largely deprecated in favor of React Final Form.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Astro",
@@ -524,6 +562,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["framework", "static site generation"],
 		description:
 			"Astro is a fresh but familiar approach to building websites. Astro combines decades of proven performance best practices with the DX improvements of the component-oriented era. Use your favorite JavaScript framework and automatically ship the bare-minimum amount of JavaScript—by default.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Redwood",
@@ -535,6 +574,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["framework"],
 		description:
 			"Redwood is an opinionated, full-stack, serverless-ready web application framework that will allow you to build and deploy with ease. Imagine a React frontend, statically delivered by CDN, that talks via GraphQL to your backend running on AWS Lambdas (or containers) around the world, all deployable with just a git push—that's Redwood.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Create React App",
@@ -546,6 +586,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["framework"],
 		description:
 			"Create React apps with no build configuration. You don't need to learn and configure many build tools. Instant reloads help you focus on development. When it's time to deploy, your bundles are optimized automatically.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Next.js",
@@ -558,6 +599,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["framework", "static site generation", "server side rendering"],
 		description:
 			"Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Gatsby",
@@ -569,6 +611,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["framework", "static site generation", "graphQL"],
 		description:
 			"Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps.   It combines the control and scalability of dynamically rendered sites with the speed of static-site generation, creating a whole new web of possibilities.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Eleventy",
@@ -580,6 +623,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["static site generation"],
 		description:
 			"A simpler static site generator. An alternative to Jekyll. Written in JavaScript. Transforms a directory of templates (of varying types) into HTML. Works with HTML, Markdown, Liquid, Nunjucks, Handlebars, Mustache, EJS, Haml, Pug, and JavaScript Template Literals.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Storybook",
@@ -591,6 +635,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["documentation", "testing", "storybook"],
 		description:
 			"Storybook is a development environment for UI components. It allows you to browse a component library, view the different states of each component, and interactively develop and test components.",
+		language: libraryTags[0],
 	},
 	{
 		name: "React Router",
@@ -602,6 +647,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["routing"],
 		description:
 			"React Router is a lightweight, fully-featured routing library for the React JavaScript library. React Router runs everywhere that React runs; on the web, on the server (using node.js), and on React Native.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Reach Router",
@@ -613,6 +659,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["routing"],
 		description:
 			"Reach Router is a small, simple router for React that borrows from React Router, Ember, and Preact Router. Reach Router has a small footprint, supports only simple route patterns by design, and has strong (but experimental) accessibility features.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Framer Motion",
@@ -625,6 +672,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["animation"],
 		description:
 			"Motion is a production-ready motion library for React from Framer. It brings declarative animations, effortless layout transitions and gestures while maintaining HTML and SVG semantics.",
+		language: libraryTags[0],
 	},
 	{
 		name: "React Spring",
@@ -637,6 +685,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["animation"],
 		description:
 			"react-spring is a spring-physics based animation library that should cover most of your UI related animation needs. It gives you tools flexible enough to confidently cast your ideas into moving interfaces.",
+		language: libraryTags[0],
 	},
 	{
 		name: "React Motion",
@@ -648,6 +697,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["animation"],
 		description:
 			"For 95% of use-cases of animating components, we don't have to resort to using hard-coded easing curves and duration. Set up a stiffness and damping for your UI element, and let the magic of physics take care of the rest. This way, you don't have to worry about petty situations such as interrupted animation behavior. It also greatly simplifies the API.",
+		language: libraryTags[0],
 	},
 	{
 		name: "React Toastify",
@@ -659,6 +709,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["component"],
 		description:
 			"React-Toastify allows you to add notifications to your app with ease.",
+		language: libraryTags[0],
 	},
 	{
 		name: "React Intl",
@@ -670,6 +721,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["internationalization"],
 		description:
 			"FormatJS is a modular collection of JavaScript libraries for internationalization that are focused on formatting numbers, dates, and strings for displaying to people. It includes a set of core libraries that build on the JavaScript Intl built-ins and industry-wide i18n standards, plus a set of integrations for common template and component libraries.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Next Intl",
@@ -681,6 +733,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["internationalization"],
 		description:
 			"This library complements the internationalized routing capabilities of Next.js by managing translations and providing them to components.",
+		language: libraryTags[0],
 	},
 	{
 		name: "React i18next",
@@ -692,6 +745,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["internationalization"],
 		description:
 			"react-i18next is a powerful internationalization framework for React / React Native which is based on i18next. The module provides multiple components eg. to assert that needed translations get loaded or that your content gets rendered when the language changes.",
+		language: libraryTags[0],
 	},
 	{
 		name: "LinguiJS",
@@ -703,6 +757,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["internationalization"],
 		description:
 			"A readable, automated, and optimized (5 kb) internationalization for JavaScript",
+		language: libraryTags[0],
 	},
 	{
 		name: "Rosetta",
@@ -713,6 +768,7 @@ export const exampleLibraries: Library<typeof libraryTags[number]>[] = [
 		image: "https://github.com/lukeed.png",
 		tags: ["internationalization"],
 		description: "A general purpose internationalization library in 298 bytes",
+		language: libraryTags[0],
 	},
 ]
 

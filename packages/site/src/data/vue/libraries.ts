@@ -48,6 +48,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Effortlessly build high-performance & high-quality Vue.js 3 and Vue.js 2 user interfaces in record time",
 		image: "https://upload.wikimedia.org/wikipedia/en/2/29/Quasar_Logo.png",
 		tags: ["component library", "Vue 2", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Element UI",
@@ -58,6 +59,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "A Vue.js 2.0 UI Toolkit for Web.",
 		image: "https://iconape.com/wp-content/png_logo_vector/element-ui.png",
 		tags: ["component library", "Vue 2"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Element Plus",
@@ -68,6 +70,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "A Vue 3 based component library for designers and developers",
 		image: "https://element-plus.org/images/element-plus-logo.svg",
 		tags: ["component library", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Vuetify",
@@ -79,6 +82,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Vuetify is a Vue UI Library with beautifully handcrafted Material Components. No design skills required — everything you need to create amazing applications is at your fingertips.",
 		image: "https://iconape.com/wp-content/png_logo_vector/vuetify-logo.png",
 		tags: ["component library", "Vue 2"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Vuesax",
@@ -90,6 +94,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Components for Vuejs. We love what we do. Let us help you do what You love.",
 		image: "https://vuesax.com/logos/logo-vuesax-svg-7.svg",
 		tags: ["component library", "Vue 2"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Bootstrap vue",
@@ -102,6 +107,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://github.com/bootstrap-vue/bootstrap-vue/raw/master/static/banner.png",
 		tags: ["component library", "Vue 2"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Keen UI",
@@ -114,6 +120,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://madewithnetworkfra.fra1.digitaloceanspaces.com/spatie-space-production/1157/keen.jpg",
 		tags: ["component library", "Vue 2"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Ant Design Vue",
@@ -126,6 +133,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
 		tags: ["component library", "Vue 2", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Fish UI",
@@ -137,6 +145,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://github.com/myliang/fish-ui/raw/master/static/logo.png?raw=true",
 		tags: ["component library", "Vue 2"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Equal",
@@ -148,6 +157,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Equal UI is a Vue 3 components library with 30+ components based on TypeScript and personal design system.",
 		image: "https://quatrochan.github.io/Equal/eqqqual.png",
 		tags: ["component library", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Buefy",
@@ -159,6 +169,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Following the Ant Design specification, we developed a Vue UI library antd that contains a set of high quality components and demos for building rich, interactive user interfaces.",
 		image: "https://buefy.org/static/img/buefy.1d65c18.png",
 		tags: ["component library", "Vue 2"],
+		language: libraryTags[0],
 	},
 	{
 		name: "PrimeVUE",
@@ -171,6 +182,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://www.primefaces.org/primevue/demo/images/primevue-logo-dark.svg",
 		tags: ["component library", "Vue 2", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Vuikit",
@@ -182,6 +194,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"A responsive Vue 2 UI library for web site interfaces based on the UIkit 3 framework.",
 		image: "https://vuikit.js.org/img/vuikit-logo-large.1eeb1a0a.svg",
 		tags: ["component library", "Vue 2"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Chakra UI",
@@ -193,6 +206,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Chakra UI gives you a set of accessible and composable Vue components that you can use to build your favourite applications and sites. Made for Vue 2.X",
 		image: "",
 		tags: ["component library", "Vue 2"],
+		language: libraryTags[0],
 	},
 
 	{
@@ -206,6 +220,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://camo.githubusercontent.com/046e9e47577f961eb9a8468ca73de80a0f3e8de2d15796db2797ae5211a88245/68747470733a2f2f7777772e63726561746976652d74696d2e636f6d2f7675656d6174657269616c2f6173736574732f6c6f676f2d636f6c6f722e706e67",
 		tags: ["component library", "Vue 2"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Mint UI",
@@ -216,6 +231,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "Mobile UI elements for Vue 2.0",
 		image: "https://i.ibb.co/sR3BGbk/mint-ui-logo.png",
 		tags: ["component library", "Vue 2"],
+		language: libraryTags[0],
 	},
 
 	{
@@ -229,6 +245,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://raw.githubusercontent.com/Semantic-UI-Vue/Semantic-UI-Vue/master/docs/public/static/images/logo.png",
 		tags: ["component library", "Vue 2"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Vectre",
@@ -239,6 +256,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "A Lightweight, Simple and Responsive Component Framework",
 		image: "https://vectrejs.github.io/docs/img/logo.3b9b2fe3.svg",
 		tags: ["component library", "Vue 2"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Vant UI",
@@ -249,6 +267,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "Mobile UI Components built on Vue",
 		image: "https://cdn.jsdelivr.net/npm/@vant/assets/logo.png",
 		tags: ["component library", "Vue 2", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Naive UI",
@@ -260,6 +279,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"A Vue 3 Component Library. Fairly Complete, Customizable Themes, Uses TypeScript, Not Too Slow. Kinda Interesting.",
 		image: "https://www.naiveui.com/assets/naivelogo.93278402.svg",
 		tags: ["component library", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Vuestic UI",
@@ -270,6 +290,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "Vue 3.0 UI Framework",
 		image: "https://vuestic.dev/favicon-16x16.png",
 		tags: ["component library", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Agnostic UI",
@@ -282,6 +303,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://raw.githubusercontent.com/AgnosticUI/agnosticui/master/graphics/AgnosticUI%20Logo%20300x300.png",
 		tags: ["component library", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "AT-UI",
@@ -294,6 +316,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://camo.githubusercontent.com/1c853ebd899a4287544a0c9268ff5455f6ea42af19f38ce47a68ac1c05552a25/687474703a2f2f73746f726167652e333630627579696d672e636f6d2f6d74642f686f6d652f6c6f676f2d6174313530323731383232313638362e737667",
 		tags: ["component library", "Vue 2"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Pinia",
@@ -304,6 +327,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "The Vue Store that you will enjoy using",
 		image: "https://pinia.vuejs.org/logo.svg",
 		tags: ["state management", "Vue 2", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Vuex",
@@ -315,6 +339,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Vuex is a state management pattern + library for Vue.js applications.",
 		image: "https://github.com/vuejs.png",
 		tags: ["state management", "Vue 2", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Vue Apollo",
@@ -325,6 +350,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "Integrate GraphQL in your Vue.js apps!",
 		image: "https://github.com/apollographql.png",
 		tags: ["state management", "Vue 2", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "XState",
@@ -336,6 +362,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"JavaScript and TypeScript finite state machines and statecharts for the modern web.",
 		image: "https://github.com/statelyai.png",
 		tags: ["state management", "Vue 2", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Swrv",
@@ -346,6 +373,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "Stale-while-revalidate data fetching for Vue.",
 		image: "https://raw.githubusercontent.com/Kong/swrv/master/logo.png",
 		tags: ["data fetching", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "TailwindCSS",
@@ -357,6 +385,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
 		image: "https://github.com/tailwindlabs.png",
 		tags: ["styling", "utility-first CSS", "Vue 2", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Sass",
@@ -368,6 +397,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Sass is a very mature, stable, and powerful professional grade CSS extension language. It provides a superset of CSS with features like nesting, variables, imports and mixins.",
 		image: "https://github.com/sass.png",
 		tags: ["styling", "CSS processor", "Vue 2", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Vanilla Extract",
@@ -386,6 +416,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Vue 2",
 			"Vue 3",
 		],
+		language: libraryTags[0],
 	},
 	{
 		name: "styled-components",
@@ -397,6 +428,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Utilising tagged template literals (a recent addition to JavaScript) and the power of CSS, styled-components allows you to write actual CSS code to style your components. It also removes the mapping between components and styles – using components as a low-level styling construct could not be easier!",
 		image: "https://github.com/styled-components.png",
 		tags: ["styling", "CSS in JS", "Vue 2", "Vue 3"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Vuelidate",
@@ -408,6 +440,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Vuelidate 2 is a simple, but powerful, lightweight model-based validation for Vue.js 3 and 2.",
 		image: "https://github.com/vuelidate.png",
 		tags: ["forms"],
+		language: libraryTags[0],
 	},
 	{
 		name: "FormKit",
@@ -419,6 +452,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"A Vue form building framework that simplifies form structure, generation, validation, theming, submission, error handling, and more.",
 		image: "https://github.com/formkit.png",
 		tags: ["forms"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Astro",
@@ -430,7 +464,9 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["framework", "static site generation"],
 		description:
 			"Astro is a fresh but familiar approach to building websites. Astro combines decades of proven performance best practices with the DX improvements of the component-oriented era. Use your favorite JavaScript framework and automatically ship the bare-minimum amount of JavaScript—by default.",
+		language: libraryTags[0],
 	},
+
 	{
 		name: "NuxtJs",
 		author: "Nuxt Team",
@@ -441,6 +477,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["framework", "server side rendering", "static site generation"],
 		description:
 			"Build your next Vue.js application with confidence using Nuxt. An open source framework making web development simple and powerful.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Vue I18n",
@@ -451,6 +488,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image: "https://kazupon.github.io/vue-i18n/vue-i18n-logo.png",
 		tags: ["internationalization"],
 		description: "Vue I18n is internationalization plugin for Vue.js",
+		language: libraryTags[0],
 	},
 	{
 		name: "Harlem",
@@ -462,6 +500,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["state management", "Vue 3"],
 		description:
 			"Simple, unopinionated, lightweight and extensible state management for Vue 3",
+		language: libraryTags[0],
 	},
 	{
 		name: "Vue Testing Library",
@@ -473,6 +512,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["testing", "Vue 2", "Vue 3"],
 		description:
 			"Simple and complete Vue.js testing utilities that encourage good testing practices.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Vitest",
@@ -483,6 +523,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image: "https://github.com/vitest-dev.png",
 		tags: ["testing", "Vue 2", "Vue 3"],
 		description: "A blazing fast unit test framework powered by Vite.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Cypress",
@@ -494,6 +535,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["testing", "Vue 2", "Vue 3"],
 		description:
 			"Fast, easy and reliable testing for anything that runs in a browser.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Jest",
@@ -506,6 +548,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["testing", "Vue 2", "Vue 3"],
 		description:
 			"Jest is a delightful JavaScript Testing Framework with a focus on simplicity.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Cypress IndexedDB helpers",
@@ -517,6 +560,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["testing"],
 		description:
 			"Cypress IndexedDB helpers are a set of custom cypress commands that helps you handle indexedDB related operations in your Cypress tests.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Vue Route Guard",
@@ -528,5 +572,6 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["routing"],
 		description:
 			"Vue Route Guard is an Vue library that wraps around the vue-router and extends it to provide helpful methods to handle page guards via token authorization and permissions.",
+		language: libraryTags[0],
 	},
 ]

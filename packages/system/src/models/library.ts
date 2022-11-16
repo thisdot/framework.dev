@@ -36,6 +36,10 @@ export interface Library<T extends string> extends SearchableRecord<T> {
 	 * not then a link to its npm page will suffice
 	 */
 	href: string
+	/**
+	 * Language associate with the library
+	 */
+	language: string
 }
 
 export const libraryIndexMetadata = {

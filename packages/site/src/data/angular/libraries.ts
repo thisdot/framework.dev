@@ -38,6 +38,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"The Angular CLI is a command-line interface tool that you use to initialize, develop, scaffold, and maintain Angular applications directly from a command shell",
 		image: defaultImage,
 		tags: ["framework"],
+		language: libraryTags[0],
 	},
 	{
 		name: "NgRx Store",
@@ -49,6 +50,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Store is RxJS powered global state management for Angular applications, inspired by Redux. Store is a controlled state container designed to help write performant, consistent applications on top of Angular.",
 		image: "https://github.com/ngrx.png",
 		tags: ["state management"],
+		language: libraryTags[0],
 	},
 	{
 		name: "NgRx Effects",
@@ -60,6 +62,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Effects are an RxJS powered side effect model for Store. Effects use streams to provide new sources of actions to reduce state based on external interactions such as network requests, web socket messages and time-based events.",
 		image: "https://github.com/ngrx.png",
 		tags: ["state management"],
+		language: libraryTags[0],
 	},
 	{
 		name: "RxJS",
@@ -72,6 +75,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://raw.githubusercontent.com/ReactiveX/rxjs/master/docs_app/src/assets/images/logos/Rx_Logo_S.png",
 		tags: ["state management"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Transloco",
@@ -82,6 +86,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "The internationalization (i18n) library for Angular",
 		image: "https://raw.githubusercontent.com/ngneat/transloco/master/logo.svg",
 		tags: ["internationalization"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Nx",
@@ -93,6 +98,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Nx is an open source build system featuring a lot of monorepo features that help enterprise teams develop Angular at scale.",
 		image: "https://raw.githubusercontent.com/nrwl/nx/master/images/nx.png",
 		tags: ["framework"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Angular Material",
@@ -103,6 +109,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "Material Design UI components for Angular applications.",
 		image: defaultImage,
 		tags: ["styling", "component"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Compodoc",
@@ -114,6 +121,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"A documentation tool for Angular applications, that can generate static documentation of your application.",
 		image: "https://github.com/compodoc.png",
 		tags: ["documentation"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Scully",
@@ -124,6 +132,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "Static site generator for Angular",
 		image: "https://github.com/scullyio.png",
 		tags: ["framework"],
+		language: libraryTags[0],
 	},
 	{
 		name: "lumberjack",
@@ -136,6 +145,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://raw.githubusercontent.com/ngworker/lumberjack/main/logo.svg",
 		tags: ["logging"],
+		language: libraryTags[0],
 	},
 	{
 		name: "RxAngular",
@@ -147,6 +157,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"RxAngular offers a comprehensive toolset for handling fully reactive Angular applications. It includes packages for state management, component development, and fully reactive rendering in Angular.",
 		image: "https://github.com/rx-angular.png",
 		tags: ["state management", "performance tools"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Akita",
@@ -158,6 +169,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"State management library, built on top of RxJS, based on the ideas introduced by Flux and Redux.",
 		image: "https://opensource.salesforce.com/akita/img/akita.svg",
 		tags: ["state management", "RxJS"],
+		language: libraryTags[0],
 	},
 	{
 		name: "NGXS",
@@ -169,6 +181,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"State management patter and library for Angular, modeled after the CQRS pattern popularly implemented in libraries like Redux and NgRx. Reduces boilerplate by using modern TypeScript features such as classes and decorators.",
 		image: "https://github.com/ngxs.png",
 		tags: ["state management", "redux"],
+		language: libraryTags[0],
 	},
 	{
 		name: "mobx-angular",
@@ -180,6 +193,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"This is a relatively simple connector to the popular MobX library for state management.  MobX automatically knows what properties your components use from the stores and listens to changes, allowing you to automatically react to changes and update only the parts of the UI that need to be updated.",
 		image: "https://github.com/mobxjs.png",
 		tags: ["state management"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Angular Model",
@@ -191,6 +205,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Simple state management with minimalistic API, one way data flow, multiple models support and immutable data exposed as RxJS Observable.",
 		image: "https://github.com/angular-extensions.png",
 		tags: ["state management"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Angular Redux",
@@ -202,6 +217,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"This library provides Angular bindings for Redux, allowing you to easily connect your Angular components with Redux.",
 		image: "https://github.com/angular-redux.png",
 		tags: ["state management", "redux"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Xstate",
@@ -213,6 +229,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Generic JavaScript and TypeScript finite state machines and statecharts for the modern web.",
 		image: "https://xstate.js.org/docs/logo.svg",
 		tags: ["state management"],
+		language: libraryTags[0],
 	},
 	{
 		name: "AngularFire",
@@ -223,6 +240,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "The official Angular library for Firebase.",
 		image: "https://github.com/firebase.png",
 		tags: ["firebase", "data fetching"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Apollo Angular",
@@ -234,6 +252,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"GraphQL client for Angular. Simple to set up, and may be used in any context that Angular may be used.",
 		image: "https://landscape.graphql.org/logos/apollo-angular.svg",
 		tags: ["GraphQL", "data fetching"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Tailwind CSS",
@@ -245,6 +264,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
 		image: "https://github.com/tailwindlabs.png",
 		tags: ["styling", "Utility-First CSS"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Emotion",
@@ -256,6 +276,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"A framework-agnostic library for writing CSS styles using JavaScript.",
 		image: "https://github.com/emotion-js.png",
 		tags: ["styling", "CSS in JS"],
+		language: libraryTags[0],
 	},
 	{
 		name: "NG Bootstrap",
@@ -267,6 +288,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Angular widgets built from the ground up using only Bootstrap 5 CSS with APIs designed for the Angular ecosystem.",
 		image: "https://github.com/ng-bootstrap.png",
 		tags: ["component library", "bootstrap"],
+		language: libraryTags[0],
 	},
 	{
 		name: "ngx-bootstrap",
@@ -279,6 +301,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://valor-software.com/ngx-bootstrap/assets/images/logos/ngx-bootstrap-logo.svg",
 		tags: ["component library", "bootstrap"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Onsen UI",
@@ -290,6 +313,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"A set of components to build HTML5 hybrid and mobile web apps. Supports many frameworks, including Angular.",
 		image: "https://github.com/OnsenUI.png",
 		tags: ["component library"],
+		language: libraryTags[0],
 	},
 	{
 		name: "PrimeNG",
@@ -302,6 +326,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://www.primefaces.org/primeng/assets/showcase/images/primeng-logo-dark.svg",
 		tags: ["component library"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Carbon Components Angular",
@@ -312,6 +337,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "An Angular implementation of the Carbon Design System",
 		image: "https://github.com/IBM.png",
 		tags: ["component library"],
+		language: libraryTags[0],
 	},
 	{
 		name: "NG-ZORRO",
@@ -323,6 +349,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"An enterprise-class Angular UI component library based on Ant Design, all components are open source and free to use under MIT license.",
 		image: "https://github.com/NG-ZORRO.png",
 		tags: ["component library"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Kendo UI",
@@ -335,6 +362,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://d585tldpucybw.cloudfront.net/sfimages/default-source/labs/kendo/2020-revamp/a_kendo_mascot.svg?sfvrsn=eb49ba02_2",
 		tags: ["component library"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Formly",
@@ -345,6 +373,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "Formly is a dynamic (JSON-powered) form library for Angular.",
 		image: "https://github.com/ngx-formly.png",
 		tags: ["forms", "reactive forms"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Reactive Forms",
@@ -356,6 +385,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"This library extends every Angular AbstractControl, and provides features that don't exist in the original one. It adds types, reactive queries, and helper methods.",
 		image: "https://github.com/ngneat.png",
 		tags: ["forms", "reactive forms"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Ngx Sub Form",
@@ -368,6 +398,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://user-images.githubusercontent.com/4950209/53812385-45f48900-3f53-11e9-8687-b57cd335f26e.png",
 		tags: ["forms", "reactive forms"],
+		language: libraryTags[0],
 	},
 	{
 		name: "JSONForms",
@@ -379,6 +410,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image: "https://jsonforms.io/img/logo.svg",
 		darkImageBackground: true,
 		tags: ["forms"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Ngx Schema Form",
@@ -390,6 +422,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Ngx Schema Form is an Angular 2+ module allowing you to instanciate an HTML form from a JSON schema.",
 		image: "https://github.com/guillotinaweb.png",
 		tags: ["forms"],
+		language: libraryTags[0],
 	},
 	{
 		name: "ngrx-forms.",
@@ -401,6 +434,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"ngrx-forms brings the strengths of the redux state management model to the world of forms in applications that are using Angular and ngrx.",
 		image: "https://github.com/MrWolfZ.png",
 		tags: ["forms"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Angular",
@@ -412,6 +446,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Angular is a development platform for building mobile and desktop web applications using Typescript/JavaScript and other languages.",
 		image: defaultImage,
 		tags: ["framework"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Ionic",
@@ -423,6 +458,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"@ionic/angular combines the core Ionic experience with the tooling and APIs that are tailored to Angular Developers.",
 		image: "https://github.com/ionic-team.png",
 		tags: ["framework"],
+		language: libraryTags[0],
 	},
 	{
 		name: "NativeScript",
@@ -434,6 +470,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"NativeScript empowers you to access native APIs from JavaScript directly. The framework currently provides iOS and Android runtimes for rich mobile development and can be utilized in a number of diverse use cases.",
 		image: "https://github.com/NativeScript.png",
 		tags: ["framework"],
+		language: libraryTags[0],
 	},
 	{
 		name: "NGX-Translate",
@@ -445,6 +482,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Modular internationalization library for Angular. It gives you access to a service, a directive and a pipe to handle any dynamic or static content.",
 		image: "https://github.com/ngx-translate.png",
 		tags: ["internationalization"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Observer-Spy",
@@ -455,6 +493,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "This library makes RxJS Observables testing easy!",
 		image: "https://github.com/hirezio.png",
 		tags: ["testing", "RxJS"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Protractor",
@@ -466,6 +505,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Protractor is an end-to-end test framework for Angular and AngularJS applications. Protractor runs tests against your application running in a real browser, interacting with it as a user would.",
 		image: "https://www.protractortest.org/img/favicon.ico",
 		tags: ["testing"],
+		language: libraryTags[0],
 	},
 	{
 		name: "AG Grid",
@@ -477,6 +517,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"AG Grid is a fully-featured and highly customizable JavaScript data grid.",
 		image: "https://github.com/ag-grid.png",
 		tags: ["component"],
+		language: libraryTags[0],
 	},
 	{
 		name: "AGM - Angular Google Maps",
@@ -488,6 +529,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://raw.githubusercontent.com/SebastianM/angular-google-maps/master/assets/images/angular-google-maps-logo.png",
 		tags: ["component"],
+		language: libraryTags[0],
 	},
 	{
 		name: "NGX Skeleton loader",
@@ -499,6 +541,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Make beautiful, animated loading skeletons that automatically adapt to your Angular apps.",
 		image: "https://github.com/willmendesneto.png",
 		tags: ["component"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Angular Testing Library",
@@ -510,6 +553,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["testing"],
 		description:
 			"Simple and complete Angular testing utilities that encourage good testing practices.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Cypress",
@@ -521,6 +565,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["testing"],
 		description:
 			"Fast, easy and reliable testing for anything that runs in a browser.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Jest",
@@ -533,6 +578,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["testing"],
 		description:
 			"Jest is a delightful JavaScript Testing Framework with a focus on simplicity.",
+		language: libraryTags[0],
 	},
 	{
 		name: "RxIDB",
@@ -544,6 +590,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["RxJS"],
 		description:
 			"RxIDB is a library for storing and retrieving data from indexedDB databases, using an RxJS based API.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Route Config",
@@ -555,6 +602,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["performance tools"],
 		description:
 			"Route Config is an Angular library that provides tools to easily set and access the properties defined in RouterModule configuration. It offers some built in tools that work out of the box but also is easily extensible via data property of Angular's Route configuration object.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Ng Utils",
@@ -566,6 +614,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["performance tools"],
 		description:
 			"Ng Utils is a collection of Angular utils which we would like to continuously extend and improve.",
+		language: libraryTags[0],
 	},
 	{
 		name: "Cypress IndexedDB helpers",
@@ -577,5 +626,6 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		tags: ["testing"],
 		description:
 			"Cypress IndexedDB helpers are a set of custom cypress commands that helps you handle indexedDB related operations in your Cypress tests.",
+		language: libraryTags[0],
 	},
 ]

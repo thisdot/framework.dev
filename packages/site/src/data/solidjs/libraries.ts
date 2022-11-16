@@ -26,6 +26,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"This submodules contains the means for handling deeps nested reactivity.",
 		image: defaultImage,
 		tags: ["state management"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Solid Zustand",
@@ -38,6 +39,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://opengraph.githubassets.com/0e09b9ed47ad0ddb03deebe8d82dc55f3960f66b1f90ce00b2e3bba234fd2979/wobsoriano/solid-zustand",
 		tags: ["state management"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Solid Services",
@@ -50,6 +52,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://repository-images.githubusercontent.com/445865183/c49ba9a2-c297-414e-977a-a746c81750c5",
 		tags: ["state management"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Solid Gstatem",
@@ -61,6 +64,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://opengraph.githubassets.com/ff31739cf46bcad922738d440410e896569c720caae0736e3a8cf7d1a599b396/gstatem/gstatem",
 		tags: ["state management"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Solid Resources",
@@ -72,6 +76,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Resources are special Signals designed specifically to handle Async loading.",
 		image: defaultImage,
 		tags: ["data fetching"],
+		language: libraryTags[0],
 	},
 	{
 		name: "TanStack Query",
@@ -84,6 +89,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://raw.githubusercontent.com/TanStack/query/beta/media/repo-header.png",
 		tags: ["data fetching"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Solid Styled",
@@ -95,6 +101,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://opengraph.githubassets.com/647460914dea6f99c7f3e314dc5d0fef67e1ba61f432556c7ad0b38da95414b9/lxsmnsyc/solid-styled",
 		tags: ["styling"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Emotion Solid",
@@ -106,6 +113,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://opengraph.githubassets.com/6bb80c79acd55929b40ae05650a257895a7b4aa0a929b7d135f02753982d9716/tqwewe/emotion-solid",
 		tags: ["styling"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Guillotin",
@@ -117,6 +125,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://opengraph.githubassets.com/f167dc5a21f3b9cc4313cd4f53c9bbb871bbc7f1f2351333696551da2b955505/xstevenyung/guillotin-solid-v1",
 		tags: ["component library"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Solid Select",
@@ -127,6 +136,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "A Select component for Solid",
 		image: "https://solid-select.com/solid-select.png",
 		tags: ["component library"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Solid MultiSelect",
@@ -138,6 +148,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://opengraph.githubassets.com/3d77a1fbc9cc60af77bbd066466a010b7fd84422c2564802223a006317e81e7e/DigiChanges/solid-multiselect",
 		tags: ["component library"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Hope UI",
@@ -150,6 +161,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://opengraph.githubassets.com/73d54d4bfc8030c11c32733e99afb3f0443ad9085d6a2d8dfa7348274c90f934/hope-ui/hope-ui",
 		tags: ["component library"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Suid",
@@ -160,6 +172,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "A port of MUI built with SolidJs",
 		image: "https://suid.io/assets/preview.png",
 		tags: ["component library"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Solid Bootstrap",
@@ -172,6 +185,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://opengraph.githubassets.com/824c95680dd01104c9412933dd5cfd21dc6da2a7d090e253ee7f92e4222f0ec8/solid-libs/solid-bootstrap",
 		tags: ["component library"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Solid Start",
@@ -184,6 +198,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://opengraph.githubassets.com/03a31e6350dc6548ce8a098f167e9b5a7f90a33bdc2d4a9694b05dd6f2321c00/solidjs/solid-start",
 		tags: ["framework"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Solid Form Handler",
@@ -196,6 +211,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://opengraph.githubassets.com/b15e607516c45b8906d85d0565b9c91faa0826f5468e3d5f53c001c7a4cc7245/webblocksapp/solid-form-handler",
 		tags: ["form"],
+		language: libraryTags[0],
 	},
 	{
 		name: "solid-i18n",
@@ -207,6 +223,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://opengraph.githubassets.com/2ed9c41fd80336224cf4acb87a5288ff598ad89c848cf0e721635d7235480015/SanichKotikov/solid-i18n",
 		tags: ["internationalization"],
+		language: libraryTags[0],
 	},
 	{
 		name: "Solid primitives i18n",
@@ -219,5 +236,6 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://repository-images.githubusercontent.com/369884446/f2fe21a6-2e1e-42ff-8659-f86d335a0904",
 		tags: ["internationalization"],
+		language: libraryTags[0],
 	},
 ]
