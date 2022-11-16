@@ -1,6 +1,7 @@
 import { LinkCardProps } from "@framework/system/src/components/landing/link-card"
 import { AngularIcon } from "../icons/angular-icon"
 import { QwikIcon } from "../icons/qwik-icon"
+import { NodejsIcon } from "../icons/nodejs-icon"
 import { ReactIcon } from "../icons/react-icon"
 import { SolidJSIcon } from "../icons/solidjs-icon"
 import { SvelteIcon } from "../icons/svelte-icon"
@@ -50,6 +51,16 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 			return <QwikIcon {...props} />
 		},
 		backgroundColor: "#AC7EF4",
+		bigSize,
+	},
+	{
+		title: "NodeJS Resources",
+		href: "https://nodejs.framework.dev/",
+		Icon(props) {
+			return <NodejsIcon {...props} />
+		},
+
+		backgroundColor: "#539e43",
 		bigSize,
 	},
 	{
