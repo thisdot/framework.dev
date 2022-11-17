@@ -20,6 +20,8 @@ export const libraryTags = [
 const defaultImage =
 	"https://avatars.githubusercontent.com/u/23617963?s=200&v=4"
 
+// TODO: Update the language fields to contain the correct language for package lookup
+
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Axios",

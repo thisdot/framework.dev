@@ -15,6 +15,8 @@ export const libraryTags = [
 // on libraries that don't have an image
 const defaultImage = "https://qwik.builder.io/logos/social-card.png?v=3"
 
+// TODO: Update the language fields to contain the correct language for package lookup
+
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "TailwindCSS",

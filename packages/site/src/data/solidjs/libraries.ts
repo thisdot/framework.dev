@@ -15,6 +15,8 @@ export const libraryTags = [
 const defaultImage =
 	"https://repository-images.githubusercontent.com/130884470/ad63fd00-7ab2-11ea-9c57-6c114391183a"
 
+// TODO: Update the language fields to contain the correct language for package lookup
+
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Solid Store",

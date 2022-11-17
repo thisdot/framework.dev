@@ -37,6 +37,8 @@ export const libraryTags = [
 const defaultImage =
 	"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/555px-Vue.js_Logo_2.svg.png"
 
+// TODO: Update the language fields to contain the correct language for package lookup
+
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Quasar",

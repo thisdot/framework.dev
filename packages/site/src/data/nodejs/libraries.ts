@@ -17,6 +17,8 @@ export const libraryTags = [
 const defaultImage =
 	"https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/node-512.png"
 
+// TODO: Update the language fields to contain the correct language for package lookup
+
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Express.js",

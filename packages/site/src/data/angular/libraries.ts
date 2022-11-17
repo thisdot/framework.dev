@@ -27,6 +27,8 @@ export const libraryTags = [
 // on libraries that don't have an image
 const defaultImage = "https://github.com/angular.png"
 
+// TODO: Update the language fields to contain the correct language for package lookup
+
 export const libraries: Library<typeof libraryTags[number]>[] = [
 	{
 		name: "Angular CLI",
