@@ -49,4 +49,14 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		href: "https://ultimatecourses.com/blog/",
 		tags: [],
 	},
+	{
+		title: "Blog @ ng-journal",
+		author: "Stefan Haas",
+		description:
+			"The Journal for Angular - covering the entire Angular stack and best practices.",
+		image:
+			"https://ng-journal.com/assets/ng-journal.png",
+		href: "https://ng-journal.com/blog/",
+		tags: [],
+	},
 ]
