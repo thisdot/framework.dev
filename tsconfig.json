@@ -3,7 +3,6 @@
 	"compilerOptions": {
 		"strict": true,
 		"lib": ["ES2021", "DOM"],
-		"skipLibCheck": true,
 		"moduleResolution": "node",
 		"esModuleInterop": true,
 		"noEmit": true,
