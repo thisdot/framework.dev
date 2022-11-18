@@ -245,6 +245,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		image: "https://jsgamedev.com/img/logo.svg",
 		type: "Live Events",
 		href: "https://jsgamedev.com/",
+		darkImageBackground: true,
 		tags: ["conferences"],
 	},
 	{
