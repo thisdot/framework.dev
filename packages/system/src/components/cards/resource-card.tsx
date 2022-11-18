@@ -8,7 +8,6 @@ import { CardSelector } from "./card-selector"
 import { DiscreteAttribute } from "../discrete-attribute"
 import { InfoPopup } from "../info-popup"
 import {
-	bookImageContainerStyle,
 	resourceCardBodyStyle,
 	resourceCardBookImageDecoration,
 	resourceCardFooterStyle,
@@ -81,7 +80,6 @@ export function ResourceCard({
 				<div
 					className={classNames(
 						resourceCardImageContainerStyle,
-						imageLayout === "book" && bookImageContainerStyle,
 						{
 							darkBackground: darkImageBackground,
 						}

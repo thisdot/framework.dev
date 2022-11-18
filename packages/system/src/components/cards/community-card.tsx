@@ -22,6 +22,7 @@ export function CommunityCard({ community, ...props }: CommunityCardProps) {
 			title={community.name}
 			subtitle={community.type}
 			href={community.href}
+			darkImageBackground={community.darkImageBackground}
 			tags={community.tags}
 			layout="imageFirst"
 			image={community.image}
