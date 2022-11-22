@@ -78,6 +78,15 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		tags: [],
 	},
 	{
+		title: "Deep Web Works",
+		author: "Wahhab Baldwin",
+		description:
+			"I’m Wahhab Baldwin, retired founder of Deep Web Works. I’ve decided to repurpose my website to share tutorials based on my adventures with Svelte and SvelteKit.",
+		image: "https://svelte.deepwebworks.com/Wahhab-Baldwin.jpg",
+		href: "https://svelte.deepwebworks.com/",
+		tags: [],
+	},
+	{
 		title: "Dev.to #svelte",
 		author: "dev.to authors",
 		description:
