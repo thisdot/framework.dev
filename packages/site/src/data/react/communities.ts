@@ -262,7 +262,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		description:
 			"Tech Unite Africa is a conference, exhibition and a networking platform for the African Tech industry.",
 		image:
-			"https://scontent-frt3-2.xx.fbcdn.net/v/t39.30808-6/273000253_151084657283604_2423352492724338656_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=dlJ3nuKw3VAAX_j226L&_nc_ht=scontent-frt3-2.xx&oh=00_AfAlsNauounZKMVahAqIMhbLsuPPd3-g-v_8iNs5Bq9xyw&oe=637A27FB",
+			"https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Africa_%28orthographic_projection%29.svg/440px-Africa_%28orthographic_projection%29.svg.png",
 		type: "Live Events",
 		href: "https://techuniteafrica.com/",
 		tags: ["conferences"],
