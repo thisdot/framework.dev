@@ -223,7 +223,8 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		name: "JS Conf Chile",
 		description:
 			"2 days of international speakers, community, learning and connections.",
-		image: "https://jsconf.cl/favicon-32x32.png",
+		image: 
+	        "https://pbs.twimg.com/profile_images/1548041354806059008/CfEL7qut_400x400.jpg",   
 		type: "Live Events",
 		href: "https://jsconf.cl/",
 		tags: ["conferences"],
@@ -262,7 +263,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		description:
 			"Tech Unite Africa is a conference, exhibition and a networking platform for the African Tech industry.",
 		image:
-			"https://techuniteafrica.com/wp-content/uploads/2021/08/Tech-Unite-Africa-New-Logo-8.png",
+			"https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Africa_%28orthographic_projection%29.svg/440px-Africa_%28orthographic_projection%29.svg.png",
 		type: "Live Events",
 		href: "https://techuniteafrica.com/",
 		tags: ["conferences"],
