@@ -39,6 +39,15 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		href: "https://sveltesociety.dev/recipes",
 		tags: [],
 	},
+
+	{
+		title: "Svelte News",
+		author: "Svelte Enthusiasts",
+		description: "The latest news on the Svelte framework",
+		image: "https://sveltesociety.dev/images/logo.svg",
+		href: "https://svelte.news/",
+		tags: [],
+	},
 	{
 		title: "Shivam Meena",
 		author: "Shivam Meena",
