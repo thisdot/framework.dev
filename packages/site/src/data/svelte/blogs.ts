@@ -39,12 +39,11 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		href: "https://sveltesociety.dev/recipes",
 		tags: [],
 	},
-
 	{
 		title: "Svelte News",
 		author: "Svelte Enthusiasts",
 		description: "The latest news on the Svelte framework",
-		image: "https://sveltesociety.dev/images/logo.svg",
+		image: "https://svelte.dev/favicon.png",
 		href: "https://svelte.news/",
 		tags: [],
 	},
@@ -78,6 +77,16 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		tags: [],
 	},
 	{
+		title: "Rodney Lab",
+		author: "Rodney",
+		description:
+			"Hello and welcome! I’m Rodney, a web developer based in the UK 🇬🇧 and am available for consultancy work.",
+		image:
+			"https://rodneylab.com/assets/rodney-johnson-about-rodneylab-1350x1350.208d1490.avif",
+		href: "https://rodneylab.com/tags/sveltekit/",
+		tags: [],
+	},
+	{
 		title: "Ryan Filler",
 		author: "Ryan Filler",
 		description:
@@ -100,7 +109,8 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		author: "dev.to authors",
 		description:
 			"Tag to discuss Svelte, a JavaScript component framework, which aims at being simple and efficient.",
-		image: "https://svelte.dev/favicon.png",
+		image:
+			"https://res.cloudinary.com/practicaldev/image/fetch/s--R9qwOwpC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/78hs31fax49uwy6kbxyw.png",
 		href: "https://dev.to/t/svelte",
 		tags: [],
 	},
@@ -109,8 +119,29 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		author: "dev.to authors",
 		description:
 			"Tag to discuss Sveltekit, the fastest way to build svelte apps.",
-		image: "https://svelte.dev/favicon.png",
+		image:
+			"https://res.cloudinary.com/practicaldev/image/fetch/s--R9qwOwpC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/78hs31fax49uwy6kbxyw.png",
 		href: "https://dev.to/t/sveltekit",
+		tags: [],
+	},
+	{
+		title: "Medium #svelte",
+		author: "Medium authors",
+		description:
+			"Tag to discuss Svelte, a JavaScript component framework, which aims at being simple and efficient.",
+		image:
+			"https://cdn.icon-icons.com/icons2/2997/PNG/512/medium_logo_icon_187624.png",
+		href: "https://medium.com/tag/svelte",
+		tags: [],
+	},
+	{
+		title: "Medium #sveltekit",
+		author: "medium authors",
+		description:
+			"Tag to discuss Sveltekit, the fastest way to build svelte apps.",
+		image:
+			"https://cdn.icon-icons.com/icons2/2997/PNG/512/medium_logo_icon_187624.png",
+		href: "https://medium.com/tag/sveltekit",
 		tags: [],
 	},
 	{
@@ -119,16 +150,6 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		description: "Svelte Training and Courses",
 		image: "https://svelte.school/images/logo-primary.svg",
 		href: "https://svelte.school/tutorials",
-		tags: [],
-	},
-	{
-		title: "Rodney Lab",
-		author: "Rodney",
-		description:
-			"Hello and welcome! I’m Rodney, a web developer based in the UK 🇬🇧 and am available for consultancy work.",
-		image:
-			"https://rodneylab.com/assets/rodney-johnson-about-rodneylab-1350x1350.208d1490.avif",
-		href: "https://rodneylab.com/tags/sveltekit/",
 		tags: [],
 	},
 	{
