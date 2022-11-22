@@ -69,6 +69,15 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		tags: [],
 	},
 	{
+		title: "Ryan Filler",
+		author: "Ryan Filler",
+		description:
+			"I am a designer, developer, illustrator, and maker living and working in Memphis, Tennessee.",
+		image: "https://www.ryanfiller.com/headshot_2017.jpg?nf_resize=fit&w=100",
+		href: "https://www.ryanfiller.com/",
+		tags: [],
+	},
+	{
 		title: "Dev.to #svelte",
 		author: "dev.to authors",
 		description:
