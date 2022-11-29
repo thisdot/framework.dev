@@ -48,4 +48,13 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		href: "https://www.freecodecamp.org/news/the-deno-handbook/",
 		tags: [],
 	},
+	{
+		title: "Deno.js - A first look",
+		author: "Academind",
+		description:
+			"Deno.js is the better Node.js. Or, at least, that's the goal. Here's what sets Deno apart from Node and my opinion on whether you should make the switch.",
+		image: "https://github.com/Academind.png",
+		href: "https://academind.com/tutorials/denojs-first-look",
+		tags: [],
+	},
 ]
