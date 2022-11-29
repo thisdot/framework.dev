@@ -82,7 +82,7 @@
 		"@babel/core": "^7.15.8",
 		"@reach/auto-id": "^0.16.0",
 		"@reach/combobox": "^0.16.3",
-		"@reach/dialog": "^0.16.2",
+		"@reach/dialog": "^0.18.0",
 		"@reach/portal": "^0.16.2",
 		"@reach/tooltip": "^0.16.2",
 		"assert-never": "^1.2.1",
