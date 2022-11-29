@@ -13,6 +13,7 @@ import {
 	lightThemeFromPalette,
 } from "./theme-from-palette"
 import { vueColorPalette } from "./vue-color-scheme"
+import { denoColorPalette } from "./deno-color-scheme"
 
 export const vars = createThemeContract(lightThemeFromPalette(blankPalette))
 
@@ -94,6 +95,15 @@ export const graphqlTheme = createTheme(
 export const graphqlThemeDark = createTheme(
 	vars,
 	darkThemeFromPalette(graphqlColorPalette)
+)
+export const denoTheme = createTheme(
+	vars,
+	lightThemeFromPalette(denoColorPalette)
+)
+
+export const denoThemeDark = createTheme(
+	vars,
+	darkThemeFromPalette(denoColorPalette)
 )
 
 export const landingTheme = createTheme(
