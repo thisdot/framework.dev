@@ -16,7 +16,9 @@ import {
 	nodejsTheme,
 	nodejsThemeDark,
 	graphqlTheme,
-	graphqlThemeDark
+	graphqlThemeDark,
+	denoTheme,
+	denoThemeDark,
 } from "../src/themes/themes.css"
 import { addDecorator } from "@storybook/react"
 import { withThemes } from "storybook-addon-themes/react"
@@ -74,6 +76,8 @@ export const parameters = {
 			{ name: "nodejsDark", class: nodejsThemeDark, color: "#0e201a" },
 			{ name: "graphql", class: graphqlTheme, color: "#ffd8e7" },
 			{ name: "graphqlDark", class: graphqlThemeDark, color: "#8b005c" },
+			{ name: "deno", class: denoTheme, color: "#12124B" },
+			{ name: "denoDark", class: denoThemeDark, color: "#f2f2fa" },
 		],
 	},
 }
