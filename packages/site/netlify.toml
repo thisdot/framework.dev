@@ -1,0 +1,2 @@
+[build]
+  ignore = "node ./build-ignore.js"
