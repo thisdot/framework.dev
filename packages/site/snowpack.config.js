@@ -24,7 +24,16 @@ module.exports = {
 			"@reach/utils/use-stateful-ref-value",
 			"@reach/tooltip",
 			"@reach/utils/get-document-dimensions",
-		],
+			"@reach/utils/owner-document",
+			"@reach/utils/use-force-update",
+			"@reach/utils/use-isomorphic-layout-effect",
+			"@reach/utils/type-check",
+			"@reach/utils/noop",
+			"@reach/utils/dev-utils",
+			"@reach/utils/compose-refs",
+			"@reach/utils/compose-event-handlers",
+			"@reach/portal"
+			],
 		env: {
 			NODE_ENV: true,
 		},
