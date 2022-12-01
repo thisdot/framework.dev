@@ -1,5 +1,25 @@
 version: 1
 applications:
+  - appRoot: packages/deno
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd ../..
+            - nvm install
+            - nvm use
+            - yarn install
+        build:
+          commands:
+            - yarn build:deno
+      artifacts:
+        baseDirectory: ../site/dist
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - ../../node_modules/**/*
+          - ../../packages/*/node_modules/**/*
   - appRoot: packages/graphql
     frontend:
       phases:
