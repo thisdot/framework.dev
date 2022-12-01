@@ -57,7 +57,8 @@ export const books: Book<typeof bookTags[number]>[] = [
 		href: "https://www.syncfusion.com/succinctly-free-ebooks/deno-succinctly",
 		description:
 			"Deno is a JavaScript runtime by the creator of Node, built upon the lessons learned from Node becoming an integral part of so many apps since 2009, plus the ever-changing web app landscape. In Deno Succinctly, author Mark Lewin illuminates the improvements that Deno brings to server-side web development, and guides readers through three quick projects that demonstrate significant features of the runtime.",
-		image: "https://www.syncfusion.com/succinctly-free-ebooks/deno-succinctly",
+		image:
+			"https://cdn.syncfusion.com/content/images/downloads/ebook/ebook-cover/Deno-Succinctly.png",
 		authors: ["Mark Lewin"],
 		numberOfPages: 108,
 		level: "beginner",
