@@ -8,6 +8,7 @@ import {
 	ResourcesInfoBanner as ResourcesInfoBannerComponent,
 	ResourcesInfoBannerProps,
 } from "./resources-info-banner"
+import { DenoIcon } from "../../icons/deno-icon"
 
 export default {
 	title: "Landing/Resources Info Banner",
@@ -41,7 +42,7 @@ const resourceCards: LinkCardProps[] = [
 			return <VueIcon {...props} />
 		},
 		backgroundColor: "#41B883",
-	},		
+	},
 	{
 		title: "Svelte Resources",
 		href: "https://svelte.framework.dev/",
@@ -49,6 +50,14 @@ const resourceCards: LinkCardProps[] = [
 			return <SvelteIcon {...props} />
 		},
 		backgroundColor: "#FF3E00",
+	},
+	{
+		title: "Deno Resources",
+		href: "https://deno.framework.dev/",
+		Icon(props) {
+			return <DenoIcon {...props} />
+		},
+		backgroundColor: "#12124B",
 	},
 ]
 

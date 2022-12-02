@@ -7,6 +7,7 @@ import { SolidJSIcon } from "../icons/solidjs-icon"
 import { SvelteIcon } from "../icons/svelte-icon"
 import { VueIcon } from "../icons/vue-icon"
 import { GraphQLIcon } from "../icons/graphql-icon"
+import { DenoIcon } from "../icons/deno-icon"
 
 export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 	{
@@ -80,6 +81,16 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 			return <SvelteIcon {...props} />
 		},
 		backgroundColor: "#ff3e00",
+		bigSize,
+	},
+
+	{
+		title: "Deno Resources",
+		href: "https://deno.framework.dev/",
+		Icon(props) {
+			return <DenoIcon {...props} />
+		},
+		backgroundColor: "#12124B",
 		bigSize,
 	},
 ]

@@ -4,6 +4,7 @@ import { ReactIcon } from "../../icons/react-icon"
 import { VueIcon } from "../../icons/vue-icon"
 import { SvelteIcon } from "../../icons/svelte-icon"
 import { Hero as HeroComponent, HeroProps } from "./hero"
+import { DenoIcon } from "../../icons/deno-icon"
 
 export default {
 	title: "Landing/Hero",
@@ -45,7 +46,7 @@ Hero.args = {
 				return <VueIcon {...props} />
 			},
 			backgroundColor: "#41B883",
-		},		
+		},
 		{
 			title: "Svelte Resources",
 			href: "https://svelte.framework.dev/",
@@ -53,6 +54,14 @@ Hero.args = {
 				return <SvelteIcon {...props} />
 			},
 			backgroundColor: "#FF3E00",
+		},
+		{
+			title: "Deno Resources",
+			href: "https://deno.framework.dev/",
+			Icon(props) {
+				return <DenoIcon {...props} />
+			},
+			backgroundColor: "#12124B",
 		},
 	],
 }
