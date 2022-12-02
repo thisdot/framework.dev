@@ -18,6 +18,7 @@ import {
 	resourceCardSubtitleStyle,
 	resourceCardTitleContainerStyle,
 	resourceCardTitleStyle,
+	resourceCardFooterItemsRowStyle,
 } from './resource-card.css'
 import { Tag } from '../tag'
 import { useId } from '@reach/auto-id'
@@ -130,12 +131,7 @@ export function ResourceCard({
 					<>
 						<div
 							className={classNames(
-								sprinkles({
-									layout: 'row',
-									gap: 4,
-									paddingBottom: 12,
-									flexWrap: 'wrap',
-								}),
+								resourceCardFooterItemsRowStyle,
 								'hide-in-percy'
 							)}
 						>

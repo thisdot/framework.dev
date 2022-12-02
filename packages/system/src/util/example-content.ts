@@ -70,7 +70,7 @@ export const exampleLibraries: Library[] = [
 		name: 'Flux',
 		author: 'Facebook',
 		repo: 'https://www.github.com/facebook/flux',
-		package: 'https://www.npmjs.com/package/flux',
+		package: 'https://www.example.com/package/flux',
 		href: 'https://facebook.github.io/flux/',
 		description:
 			'The original state management architecture for React utilizing a unidirectional data flow. Now deprecated and in maintenance mode.',
