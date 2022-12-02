@@ -7,6 +7,7 @@ import {
 	LinkCardGroup as LinkCardGroupComponent,
 	LinkCardGroupProps,
 } from "./link-card-group"
+import { DenoIcon } from "../../icons/deno-icon"
 
 export default {
 	title: "Landing/Link Card Group",
@@ -53,6 +54,14 @@ LinkCardGroup.args = {
 				return <SvelteIcon {...props} />
 			},
 			backgroundColor: "#FF3E00",
+		},
+		{
+			title: "Deno Resources",
+			href: "https://deno.framework.dev/",
+			Icon(props) {
+				return <DenoIcon {...props} />
+			},
+			backgroundColor: "#12124B",
 		},
 	],
 }
