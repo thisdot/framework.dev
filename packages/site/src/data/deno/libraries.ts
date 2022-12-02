@@ -67,7 +67,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		language: libraryTags[0],
 	},
 	{
-		name: "sheetjs",
+		name: "SheetJS",
 		description: "📗 SheetJS Community Edition -- Spreadsheet Data Toolkit",
 		href: "https://deno.land/x/sheetjs",
 		package: "https://deno.land/x/sheetjs",
@@ -136,12 +136,12 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		language: libraryTags[0],
 	},
 	{
-		name: "deno_dom",
+		name: "Deno DOM",
 		description: "Browser DOM & HTML parser in Deno",
 		href: "https://deno.land/x/deno_dom",
 		package: "https://deno.land/x/deno_dom",
 		repo: "https://github.com/b-fuze/deno-dom",
-		author: "",
+		author: "b-fuze",
 		image: "https://avatars.githubusercontent.com/u/10504957?v=4",
 		tags: ["utilities"],
 		language: libraryTags[0],
