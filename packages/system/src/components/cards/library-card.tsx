@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import { Library } from '../../models/library'
 import {
 	libraryCardBadgeStyle,
@@ -76,9 +77,14 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 						</>
 					) : library?.package !== '' ? (
 						// TODO: Have other frameworks decide what image to use if not npm
-						<div className={libraryPackageLinkStyle}>
+						<div
+							className={classNames(
+								libraryPackageLinkStyle,
+								libraryCardBadgeStyle
+							)}
+						>
 							<a className={libraryPackageTextStyle} href={library.package}>
-								Package
+								📦 Package
 							</a>
 						</div>
 					) : null}

@@ -9,19 +9,16 @@ export const libraryCardBadgeStyle = style({
 
 export const libraryPackageLinkStyle = style([
 	sprinkles({
-		backgroundColor: 'background',
-		border: 'light',
-		paddingY: 4,
-		paddingX: 8,
-		borderRadius: 6,
+		borderRadius: 4,
 		textStyle: 'buttonSmall',
 	}),
 	{
+		backgroundColor: vars.palette.neutral30,
 		cursor: 'pointer',
 		transition: 'background 0.15s ease-in',
 		selectors: {
 			'&:hover, &:focus': {
-				backgroundColor: vars.palette.neutral90,
+				backgroundColor: vars.palette.neutral40,
 				transition: 'none',
 			},
 		},
@@ -29,11 +26,15 @@ export const libraryPackageLinkStyle = style([
 ])
 
 export const libraryPackageTextStyle = style([
+	sprinkles({
+		display: 'block',
+		marginY: 4,
+		marginX: 8,
+	}),
 	{
-		opacity: 0.6,
+		color: vars.palette.neutral95,
 		transition: 'opacity 0.15s ease-in',
 		':hover': {
-			opacity: 0.75,
 			transition: 'none',
 		},
 	},
