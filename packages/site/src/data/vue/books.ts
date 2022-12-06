@@ -107,19 +107,16 @@ export const books: Book<typeof bookTags[number]>[] = [
 		],
 	},
 	{
-		title: "Vue.js设计与实现",
-		authors: ["霍春阳（HcySunYang）"],
+		title: "Vue.js design and implementation",
+		authors: "Huo Chunyang (HcySunYang)",
 		image:
 			"https://file.ituring.com.cn/LargeCover/220221aede71623dcf92",
 		description:
-			"本书基于Vue.js 3，从规范出发，以源码为基础，并结合大量直观的配图，循序渐进地讲解Vue.js中各个功能模块的实现，细致剖析框架设计原理。",
+			"This book is based on Vue.js 3, starting from the specification, based on the source code, and combined with a large number of intuitive pictures, it explains step by step the realization of each functional module in Vue.js, and analyzes the framework design principles in detail. The book has 18 chapters and is divided into six parts. The main contents include: framework design overview, response system, renderer, componentization, compiler and server-side rendering, etc. By reading this book, developers with hands-on experience with Vue.js 2/3 can further understand the implementation details of the Vue.js framework. Front-end developers who have no experience in using Vue.js but are interested in framework design can quickly master Vue. .js design principles.",
 		yearOfPublication: 2022,
 		numberOfPages: 501,
 		level: "intermediate",
 		href: "https://www.ituring.com.cn/book/2953",
-		tags: [
-			"vue 3",
-			"source code"
-		],
+		tags: [	"Vue 3"],
 	},
 ]
