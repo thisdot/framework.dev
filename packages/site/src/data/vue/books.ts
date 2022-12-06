@@ -106,4 +106,16 @@ export const books: Book<typeof bookTags[number]>[] = [
 			"state management",
 		],
 	},
+	{
+		title: "Vue.js design and implementation",
+		authors: ["Huo Chunyang (HcySunYang)"],
+		image: "https://file.ituring.com.cn/LargeCover/220221aede71623dcf92",
+		description:
+			"This book is based on Vue.js 3. It includes a large number of illustrations and explains step by step the realization of each functional module in Vue.js. This book also analyzes the framework design principles in detail.  By reading this book, developers with hands-on experience with Vue.js 2/3 can further understand the implementation details of the Vue.js framework. Front-end developers who have no experience in using Vue.js but are interested in framework design can quickly master Vue.js design principles.",
+		yearOfPublication: 2022,
+		numberOfPages: 501,
+		level: "intermediate",
+		href: "https://www.ituring.com.cn/book/2953",
+		tags: ["Vue 3"],
+	},
 ]
