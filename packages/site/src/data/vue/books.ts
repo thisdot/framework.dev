@@ -111,7 +111,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		authors: ["Huo Chunyang (HcySunYang)"],
 		image: "https://file.ituring.com.cn/LargeCover/220221aede71623dcf92",
 		description:
-			"This book is based on Vue.js 3, starting from the specification, based on the source code, and combined with a large number of intuitive pictures, it explains step by step the realization of each functional module in Vue.js, and analyzes the framework design principles in detail. The book has 18 chapters and is divided into six parts. The main contents include: framework design overview, response system, renderer, componentization, compiler and server-side rendering, etc. By reading this book, developers with hands-on experience with Vue.js 2/3 can further understand the implementation details of the Vue.js framework. Front-end developers who have no experience in using Vue.js but are interested in framework design can quickly master Vue. .js design principles.",
+			"This book is based on Vue.js 3. It includes a large number of illustrations and explains step by step the realization of each functional module in Vue.js. This book also analyzes the framework design principles in detail.  By reading this book, developers with hands-on experience with Vue.js 2/3 can further understand the implementation details of the Vue.js framework. Front-end developers who have no experience in using Vue.js but are interested in framework design can quickly master Vue.js design principles.",
 		yearOfPublication: 2022,
 		numberOfPages: 501,
 		level: "intermediate",
