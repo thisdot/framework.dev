@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import React from "react"
-import { formatFieldName } from "../../util/string-utils"
+import { checkGraphqlName } from "../../util/string-utils"
 import {
 	heroStyle,
 	heroHeadingStyle,
@@ -34,30 +34,21 @@ export function Hero({ className, siteName, ...props }: HeroProps) {
 				/>
 				<Logo className={heroHeadingStyle} siteName={siteName} stretched />
 				<p className={heroParagraphStyle}>
-					Search, compare, and discover top {formatFieldName(siteName)}{" "}
-					libraries and community driven resources in{" "}
-					{formatFieldName(siteName)}.
+					Search, compare, and discover top {checkGraphqlName(siteName)}{" "}
+					libraries and community-driven resources in{" "}
+					{checkGraphqlName(siteName)}.
 				</p>
 			</div>
 			<div className={heroFeatureHighlightRowStyle}>
-				<a
-					className={heroFeatureHighlightStyle}
-					href="/categories/libraries"
-				>
+				<a className={heroFeatureHighlightStyle} href="/categories/libraries">
 					<SearchFeatureHighlightIcon />
 					<p className={heroFeatureHighlightTitleStyle}>Search</p>
 				</a>
-				<a
-					className={heroFeatureHighlightStyle}
-					href="/categories/libraries"
-				>
+				<a className={heroFeatureHighlightStyle} href="/categories/libraries">
 					<CompareFeatureHighlightIcon />
 					<p className={heroFeatureHighlightTitleStyle}>Compare</p>
 				</a>
-				<a
-					className={heroFeatureHighlightStyle}
-					href="/categories/libraries"
-				>
+				<a className={heroFeatureHighlightStyle} href="/categories/libraries">
 					<BrowseFeatureHighlightIcon />
 					<p className={heroFeatureHighlightTitleStyle}>Discover</p>
 				</a>

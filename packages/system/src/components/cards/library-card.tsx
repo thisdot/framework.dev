@@ -33,21 +33,50 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 			tags={library.tags}
 			badges={
 				<>
-					<Badge
-						data={getGitHubStarsBadge(library.gitHubRepo)}
-						href={`https://www.github.com/${library.gitHubRepo}`}
-						label={`${library.name} GitHub Repository`}
-					/>
-					<Badge
-						data={getNpmDownloadsBadge(library.npmPackage)}
-						href={`https://www.npmjs.com/package/${library.npmPackage}`}
-						label={`${library.name} NPM Package`}
-					/>
-					<Badge
-						data={getBundleSizeBadge(library.npmPackage)}
-						href={`https://bundlephobia.com/package/${library.npmPackage}`}
-						label={`${library.name} Bundle Size Stats`}
-					/>
+					{library?.repo.includes("github.com") ? (
+						<Badge
+							data={getGitHubStarsBadge(
+								library.repo.replace("https://www.github.com/", "")
+							)}
+							href={library.repo}
+							label={`${library.name} GitHub Repository`}
+						/>
+					) : library?.repo !== "" ? (
+						// TODO: Have other frameworks decide what image to use if not GitHub
+						<Badge
+							data={""}
+							href={library.repo}
+							label={`${library.name} GitHub Repository`}
+						/>
+					) : null}
+					{library?.package.includes("npmjs") ? (
+						<>
+							<Badge
+								data={getNpmDownloadsBadge(
+									library.package.replace("https://www.npmjs.com/package/", "")
+								)}
+								href={library.package}
+								label={`${library.name} NPM Package`}
+							/>
+							<Badge
+								data={getBundleSizeBadge(
+									library.package.replace("https://www.npmjs.com/package/", "")
+								)}
+								href={`https://bundlephobia.com/package/${library.package.replace(
+									"https://www.npmjs.com/package/",
+									""
+								)}`}
+								label={`${library.name} Bundle Size Stats`}
+							/>
+						</>
+					) : library?.package !== "" ? (
+						// TODO: Have other frameworks decide what image to use if not npm
+						<Badge
+							data={""}
+							href={library.package}
+							label={`${library.name} Package`}
+						/>
+					) : null}
 				</>
 			}
 			{...props}
@@ -58,7 +87,7 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 }
 
 type BadgeProps = {
-	data: string
+	data?: string
 	href: string
 	label: string
 }

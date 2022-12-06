@@ -1,7 +1,36 @@
 import { Course } from "@framework/system/src/models/course"
-import { Tags } from "../../models/tags"
 
-export const courses: Course<Tags[number]>[] = [
+export const courseTags = [
+	"state management",
+	"data fetching",
+	"routing",
+	"testing",
+	"forms",
+	"graphQL",
+	"vuex",
+	"vue CLI",
+	"authentication",
+	"SCSS",
+	"CSS",
+	"bootstrap",
+	"TypeScript",
+	"tailwind",
+	"Material UI",
+	"vue 2",
+	"vue 3",
+	"nuxt 2",
+	"component design",
+	"PWA",
+	"AWS",
+	"DevOps",
+	"continuous integration",
+	"vite",
+	"debugging",
+	"JavaScript marathon",
+	"sass",
+] as const
+
+export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "Vue - The Complete Guide (incl. Router & Composition API)",
 		author: "Maximilian Schwarzmüller",
@@ -33,7 +62,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "advanced",
 		format: "video",
 		href: "https://adamwathan.me/advanced-vue-component-design/",
-		tags: ["components", "vue 2"],
+		tags: ["component design", "vue 2"],
 	},
 	{
 		title: "Vue Foundations",
@@ -96,7 +125,7 @@ export const courses: Course<Tags[number]>[] = [
 			"vuex",
 			"authentication",
 			"forms",
-			"components",
+			"component design",
 			"CSS",
 		],
 	},
@@ -115,8 +144,8 @@ export const courses: Course<Tags[number]>[] = [
 			"vue 2",
 			"sass",
 			"data fetching",
-			"components",
-			"javascript marathon",
+			"component design",
+			"JavaScript marathon",
 		],
 	},
 	{
@@ -129,7 +158,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/15Yr-J4X34M",
-		tags: ["PWA", "vue CLI", "vue 2", "javascript marathon"],
+		tags: ["PWA", "vue CLI", "vue 2", "JavaScript marathon"],
 	},
 	{
 		title: "Master State Management in Vue with VueX",
@@ -141,19 +170,19 @@ export const courses: Course<Tags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/KO4KQ2tjG_M",
-		tags: ["vue 2", "vuex", "state management", "javascript marathon"],
+		tags: ["vue 2", "vuex", "state management", "JavaScript marathon"],
 	},
 	{
 		title: "Learning Unit Testing in Vue",
 		author: "Simone Cuomo",
 		image: "https://github.com/thisdot.png",
 		description:
-			"TDD (Test driven development), is every developer’s dream. This training will teach you how to do testing right in Vue.js with the help of vue-test-util and jest. We will also cover a variety of test scenarios to support you in improving your testing knowledge.",
+			"TDD (Test driven development), is every developer's dream. This training will teach you how to do testing right in Vue.js with the help of vue-test-util and jest. We will also cover a variety of test scenarios to support you in improving your testing knowledge.",
 		paymentType: "free",
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/-CJDcjxXEaY",
-		tags: ["vue 2", "testing", "javascript marathon"],
+		tags: ["vue 2", "testing", "JavaScript marathon"],
 	},
 	{
 		title: "Pro Tips on Using AWS with Vue",
@@ -170,7 +199,7 @@ export const courses: Course<Tags[number]>[] = [
 			"DevOps",
 			"continuous integration",
 			"vue 2",
-			"javascript marathon",
+			"JavaScript marathon",
 		],
 	},
 	{
@@ -183,7 +212,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/ecpvIo4NIoY",
-		tags: ["vite", "vue 2", "vue 3", "javascript marathon"],
+		tags: ["vite", "vue 2", "vue 3", "JavaScript marathon"],
 	},
 	{
 		title: "Effectively Using the New Vue Composition API",
@@ -195,7 +224,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/E6hjtY3e8H0",
-		tags: ["vue 3", "javascript marathon"],
+		tags: ["vue 3", "JavaScript marathon"],
 	},
 	{
 		title: "Debugging Vue: Quick Tips and Tricks",
@@ -207,6 +236,18 @@ export const courses: Course<Tags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/wXFcRDsFSEU",
-		tags: ["vue 2", "debugging", "javascript marathon"],
+		tags: ["vue 2", "debugging", "JavaScript marathon"],
+	},
+	{
+		title: "JS Drops",
+		author: "Various",
+		image: "https://github.com/thisdot.png",
+		description:
+			"JS Drops is a weekly series of online courses on Vue, React, TypeScript, GraphQL, and other topics in the JS ecosystem. Learn about leading web development technologies and concepts!",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "https://dropjs.com/",
+		tags: ["JavaScript marathon"],
 	},
 ]

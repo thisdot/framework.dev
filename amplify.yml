@@ -1,5 +1,65 @@
 version: 1
 applications:
+  - appRoot: packages/graphql
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd ../..
+            - nvm install
+            - nvm use
+            - yarn install
+        build:
+          commands:
+            - yarn build:graphql
+      artifacts:
+        baseDirectory: ../site/dist
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - ../../node_modules/**/*
+          - ../../packages/*/node_modules/**/*
+  - appRoot: packages/nodejs
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd ../..
+            - nvm install
+            - nvm use
+            - yarn install
+        build:
+          commands:
+            - yarn build:nodejs
+      artifacts:
+        baseDirectory: ../site/dist
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - ../../node_modules/**/*
+          - ../../packages/*/node_modules/**/*
+  - appRoot: packages/solidjs
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd ../..
+            - nvm install
+            - nvm use
+            - yarn install
+        build:
+          commands:
+            - yarn build:solidjs
+      artifacts:
+        baseDirectory: ../site/dist
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - ../../node_modules/**/*
+          - ../../packages/*/node_modules/**/*
   - appRoot: packages/react
     frontend:
       phases:
@@ -32,6 +92,46 @@ applications:
         build:
           commands:
             - yarn build:angular
+      artifacts:
+        baseDirectory: ../site/dist
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - ../../node_modules/**/*
+          - ../../packages/*/node_modules/**/*
+  - appRoot: packages/qwik
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd ../..
+            - nvm install
+            - nvm use
+            - yarn install
+        build:
+          commands:
+            - yarn build:qwik
+      artifacts:
+        baseDirectory: ../site/dist
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - ../../node_modules/**/*
+          - ../../packages/*/node_modules/**/*
+  - appRoot: packages/svelte
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd ../..
+            - nvm install
+            - nvm use
+            - yarn install
+        build:
+          commands:
+            - yarn build:svelte
       artifacts:
         baseDirectory: ../site/dist
         files:

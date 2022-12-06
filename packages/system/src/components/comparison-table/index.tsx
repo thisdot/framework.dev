@@ -55,7 +55,7 @@ export function ComparisonTable({
 					"Content-Type": "application/json",
 					Accept: "application/json",
 				},
-				body: JSON.stringify(libraries.map((library) => library.npmPackage)),
+				body: JSON.stringify(libraries.map((library) => library.package)),
 				signal: abortController.signal,
 			})
 				.then((res) => res.json())
@@ -70,11 +70,11 @@ export function ComparisonTable({
 					author: library.author,
 					image: library.image,
 					href: library.href,
-					coverage: npmsio[library.npmPackage]?.evaluation?.quality?.tests,
+					coverage: npmsio[library.package]?.evaluation?.quality?.tests,
 					downloads:
-						npmsio[library.npmPackage]?.collected?.npm?.downloads[1]?.count,
-					health: npmsio[library.npmPackage]?.evaluation?.quality?.health,
-					stars: npmsio[library.npmPackage]?.collected?.github?.starsCount,
+						npmsio[library.package]?.collected?.npm?.downloads[1]?.count,
+					health: npmsio[library.package]?.evaluation?.quality?.health,
+					stars: npmsio[library.package]?.collected?.github?.starsCount,
 				}
 			})
 			setData(data)

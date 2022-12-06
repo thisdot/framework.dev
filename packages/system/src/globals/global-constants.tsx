@@ -1,9 +1,12 @@
 import { LinkCardProps } from "@framework/system/src/components/landing/link-card"
 import { AngularIcon } from "../icons/angular-icon"
+import { QwikIcon } from "../icons/qwik-icon"
+import { NodejsIcon } from "../icons/nodejs-icon"
 import { ReactIcon } from "../icons/react-icon"
+import { SolidJSIcon } from "../icons/solidjs-icon"
+import { SvelteIcon } from "../icons/svelte-icon"
 import { VueIcon } from "../icons/vue-icon"
-
-export const CURRENT_BUILD_YEAR = new Date().getFullYear()
+import { GraphQLIcon } from "../icons/graphql-icon"
 
 export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 	{
@@ -31,6 +34,52 @@ export const FRAMEWORK_RESOURCES = (bigSize = false): LinkCardProps[] => [
 			return <VueIcon {...props} />
 		},
 		backgroundColor: "#41B883",
+		bigSize,
+	},
+	{
+		title: "Qwik Resources",
+		href: "https://qwik.framework.dev/",
+		Icon(props) {
+			return <QwikIcon {...props} />
+		},
+		backgroundColor: "#AC7EF4",
+		bigSize,
+	},
+	{
+		title: "SolidJS Resources",
+		href: "https://solidjs.framework.dev/",
+		Icon(props) {
+			return <SolidJSIcon {...props} />
+		},
+		backgroundColor: "#446b9e",
+		bigSize,
+	},
+	{
+		title: "GraphQL Resources",
+		href: "https://graphql.framework.dev/",
+		Icon(props) {
+			return <GraphQLIcon {...props} />
+		},
+		backgroundColor: "#E10098",
+		bigSize,
+	},
+	{
+		title: "NodeJS Resources",
+		href: "https://nodejs.framework.dev/",
+		Icon(props) {
+			return <NodejsIcon {...props} />
+		},
+
+		backgroundColor: "#539e43",
+		bigSize,
+	},
+	{
+		title: "Svelte Resources",
+		href: "https://svelte.framework.dev/",
+		Icon(props) {
+			return <SvelteIcon {...props} />
+		},
+		backgroundColor: "#ff3e00",
 		bigSize,
 	},
 ]

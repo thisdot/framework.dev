@@ -1,7 +1,14 @@
 import { Podcast } from "@framework/system/src/models/podcast"
-import { Tags } from "../../models/tags"
 
-export const podcasts: Podcast<Tags[number]>[] = [
+export const podcastTags = [
+	"general",
+	"react",
+	"GraphQL",
+	"react native",
+	"redux",
+] as const
+
+export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	{
 		title: "Modern Web",
 		image:
@@ -21,7 +28,7 @@ export const podcasts: Podcast<Tags[number]>[] = [
 		description: "Conversations about React with your favorite developers.",
 		rss: "https://feeds.simplecast.com/JoR28o79",
 		href: "https://reactpodcast.com/",
-		tags: ["react.js"],
+		tags: ["react"],
 	},
 	{
 		title: "JavaScript Air",
@@ -56,7 +63,7 @@ export const podcasts: Podcast<Tags[number]>[] = [
 	{
 		title: "React Round Up",
 		image:
-			"https://assets.fireside.fm/file/fireside-images/podcasts/images/4/45ac7cd2-9fff-46c9-842c-2d7e0d34cd4b/cover_small.jpg?v=1",
+			"https://production.listennotes.com/podcasts/react-round-up-top-end-devs-uxyF8zV_NUA-2KadMTpoqxD.1400x1400.jpg",
 		hosts: [
 			"Carl Mungazi",
 			"Charles Max Wood",
@@ -67,7 +74,7 @@ export const podcasts: Podcast<Tags[number]>[] = [
 		description: "A weekly discussion among React developers",
 		rss: "https://reactroundup.com/rss",
 		href: "https://reactroundup.com/",
-		tags: ["react.js"],
+		tags: ["react"],
 	},
 	{
 		title: "Syntax",
@@ -117,7 +124,7 @@ export const podcasts: Podcast<Tags[number]>[] = [
 		description: "Learn By Consuming, Building, And Teaching",
 		rss: "https://feeds.simplecast.com/giYVu3vJ",
 		href: "https://epicreact.dev/podcast/learn-by-consuming-building-and-teaching",
-		tags: ["react.js"],
+		tags: ["react"],
 	},
 	{
 		title: "iteration",

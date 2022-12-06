@@ -5,13 +5,23 @@ export function sortLibraries(
 	sortConfig: ISortConfig
 ): ILibrary[] {
 	return [...libraries].sort((a, b) => {
-		if (a[sortConfig.by] === b[sortConfig.by]) {
+		const valueA =
+			typeof a[sortConfig.by] === "string"
+				? (a[sortConfig.by] as string).toUpperCase()
+				: a[sortConfig.by]
+
+		const valueB =
+			typeof b[sortConfig.by] === "string"
+				? (b[sortConfig.by] as string).toUpperCase()
+				: b[sortConfig.by]
+
+		if (valueA === valueB) {
 			return 0
 		}
 		if (sortConfig.asc) {
-			return a[sortConfig.by] > b[sortConfig.by] ? 1 : -1
+			return valueA > valueB ? 1 : -1
 		} else {
-			return b[sortConfig.by] > a[sortConfig.by] ? 1 : -1
+			return valueB > valueA ? 1 : -1
 		}
 	})
 }

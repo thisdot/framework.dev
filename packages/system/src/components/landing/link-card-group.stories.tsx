@@ -1,6 +1,7 @@
 import { Story, Meta } from "@storybook/react"
 import { AngularIcon } from "../../icons/angular-icon"
 import { ReactIcon } from "../../icons/react-icon"
+import { SvelteIcon } from "../../icons/svelte-icon"
 import { VueIcon } from "../../icons/vue-icon"
 import {
 	LinkCardGroup as LinkCardGroupComponent,
@@ -44,6 +45,14 @@ LinkCardGroup.args = {
 			},
 			backgroundColor: "#41B883",
 			bigSize: true,
+		},
+		{
+			title: "Svelte Resources",
+			href: "https://svelte.framework.dev/",
+			Icon(props) {
+				return <SvelteIcon {...props} />
+			},
+			backgroundColor: "#FF3E00",
 		},
 	],
 }

@@ -1,13 +1,14 @@
 ---
-import {
-	formatFieldName,
-	serializeFieldName,
-} from "@framework/system/src/util/string-utils"
+import { applyPreFilters } from '@framework/system/src/components/search/query-util'
 import { visuallyHidden } from "@framework/system/src/styles/utilities.css"
+import {
+formatFieldName,
+serializeFieldName
+} from "@framework/system/src/util/string-utils"
+import { titleCase } from "title-case"
+import Search from '../../../components/search.tsx'
 import { getSearchData } from '../../../data/search-data'
 import BaseLayout from '../../../layouts/base.astro'
-import { applyPreFilters } from '@framework/system/src/components/search/query-util'
-import Search from '../../../components/search.tsx'
 
 export async function getStaticPaths() {
 	const searchData = await getSearchData(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)
@@ -24,7 +25,8 @@ export async function getStaticPaths() {
 
 const { category, ...props } = Astro.props
 
-const title = `${formatFieldName(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} ${formatFieldName(category)}`
+const title = `${formatFieldName(category)} | ${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}.framework.dev`
+
 ---
 <head>
 	<meta name="description" content={`Browse and search through relevant ${title}`}/>

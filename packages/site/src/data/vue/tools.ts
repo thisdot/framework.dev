@@ -1,12 +1,20 @@
 import { Tool } from "@framework/system/src/models/tool"
-import { Tags } from "../../models/tags"
 
-export const tools: Tool<Tags[number]>[] = [
+export const toolTags = [
+	"VSCode",
+	"chrome",
+	"firefox",
+	"edge",
+	"safari",
+	"UI Design",
+	"development",
+] as const
+
+export const tools: Tool<typeof toolTags[number]>[] = [
 	{
 		name: "Vue CLI",
 		author: "Yuxi (Evan) You",
-		description:
-			"Standard Tooling for Vue.js Development",
+		description: "Standard Tooling for Vue.js Development",
 		image: "https://github.com/vuejs.png",
 		href: "https://cli.vuejs.org/",
 		tags: ["development"],
@@ -14,8 +22,7 @@ export const tools: Tool<Tags[number]>[] = [
 	{
 		name: "Vite",
 		author: "Yuxi (Evan) You and Vite contributors",
-		description:
-			"Next Generation Frontend Tooling",
+		description: "Next Generation Frontend Tooling",
 		image: "https://vitejs.dev/logo.svg",
 		href: "https://github.com/vitejs/vite",
 		tags: ["development"],
@@ -27,7 +34,7 @@ export const tools: Tool<Tags[number]>[] = [
 			"Browser DevTools extension for debugging Vue.js applications.",
 		image: "https://github.com/vuejs.png",
 		href: "https://devtools.vuejs.org/guide/installation.html",
-		tags: ["chrome", "firefox", "Edge"],
+		tags: ["chrome", "firefox", "edge"],
 	},
 	{
 		name: "Volar",
@@ -41,8 +48,7 @@ export const tools: Tool<Tags[number]>[] = [
 	{
 		name: "Vetur",
 		author: "Pine Wu",
-		description:
-			"Vue tooling for VS Code.",
+		description: "Vue tooling for VS Code.",
 		image: "https://github.com/vuejs.png",
 		href: "https://marketplace.visualstudio.com/items?itemName=octref.vetur",
 		tags: ["VSCode"],
@@ -89,5 +95,15 @@ export const tools: Tool<Tags[number]>[] = [
 			"Storybook runs alongside your app in development mode. It helps you build UI components isolated from the business logic and context of your app.",
 		image: "https://github.com/storybookjs.png",
 		tags: ["UI Design", "development"],
+	},
+	{
+		name: "TanStack Router",
+		author: "Tanner Linsley",
+		description:
+			"A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
+		image:
+			"https://pbs.twimg.com/profile_images/1474105199757180928/lsqWAJKv_400x400.jpg",
+		href: "https://tanstack.com/router/v1/",
+		tags: ["development"],
 	},
 ]

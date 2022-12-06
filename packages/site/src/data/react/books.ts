@@ -1,7 +1,20 @@
 import { Book } from "@framework/system/src/models/book"
-import { Tags } from "../../models/tags"
 
-export const books: Book<Tags[number]>[] = [
+export const bookTags = [
+	"projects",
+	"TypeScript",
+	"recipes",
+	"testing",
+	"routing",
+	"NextJS",
+	"redux",
+	"authentication",
+	"A11Y",
+	"GraphQL",
+	"Material UI",
+] as const
+
+export const books: Book<typeof bookTags[number]>[] = [
 	{
 		title: "The Road To Enterprise",
 		authors: ["Thomas Findlay"],
@@ -171,7 +184,7 @@ export const books: Book<Tags[number]>[] = [
 		numberOfPages: 774,
 		level: "intermediate",
 		href: "https://www.oreilly.com/library/view/react-material-ui-cookbook/9781789615227/",
-		tags: ["material UI"],
+		tags: ["Material UI"],
 	},
 	{
 		title: "Test-Driven React",
@@ -208,7 +221,7 @@ export const books: Book<Tags[number]>[] = [
 		numberOfPages: 379,
 		level: "beginner",
 		href: "https://www.oreilly.com/library/view/react-and-libraries/9781484266960/",
-		tags: ["TypeScript", "routing", "testing", "material UI"],
+		tags: ["TypeScript", "routing", "testing", "Material UI"],
 	},
 	{
 		title: "Pro MERN Stack",
@@ -436,7 +449,7 @@ export const books: Book<Tags[number]>[] = [
 		numberOfPages: 343,
 		level: "intermediate",
 		href: "https://www.oreilly.com/library/view/react-16-tooling/9781788835015/",
-		tags: ["testing", "flow"],
+		tags: ["testing"],
 	},
 	{
 		title: "React: Tools & Resources",
@@ -529,7 +542,8 @@ export const books: Book<Tags[number]>[] = [
 		title: "React Explained",
 		authors: ["Zac Gordon"],
 		href: "https://www.ostraining.com/books/react/",
-		image: "https://www.ostraining.com/cdn/images/books-club/react.jpg",
+		image:
+			"https://ostraining.com/wp-content/uploads/elementor/thumbs/react-p0jzqaebb74zxlnj7jsgs7v7th7cqjwvb2rn97o2ns.jpg",
 		description:
 			"React Explained is a fun and enjoyable introduction to React, which is the Javascript framework of choice for WordPress, Drupal, Magento, and thousands of developers.",
 		yearOfPublication: 2018,

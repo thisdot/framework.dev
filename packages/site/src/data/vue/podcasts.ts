@@ -1,7 +1,8 @@
 import { Podcast } from "@framework/system/src/models/podcast"
-import { Tags } from "../../models/tags"
 
-export const podcasts: Podcast<Tags[number]>[] = [
+export const podcastTags = ["general", "GraphQL", "vue", "quasar"] as const
+
+export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	{
 		title: "Modern Web",
 		image:
@@ -16,7 +17,7 @@ export const podcasts: Podcast<Tags[number]>[] = [
 	{
 		title: "Views on Vue",
 		image:
-			"https://assets.fireside.fm/file/fireside-images/podcasts/images/4/4b532b8f-dc99-4b48-90f1-023bd6c0cd90/cover_medium.jpg?v=0",
+			"https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/e1/ee/cd/e1eecd5c-7c90-05e7-19d2-9a2476d82c54/mza_2587166457306830649.jpg/626x0w.webp",
 		hosts: [
 			"Lindsay Wardell",
 			"Luke Diebold",
@@ -28,7 +29,7 @@ export const podcasts: Podcast<Tags[number]>[] = [
 			"A weekly discussion among Vue developers about Vue and it's ecosystem.",
 		rss: "https://viewsonvue.com/rss",
 		href: "https://viewsonvue.com/",
-		tags: ["vuejs"],
+		tags: ["vue"],
 	},
 	{
 		title: "The Official Vue News",
@@ -39,7 +40,7 @@ export const podcasts: Podcast<Tags[number]>[] = [
 			"This podcast covers the latest Vue news and tutorials in about 5 minutes. Our goal is to give you the information you need to stay on top of your game as a Vue developer. Links to all the stories we talk about can be found in our weekly newsletter and on http://news.vuejs.org",
 		rss: "https://news.vuejs.org/feed.xml",
 		href: "http://news.vuejs.org",
-		tags: ["vuejs"],
+		tags: ["vue"],
 	},
 	{
 		title: "Enjoy the Vue",
@@ -49,7 +50,7 @@ export const podcasts: Podcast<Tags[number]>[] = [
 			"A new Vue.js podcast bringing you panel discussions, guest interviews, and much more to keep you up to date on what's happening in the Vue and tech communities.",
 		rss: "https://pod.link/1498529055",
 		href: "https://enjoythevue.io/",
-		tags: ["vuejs"],
+		tags: ["vue"],
 	},
 	{
 		title: "After Talk by Vue.js Berlin",
@@ -60,7 +61,7 @@ export const podcasts: Podcast<Tags[number]>[] = [
 			"Vue.js // Berlin Podcast with interesting people from Vue.js and Programming Community.",
 		rss: "https://anchor.fm/s/2f6e7074/podcast/rss",
 		href: "https://vuejs.berlin/",
-		tags: ["vuejs"],
+		tags: ["vue"],
 	},
 	{
 		title: "Quasar Vue Life",
@@ -71,6 +72,6 @@ export const podcasts: Podcast<Tags[number]>[] = [
 			"This show is for coders who want to learn the mindset, and life skills behind being a Web Developer. Learn from Luke Diebold. Core Quasar Team member, and creator of QuasarCast.Com",
 		rss: "https://feeds.transistor.fm/quasar-vue-life",
 		href: "https://quasarcast.com/podcasts/quasar-life",
-		tags: ["vuejs", "quasar"],
+		tags: ["vue", "quasar"],
 	},
 ]

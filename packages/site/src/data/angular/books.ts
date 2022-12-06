@@ -1,7 +1,19 @@
 import { Book } from "@framework/system/src/models/book"
-import { Tags } from "../../models/tags"
 
-export const books: Book<Tags[number]>[] = [
+export const bookTags = [
+	"nx",
+	"recipes",
+	"monorepo",
+	"state management",
+	"NgRx",
+	"testing",
+	"PWA",
+	"routing",
+	"components",
+	"data binding",
+] as const
+
+export const books: Book<typeof bookTags[number]>[] = [
 	{
 		title: "Angular Projects - Second Edition",
 		authors: ["Aristeidis Bampakos"],
@@ -38,13 +50,19 @@ export const books: Book<Tags[number]>[] = [
 		numberOfPages: 652,
 		level: "beginner",
 		href: "https://www.amazon.com/Angular-Cookbook-actionable-recipes-developer/dp/1838989439",
-		tags: ["recipes", "state management", "NgRx", "testing", "PWA", "components"],
+		tags: [
+			"recipes",
+			"state management",
+			"NgRx",
+			"testing",
+			"PWA",
+			"components",
+		],
 	},
 	{
 		title: "A Journey to Angular Development",
 		authors: ["Sukesh Marla"],
-		image:
-			"https://m.media-amazon.com/images/I/51QMjI34jLS.jpg",
+		image: "https://m.media-amazon.com/images/I/51QMjI34jLS.jpg",
 		description:
 			"This book gives you a step-by-step approach to building web apps using Angular, by starting with the essentials such as ES6, Webpack, and TypeScript, following with core Angular concepts such as modules, directives, components, data binding, routing, and more. It really is a journey through all the essential concepts you'll need to know as an Angular developer.",
 		yearOfPublication: 2021,

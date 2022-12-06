@@ -33,6 +33,10 @@ export function formatFieldValue(inputValue: string) {
 	return titleCased.charAt(0).toUpperCase() + titleCased.slice(1)
 }
 
+export function checkGraphqlName(inputValue: string) {
+	return inputValue === "graphql" ? "GraphQL" : formatFieldValue(inputValue)
+}
+
 export function deserializeFieldName(inputValue: string) {
 	return camelCase(inputValue)
 }

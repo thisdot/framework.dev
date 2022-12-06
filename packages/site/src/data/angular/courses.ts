@@ -1,7 +1,26 @@
 import { Course } from "@framework/system/src/models/course"
-import { Tags } from "../../models/tags"
 
-export const courses: Course<Tags[number]>[] = [
+export const courseTags = [
+	"state management",
+	"components",
+	"data fetching",
+	"routing",
+	"testing",
+	"services",
+	"RxJS",
+	"NgRx",
+	"JavaScript marathon",
+	"nx monorepo",
+	"ignite UI",
+	"ivy",
+	"PWA",
+	"A11Y",
+	"pipes",
+	"angular patterns",
+	"TypeScript",
+] as const
+
+export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "Getting started with Angular",
 		author: "Google",
@@ -54,7 +73,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/frswk1syMiw",
-		tags: ["nx", "javascript marathon"],
+		tags: ["nx monorepo", "JavaScript marathon"],
 	},
 	{
 		title: "Learning RxJS in 1 Hour",
@@ -66,7 +85,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/oFDVf0shWYE",
-		tags: ["RxJS", "javascript marathon"],
+		tags: ["RxJS", "JavaScript marathon"],
 	},
 	{
 		title: "1 Hour to Learn Angular",
@@ -82,7 +101,7 @@ export const courses: Course<Tags[number]>[] = [
 			"state management",
 			"components",
 			"data fetching",
-			"javascript marathon",
+			"JavaScript marathon",
 		],
 	},
 	{
@@ -95,7 +114,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/Yvgfk5EAFws",
-		tags: ["RxJS", "javascript marathon"],
+		tags: ["RxJS", "JavaScript marathon"],
 	},
 	{
 		title: "Build Angular Apps in Minutes",
@@ -107,7 +126,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/kOYO3_L_zJM",
-		tags: ["ignite UI", "javascript marathon"],
+		tags: ["ignite UI", "JavaScript marathon"],
 	},
 	{
 		title: "Advanced NgRx: Complex Angular State Management",
@@ -119,7 +138,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/JP4dEM4bjE8",
-		tags: ["NgRx", "javascript marathon"],
+		tags: ["NgRx", "JavaScript marathon"],
 	},
 	{
 		title: "Fully zone-less - High Performance in post IVY",
@@ -131,7 +150,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/x0W_mbivKLk",
-		tags: ["ivy", "javascript marathon"],
+		tags: ["ivy", "JavaScript marathon"],
 	},
 	{
 		title: "PWA in Angular",
@@ -143,7 +162,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/9hL0WabUoSc",
-		tags: ["PWA", "javascript marathon"],
+		tags: ["PWA", "JavaScript marathon"],
 	},
 	{
 		title: "Easy Angular Unit Testing in NgRx",
@@ -155,7 +174,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/NOT-nJLDnyg",
-		tags: ["NgRx", "testing", "javascript marathon"],
+		tags: ["NgRx", "testing", "JavaScript marathon"],
 	},
 	{
 		title: "The Best Pro Tips for A11Y in Angular",
@@ -167,10 +186,11 @@ export const courses: Course<Tags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/JsS052A1CVg",
-		tags: ["A11Y", "javascript marathon"],
+		tags: ["A11Y", "JavaScript marathon"],
 	},
 	{
-		title: "A Guide to Advanced Angular Patterns (Route Guards, Pipes, Interceptors & more)",
+		title:
+			"A Guide to Advanced Angular Patterns (Route Guards, Pipes, Interceptors & more)",
 		author: "Rob Ocel",
 		image: "https://github.com/thisdot.png",
 		description:
@@ -179,12 +199,13 @@ export const courses: Course<Tags[number]>[] = [
 		level: "advanced",
 		format: "video",
 		href: "https://youtu.be/wWEJnolhb_s",
-		tags: ["routing", "pipes", "patterns", "javascript marathon"],
+		tags: ["routing", "pipes", "angular patterns", "JavaScript marathon"],
 	},
 	{
 		title: "Decoded Frontend",
 		author: "Dmytro Mezhenskyi",
-		image: "https://yt3.ggpht.com/ytc/AKedOLTRAN09hQv5mKM-q_dPdOo57tg14n3qKnx-bQNu0Q=s88-c-k-c0x00ffffff-no-rj",
+		image:
+			"https://yt3.ggpht.com/ytc/AKedOLTRAN09hQv5mKM-q_dPdOo57tg14n3qKnx-bQNu0Q=s88-c-k-c0x00ffffff-no-rj",
 		description:
 			"Decoded Training is a series of video tutorials about Angular and generally about web development. New videos are published on a biweekly basis.",
 		paymentType: "free",
@@ -196,7 +217,8 @@ export const courses: Course<Tags[number]>[] = [
 	{
 		title: "Ultimate Courses",
 		author: "Todd Motto",
-		image: "https://ultimatecourses.com/assets/logo-ef24a2d3b6a0febba9ff80a1b01d632db750feb083442d0071dff7426762e0c2.svg",
+		image:
+			"https://ultimatecourses.com/assets/logo-ef24a2d3b6a0febba9ff80a1b01d632db750feb083442d0071dff7426762e0c2.svg",
 		description:
 			"Ultimate Courses has a collection of video courses covering beginner and advanced Angular, TypeScript, RxJS, and NgRX.",
 		paymentType: "paid",
@@ -204,5 +226,17 @@ export const courses: Course<Tags[number]>[] = [
 		format: "video",
 		href: "https://ultimatecourses.com/",
 		tags: ["RxJS", "TypeScript", "NgRx"],
+	},
+	{
+		title: "JS Drops",
+		author: "Various",
+		image: "https://github.com/thisdot.png",
+		description:
+			"JS Drops is a weekly series of online courses on Angular, React, TypeScript, GraphQL, and other topics in the JS ecosystem. Learn about leading web development technologies and concepts!",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "https://dropjs.com/",
+		tags: ["JavaScript marathon"],
 	},
 ]

@@ -1,7 +1,38 @@
 import { Course } from "@framework/system/src/models/course"
-import { Tags } from "../../models/tags"
 
-export const courses: Course<Tags[number]>[] = [
+export const courseTags = [
+	"state management",
+	"data fetching",
+	"routing",
+	"testing",
+	"forms",
+	"GraphQL",
+	"native",
+	"redux",
+	"authentication",
+	"SCSS",
+	"CSS",
+	"bootstrap",
+	"react context",
+	"hooks",
+	"TypeScript",
+	"tailwind",
+	"Material UI",
+	"vite",
+	"JavaScript marathon",
+	"AWS",
+	"netlify",
+	"continuous integration",
+	"GatsbyJS",
+	"SSG",
+	"component design",
+	"apollo",
+	"faunaDB",
+	"sass",
+	"static site generation",
+] as const
+
+export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "Code 15 React Projects - Complete Course",
 		author: "John Smilga",
@@ -107,7 +138,7 @@ export const courses: Course<Tags[number]>[] = [
 	{
 		title: "Learn React Today",
 		author: "Web Dev Simplified",
-		image: "https://github.com/WebDevSimplified",
+		image: "https://github.com/WebDevSimplified.png",
 		description:
 			"Learn React and all its modern features such as hooks and context in less than a day with this highly focused React course",
 		paymentType: "paid",
@@ -249,7 +280,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/vyJU9efvUtQ",
-		tags: ["material UI", "CSS"],
+		tags: ["Material UI", "CSS"],
 	},
 	{
 		title: "Epic React",
@@ -268,7 +299,7 @@ export const courses: Course<Tags[number]>[] = [
 		author: "Kent C. Dodds",
 		image: "https://github.com/kentcdodds.png",
 		description:
-			"This course is for React newbies and anyone looking to build a solid foundation. It’s designed to teach you everything you need to start building web applications in React right away.",
+			"This course is for React newbies and anyone looking to build a solid foundation. It's designed to teach you everything you need to start building web applications in React right away.",
 		paymentType: "free",
 		level: "beginner",
 		format: "video",
@@ -285,7 +316,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/ecpvIo4NIoY",
-		tags: ["vite",  "javascript marathon"],
+		tags: ["vite", "JavaScript marathon"],
 	},
 	{
 		title: "1 Hour to Learn React",
@@ -297,7 +328,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/n21XU0Fzr1o",
-		tags: ["hooks", "data fetching", "CSS", "javascript marathon"],
+		tags: ["hooks", "data fetching", "CSS", "JavaScript marathon"],
 	},
 	{
 		title: "React... Suspense…",
@@ -309,7 +340,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/xk_EWd11T94",
-		tags: ["data fetching", "javascript marathon"],
+		tags: ["data fetching", "JavaScript marathon"],
 	},
 	{
 		title: "Fullstack React + GraphQL in 60 Minutes",
@@ -321,7 +352,13 @@ export const courses: Course<Tags[number]>[] = [
 		level: "advanced",
 		format: "video",
 		href: "https://youtu.be/0Js5O5a4bQ4",
-		tags: ["GraphQL", "authentication", "AWS", "data fetching", "javascript marathon"],
+		tags: [
+			"GraphQL",
+			"authentication",
+			"AWS",
+			"data fetching",
+			"JavaScript marathon",
+		],
 	},
 	{
 		title: "An Introduction to Netlify with React",
@@ -333,7 +370,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/DX3zlPwZqk4",
-		tags: ["netlify", "continuous integration", "javascript marathon"],
+		tags: ["netlify", "continuous integration", "JavaScript marathon"],
 	},
 	{
 		title: "An Introduction to Gatsby with React",
@@ -345,7 +382,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/ldGJmqtpHh8",
-		tags: ["GatsbyJS", "static site generation", "javascript marathon"],
+		tags: ["GatsbyJS", "static site generation", "JavaScript marathon"],
 	},
 	{
 		title: "Using GraphQL with React",
@@ -357,7 +394,13 @@ export const courses: Course<Tags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/JmVdgtjGo5Q",
-		tags: ["GraphQL", "data fetching", "components", "apollo", "javascript marathon"],
+		tags: [
+			"GraphQL",
+			"data fetching",
+			"component design",
+			"apollo",
+			"JavaScript marathon",
+		],
 	},
 	{
 		title: "Databases made easy in React with GraphQL and FaunaDB",
@@ -369,7 +412,7 @@ export const courses: Course<Tags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/_kEDBitNbnY",
-		tags: ["GraphQL", "data fetching", "faunaDB", "javascript marathon"],
+		tags: ["GraphQL", "data fetching", "faunaDB", "JavaScript marathon"],
 	},
 	{
 		title: "Build a Full-Stack App with Next.js, Supabase & Prisma",
@@ -381,6 +424,47 @@ export const courses: Course<Tags[number]>[] = [
 		level: "beginner",
 		format: "interactive",
 		href: "https://themodern.dev/courses/build-a-fullstack-app-with-nextjs-supabase-and-prisma-322389284337222224",
-		tags: ["state management", "data fetching", "routing", "forms", "authentication", "hooks", "tailwind", "static site generation"],
+		tags: [
+			"state management",
+			"data fetching",
+			"routing",
+			"forms",
+			"authentication",
+			"hooks",
+			"tailwind",
+			"SSG",
+		],
+	},
+	{
+		title: "Complete Intro to React, v7",
+		author: "Brian Holt",
+		image: "https://github.com/btholt.png",
+		description:
+			"Learn to build real-world applications using modern React! Much more than an intro, you’ll start from the ground up, getting to using the latest features in React, including hooks, effects, context, and portals. Throughout the course, you’ll piece together tools from the entire React ecosystem (like Parcel, ESLint, TailwindCSS, and React Router) to build a complete application to browse adoptable pets!",
+		paymentType: "paid",
+		level: "beginner",
+		format: "video",
+		href: "https://frontendmasters.com/courses/complete-react-v7/",
+		tags: [
+			"state management",
+			"data fetching",
+			"forms",
+			"routing",
+			"authentication",
+			"hooks",
+			"tailwind",
+		],
+	},
+	{
+		title: "JS Drops",
+		author: "Various",
+		image: "https://github.com/thisdot.png",
+		description:
+			"JS Drops is a weekly series of online courses on React, TypeScript, GraphQL, and other topics in the JS ecosystem. Learn about leading web development technologies and concepts!",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "https://dropjs.com/",
+		tags: ["JavaScript marathon"],
 	},
 ]

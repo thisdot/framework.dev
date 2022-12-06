@@ -1,5 +1,5 @@
 ---
-import { formatFieldName } from "@framework/system/src/util/string-utils"
+import { formatFieldName, checkGraphqlName } from "@framework/system/src/util/string-utils"
 import { scrollable } from '@framework/system/src/styles/layouts.css'
 import BaseLayout from '../layouts/base.astro'
 import Homepage from '../components/homepage.tsx'
@@ -40,9 +40,9 @@ const resourceCards = FRAMEWORK_RESOURCES().filter(
 <head>
 	{`<script type="application/ld+json">${JSON.stringify(searchableWebsiteStructuredData)}</script>`}
 </head>
-<BaseLayout title={`Featured ${formatFieldName(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} resources`} className={scrollable}>
+<BaseLayout title={`Featured Resources | ${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}.framework.dev`} className={scrollable}>
 	<Homepage
-		librariesTitle={`Featured ${formatFieldName(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} Libraries`}
+		librariesTitle={`Featured ${checkGraphqlName(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)} Libraries`}
 		libraries={libraries?.data}
 		libraryTags={libraries?.tags}
 		podcasts={podcasts?.data}

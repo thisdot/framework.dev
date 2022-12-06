@@ -1,7 +1,8 @@
 import { Podcast } from "@framework/system/src/models/podcast"
-import { Tags } from "../../models/tags"
 
-export const podcasts: Podcast<Tags[number]>[] = [
+export const podcastTags = ["general"] as const
+
+export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	{
 		title: "Modern Web",
 		image:
@@ -15,8 +16,7 @@ export const podcasts: Podcast<Tags[number]>[] = [
 	},
 	{
 		title: "Angular Experience",
-		image:
-			"https://ngxp.show/assets/images/ngxpSiteImage2%20(1).png",
+		image: "https://ngxp.show/assets/images/ngxpSiteImage2%20(1).png",
 		hosts: ["Brooke Avery", "Erik Slack"],
 		description:
 			"NgXP a weekly podcast produced by Brooke Avery and Erik Slack, two programmers and event planners who are passionate about all things Angular and programming.",
@@ -26,8 +26,7 @@ export const podcasts: Podcast<Tags[number]>[] = [
 	},
 	{
 		title: "Angular Air",
-		image:
-			"https://angularair.com/assets/angularairlogo.png",
+		image: "https://angularair.com/assets/angularairlogo.png",
 		hosts: ["Justin Schwartzenberger"],
 		description:
 			"This is an Angular videocast hosted by Justin Schwartzenberger, discussing almost exclusively Angular topics and sometimes even walking you through building real projects with Angular.",
