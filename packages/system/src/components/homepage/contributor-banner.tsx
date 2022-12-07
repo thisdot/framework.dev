@@ -31,7 +31,7 @@ export function ContributorBanner({
 				</h1>
 				<p className={sprinkles({ textStyle: "bodyLong2" })}>
 					Create a PR if you see mistakes, room for improvement, or new
-					opportunties to help the dev team.
+					opportunities to help the dev team.
 				</p>
 			</div>
 			<div className={sprinkles({ layout: "row" })}>
