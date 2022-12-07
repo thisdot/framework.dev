@@ -1,6 +1,5 @@
 import { style } from "@vanilla-extract/css"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { pxToRem } from "../../util/style-utils"
 
 export const footerStyle = style([
 	sprinkles({
@@ -25,4 +24,8 @@ export const footerLinkStyle = style([
 	}),
 ])
 
-export const footerSponsorIconContainerStyle = style({ maxWidth: pxToRem(131) })
+export const footerSponsorIconContainerStyle = style({
+	display: "flex",
+	alignItems: "center",
+	gap: 12,
+})

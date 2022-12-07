@@ -226,7 +226,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		description:
 			"2 days of international speakers, community, learning and connections.",
 		image:
-			"https://pbs.twimg.com/profile_images/1548041354806059008/CfEL7qut_400x400.jpg",
+			"https://pbs.twimg.com/profile_images/1355572943552655362/QpnPItbv_400x400.jpg",
 		type: "Live Events",
 		href: "https://jsconf.cl/",
 		tags: ["conferences"],

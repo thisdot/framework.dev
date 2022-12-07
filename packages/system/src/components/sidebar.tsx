@@ -54,9 +54,17 @@ export function Sidebar({
 						<GithubIcon size="large" />
 						Submit a PR
 					</a>
-
 					<div className={sidebarSponsorIconContainerStyle}>
 						<SponsorIcon size="full" />
+					</div>
+					<div>
+						<a href="https://www.netlify.com">
+							{" "}
+							<img
+								src="https://www.netlify.com/v3/img/components/netlify-light.svg"
+								alt="Deploys by Netlify"
+							/>{" "}
+						</a>
 					</div>
 				</footer>
 			</div>
