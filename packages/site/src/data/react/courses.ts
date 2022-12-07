@@ -27,7 +27,7 @@ export const courseTags = [
 	"SSG",
 	"component design",
 	"apollo",
-	"faunaDB",
+	"FaunaDB",
 	"sass",
 	"static site generation",
 ] as const
@@ -412,7 +412,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/_kEDBitNbnY",
-		tags: ["GraphQL", "data fetching", "faunaDB", "JavaScript marathon"],
+		tags: ["GraphQL", "data fetching", "FaunaDB", "JavaScript marathon"],
 	},
 	{
 		title: "Build a Full-Stack App with Next.js, Supabase & Prisma",
