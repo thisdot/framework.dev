@@ -2,10 +2,10 @@ import { Library } from "@framework/system/src/models/library"
 
 export const libraryTags = [
 	"3D",
-	"a11y",
+	"A11Y",
 	"state management",
 	"data fetching",
-	"graphQL",
+	"GraphQL",
 	"HTTP client",
 	"styling",
 	"CSS in JS",
@@ -108,7 +108,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"A fully-featured caching GraphQL client with integrations for React that also has functionality for managing local state.",
 		image: "https://github.com/apollographql.png",
-		tags: ["state management", "data fetching", "graphQL"],
+		tags: ["state management", "data fetching", "GraphQL"],
 		language: libraryTags[0],
 	},
 	{
@@ -578,7 +578,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		package: "https://www.npmjs.com/package/gatsby",
 		href: "https://www.gatsbyjs.com/",
 		image: "https://github.com/gatsbyjs.png",
-		tags: ["framework", "static site generation", "graphQL"],
+		tags: ["framework", "static site generation", "GraphQL"],
 		description:
 			"Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps.   It combines the control and scalability of dynamically rendered sites with the speed of static-site generation, creating a whole new web of possibilities.",
 		language: libraryTags[0],
@@ -805,7 +805,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		package: "https://www.npmjs.com/package/@react-three/a11y",
 		href: "https://docs.pmnd.rs/a11y/introduction",
 		image: "https://github.com/pmndrs.png",
-		tags: ["3D", "a11y"],
+		tags: ["3D", "A11Y"],
 		description:
 			"@react-three/a11y brings accessibility to webGL with easy-to-use react-three-fiber components",
 		language: libraryTags[0],

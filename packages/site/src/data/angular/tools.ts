@@ -1,7 +1,7 @@
 import { Tool } from "@framework/system/src/models/tool"
 
 export const toolTags = [
-	"Chrome",
+	"chrome",
 	"VSCode",
 	"RxJS",
 	"development",
@@ -14,10 +14,10 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		name: "Angular Developer Tools for Chrome",
 		author: "Google",
 		description:
-			"A tool that allows you to inspect Angaular Components, their state, properties, and further debugging capabilities as it relates to them.",
+			"A tool that allows you to inspect Angular Components, their state, properties, and further debugging capabilities as it relates to them.",
 		image: "https://github.com/angular.png",
 		href: "https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh",
-		tags: ["Chrome"],
+		tags: ["chrome"],
 	},
 	{
 		name: "NgRx Store Devtools",

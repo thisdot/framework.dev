@@ -8,8 +8,8 @@ export const courseTags = [
 	"testing",
 	"services",
 	"RxJS",
-	"ngRx",
-	"javascript marathon",
+	"NgRx",
+	"JavaScript marathon",
 	"nx monorepo",
 	"ignite UI",
 	"ivy",
@@ -17,7 +17,7 @@ export const courseTags = [
 	"A11Y",
 	"pipes",
 	"angular patterns",
-	"typescript",
+	"TypeScript",
 ] as const
 
 export const courses: Course<typeof courseTags[number]>[] = [
@@ -73,7 +73,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/frswk1syMiw",
-		tags: ["nx monorepo", "javascript marathon"],
+		tags: ["nx monorepo", "JavaScript marathon"],
 	},
 	{
 		title: "Learning RxJS in 1 Hour",
@@ -85,7 +85,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/oFDVf0shWYE",
-		tags: ["RxJS", "javascript marathon"],
+		tags: ["RxJS", "JavaScript marathon"],
 	},
 	{
 		title: "1 Hour to Learn Angular",
@@ -101,7 +101,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 			"state management",
 			"components",
 			"data fetching",
-			"javascript marathon",
+			"JavaScript marathon",
 		],
 	},
 	{
@@ -114,7 +114,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/Yvgfk5EAFws",
-		tags: ["RxJS", "javascript marathon"],
+		tags: ["RxJS", "JavaScript marathon"],
 	},
 	{
 		title: "Build Angular Apps in Minutes",
@@ -126,7 +126,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/kOYO3_L_zJM",
-		tags: ["ignite UI", "javascript marathon"],
+		tags: ["ignite UI", "JavaScript marathon"],
 	},
 	{
 		title: "Advanced NgRx: Complex Angular State Management",
@@ -138,7 +138,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/JP4dEM4bjE8",
-		tags: ["ngRx", "javascript marathon"],
+		tags: ["NgRx", "JavaScript marathon"],
 	},
 	{
 		title: "Fully zone-less - High Performance in post IVY",
@@ -150,7 +150,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/x0W_mbivKLk",
-		tags: ["ivy", "javascript marathon"],
+		tags: ["ivy", "JavaScript marathon"],
 	},
 	{
 		title: "PWA in Angular",
@@ -162,7 +162,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/9hL0WabUoSc",
-		tags: ["PWA", "javascript marathon"],
+		tags: ["PWA", "JavaScript marathon"],
 	},
 	{
 		title: "Easy Angular Unit Testing in NgRx",
@@ -174,7 +174,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/NOT-nJLDnyg",
-		tags: ["ngRx", "testing", "javascript marathon"],
+		tags: ["NgRx", "testing", "JavaScript marathon"],
 	},
 	{
 		title: "The Best Pro Tips for A11Y in Angular",
@@ -186,7 +186,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/JsS052A1CVg",
-		tags: ["A11Y", "javascript marathon"],
+		tags: ["A11Y", "JavaScript marathon"],
 	},
 	{
 		title:
@@ -199,7 +199,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "advanced",
 		format: "video",
 		href: "https://youtu.be/wWEJnolhb_s",
-		tags: ["routing", "pipes", "angular patterns", "javascript marathon"],
+		tags: ["routing", "pipes", "angular patterns", "JavaScript marathon"],
 	},
 	{
 		title: "Decoded Frontend",
@@ -225,7 +225,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://ultimatecourses.com/",
-		tags: ["RxJS", "typescript", "ngRx"],
+		tags: ["RxJS", "TypeScript", "NgRx"],
 	},
 	{
 		title: "JS Drops",
@@ -237,6 +237,6 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://dropjs.com/",
-		tags: ["javascript marathon"],
+		tags: ["JavaScript marathon"],
 	},
 ]

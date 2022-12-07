@@ -1,6 +1,6 @@
 import { Podcast } from "@framework/system/src/models/podcast"
 
-export const podcastTags = ["general", "graphQL", "vuejs", "quasar"] as const
+export const podcastTags = ["general", "GraphQL", "vue", "quasar"] as const
 
 export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	{
@@ -29,7 +29,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"A weekly discussion among Vue developers about Vue and it's ecosystem.",
 		rss: "https://viewsonvue.com/rss",
 		href: "https://viewsonvue.com/",
-		tags: ["vuejs"],
+		tags: ["vue"],
 	},
 	{
 		title: "The Official Vue News",
@@ -40,7 +40,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"This podcast covers the latest Vue news and tutorials in about 5 minutes. Our goal is to give you the information you need to stay on top of your game as a Vue developer. Links to all the stories we talk about can be found in our weekly newsletter and on http://news.vuejs.org",
 		rss: "https://news.vuejs.org/feed.xml",
 		href: "http://news.vuejs.org",
-		tags: ["vuejs"],
+		tags: ["vue"],
 	},
 	{
 		title: "Enjoy the Vue",
@@ -50,7 +50,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"A new Vue.js podcast bringing you panel discussions, guest interviews, and much more to keep you up to date on what's happening in the Vue and tech communities.",
 		rss: "https://pod.link/1498529055",
 		href: "https://enjoythevue.io/",
-		tags: ["vuejs"],
+		tags: ["vue"],
 	},
 	{
 		title: "After Talk by Vue.js Berlin",
@@ -61,7 +61,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"Vue.js // Berlin Podcast with interesting people from Vue.js and Programming Community.",
 		rss: "https://anchor.fm/s/2f6e7074/podcast/rss",
 		href: "https://vuejs.berlin/",
-		tags: ["vuejs"],
+		tags: ["vue"],
 	},
 	{
 		title: "Quasar Vue Life",
@@ -72,6 +72,6 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 			"This show is for coders who want to learn the mindset, and life skills behind being a Web Developer. Learn from Luke Diebold. Core Quasar Team member, and creator of QuasarCast.Com",
 		rss: "https://feeds.transistor.fm/quasar-vue-life",
 		href: "https://quasarcast.com/podcasts/quasar-life",
-		tags: ["vuejs", "quasar"],
+		tags: ["vue", "quasar"],
 	},
 ]

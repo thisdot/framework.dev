@@ -2,8 +2,8 @@ import { Podcast } from "@framework/system/src/models/podcast"
 
 export const podcastTags = [
 	"general",
-	"react.js",
-	"graphQL",
+	"react",
+	"GraphQL",
 	"react native",
 	"redux",
 ] as const
@@ -28,7 +28,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		description: "Conversations about React with your favorite developers.",
 		rss: "https://feeds.simplecast.com/JoR28o79",
 		href: "https://reactpodcast.com/",
-		tags: ["react.js"],
+		tags: ["react"],
 	},
 	{
 		title: "JavaScript Air",
@@ -74,7 +74,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		description: "A weekly discussion among React developers",
 		rss: "https://reactroundup.com/rss",
 		href: "https://reactroundup.com/",
-		tags: ["react.js"],
+		tags: ["react"],
 	},
 	{
 		title: "Syntax",
@@ -124,7 +124,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		description: "Learn By Consuming, Building, And Teaching",
 		rss: "https://feeds.simplecast.com/giYVu3vJ",
 		href: "https://epicreact.dev/podcast/learn-by-consuming-building-and-teaching",
-		tags: ["react.js"],
+		tags: ["react"],
 	},
 	{
 		title: "iteration",

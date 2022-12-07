@@ -6,7 +6,7 @@ export const courseTags = [
 	"routing",
 	"testing",
 	"forms",
-	"graphQL",
+	"GraphQL",
 	"native",
 	"redux",
 	"authentication",
@@ -15,19 +15,20 @@ export const courseTags = [
 	"bootstrap",
 	"react context",
 	"hooks",
-	"typescript",
+	"TypeScript",
 	"tailwind",
-	"material UI",
+	"Material UI",
 	"vite",
-	"javascript marathon",
+	"JavaScript marathon",
 	"AWS",
 	"netlify",
 	"continuous integration",
-	"gatsbyJS",
-	"SSG",
+	"GatsbyJS",
 	"component design",
 	"apollo",
-	"faunaDB",
+	"FaunaDB",
+	"sass",
+	"static site generation",
 ] as const
 
 export const courses: Course<typeof courseTags[number]>[] = [
@@ -56,7 +57,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: [
 			"routing",
 			"testing",
-			"graphQL",
+			"GraphQL",
 			"native",
 			"forms",
 			"state management",
@@ -109,7 +110,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 			"routing",
 			"forms",
 			"redux",
-			"SCSS",
+			"sass",
 			"bootstrap",
 		],
 	},
@@ -223,7 +224,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/Z5iWr6Srsj8",
-		tags: ["hooks", "forms", "state management", "typescript"],
+		tags: ["hooks", "forms", "state management", "TypeScript"],
 	},
 	{
 		title: "React Typescript Tutorial - Build a Quiz App",
@@ -241,7 +242,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 			"state management",
 			"CSS",
 			"data fetching",
-			"typescript",
+			"TypeScript",
 		],
 	},
 	{
@@ -254,7 +255,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtube.com/playlist?list=PLYSZyzpwBEWSe71-aLlq71B2LPZzTNO8a",
-		tags: ["hooks", "forms", "state management", "data fetching", "typescript"],
+		tags: ["hooks", "forms", "state management", "data fetching", "TypeScript"],
 	},
 	{
 		title: "Tailwind CSS React Tutorial",
@@ -278,7 +279,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/vyJU9efvUtQ",
-		tags: ["material UI", "CSS"],
+		tags: ["Material UI", "CSS"],
 	},
 	{
 		title: "Epic React",
@@ -297,7 +298,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		author: "Kent C. Dodds",
 		image: "https://github.com/kentcdodds.png",
 		description:
-			"This course is for React newbies and anyone looking to build a solid foundation. It’s designed to teach you everything you need to start building web applications in React right away.",
+			"This course is for React newbies and anyone looking to build a solid foundation. It's designed to teach you everything you need to start building web applications in React right away.",
 		paymentType: "free",
 		level: "beginner",
 		format: "video",
@@ -314,7 +315,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/ecpvIo4NIoY",
-		tags: ["vite", "javascript marathon"],
+		tags: ["vite", "JavaScript marathon"],
 	},
 	{
 		title: "1 Hour to Learn React",
@@ -326,7 +327,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/n21XU0Fzr1o",
-		tags: ["hooks", "data fetching", "CSS", "javascript marathon"],
+		tags: ["hooks", "data fetching", "CSS", "JavaScript marathon"],
 	},
 	{
 		title: "React... Suspense…",
@@ -338,7 +339,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/xk_EWd11T94",
-		tags: ["data fetching", "javascript marathon"],
+		tags: ["data fetching", "JavaScript marathon"],
 	},
 	{
 		title: "Fullstack React + GraphQL in 60 Minutes",
@@ -351,11 +352,11 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		format: "video",
 		href: "https://youtu.be/0Js5O5a4bQ4",
 		tags: [
-			"graphQL",
+			"GraphQL",
 			"authentication",
 			"AWS",
 			"data fetching",
-			"javascript marathon",
+			"JavaScript marathon",
 		],
 	},
 	{
@@ -368,7 +369,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/DX3zlPwZqk4",
-		tags: ["netlify", "continuous integration", "javascript marathon"],
+		tags: ["netlify", "continuous integration", "JavaScript marathon"],
 	},
 	{
 		title: "An Introduction to Gatsby with React",
@@ -380,7 +381,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "beginner",
 		format: "video",
 		href: "https://youtu.be/ldGJmqtpHh8",
-		tags: ["gatsbyJS", "SSG", "javascript marathon"],
+		tags: ["GatsbyJS", "static site generation", "JavaScript marathon"],
 	},
 	{
 		title: "Using GraphQL with React",
@@ -393,11 +394,11 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		format: "video",
 		href: "https://youtu.be/JmVdgtjGo5Q",
 		tags: [
-			"graphQL",
+			"GraphQL",
 			"data fetching",
 			"component design",
 			"apollo",
-			"javascript marathon",
+			"JavaScript marathon",
 		],
 	},
 	{
@@ -410,7 +411,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://youtu.be/_kEDBitNbnY",
-		tags: ["graphQL", "data fetching", "faunaDB", "javascript marathon"],
+		tags: ["GraphQL", "data fetching", "FaunaDB", "JavaScript marathon"],
 	},
 	{
 		title: "Build a Full-Stack App with Next.js, Supabase & Prisma",
@@ -430,7 +431,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 			"authentication",
 			"hooks",
 			"tailwind",
-			"SSG",
+			"static site generation",
 		],
 	},
 	{
@@ -463,6 +464,6 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		level: "intermediate",
 		format: "video",
 		href: "https://dropjs.com/",
-		tags: ["javascript marathon"],
+		tags: ["JavaScript marathon"],
 	},
 ]

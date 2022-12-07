@@ -2,11 +2,11 @@ import { Tool } from "@framework/system/src/models/tool"
 
 export const toolTags = [
 	"VSCode",
-	"Chrome",
-	"Firefox",
-	"Safari",
+	"chrome",
+	"firefox",
+	"safari",
 	"UI Design",
-	"React native",
+	"react native",
 	"development",
 ] as const
 
@@ -27,7 +27,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		image:
 			"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
 		href: "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en",
-		tags: ["Chrome"],
+		tags: ["chrome"],
 	},
 	{
 		name: "React Developer Tools for Firefox",
@@ -37,7 +37,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		image:
 			"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
 		href: "https://addons.mozilla.org/en-US/firefox/addon/react-devtools/",
-		tags: ["Firefox"],
+		tags: ["firefox"],
 	},
 	{
 		name: "GraphQL Playground for Chrome",
@@ -46,7 +46,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		image:
 			"https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg",
 		href: "https://chrome.google.com/webstore/detail/graphql-playground-for-ch/kjhjcgclphafojaeeickcokfbhlegecd?hl=en",
-		tags: ["Chrome"],
+		tags: ["chrome"],
 	},
 	{
 		name: "GraphQL Playground for Firefox",
@@ -55,7 +55,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		image:
 			"https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg",
 		href: "https://addons.mozilla.org/en-US/firefox/addon/graphql-developer-tools/",
-		tags: ["Firefox"],
+		tags: ["firefox"],
 	},
 	{
 		name: "Apollo Client Devtools for Chrome",
@@ -63,7 +63,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		description: "GraphQL debugging tools for Apollo Client.",
 		image: "https://github.com/apollographql.png",
 		href: "https://chrome.google.com/webstore/detail/apollo-client-devtools/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en",
-		tags: ["Chrome"],
+		tags: ["chrome"],
 	},
 	{
 		name: "Apollo Client Devtools for Firefox",
@@ -71,7 +71,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		description: "GraphQL debugging tools for Apollo Client.",
 		image: "https://github.com/apollographql.png",
 		href: "https://addons.mozilla.org/en-US/firefox/addon/apollo-developer-tools",
-		tags: ["Firefox"],
+		tags: ["firefox"],
 	},
 	{
 		name: "ES7 React/Redux/GraphQL/React-Native snippets",
@@ -90,7 +90,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		image:
 			"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
 		href: "https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native",
-		tags: ["VSCode", "React native"],
+		tags: ["VSCode", "react native"],
 	},
 	{
 		name: "Simple React Snippets",
@@ -131,7 +131,8 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 	{
 		name: "TanStack Router",
 		author: "Tanner Linsley",
-		description: "A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
+		description:
+			"A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
 		image:
 			"https://pbs.twimg.com/profile_images/1474105199757180928/lsqWAJKv_400x400.jpg",
 		href: "https://tanstack.com/router/v1/",

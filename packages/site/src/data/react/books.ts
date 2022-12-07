@@ -1,18 +1,17 @@
 import { Book } from "@framework/system/src/models/book"
 
 export const bookTags = [
-	"graphQL",
-	"redux",
-	"routing",
 	"projects",
+	"TypeScript",
 	"recipes",
-	"accessibility",
-	"authentication",
-	"typescript",
 	"testing",
-	"material UI",
-	"nextJS",
-	"flow",
+	"routing",
+	"NextJS",
+	"redux",
+	"authentication",
+	"A11Y",
+	"GraphQL",
+	"Material UI",
 ] as const
 
 export const books: Book<typeof bookTags[number]>[] = [
@@ -20,12 +19,21 @@ export const books: Book<typeof bookTags[number]>[] = [
 		title: "The Road To Enterprise",
 		authors: ["Thomas Findlay"],
 		image: "https://theroadtoenterprise.com/images/react-book-cover-large.png",
-		description: '"React - The Road To Enterprise" is an advanced book with advanced patterns, techniques, and best practices for developing React apps. It covers crucial topics like scalable project architecture, async operations, advanced component and state management patterns, performance optimisation, Next.js and more.',
+		description:
+			'"React - The Road To Enterprise" is an advanced book with advanced patterns, techniques, and best practices for developing React apps. It covers crucial topics like scalable project architecture, async operations, advanced component and state management patterns, performance optimisation, Next.js and more.',
 		yearOfPublication: 2022,
 		numberOfPages: 433,
-		level: 'advanced',
-		href: 'https://theroadtoenterprise.com/books/react-the-road-to-enterprise?utm_source=framework.dev&utm_medium=card&utm_campaign=react_books',
-		tags: ['projects', 'typescript', 'recipes', 'testing', 'routing', 'nextJS', 'redux']
+		level: "advanced",
+		href: "https://theroadtoenterprise.com/books/react-the-road-to-enterprise?utm_source=framework.dev&utm_medium=card&utm_campaign=react_books",
+		tags: [
+			"projects",
+			"TypeScript",
+			"recipes",
+			"testing",
+			"routing",
+			"NextJS",
+			"redux",
+		],
 	},
 	{
 		title: "Learning React",
@@ -49,7 +57,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 577,
 		level: "intermediate",
 		href: "https://www.oreilly.com/library/view/react-cookbook/9781492085836/",
-		tags: ["recipes", "authentication", "accessibility", "graphQL"],
+		tags: ["recipes", "authentication", "A11Y", "GraphQL"],
 	},
 	{
 		title: "Full-Stack React, TypeScript, and Node",
@@ -61,7 +69,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 627,
 		level: "advanced",
 		href: "https://www.oreilly.com/library/view/full-stack-react-typescript/9781839219931/",
-		tags: ["typescript", "graphQL"],
+		tags: ["TypeScript", "GraphQL"],
 	},
 	{
 		title: "React Hooks in Action",
@@ -85,7 +93,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 353,
 		level: "advanced",
 		href: "https://www.oreilly.com/library/view/react-17-design/9781800560444/",
-		tags: ["graphQL", "recipes"],
+		tags: ["GraphQL", "recipes"],
 	},
 	{
 		title: "React: Up & Running",
@@ -109,7 +117,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 383,
 		level: "intermediate",
 		href: "https://www.oreilly.com/library/view/practical-enterprise-react/9781484269756/",
-		tags: ["routing", "authentication", "typescript"],
+		tags: ["routing", "authentication", "TypeScript"],
 	},
 	{
 		title: "Simplify Testing with React Testing Library",
@@ -176,7 +184,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 774,
 		level: "intermediate",
 		href: "https://www.oreilly.com/library/view/react-material-ui-cookbook/9781789615227/",
-		tags: ["material UI"],
+		tags: ["Material UI"],
 	},
 	{
 		title: "Test-Driven React",
@@ -213,7 +221,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 379,
 		level: "beginner",
 		href: "https://www.oreilly.com/library/view/react-and-libraries/9781484266960/",
-		tags: ["typescript", "routing", "testing", "material UI"],
+		tags: ["TypeScript", "routing", "testing", "Material UI"],
 	},
 	{
 		title: "Pro MERN Stack",
@@ -237,7 +245,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 541,
 		level: "beginner",
 		href: "https://www.oreilly.com/library/view/learn-react-with/9781789610253/",
-		tags: ["typescript", "graphQL", "routing", "redux"],
+		tags: ["TypeScript", "GraphQL", "routing", "redux"],
 	},
 	{
 		title: "Pro React 16",
@@ -249,7 +257,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 966,
 		level: "beginner",
 		href: "https://www.oreilly.com/library/view/pro-react-16/9781484244517/",
-		tags: ["graphQL"],
+		tags: ["GraphQL"],
 	},
 	{
 		title: "Learn React Hooks",
@@ -285,7 +293,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 194,
 		level: "beginner",
 		href: "https://www.oreilly.com/library/view/building-react-apps/9781484258699/",
-		tags: ["nextJS"],
+		tags: ["NextJS"],
 	},
 	{
 		title: "Learning React",
@@ -441,7 +449,7 @@ export const books: Book<typeof bookTags[number]>[] = [
 		numberOfPages: 343,
 		level: "intermediate",
 		href: "https://www.oreilly.com/library/view/react-16-tooling/9781788835015/",
-		tags: ["testing", "flow"],
+		tags: ["testing"],
 	},
 	{
 		title: "React: Tools & Resources",
@@ -521,22 +529,26 @@ export const books: Book<typeof bookTags[number]>[] = [
 		title: "The Road to React",
 		authors: ["Robin Wieruch"],
 		href: "https://www.roadtoreact.com/",
-		image: "https://images-na.ssl-images-amazon.com/images/I/41JAb-hRu7L._SX384_BO1,204,203,200_.jpg",
-		description: "In this book you will learn about all the fundamentals of React.js with Hooks while building a full-blown React application step by step. While you create the React application, every chapter will introduce you to a new React key feature.",
+		image:
+			"https://images-na.ssl-images-amazon.com/images/I/41JAb-hRu7L._SX384_BO1,204,203,200_.jpg",
+		description:
+			"In this book you will learn about all the fundamentals of React.js with Hooks while building a full-blown React application step by step. While you create the React application, every chapter will introduce you to a new React key feature.",
 		yearOfPublication: 2021,
 		numberOfPages: 250,
 		level: "beginner",
-		tags: ["testing", "typescript", "projects"]
+		tags: ["testing", "TypeScript", "projects"],
 	},
 	{
 		title: "React Explained",
 		authors: ["Zac Gordon"],
 		href: "https://www.ostraining.com/books/react/",
-		image: "https://ostraining.com/wp-content/uploads/elementor/thumbs/react-p0jzqaebb74zxlnj7jsgs7v7th7cqjwvb2rn97o2ns.jpg",
-		description: "React Explained is a fun and enjoyable introduction to React, which is the Javascript framework of choice for WordPress, Drupal, Magento, and thousands of developers.",
+		image:
+			"https://ostraining.com/wp-content/uploads/elementor/thumbs/react-p0jzqaebb74zxlnj7jsgs7v7th7cqjwvb2rn97o2ns.jpg",
+		description:
+			"React Explained is a fun and enjoyable introduction to React, which is the Javascript framework of choice for WordPress, Drupal, Magento, and thousands of developers.",
 		yearOfPublication: 2018,
 		numberOfPages: 212,
 		level: "beginner",
-		tags: ["projects", "authentication"]
-	}
+		tags: ["projects", "authentication"],
+	},
 ]

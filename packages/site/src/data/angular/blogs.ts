@@ -1,5 +1,4 @@
 import { Blog } from "@framework/system/src/models/blog"
-
 export const blogTags = [] as const
 
 export const blogs: Blog<typeof blogTags[number]>[] = [
@@ -54,8 +53,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		author: "Stefan Haas",
 		description:
 			"The Journal for Angular - covering the entire Angular stack and best practices.",
-		image:
-			"https://ng-journal.com/assets/ng-journal.png",
+		image: "https://ng-journal.com/assets/ng-journal.png",
 		href: "https://ng-journal.com/blog/",
 		tags: [],
 	},
