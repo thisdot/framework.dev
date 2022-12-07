@@ -24,7 +24,6 @@ export const courseTags = [
 	"netlify",
 	"continuous integration",
 	"GatsbyJS",
-	"SSG",
 	"component design",
 	"apollo",
 	"FaunaDB",
@@ -432,7 +431,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 			"authentication",
 			"hooks",
 			"tailwind",
-			"SSG",
+			"static site generation",
 		],
 	},
 	{
