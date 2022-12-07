@@ -13,7 +13,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		name: "Qwik Playground",
 		author: "Qwik",
 		description: "Qwik Playground",
-		image: "https://qwik.builder.io/logos/social-card.png?v=3",
+		image: "/qwik-icon.png",
 		href: "https://qwik.builder.io/playground/",
 		tags: ["development"],
 	},
