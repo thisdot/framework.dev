@@ -66,7 +66,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	},
 	{
 		title: "Bundling: Qwik",
-		image: "https://qwik.builder.io/logos/social-card.png?v=3",
+		image: "/qwik-icon.png",
 		hosts: ["Misko Hevery"],
 		description:
 			"Bundling: Qwik + Slow networks => Fast interaction",
