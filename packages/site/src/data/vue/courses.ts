@@ -10,7 +10,6 @@ export const courseTags = [
 	"vuex",
 	"vue CLI",
 	"authentication",
-	"SCSS",
 	"CSS",
 	"bootstrap",
 	"TypeScript",
