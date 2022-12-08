@@ -3,12 +3,17 @@ import { Library } from "@framework/system/src/models/library"
 export const libraryTags = [
 	"data fetching",
 	"documentation",
-	"framework",
-	"logging",
-	"state management",
+	"frameworks",
+	"API libraries",
+	"ORM",
 	"testing",
 	"utilities",
 	"web servers",
+	"CLI",
+	"data processing",
+	"templating",
+	"drivers",
+	"tooling",
 ] as const
 
 // The default image here for use
@@ -63,7 +68,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/denoland/deno_install",
 		author: "Deno",
 		image: "https://avatars.githubusercontent.com/u/42048915?s=200&v=4",
-		tags: ["utilities"],
+		tags: ["utilities", "CLI", "tooling"],
 		language: libraryTags[0],
 	},
 	{
@@ -74,7 +79,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/SheetJS/sheetjs",
 		author: "SheetJS",
 		image: "https://avatars.githubusercontent.com/u/5826089?s=200&v=4",
-		tags: ["utilities"],
+		tags: ["utilities", "data processing"],
 		language: libraryTags[0],
 	},
 	{
@@ -98,7 +103,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/c4spar/deno-cliffy",
 		author: "Benjamin Fischer",
 		image: "https://avatars.githubusercontent.com/u/61995275?v=4",
-		tags: ["framework"],
+		tags: ["frameworks", "CLI"],
 		language: libraryTags[0],
 	},
 	{
@@ -109,7 +114,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/syumai/dejs",
 		author: "syumai",
 		image: "https://avatars.githubusercontent.com/u/6882878?v=4",
-		tags: ["web servers", "utilities"],
+		tags: ["web servers", "utilities", "templating"],
 		language: libraryTags[0],
 	},
 	{
@@ -121,7 +126,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/lodash/lodash",
 		author: "Lodash Utilities",
 		image: "https://avatars.githubusercontent.com/u/2565403?s=200&v=4",
-		tags: ["utilities"],
+		tags: ["utilities", "data processing"],
 		language: libraryTags[0],
 	},
 	{
@@ -166,7 +171,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/oakserver/oak",
 		author: "oak",
 		image: "https://avatars.githubusercontent.com/u/47053330?s=200&v=4",
-		tags: ["framework", "web servers"],
+		tags: ["frameworks", "web servers"],
 		language: libraryTags[0],
 	},
 	{
@@ -188,7 +193,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/lumeland/lume",
 		author: "lume",
 		image: "https://avatars.githubusercontent.com/u/74823948?s=200&v=4",
-		tags: ["framework"],
+		tags: ["frameworks", "templating"],
 		language: libraryTags[0],
 	},
 	{
@@ -199,7 +204,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/denoland/fresh",
 		author: "Deno",
 		image: "https://avatars.githubusercontent.com/u/42048915?s=200&v=4",
-		tags: ["framework", "web servers"],
+		tags: ["frameworks", "web servers"],
 		language: libraryTags[0],
 	},
 	{
@@ -246,7 +251,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/denodrivers/postgres",
 		author: "Deno Drivers",
 		image: "https://avatars.githubusercontent.com/u/73310055?s=200&v=4",
-		tags: ["utilities"],
+		tags: ["utilities", "drivers"],
 		language: libraryTags[0],
 	},
 	{
@@ -280,7 +285,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/esbuild/deno-esbuild",
 		author: "esbuild",
 		image: "https://avatars.githubusercontent.com/u/65141206?s=200&v=4",
-		tags: ["utilities"],
+		tags: ["utilities", "tooling"],
 		language: libraryTags[0],
 	},
 	{
@@ -304,7 +309,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/hayd/deno-udd",
 		author: "Andy Hayden",
 		image: "https://avatars.githubusercontent.com/u/1931852?v=4",
-		tags: ["utilities"],
+		tags: ["utilities", "tooling"],
 		language: libraryTags[0],
 	},
 	{
@@ -338,7 +343,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/denodrivers/mongo",
 		author: "Deno Drivers",
 		image: "https://avatars.githubusercontent.com/u/73310055?s=200&v=4",
-		tags: ["utilities"],
+		tags: ["utilities", "drivers"],
 		language: libraryTags[0],
 	},
 	{
@@ -395,7 +400,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/polkadot-js/build-deno.land",
 		author: "@polkadot{.js}",
 		image: "https://avatars.githubusercontent.com/u/33775474?s=200&v=4",
-		tags: ["utilities"],
+		tags: ["utilities", "tooling"],
 		language: libraryTags[0],
 	},
 	{
@@ -441,7 +446,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/dyedgreen/deno-sqlite",
 		author: "Tilman Roeder",
 		image: "https://avatars.githubusercontent.com/u/6896443?v=4",
-		tags: ["utilities"],
+		tags: ["utilities", "drivers"],
 		language: libraryTags[0],
 	},
 	{
@@ -452,7 +457,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/discordeno/discordeno",
 		author: "Discordeno",
 		image: "https://avatars.githubusercontent.com/u/73952741?s=200&v=4",
-		tags: ["utilities"],
+		tags: ["utilities", "API libraries"],
 		language: libraryTags[0],
 	},
 	{
@@ -463,7 +468,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/bradenmacdonald/deno-s3-lite-client",
 		author: "Braden MacDonald",
 		image: "https://avatars.githubusercontent.com/u/945577?v=4",
-		tags: ["utilities", "data fetching"],
+		tags: ["utilities", "data fetching", "API libraries"],
 		language: libraryTags[0],
 	},
 	{
@@ -552,7 +557,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/gpasq/deno-sendgrid",
 		author: "Greg Pasquariello",
 		image: "https://avatars.githubusercontent.com/u/3801469?v=4",
-		tags: ["utilities"],
+		tags: ["utilities", "API libraries"],
 		language: libraryTags[0],
 	},
 	{
@@ -563,7 +568,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/denodrivers/mysql",
 		author: "Deno Drivers",
 		image: "https://avatars.githubusercontent.com/u/73310055?s=200&v=4",
-		tags: ["utilities"],
+		tags: ["utilities", "drivers"],
 		language: libraryTags[0],
 	},
 	{
@@ -586,7 +591,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/udibo/mock",
 		author: "Udibo",
 		image: "https://avatars.githubusercontent.com/u/6780232?s=200&v=4",
-		tags: ["testing"],
+		tags: ["utilities", "testing"],
 		language: libraryTags[0],
 	},
 	{
@@ -620,7 +625,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/valtlai/nunjucks-deno",
 		author: "Valtteri Laitinen",
 		image: "https://avatars.githubusercontent.com/u/5496284?v=4",
-		tags: ["utilities"],
+		tags: ["utilities", "templating"],
 		language: libraryTags[0],
 	},
 	{
@@ -660,7 +665,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 	},
 	{
 		name: "yargs",
-		description: " yargs the modern, pirate-themed successor to optimist.",
+		description: "yargs the modern, pirate-themed successor to optimist.",
 		href: "https://deno.land/x/yargs",
 		package: "",
 		repo: "https://github.com/yargs/yargs",
@@ -677,7 +682,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/denoland/dnt",
 		author: "Deno",
 		image: "https://avatars.githubusercontent.com/u/42048915?s=200&v=4",
-		tags: ["utilities"],
+		tags: ["utilities", "tooling"],
 		language: libraryTags[0],
 	},
 	{
@@ -699,7 +704,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/grmjs/grm",
 		author: "Grm",
 		image: "https://avatars.githubusercontent.com/u/109421281?s=200&v=4",
-		tags: ["utilities", "data fetching"],
+		tags: ["utilities", "data fetching", "API libraries"],
 		language: libraryTags[0],
 	},
 	{
@@ -710,7 +715,19 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/exhibitionist-digital/ultra",
 		author: "Ultra",
 		image: defaultImage,
-		tags: ["framework", "web servers"],
+		tags: ["frameworks", "web servers"],
+		language: libraryTags[0],
+	},
+	{
+		name: "denodb",
+		description:
+			"Deno-based ORM supporting PostgreSQL, MySQL, MariaDB, SQLite and MongoDB.",
+		href: "https://deno.land/x/denodb",
+		package: "",
+		repo: "https://github.com/eveningkid/denodb",
+		author: "eveningkid",
+		image: defaultImage,
+		tags: ["frameworks", "ORM"],
 		language: libraryTags[0],
 	},
 ]
