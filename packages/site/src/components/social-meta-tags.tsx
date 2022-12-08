@@ -9,7 +9,14 @@ export function SocialMetaTags({ siteName, title }: SocialMetaTagsProps) {
 	const titleCasedSiteName = titleCase(siteName)
 	const titleCasedTitle = titleCase(title)
 	function formatAllFrameworkTitles() {
-		return siteName === "graphql" ? "GraphQL" : titleCasedSiteName
+		switch (siteName) {
+			case "graphql":
+				return "GraphQL";
+			case "solidjs":
+				return "SolidJS";
+			default:
+				return titleCasedSiteName;
+		}
 	}
 
 	const description =
