@@ -3,8 +3,8 @@ import { Library } from "@framework/system/src/models/library"
 export const libraryTags = [
 	"data fetching",
 	"documentation",
-	"framework",
-	"API library",
+	"frameworks",
+	"API libraries",
 	"ORM",
 	"testing",
 	"utilities",
@@ -12,7 +12,7 @@ export const libraryTags = [
 	"CLI",
 	"data processing",
 	"templating",
-	"driver",
+	"drivers",
 	"tooling",
 ] as const
 
@@ -103,7 +103,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/c4spar/deno-cliffy",
 		author: "Benjamin Fischer",
 		image: "https://avatars.githubusercontent.com/u/61995275?v=4",
-		tags: ["framework", "CLI"],
+		tags: ["frameworks", "CLI"],
 		language: libraryTags[0],
 	},
 	{
@@ -171,7 +171,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/oakserver/oak",
 		author: "oak",
 		image: "https://avatars.githubusercontent.com/u/47053330?s=200&v=4",
-		tags: ["framework", "web servers"],
+		tags: ["frameworks", "web servers"],
 		language: libraryTags[0],
 	},
 	{
@@ -193,7 +193,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/lumeland/lume",
 		author: "lume",
 		image: "https://avatars.githubusercontent.com/u/74823948?s=200&v=4",
-		tags: ["framework", "templating"],
+		tags: ["frameworks", "templating"],
 		language: libraryTags[0],
 	},
 	{
@@ -204,7 +204,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/denoland/fresh",
 		author: "Deno",
 		image: "https://avatars.githubusercontent.com/u/42048915?s=200&v=4",
-		tags: ["framework", "web servers"],
+		tags: ["frameworks", "web servers"],
 		language: libraryTags[0],
 	},
 	{
@@ -251,7 +251,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/denodrivers/postgres",
 		author: "Deno Drivers",
 		image: "https://avatars.githubusercontent.com/u/73310055?s=200&v=4",
-		tags: ["utilities", "driver"],
+		tags: ["utilities", "drivers"],
 		language: libraryTags[0],
 	},
 	{
@@ -343,7 +343,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/denodrivers/mongo",
 		author: "Deno Drivers",
 		image: "https://avatars.githubusercontent.com/u/73310055?s=200&v=4",
-		tags: ["utilities", "driver"],
+		tags: ["utilities", "drivers"],
 		language: libraryTags[0],
 	},
 	{
@@ -446,7 +446,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/dyedgreen/deno-sqlite",
 		author: "Tilman Roeder",
 		image: "https://avatars.githubusercontent.com/u/6896443?v=4",
-		tags: ["utilities", "driver"],
+		tags: ["utilities", "drivers"],
 		language: libraryTags[0],
 	},
 	{
@@ -457,7 +457,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/discordeno/discordeno",
 		author: "Discordeno",
 		image: "https://avatars.githubusercontent.com/u/73952741?s=200&v=4",
-		tags: ["utilities", "API library"],
+		tags: ["utilities", "API libraries"],
 		language: libraryTags[0],
 	},
 	{
@@ -468,7 +468,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/bradenmacdonald/deno-s3-lite-client",
 		author: "Braden MacDonald",
 		image: "https://avatars.githubusercontent.com/u/945577?v=4",
-		tags: ["utilities", "data fetching", "API library"],
+		tags: ["utilities", "data fetching", "API libraries"],
 		language: libraryTags[0],
 	},
 	{
@@ -557,7 +557,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/gpasq/deno-sendgrid",
 		author: "Greg Pasquariello",
 		image: "https://avatars.githubusercontent.com/u/3801469?v=4",
-		tags: ["utilities", "API library"],
+		tags: ["utilities", "API libraries"],
 		language: libraryTags[0],
 	},
 	{
@@ -568,7 +568,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/denodrivers/mysql",
 		author: "Deno Drivers",
 		image: "https://avatars.githubusercontent.com/u/73310055?s=200&v=4",
-		tags: ["utilities", "driver"],
+		tags: ["utilities", "drivers"],
 		language: libraryTags[0],
 	},
 	{
@@ -591,7 +591,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/udibo/mock",
 		author: "Udibo",
 		image: "https://avatars.githubusercontent.com/u/6780232?s=200&v=4",
-		tags: ["testing"],
+		tags: ["utilities", "testing"],
 		language: libraryTags[0],
 	},
 	{
@@ -704,7 +704,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/grmjs/grm",
 		author: "Grm",
 		image: "https://avatars.githubusercontent.com/u/109421281?s=200&v=4",
-		tags: ["utilities", "data fetching", "API library"],
+		tags: ["utilities", "data fetching", "API libraries"],
 		language: libraryTags[0],
 	},
 	{
@@ -715,7 +715,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/exhibitionist-digital/ultra",
 		author: "Ultra",
 		image: defaultImage,
-		tags: ["framework", "web servers"],
+		tags: ["frameworks", "web servers"],
 		language: libraryTags[0],
 	},
 	{
@@ -727,7 +727,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/eveningkid/denodb",
 		author: "eveningkid",
 		image: defaultImage,
-		tags: ["framework", "ORM"],
+		tags: ["frameworks", "ORM"],
 		language: libraryTags[0],
 	},
 ]

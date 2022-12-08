@@ -20,24 +20,37 @@ export async function getSearchData(
 	const { podcasts, podcastTags } = await import(`./${framework}/podcasts.js`)
 	const { tools, toolTags } = await import(`./${framework}/tools.js`)
 
+	let librarySubCategories = [
+		"state management",
+		"data fetching",
+		"styling",
+		"component library",
+		"forms",
+		"framework",
+		"internationalization",
+	] as typeof libraryTags[number][]
+	switch (framework) {
+		case "graphql":
+			librarySubCategories = ["Servers", "Client", "Schema"]
+			break
+		case "deno":
+			librarySubCategories = [
+				"drivers",
+				"frameworks",
+				"utilities",
+				"tooling",
+				"web servers",
+			]
+			break
+	}
+
 	return [
 		{
 			data: libraries,
 			indexMetadata: libraryIndexMetadata,
 			name: libraryIndexMetadata.name,
 			tags: libraryTags,
-			subCategories:
-				framework === "graphql"
-					? ["Servers", "Client", "Schema"]
-					: ([
-							"state management",
-							"data fetching",
-							"styling",
-							"component library",
-							"forms",
-							"framework",
-							"internationalization",
-					  ] as typeof libraryTags[number][]),
+			subCategories: librarySubCategories,
 		},
 		{
 			data: tools,
