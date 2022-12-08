@@ -13,7 +13,7 @@ export const libraryTags = [
 
 // The default image here for use
 // on libraries that don't have an image
-const defaultImage = "https://qwik.builder.io/logos/social-card.png?v=3"
+const defaultImage = "/qwik-icon.png"
 
 // TODO: Update the language fields to contain the correct language for package lookup
 
