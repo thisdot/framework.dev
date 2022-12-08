@@ -33,8 +33,15 @@ export function formatFieldValue(inputValue: string) {
 	return titleCased.charAt(0).toUpperCase() + titleCased.slice(1)
 }
 
-export function checkGraphqlName(inputValue: string) {
-	return inputValue === "graphql" ? "GraphQL" : formatFieldValue(inputValue)
+export function formatAllFrameworkTitles(inputValue: string) {
+	switch (inputValue) {
+		case "graphql":
+			return "GraphQL";
+		case "solidjs":
+			return "SolidJS";
+		default:
+			return formatFieldValue(inputValue);
+	}
 }
 
 export function deserializeFieldName(inputValue: string) {
