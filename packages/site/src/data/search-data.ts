@@ -1,11 +1,19 @@
-import { AllCategories } from "@framework/system/src/models/all-categories"
-import { blogIndexMetadata } from "@framework/system/src/models/blog"
-import { bookIndexMetadata } from "@framework/system/src/models/book"
-import { communityIndexMetadata } from "@framework/system/src/models/community"
-import { courseIndexMetadata } from "@framework/system/src/models/course"
-import { libraryIndexMetadata } from "@framework/system/src/models/library"
-import { podcastIndexMetadata } from "@framework/system/src/models/podcast"
-import { toolIndexMetadata } from "@framework/system/src/models/tool"
+import { AllCategories } from '@framework/system/src/models/all-categories'
+import { blogIndexMetadata } from '@framework/system/src/models/blog'
+import { bookIndexMetadata } from '@framework/system/src/models/book'
+import { communityIndexMetadata } from '@framework/system/src/models/community'
+import { courseIndexMetadata } from '@framework/system/src/models/course'
+import { libraryIndexMetadata } from '@framework/system/src/models/library'
+import { podcastIndexMetadata } from '@framework/system/src/models/podcast'
+import { toolIndexMetadata } from '@framework/system/src/models/tool'
+
+const SubCategoryDictionary = new Map<string, string[]>()
+	.set('graphql', ['Servers', 'Client', 'Schema'])
+	.set("nodejs", [
+		"framework",
+		"data fetching",
+		"API",
+	])
 
 export async function getSearchData(
 	framework: string
@@ -26,18 +34,16 @@ export async function getSearchData(
 			indexMetadata: libraryIndexMetadata,
 			name: libraryIndexMetadata.name,
 			tags: libraryTags,
-			subCategories:
-				framework === "graphql"
-					? ["Servers", "Client", "Schema"]
-					: ([
-							"state management",
-							"data fetching",
-							"styling",
-							"component library",
-							"forms",
-							"framework",
-							"internationalization",
-					  ] as typeof libraryTags[number][]),
+			subCategories: SubCategoryDictionary.get(framework)
+				|| ([
+					'state management',
+					'data fetching',
+					'styling',
+					'component library',
+					'forms',
+					'framework',
+					'internationalization',
+				] as typeof libraryTags[number][]),
 		},
 		{
 			data: tools,
@@ -57,8 +63,8 @@ export async function getSearchData(
 			name: communityIndexMetadata.name,
 			tags: communityTags,
 			subCategories: [
-				"meetups",
-				"conferences",
+				'meetups',
+				'conferences',
 			] as typeof communityTags[number][],
 		},
 		{
