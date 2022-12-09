@@ -94,7 +94,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		description:
 			"NodeConf EU has rightly earned its reputation as the leading key Node.js event in Europe. As we celebrate NodeConf’s 10th anniversary this year, it is our aim to deliver the highest quality talks, the most relevant workshops and to continue to provide a relaxed and friendly atmosphere for people to meet and share ideas.",
 		image:
-			"https://www.nodeconf.eu/_next/image?url=%2Fimgs%2Flogo%2Fnc-logo-notagline.png&w=750&q=75",
+			"https://www.nodeconf.eu/_next/image?url=%2Fimgs%2Flogo%2Fnc-logo-square.png&w=384&q=75",
 		type: "Live Events",
 		href: "https://www.nodeconf.eu/",
 		tags: ["conferences"],
