@@ -46,7 +46,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		language: libraryTags[0],
 	},
 	{
-		name: "Serverless",
+		name: "Serverless Framework",
 		author: "Serverless, Inc",
 		repo: "https://www.github.com/serverless/serverless",
 		package: "https://www.npmjs.com/package/serverless",
