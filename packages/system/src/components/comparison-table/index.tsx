@@ -55,7 +55,17 @@ export function ComparisonTable({
 					"Content-Type": "application/json",
 					Accept: "application/json",
 				},
-				body: JSON.stringify(libraries.map((library) => library.package)),
+				body: JSON.stringify(
+					libraries.map((library) => {
+						if (library.package.includes("npmjs.com")) {
+							return library.package.replace(
+								/(?:http(?:s)?:\/\/(?:www\.)?)npmjs\.com\/package\//,
+								""
+							)
+						}
+						return library.package
+					})
+				),
 				signal: abortController.signal,
 			})
 				.then((res) => res.json())
