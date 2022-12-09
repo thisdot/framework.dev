@@ -4,6 +4,15 @@ export const blogTags = [] as const
 
 export const blogs: Blog<typeof blogTags[number]>[] = [
 	{
+		title: "This Dot Blog",
+		author: "This Dot Labs",
+		description:
+			"Variety of topics related to Qwik, written by the team at This Dot.",
+		image: "https://github.com/thisdot.png",
+		href: "https://www.thisdot.co/blog/?filter=Angular#result",
+		tags: [],
+	},
+	{
 		title: "Introducing Qwik starters - get up and running with Qwik now",
 		author: "Miško Hevery",
     	description: "CTO at builderio creator of QwikDev, @angular, @angularjs, co-creator of karmajs, shares an intro to Qwik framework.",
