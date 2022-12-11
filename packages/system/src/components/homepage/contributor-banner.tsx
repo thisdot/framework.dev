@@ -33,8 +33,16 @@ export function ContributorBanner({
 					Create a PR if you see mistakes, room for improvement, or new
 					opportunities to help the dev team.
 				</p>
+				<Button
+				color="primary"
+				size="large"
+				as="a"
+				href="https://github.com/thisdot/framework.dev"
+			>
+				Contribute
+			</Button>
 			</div>
-			<div className={sprinkles({ layout: "row" })}>
+			<div className={sprinkles({})}>
 				{contributorImages.map((image) => (
 					<img
 						className={contributorImageStyle}
@@ -44,14 +52,7 @@ export function ContributorBanner({
 					/>
 				))}
 			</div>
-			<Button
-				color="primary"
-				size="large"
-				as="a"
-				href="https://github.com/thisdot/framework.dev"
-			>
-				Contribute
-			</Button>
+		
 		</div>
 	)
 }

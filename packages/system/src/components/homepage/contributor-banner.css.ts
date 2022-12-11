@@ -16,7 +16,7 @@ export const contributorBannerStyle = style([
 		alignItems: "center",
 	}),
 	{
-		gridTemplateColumns: "1fr min-content min-content",
+		gridTemplateColumns: "1fr 3fr min-content",
 	},
 ])
 
@@ -29,7 +29,7 @@ export const contributorImageStyle = style([
 		borderStyle: "solid",
 		selectors: {
 			"& + &": {
-				marginLeft: pxToRem(-14),
+				marginLeft: pxToRem(5),
 			},
 		},
 	},

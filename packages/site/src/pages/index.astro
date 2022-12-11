@@ -17,7 +17,6 @@ const communities = searchData.find(category => category.name === "communities")
 
 interface ContributorAvatars {
 		avatar_url: string
-		[id: string]: string
 	}
 
 const data =
@@ -26,7 +25,7 @@ const data =
 		)
 			.then((res) => res.json())
 			.then((data: ContributorAvatars[]) => data.map((user) => user.avatar_url))
-
+		
 const searchableWebsiteStructuredData = {
 	"@context": "https://schema.org",
 	"@type": "WebSite",
@@ -65,5 +64,6 @@ const resourceCards = FRAMEWORK_RESOURCES().filter(
 		communities={communities?.data}
 		siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}
 		resourceCards={resourceCards}
+		contributorsData = {data}
 	/>
 </BaseLayout>
