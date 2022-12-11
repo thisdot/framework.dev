@@ -15,6 +15,18 @@ const books = searchData.find(category => category.name === "books")
 const tools = searchData.find(category => category.name === "tools")
 const communities = searchData.find(category => category.name === "communities")
 
+interface ContributorAvatars {
+		avatar_url: string
+		[id: string]: string
+	}
+
+const data =
+		await fetch(
+			"https://api.github.com/repos/thisdot/framework.dev/contributors?anon=1"
+		)
+			.then((res) => res.json())
+			.then((data: ContributorAvatars[]) => data.map((user) => user.avatar_url))
+
 const searchableWebsiteStructuredData = {
 	"@context": "https://schema.org",
 	"@type": "WebSite",

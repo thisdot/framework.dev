@@ -1,5 +1,7 @@
 import classNames from "classnames"
-import React from "react"
+import React, { useState, useEffect } from "react"
+import fetch from "node-fetch"
+import {data} from "../../../../site/src/pages/index.astro"
 import {
 	homepageContentContainerStyle,
 	homepageGutterStyle,
@@ -27,6 +29,7 @@ import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { ResourcesInfoBanner } from "../landing/resources-info-banner"
 import { LinkCardProps } from "../landing/link-card"
 import { LogoIcon } from "../../icons/logo-icon"
+import { method } from "lodash"
 
 export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
 	librariesTitle: string
@@ -41,7 +44,13 @@ export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
 	siteName: string
 	resourceCards: LinkCardProps[]
 }
-
+const contributors = [];
+function display_components(props){
+	for(let i=0;i<props.length;i++)
+	{
+		contributors.push(props[i].avatar_url);
+	}
+}
 export function Homepage({
 	className,
 	librariesTitle,
@@ -66,60 +75,62 @@ export function Homepage({
 		backgroundColor: "#F6FDFF",
 		color: "#2E3132",
 	})
-
 	return (
-		<div className={classNames(className, homepageStyle)} {...props}>
-			<div
-				className={classNames(
-					homepageGutterStyle,
-					sprinkles({
-						paddingBottom: { mobile: 24, desktop: 16 },
-						paddingTop: { mobile: 0, desktop: 16 },
-					})
-				)}
-			>
-				<Search />
-			</div>
-			<div className={sprinkles({ backgroundColor: "surface5" })}>
-				<Hero siteName={siteName} className={homepageGutterStyle} />
-			</div>
-			<div
-				className={classNames(
-					homepageContentContainerStyle,
-					homepageGutterStyle
-				)}
-			>
-				<FeaturedLibraries
-					libraries={libraries}
-					libraryTags={libraryTags}
-					title={librariesTitle}
-				/>
-				<Podcasts podcasts={podcasts} />
-				<div className={homepageTwoAndOneSectionStyle}>
-					<Courses courses={courses} />
-					<Blogs blogs={blogs} />
+		<div>
+			<div className={classNames(className, homepageStyle)} {...props}>
+				<div
+					className={classNames(
+						homepageGutterStyle,
+						sprinkles({
+							paddingBottom: { mobile: 24, desktop: 16 },
+							paddingTop: { mobile: 0, desktop: 16 },
+						})
+					)}
+				>
+					<Search />
 				</div>
-				<ContributorBanner
-					contributorImages={[
-						"https://github.com/jbachhardie.png",
-						"https://github.com/tvanantwerp.png",
-						"https://github.com/markshenouda.png",
-					]}
-				></ContributorBanner>
-				<div className={homepageTwoAndOneSectionStyle}>
-					<Books books={books} />
-					<LatestTools tools={tools} />
+				<div className={sprinkles({ backgroundColor: "surface5" })}>
+					<Hero siteName={siteName} className={homepageGutterStyle} />
 				</div>
-				<Communities communities={communities} />
+				<div
+					className={classNames(
+						homepageContentContainerStyle,
+						homepageGutterStyle
+					)}
+				>
+					<FeaturedLibraries
+						libraries={libraries}
+						libraryTags={libraryTags}
+						title={librariesTitle}
+					/>
+					<Podcasts podcasts={podcasts} />
+					<div className={homepageTwoAndOneSectionStyle}>
+						<Courses courses={courses} />
+						<Blogs blogs={blogs} />
+					</div>
+					<ContributorBanner
+						// contributorImages={[
+						// 	"https://github.com/jbachhardie.png",
+						// 	"https://github.com/tvanantwerp.png",
+						// 	"https://github.com/markshenouda.png",
+						// ]}
+						contributors
+					></ContributorBanner>
+					<div className={homepageTwoAndOneSectionStyle}>
+						<Books books={books} />
+						<LatestTools tools={tools} />
+					</div>
+					<Communities communities={communities} />
 
-				<ResourcesInfoBanner
-					title="Other Frameworks"
-					description="Explore some of the top resources added by a community to learn or be up to date with your framework"
-					resourceCards={resourceCards}
-					className={sprinkles({
-						borderRadius: 40,
-					})}
-				/>
+					<ResourcesInfoBanner
+						title="Other Frameworks"
+						description="Explore some of the top resources added by a community to learn or be up to date with your framework"
+						resourceCards={resourceCards}
+						className={sprinkles({
+							borderRadius: 40,
+						})}
+					/>
+				</div>
 			</div>
 		</div>
 	)
