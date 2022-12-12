@@ -29,6 +29,8 @@ export async function getSearchData(
 			subCategories:
 				framework === "graphql"
 					? ["Servers", "Client", "Schema"]
+					: framework === "qwik"
+					? ["state management", "internationalization", "data fetching" ]
 					: ([
 							"state management",
 							"data fetching",
