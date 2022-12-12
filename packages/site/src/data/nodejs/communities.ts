@@ -109,4 +109,13 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		href: "https://nodecongress.com/",
 		tags: ["conferences"],
 	},
+	{
+		name: "State of Node.js / State of the Web",
+		description:
+			"This Dot hosted events with Node.js maintainers, technical steering committee members and collaborators. Live chats about the current state of Node, LTS releases, and mentoring.",
+		image: "https://github.com/thisdot.png",
+		type: "Live Events",
+		href: "https://www.thisdotmedia.com/state-of-the-web/",
+		tags: ["meetups"],
+	},
 ]
