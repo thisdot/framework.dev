@@ -27,10 +27,6 @@ export const contributorImageStyle = style([
 		borderRadius: "50%",
 		borderWidth: pxToRem(4),
 		borderStyle: "solid",
-		selectors: {
-			"& + &": {
-				marginLeft: pxToRem(5),
-			},
-		},
+		marginLeft: pxToRem(5),
 	},
 ])

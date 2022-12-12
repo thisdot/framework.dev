@@ -16,7 +16,7 @@ const buttonVariants = {
 			sprinkles({
 				paddingX: 24,
 			}),
-			{ height: pxToRem(48) },
+			{ height: pxToRem(48) , width : "92%"},
 		],
 		square: { height: pxToRem(40), width: pxToRem(40) },
 		largeSquare: { height: pxToRem(48), width: pxToRem(48) },
@@ -130,6 +130,7 @@ export const buttonStyle = recipe({
 			alignItems: "center",
 			cursor: "pointer",
 			gridAutoFlow: "column",
+			marginTop : pxToRem(12),
 			transition: "background 0.15s ease-in-out, color 0.15s ease-in-out",
 			":disabled": {
 				cursor: "not-allowed",

@@ -38,11 +38,11 @@ export function ContributorBanner({
 				size="large"
 				as="a"
 				href="https://github.com/thisdot/framework.dev"
-			>
+			    >
 				Contribute
-			</Button>
+			    </Button>
 			</div>
-			<div className={sprinkles({})}>
+			<div>
 				{contributorImages.map((image) => (
 					<img
 						className={contributorImageStyle}
