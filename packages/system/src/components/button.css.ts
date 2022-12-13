@@ -130,7 +130,6 @@ export const buttonStyle = recipe({
 			alignItems: "center",
 			cursor: "pointer",
 			gridAutoFlow: "column",
-			marginTop: pxToRem(12),
 			transition: "background 0.15s ease-in-out, color 0.15s ease-in-out",
 			":disabled": {
 				cursor: "not-allowed",

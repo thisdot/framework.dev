@@ -35,5 +35,5 @@ export const buttonStyles = style([
 	sprinkles({
 		paddingX: 24,
 	}),
-	{ height: pxToRem(48), width: "92%" },
+	{ height: pxToRem(48), width: "92%", marginTop: pxToRem(12) },
 ])
