@@ -16,7 +16,7 @@ export const contributorBannerStyle = style([
 		alignItems: "center",
 	}),
 	{
-		gridTemplateColumns: "1fr min-content min-content",
+		gridTemplateColumns: "1fr 3fr min-content",
 	},
 ])
 
@@ -27,10 +27,13 @@ export const contributorImageStyle = style([
 		borderRadius: "50%",
 		borderWidth: pxToRem(4),
 		borderStyle: "solid",
-		selectors: {
-			"& + &": {
-				marginLeft: pxToRem(-14),
-			},
-		},
+		marginLeft: pxToRem(5),
 	},
+])
+
+export const buttonStyles = style([
+	sprinkles({
+		paddingX: 24,
+	}),
+	{ height: pxToRem(48), width: "92%", marginTop: pxToRem(12) },
 ])
