@@ -30,3 +30,10 @@ export const contributorImageStyle = style([
 		marginLeft: pxToRem(5),
 	},
 ])
+
+export const buttonStyles = style([
+	sprinkles({
+		paddingX: 24,
+	}),
+	{ height: pxToRem(48), width: "92%" },
+])

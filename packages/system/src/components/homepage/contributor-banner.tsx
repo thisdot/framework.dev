@@ -5,6 +5,7 @@ import { Button } from "../button"
 import {
 	contributorBannerStyle,
 	contributorImageStyle,
+	buttonStyles,
 } from "./contributor-banner.css"
 
 export interface ContributorBannerProps
@@ -34,13 +35,13 @@ export function ContributorBanner({
 					opportunities to help the dev team.
 				</p>
 				<Button
-				color="primary"
-				size="large"
-				as="a"
-				href="https://github.com/thisdot/framework.dev"
-			    >
-				Contribute
-			    </Button>
+					className={classNames(className, buttonStyles)}
+					color="primary"
+					as="a"
+					href="https://github.com/thisdot/framework.dev"
+				>
+					Contribute
+				</Button>
 			</div>
 			<div>
 				{contributorImages.map((image) => (
@@ -52,7 +53,6 @@ export function ContributorBanner({
 					/>
 				))}
 			</div>
-		
 		</div>
 	)
 }
