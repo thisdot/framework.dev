@@ -40,6 +40,7 @@ export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
 	communities: Community<string>[]
 	siteName: string
 	resourceCards: LinkCardProps[]
+	contributorsData: string[]
 }
 
 export function Homepage({
@@ -55,6 +56,7 @@ export function Homepage({
 	communities,
 	siteName,
 	resourceCards,
+	contributorsData,
 	...props
 }: HomepageProps) {
 	resourceCards.unshift({
@@ -100,11 +102,7 @@ export function Homepage({
 					<Blogs blogs={blogs} />
 				</div>
 				<ContributorBanner
-					contributorImages={[
-						"https://github.com/jbachhardie.png",
-						"https://github.com/tvanantwerp.png",
-						"https://github.com/markshenouda.png",
-					]}
+					contributorImages={contributorsData}
 				></ContributorBanner>
 				<div className={homepageTwoAndOneSectionStyle}>
 					<Books books={books} />
