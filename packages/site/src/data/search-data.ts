@@ -14,7 +14,8 @@ const SubCategoryDictionary = new Map<string, string[]>()
 		"data fetching",
 		"API",
 	])
-
+	.set("qwik", ["state management", "internationalization", "data fetching"])
+ 
 export async function getSearchData(
 	framework: string
 ): Promise<AllCategories[]> {
