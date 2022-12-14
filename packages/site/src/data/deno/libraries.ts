@@ -12,7 +12,7 @@ export const libraryTags = [
 	"CLI",
 	"data processing",
 	"templating",
-	"drivers",
+	"database drivers",
 	"tooling",
 ] as const
 
@@ -251,7 +251,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/denodrivers/postgres",
 		author: "Deno Drivers",
 		image: "https://avatars.githubusercontent.com/u/73310055?s=200&v=4",
-		tags: ["utilities", "drivers"],
+		tags: ["utilities", "database drivers"],
 		language: libraryTags[0],
 	},
 	{
@@ -343,7 +343,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/denodrivers/mongo",
 		author: "Deno Drivers",
 		image: "https://avatars.githubusercontent.com/u/73310055?s=200&v=4",
-		tags: ["utilities", "drivers"],
+		tags: ["utilities", "database drivers"],
 		language: libraryTags[0],
 	},
 	{
@@ -446,7 +446,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/dyedgreen/deno-sqlite",
 		author: "Tilman Roeder",
 		image: "https://avatars.githubusercontent.com/u/6896443?v=4",
-		tags: ["utilities", "drivers"],
+		tags: ["utilities", "database drivers"],
 		language: libraryTags[0],
 	},
 	{
@@ -568,7 +568,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		repo: "https://github.com/denodrivers/mysql",
 		author: "Deno Drivers",
 		image: "https://avatars.githubusercontent.com/u/73310055?s=200&v=4",
-		tags: ["utilities", "drivers"],
+		tags: ["utilities", "database drivers"],
 		language: libraryTags[0],
 	},
 	{

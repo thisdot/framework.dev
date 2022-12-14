@@ -35,7 +35,7 @@ export async function getSearchData(
 			break
 		case "deno":
 			librarySubCategories = [
-				"drivers",
+				"database drivers",
 				"frameworks",
 				"utilities",
 				"tooling",
