@@ -4,7 +4,6 @@ import { pxToRem } from "../../util/style-utils"
 
 export const contributorBannerStyle = style([
 	sprinkles({
-		backgroundColor: "secondaryContainer",
 		padding: { mobile: 32, tablet: 56 },
 		borderRadius: 12,
 		gap: { mobile: 32, tablet: 16 },
@@ -13,21 +12,24 @@ export const contributorBannerStyle = style([
 			tablet: "grid",
 		},
 		flexDirection: "column",
-		alignItems: "center",
+		alignItems: "start",
 	}),
 	{
+		backgroundColor: "transparent",
 		gridTemplateColumns: "1fr 3fr min-content",
 	},
 ])
 
-export const contributorImageStyle = style([
-	sprinkles({ borderColor: "onSecondaryContainer" }),
+const contributorsSpacingPx = 4
+export const contributorsContainerStyle = style([
 	{
-		maxWidth: pxToRem(72),
-		borderRadius: "50%",
-		borderWidth: pxToRem(4),
-		borderStyle: "solid",
-		marginLeft: pxToRem(5),
+		margin: pxToRem(-contributorsSpacingPx / 2),
+	},
+])
+
+export const contributorElementStyle = style([
+	{
+		margin: pxToRem(contributorsSpacingPx / 2),
 	},
 ])
 

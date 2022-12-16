@@ -2,21 +2,23 @@ import classNames from "classnames"
 import React from "react"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { Button } from "../button"
+import { Contributor, ContributorData } from "./contributor"
 import {
 	contributorBannerStyle,
-	contributorImageStyle,
 	buttonStyles,
+	contributorsContainerStyle,
+	contributorElementStyle,
 } from "./contributor-banner.css"
 
 export interface ContributorBannerProps
 	extends React.ComponentPropsWithoutRef<"div"> {
-	contributorImages: string[]
+	contributors: ContributorData[]
 }
 
 export function ContributorBanner({
 	children,
 	className,
-	contributorImages,
+	contributors,
 	...props
 }: ContributorBannerProps) {
 	return (
@@ -31,8 +33,9 @@ export function ContributorBanner({
 					Build better. Together.
 				</h1>
 				<p className={sprinkles({ textStyle: "bodyLong2" })}>
-					Create a PR if you see mistakes, room for improvement, or new
-					opportunities to help the dev team.
+					Know a resource that should be included? Spotted a typo or mistake?
+					We&apos;d love to have your contributions! Please send us a pull
+					request and get added to our growing collection of contributors.
 				</p>
 				<Button
 					className={classNames(className, buttonStyles)}
@@ -43,13 +46,12 @@ export function ContributorBanner({
 					Contribute
 				</Button>
 			</div>
-			<div>
-				{contributorImages.map((image) => (
-					<img
-						className={contributorImageStyle}
-						src={image}
-						key={image}
-						alt=""
+			<div className={contributorsContainerStyle}>
+				{contributors.map((contributor) => (
+					<Contributor
+						key={contributor.login}
+						contributor={contributor}
+						className={contributorElementStyle}
 					/>
 				))}
 			</div>
