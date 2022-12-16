@@ -24,7 +24,7 @@ e.g. `yarn dev:system` or `yarn dev:react`.
   to see compilation errors and dependencies not building correct (the symptom
   of which is often the browsers attempting to load `node:process` or other bare
   identifiers). This can be fixed by running
-  `rm -rf packages/react/node_modules && yarn build:react`
+  `rm -rf packages/site/node_modules && yarn build:react`
 
 ## Contributing
 
