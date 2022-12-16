@@ -45,6 +45,16 @@ export function ComparisonTable({
 	)
 
 	useEffect(() => {
+		const parsedLibraries = libraries.map((library) => {
+			if (library.package.includes("npmjs.com")) {
+				library.package = library.package.replace(
+					/(?:http(?:s)?:\/\/(?:www\.)?)npmjs\.com\/package\//,
+					""
+				)
+			}
+			return library
+		})
+
 		const abortController = new AbortController()
 
 		async function fetchData() {
@@ -55,17 +65,7 @@ export function ComparisonTable({
 					"Content-Type": "application/json",
 					Accept: "application/json",
 				},
-				body: JSON.stringify(
-					libraries.map((library) => {
-						if (library.package.includes("npmjs.com")) {
-							return library.package.replace(
-								/(?:http(?:s)?:\/\/(?:www\.)?)npmjs\.com\/package\//,
-								""
-							)
-						}
-						return library.package
-					})
-				),
+				body: JSON.stringify(parsedLibraries.map((library) => library.package)),
 				signal: abortController.signal,
 			})
 				.then((res) => res.json())
@@ -74,7 +74,8 @@ export function ComparisonTable({
 						return
 					}
 				})
-			const data: ILibrary[] = libraries.map((library) => {
+
+			const data: ILibrary[] = parsedLibraries.map((library) => {
 				return {
 					name: library.name,
 					author: library.author,
