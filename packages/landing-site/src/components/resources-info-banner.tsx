@@ -9,7 +9,7 @@ export default function ResourcesInfoBanner() {
 			description="Select one of the frameworks below to begin exploring framework.dev!"
 			resourceCards={FRAMEWORK_RESOURCES()}
 			className={sprinkles({
-				marginTop: { mobile: 56, desktop: 152 },
+				marginTop: { mobile: 32, desktop: 64 },
 			})}
 		/>
 	)
