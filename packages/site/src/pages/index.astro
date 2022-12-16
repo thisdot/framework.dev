@@ -1,5 +1,6 @@
 ---
 import { formatFieldName, formatAllFrameworkTitles } from "@framework/system/src/util/string-utils"
+import { getContributorsData } from '@framework/system/src/github-util/get-contributors'
 import { scrollable } from '@framework/system/src/styles/layouts.css'
 import BaseLayout from '../layouts/base.astro'
 import Homepage from '../components/homepage.tsx'
@@ -15,16 +16,7 @@ const books = searchData.find(category => category.name === "books")
 const tools = searchData.find(category => category.name === "tools")
 const communities = searchData.find(category => category.name === "communities")
 
-interface ContributorAvatars {
-	avatar_url: string
-}
-
-const data =
-		await fetch(
-			"https://api.github.com/repos/thisdot/framework.dev/contributors?anon=1"
-		)
-			.then((res) => res.json())
-			.then((data: ContributorAvatars[]) => data.map((user) => user.avatar_url))
+const contributorsData = await getContributorsData()
 		
 const searchableWebsiteStructuredData = {
 	"@context": "https://schema.org",
@@ -64,6 +56,6 @@ const resourceCards = FRAMEWORK_RESOURCES().filter(
 		communities={communities?.data}
 		siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}
 		resourceCards={resourceCards}
-		contributorsData = {data}
+		contributorsData = {contributorsData}
 	/>
 </BaseLayout>

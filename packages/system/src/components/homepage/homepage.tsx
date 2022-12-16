@@ -1,5 +1,6 @@
 import classNames from "classnames"
 import React from "react"
+import { ContributorData } from './contributor';
 import {
 	homepageContentContainerStyle,
 	homepageGutterStyle,
@@ -40,7 +41,7 @@ export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
 	communities: Community<string>[]
 	siteName: string
 	resourceCards: LinkCardProps[]
-	contributorsData: string[]
+	contributorsData: ContributorData[]
 }
 
 export function Homepage({
@@ -102,7 +103,7 @@ export function Homepage({
 					<Blogs blogs={blogs} />
 				</div>
 				<ContributorBanner
-					contributorImages={contributorsData}
+					contributors={contributorsData}
 				></ContributorBanner>
 				<div className={homepageTwoAndOneSectionStyle}>
 					<Books books={books} />

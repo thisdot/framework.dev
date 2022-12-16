@@ -1,6 +1,8 @@
 ---
 import { fontHeadTags } from '@framework/system/src/globals/font-import.mjs'
+import { getContributorsData } from '@framework/system/src/github-util/get-contributors'
 import ResourcesInfoBanner from '../components/resources-info-banner'
+import ContributorBanner from '../components/contributor-banner'
 import Hero from '../components/hero'
 import PitchCards from '../components/pitch-cards'
 import Footer from '../components/footer';
@@ -10,6 +12,8 @@ import { landingBody } from '@framework/system/src/styles/layouts.css'
 import { SocialMetaTags } from '../../../site/src/components/social-meta-tags';
 
 const { title } = Astro.props
+
+const contributorsData = await getContributorsData()
 ---
 <!DOCTYPE html>
 <html class={landingTheme} lang="en">
@@ -47,6 +51,7 @@ const { title } = Astro.props
 		<Hero />
 		<section class={landingBody}>
 			<PitchCards />
+			<ContributorBanner contributors={contributorsData}/>
 			<ResourcesInfoBanner />
 			<Footer />
 		</section>
