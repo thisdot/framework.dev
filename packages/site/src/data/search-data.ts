@@ -11,7 +11,13 @@ const SubCategoryDictionary = new Map<string, string[]>()
 	.set("graphql", ["Servers", "Client", "Schema"])
 	.set("nodejs", ["framework", "data fetching", "API"])
 	.set("qwik", ["state management", "internationalization", "data fetching"])
-	.set("deno", ["drivers", "frameworks", "utilities", "tooling", "web servers"])
+	.set("deno", [
+		"database drivers",
+		"frameworks",
+		"utilities",
+		"tooling",
+		"web servers",
+	])
 
 export async function getSearchData(
 	framework: string
