@@ -40,6 +40,7 @@ export interface ResourceCardProps
 	href: string
 	tags: string[]
 	selected?: boolean
+	allowSelection?: boolean
 	onSelect?: (selected: boolean) => void
 	onTagClick: (tag: string) => void
 }
@@ -58,6 +59,7 @@ export function ResourceCard({
 	tags,
 	attributes = [],
 	selected = false,
+	allowSelection = true,
 	onSelect,
 	badges,
 	onTagClick,
@@ -78,12 +80,9 @@ export function ResourceCard({
 		>
 			{image && (
 				<div
-					className={classNames(
-						resourceCardImageContainerStyle,
-						{
-							darkBackground: darkImageBackground,
-						}
-					)}
+					className={classNames(resourceCardImageContainerStyle, {
+						darkBackground: darkImageBackground,
+					})}
 				>
 					{imageLayout === "book" && layout === "imageFirst" ? (
 						<BookImageDecoration>
@@ -103,7 +102,7 @@ export function ResourceCard({
 					</a>
 					<p className={resourceCardSubtitleStyle}>{subtitle}</p>
 				</div>
-				{onSelect && (
+				{allowSelection && onSelect && (
 					<CardSelector
 						checked={selected}
 						onChange={(e) => {

@@ -59,11 +59,16 @@ export function ResultsCategory<T extends CategoryName>({
 		? imageFirstCardGrid
 		: titleFirstCardGrid
 
-		useEffect(() => {
-			setShowBannerTooltip(results.length > 0 &&
-				category === "libraries" &&
-				!localStorage.getItem(LocalStorageItems.CompareToolTip))
-		}, [category, results.length])
+	useEffect(() => {
+		// Libraries are comparable only if they have a valid package
+		const isComparable = category === "libraries" && results.some((model) => !!(model as Library<string>).package)
+
+		setShowBannerTooltip(
+			results.length > 0 &&
+			isComparable &&
+				!localStorage.getItem(LocalStorageItems.CompareToolTip)
+		)
+	}, [category, results.length])
 
 	switch (variant) {
 		case "bare":
@@ -72,7 +77,7 @@ export function ResultsCategory<T extends CategoryName>({
 					{showBannerTooltip && (
 						<BannerTooltip
 							onClick={() => {
-								setShowBannerTooltip(false);
+								setShowBannerTooltip(false)
 								localStorage.setItem(LocalStorageItems.CompareToolTip, "true")
 							}}
 							pitchText={{

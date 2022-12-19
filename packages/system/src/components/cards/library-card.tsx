@@ -31,12 +31,13 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 			darkImageBackground={library.darkImageBackground}
 			href={library.href}
 			tags={library.tags}
+			allowSelection={!!library.package}
 			badges={
 				<>
 					{library?.repo.includes("github.com") ? (
 						<Badge
 							data={getGitHubStarsBadge(
-								library.repo.replace("https://www.github.com/", "")
+								library.repo.replace(/https:\/\/(www\.)?github\.com\//, "")
 							)}
 							href={library.repo}
 							label={`${library.name} GitHub Repository`}
