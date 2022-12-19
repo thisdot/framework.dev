@@ -15,6 +15,13 @@ const SubCategoryDictionary = new Map<string, string[]>()
 		"API",
 	])
 	.set("qwik", ["state management", "internationalization", "data fetching"])
+	.set("deno", [
+		"drivers",
+		"frameworks",
+		"utilities",
+		"tooling",
+		"web servers",
+	])
  
 export async function getSearchData(
 	framework: string
