@@ -44,7 +44,7 @@ export const nodejsColorPalette: ColorPalette = {
 	tertiary0: "#000000",
 	neutral100: "#ffffff",
 	neutral99: "#fcfcfc",
-	neutral95: "#fbeeed",
+	neutral95: "#e0ffdf",
 	neutral90: "#ecdfde",
 	neutral80: "#d0c3c2",
 	neutral70: "#b4a8a7",
