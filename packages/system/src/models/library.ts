@@ -44,6 +44,7 @@ export interface Library extends SearchableRecord<LibraryTag> {
 		| "TypeScript"
 		| "JavaScript"
 		| "NodeJS"
+		| "CSS"
 		| "Java"
 		| "Scala"
 		| "Haskell"
