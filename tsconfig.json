@@ -8,6 +8,9 @@
 		"noEmit": true,
 		"isolatedModules": true,
 		"jsx": "preserve",
-		"resolveJsonModule": true
+		"resolveJsonModule": true,
+		"paths": {
+			"@framework/system": ["./packages/system/*"]
+		}
 	}
 }
