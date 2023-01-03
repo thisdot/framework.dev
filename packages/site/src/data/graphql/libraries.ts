@@ -1,27 +1,5 @@
-import { Library } from "@framework/system/src/models/library"
-import { LibraryTag } from "../library-tag"
-
-export const libraryTags = [
-	"Servers",
-	"Client",
-	"Schema",
-	"Java",
-	"Kotlin",
-	"Elixir",
-	"JavaScript",
-	"TypeScript",
-	"NodeJS",
-	"Express",
-	"Go",
-	".NET",
-	"Swift",
-	"Python",
-	"Scala",
-	"Postgres",
-	"MongoDB",
-	"AWS",
-	"ESLint",
-] as const
+import { Library } from "@framework/system/src/models/library";
+import { LibraryTag } from "@framework/system/src/models/library-tag";
 
 // The default image here for use
 // on libraries that don't have an image
@@ -45,7 +23,7 @@ export const libraries: Library[] = [
 		author: "Christian Meunier & Mauro Gabriel Titimoli",
 		repo: "https://www.github.com/absinthe-graphql/absinthe",
 		package: "",
-		href: "http://absinthe-graphql.org/",
+		href: "https://absinthe-graphql.org/",
 		description: "The GraphQL toolkit for Elixir",
 		image: "https://github.com/absinthe-graphql.png",
 		language: "Elixir",

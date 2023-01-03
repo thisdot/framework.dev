@@ -2,9 +2,9 @@ import classNames from "classnames"
 import React from "react"
 import { sampleSize } from "lodash"
 import {
-	featuredLibrariesStyle,
 	featuredLibrariesHeadingStyle,
 	featuredLibrariesListStyle,
+	featuredLibrariesStyle,
 	featuredLibrariesViewAllStyle,
 } from "./featured-libraries.css"
 import { Library } from "../../models/library"
@@ -13,7 +13,7 @@ import { LibraryCard } from "../cards/library-card"
 export interface FeaturedLibrariesProps
 	extends React.ComponentPropsWithoutRef<"div"> {
 	title: string
-	libraries: Library<string>[]
+	libraries: Library[]
 	libraryTags: string[]
 }
 
@@ -28,9 +28,7 @@ export function FeaturedLibraries({
 	const randomLibraries = sampleSize(libraries, 6)
 	return (
 		<div className={classNames(className, featuredLibrariesStyle)} {...props}>
-			<h2 className={featuredLibrariesHeadingStyle}>
-				{title}
-			</h2>
+			<h2 className={featuredLibrariesHeadingStyle}>{title}</h2>
 			<div className={featuredLibrariesListStyle}>
 				{randomLibraries.map((library, i) => (
 					<LibraryCard

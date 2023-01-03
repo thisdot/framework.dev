@@ -1,5 +1,5 @@
 import { Library } from "@framework/system/src/models/library";
-import { LibraryTag } from "../library-tag";
+import { LibraryTag } from "@framework/system/src/models/library-tag";
 
 // The default image here for use
 // on libraries that don't have an image

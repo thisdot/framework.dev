@@ -1,31 +1,9 @@
-import { Library } from "@framework/system/src/models/library"
-import { LibraryTag } from "../library-tag"
-
-export const libraryTags = [
-	LibraryTag.STATE_MANAGEMENT,
-	LibraryTag.I18N,
-	LibraryTag.FRAMEWORKS,
-	LibraryTag.DOCUMENTATION,
-	LibraryTag.STYLING,
-	LibraryTag.COMPONENT,
-	LibraryTag.LOGGING,
-	LibraryTag.PERFORMANCE,
-	"data fetching",
-	"GraphQL",
-	"Utility-First CSS",
-	"CSS in JS",
-	LibraryTag.COMPONENT,
-	"bootstrap",
-	LibraryTag.FORMS,
-	"reactive forms",
-	LibraryTag.TESTING,
-] as const
+import { Library } from "@framework/system/src/models/library";
+import { LibraryTag } from "@framework/system/src/models/library-tag";
 
 // The default image here for use
 // on libraries that don't have an image
 const defaultImage = "https://github.com/angular.png"
-
-// TODO: Update the language fields to contain the correct language for package lookup
 
 export const libraries: Library[] = [
 	{

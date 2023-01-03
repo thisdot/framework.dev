@@ -1,5 +1,5 @@
-import {Library} from "@framework/system/src/models/library"
-import {LibraryTag} from "../library-tag";
+import { Library } from "@framework/system/src/models/library";
+import { LibraryTag } from "@framework/system/src/models/library-tag";
 
 // The default image here for use
 // on libraries that don't have an image
@@ -17,8 +17,13 @@ export const libraries: Library[] = [
 		description:
 			"A standard set of high quality code that all Deno projects can use fearlessly.",
 		image: "https://avatars.githubusercontent.com/u/42048915?s=200&v=4",
-		tags: [LibraryTag.TESTING, LibraryTag.UTILITIES, LibraryTag.WEB_SERVERS, LibraryTag.DOCUMENTATION],
-		language: 'TypeScript',
+		tags: [
+			LibraryTag.TESTING,
+			LibraryTag.UTILITIES,
+			LibraryTag.WEB_SERVERS,
+			LibraryTag.DOCUMENTATION,
+		],
+		language: "TypeScript",
 	},
 	{
 		name: "flat",
@@ -29,7 +34,7 @@ export const libraries: Library[] = [
 		author: "GitHub Next",
 		image: "https://avatars.githubusercontent.com/u/68357280?s=200&v=4",
 		tags: [LibraryTag.UTILITIES],
-		language: 'TypeScript',
+		language: "TypeScript",
 	},
 	{
 		name: "lambda",
@@ -451,7 +456,11 @@ export const libraries: Library[] = [
 		repo: "https://github.com/bradenmacdonald/deno-s3-lite-client",
 		author: "Braden MacDonald",
 		image: "https://avatars.githubusercontent.com/u/945577?v=4",
-		tags: [LibraryTag.UTILITIES, LibraryTag.DATA_FETCHING, LibraryTag.API_LIBRARIES],
+		tags: [
+			LibraryTag.UTILITIES,
+			LibraryTag.DATA_FETCHING,
+			LibraryTag.API_LIBRARIES,
+		],
 		language: "TypeScript",
 	},
 	{
@@ -687,7 +696,11 @@ export const libraries: Library[] = [
 		repo: "https://github.com/grmjs/grm",
 		author: "Grm",
 		image: "https://avatars.githubusercontent.com/u/109421281?s=200&v=4",
-		tags: [LibraryTag.UTILITIES, LibraryTag.DATA_FETCHING, LibraryTag.API_LIBRARIES],
+		tags: [
+			LibraryTag.UTILITIES,
+			LibraryTag.DATA_FETCHING,
+			LibraryTag.API_LIBRARIES,
+		],
 		language: "TypeScript",
 	},
 	{

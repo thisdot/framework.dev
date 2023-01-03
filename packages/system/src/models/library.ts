@@ -1,5 +1,5 @@
 import { SearchableRecord } from "./search";
-import { LibraryTag } from "@framework/site/src/data/library-tag";
+import { LibraryTag } from "./library-tag";
 
 /**
  * Represents a Javascript library. Different

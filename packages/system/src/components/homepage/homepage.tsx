@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import React from "react"
-import { ContributorData } from './contributor';
+import { ContributorData } from "./contributor"
 import {
 	homepageContentContainerStyle,
 	homepageGutterStyle,
@@ -31,7 +31,7 @@ import { LogoIcon } from "../../icons/logo-icon"
 
 export interface HomepageProps extends React.ComponentPropsWithoutRef<"div"> {
 	librariesTitle: string
-	libraries: Library<string>[]
+	libraries: Library[]
 	libraryTags: string[]
 	podcasts: Podcast<string>[]
 	courses: Course<string>[]
@@ -102,9 +102,7 @@ export function Homepage({
 					<Courses courses={courses} />
 					<Blogs blogs={blogs} />
 				</div>
-				<ContributorBanner
-					contributors={contributorsData}
-				></ContributorBanner>
+				<ContributorBanner contributors={contributorsData}></ContributorBanner>
 				<div className={homepageTwoAndOneSectionStyle}>
 					<Books books={books} />
 					<LatestTools tools={tools} />

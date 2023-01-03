@@ -1,16 +1,5 @@
-import { Library } from "@framework/system/src/models/library"
-import { LibraryTag } from "../library-tag"
-
-export const libraryTags = [
-	"web-workers",
-	"styling",
-	"utility-first CSS",
-	"documentation",
-	"testing",
-	"storybook",
-	"internationalization",
-	"react",
-] as const
+import { Library } from "@framework/system/src/models/library";
+import { LibraryTag } from "@framework/system/src/models/library-tag";
 
 // The default image here for use
 // on libraries that don't have an image
