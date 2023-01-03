@@ -1,4 +1,5 @@
-import { SearchableRecord } from "./search"
+import { SearchableRecord } from "./search";
+import { LibraryTag } from "@framework/site/src/data/library-tag";
 
 /**
  * Represents a Javascript library. Different
@@ -6,7 +7,7 @@ import { SearchableRecord } from "./search"
  * each framework will have to pass its tag set
  * as a type parameter here.
  */
-export interface Library<T extends string> extends SearchableRecord<T> {
+export interface Library extends SearchableRecord<LibraryTag> {
 	/** Library name for display*/
 	name: string
 	/** Author name for display */
@@ -39,7 +40,7 @@ export interface Library<T extends string> extends SearchableRecord<T> {
 	/**
 	 * Language associate with the library
 	 */
-	language: string
+	language: "TypeScript" | "NodeJS"
 }
 
 export const libraryIndexMetadata = {
