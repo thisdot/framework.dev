@@ -40,7 +40,19 @@ export interface Library extends SearchableRecord<LibraryTag> {
 	/**
 	 * Language associate with the library
 	 */
-	language: "TypeScript" | "NodeJS"
+	language:
+		| "TypeScript"
+		| "JavaScript"
+		| "NodeJS"
+		| "Java"
+		| "Scala"
+		| "Haskell"
+		| "Python"
+		| "Elixir"
+		| "Go"
+		| "C#"
+		| "Swift"
+		| "unknown"
 }
 
 export const libraryIndexMetadata = {
