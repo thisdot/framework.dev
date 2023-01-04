@@ -3,6 +3,8 @@ console.log("Checking if the site needs to build...");
 const HEAD = process.env.HEAD;
 const COMMIT = process.env.COMMIT_REF;
 
+console.log(HEAD, COMMIT)
+
 switch (process.env.PUBLIC_SITE_NAME) {
 	case "system":
 		console.log("site match found, checking diff for changes")
