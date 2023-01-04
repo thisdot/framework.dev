@@ -11,6 +11,7 @@ repository, you are agreeing to its rules.
 - [How to add content to framework.dev](#how-to-add-content-to-frameworkdev)
 - [Code Guidelines](#code-guidelines)
 - [Submitting a Pull Request (PR)](#submitting-a-pull-request-pr)
+- [New framework Guidelines](#new-framework-guidelines)
 
 ## Guidelines for content submission
 
@@ -133,7 +134,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
   ```
 
 - Create your patch, following [code](#code-guidelines) and/or
-  [content guidelines](#content-guidelines) as appropriate
+  [content](#how-to-add-content-to-frameworkdev) guidelines as appropriate
 - Commit your changes using a descriptive commit message.
 
   ```shell
@@ -164,5 +165,34 @@ Before you submit your Pull Request (PR) consider the following guidelines:
   - When updating your feature branch with the requested changes, please do not
     overwrite the commit history, but rather contain the changes in new commits.
     This is for the sake of a clearer and easier review process.
+
+## New Framework Guidelines
+
+If there's a new framework site you'd like to work on, please create an issue
+with your suggestion. Our core contributors will use this issue to discuss and
+vet the idea with you. If the suggestion is approved, we will either use the
+same issue or ask you to create a new issue to assist with setting up the theme
+colors and logos for the framework site.
+
+Once a new framework site has been approved to work on, you'll also need to
+ensure the framework is added to the `build-ignore.js` file. This file helps
+make sure a new build on Netlify only happens when there are changes that
+directly affect the framework site. You'll need to add a case for the new
+framework to the switch statement. For ease of review, your framework should be
+added as the last case statement before the default.
+
+```js
+case "<framework>":
+  console.log("<framework> site match found, checking diff for changes");
+  gitDiff = `git diff main ${COMMIT} ./packages/site/src/data/<framework>/
+  ./packages/site/src/components/ ./packages/site/src/layouts/ ./packages/site/src/pages/`;
+  break;
+```
+
+Then, in your PR for adding the framework site, please make sure to ask a
+contributor for assistance with adding the site to Netlify so it can be launched
+when it's ready.
+
+---
 
 That's it! Thank you for your contribution!
