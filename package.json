@@ -33,7 +33,7 @@
 		"build:deno": "cross-env SNOWPACK_PUBLIC_FRAMEWORK=deno yarn workspace @framework/site build",
 		"prepare": "husky install",
 		"verify": "run-s verify:*",
-		"verify:types": "ls",
+		"verify:types": "tsc",
 		"verify:site": "yarn workspace @framework/site verify",
 		"verify:landing": "yarn workspace @framework/landing-site verify",
 		"new": "plop"
