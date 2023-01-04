@@ -27,12 +27,4 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		href: "https://tanstack.com/router/v1/",
 		tags: ["development"],
 	},
-	{
-		name: "Test",
-		author: "Test",
-		href: "https://example.com",
-		description: "Small test to see if Netlify build command is working",
-		image: "https://github.com/test.png",
-		tags: ["development"],
-	},
 ]

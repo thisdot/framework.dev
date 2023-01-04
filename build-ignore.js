@@ -31,21 +31,25 @@ switch (process.env.PUBLIC_SITE_NAME) {
 		console.log("vue site match found, checking diff for changes");
 		gitDiff = `git diff main ${COMMIT} ./packages/site/src/data/vue/ ./packages/site/src/components/ ./packages/site/src/layouts/ ./packages/site/src/pages/`;
     break;
+  case "angular":
+    console.log("angular site match found, checking diff for changes");
+    gitDiff = `git diff main ${COMMIT} ./packages/site/src/data/angular/ ./packages/site/src/components/ ./packages/site/src/layouts/ ./packages/site/src/pages/`;
+    break;
+  case "svelte":
+    console.log("svelte site match found, checking diff for changes");
+    gitDiff = `git diff main ${COMMIT} ./packages/site/src/data/svelte/ ./packages/site/src/components/ ./packages/site/src/layouts/ ./packages/site/src/pages/`;
+    break;
   case "solidjs":
 		console.log("solid site match found, checking diff for changes");
 		gitDiff = `git diff main ${COMMIT} ./packages/site/src/data/solidjs/ ./packages/site/src/components/ ./packages/site/src/layouts/ ./packages/site/src/pages/`;
     break;
-  case "angular":
-		console.log("angular site match found, checking diff for changes");
-		gitDiff = `git diff main ${COMMIT} ./packages/site/src/data/angular/ ./packages/site/src/components/ ./packages/site/src/layouts/ ./packages/site/src/pages/`;
-    break;
-  case "svelte":
-		console.log("svelte site match found, checking diff for changes");
-		gitDiff = `git diff main ${COMMIT} ./packages/site/src/data/svelte/ ./packages/site/src/components/ ./packages/site/src/layouts/ ./packages/site/src/pages/`;
-    break;
   case "qwik":
 		console.log("qwik site match found, checking diff for changes");
 		gitDiff = `git diff main ${COMMIT} ./packages/site/src/data/qwik/ ./packages/site/src/components/ ./packages/site/src/layouts/ ./packages/site/src/pages/`;
+    break;
+  case "deno":
+    console.log("deno site match found, checking diff for changes");
+    gitDiff = `git diff main ${COMMIT} ./packages/site/src/data/deno/ ./packages/site/src/components/ ./packages/site/src/layouts/ ./packages/site/src/pages/`;
     break;
 	default:
 		console.log("no matches, exiting build process");
@@ -57,5 +61,6 @@ exec(gitDiff, (error, stdout) => {
     console.error(`exec error: ${error}`);
     return error.code;
   }
+  console.log(stdout ? 'changes found, starting build' : 'no changes found, no build needed');
   return stdout ? process.exitCode = 1 : process.exitCode = 0;
 });
