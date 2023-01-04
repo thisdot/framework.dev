@@ -1,0 +1,3 @@
+[build]
+  base = '/'
+  ignore = "node ./build-ignore.js"
