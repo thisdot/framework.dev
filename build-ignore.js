@@ -57,5 +57,10 @@ exec(gitDiff, (error, stdout) => {
     console.error(`exec error: ${error}`);
     return error.code;
   }
-  console.log(stdout)
+  if (stdout) {
+    console.log(stdout);
+    return process.exitCode = 1;
+  }
+  console.log('no stdout');
+  return process.exitCode = 0;
 });
