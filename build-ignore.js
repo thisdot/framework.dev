@@ -1,6 +1,6 @@
 console.log("Checking if the site needs to build...");
 
-const HEAD = process.env.HEAD;
+const HEAD = 'main';
 const COMMIT = process.env.COMMIT_REF;
 
 console.log(HEAD, COMMIT)
