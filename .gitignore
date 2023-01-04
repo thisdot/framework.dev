@@ -2,4 +2,3 @@ node_modules
 storybook-static
 dist
 .DS_Store
-.idea
