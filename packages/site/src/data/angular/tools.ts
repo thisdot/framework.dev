@@ -109,12 +109,4 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		image: "https://github.com/storybookjs.png",
 		tags: ["UI Design", "development"],
 	},
-	{
-		name: "Test",
-		author: "Test",
-		href: "https://example.com",
-		description: "Small test to see if Netlify build command is working",
-		image: "https://github.com/test.png",
-		tags: ["development", "testing"],
-	},
 ]
