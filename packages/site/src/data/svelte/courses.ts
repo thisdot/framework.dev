@@ -90,4 +90,28 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		href: "https://www.youtube.com/watch?v=XsAFvrEJv7U&list=PLT9tklUafCrKINVnRGFiqMU-b0zFyR6TG&index=8",
 		tags: ["Arduino", "data fetching"],
 	},
+	{
+		title: "Svelte: A Shortcut to A11y",
+		author: "Josefine Schaefer",
+		image: "https://avatars.githubusercontent.com/u/53796513?v=4",
+		description:
+			"How Sveltes powerful features can help you promote accessibility in your web technologies",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "https://www.youtube.com/watch?v=cWMAmEjrF7Y",
+		tags: ["accessibility"],
+	},
+	{
+		title: "Intro to Svelte Kit",
+		image:
+			"https://images.ctfassets.net/zojzzdop0fzx/3RHQUwYK8quWY2Ys7Q3ObK/9d69962d9810cada47f1cf39774e0654/js_marathon_svelte.png?w=800&h=400&q=50&fm=png",
+		description:
+			"Understanding Svelte, the syntax, routing with Svelte, its reactivity model, and the component building blocks, You will also walk you through building a todo application",
+		paymentType: "free",
+		level: "beginner",
+		format: "video",
+		href: "https://www.thisdot.co/resources/Intro-to-Svelte-Kit",
+		tags: ["reactivity", "routing"],
+	},
 ]
