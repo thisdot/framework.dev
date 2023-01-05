@@ -39,6 +39,7 @@
 		"new": "plop"
 	},
 	"devDependencies": {
+		"@astrojs/react": "^1.2.2",
 		"@astrojs/renderer-react": "^0.5.0",
 		"@mdx-js/mdx": "^1.6.22",
 		"@mdx-js/preact": "^1.6.22",
@@ -61,7 +62,7 @@
 		"@vanilla-extract/sprinkles": "^1.3.1",
 		"@vanilla-extract/vite-plugin": "^3.7.0",
 		"@vanilla-extract/webpack-plugin": "^2.1.1",
-		"astro": "^0.23.7",
+		"astro": "^1.9.0",
 		"babel-loader": "^8.2.3",
 		"color": "^4.0.1",
 		"cross-env": "^7.0.3",
@@ -94,8 +95,8 @@
 		"lodash": "^4.17.21",
 		"normalize.css": "^8.0.1",
 		"process": "^0.11.10",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
 		"the-new-css-reset": "^1.2.0",
 		"title-case": "^3.0.3"
 	},
