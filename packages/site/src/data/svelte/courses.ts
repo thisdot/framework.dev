@@ -104,8 +104,8 @@ export const courses: Course<typeof courseTags[number]>[] = [
 	},
 	{
 		title: "Intro to Svelte Kit",
-		image:
-			"https://images.ctfassets.net/zojzzdop0fzx/3RHQUwYK8quWY2Ys7Q3ObK/9d69962d9810cada47f1cf39774e0654/js_marathon_svelte.png?w=800&h=400&q=50&fm=png",
+		author: "Nacho Falk",
+		image: "https://avatars.githubusercontent.com/u/11986564?v=4",
 		description:
 			"Understanding Svelte, the syntax, routing with Svelte, its reactivity model, and the component building blocks, You will also walk you through building a todo application",
 		paymentType: "free",
