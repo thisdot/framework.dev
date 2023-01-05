@@ -3,29 +3,29 @@ import { Logo } from '@framework/system/src/components/logo.tsx';
 import { Sidebar } from '@framework/system/src/components/sidebar.tsx';
 import { fontHeadTags } from '@framework/system/src/globals/font-import.mjs';
 import '@framework/system/src/globals/global-styles';
-import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css';
-import { bodyWithNav,shrinkable } from '@framework/system/src/styles/layouts.css';
-import * as themes from '@framework/system/src/themes/themes.css';
+import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css.ts';
+import { bodyWithNav,shrinkable } from '@framework/system/src/styles/layouts.css.ts';
+import * as themes from '@framework/system/src/themes/themes.css.ts';
 import classNames from 'classnames';
 import { pick } from 'lodash';
 import { MobileNav } from '../components/mobile-nav.tsx';
 import { NavItems } from '../components/nav-items.tsx';
-import { SocialMetaTags } from '../components/social-meta-tags';
-import { getSearchData } from '../data/search-data';
+import { SocialMetaTags } from '../components/social-meta-tags.tsx';
+import { getSearchData } from '../data/search-data.ts';
 const { title, currentCategory, currentTag, className } = Astro.props
-const searchData = await getSearchData(import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK)
+const searchData = await getSearchData(import.meta.env.VITE_FRAMEWORK)
 const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 
 ---
 <!DOCTYPE html>
-<html class={themes[`${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}Theme`]} lang="en">
+<html class={themes[`${import.meta.env.VITE_FRAMEWORK}Theme`]} lang="en">
   <head>
-		{fontHeadTags}
-    	<title>{title}</title>
+		<Fragment set:html={fontHeadTags} />
+		<title>{title}</title>
 		
 		<meta name="robots" content="noindex">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<SocialMetaTags title={`${currentCategory ? currentCategory : 'Featured Resources'} | ${import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}.framework.dev`} siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK} />
+		<SocialMetaTags title={`${currentCategory ? currentCategory : 'Featured Resources'} | ${import.meta.env.VITE_FRAMEWORK}.framework.dev`} siteName={import.meta.env.VITE_FRAMEWORK} />
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 		<meta charset="UTF-8"/>
@@ -35,32 +35,27 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		{
-			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" &&
-				<script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.SNOWPACK_PUBLIC_GOOGLE_ANALYTICS}`}></script>
-		}
-		{
-			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" &&
-				<script>
-					window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments);}
-					gtag('js', new Date());
-
-					gtag('config', import.meta.env.SNOWPACK_PUBLIC_GOOGLE_ANALYTICS);
-				</script>
-		}
+		{import.meta.env.VITE_ENVIRONMENT === "production" && (
+			<>
+				<Fragment set:html={`<script async src="https://www.googletagmanager.com/gtag/js?id=${import.meta.env.VITE_GOOGLE_ANALYTICS}""></script>`} />
+				<Fragment set:html={`<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', ${import.meta.env.VITE_GOOGLE_ANALYTICS});
+				</script>`} />
+			</>
+		)}
   </head>
   <body class={classNames(sprinkles({ backgroundColor: "surface1", height: "full" }), bodyWithNav)} >
-		<Sidebar aria-label="primary" siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK}>
+		<Sidebar aria-label="primary" siteName={import.meta.env.VITE_FRAMEWORK}>
 			<div class={sprinkles({ layout: "stack", gap: 24 })}>
 				<NavItems data={navData} currentCategory={currentCategory} currentTag={currentTag} />
 			</div>
 		</Sidebar>
 		<main class={classNames(className, shrinkable)} id="main-content">
 			<div class={sprinkles({ layout: "row", justifyContent: "center", display: { desktop: "none" }, width: "full", paddingY: 24 })}>
-				<Logo siteName={import.meta.env.SNOWPACK_PUBLIC_FRAMEWORK} />
+				<Logo siteName={import.meta.env.VITE_FRAMEWORK} />
 			</div>
 			<slot />
 		</main>

@@ -7,8 +7,8 @@ import Hero from '../components/hero.tsx'
 import PitchCards from '../components/pitch-cards.tsx'
 import Footer from '../components/footer.tsx';
 import '@framework/system/src/globals/global-styles.ts';
-import { landingTheme } from '@framework/system/src/themes/themes.css'
-import { landingBody } from '@framework/system/src/styles/layouts.css'
+import { landingTheme } from '@framework/system/src/themes/themes.css.ts'
+import { landingBody } from '@framework/system/src/styles/layouts.css.ts'
 import { SocialMetaTags } from '../../../site/src/components/social-meta-tags.tsx';
 
 const { title } = Astro.props
@@ -18,7 +18,7 @@ const contributorsData = await getContributorsData()
 <!DOCTYPE html>
 <html class={landingTheme} lang="en">
   <head>
-		<Fragment set:html={fontHeadTags} />
+		<Fragment set:html={fontHeadTags} />	
     <title>{title}</title>
 		<meta name="robots" content="noindex">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,21 +31,17 @@ const contributorsData = await getContributorsData()
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 		<meta charset="UTF-8"/>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		{
-			import.meta.env.VITE_ENVIRONMENT === "production" &&
-				<script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.VITE_GOOGLE_ANALYTICS}`}></script>
-		}
-		{
-			import.meta.env.VITE_ENVIRONMENT === "production" &&
-				<script>
-					window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments);}
-					gtag('js', new Date());
-
-					gtag('config', import.meta.env.VITE_GOOGLE_ANALYTICS);
-				</script>
-		}
+		{import.meta.env.VITE_ENVIRONMENT === "production" && (
+			<>
+				<Fragment set:html={`<script async src="https://www.googletagmanager.com/gtag/js?id=${import.meta.env.VITE_GOOGLE_ANALYTICS}""></script>`} />
+				<Fragment set:html={`<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', ${import.meta.env.VITE_GOOGLE_ANALYTICS});
+				</script>`} />
+			</>
+		)}
   </head>
   <body >
 		<Hero />

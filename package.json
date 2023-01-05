@@ -62,7 +62,7 @@
 		"@vanilla-extract/sprinkles": "^1.3.1",
 		"@vanilla-extract/vite-plugin": "^3.7.0",
 		"@vanilla-extract/webpack-plugin": "^2.1.1",
-		"astro": "^1.9.0",
+		"astro": "^1.9.1",
 		"babel-loader": "^8.2.3",
 		"color": "^4.0.1",
 		"cross-env": "^7.0.3",

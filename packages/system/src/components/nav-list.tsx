@@ -20,8 +20,9 @@ export function NavListItem({
 	className,
 	...props
 }: NavListItemProps) {
+	const id = React.useId()
 	return (
-		<li className={classNames(className, navListItemStyle)} {...props}>
+		<li key={id} className={classNames(className, navListItemStyle)} {...props}>
 			{children}
 		</li>
 	)
