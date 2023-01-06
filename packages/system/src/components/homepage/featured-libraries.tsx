@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import React from "react"
-import { sampleSize } from "lodash"
+import sampleSize from "lodash/sampleSize"
 import {
 	featuredLibrariesStyle,
 	featuredLibrariesHeadingStyle,
@@ -28,9 +28,7 @@ export function FeaturedLibraries({
 	const randomLibraries = sampleSize(libraries, 6)
 	return (
 		<div className={classNames(className, featuredLibrariesStyle)} {...props}>
-			<h2 className={featuredLibrariesHeadingStyle}>
-				{title}
-			</h2>
+			<h2 className={featuredLibrariesHeadingStyle}>{title}</h2>
 			<div className={featuredLibrariesListStyle}>
 				{randomLibraries.map((library, i) => (
 					<LibraryCard

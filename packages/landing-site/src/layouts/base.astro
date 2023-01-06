@@ -33,7 +33,7 @@ const contributorsData = await getContributorsData()
 		<meta charset="UTF-8"/>
 		{import.meta.env.VITE_ENVIRONMENT === "production" && (
 			<>
-				<Fragment set:html={`<script async src="https://www.googletagmanager.com/gtag/js?id=${import.meta.env.VITE_GOOGLE_ANALYTICS}""></script>`} />
+				<Fragment set:html={`<script async src="https://www.googletagmanager.com/gtag/js?id=${import.meta.env.VITE_GOOGLE_ANALYTICS}"></script>`} />
 				<Fragment set:html={`<script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}

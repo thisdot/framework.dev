@@ -7,7 +7,7 @@ import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css.ts';
 import { bodyWithNav,shrinkable } from '@framework/system/src/styles/layouts.css.ts';
 import * as themes from '@framework/system/src/themes/themes.css.ts';
 import classNames from 'classnames';
-import { pick } from 'lodash';
+import pick from 'lodash/pick';
 import { MobileNav } from '../components/mobile-nav.tsx';
 import { NavItems } from '../components/nav-items.tsx';
 import { SocialMetaTags } from '../components/social-meta-tags.tsx';
@@ -37,7 +37,7 @@ const navData = searchData.map(o => pick(o, ["name", "subCategories"]))
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 		{import.meta.env.VITE_ENVIRONMENT === "production" && (
 			<>
-				<Fragment set:html={`<script async src="https://www.googletagmanager.com/gtag/js?id=${import.meta.env.VITE_GOOGLE_ANALYTICS}""></script>`} />
+				<Fragment set:html={`<script async src="https://www.googletagmanager.com/gtag/js?id=${import.meta.env.VITE_GOOGLE_ANALYTICS}"></script>`} />
 				<Fragment set:html={`<script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
