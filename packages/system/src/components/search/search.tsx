@@ -23,7 +23,11 @@ import {
 import { SearchAutocomplete } from "./search-autocomplete"
 import { FilterIcon } from "../../icons/filter-icon"
 import { FilterSet, QueryParams } from "./types"
-import { uniq, map, sortBy, take, without } from "lodash"
+import uniq from "lodash/uniq"
+import map from "lodash/map"
+import sortBy from "lodash/sortBy"
+import take from "lodash/take"
+import without from "lodash/without"
 import { Library } from "../../models/library"
 import { ComparisonTable } from "../comparison-table"
 import { CloseIcon } from "../../icons/close-icon"
@@ -362,7 +366,7 @@ function ComparisonBar({
 				})}
 				type="submit"
 			>
-				 Compare ({selectedLibraries.length})
+				Compare ({selectedLibraries.length})
 			</Button>
 		</form>
 	)

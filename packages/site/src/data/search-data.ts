@@ -22,15 +22,15 @@ const SubCategoryDictionary = new Map<string, string[]>()
 export async function getSearchData(
 	framework: string
 ): Promise<AllCategories[]> {
-	const { blogs, blogTags } = await import(`./${framework}/blogs.js`)
-	const { books, bookTags } = await import(`./${framework}/books.js`)
+	const { blogs, blogTags } = await import(`./${framework}/blogs.ts`)
+	const { books, bookTags } = await import(`./${framework}/books.ts`)
 	const { communities, communityTags } = await import(
-		`./${framework}/communities.js`
+		`./${framework}/communities.ts`
 	)
-	const { courses, courseTags } = await import(`./${framework}/courses.js`)
-	const { libraries, libraryTags } = await import(`./${framework}/libraries.js`)
-	const { podcasts, podcastTags } = await import(`./${framework}/podcasts.js`)
-	const { tools, toolTags } = await import(`./${framework}/tools.js`)
+	const { courses, courseTags } = await import(`./${framework}/courses.ts`)
+	const { libraries, libraryTags } = await import(`./${framework}/libraries.ts`)
+	const { podcasts, podcastTags } = await import(`./${framework}/podcasts.ts`)
+	const { tools, toolTags } = await import(`./${framework}/tools.ts`)
 
 	return [
 		{

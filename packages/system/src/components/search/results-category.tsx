@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import classNames from "classnames"
 import React, { useEffect, useState } from "react"
-import { startCase } from "lodash"
+import startCase from "lodash/startCase"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { BookCard } from "../cards/book-card"
 import { Book } from "../../models/book"
@@ -61,11 +61,13 @@ export function ResultsCategory<T extends CategoryName>({
 
 	useEffect(() => {
 		// Libraries are comparable only if they have a valid package
-		const isComparable = category === "libraries" && results.some((model) => !!(model as Library<string>).package)
+		const isComparable =
+			category === "libraries" &&
+			results.some((model) => !!(model as Library<string>).package)
 
 		setShowBannerTooltip(
 			results.length > 0 &&
-			isComparable &&
+				isComparable &&
 				!localStorage.getItem(LocalStorageItems.CompareToolTip)
 		)
 	}, [category, results.length])
