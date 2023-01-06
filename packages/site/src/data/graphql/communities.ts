@@ -218,5 +218,23 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		type: "Live Events",
 		href: "https://www.jsday.ie/",
 		tags: ["conferences"],
+   },
+  {
+		name: "GraphQL Contributor Day",
+		description:
+			"In partnership with Hasura, we present GraphQL Contributor Day!",
+		image: "https://www.graphql-meetup.com/img/logos/graphql.svg",
+		href: "https://www.graphql-meetup.com/archive/graphql-contributor-day-or-may-2022",
+		type: "Online events",
+		tags: ["meetups"],
+	},
+	{
+		name: "State of GraphQL",
+		description:
+			"Hear from core contributors & more about upcoming releases, recent milestones, community initiatives, API best practice and optimization techniques!",
+		image: "https://www.graphql-meetup.com/img/logos/graphql.svg",
+		href: "https://www.graphql-meetup.com/archive/state-of-graphql-february-2022",
+		type: "Online events",
+		tags: ["meetups"],
 	},
 ]

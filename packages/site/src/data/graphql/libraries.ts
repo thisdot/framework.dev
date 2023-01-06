@@ -538,16 +538,4 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		language: "NodeJS",
 		tags: ["Client", "NodeJS"],
 	},
-	{
-		name: "Prisma",
-		author: "Prisma",
-		repo: "https://www.github.com/prisma/prisma",
-		package: "https://www.npmjs.com/package/@prisma/client",
-		href: "https://www.prisma.io/graphql",
-		description:
-			"Simple Database Access in GraphQL servers Query data from MySQL, PostgreSQL & SQL Server databases in GraphQL with Prisma - a better ORM for JavaScript and TypeScript.",
-		image: "https://github.com/prisma.png",
-		language: "JavaScript",
-		tags: ["Schema", "JavaScript", "TypeScript", "Postgres"],
-	},
 ]

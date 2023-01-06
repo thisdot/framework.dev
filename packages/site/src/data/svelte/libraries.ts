@@ -1,7 +1,6 @@
 import { Library } from "@framework/system/src/models/library"
 
 export const libraryTags = [
-	"state-management",
 	"data fetching",
 	"styling",
 	"component library",
