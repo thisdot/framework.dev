@@ -34,8 +34,6 @@
 		"prepare": "husky install",
 		"verify": "run-s verify:*",
 		"verify:types": "tsc",
-		"verify:site": "yarn workspace @framework/site verify",
-		"verify:landing": "yarn workspace @framework/landing-site verify",
 		"new": "plop"
 	},
 	"devDependencies": {
@@ -53,7 +51,7 @@
 		"@storybook/react": "^6.4.9",
 		"@types/color": "^3.0.2",
 		"@types/lodash": "^4.14.177",
-		"@types/react": "^17.0.32",
+		"@types/react": "^18.0.26",
 		"@typescript-eslint/eslint-plugin": "^5.1.0",
 		"@typescript-eslint/parser": "^5.1.0",
 		"@vanilla-extract/css": "^1.9.2",
