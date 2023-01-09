@@ -11,6 +11,8 @@ export const courseTags = [
 	"Supabase",
 	"daisyUI",
 	"Arduino",
+	"accessibility",
+	"reactivity",
 ] as const
 
 export const courses: Course<typeof courseTags[number]>[] = [
