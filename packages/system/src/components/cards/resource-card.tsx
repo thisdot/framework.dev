@@ -1,5 +1,5 @@
 import classNames from "classnames"
-import React, { useRef, useState } from "react"
+import React, { useRef, useState, ReactNode } from "react"
 import { AttributeDefinition } from "../../models/all-categories"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
 import { formatFieldValue } from "../../util/string-utils"
@@ -196,7 +196,9 @@ export function ResourceCard({
 	)
 }
 
-export const BookImageDecoration: React.FunctionComponent = ({ children }) => (
+export const BookImageDecoration: React.FunctionComponent<{
+	children: ReactNode
+}> = ({ children }) => (
 	<BookDecorator className={resourceCardBookImageDecoration}>
 		{children}
 	</BookDecorator>

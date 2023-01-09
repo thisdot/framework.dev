@@ -3510,10 +3510,19 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^17.0.32":
+"@types/react@*":
   version "17.0.37"
   resolved "https://registry.npmjs.org/@types/react/-/react-17.0.37.tgz"
   integrity sha512-2FS1oTqBGcH/s0E+CjrCCR9+JMpsu9b69RTFO+40ua43ZqP5MmQ4iUde/dMjWR909KxZwmOQIFq6AV6NjEG5xg==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@^18.0.26":
+  version "18.0.26"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.26.tgz#8ad59fc01fef8eaf5c74f4ea392621749f0b7917"
+  integrity sha512-hCR3PJQsAIXyxhTNSiDFY//LhnMZWpNNr5etoCqx/iUfGc5gXWtQR2Phl908jVR6uPXacojQWTg4qRpkxTuGug==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -3717,7 +3726,7 @@
     media-query-parser "^2.0.2"
     outdent "^0.8.0"
 
-"@vanilla-extract/integration@^1.2.0", "@vanilla-extract/integration@^1.3.0":
+"@vanilla-extract/integration@^1.3.0":
   version "1.4.3"
   resolved "https://registry.npmjs.org/@vanilla-extract/integration/-/integration-1.4.3.tgz"
   integrity sha512-Jax0lADpx8LYwwOyiob9+koGm3H4xSMkWOD+pGTeI87YquALUcp9tqlhZOSPX3X5Jdlpyw2Gxxmo6wa47UEWHA==
@@ -3761,13 +3770,6 @@
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@vanilla-extract/recipes/-/recipes-0.3.0.tgz#2d694106cf415e176849d3428b31c9bb2536c93f"
   integrity sha512-7wXrgfq1oldKdBfCKen4XmSlDmQR+4o0CQ3WnnLfhQaEtI65xJ774yyQF6dD2CC+hHdW2LFKVXgH5NZRbMQ8Sg==
-
-"@vanilla-extract/snowpack-plugin@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.npmjs.org/@vanilla-extract/snowpack-plugin/-/snowpack-plugin-2.0.1.tgz"
-  integrity sha512-xFZWmCdWr4XHeSQL2AK6pCx+Rvu0J5p2IpGTQLSLNeqqZ2qGg4N33Qih3eLzWIprilH2o14qzR/cqNgxwcYobw==
-  dependencies:
-    "@vanilla-extract/integration" "^1.2.0"
 
 "@vanilla-extract/sprinkles@^1.5.1":
   version "1.5.1"

@@ -40,7 +40,7 @@ export const HorizontalScrollbar = ({
 	}
 
 	const handleTrackClick = useCallback(
-		(e) => {
+		(e: React.MouseEvent) => {
 			e.preventDefault()
 			e.stopPropagation()
 			const { current: trackCurrent } = scrollTrackRef
@@ -79,17 +79,20 @@ export const HorizontalScrollbar = ({
 		thumb.style.left = `${newLeft}px`
 	}, [thumbWidth])
 
-	const handleThumbMousedown = useCallback((e) => {
-		e.preventDefault()
-		e.stopPropagation()
-		setScrollStartPosition(e.clientX)
-		if (scrollContentRef.current)
-			setInitialScrollLeft(scrollContentRef.current.scrollLeft)
-		setIsDragging(true)
-	}, [])
+	const handleThumbMousedown = useCallback(
+		(e: MouseEvent | React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+			e.preventDefault()
+			e.stopPropagation()
+			setScrollStartPosition(e.clientX)
+			if (scrollContentRef.current)
+				setInitialScrollLeft(scrollContentRef.current.scrollLeft)
+			setIsDragging(true)
+		},
+		[]
+	)
 
 	const handleThumbMouseup = useCallback(
-		(e) => {
+		(e: MouseEvent | React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 			e.preventDefault()
 			e.stopPropagation()
 			if (isDragging) {
@@ -100,7 +103,7 @@ export const HorizontalScrollbar = ({
 	)
 
 	const handleThumbMousemove = useCallback(
-		(e) => {
+		(e: MouseEvent | React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 			e.preventDefault()
 			e.stopPropagation()
 			if (isDragging && scrollContentRef.current) {
