@@ -424,7 +424,7 @@ export const libraries: Library[] = [
 		name: "StepZen",
 		author: "StepZen",
 		repo: "https://www.github.com/steprz/stepzen-schemas",
-		package: "",
+		package: "https://www.npmjs.com/package/stepzen",
 		href: "https://stepzen.com/",
 		description:
 			"Build GraphQL Easily Optimize & Scale GraphQL Automatically, The only declarative approach for federated access to data!",
@@ -435,8 +435,8 @@ export const libraries: Library[] = [
 	{
 		name: "MuleSoft",
 		author: "salesforce",
-		repo: "",
-		package: "",
+		repo: "https://github.com/mulesoft",
+		package: "https://www.npmjs.com/~mulesoft-npm",
 		href: "https://www.mulesoft.com/",
 		description:
 			"Deliver end-to-end automation and orchestrate across all of your systems to deliver connected customer experiences, faster.",

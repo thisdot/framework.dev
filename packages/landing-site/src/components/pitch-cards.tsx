@@ -22,7 +22,8 @@ export default function PitchCards() {
 			<PitchCard
 				pitchText={{
 					highlightedText: "Compare",
-					softText: "libraries using key data points to understand what's best for your use case.",
+					softText:
+						"libraries using key data points to understand what's best for your use case.",
 				}}
 				imageUrl="/pitch-image-3.png"
 			/>
@@ -30,7 +31,8 @@ export default function PitchCards() {
 			<PitchCard
 				pitchText={{
 					highlightedText: "Discover",
-					softText: "books, podcasts, libraries, courses and more by exploring the collection of resources!",
+					softText:
+						"books, podcasts, libraries, courses and more by exploring the collection of resources!",
 				}}
 				imageUrl="/pitch-image-1.png"
 			/>

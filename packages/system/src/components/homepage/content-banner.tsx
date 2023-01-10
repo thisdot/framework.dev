@@ -1,6 +1,6 @@
 import classNames from "classnames"
 import React from "react"
-import { sampleSize } from "lodash"
+import sampleSize from "lodash/sampleSize"
 import {
 	contentBannerStyle,
 	contentBannerTextAreaStyle,

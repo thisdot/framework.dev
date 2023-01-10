@@ -14,10 +14,10 @@ import { LibraryTag } from "@framework/system/src/models/library-tag"
 export async function getSearchData(
 	framework: string
 ): Promise<AllCategories[]> {
-	const { blogs, blogTags } = await import(`./${framework}/blogs.js`)
-	const { books, bookTags } = await import(`./${framework}/books.js`)
+	const { blogs, blogTags } = await import(`./${framework}/blogs.ts`)
+	const { books, bookTags } = await import(`./${framework}/books.ts`)
 	const { communities, communityTags } = await import(
-		`./${framework}/communities.js`
+		`./${framework}/communities.ts`
 	)
 	const { courses, courseTags } = await import(`./${framework}/courses.js`)
 	const { libraries } = await import(`./${framework}/libraries.js`)
