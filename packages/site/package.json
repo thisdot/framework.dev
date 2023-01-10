@@ -9,7 +9,6 @@
 		"dev": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"verify": "astro check",
-		"test": "echo test"
+		"verify": "astro check"
 	}
 }
