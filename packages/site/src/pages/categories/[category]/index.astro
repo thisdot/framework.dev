@@ -1,12 +1,12 @@
 ---
-import { applyPreFilters } from '@framework/system/src/components/search/query-util.js'
-import { visuallyHidden } from "@framework/system/src/styles/utilities.css.js"
+import { applyPreFilters } from '@framework/system/src/components/search/query-util.ts'
+import { visuallyHidden } from "@framework/system/src/styles/utilities.css.ts"
 import {
 formatFieldName,
 serializeFieldName
-} from "@framework/system/src/util/string-utils.js"
-import Search from '../../../components/search.js'
-import { getSearchData } from '../../../data/search-data.js'
+} from "@framework/system/src/util/string-utils.ts"
+import Search from '../../../components/search.tsx'
+import { getSearchData } from '../../../data/search-data.ts'
 import BaseLayout from '../../../layouts/base.astro'
 
 export async function getStaticPaths() {
