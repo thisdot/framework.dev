@@ -19,10 +19,10 @@ export async function getSearchData(
 	const { communities, communityTags } = await import(
 		`./${framework}/communities.ts`
 	)
-	const { courses, courseTags } = await import(`./${framework}/courses.js`)
-	const { libraries } = await import(`./${framework}/libraries.js`)
-	const { podcasts, podcastTags } = await import(`./${framework}/podcasts.js`)
-	const { tools, toolTags } = await import(`./${framework}/tools.js`)
+	const { courses, courseTags } = await import(`./${framework}/courses.ts`)
+	const { libraries } = await import(`./${framework}/libraries.ts`)
+	const { podcasts, podcastTags } = await import(`./${framework}/podcasts.ts`)
+	const { tools, toolTags } = await import(`./${framework}/tools.ts`)
 
 	return [
 		{
