@@ -1,4 +1,4 @@
-# Dependabot config for Framework
+# Dependabot config for Framework security updates
 
 version: 2
 updates:
@@ -7,25 +7,29 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 10
+    # Only do security updates
+    open-pull-requests-limit: 0
 
   # landing-site
   - package-ecosystem: "npm"
     directory: "/packages/landing-site/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 10
+    # Only do security updates
+    open-pull-requests-limit: 0
 
   # site
   - package-ecosystem: "npm"
     directory: "/packages/site/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 10
+    # Only do security updates
+    open-pull-requests-limit: 0
 
   # system
   - package-ecosystem: "npm"
     directory: "/packages/system/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 10
+    # Only do security updates
+    open-pull-requests-limit: 0
