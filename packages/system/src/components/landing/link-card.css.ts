@@ -103,7 +103,8 @@ export const linkCardIconStyle = style([
 		position: "absolute",
 		top: "50%",
 		transform: "translate(-50%, -50%)",
-		width: "50% !important",
+		width: "50%",
+		maxWidth: "50%",
 	},
 ])
 
