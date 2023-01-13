@@ -5,7 +5,8 @@ export const toolTags = [
 	"Chrome",
 	"Firefox",
 	"Safari",
-	"development"
+	"development",
+	"UI Design"
 ] as const
 
 export const tools: Tool<typeof toolTags[number]>[] = [
@@ -18,11 +19,37 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		tags: ["development"],
 	},
 	{
+		name: "Vite",
+		author: "Yuxi (Evan) You and Vite contributors",
+		description: "Next Generation Frontend Tooling",
+		image: "https://vitejs.dev/logo.svg",
+		href: "https://github.com/vitejs/vite",
+		tags: ["development"],
+	},
+	{
+		name: "Storybook",
+		author: "Storybook",
+		href: "https://storybook.js.org/",
+		description:
+			"Storybook runs alongside your app in development mode. It helps you build UI components isolated from the business logic and context of your app.",
+		image: "https://github.com/storybookjs.png",
+		tags: ["UI Design", "development"],
+	},
+	{
+		name: "Qwik Snippets",
+		author: "johnreemar",
+		href: "https://marketplace.visualstudio.com/items?itemName=johnreemar.vscode-qwik-snippets",
+		description:
+			"This extension for Visual Studio Code adds snippets for Qwik for TypeScript and MDX.",
+		image: "https://github.com/qwikverse/vscode-qwik-snippets/raw/main/assets/qwik-snippets.png",
+		tags: ["VSCode", "development"],
+	},
+	{
 		name: "TanStack Router",
 		author: "Tanner Linsley",
 		description: "A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
 		image:
-			"https://pbs.twimg.com/profile_images/1474105199757180928/lsqWAJKv_400x400.jpg",
+			"https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
 		href: "https://tanstack.com/router/v1/",
 		tags: ["development"],
 	},
