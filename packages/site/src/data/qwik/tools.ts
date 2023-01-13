@@ -29,7 +29,7 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 	{
 		name: "Storybook",
 		author: "Storybook",
-		href: "https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/",
+		href: "https://storybook.js.org/",
 		description:
 			"Storybook runs alongside your app in development mode. It helps you build UI components isolated from the business logic and context of your app.",
 		image: "https://github.com/storybookjs.png",
