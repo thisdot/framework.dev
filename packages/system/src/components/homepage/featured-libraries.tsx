@@ -2,9 +2,9 @@ import classNames from "classnames"
 import React from "react"
 import sampleSize from "lodash/sampleSize"
 import {
-	featuredLibrariesStyle,
 	featuredLibrariesHeadingStyle,
 	featuredLibrariesListStyle,
+	featuredLibrariesStyle,
 	featuredLibrariesViewAllStyle,
 } from "./featured-libraries.css"
 import { Library } from "../../models/library"
@@ -13,7 +13,7 @@ import { LibraryCard } from "../cards/library-card"
 export interface FeaturedLibrariesProps
 	extends React.ComponentPropsWithoutRef<"div"> {
 	title: string
-	libraries: Library<string>[]
+	libraries: Library[]
 	libraryTags: string[]
 }
 

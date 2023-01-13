@@ -3,21 +3,13 @@ import { blogIndexMetadata } from "@framework/system/src/models/blog"
 import { bookIndexMetadata } from "@framework/system/src/models/book"
 import { communityIndexMetadata } from "@framework/system/src/models/community"
 import { courseIndexMetadata } from "@framework/system/src/models/course"
-import { libraryIndexMetadata } from "@framework/system/src/models/library"
+import {
+	Library,
+	libraryIndexMetadata,
+} from "@framework/system/src/models/library"
 import { podcastIndexMetadata } from "@framework/system/src/models/podcast"
 import { toolIndexMetadata } from "@framework/system/src/models/tool"
-
-const SubCategoryDictionary = new Map<string, string[]>()
-	.set("graphql", ["Servers", "Client", "Schema"])
-	.set("nodejs", ["framework", "data fetching", "API"])
-	.set("qwik", ["state management", "internationalization", "data fetching"])
-	.set("deno", [
-		"database drivers",
-		"frameworks",
-		"utilities",
-		"tooling",
-		"web servers",
-	])
+import { LibraryTag } from "@framework/system/src/models/library-tag"
 
 export async function getSearchData(
 	framework: string
@@ -28,7 +20,7 @@ export async function getSearchData(
 		`./${framework}/communities.ts`
 	)
 	const { courses, courseTags } = await import(`./${framework}/courses.ts`)
-	const { libraries, libraryTags } = await import(`./${framework}/libraries.ts`)
+	const { libraries } = await import(`./${framework}/libraries.ts`)
 	const { podcasts, podcastTags } = await import(`./${framework}/podcasts.ts`)
 	const { tools, toolTags } = await import(`./${framework}/tools.ts`)
 
@@ -37,18 +29,10 @@ export async function getSearchData(
 			data: libraries,
 			indexMetadata: libraryIndexMetadata,
 			name: libraryIndexMetadata.name,
-			tags: libraryTags,
-			subCategories:
-				SubCategoryDictionary.get(framework) ||
-				([
-					"state management",
-					"data fetching",
-					"styling",
-					"component library",
-					"forms",
-					"framework",
-					"internationalization",
-				] as typeof libraryTags[number][]),
+			tags: Object.values(LibraryTag),
+			subCategories: Array.from(
+				new Set(libraries.flatMap((lib: Library) => lib.tags))
+			),
 		},
 		{
 			data: tools,

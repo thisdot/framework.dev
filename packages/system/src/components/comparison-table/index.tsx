@@ -1,19 +1,19 @@
 import React, { useCallback, useEffect, useRef, useState } from "react"
 import { Library } from "../../models/library"
 import {
-	comparisonTableStyle,
 	comparisonTableLibraryIconStyle,
+	comparisonTableStyle,
 } from "./comparison-table.css"
 import { ColHeading, RowHeading, TD } from "./components/cells"
 import { HorizontalScrollbar } from "./components/horizontal-scrollbar"
-import { ISortConfig, ILibrary } from "./types"
-import { sortLibraries, formatPercentage, formatNumber } from "./utils"
+import { ILibrary, ISortConfig } from "./types"
+import { formatNumber, formatPercentage, sortLibraries } from "./utils"
 import { CardSelector } from "./../cards/card-selector"
 import { Skeleton } from "../skeleton"
 
 export interface ComparisonTableProps
 	extends React.ComponentPropsWithoutRef<"div"> {
-	libraries: Library<string>[]
+	libraries: Library[]
 }
 
 export function ComparisonTable({

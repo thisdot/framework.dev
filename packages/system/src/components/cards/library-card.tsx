@@ -1,9 +1,9 @@
 import { Library } from "../../models/library"
 import { libraryCardBadgeStyle } from "./library-card.css"
 import {
+	getBundleSizeBadge,
 	getGitHubStarsBadge,
 	getNpmDownloadsBadge,
-	getBundleSizeBadge,
 } from "../../util/stats-util"
 import { ResourceCard, ResourceCardProps } from "./resource-card"
 
@@ -19,7 +19,7 @@ export type LibraryCardProps = Omit<
 	| "attributes"
 	| "children"
 > & {
-	library: Library<string>
+	library: Library
 }
 
 export function LibraryCard({ library, ...props }: LibraryCardProps) {

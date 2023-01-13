@@ -34,7 +34,7 @@ export type AllModelsByName = {
 	[bookIndexMetadata.name]: Book<string>
 	[communityIndexMetadata.name]: Community<string>
 	[courseIndexMetadata.name]: Course<string>
-	[libraryIndexMetadata.name]: Library<string>
+	[libraryIndexMetadata.name]: Library
 	[podcastIndexMetadata.name]: Podcast<string>
 	[toolIndexMetadata.name]: Tool<string>
 	[blogIndexMetadata.name]: Blog<string>

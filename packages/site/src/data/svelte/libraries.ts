@@ -1,27 +1,12 @@
-import { Library } from "@framework/system/src/models/library"
-
-export const libraryTags = [
-	"data fetching",
-	"styling",
-	"component library",
-	"forms",
-	"framework",
-	"internationalization",
-	"linting",
-	"a11y",
-	"HTTP client",
-	"utility-first CSS",
-	"preprocessor",
-] as const
+import { Library } from "@framework/system/src/models/library";
+import { LibraryTag } from "@framework/system/src/models/library-tag"; // The default image here for use
 
 // The default image here for use
 // on libraries that don't have an image
 const defaultImage =
 	"https://avatars.githubusercontent.com/u/23617963?s=200&v=4"
 
-// TODO: Update the language fields to contain the correct language for package lookup
-
-export const libraries: Library<typeof libraryTags[number]>[] = [
+export const libraries: Library[] = [
 	{
 		name: "Axios",
 		author: "Matt Zabriskie",
@@ -31,8 +16,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a simple to use library in a small package with a very extensible interface.",
 		image: "https://github.com/axios.png",
-		tags: ["data fetching", "HTTP client"],
-		language: libraryTags[0],
+		tags: [LibraryTag.HTTP_CLIENT],
+		language: "TypeScript",
 	},
 	{
 		name: "TailwindCSS",
@@ -43,8 +28,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
 		image: "https://github.com/tailwindlabs.png",
-		tags: ["styling", "utility-first CSS"],
-		language: libraryTags[0],
+		tags: [LibraryTag.STYLING],
+		language: "CSS",
 	},
 	{
 		name: "Svelte Material UI",
@@ -55,8 +40,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"A library of Svelte Material UI components, based on Material Design Components - Web.",
 		image: "https://sveltematerialui.com/icons/android-icon-192x192.png",
-		tags: ["styling", "component library"],
-		language: libraryTags[0],
+		tags: [LibraryTag.COMPONENT],
+		language: "TypeScript",
 	},
 	{
 		name: "Sveltestrap",
@@ -67,8 +52,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"A library that provides all Bootstrap 5 components for a Svelte app, without needing to use Bootstrap component classes or needing to include Bootstrap's JavaScript.",
 		image: "https://github.com/bestguy.png",
-		tags: ["styling", "component library"],
-		language: libraryTags[0],
+		tags: [LibraryTag.COMPONENT],
+		language: "TypeScript",
 	},
 	{
 		name: "Svelte Forms",
@@ -78,8 +63,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://chainlist.github.io/svelte-forms/",
 		description: "A form validation library for Svelte.",
 		image: "https://github.com/chainlist.png",
-		tags: ["forms"],
-		language: libraryTags[0],
+		tags: [LibraryTag.FORMS],
+		language: "TypeScript",
 	},
 	{
 		name: "Svelte Formly",
@@ -90,8 +75,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"A good solution to generate and control a dynamic forms using core and custom rules with customize styles.",
 		image: "https://github.com/dyaliCode.png",
-		tags: ["forms"],
-		language: libraryTags[0],
+		tags: [LibraryTag.FORMS],
+		language: "TypeScript",
 	},
 	{
 		name: "rx-svelte-forms",
@@ -101,8 +86,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://github.com/MohamedElmdary/rx-svelte-forms",
 		description: "Reactive svelte forms inspired by angular reactive forms.",
 		image: "https://github.com/MohamedElmdary.png",
-		tags: ["forms"],
-		language: libraryTags[0],
+		tags: [LibraryTag.FORMS],
+		language: "TypeScript",
 	},
 	{
 		name: "Sapper",
@@ -113,8 +98,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Sapper is a framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.",
 		image: defaultImage,
-		tags: ["framework"],
-		language: libraryTags[0],
+		tags: [LibraryTag.FRAMEWORKS],
+		language: "TypeScript",
 	},
 	{
 		name: "svelte-i18n",
@@ -123,10 +108,10 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		package: "https://www.npmjs.com/package/svelte-i18n",
 		href: "https://github.com/kaisermann/svelte-i18n",
 		image: "https://github.com/kaisermann.png",
-		tags: ["internationalization"],
+		tags: [LibraryTag.I18N],
 		description:
 			"svelte-i18n helps you localize your app using the reactive tools Svelte provides. By using stores to keep track of the current locale, dictionary of messages and to format messages, we keep everything neat, in sync and easy to use on your svelte files.",
-		language: libraryTags[0],
+		language: "TypeScript",
 	},
 	{
 		name: "svelte-check",
@@ -135,10 +120,10 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		package: "https://www.npmjs.com/package/svelte-check",
 		href: "https://github.com/sveltejs/language-tools",
 		image: defaultImage,
-		tags: ["linting", "a11y"],
+		tags: [LibraryTag.TOOLING],
 		description:
 			"Svelte Language Tools contains a library implementing the Language Server Protocol (LSP). LSP powers the VSCode extension, which is also hosted in this repository. Additionally, LSP is capable of powering plugins for numerous other IDEs.",
-		language: libraryTags[0],
+		language: "TypeScript",
 	},
 	{
 		name: "Svelte Preprocess",
@@ -147,9 +132,9 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		package: "https://www.npmjs.com/package/svelte-check",
 		href: "https://github.com/sveltejs/svelte-preprocess",
 		image: defaultImage,
-		tags: ["preprocessor"],
+		tags: [LibraryTag.TOOLING],
 		description:
 			"A Svelte preprocessor with sensible defaults and support for: PostCSS, SCSS, Less, Stylus, CoffeeScript, TypeScript, Pug and much more.",
-		language: libraryTags[0],
+		language: "TypeScript",
 	},
 ]
