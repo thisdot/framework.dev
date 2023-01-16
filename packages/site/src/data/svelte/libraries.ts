@@ -140,7 +140,7 @@ export const libraries: Library[] = [
 	{
 		name: "@xstate/svelte",
 		author: "statelyai",
-		repo: "https://github.com/statelyai/xstate/tree/main/packages/xstate-svelte",
+		repo: "https://github.com/statelyai/xstate",
 		package: "https://www.npmjs.com/package/@xstate/svelte",
 		href: "https://xstate.js.org/docs/packages/xstate-svelte",
 		image: "https://avatars.githubusercontent.com/u/61783956?s=200&v=4",
