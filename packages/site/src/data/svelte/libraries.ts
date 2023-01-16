@@ -1,5 +1,5 @@
-import { Library } from "@framework/system/src/models/library";
-import { LibraryTag } from "@framework/system/src/models/library-tag"; // The default image here for use
+import { Library } from "@framework/system/src/models/library"
+import { LibraryTag } from "@framework/system/src/models/library-tag" // The default image here for use
 
 // The default image here for use
 // on libraries that don't have an image
@@ -135,6 +135,18 @@ export const libraries: Library[] = [
 		tags: [LibraryTag.TOOLING],
 		description:
 			"A Svelte preprocessor with sensible defaults and support for: PostCSS, SCSS, Less, Stylus, CoffeeScript, TypeScript, Pug and much more.",
+		language: "TypeScript",
+	},
+	{
+		name: "@xstate/svelte",
+		author: "statelyai",
+		repo: "https://github.com/statelyai/xstate",
+		package: "https://www.npmjs.com/package/@xstate/svelte",
+		href: "https://xstate.js.org/docs/packages/xstate-svelte",
+		image: "https://avatars.githubusercontent.com/u/61783956?s=200&v=4",
+		tags: [LibraryTag.STATE_MANAGEMENT],
+		description:
+			"This package contains utilities for using XState with Svelte.",
 		language: "TypeScript",
 	},
 ]
