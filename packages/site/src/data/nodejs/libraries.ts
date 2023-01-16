@@ -1,5 +1,5 @@
-import { Library } from "@framework/system/src/models/library";
-import { LibraryTag } from "@framework/system/src/models/library-tag";
+import { Library } from "@framework/system/src/models/library"
+import { LibraryTag } from "@framework/system/src/models/library-tag"
 
 // The default image here for use
 // on libraries that don't have an image
@@ -43,7 +43,7 @@ export const libraries: Library[] = [
 			"All-in-one development solution for auto-scaling apps on AWS Lambda.",
 		image:
 			"https://assets-global.website-files.com/60acbb950c4d6606963e1fed/60acbb950c4d66854e3e2013_logo%20serverless%20dark.svg",
-		tags: [LibraryTag.API_LIBRARIES],
+		tags: [LibraryTag.SERVERLESS],
 		language: "NodeJS",
 	},
 	{

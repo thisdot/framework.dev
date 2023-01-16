@@ -7,6 +7,7 @@ export enum LibraryTag {
 	TESTING = "testing",
 	UTILITIES = "utilities",
 	WEB_SERVERS = "web servers",
+	SERVERLESS = "serverless",
 	CLI = "CLI",
 	DATA_PROCESSING = "data processing",
 	TEMPLATING = "templating",
