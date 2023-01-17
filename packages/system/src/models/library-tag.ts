@@ -22,6 +22,7 @@ export enum LibraryTag {
 	FORMS = "forms",
 	AUTH = "AUTH",
 	HTTP_CLIENT = "http client",
+	EMAIL_CLIENT = "email client",
 	ROUTING = "routing",
 	ANIMATION = "animation",
 }
