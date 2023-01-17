@@ -17,7 +17,7 @@ export const libraries: Library[] = [
 		description:
 			"Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. With a myriad of HTTP utility methods and middleware at your disposal, creating a robust API is quick and easy.",
 		image: defaultImage,
-		tags: [LibraryTag.WEB_SERVERS],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -30,7 +30,7 @@ export const libraries: Library[] = [
 			"A progressive Node.js framework for building efficient, reliable and scalable server-side applications.",
 		image:
 			"https://d33wubrfki0l68.cloudfront.net/e937e774cbbe23635999615ad5d7732decad182a/26072/logo-small.ede75a6b.svg",
-		tags: [LibraryTag.WEB_SERVERS, LibraryTag.API_LIBRARIES],
+		tags: [LibraryTag.FRAMEWORKS, LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -43,7 +43,7 @@ export const libraries: Library[] = [
 			"All-in-one development solution for auto-scaling apps on AWS Lambda.",
 		image:
 			"https://assets-global.website-files.com/60acbb950c4d6606963e1fed/60acbb950c4d66854e3e2013_logo%20serverless%20dark.svg",
-		tags: [LibraryTag.SERVERLESS],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -55,7 +55,7 @@ export const libraries: Library[] = [
 		description:
 			"Remix is a full stack web framework that lets you focus on the user interface and work back through web standards to deliver a fast, slick, and resilient user experience. People are gonna love using your stuff.",
 		image: defaultImage,
-		tags: [LibraryTag.TOOLING],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -68,7 +68,7 @@ export const libraries: Library[] = [
 			"Production grade React applications that scale. The world’s leading companies use Next.js by Vercel to build static and dynamic websites and web applications.",
 		image:
 			"https://camo.githubusercontent.com/e1e113df83e7731fdb90f6f0ab2eeb155fd1b48c27d99814dcf1c23c0acdc6a2/68747470733a2f2f6173736574732e76657263656c2e636f6d2f696d6167652f75706c6f61642f76313636323133303535392f6e6578746a732f49636f6e5f6461726b5f6261636b67726f756e642e706e67",
-		tags: [LibraryTag.WEB_SERVERS],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -81,7 +81,7 @@ export const libraries: Library[] = [
 			"Sails.js is a web framework that makes it easy to build custom, enterprise-grade Node.js apps. It is designed to resemble the MVC architecture from frameworks like Ruby on Rails, but with support for the more modern, data-oriented style of web app & API development. It's especially good for building realtime features like chat.",
 		image:
 			"https://camo.githubusercontent.com/7809ea02014a21791f76317fa04c16d460d14b9ad4db2f6166e48aa4e329d628/687474703a2f2f62616c64657264617368792e6769746875622e696f2f7361696c732f696d616765732f6c6f676f2e706e67",
-		tags: [LibraryTag.API_LIBRARIES, LibraryTag.FRAMEWORKS],
+		tags: [LibraryTag.FRAMEWORKS, LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -93,7 +93,7 @@ export const libraries: Library[] = [
 		description:
 			"AdonisJS includes everything you need to create a fully functional web app or an API server. So stop wasting hours downloading and assembling hundreds of packages — Use AdonisJS and be productive from day one.",
 		image: defaultImage,
-		tags: [LibraryTag.API_LIBRARIES],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -118,7 +118,7 @@ export const libraries: Library[] = [
 		description:
 			"A highly extensible Node.js and TypeScript framework for building APIs and microservices.",
 		image: "https://loopback.io/images/global/loopback-full-logo-blue.svg",
-		tags: [LibraryTag.API_LIBRARIES],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -131,7 +131,7 @@ export const libraries: Library[] = [
 			"A highly extensible Node.js and TypeScript framework for building APIs and microservices.",
 		image:
 			"https://camo.githubusercontent.com/fef6ec9e94a2d3c907aa0d4dffa0d726727d5e88b8223d0ac26dc64cffb4a674/687474703a2f2f66656174686572736a732e636f6d2f696d672f66656174686572732d6c6f676f2d776964652e706e67",
-		tags: [LibraryTag.API_LIBRARIES],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -144,7 +144,7 @@ export const libraries: Library[] = [
 			"Koa is a new web framework designed by the team behind Express, which aims to be a smaller, more expressive, and more robust foundation for web applications and APIs. By leveraging async functions, Koa allows you to ditch callbacks and greatly increase error-handling. Koa does not bundle any middleware within its core, and it provides an elegant suite of methods that make writing servers fast and enjoyable.",
 		image:
 			"https://raw.githubusercontent.com/koajs/koa/55f4c33589c1ce6edbdc37f23ed1f78746869cfc/docs/logo.png",
-		tags: [LibraryTag.WEB_SERVERS],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -157,7 +157,7 @@ export const libraries: Library[] = [
 			"Redwood is the full-stack web framework designed to help you grow from side project to startup.",
 		image:
 			"https://d33wubrfki0l68.cloudfront.net/72b0d56596a981835c18946d6c4f8a968b08e694/82254/images/logo.svg",
-		tags: [LibraryTag.CLI, LibraryTag.UTILITIES, LibraryTag.WEB_SERVERS],
+		tags: [LibraryTag.FRAMEWORKS, LibraryTag.UTILITIES, LibraryTag.FRAMEWORKS],
 		language: "TypeScript",
 	},
 	{
@@ -205,7 +205,7 @@ export const libraries: Library[] = [
 		description:
 			"Browserify lets you require('modules') in the browser by bundling up all of your dependencies.",
 		image: "https://browserify.org/images/wizard_hat_blue.png",
-		tags: [LibraryTag.TOOLING],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -218,7 +218,7 @@ export const libraries: Library[] = [
 			"PM2 is a production process manager for Node.js applications with a built-in load balancer.",
 		image:
 			"https://raw.githubusercontent.com/Unitech/pm2/master/pres/pm2-v4.png",
-		tags: [LibraryTag.WEB_SERVERS],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -230,7 +230,7 @@ export const libraries: Library[] = [
 		description:
 			"Parse incoming request bodies in a middleware before your handlers, available under the req.body property.",
 		image: defaultImage,
-		tags: [LibraryTag.WEB_SERVERS],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -242,7 +242,7 @@ export const libraries: Library[] = [
 		description:
 			"CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.",
 		image: defaultImage,
-		tags: [LibraryTag.WEB_SERVERS],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -254,7 +254,7 @@ export const libraries: Library[] = [
 		description:
 			"Passport is Express-compatible authentication middleware for Node.js.",
 		image: "https://www.passportjs.org/images/logo.svg",
-		tags: [LibraryTag.AUTH, LibraryTag.WEB_SERVERS],
+		tags: [LibraryTag.AUTH, LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -266,7 +266,7 @@ export const libraries: Library[] = [
 		description:
 			"Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency.",
 		image: defaultImage,
-		tags: [LibraryTag.WEB_SERVERS],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -278,7 +278,7 @@ export const libraries: Library[] = [
 		description:
 			"Axios is a promise-based HTTP Client for node.js and the browser. On the server-side it uses the native node.js http module, while on the client (browser) it uses XMLHttpRequests.",
 		image: defaultImage,
-		tags: [LibraryTag.WEB_SERVERS],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -289,7 +289,7 @@ export const libraries: Library[] = [
 		href: "https://github.com/expressjs/morgan",
 		description: "HTTP request logger middleware for node.js.",
 		image: defaultImage,
-		tags: [LibraryTag.UTILITIES, LibraryTag.WEB_SERVERS],
+		tags: [LibraryTag.UTILITIES, LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -302,7 +302,7 @@ export const libraries: Library[] = [
 			"Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.",
 		image:
 			"https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.svg",
-		tags: [LibraryTag.WEB_SERVERS],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -326,7 +326,7 @@ export const libraries: Library[] = [
 		href: "https://nodemailer.com/",
 		description: "Send emails from Node.js – easy as cake!",
 		image: "https://nodemailer.com/nm_logo_200x136.png",
-		tags: [LibraryTag.EMAIL_CLIENT],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -338,7 +338,7 @@ export const libraries: Library[] = [
 		description:
 			"Socket.IO enables real-time bidirectional event-based communication.",
 		image: "https://socket.io/images/logo.svg",
-		tags: [LibraryTag.WEB_SERVERS],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 ]
