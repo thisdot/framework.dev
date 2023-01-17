@@ -54,4 +54,27 @@ export const libraries: Library[] = [
 			"Partytown is a lazy-loaded library to help relocate resource intensive scripts into a web worker, and off of the main thread. Its goal is to help speed up sites by dedicating the main thread to your code, and offloading third-party scripts to a web worker.",
 		language: "TypeScript",
 	},
+	{
+		name: "Vite",
+		author: "Yuxi (Evan) You and Vite contributors",
+		repo: "https://github.com/vitejs/vite",
+		package: "",
+		description: "Next Generation Frontend Tooling",
+		image: "https://vitejs.dev/logo.svg",
+		href: "https://github.com/vitejs/vite",
+		tags: [LibraryTag.TOOLING],
+		language: "TypeScript",
+	},
+	{
+		name: "TanStack Router",
+		author: "Tanner Linsley",
+		repo: "https://github.com/tanstack/router",
+		package: "",
+		description: "A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
+		image:
+			"https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
+		href: "https://tanstack.com/router/v1/",
+		tags: [LibraryTag.ROUTING],
+		language: "TypeScript",
+	},
 ]

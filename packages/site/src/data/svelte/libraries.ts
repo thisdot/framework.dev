@@ -147,6 +147,18 @@ export const libraries: Library[] = [
 		tags: [LibraryTag.STATE_MANAGEMENT],
 		description:
 			"This package contains utilities for using XState with Svelte.",
+			language: "TypeScript",
+	},
+	{
+		name: "TanStack Router",
+		author: "Tanner Linsley",
+		repo: "https://github.com/tanstack/router",
+		package: "",
+		description: "A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
+		image:
+			"https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
+		href: "https://tanstack.com/router/v1/",
+		tags: [LibraryTag.ROUTING],
 		language: "TypeScript",
 	},
 ]

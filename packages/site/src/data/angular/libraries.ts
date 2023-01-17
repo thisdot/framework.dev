@@ -606,4 +606,16 @@ export const libraries: Library[] = [
 			"Cypress IndexedDB helpers are a set of custom cypress commands that helps you handle indexedDB related operations in your Cypress tests.",
 		language: "TypeScript",
 	},
+	{
+		name: "Storybook",
+		author: "Storybook",
+		repo: "https://www.github.com/storybookjs/storybook",
+		package: "https://www.npmjs.com/package/@storybook/react",
+		href: "https://storybook.js.org/",
+		image: "https://github.com/storybookjs.png",
+		tags: [LibraryTag.DOCUMENTATION, LibraryTag.TOOLING],
+		description:
+			"Storybook is a development environment for UI components. It allows you to browse a component library, view the different states of each component, and interactively develop and test components.",
+		language: "NodeJS",
+	},
 ]
