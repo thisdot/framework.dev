@@ -161,4 +161,16 @@ export const libraries: Library[] = [
 		tags: [LibraryTag.ROUTING],
 		language: "TypeScript",
 	},
+	{
+		name: "Storybook",
+		author: "Storybook",
+		repo: "https://www.github.com/storybookjs/storybook",
+		package: "https://www.npmjs.com/package/@storybook/react",
+		href: "https://storybook.js.org/",
+		image: "https://github.com/storybookjs.png",
+		tags: [LibraryTag.DOCUMENTATION, LibraryTag.TOOLING],
+		description:
+			"Storybook is a development environment for UI components. It allows you to browse a component library, view the different states of each component, and interactively develop and test components.",
+		language: "NodeJS",
+	},
 ]

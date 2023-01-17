@@ -60,13 +60,4 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		href: "https://chrome.google.com/webstore/detail/svelte-reactive-debugger/mieppkcamgfhpjedhnfdlbndijhohmjf",
 		tags: ["Chrome", "extension"],
 	},
-	{
-		name: "Storybook",
-		author: "Storybook",
-		href: "https://storybook.js.org/docs/svelte/get-started/introduction",
-		description:
-			"Storybook runs alongside your app in development mode. It helps you build UI components isolated from the business logic and context of your app.",
-		image: "https://github.com/storybookjs.png",
-		tags: ["UI Design", "development"],
-	},
 ]
