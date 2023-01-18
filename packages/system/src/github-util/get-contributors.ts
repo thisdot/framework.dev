@@ -11,11 +11,15 @@ export const getContributorsData = (): Promise<ContributorData[]> => {
 		"https://api.github.com/repos/thisdot/framework.dev/contributors?anon=1"
 	)
 		.then((res) => res.json())
-		.then((data: ContributorApiData[]) =>
-			data.map((user) => ({
-				login: user.login,
-				url: user.html_url,
-				avatarUrl: user.avatar_url,
-			}))
-		)
+		.then((data: ContributorApiData[]) => {
+			try {
+				return data.map((user) => ({
+					login: user.login,
+					url: user.html_url,
+					avatarUrl: user.avatar_url,
+				}))
+			} catch (e) {
+				return []
+			}
+		})
 }

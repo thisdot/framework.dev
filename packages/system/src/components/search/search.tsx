@@ -23,12 +23,12 @@ import {
 import { SearchAutocomplete } from "./search-autocomplete"
 import { FilterIcon } from "../../icons/filter-icon"
 import { FilterSet, QueryParams } from "./types"
-import uniq from "lodash/uniq";
-import map from "lodash/map";
-import sortBy from "lodash/sortBy";
-import take from "lodash/take";
-import without from "lodash/without";
-import { Library } from "../../models/library";
+import uniq from "lodash/uniq"
+import map from "lodash/map"
+import sortBy from "lodash/sortBy"
+import take from "lodash/take"
+import without from "lodash/without"
+import { Library } from "../../models/library"
 import { ComparisonTable } from "../comparison-table"
 import { CloseIcon } from "../../icons/close-icon"
 import { ResetIcon } from "../../icons/reset-icon"
@@ -228,7 +228,7 @@ function SearchResults({
 	selectedLibraries,
 	onLibrarySelect,
 	onTagClick,
-	data,
+	data = [],
 }: SearchResultsProps) {
 	const searchIndices: {
 		[K in keyof AllModelsByName]?: Fuse<AllModelsByName[K]>

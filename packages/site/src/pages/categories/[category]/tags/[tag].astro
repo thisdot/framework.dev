@@ -33,7 +33,7 @@ export async function getStaticPaths() {
 
 const { category, tag, ...props } = Astro.props
 const title = `${formatFieldValue(tag)} | ${
-	import.meta.env.VITEFRAMEWORK
+	import.meta.env.VITE_FRAMEWORK
 }.framework.dev`
 ---
 
@@ -45,5 +45,5 @@ const title = `${formatFieldValue(tag)} | ${
 </head>
 <BaseLayout title={title} currentCategory={category} currentTag={tag}>
 	<h1 class={visuallyHidden}>{title}</h1>
-	<Search client:load siteName={import.meta.env.VITEFRAMEWORK} {...props} />
+	<Search client:load siteName={import.meta.env.VITE_FRAMEWORK} {...props} />
 </BaseLayout>
