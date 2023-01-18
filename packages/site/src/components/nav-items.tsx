@@ -20,14 +20,14 @@ export type NavItemsProps = {
 export function NavItems({
 	currentCategory,
 	currentTag,
-	data,
+	data = [],
 }: NavItemsProps): JSX.Element {
 	return (
 		<NavList>
 			<NavItem hiddenUntilFocus href="#main-content">
 				Skip to Content
 			</NavItem>
-			{data?.map((category) => (
+			{data.map((category) => (
 				<NavListItem key={category.name}>
 					<NavItem
 						aria-current={

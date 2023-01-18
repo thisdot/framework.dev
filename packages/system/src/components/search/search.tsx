@@ -228,14 +228,14 @@ function SearchResults({
 	selectedLibraries,
 	onLibrarySelect,
 	onTagClick,
-	data,
+	data = [],
 }: SearchResultsProps) {
 	const searchIndices: {
 		[K in keyof AllModelsByName]?: Fuse<AllModelsByName[K]>
 	} = useMemo(
 		() =>
 			Object.fromEntries(
-				data?.map((category) => [
+				data.map((category) => [
 					category.name,
 					new Fuse<AllCategories["data"][number]>(category.data, {
 						keys: [...category.indexMetadata.searchableFields],
