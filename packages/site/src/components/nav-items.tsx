@@ -27,7 +27,7 @@ export function NavItems({
 			<NavItem hiddenUntilFocus href="#main-content">
 				Skip to Content
 			</NavItem>
-			{data.map((category) => (
+			{data?.map((category) => (
 				<NavListItem key={category.name}>
 					<NavItem
 						aria-current={

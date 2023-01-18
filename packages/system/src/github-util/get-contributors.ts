@@ -12,7 +12,7 @@ export const getContributorsData = (): Promise<ContributorData[]> => {
 	)
 		.then((res) => res.json())
 		.then((data: ContributorApiData[]) =>
-			data.map((user) => ({
+			data?.map((user) => ({
 				login: user.login,
 				url: user.html_url,
 				avatarUrl: user.avatar_url,
