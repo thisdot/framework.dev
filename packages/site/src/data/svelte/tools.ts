@@ -60,22 +60,4 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		href: "https://chrome.google.com/webstore/detail/svelte-reactive-debugger/mieppkcamgfhpjedhnfdlbndijhohmjf",
 		tags: ["Chrome", "extension"],
 	},
-	{
-		name: "Storybook",
-		author: "Storybook",
-		href: "https://storybook.js.org/docs/svelte/get-started/introduction",
-		description:
-			"Storybook runs alongside your app in development mode. It helps you build UI components isolated from the business logic and context of your app.",
-		image: "https://github.com/storybookjs.png",
-		tags: ["UI Design", "development"],
-	},
-	{
-		name: "TanStack Router",
-		author: "Tanner Linsley",
-		description: "A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
-		image:
-			"https://pbs.twimg.com/profile_images/1474105199757180928/lsqWAJKv_400x400.jpg",
-		href: "https://tanstack.com/router/v1/",
-		tags: ["development"],
-	},
 ]

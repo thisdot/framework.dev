@@ -147,6 +147,30 @@ export const libraries: Library[] = [
 		tags: [LibraryTag.STATE_MANAGEMENT],
 		description:
 			"This package contains utilities for using XState with Svelte.",
+			language: "TypeScript",
+	},
+	{
+		name: "TanStack Router",
+		author: "Tanner Linsley",
+		repo: "https://github.com/tanstack/router",
+		package: "",
+		description: "A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
+		image:
+			"https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
+		href: "https://tanstack.com/router/v1/",
+		tags: [LibraryTag.ROUTING],
 		language: "TypeScript",
+	},
+	{
+		name: "Storybook",
+		author: "Storybook",
+		repo: "https://www.github.com/storybookjs/storybook",
+		package: "https://www.npmjs.com/package/@storybook/react",
+		href: "https://storybook.js.org/",
+		image: "https://github.com/storybookjs.png",
+		tags: [LibraryTag.DOCUMENTATION, LibraryTag.TOOLING],
+		description:
+			"Storybook is a development environment for UI components. It allows you to browse a component library, view the different states of each component, and interactively develop and test components.",
+		language: "NodeJS",
 	},
 ]

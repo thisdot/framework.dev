@@ -1014,4 +1014,16 @@ export const libraries: Library[] = [
 			"Cypress IndexedDB helpers are a set of custom cypress commands that helps you handle indexedDB related operations in your Cypress tests.",
 		language: "NodeJS",
 	},
+	{
+		name: "TanStack Router",
+		author: "Tanner Linsley",
+		repo: "https://github.com/tanstack/router",
+		package: "",
+		description: "A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
+		image:
+			"https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
+		href: "https://tanstack.com/router/v1/",
+		tags: [LibraryTag.ROUTING],
+		language: "TypeScript",
+	},
 ]
