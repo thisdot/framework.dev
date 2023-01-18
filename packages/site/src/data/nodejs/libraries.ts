@@ -30,7 +30,7 @@ export const libraries: Library[] = [
 			"A progressive Node.js framework for building efficient, reliable and scalable server-side applications.",
 		image:
 			"https://d33wubrfki0l68.cloudfront.net/e937e774cbbe23635999615ad5d7732decad182a/26072/logo-small.ede75a6b.svg",
-		tags: [LibraryTag.FRAMEWORKS, LibraryTag.FRAMEWORKS],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -81,7 +81,7 @@ export const libraries: Library[] = [
 			"Sails.js is a web framework that makes it easy to build custom, enterprise-grade Node.js apps. It is designed to resemble the MVC architecture from frameworks like Ruby on Rails, but with support for the more modern, data-oriented style of web app & API development. It's especially good for building realtime features like chat.",
 		image:
 			"https://camo.githubusercontent.com/7809ea02014a21791f76317fa04c16d460d14b9ad4db2f6166e48aa4e329d628/687474703a2f2f62616c64657264617368792e6769746875622e696f2f7361696c732f696d616765732f6c6f676f2e706e67",
-		tags: [LibraryTag.FRAMEWORKS, LibraryTag.FRAMEWORKS],
+		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
 	{
@@ -129,8 +129,7 @@ export const libraries: Library[] = [
 		href: "https://feathersjs.com/",
 		description:
 			"A highly extensible Node.js and TypeScript framework for building APIs and microservices.",
-		image:
-			"https://camo.githubusercontent.com/fef6ec9e94a2d3c907aa0d4dffa0d726727d5e88b8223d0ac26dc64cffb4a674/687474703a2f2f66656174686572736a732e636f6d2f696d672f66656174686572732d6c6f676f2d776964652e706e67",
+		image: defaultImage,
 		tags: [LibraryTag.FRAMEWORKS],
 		language: "NodeJS",
 	},
@@ -157,7 +156,7 @@ export const libraries: Library[] = [
 			"Redwood is the full-stack web framework designed to help you grow from side project to startup.",
 		image:
 			"https://d33wubrfki0l68.cloudfront.net/72b0d56596a981835c18946d6c4f8a968b08e694/82254/images/logo.svg",
-		tags: [LibraryTag.FRAMEWORKS, LibraryTag.UTILITIES, LibraryTag.FRAMEWORKS],
+		tags: [LibraryTag.FRAMEWORKS, LibraryTag.UTILITIES],
 		language: "TypeScript",
 	},
 	{
@@ -180,7 +179,8 @@ export const libraries: Library[] = [
 		href: "https://date-fns.org/",
 		description:
 			"date-fns provides the most comprehensive, yet simple and consistent toolset for manipulating JavaScript dates in a browser & Node.js.",
-		image: "https://date-fns.org/static/7ceafe855b131d457fe7de810ed31e0f.svg",
+		image:
+			"https://pbs.twimg.com/profile_images/680459696088551424/jwEH4RiN_400x400.png",
 		tags: [LibraryTag.UTILITIES],
 		language: "NodeJS",
 	},
