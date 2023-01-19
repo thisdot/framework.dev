@@ -49,7 +49,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		image: "https://i3.ytimg.com/vi/LbMRs7l4czI/hqdefault.jpg",
 		hosts: ["Tony Alicea - Misko Hevery"],
 		description:
-			"Miško Hevery (creator of Angular) shows us the exciting new Resumable, Fine-Grained JavaScript framework Qwik",
+			"Miško Hevery (creator of Angular) shows us the exciting new resumable, performance-optimized JavaScript framework Qwik",
 		rss: "https://www.youtube.com/watch?v=LbMRs7l4czI",
 		href: "https://www.youtube.com/watch?v=LbMRs7l4czI",
 		tags: ["qwik"],
