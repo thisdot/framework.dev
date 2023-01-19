@@ -19,7 +19,7 @@ export enum LibraryTag {
 	LOGGING = "logging",
 	PERFORMANCE = "performance tools",
 	FORMS = "forms",
-	AUTH = "AUTH",
+	AUTH = "auth",
 	HTTP_CLIENT = "http client",
 	ROUTING = "routing",
 	ANIMATION = "animation",
