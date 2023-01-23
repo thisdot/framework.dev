@@ -161,4 +161,16 @@ export const libraries: Library[] = [
 			"Storybook is a development environment for UI components. It allows you to browse a component library, view the different states of each component, and interactively develop and test components.",
 		language: "NodeJS",
 	},
+	{
+		name: "Zod",
+		author: "Colin McDonnell",
+		repo: "https://github.com/colinhacks/zod",
+		package: "https://www.npmjs.com/package/zod",
+		href: "https://storybook.js.org/",
+		image: "https://github.com/colinhacks/zod/raw/master/logo.svg",
+		tags: [LibraryTag.TOOLING],
+		description:
+			"TypeScript-first schema validation with static type inference",
+		language: "TypeScript",
+	},
 ]
