@@ -20,6 +20,18 @@ export const libraries: Library[] = [
 		language: "TypeScript",
 	},
 	{
+		name: "DaisyUI",
+		author: "Pouya Saadeghi",
+		repo: "https://github.com/saadeghi/daisyui",
+		package: "https://www.npmjs.com/package/daisyui",
+		href: "https://daisyui.com/",
+		description: "Use Tailwind CSS but write fewer class names",
+		image:
+			"https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg",
+		tags: [LibraryTag.STYLING],
+		language: "CSS",
+	},
+	{
 		name: "TailwindCSS",
 		author: "Adam Wathan & Jonathan Reinink",
 		repo: "https://www.github.com/tailwindlabs/tailwindcss",
@@ -87,18 +99,6 @@ export const libraries: Library[] = [
 		description: "Reactive svelte forms inspired by angular reactive forms.",
 		image: "https://github.com/MohamedElmdary.png",
 		tags: [LibraryTag.FORMS],
-		language: "TypeScript",
-	},
-	{
-		name: "Sapper",
-		author: "Svelte",
-		repo: "https://www.github.com/sveltejs/sapper",
-		package: "https://www.npmjs.com/package/sapper",
-		href: "https://sapper.svelte.dev/",
-		description:
-			"Sapper is a framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.",
-		image: defaultImage,
-		tags: [LibraryTag.FRAMEWORKS],
 		language: "TypeScript",
 	},
 	{
@@ -183,6 +183,18 @@ export const libraries: Library[] = [
 		tags: [LibraryTag.COMPONENT],
 		description:
 			"Svelte-forms first came out because there were back then, no real form validation library for svelte.",
+    language: "TypeScript",
+  },
+  {
+		name: "Zod",
+		author: "Colin McDonnell",
+		repo: "https://github.com/colinhacks/zod",
+		package: "https://www.npmjs.com/package/zod",
+		href: "https://storybook.js.org/",
+		image: "https://github.com/colinhacks/zod/raw/master/logo.svg",
+		tags: [LibraryTag.TOOLING],
+		description:
+			"TypeScript-first schema validation with static type inference",
 		language: "TypeScript",
 	},
 ]
