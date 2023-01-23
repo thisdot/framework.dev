@@ -2,7 +2,7 @@ import { Community } from "@framework/system/src/models/community"
 
 export const communityTags = ["meetups", "conferences"] as const
 
-export const communities: Community<typeof communityTags[number]>[] = [
+export const communities: Community<(typeof communityTags)[number]>[] = [
 	{
 		name: "Node.js Foundation Calendar",
 		description:
@@ -81,15 +81,6 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		tags: ["conferences"],
 	},
 	{
-		name: "International Javascript Conference",
-		description: "Conference dedicated to full stack JavaScript development",
-		image:
-			"https://javascript-conference.com/wp-content/uploads/2019/10/IJS_London20_Website_Logo_Header_53632_v1.png",
-		type: "Live Events",
-		href: "https://javascript-conference.com/",
-		tags: ["conferences"],
-	},
-	{
 		name: "NodeConf",
 		description:
 			"NodeConf EU has rightly earned its reputation as the leading key Node.js event in Europe. As we celebrate NodeConf’s 10th anniversary this year, it is our aim to deliver the highest quality talks, the most relevant workshops and to continue to provide a relaxed and friendly atmosphere for people to meet and share ideas.",
@@ -164,15 +155,6 @@ export const communities: Community<typeof communityTags[number]>[] = [
 			"https://a.storyblok.com/f/84560/x/628ee206a3/logo-frontendlove-whitebg.svg/m/",
 		type: "Live Events",
 		href: "https://usa.jsworldconference.com/",
-		tags: ["conferences"],
-	},
-	{
-		name: "Node Congress",
-		description:
-			"A two-day conference on all things Node.js, Edge-native workers (Cloudflare & others), Serverless, Deno & other JavaScript backend run times.",
-		image: "https://nodecongress.com/img/ogImage.png",
-		type: "Live Events",
-		href: "https://nodecongress.com/",
 		tags: ["conferences"],
 	},
 	{
@@ -272,12 +254,144 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		tags: ["conferences"],
 	},
 	{
-		name: "JSDayIE",
+		name: "JSDay IE Ireland",
 		description:
 			"A tech conference dedicated to the JavaScript community in Ireland.",
 		image: "https://www.jsday.ie//media/jslogo.png?imwidth=64",
 		type: "Live Events",
 		href: "https://www.jsday.ie/",
+		tags: ["conferences"],
+	},
+	{
+		name: "Angular Community",
+		description: "A community-ran Discord for all things Angular.",
+		image: "https://github.com/angular-community.png",
+		type: "Discord Community",
+		href: "discord.gg/angular",
+		tags: [],
+	},
+	{
+		name: "Angular Community Meetup",
+		description:
+			"Angular Community is a virtual meetup that is held twice a month: once for European and African time zones, and once for American timezones.",
+		image:
+			"https://angularcommunity.net/assets/images/ACM_logo_main%20copy.png",
+		type: "Live Events",
+		href: "https://angularcommunity.net/home",
+		tags: ["meetups"],
+	},
+	{
+		name: "Angular @ Reddit",
+		description: "Very active Angular community on Reddit.",
+		image:
+			"https://styles.redditmedia.com/t5_36qrt/styles/communityIcon_essg5v68ccu01.png?width=256&s=9ddf3239f71edb50bb9da77b371f43812d6b223f",
+		type: "Reddit",
+		href: "https://www.reddit.com/r/Angular2/",
+		tags: [],
+	},
+	{
+		name: "NgPoland",
+		description: "One of the largest Angular conferences in Europe.",
+		image: "https://ng-poland.pl/images/logos/logo-small.png",
+		type: "Live and online events",
+		href: "http://ng-poland.pl/",
+		tags: ["conferences"],
+	},
+	{
+		name: "NgRome",
+		description: "The largest Italian Angular conference.",
+		image: "https://ngrome.io/assets/logo/logo-horizontal.svg",
+		type: "Live Events",
+		href: "https://ngrome.io/home",
+		tags: ["conferences"],
+	},
+	{
+		name: "ng-India",
+		description: "India's largest Angular conference.",
+		image: "https://www.ng-ind.com/assets/images/ng-ind-logo.jpeg",
+		type: "Live Events",
+		href: "https://www.ng-ind.com/",
+		tags: ["conferences"],
+	},
+	{
+		name: "NG-BE 2023",
+		description: "Belgium's Angular conference.",
+		image:
+			"https://images.squarespace-cdn.com/content/v1/5b7b64d52714e503eebf914c/1534819802976-CJNVLSR6NCPX4XODKL0N/ng-be-logo.png?format=1500w",
+		type: "Live Events",
+		href: "https://ng-be.org/",
+		tags: ["conferences"],
+	},
+	{
+		name: "Front Stage",
+		description:
+			"Online conference dedicated to all things frontend web development.",
+		image: "https://frontdevstage.com/wp-content/uploads/2021/11/logo.png",
+		type: "Online Events",
+		href: "https://frontdevstage.com/",
+		tags: ["conferences"],
+	},
+	{
+		name: "Connect.Tech",
+		description: "The largest Frontend framework conference in the USA.",
+		image: "https://2022.connect.tech/_nuxt/img/ctlogo.fb612ee.png",
+		type: "Live Events",
+		href: "http://connect.tech",
+		tags: ["conferences"],
+	},
+	{
+		name: "Jamstack",
+		description:
+			"Jamstack Conf is for engineers, technology leaders, and digital agencies who are embracing the next evolution of modern web development architecture.",
+		image: "https://jamstack.org/conf/assets/logo-jamstack-mark.56918026.svg",
+		type: "Live and Online Events",
+		href: "https://jamstack.org/conf/",
+		tags: ["conferences"],
+	},
+	{
+		name: "WORLDWIDE SOFTWARE ARCHITECTURE SUMMIT",
+		description:
+			"This is a conference dedicated to architects, CTOs and founders.",
+		image: "https://events.geekle.us/vuejs/static/media/logo.579e43d2.svg",
+		type: "Live Events",
+		href: "https://events.geekle.us/wsas4/",
+		tags: ["conferences"],
+	},
+	{
+		name: "Xtremejs",
+		description:
+			"Professional development conference dedicated to all things JavaScript.",
+		image:
+			"https://pbs.twimg.com/profile_images/1355572943552655362/QpnPItbv_400x400.jpg",
+		type: "Online Events",
+		href: "https://xtremejs.dev/",
+		tags: ["conferences"],
+	},
+	{
+		name: "DevTernity",
+		description:
+			"Turning developers into architects and engineering leaders since 2015.",
+		image: "https://devternity.com/assets/img/logo-7c1dd9e4.png",
+		type: "Live Events",
+		href: "https://devternity.com/",
+		tags: ["conferences"],
+	},
+	{
+		name: "World Of No Code Conf",
+		description: "This is a conference dedicated to all things no code.",
+		image: "https://events.geekle.us/vuejs/static/media/logo.579e43d2.svg",
+		type: "Online Events",
+		href: "https://events.geekle.us/nocode/",
+		tags: ["conferences"],
+	},
+	{
+		name: "PASS Data Community Summit",
+		description:
+			"Reconnect with old friends, build new relationships, gain new skills, and get the world-class training you need to take that next step in your data career.",
+		image:
+			"https://passdatacommunitysummit.com/assets/images/pass-2022-logo-microsoft--dark.svg",
+		type: "Live Events",
+		href: "https://passdatacommunitysummit.com/",
 		tags: ["conferences"],
 	},
 ]

@@ -1,34 +1,31 @@
 /* eslint-disable react/display-name */
-import classNames from "classnames"
-import React, { useEffect, useState } from "react"
-import { startCase } from "lodash"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { BookCard } from "../cards/book-card"
-import { Book } from "../../models/book"
-import { CommunityCard } from "../cards/community-card"
-import { Community } from "../../models/community"
-import { CourseCard } from "../cards/course-card"
-import { Course } from "../../models/course"
-import { LibraryCard } from "../cards/library-card"
-import { Library } from "../../models/library"
-import { PodcastCard } from "../cards/podcast-card"
-import { Podcast } from "../../models/podcast"
-import { ToolCard } from "../cards/tool-card"
-import { Tool } from "../../models/tool"
-import { Counter } from "../counter"
-import { CategoryName, Model } from "../../models/all-categories"
-import assertNever from "assert-never"
-import { ResourceCardProps } from "../cards/resource-card"
-import {
-	imageFirstCardGrid,
-	titleFirstCardGrid,
-} from "../cards/card-layouts.css"
-import { Blog } from "../../models/blog"
-import { BlogCard } from "../cards/blog-card"
-import { visuallyHidden } from "../../styles/utilities.css"
-import { useId } from "@reach/auto-id"
-import { BannerTooltip } from "../banner-tooltip"
-import { LocalStorageItems } from "../../models/common"
+import classNames from "classnames";
+import React, { useEffect, useState } from "react";
+import startCase from "lodash/startCase";
+import { sprinkles } from "../../sprinkles/sprinkles.css";
+import { BookCard } from "../cards/book-card";
+import { Book } from "../../models/book";
+import { CommunityCard } from "../cards/community-card";
+import { Community } from "../../models/community";
+import { CourseCard } from "../cards/course-card";
+import { Course } from "../../models/course";
+import { LibraryCard } from "../cards/library-card";
+import { Library } from "../../models/library";
+import { PodcastCard } from "../cards/podcast-card";
+import { Podcast } from "../../models/podcast";
+import { ToolCard } from "../cards/tool-card";
+import { Tool } from "../../models/tool";
+import { Counter } from "../counter";
+import { CategoryName, Model } from "../../models/all-categories";
+import assertNever from "assert-never";
+import { ResourceCardProps } from "../cards/resource-card";
+import { imageFirstCardGrid, titleFirstCardGrid } from "../cards/card-layouts.css";
+import { Blog } from "../../models/blog";
+import { BlogCard } from "../cards/blog-card";
+import { visuallyHidden } from "../../styles/utilities.css";
+import { useId } from "@reach/auto-id";
+import { BannerTooltip } from "../banner-tooltip";
+import { LocalStorageItems } from "../../models/common";
 
 export type ResultsCategoryProps<T extends CategoryName> = Omit<
 	React.ComponentPropsWithoutRef<"div">,
@@ -61,11 +58,13 @@ export function ResultsCategory<T extends CategoryName>({
 
 	useEffect(() => {
 		// Libraries are comparable only if they have a valid package
-		const isComparable = category === "libraries" && results.some((model) => !!(model as Library<string>).package)
+		const isComparable =
+			category === "libraries" &&
+			results.some((model) => !!(model as Library).package)
 
 		setShowBannerTooltip(
 			results.length > 0 &&
-			isComparable &&
+				isComparable &&
 				!localStorage.getItem(LocalStorageItems.CompareToolTip)
 		)
 	}, [category, results.length])
@@ -206,7 +205,7 @@ function renderCard<T extends CategoryName>({
 				<CourseCard key={index} course={record} {...props} />
 			)) as RenderCardFn<T>
 		case "libraries":
-			return ((record: Library<string>, index: number) => (
+			return ((record: Library, index: number) => (
 				<LibraryCard
 					key={index}
 					library={record}

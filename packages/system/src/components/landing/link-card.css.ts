@@ -6,7 +6,7 @@ export const linkCardStyle = style([
 	sprinkles({
 		layout: "row",
 		borderRadius: 12,
-		alignItems: { desktop: 'start', mobile: 'center' },
+		alignItems: { desktop: "start", mobile: "center" },
 		flexDirection: { desktop: "column", mobile: "row" },
 		justifyContent: { desktop: "space-between", mobile: "flex-start" },
 		paddingLeft: 16,
@@ -104,6 +104,7 @@ export const linkCardIconStyle = style([
 		top: "50%",
 		transform: "translate(-50%, -50%)",
 		width: "50%",
+		maxWidth: "50%",
 	},
 ])
 

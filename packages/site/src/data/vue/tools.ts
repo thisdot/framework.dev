@@ -20,14 +20,6 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		tags: ["development"],
 	},
 	{
-		name: "Vite",
-		author: "Yuxi (Evan) You and Vite contributors",
-		description: "Next Generation Frontend Tooling",
-		image: "https://vitejs.dev/logo.svg",
-		href: "https://github.com/vitejs/vite",
-		tags: ["development"],
-	},
-	{
 		name: "Vue.js devtools",
 		author: "Vue.js",
 		description:
@@ -52,6 +44,14 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		image: "https://github.com/vuejs.png",
 		href: "https://marketplace.visualstudio.com/items?itemName=octref.vetur",
 		tags: ["VSCode"],
+	},
+	{
+		name: "VueUse",
+		author: "Anthony Fu and VueUse contributors",
+		description: "Collection of Essential Vue Composition Utilities",
+		image: "https://d33wubrfki0l68.cloudfront.net/2f6479d73bc25170dc532dd42e059166573bf478/61057/favicon.svg",
+		href: "https://vueuse.org/",
+		tags: ["development"],
 	},
 	{
 		name: "GraphQL Playground for Chrome",
@@ -86,24 +86,5 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		image: "https://github.com/apollographql.png",
 		href: "https://addons.mozilla.org/en-US/firefox/addon/apollo-developer-tools",
 		tags: ["firefox"],
-	},
-	{
-		name: "Storybook",
-		author: "Storybook",
-		href: "https://storybook.js.org/tutorials/intro-to-storybook/vue/en/get-started/",
-		description:
-			"Storybook runs alongside your app in development mode. It helps you build UI components isolated from the business logic and context of your app.",
-		image: "https://github.com/storybookjs.png",
-		tags: ["UI Design", "development"],
-	},
-	{
-		name: "TanStack Router",
-		author: "Tanner Linsley",
-		description:
-			"A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
-		image:
-			"https://pbs.twimg.com/profile_images/1474105199757180928/lsqWAJKv_400x400.jpg",
-		href: "https://tanstack.com/router/v1/",
-		tags: ["development"],
 	},
 ]

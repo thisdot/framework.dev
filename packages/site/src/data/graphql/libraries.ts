@@ -1,32 +1,11 @@
-import { Library } from "@framework/system/src/models/library"
-
-export const libraryTags = [
-	"Servers",
-	"Client",
-	"Schema",
-	"Java",
-	"Kotlin",
-	"Elixir",
-	"JavaScript",
-	"TypeScript",
-	"NodeJS",
-	"Express",
-	"Go",
-	".NET",
-	"Swift",
-	"Python",
-	"Scala",
-	"Postgres",
-	"MongoDB",
-	"AWS",
-	"ESLint",
-] as const
+import { Library } from "@framework/system/src/models/library";
+import { LibraryTag } from "@framework/system/src/models/library-tag";
 
 // The default image here for use
 // on libraries that don't have an image
 const defaultImage = "https://github.com/graphql.png"
 
-export const libraries: Library<typeof libraryTags[number]>[] = [
+export const libraries: Library[] = [
 	{
 		name: "DGS",
 		author: "Netflix",
@@ -37,18 +16,18 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Build a full-featured GraphQL server with Java or Kotlin in record time",
 		image: "https://netflix.github.io/dgs/images/logo--blue.svg",
 		language: "Java",
-		tags: ["Servers", "Java", "Kotlin"],
+		tags: [LibraryTag.WEB_SERVERS],
 	},
 	{
 		name: "Absinthe",
 		author: "Christian Meunier & Mauro Gabriel Titimoli",
 		repo: "https://www.github.com/absinthe-graphql/absinthe",
 		package: "",
-		href: "http://absinthe-graphql.org/",
+		href: "https://absinthe-graphql.org/",
 		description: "The GraphQL toolkit for Elixir",
 		image: "https://github.com/absinthe-graphql.png",
 		language: "Elixir",
-		tags: ["Servers", "Elixir"],
+		tags: [LibraryTag.WEB_SERVERS],
 	},
 	{
 		name: "GraphQL.js",
@@ -59,8 +38,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"The JavaScript reference implementation for GraphQL, a query language for APIs created by Facebook.",
 		image: defaultImage,
-		language: "JavaScript",
-		tags: ["Servers", "JavaScript"],
+		language: "TypeScript",
+		tags: [LibraryTag.FRAMEWORKS],
 	},
 	{
 		name: "Mercurius",
@@ -71,7 +50,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "Mercurius is a GraphQL adapter for Fastify",
 		image: "https://github.com/mercurius-js.png",
 		language: "NodeJS",
-		tags: ["Servers", "NodeJS", "Express"],
+		tags: [LibraryTag.WEB_SERVERS, LibraryTag.DATA_PROCESSING],
 	},
 	{
 		name: "Apollo Server",
@@ -83,7 +62,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Apollo Server is an open-source, spec-compliant GraphQL server that's compatible with any GraphQL client, including Apollo Client. It's the best way to build a production-ready, self-documenting GraphQL API that can use data from any source.",
 		image: "https://github.com/apollographql.png",
 		language: "NodeJS",
-		tags: ["Servers", "NodeJS"],
+		tags: [LibraryTag.WEB_SERVERS, LibraryTag.DATABASE_DRIVERS],
 	},
 	{
 		name: "Helix",
@@ -95,8 +74,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Build your own extensible and framework-agnostic GraphQL Server",
 		image:
 			"https://raw.githubusercontent.com/contra/graphql-helix/main/logo.svg",
-		language: "JavaScript",
-		tags: ["Servers", "JavaScript"],
+		language: "NodeJS",
+		tags: [LibraryTag.WEB_SERVERS, LibraryTag.DATA_PROCESSING],
 	},
 	{
 		name: "Express-GraphQL",
@@ -107,8 +86,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Create a GraphQL HTTP server with any HTTP web framework that supports connect styled middleware, including Connect itself, Express and Restify.",
 		image: defaultImage,
-		language: "Express",
-		tags: ["Servers", "Express"],
+		language: "NodeJS",
+		tags: [LibraryTag.WEB_SERVERS],
 	},
 	{
 		name: "GraphQL-Go",
@@ -120,7 +99,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"The goal of this project is to provide full support of the GraphQL draft specification with a set of idiomatic, easy to use Go packages.",
 		image: "https://github.com/graph-gophers.png",
 		language: "Go",
-		tags: ["Servers", "Go"],
+		tags: [LibraryTag.WEB_SERVERS],
 	},
 	{
 		name: "Yoga",
@@ -131,8 +110,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Fully-featured GraphQL Server with focus on easy setup, performance & great developer experience",
 		image: "https://github.com/dotansimha.png",
-		language: "JavaScript",
-		tags: ["Servers", "JavaScript"],
+		language: "NodeJS",
+		tags: [LibraryTag.WEB_SERVERS],
 	},
 	{
 		name: "GraphQL .NET",
@@ -142,19 +121,19 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://graphql-dotnet.github.io/docs/getting-started/introduction",
 		description: "This is an implementation of Facebook's GraphQL in .NET.",
 		image: "https://github.com/graphql-dotnet.png",
-		language: ".NET",
-		tags: ["Servers", ".NET"],
+		language: "C#",
+		tags: [LibraryTag.WEB_SERVERS],
 	},
 	{
 		name: "GraphQL Hooks",
 		author: "NearForm",
 		repo: "https://www.github.com/nearform/graphql-hooks",
-		package: "",
+		package: "https://www.npmjs.com/package/graphql-hooks",
 		href: "https://github.com/nearform/graphql-hooks",
 		description: "Minimal hooks-first GraphQL client.",
 		image: "https://github.com/nearform.png",
 		language: "JavaScript",
-		tags: ["Client", "JavaScript"],
+		tags: [LibraryTag.DATA_FETCHING],
 	},
 	{
 		name: "GraphQL-request",
@@ -165,8 +144,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Minimal GraphQL client supporting Node and browsers for scripts or simple apps",
 		image: "https://github.com/prisma-labs.png",
-		language: "NodeJS",
-		tags: ["Client", "NodeJS"],
+		language: "TypeScript",
+		tags: [LibraryTag.DATA_FETCHING],
 	},
 	{
 		name: "React Query",
@@ -177,8 +156,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Powerful asynchronous state management for TS/JS, React, Solid, Vue and Svelte",
 		image: "https://github.com/TanStack.png",
-		language: "JavaScript",
-		tags: ["Client", "JavaScript", "TypeScript"],
+		language: "TypeScript",
+		tags: [LibraryTag.DATA_FETCHING, LibraryTag.STATE_MANAGEMENT],
 	},
 	{
 		name: "URQL",
@@ -189,8 +168,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "A highly customizable and versatile GraphQL client",
 		image:
 			"https://raw.githubusercontent.com/FormidableLabs/urql/main/packages/site/src/assets/sidebar-badge.svg",
-		language: "JavaScript",
-		tags: ["Client", "JavaScript"],
+		language: "TypeScript",
+		tags: [LibraryTag.DATA_FETCHING],
 	},
 	{
 		name: "Apollo Kotlin",
@@ -202,7 +181,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"A strongly-typed, caching GraphQL client for Java and Kotlin multi-platform",
 		image: "https://github.com/apollographql.png",
 		language: "Java",
-		tags: ["Client", "Java", "Kotlin"],
+		tags: [LibraryTag.DATA_FETCHING],
 	},
 	{
 		name: "Apollo Client",
@@ -213,8 +192,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Apollo Client is a comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL. Use it to fetch, cache, and modify application data, all while automatically updating your UI.",
 		image: "https://github.com/apollographql.png",
-		language: "JavaScript",
-		tags: ["Client", "JavaScript"],
+		language: "TypeScript",
+		tags: [LibraryTag.DATA_FETCHING],
 	},
 	{
 		name: "Apollo iOS",
@@ -226,7 +205,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Apollo iOS is a strongly-typed, caching GraphQL client, written in Swift.",
 		image: "https://github.com/apollographql.png",
 		language: "Swift",
-		tags: ["Client", "Swift"],
+		tags: [LibraryTag.DATA_FETCHING],
 	},
 	{
 		name: "Swift GraphQL",
@@ -238,7 +217,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"SwiftGraphQL comes with a lightweight client that supports queries, mutations and subscriptions. And they all work the same way.",
 		image: "https://github.com/maticzav.png",
 		language: "Swift",
-		tags: ["Client", "Swift"],
+		tags: [LibraryTag.DATA_FETCHING],
 	},
 	{
 		name: "Relay",
@@ -249,7 +228,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "The GraphQL client that scales with you.",
 		image: "https://github.com/facebook.png",
 		language: "JavaScript",
-		tags: ["Client", "JavaScript"],
+		tags: [LibraryTag.DATA_FETCHING],
 	},
 	{
 		name: "Graph Code Generator",
@@ -261,8 +240,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"GraphQL Code Generator is a tool that generates code out of your GraphQL schema.",
 		image:
 			"https://raw.githubusercontent.com/dotansimha/graphql-code-generator/master/logo.svg",
-		language: "JavaScript",
-		tags: ["Schema", "JavaScript", "NodeJS"],
+		language: "NodeJS",
+		tags: [LibraryTag.UTILITIES, LibraryTag.CLI],
 	},
 	{
 		name: "gqlgen",
@@ -275,7 +254,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://user-images.githubusercontent.com/980499/133180111-d064b38c-6eb9-444b-a60f-7005a6e68222.png",
 		language: "Go",
-		tags: ["Schema", "Go"],
+		tags: [LibraryTag.WEB_SERVERS],
 	},
 	{
 		name: "Pothos",
@@ -286,8 +265,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Pothos is a plugin based GraphQL schema builder for TypeScript.",
 		image: "https://github.com/hayes.png",
-		language: "TypeScript",
-		tags: ["Schema", "TypeScript"],
+		language: "NodeJS",
+		tags: [LibraryTag.DATABASE_DRIVERS, LibraryTag.DATA_PROCESSING],
 	},
 	{
 		name: "GraphQL Java",
@@ -298,7 +277,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "GraphQL server implementation for Java/JVM",
 		image: "https://github.com/graphql-java.png",
 		language: "Java",
-		tags: ["Schema", "Java"],
+		tags: [LibraryTag.DATA_PROCESSING],
 	},
 	{
 		name: "TypeGraphQL",
@@ -310,7 +289,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		image:
 			"https://raw.githubusercontent.com/MichalLytek/type-graphql/master/img/logo.png",
 		language: "NodeJS",
-		tags: ["Schema", "NodeJS"],
+		tags: [LibraryTag.DATA_PROCESSING],
 	},
 	{
 		name: "Nexus",
@@ -321,8 +300,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Declarative, code-first and strongly typed GraphQL schema construction for TypeScript & JavaScript.",
 		image: "https://github.com/graphql-nexus.png",
-		language: "JavaScript",
-		tags: ["Schema", "JavaScript", "TypeScript"],
+		language: "NodeJS",
+		tags: [LibraryTag.UTILITIES, LibraryTag.DATA_PROCESSING],
 	},
 	{
 		name: "Strawberry",
@@ -334,7 +313,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Strawberry is a new GraphQL library for Python 3, inspired by dataclasses.",
 		image: "https://github.com/strawberry-graphql.png",
 		language: "Python",
-		tags: ["Schema", "Python"],
+		tags: [LibraryTag.DATA_PROCESSING],
 	},
 	{
 		name: "Genql",
@@ -345,7 +324,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "Generate your own GraphQL SDK in seconds",
 		image: "https://github.com/remorses.png",
 		language: "JavaScript",
-		tags: ["Schema", "JavaScript", "NodeJS"],
+		tags: [LibraryTag.CLI, LibraryTag.UTILITIES],
 	},
 	{
 		name: "Sangria",
@@ -356,7 +335,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "Sangria is a Scala GraphQL library.",
 		image: "https://github.com/sangria-graphql.png",
 		language: "Scala",
-		tags: ["Schema", "Scala"],
+		tags: [LibraryTag.DATA_PROCESSING],
 	},
 	{
 		name: "GraphQL Zeus",
@@ -367,8 +346,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description: "Strongly Typed GraphQL from the team at GraphQL Editor",
 		image:
 			"https://raw.githubusercontent.com/graphql-editor/graphql-zeus/master/images/zeus-logo.png",
-		language: "JavaScript",
-		tags: ["Schema", "JavaScript", "TypeScript", "NodeJS"],
+		language: "TypeScript",
+		tags: [LibraryTag.DATA_FETCHING],
 	},
 	{
 		name: "Apollo Federation",
@@ -378,8 +357,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://www.apollographql.com/docs/federation/",
 		description: "Combine GraphQL APIs into a unified supergraph",
 		image: "https://github.com/apollographql.png",
-		language: "JavaScript",
-		tags: ["Schema", "JavaScript"],
+		language: "NodeJS",
+		tags: [LibraryTag.DATABASE_DRIVERS, LibraryTag.FRAMEWORKS],
 	},
 	{
 		name: "Schema Stitching - GraphQL Tools",
@@ -390,8 +369,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"GraphQL Tools is a set of NPM packages and an opinionated structure for how to build a GraphQL schema and resolvers in JavaScript, following the GraphQL-first development workflow.",
 		image: "https://github.com/ardatan.png",
-		language: "JavaScript",
-		tags: ["Schema", "JavaScript"],
+		language: "NodeJS",
+		tags: [LibraryTag.DATA_PROCESSING],
 	},
 	{
 		name: "GraphQL Modules",
@@ -402,8 +381,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"GraphQL Modules is a toolset of libraries and guidelines dedicated to create reusable, maintainable, testable and extendable modules out of your GraphQL server.",
 		image: "https://github.com/Urigo.png",
-		language: "JavaScript",
-		tags: ["Schema", "JavaScript"],
+		language: "NodeJS",
+		tags: [LibraryTag.DATA_PROCESSING],
 	},
 	{
 		name: "Hasura Data Federation",
@@ -414,8 +393,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Hasura's data federation capabilities allow you to compose data from different sources that reside in independent data stores but are semantically related.",
 		image: "https://github.com/hasura.png",
-		language: "Postgres",
-		tags: ["Schema", "Postgres"],
+		language: "Haskell",
+		tags: [LibraryTag.CLI, LibraryTag.TOOLING],
 	},
 	{
 		name: "GraphQL Mesh",
@@ -426,8 +405,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"The Graph of Everything Federated architecture for any API service",
 		image: "https://github.com/Urigo.png",
-		language: "MongoDB",
-		tags: ["Schema", "MongoDB", "Postgres"],
+		language: "JavaScript",
+		tags: [LibraryTag.DATABASE_DRIVERS],
 	},
 	{
 		name: "WunderGraph",
@@ -438,33 +417,33 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"WunderGraph is the Serverless API Developer Platform with a focus on Developer Experience.",
 		image: "https://github.com/wundergraph.png",
-		language: "JavaScript",
-		tags: ["Schema", "JavaScript", "Postgres", "AWS"],
+		language: "NodeJS",
+		tags: [LibraryTag.DATA_PROCESSING],
 	},
 	{
 		name: "StepZen",
 		author: "StepZen",
 		repo: "https://www.github.com/steprz/stepzen-schemas",
-		package: "",
+		package: "https://www.npmjs.com/package/stepzen",
 		href: "https://stepzen.com/",
 		description:
 			"Build GraphQL Easily Optimize & Scale GraphQL Automatically, The only declarative approach for federated access to data!",
 		image: "https://github.com/steprz.png",
-		language: "JavaScript",
-		tags: ["Schema", "JavaScript"],
+		language: "NodeJS",
+		tags: [LibraryTag.DATA_PROCESSING],
 	},
 	{
 		name: "MuleSoft",
 		author: "salesforce",
-		repo: "https://www.github.com/",
-		package: "",
+		repo: "https://github.com/mulesoft",
+		package: "https://www.npmjs.com/~mulesoft-npm",
 		href: "https://www.mulesoft.com/",
 		description:
 			"Deliver end-to-end automation and orchestrate across all of your systems to deliver connected customer experiences, faster.",
 		image:
 			"https://mma.prnewswire.com/media/1512177/MuleSoft_Logo.jpg?p=twitter",
-		language: "AWS",
-		tags: ["Schema", "AWS"],
+		language: "unknown",
+		tags: [LibraryTag.UTILITIES],
 	},
 	{
 		name: "GraphQL ESLint",
@@ -475,8 +454,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"This project integrates GraphQL and ESLint, for a better developer experience.",
 		image: "https://github.com/B2o5T/graphql-eslint/raw/master/logo.png",
-		language: "ESLint",
-		tags: ["Schema", "ESLint"],
+		language: "TypeScript",
+		tags: [LibraryTag.TOOLING, LibraryTag.CLI],
 	},
 	{
 		name: "GraphQL Scalars",
@@ -486,8 +465,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		href: "https://www.the-guild.dev/graphql/scalars",
 		description: "Data Integrity and Strict Validations on GraphQL",
 		image: "https://github.com/urigo.png",
-		language: "JavaScript",
-		tags: ["Schema", "JavaScript"],
+		language: "TypeScript",
+		tags: [LibraryTag.UTILITIES],
 	},
 	{
 		name: "Apollo Data Sources",
@@ -498,8 +477,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Data sources are classes that Apollo Server can use to encapsulate fetching data from a particular source, such as a database or a REST API. ",
 		image: "https://github.com/apollographql.png",
-		language: "JavaScript",
-		tags: ["Servers", "JavaScript"],
+		language: "TypeScript",
+		tags: [LibraryTag.DATA_PROCESSING],
 	},
 	{
 		name: "GraphQL Shield",
@@ -511,8 +490,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Implement your server permissions in a clear and deterministic way and let it guard access to your schema.",
 		image:
 			"https://github.com/dimatill/graphql-shield/raw/master/media/shield.jpg",
-		language: "JavaScript",
-		tags: ["Servers", "JavaScript"],
+		language: "TypeScript",
+		tags: [LibraryTag.AUTH],
 	},
 	{
 		name: "Envelop",
@@ -524,7 +503,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 			"Develop and share plugins that are usable with any GraphQL server framework or schema.",
 		image: "https://github.com/n1ru4l/envelop/raw/main/logo.png",
 		language: "NodeJS",
-		tags: ["Servers", "Schema", "NodeJS"],
+		tags: [LibraryTag.TOOLING],
 	},
 	{
 		name: "Dataloader",
@@ -535,8 +514,8 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"DataLoader is a generic utility to be used as part of your application's data fetching layer to provide a simplified and consistent API over various remote data sources such as databases or web services via batching and caching.",
 		image: defaultImage,
-		language: "NodeJS",
-		tags: ["Client", "NodeJS"],
+		language: "TypeScript",
+		tags: [LibraryTag.DATA_FETCHING],
 	},
 	{
 		name: "Prisma",
@@ -547,7 +526,7 @@ export const libraries: Library<typeof libraryTags[number]>[] = [
 		description:
 			"Simple Database Access in GraphQL servers Query data from MySQL, PostgreSQL & SQL Server databases in GraphQL with Prisma - a better ORM for JavaScript and TypeScript.",
 		image: "https://github.com/prisma.png",
-		language: "JavaScript",
-		tags: ["Schema", "JavaScript", "TypeScript", "Postgres"],
+		language: "NodeJS",
+		tags: [LibraryTag.ORM],
 	},
 ]

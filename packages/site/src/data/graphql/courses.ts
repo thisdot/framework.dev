@@ -291,4 +291,16 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		href: "https://egghead.io/courses/designing-graphql-schemas-99db",
 		tags: ["data fetching", "graphQL"],
 	},
+	{
+		title: "Intro to GraphQL DataLoaders",
+		author: "Star Richardson",
+		image: "https://avatars.githubusercontent.com/u/67430892?v=4",
+		description:
+			"How to implement DataLoaders in your GraphQL project. We'll walk through setup and configuration, and build a simple API to demonstrate how GraphQL DataLoaders can dramatically reduce duplicate API calls.",
+		paymentType: "free",
+		level: "intermediate",
+		format: "video",
+		href: "www.youtube.com/watch?v=Zc6xv5bcky8",
+		tags: ["data fetching", "graphQL", "javascript marathon", "services"],
+	},
 ]

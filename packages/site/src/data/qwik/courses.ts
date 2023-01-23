@@ -31,5 +31,5 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		format: "video",
 		href: "https://www.youtube.com/watch?v=DxJgXw91cCQ",
 		tags: ["structure", "state management", "routing"],
-	},
+	}
 ]

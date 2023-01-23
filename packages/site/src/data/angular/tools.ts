@@ -100,13 +100,4 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		image: "https://github.com/ike18t.png",
 		tags: ["testing"],
 	},
-	{
-		name: "Storybook",
-		author: "Storybook",
-		href: "https://storybook.js.org/tutorials/intro-to-storybook/angular/en/get-started/",
-		description:
-			"Storybook runs alongside your app in development mode. It helps you build UI components isolated from the business logic and context of your app.",
-		image: "https://github.com/storybookjs.png",
-		tags: ["UI Design", "development"],
-	},
 ]

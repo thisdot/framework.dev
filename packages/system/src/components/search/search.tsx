@@ -23,7 +23,11 @@ import {
 import { SearchAutocomplete } from "./search-autocomplete"
 import { FilterIcon } from "../../icons/filter-icon"
 import { FilterSet, QueryParams } from "./types"
-import { uniq, map, sortBy, take, without } from "lodash"
+import uniq from "lodash/uniq"
+import map from "lodash/map"
+import sortBy from "lodash/sortBy"
+import take from "lodash/take"
+import without from "lodash/without"
 import { Library } from "../../models/library"
 import { ComparisonTable } from "../comparison-table"
 import { CloseIcon } from "../../icons/close-icon"
@@ -53,9 +57,7 @@ export function Search({
 			clearTimeout(timeout)
 		}
 	}, [query])
-	const [selectedLibraries, setSelectedLibraries] = useState<Library<string>[]>(
-		[]
-	)
+	const [selectedLibraries, setSelectedLibraries] = useState<Library[]>([])
 	const [comparisonTableOpen, setComparisonTableOpen] = useState(false)
 	const availableFilters = useMemo(
 		() => calculateAvailableFilters(data, appliedPreFilters),
@@ -114,8 +116,8 @@ export function Search({
 							selectedLibraries={selectedLibraries}
 							onSelectionChange={setSelectedLibraries}
 							allLibraries={
-								(data.find((c) => c.name === "libraries")
-									?.data as Library<string>[]) ?? []
+								(data.find((c) => c.name === "libraries")?.data as Library[]) ??
+								[]
 							}
 						/>
 					)}
@@ -214,8 +216,8 @@ function SearchBar({
 type SearchResultsProps = {
 	queryParams: QueryParams
 	preFilters: FilterSet
-	selectedLibraries: Library<string>[]
-	onLibrarySelect: (newSelection: Library<string>[]) => void
+	selectedLibraries: Library[]
+	onLibrarySelect: (newSelection: Library[]) => void
 	onTagClick: (tag: string) => void
 	data: AllCategories[]
 }
@@ -226,7 +228,7 @@ function SearchResults({
 	selectedLibraries,
 	onLibrarySelect,
 	onTagClick,
-	data,
+	data = [],
 }: SearchResultsProps) {
 	const searchIndices: {
 		[K in keyof AllModelsByName]?: Fuse<AllModelsByName[K]>
@@ -284,7 +286,7 @@ function SearchResults({
 							return (
 								<ResultsCategory
 									key={category.name}
-									onSelect={(item: Library<string>, selected: boolean) =>
+									onSelect={(item: Library, selected: boolean) =>
 										onLibrarySelect(
 											selected
 												? uniq([...selectedLibraries, item])
@@ -309,9 +311,9 @@ function SearchResults({
 }
 
 type ComparisonBarProps = {
-	selectedLibraries: Library<string>[]
-	allLibraries: Library<string>[]
-	onSelectionChange: (selection: Library<string>[]) => void
+	selectedLibraries: Library[]
+	allLibraries: Library[]
+	onSelectionChange: (selection: Library[]) => void
 	onOpenClick: () => void
 }
 
@@ -362,7 +364,7 @@ function ComparisonBar({
 				})}
 				type="submit"
 			>
-				 Compare ({selectedLibraries.length})
+				Compare ({selectedLibraries.length})
 			</Button>
 		</form>
 	)
@@ -381,7 +383,7 @@ function calculatePopularTags(data: AllCategories[]): string[] {
 }
 
 type LibraryComparisonProps = {
-	selectedLibraries: Library<string>[]
+	selectedLibraries: Library[]
 	onClose: () => void
 	onReset: () => void
 }

@@ -20,7 +20,7 @@ export type NavItemsProps = {
 export function NavItems({
 	currentCategory,
 	currentTag,
-	data,
+	data = [],
 }: NavItemsProps): JSX.Element {
 	return (
 		<NavList>

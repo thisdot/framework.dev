@@ -1,5 +1,10 @@
 import Fuse from "fuse.js"
-import { groupBy, map, mapValues, toPairs, uniq, without } from "lodash"
+import groupBy from "lodash/groupBy"
+import map from "lodash/map"
+import mapValues from "lodash/mapValues"
+import toPairs from "lodash/toPairs"
+import uniq from "lodash/uniq"
+import without from "lodash/without"
 import {
 	AllCategories,
 	AllModels,
@@ -227,10 +232,17 @@ export function ungroupFieldFilters(
 	)
 }
 
-export function ungroupFieldFilter<T extends FieldFilter>(
-	groupedFilters: T
-): T extends any ? (readonly [T[0], T[1][number]])[] : never {
-	return groupedFilters[1].map((v) => [groupedFilters[0], v])
+type UngroupedFieldFilter<T extends FieldFilter> = T extends unknown
+	? (readonly [T[0], T[1][number]])[]
+	: never
+
+export function ungroupFieldFilter<T extends FieldFilter>([
+	fieldName,
+	fieldValues,
+]: T): UngroupedFieldFilter<T> {
+	return fieldValues.map(
+		(v) => [fieldName, v] as const
+	) as UngroupedFieldFilter<T>
 }
 
 export const emptyFilterSet: FilterSet = {

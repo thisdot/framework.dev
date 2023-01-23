@@ -1,59 +1,64 @@
 ---
-import { fontHeadTags } from '@framework/system/src/globals/font-import.mjs'
-import { getContributorsData } from '@framework/system/src/github-util/get-contributors'
-import ResourcesInfoBanner from '../components/resources-info-banner'
-import ContributorBanner from '../components/contributor-banner'
-import Hero from '../components/hero'
-import PitchCards from '../components/pitch-cards'
-import Footer from '../components/footer';
-import '@framework/system/src/globals/global-styles';
-import { landingTheme } from '@framework/system/src/themes/themes.css'
-import { landingBody } from '@framework/system/src/styles/layouts.css'
-import { SocialMetaTags } from '../../../site/src/components/social-meta-tags';
+import { fontHeadTags } from "@framework/system/src/globals/font-import.mjs"
+import { getContributorsData } from "@framework/system/src/github-util/get-contributors"
+import ResourcesInfoBanner from "../components/resources-info-banner"
+import ContributorBanner from "../components/contributor-banner"
+import Hero from "../components/hero"
+import PitchCards from "../components/pitch-cards"
+import Footer from "../components/footer"
+import "@framework/system/src/globals/global-styles"
+import { landingTheme } from "@framework/system/src/themes/themes.css"
+import { landingBody } from "@framework/system/src/styles/layouts.css"
+import { SocialMetaTags } from "../../../site/src/components/social-meta-tags"
 
 const { title } = Astro.props
 
 const contributorsData = await getContributorsData()
 ---
+
 <!DOCTYPE html>
 <html class={landingTheme} lang="en">
-  <head>
-		{fontHeadTags}
-    <title>{title}</title>
-		<meta name="robots" content="noindex">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<Fragment set:html={fontHeadTags} />
+		<title>{title}</title>
+		<meta name="robots" content="noindex" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<SocialMetaTags title={title} siteName="landing" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="theme-color" content="#ffffff">
-		<meta charset="UTF-8"/>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta charset="UTF-8" />
 		{
-			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" &&
-				<script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.SNOWPACK_PUBLIC_GOOGLE_ANALYTICS}`}></script>
+			import.meta.env.VITE_ENVIRONMENT === "production" && (
+				<>
+					<Fragment
+						set:html={`<script async src="https://www.googletagmanager.com/gtag/js?id=${
+							import.meta.env.VITE_GOOGLE_ANALYTICS
+						}"></script>`}
+					/>
+					<Fragment
+						set:html={`<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${import.meta.env.VITE_GOOGLE_ANALYTICS}');
+				</script>`}
+					/>
+				</>
+			)
 		}
-		{
-			import.meta.env.SNOWPACK_PUBLIC_ENVIRONMENT === "production" &&
-				<script>
-					window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments);}
-					gtag('js', new Date());
-
-					gtag('config', import.meta.env.SNOWPACK_PUBLIC_GOOGLE_ANALYTICS);
-				</script>
-		}
-  </head>
-  <body >
+	</head>
+	<body>
 		<Hero />
 		<section class={landingBody}>
 			<PitchCards />
-			<ContributorBanner contributors={contributorsData}/>
+			<ContributorBanner contributors={contributorsData} />
 			<ResourcesInfoBanner />
 			<Footer />
 		</section>
-  </body>
+	</body>
 </html>

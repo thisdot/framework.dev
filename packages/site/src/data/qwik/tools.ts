@@ -5,7 +5,8 @@ export const toolTags = [
 	"Chrome",
 	"Firefox",
 	"Safari",
-	"development"
+	"development",
+	"UI Design"
 ] as const
 
 export const tools: Tool<typeof toolTags[number]>[] = [
@@ -18,12 +19,13 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		tags: ["development"],
 	},
 	{
-		name: "TanStack Router",
-		author: "Tanner Linsley",
-		description: "A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
-		image:
-			"https://pbs.twimg.com/profile_images/1474105199757180928/lsqWAJKv_400x400.jpg",
-		href: "https://tanstack.com/router/v1/",
-		tags: ["development"],
+		name: "Qwik Snippets",
+		author: "johnreemar",
+		href: "https://marketplace.visualstudio.com/items?itemName=johnreemar.vscode-qwik-snippets",
+		description:
+			"This extension for Visual Studio Code adds snippets for Qwik for TypeScript and MDX.",
+		image: "https://github.com/qwikverse/vscode-qwik-snippets/raw/main/assets/qwik-snippets.png",
+		tags: ["VSCode", "development"],
 	},
+	
 ]
