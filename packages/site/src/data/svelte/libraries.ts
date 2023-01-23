@@ -10,7 +10,6 @@ export const libraryTags = [
 	"internationalization",
 	"linting",
 	"a11y",
-	"HTTP client",
 	"utility-first CSS",
 	"preprocessor",
 ] as const
@@ -23,18 +22,6 @@ const defaultImage =
 // TODO: Update the language fields to contain the correct language for package lookup
 
 export const libraries: Library<typeof libraryTags[number]>[] = [
-	{
-		name: "Axios",
-		author: "Matt Zabriskie",
-		repo: "https://www.github.com/axios/axios",
-		package: "https://www.npmjs.com/package/axios",
-		href: "https://axios-http.com/",
-		description:
-			"Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a simple to use library in a small package with a very extensible interface.",
-		image: "https://github.com/axios.png",
-		tags: ["data fetching", "HTTP client"],
-		language: libraryTags[0],
-	},
 	{
 		name: "TailwindCSS",
 		author: "Adam Wathan & Jonathan Reinink",
