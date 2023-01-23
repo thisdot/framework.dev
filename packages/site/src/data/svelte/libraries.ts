@@ -175,7 +175,7 @@ export const libraries: Library[] = [
 	},
 	{
 		name: "Zod",
-		author: "Colin McDonnell ",
+		author: "Colin McDonnell",
 		repo: "https://github.com/colinhacks/zod",
 		package: "https://www.npmjs.com/package/zod",
 		href: "https://storybook.js.org/",
