@@ -90,18 +90,6 @@ export const libraries: Library[] = [
 		language: "TypeScript",
 	},
 	{
-		name: "Sapper",
-		author: "Svelte",
-		repo: "https://www.github.com/sveltejs/sapper",
-		package: "https://www.npmjs.com/package/sapper",
-		href: "https://sapper.svelte.dev/",
-		description:
-			"Sapper is a framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.",
-		image: defaultImage,
-		tags: [LibraryTag.FRAMEWORKS],
-		language: "TypeScript",
-	},
-	{
 		name: "svelte-i18n",
 		author: "kaisermann",
 		repo: "https://www.github.com/kaisermann/svelte-i18n",
@@ -147,16 +135,16 @@ export const libraries: Library[] = [
 		tags: [LibraryTag.STATE_MANAGEMENT],
 		description:
 			"This package contains utilities for using XState with Svelte.",
-			language: "TypeScript",
+		language: "TypeScript",
 	},
 	{
 		name: "TanStack Router",
 		author: "Tanner Linsley",
 		repo: "https://github.com/tanstack/router",
 		package: "",
-		description: "A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
-		image:
-			"https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
+		description:
+			"A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
+		image: "https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
 		href: "https://tanstack.com/router/v1/",
 		tags: [LibraryTag.ROUTING],
 		language: "TypeScript",
