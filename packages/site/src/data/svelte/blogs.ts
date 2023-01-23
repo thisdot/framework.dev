@@ -4,6 +4,35 @@ export const blogTags = [] as const
 
 export const blogs: Blog<typeof blogTags[number]>[] = [
 	{
+		title: "Rodney Lab",
+		author: "Rodney",
+		description:
+			"I build accessible, fast and secure sites, currently focussing on frontend using JAMStack.",
+		image:
+			"https://res.cloudinary.com/practicaldev/image/fetch/s--o3wSfmBB--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/664822/fd20117b-2cde-491a-9d71-8b3f8d4b5e10.png",
+		href: "https://rodneylab.com/?s=svelte",
+		tags: [],
+	},
+	{
+		title: "Joy of Code",
+		author: "Matija",
+		description:
+			"Matija from 🇭🇷 Croatia and he's infinitely curious at how things work but he's mostly passionate about ☕ JavaScript and 🎨 UI/UX design.",
+		image:
+			"https://yt3.ggpht.com/f-nkXHIt4t8B7yFIOdkQBGEyTY0LVrS8DWkAnF6W7KazXPtcD2XHzWPSsOx_vAjVgs3RQu736cY=s176-c-k-c0x00ffffff-no-rj-mo",
+		href: "https://joyofcode.xyz/categories/svelte",
+		tags: [],
+	},
+	{
+		title: "Posts for sveltekit",
+		author: "Scott Spence",
+		description:
+			"I'm a developer relations engineer working with Storyblok to create content that helps remove friction and educate around the headless CMS space.",
+		image: "https://avatars.githubusercontent.com/u/234708?v=4",
+		href: "https://scottspence.com/tags/sveltekit",
+		tags: [],
+	},
+	{
 		title: "This Dot Blog",
 		author: "This Dot Labs",
 		description:
@@ -18,16 +47,6 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		description: "Official Svelte blog",
 		image: "https://svelte.dev/favicon.png",
 		href: "https://svelte.dev/blog",
-		tags: [],
-	},
-	{
-		title: "Joy of Code",
-		author: "Matija",
-		description:
-			"Matija from 🇭🇷 Croatia and he's infinitely curious at how things work but he's mostly passionate about ☕ JavaScript and 🎨 UI/UX design.",
-		image:
-			"https://yt3.ggpht.com/f-nkXHIt4t8B7yFIOdkQBGEyTY0LVrS8DWkAnF6W7KazXPtcD2XHzWPSsOx_vAjVgs3RQu736cY=s176-c-k-c0x00ffffff-no-rj-mo",
-		href: "https://joyofcode.xyz/categories/svelte",
 		tags: [],
 	},
 	{
@@ -55,16 +74,6 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		image:
 			"https://res.cloudinary.com/practicaldev/image/fetch/s--WLdAZBJD--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/534962/b02d97b6-b8a7-43d0-8678-56893620ee1d.jpg",
 		href: "https://dev.to/theether0",
-		tags: [],
-	},
-	{
-		title: "Rodney Lab",
-		author: "Rodney",
-		description:
-			"I build accessible, fast and secure sites, currently focussing on frontend using JAMStack.",
-		image:
-			"https://res.cloudinary.com/practicaldev/image/fetch/s--o3wSfmBB--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/664822/fd20117b-2cde-491a-9d71-8b3f8d4b5e10.png",
-		href: "I build accessible, fast and secure sites, currently focussing on frontend using JAMStack.",
 		tags: [],
 	},
 	{
