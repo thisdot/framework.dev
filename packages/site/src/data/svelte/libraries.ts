@@ -8,6 +8,18 @@ const defaultImage =
 
 export const libraries: Library[] = [
 	{
+		name: "DaisyUI",
+		author: "Pouya Saadeghi",
+		repo: "https://github.com/saadeghi/daisyui",
+		package: "https://www.npmjs.com/package/daisyui",
+		href: "https://daisyui.com/",
+		description: "Use Tailwind CSS but write fewer class names",
+		image:
+			"https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg",
+		tags: [LibraryTag.STYLING],
+		language: "CSS",
+	},
+	{
 		name: "TailwindCSS",
 		author: "Adam Wathan & Jonathan Reinink",
 		repo: "https://www.github.com/tailwindlabs/tailwindcss",
@@ -78,18 +90,6 @@ export const libraries: Library[] = [
 		language: "TypeScript",
 	},
 	{
-		name: "Sapper",
-		author: "Svelte",
-		repo: "https://www.github.com/sveltejs/sapper",
-		package: "https://www.npmjs.com/package/sapper",
-		href: "https://sapper.svelte.dev/",
-		description:
-			"Sapper is a framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.",
-		image: defaultImage,
-		tags: [LibraryTag.FRAMEWORKS],
-		language: "TypeScript",
-	},
-	{
 		name: "svelte-i18n",
 		author: "kaisermann",
 		repo: "https://www.github.com/kaisermann/svelte-i18n",
@@ -135,16 +135,16 @@ export const libraries: Library[] = [
 		tags: [LibraryTag.STATE_MANAGEMENT],
 		description:
 			"This package contains utilities for using XState with Svelte.",
-			language: "TypeScript",
+		language: "TypeScript",
 	},
 	{
 		name: "TanStack Router",
 		author: "Tanner Linsley",
 		repo: "https://github.com/tanstack/router",
 		package: "",
-		description: "A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
-		image:
-			"https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
+		description:
+			"A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
+		image: "https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
 		href: "https://tanstack.com/router/v1/",
 		tags: [LibraryTag.ROUTING],
 		language: "TypeScript",
@@ -160,5 +160,17 @@ export const libraries: Library[] = [
 		description:
 			"Storybook is a development environment for UI components. It allows you to browse a component library, view the different states of each component, and interactively develop and test components.",
 		language: "NodeJS",
+	},
+	{
+		name: "Zod",
+		author: "Colin McDonnell",
+		repo: "https://github.com/colinhacks/zod",
+		package: "https://www.npmjs.com/package/zod",
+		href: "https://storybook.js.org/",
+		image: "https://github.com/colinhacks/zod/raw/master/logo.svg",
+		tags: [LibraryTag.TOOLING],
+		description:
+			"TypeScript-first schema validation with static type inference",
+		language: "TypeScript",
 	},
 ]
