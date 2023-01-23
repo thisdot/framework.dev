@@ -147,16 +147,16 @@ export const libraries: Library[] = [
 		tags: [LibraryTag.STATE_MANAGEMENT],
 		description:
 			"This package contains utilities for using XState with Svelte.",
-			language: "TypeScript",
+		language: "TypeScript",
 	},
 	{
 		name: "TanStack Router",
 		author: "Tanner Linsley",
 		repo: "https://github.com/tanstack/router",
 		package: "",
-		description: "A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
-		image:
-			"https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
+		description:
+			"A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
+		image: "https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
 		href: "https://tanstack.com/router/v1/",
 		tags: [LibraryTag.ROUTING],
 		language: "TypeScript",
@@ -172,5 +172,17 @@ export const libraries: Library[] = [
 		description:
 			"Storybook is a development environment for UI components. It allows you to browse a component library, view the different states of each component, and interactively develop and test components.",
 		language: "NodeJS",
+	},
+	{
+		name: "Svelte Head Component",
+		author: "Scott Spence",
+		repo: "https://github.com/spences10/svead",
+		package: "https://www.npmjs.com/package/svead",
+		href: "https://svead.vercel.app/",
+		image: "https://avatars.githubusercontent.com/u/234708?v=4",
+		tags: [LibraryTag.COMPONENT],
+		description:
+			"A component that allows you to set head meta information, canonical, title, Twitter and Facebook Open Graph tags.",
+		language: "TypeScript",
 	},
 ]
