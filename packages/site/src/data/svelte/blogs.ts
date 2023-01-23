@@ -179,4 +179,13 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		href: "https://github.com/TheComputerM/awesome-svelte#official-resources",
 		tags: [],
 	},
+	{
+		title: "Posts for sveltekit",
+		author: "Scott Spence",
+		description:
+			"I'm a developer relations engineer working with Storyblok to create content that helps remove friction and educate around the headless CMS space.",
+		image: "https://avatars.githubusercontent.com/u/234708?v=4",
+		href: "https://scottspence.com/tags/sveltekit",
+		tags: [],
+	},
 ]
