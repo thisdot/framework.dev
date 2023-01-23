@@ -20,6 +20,18 @@ export const libraries: Library[] = [
 		language: "TypeScript",
 	},
 	{
+		name: "DaisyUI",
+		author: "Pouya Saadeghi",
+		repo: "https://github.com/saadeghi/daisyui",
+		package: "https://www.npmjs.com/package/daisyui",
+		href: "https://daisyui.com/",
+		description: "Use Tailwind CSS but write fewer class names",
+		image:
+			"https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg",
+		tags: [LibraryTag.STYLING],
+		language: "CSS",
+	},
+	{
 		name: "TailwindCSS",
 		author: "Adam Wathan & Jonathan Reinink",
 		repo: "https://www.github.com/tailwindlabs/tailwindcss",
