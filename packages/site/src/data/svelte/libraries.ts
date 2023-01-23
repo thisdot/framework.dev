@@ -20,6 +20,18 @@ export const libraries: Library[] = [
 		language: "TypeScript",
 	},
 	{
+		name: "DaisyUI",
+		author: "Pouya Saadeghi",
+		repo: "https://github.com/saadeghi/daisyui",
+		package: "https://www.npmjs.com/package/daisyui",
+		href: "https://daisyui.com/",
+		description: "Use Tailwind CSS but write fewer class names",
+		image:
+			"https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg",
+		tags: [LibraryTag.STYLING],
+		language: "CSS",
+	},
+	{
 		name: "TailwindCSS",
 		author: "Adam Wathan & Jonathan Reinink",
 		repo: "https://www.github.com/tailwindlabs/tailwindcss",
@@ -147,16 +159,16 @@ export const libraries: Library[] = [
 		tags: [LibraryTag.STATE_MANAGEMENT],
 		description:
 			"This package contains utilities for using XState with Svelte.",
-			language: "TypeScript",
+		language: "TypeScript",
 	},
 	{
 		name: "TanStack Router",
 		author: "Tanner Linsley",
 		repo: "https://github.com/tanstack/router",
 		package: "",
-		description: "A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
-		image:
-			"https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
+		description:
+			"A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
+		image: "https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
 		href: "https://tanstack.com/router/v1/",
 		tags: [LibraryTag.ROUTING],
 		language: "TypeScript",
