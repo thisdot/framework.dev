@@ -162,6 +162,18 @@ export const libraries: Library[] = [
 		language: "NodeJS",
 	},
 	{
+		name: "Svelte Forms",
+		author: "Kévin Guillouard",
+		repo: "https://github.com/chainlist/svelte-forms",
+		package: "https://www.npmjs.com/package/svelte-forms",
+		href: "https://chainlist.github.io/svelte-forms/",
+		image: "https://avatars.githubusercontent.com/u/1869318?v=4",
+		tags: [LibraryTag.COMPONENT],
+		description:
+			"Svelte-forms first came out because there were back then, no real form validation library for svelte.",
+    language: "TypeScript",
+  },
+  {
 		name: "Zod",
 		author: "Colin McDonnell",
 		repo: "https://github.com/colinhacks/zod",
