@@ -162,6 +162,18 @@ export const libraries: Library[] = [
 		language: "NodeJS",
 	},
 	{
+		name: "SvelteKit Embed",
+		author: "Scott Spence",
+		repo: "https://github.com/spences10/sveltekit-embed",
+		package: "https://www.npmjs.com/package/sveltekit-embed",
+		href: "https://storybook.js.org/",
+		image: "https://avatars.githubusercontent.com/u/234708?v=4",
+		tags: [LibraryTag.COMPONENT],
+		description:
+			"A collections of embed components you may find useful during development",
+    language: "TypeScript",
+  },
+  {
 		name: "Svelte Forms",
 		author: "Kévin Guillouard",
 		repo: "https://github.com/chainlist/svelte-forms",
@@ -185,4 +197,16 @@ export const libraries: Library[] = [
 			"TypeScript-first schema validation with static type inference",
 		language: "TypeScript",
 	},
+  {
+		name: "Svelte Head Component",
+		author: "Scott Spence",
+		repo: "https://github.com/spences10/svead",
+		package: "https://www.npmjs.com/package/svead",
+		href: "https://svead.vercel.app/",
+		image: "https://avatars.githubusercontent.com/u/234708?v=4",
+		tags: [LibraryTag.COMPONENT],
+		description:
+			"A component that allows you to set head meta information, canonical, title, Twitter and Facebook Open Graph tags.",
+		language: "TypeScript",
+  },
 ]
