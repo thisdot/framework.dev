@@ -8,18 +8,6 @@ const defaultImage =
 
 export const libraries: Library[] = [
 	{
-		name: "Axios",
-		author: "Matt Zabriskie",
-		repo: "https://www.github.com/axios/axios",
-		package: "https://www.npmjs.com/package/axios",
-		href: "https://axios-http.com/",
-		description:
-			"Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a simple to use library in a small package with a very extensible interface.",
-		image: "https://github.com/axios.png",
-		tags: [LibraryTag.HTTP_CLIENT],
-		language: "TypeScript",
-	},
-	{
 		name: "DaisyUI",
 		author: "Pouya Saadeghi",
 		repo: "https://github.com/saadeghi/daisyui",
@@ -183,8 +171,22 @@ export const libraries: Library[] = [
 		tags: [LibraryTag.COMPONENT],
 		description:
 			"A collections of embed components you may find useful during development",
+    language: "TypeScript",
   },
   {
+		name: "Svelte Forms",
+		author: "Kévin Guillouard",
+		repo: "https://github.com/chainlist/svelte-forms",
+		package: "https://www.npmjs.com/package/svelte-forms",
+		href: "https://chainlist.github.io/svelte-forms/",
+		image: "https://avatars.githubusercontent.com/u/1869318?v=4",
+		tags: [LibraryTag.COMPONENT],
+		description:
+			"Svelte-forms first came out because there were back then, no real form validation library for svelte.",
+    language: "TypeScript",
+  },
+  {
+		name: "Zod",
 		author: "Colin McDonnell",
 		repo: "https://github.com/colinhacks/zod",
 		package: "https://www.npmjs.com/package/zod",
@@ -195,4 +197,16 @@ export const libraries: Library[] = [
 			"TypeScript-first schema validation with static type inference",
 		language: "TypeScript",
 	},
+  {
+		name: "Svelte Head Component",
+		author: "Scott Spence",
+		repo: "https://github.com/spences10/svead",
+		package: "https://www.npmjs.com/package/svead",
+		href: "https://svead.vercel.app/",
+		image: "https://avatars.githubusercontent.com/u/234708?v=4",
+		tags: [LibraryTag.COMPONENT],
+		description:
+			"A component that allows you to set head meta information, canonical, title, Twitter and Facebook Open Graph tags.",
+		language: "TypeScript",
+  },
 ]
