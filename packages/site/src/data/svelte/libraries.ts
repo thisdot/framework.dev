@@ -8,18 +8,6 @@ const defaultImage =
 
 export const libraries: Library[] = [
 	{
-		name: "Axios",
-		author: "Matt Zabriskie",
-		repo: "https://www.github.com/axios/axios",
-		package: "https://www.npmjs.com/package/axios",
-		href: "https://axios-http.com/",
-		description:
-			"Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a simple to use library in a small package with a very extensible interface.",
-		image: "https://github.com/axios.png",
-		tags: [LibraryTag.HTTP_CLIENT],
-		language: "TypeScript",
-	},
-	{
 		name: "DaisyUI",
 		author: "Pouya Saadeghi",
 		repo: "https://github.com/saadeghi/daisyui",
