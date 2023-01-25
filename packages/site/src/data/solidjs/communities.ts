@@ -10,7 +10,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		image: "https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg",
 		type: "discord",
 		href: "https://www.meetup.com/solidjs",
-		tags: [],
+		tags: ["meetups"],
 	},
 	{
 		name: "Discord",
