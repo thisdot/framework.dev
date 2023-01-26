@@ -86,16 +86,6 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		tags: [],
 	},
 	{
-		title: "Rodney Lab",
-		author: "Rodney",
-		description:
-			"Hello and welcome! I’m Rodney, a web developer based in the UK 🇬🇧 and am available for consultancy work.",
-		image:
-			"https://rodneylab.com/assets/rodney-johnson-about-rodneylab-1350x1350.208d1490.avif",
-		href: "https://rodneylab.com/tags/sveltekit/",
-		tags: [],
-	},
-	{
 		title: "Ryan Filler",
 		author: "Ryan Filler",
 		description:
