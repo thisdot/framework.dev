@@ -8,16 +8,16 @@ const defaultImage =
 
 export const libraries: Library[] = [
 	{
-		name: "Axios",
-		author: "Matt Zabriskie",
-		repo: "https://www.github.com/axios/axios",
-		package: "https://www.npmjs.com/package/axios",
-		href: "https://axios-http.com/",
-		description:
-			"Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a simple to use library in a small package with a very extensible interface.",
-		image: "https://github.com/axios.png",
-		tags: [LibraryTag.HTTP_CLIENT],
-		language: "TypeScript",
+		name: "DaisyUI",
+		author: "Pouya Saadeghi",
+		repo: "https://github.com/saadeghi/daisyui",
+		package: "https://www.npmjs.com/package/daisyui",
+		href: "https://daisyui.com/",
+		description: "Use Tailwind CSS but write fewer class names",
+		image:
+			"https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg",
+		tags: [LibraryTag.STYLING],
+		language: "CSS",
 	},
 	{
 		name: "TailwindCSS",
@@ -90,18 +90,6 @@ export const libraries: Library[] = [
 		language: "TypeScript",
 	},
 	{
-		name: "Sapper",
-		author: "Svelte",
-		repo: "https://www.github.com/sveltejs/sapper",
-		package: "https://www.npmjs.com/package/sapper",
-		href: "https://sapper.svelte.dev/",
-		description:
-			"Sapper is a framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.",
-		image: defaultImage,
-		tags: [LibraryTag.FRAMEWORKS],
-		language: "TypeScript",
-	},
-	{
 		name: "svelte-i18n",
 		author: "kaisermann",
 		repo: "https://www.github.com/kaisermann/svelte-i18n",
@@ -147,16 +135,16 @@ export const libraries: Library[] = [
 		tags: [LibraryTag.STATE_MANAGEMENT],
 		description:
 			"This package contains utilities for using XState with Svelte.",
-			language: "TypeScript",
+		language: "TypeScript",
 	},
 	{
 		name: "TanStack Router",
 		author: "Tanner Linsley",
 		repo: "https://github.com/tanstack/router",
 		package: "",
-		description: "A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
-		image:
-			"https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
+		description:
+			"A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
+		image: "https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
 		href: "https://tanstack.com/router/v1/",
 		tags: [LibraryTag.ROUTING],
 		language: "TypeScript",
@@ -173,4 +161,52 @@ export const libraries: Library[] = [
 			"Storybook is a development environment for UI components. It allows you to browse a component library, view the different states of each component, and interactively develop and test components.",
 		language: "NodeJS",
 	},
+	{
+		name: "SvelteKit Embed",
+		author: "Scott Spence",
+		repo: "https://github.com/spences10/sveltekit-embed",
+		package: "https://www.npmjs.com/package/sveltekit-embed",
+		href: "https://storybook.js.org/",
+		image: "https://avatars.githubusercontent.com/u/234708?v=4",
+		tags: [LibraryTag.COMPONENT],
+		description:
+			"A collections of embed components you may find useful during development",
+    language: "TypeScript",
+  },
+  {
+		name: "Svelte Forms",
+		author: "Kévin Guillouard",
+		repo: "https://github.com/chainlist/svelte-forms",
+		package: "https://www.npmjs.com/package/svelte-forms",
+		href: "https://chainlist.github.io/svelte-forms/",
+		image: "https://avatars.githubusercontent.com/u/1869318?v=4",
+		tags: [LibraryTag.COMPONENT],
+		description:
+			"Svelte-forms first came out because there were back then, no real form validation library for svelte.",
+    language: "TypeScript",
+  },
+  {
+		name: "Zod",
+		author: "Colin McDonnell",
+		repo: "https://github.com/colinhacks/zod",
+		package: "https://www.npmjs.com/package/zod",
+		href: "https://storybook.js.org/",
+		image: "https://github.com/colinhacks/zod/raw/master/logo.svg",
+		tags: [LibraryTag.TOOLING],
+		description:
+			"TypeScript-first schema validation with static type inference",
+		language: "TypeScript",
+	},
+  {
+		name: "Svelte Head Component",
+		author: "Scott Spence",
+		repo: "https://github.com/spences10/svead",
+		package: "https://www.npmjs.com/package/svead",
+		href: "https://svead.vercel.app/",
+		image: "https://avatars.githubusercontent.com/u/234708?v=4",
+		tags: [LibraryTag.COMPONENT],
+		description:
+			"A component that allows you to set head meta information, canonical, title, Twitter and Facebook Open Graph tags.",
+		language: "TypeScript",
+  },
 ]

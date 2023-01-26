@@ -45,23 +45,13 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		tags: ["qwik"],
 	},
 	{
-		title: "Tony Alicea",
+		title: "Resumable Apps in Qwik w/ Miško Hevery (creator of Angular!)",
 		image: "https://i3.ytimg.com/vi/LbMRs7l4czI/hqdefault.jpg",
 		hosts: ["Tony Alicea - Misko Hevery"],
 		description:
-			"Resumable Apps in Qwik w/ Miško Hevery (creator of Angular!)",
+			"Miško Hevery (creator of Angular) shows us the exciting new resumable, performance-optimized JavaScript framework Qwik",
 		rss: "https://www.youtube.com/watch?v=LbMRs7l4czI",
 		href: "https://www.youtube.com/watch?v=LbMRs7l4czI",
-		tags: ["qwik"],
-	},
-	{
-		title: "Javascript Marathon",
-		image: "https://i3.ytimg.com/vi/LbMRs7l4czI/hqdefault.jpg",
-		hosts: ["Sarah Ronau - Misko Hevery"],
-		description:
-			"Qwik: A no-hydration instant-on personalized web applications.",
-		rss: "https://www.youtube.com/watch?v=0tCuUQe_ZA0",
-		href: "https://www.youtube.com/watch?v=0tCuUQe_ZA0",
 		tags: ["qwik"],
 	},
 	{

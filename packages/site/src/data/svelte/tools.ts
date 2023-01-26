@@ -12,6 +12,15 @@ export const toolTags = [
 
 export const tools: Tool<typeof toolTags[number]>[] = [
 	{
+		name: "Svelte REPL",
+		author: "Svelte",
+		description: "Interactive Svelte playground",
+		image:
+			"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/498px-Svelte_Logo.svg.png?20191219133350",
+		href: "https://svelte.dev/repl/32f4d35f41eb4914aa3be5e4a0eacbfa?version=3.55.1",
+		tags: ["development"],
+	},
+	{
 		name: "Svelte",
 		author: "JetBrains s.r.o.",
 		description: "Support for Svelte in your JetBrains IDE of choice.",

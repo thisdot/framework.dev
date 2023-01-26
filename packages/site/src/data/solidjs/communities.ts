@@ -1,8 +1,17 @@
 import { Community } from "@framework/system/src/models/community"
 
-export const communityTags = [] as const
+export const communityTags = ["meetups"] as const
 
-export const communities: Community<typeof communityTags[number]>[] = [
+export const communities: Community<(typeof communityTags)[number]>[] = [
+	{
+		name: "SolidJS Miami, FL",
+		description:
+			"To organize current and future members of the SolidJS Community. Members should join this group to stay up to date with upcoming in-person and live events. | 109 members.",
+		image: "https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg",
+		type: "discord",
+		href: "https://www.meetup.com/solidjs",
+		tags: ["meetups"],
+	},
 	{
 		name: "Discord",
 		description:
@@ -208,5 +217,5 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		href: "https://jsgamedev.com/",
 		darkImageBackground: true,
 		tags: [],
-	},
+	}
 ]
