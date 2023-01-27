@@ -1,6 +1,6 @@
 import { Community } from "@framework/system/src/models/community"
 
-export const communityTags = ["meetups"] as const
+export const communityTags = ["meetups", "conferences"] as const
 
 export const communities: Community<(typeof communityTags)[number]>[] = [
 	{
@@ -57,7 +57,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		image: "https://frontdevstage.com/wp-content/uploads/2021/11/logo.png",
 		type: "Online Events",
 		href: "https://frontdevstage.com/",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "Connect.Tech",
@@ -65,7 +65,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		image: "https://2022.connect.tech/_nuxt/img/ctlogo.fb612ee.png",
 		type: "Live Events",
 		href: "http://connect.tech",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "Jamstack",
@@ -74,7 +74,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		image: "https://jamstack.org/conf/assets/logo-jamstack-mark.56918026.svg",
 		type: "Live and Online Events",
 		href: "https://jamstack.org/conf/",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "WORLDWIDE SOFTWARE ARCHITECTURE SUMMIT",
@@ -83,7 +83,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		image: "https://events.geekle.us/vuejs/static/media/logo.579e43d2.svg",
 		type: "Live Events",
 		href: "https://events.geekle.us/wsas4/",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "PASS Data Community Summit",
@@ -93,7 +93,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 			"https://passdatacommunitysummit.com/assets/images/pass-2022-logo-microsoft--dark.svg",
 		type: "Live Events",
 		href: "https://passdatacommunitysummit.com/",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "Xtremejs",
@@ -103,16 +103,16 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 			"https://pbs.twimg.com/profile_images/1355572943552655362/QpnPItbv_400x400.jpg",
 		type: "Online Events",
 		href: "https://xtremejs.dev/",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "DevTernity",
 		description:
 			"Turning developers into architects and engineering leaders since 2015.",
-		image: "https://devternity.com/images/favicon.png",
+		image: "https://s3-eu-west-1.amazonaws.com/tpd/logos/59f726140000ff0005af0f23/0x0.png",
 		type: "Live Events",
 		href: "https://devternity.com/",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "World Of No Code Conf",
@@ -120,7 +120,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		image: "https://events.geekle.us/vuejs/static/media/logo.579e43d2.svg",
 		type: "Online Events",
 		href: "https://events.geekle.us/nocode/",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "QConfSF",
@@ -130,7 +130,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 			"https://pbs.twimg.com/profile_images/1410535228645548036/9wadAp_L_400x400.png",
 		type: "Live Events",
 		href: "https://qconsf.com/",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "International Javascript Conference",
@@ -139,7 +139,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 			"https://pbs.twimg.com/profile_images/841217931455401984/uzU4VfwA_400x400.jpg",
 		type: "Live Events",
 		href: "https://javascript-conference.com/",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "All Things Open",
@@ -149,7 +149,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 			"https://pbs.twimg.com/profile_images/1414585849862397956/PJmkGMLk_400x400.jpg",
 		type: "Live Events",
 		href: "https://allthingsopen.org/",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "Global Summit for Node.js",
@@ -158,7 +158,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 			"https://events.geekle.us/nodejs2/static/media/creative.7cd9e67b.png",
 		type: "Live Events",
 		href: "https://events.geekle.us/nodejs2/",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "JSWORLD Conference USA",
@@ -168,7 +168,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 			"https://a.storyblok.com/f/84560/x/628ee206a3/logo-frontendlove-whitebg.svg/m/",
 		type: "Live Events",
 		href: "https://usa.jsworldconference.com/",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "Node Congress",
@@ -177,7 +177,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		image: "https://nodecongress.com/img/ogImage.png",
 		type: "Live Events",
 		href: "https://nodecongress.com/",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "Typescript Congress",
@@ -186,7 +186,8 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		image: "https://typescriptcongress.com/img/logo.svg",
 		type: "Live Events",
 		href: "https://typescriptcongress.com/",
-		tags: [],
+		darkImageBackground: true,
+		tags: ["conferences"],
 	},
 	{
 		name: "JS Conf Chile",
@@ -196,7 +197,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 			"https://pbs.twimg.com/profile_images/1548041354806059008/CfEL7qut_400x400.jpg",
 		type: "Live Events",
 		href: "https://jsconf.cl/",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "ConFoo",
@@ -206,7 +207,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 			"https://pbs.twimg.com/profile_images/1135229757031964672/sLiCXiCn_400x400.png",
 		type: "Live Events",
 		href: "https://confoo.ca",
-		tags: [],
+		tags: ["conferences"],
 	},
 	{
 		name: "JS Game Dev Summit",
@@ -216,6 +217,82 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		type: "Live Events",
 		href: "https://jsgamedev.com/",
 		darkImageBackground: true,
-		tags: [],
+		tags: ["conferences"],
+	},
+	{
+		name: "JS World Conference",
+		description:
+			"A 3-day JavaScript Celebration together with 2139 JavaScript Developers. Packed with the Latest JavaScript Updates by Authors, Creators and Experts.",
+		image: "https://assets.jsworldconference.com/logo_jsworld_ad7f539826.svg",
+		type: "Live Events",
+		href: "https://jsworldconference.com/",
+		tags: ["conferences"],
+	},
+	{
+		name: "Web3 Tech Summit",
+		description:
+			"Start Building on the Web3 using your current stack Today!",
+		image: "https://events.geekle.us/web3/static/media/logo-mob.3a843aa6.svg",
+		type: "Online Events",
+		href: "https://events.geekle.us/web3/",
+		darkImageBackground: true,
+		tags: ["conferences"],
+	},
+	{
+		name: "Tech Unite Africa",
+		description:
+			"Tech Unite Africa is a conference, exhibition and a networking platform for the African Tech industry.",
+		image: "https://techuniteafrica.com/wp-content/uploads/2022/10/cropped-Tech-Unite-Africa-New-Logo-2.png",
+		type: "Live Events",
+		href: "https://techuniteafrica.com/",
+		tags: ["conferences"],
+	},
+	{
+		name: "Render ATL",
+		description:
+			"A TECH CONFERENCE; A CULTURAL FESTIVAL; WHERE TALENT FEELS WELCOMED",
+		image: "https://s.mkswft.com/RmlsZTo0ZGZhOTdlYy1kOTdiLTQ5ZjMtYTJlMC1kYTcwMjAwYzRiN2Q=/logo-white.svg",
+		type: "Live Events",
+		href: "https://www.renderatl.com/",
+		darkImageBackground: true,
+		tags: ["conferences"],
+	},
+	{
+		name: "CSS Day Conf",
+		description:
+			"We're a conference with an informal vibe and plenty of breaks, where each person can approach one another.",
+		image: "https://pbs.twimg.com/profile_images/3086361545/375adf0a29fbd0e21eb6315f3fd681c6_400x400.png",
+		type: "Live Events",
+		href: "https://cssday.nl/2023",
+		tags: ["conferences"],
+	},
+	{
+		name: "Front Conference",
+		description:
+			"Where design meets technology",
+		image: "https://frontconference.com/static/neon.svg",
+		type: "Live and Online Events",
+		href: "https://frontconference.com/",
+		tags: ["conferences"],
+	},
+	{
+		name: "JsNation",
+		description:
+			"Understand the latest trends in JavaScript development. See what 20k+ JS developers are up to. Meet those who shape the present and the future of the prospering nation.",
+		image: "https://d33wubrfki0l68.cloudfront.net/9e3b2b2e7d375ad7003010a688bf021e994fc591/1b06b/img/logo.svg",
+		type: "Live and Online Events",
+		href: "https://jsnation.com/",
+		darkImageBackground: true,
+		tags: ["conferences"],
+	},
+	{
+		name: "JSDay IE Ireland",
+		description:
+			"JSDayIE 2023 is a 1-day single track tech conference dedicated to the JavaScript community in Ireland featuring 500 attendees and some of the best JavaScript professionals and organizations.",
+		image: "https://www.jsday.ie/media/hero.png?imwidth=1080",
+		type: "Live Events",
+		href: "https://www.jsday.ie/",
+		darkImageBackground: true,
+		tags: ["conferences"],
 	}
 ]
