@@ -8,7 +8,7 @@ export const podcastTags = [
 	"redux",
 ] as const
 
-export const podcasts: Podcast<typeof podcastTags[number]>[] = [
+export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 	{
 		title: "Modern Web",
 		image:
@@ -52,7 +52,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	{
 		title: "React Native Podcast",
 		image:
-			"https://uploads-ssl.webflow.com/5f58b425f8d1c77413f14703/602134a13b87901e72b9759b_RGB_Logo%201.svg",
+			"https://global-uploads.webflow.com/5f58b425f8d1c77413f14703/605b71a5676cee7fcc8daca3_oopen_graph_podcast.png",
 		hosts: ["Mike Grabowski"],
 		description:
 			"Join our experts as they discuss everything React Native Latest Episode 9 React Native News",
