@@ -93,7 +93,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 	},
 	{
 		title: "Deno Course - Better than Node.js?",
-		author: "freeCodeCamp.org",
+		author: "freeCodeCamp",
 		description:
 			"Learn how to use Deno in this complete course. Deno is a Node.js alternative created by the same person who created Node.js. In this tutorial course, you will learn how to build real apps with Deno. You will also learn the basics of the TypeScript. You will see how to use Deno to build a survey app with a REST API using MongoDB.",
 		paymentType: "free",
