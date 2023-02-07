@@ -31,7 +31,7 @@ export const courseTags = [
 	"static site generation",
 ] as const
 
-export const courses: Course<typeof courseTags[number]>[] = [
+export const courses: Course<(typeof courseTags)[number]>[] = [
 	{
 		title: "Code 15 React Projects - Complete Course",
 		author: "John Smilga",
@@ -215,11 +215,11 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		],
 	},
 	{
-		title: "React Typescript Tutorial",
+		title: "React TypeScript Tutorial",
 		author: "Ben Awad",
 		image: "https://github.com/benawad.png",
 		description:
-			"Learn how to start using Typescript in your React code. I go over props, hooks, and render props.",
+			"Learn how to start using TypeScript in your React code. I go over props, hooks, and render props.",
 		paymentType: "free",
 		level: "intermediate",
 		format: "video",
@@ -227,7 +227,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		tags: ["hooks", "forms", "state management", "TypeScript"],
 	},
 	{
-		title: "React Typescript Tutorial - Build a Quiz App",
+		title: "React TypeScript Tutorial - Build a Quiz App",
 		author: "FreeCodeCamp",
 		image: "https://github.com/freeCodeCamp.png",
 		description:
@@ -250,7 +250,7 @@ export const courses: Course<typeof courseTags[number]>[] = [
 		author: "Bruno Antunes",
 		image: "https://github.com/bmvantunes.png",
 		description:
-			"This playlist contains all the videos from the React.js Tutorial. We are using Function Components with Hooks and Typescript.",
+			"This playlist contains all the videos from the React.js Tutorial. We are using Function Components with Hooks and TypeScript.",
 		paymentType: "free",
 		level: "beginner",
 		format: "video",

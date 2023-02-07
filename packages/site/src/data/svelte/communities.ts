@@ -2,7 +2,7 @@ import { Community } from "@framework/system/src/models/community"
 
 export const communityTags = ["conferences"] as const
 
-export const communities: Community<typeof communityTags[number]>[] = [
+export const communities: Community<(typeof communityTags)[number]>[] = [
 	{
 		name: "Svelte",
 		description: "A chat community of 45,000+ Svelte Developers.",
@@ -98,7 +98,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		tags: ["conferences"],
 	},
 	{
-		name: "Typescript Congress",
+		name: "TypeScript Congress",
 		description:
 			"TS Congress is an online event for web developers on all things TypeScript",
 		image: "https://typescriptcongress.com/img/logo.svg",
@@ -228,7 +228,8 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	},
 	{
 		name: "Svelte Bergen",
-		description: "Friendly meetup for developers (and companies) interested in learning or implementing Svelte applications.",
+		description:
+			"Friendly meetup for developers (and companies) interested in learning or implementing Svelte applications.",
 		image: "https://sveltesociety.dev/images/logo.svg",
 		type: "Live Events",
 		href: "https://www.downtomeet.com/Svelte-Bergen",
@@ -236,7 +237,8 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	},
 	{
 		name: "Svelte Society Stockholm",
-		description: "Part of the larger Svelte Society organisation. We try to bring together Svelte users across Stockholm and Scandinavia.",
+		description:
+			"Part of the larger Svelte Society organisation. We try to bring together Svelte users across Stockholm and Scandinavia.",
 		image: "https://sveltesociety.dev/images/logo.svg",
 		type: "Live Events",
 		href: "https://www.downtomeet.com/Svelte-Society-Stockholm",
@@ -244,7 +246,8 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	},
 	{
 		name: "Svelte Society: Chicago",
-		description: "Part of the larger Svelte Society organisation. We try to bring together Svelte users across Chicago.",
+		description:
+			"Part of the larger Svelte Society organisation. We try to bring together Svelte users across Chicago.",
 		image: "https://www.sveltechi.dev/svelte_chicago_125x125.png",
 		type: "Live Events",
 		href: "https://www.sveltechi.dev",
@@ -252,7 +255,8 @@ export const communities: Community<typeof communityTags[number]>[] = [
 	},
 	{
 		name: "Svelte Socitey Austria",
-		description: "Part of the larger Svelte Society organisation. We try to bring together Svelte users across Australia.",
+		description:
+			"Part of the larger Svelte Society organisation. We try to bring together Svelte users across Australia.",
 		image: "https://austria.sveltesociety.dev/logos/Logo-Svelte.svg",
 		type: "Live Events",
 		href: "https://austria.sveltesociety.dev",

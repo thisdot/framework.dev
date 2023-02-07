@@ -2,7 +2,7 @@ import { Community } from "@framework/system/src/models/community"
 
 export const communityTags = ["meetups", "conferences"] as const
 
-export const communities: Community<typeof communityTags[number]>[] = [
+export const communities: Community<(typeof communityTags)[number]>[] = [
 	{
 		name: "GraphQLfm",
 		description: "Welcome to GraphQL.FM, a Twitch Channel all about GraphQL.",
@@ -115,7 +115,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		tags: ["conferences"],
 	},
 	{
-		name: "Typescript Congress",
+		name: "TypeScript Congress",
 		description:
 			"TS Congress is an online event for web developers on all things TypeScript",
 		image: "https://typescriptcongress.com/img/logo.svg",
@@ -218,8 +218,8 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		type: "Live Events",
 		href: "https://www.jsday.ie/",
 		tags: ["conferences"],
-   },
-  {
+	},
+	{
 		name: "GraphQL Contributor Day",
 		description:
 			"In partnership with Hasura, we present GraphQL Contributor Day!",
