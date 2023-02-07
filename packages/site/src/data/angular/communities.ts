@@ -2,7 +2,7 @@ import { Community } from "@framework/system/src/models/community"
 
 export const communityTags = ["meetups", "conferences"] as const
 
-export const communities: Community<typeof communityTags[number]>[] = [
+export const communities: Community<(typeof communityTags)[number]>[] = [
 	{
 		name: "Angular Community",
 		description: "A community-ran Discord for all things Angular.",
@@ -192,7 +192,7 @@ export const communities: Community<typeof communityTags[number]>[] = [
 		tags: ["conferences"],
 	},
 	{
-		name: "Typescript Congress",
+		name: "TypeScript Congress",
 		description:
 			"TS Congress is an online event for web developers on all things TypeScript",
 		image: "https://typescriptcongress.com/img/logo.svg",

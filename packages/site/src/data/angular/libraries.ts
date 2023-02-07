@@ -1,5 +1,5 @@
-import { Library } from "@framework/system/src/models/library";
-import { LibraryTag } from "@framework/system/src/models/library-tag";
+import { Library } from "@framework/system/src/models/library"
+import { LibraryTag } from "@framework/system/src/models/library-tag"
 
 // The default image here for use
 // on libraries that don't have an image
@@ -421,7 +421,7 @@ export const libraries: Library[] = [
 		package: "https://www.npmjs.com/package/@angular/core",
 		href: "https://angular.io/guide/developer-guide-overview",
 		description:
-			"Angular is a development platform for building mobile and desktop web applications using Typescript/JavaScript and other languages.",
+			"Angular is a development platform for building mobile and desktop web applications using TypeScript/JavaScript and other languages.",
 		image: defaultImage,
 		tags: [LibraryTag.FRAMEWORKS],
 		language: "TypeScript",

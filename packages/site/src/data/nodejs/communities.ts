@@ -158,7 +158,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		tags: ["conferences"],
 	},
 	{
-		name: "Typescript Congress",
+		name: "TypeScript Congress",
 		description:
 			"TS Congress is an online event for web developers on all things TypeScript",
 		image: "https://typescriptcongress.com/img/logo.svg",

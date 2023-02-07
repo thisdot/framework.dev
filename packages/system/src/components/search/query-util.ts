@@ -226,7 +226,7 @@ export function ungroupFieldFilters(
 	groupedFilters: FieldFilter[]
 ): AttributeDefinition[] {
 	return groupedFilters.flatMap(([k, vs]) =>
-		// This is a dirty cast but the code to make Typescript understand
+		// This is a dirty cast but the code to make TypeScript understand
 		// what is happening here would be even worse
 		vs.map((v) => [k, v] as AttributeDefinition)
 	)

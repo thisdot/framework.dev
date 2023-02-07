@@ -8,7 +8,7 @@ export const podcastTags = [
 	"career",
 ] as const
 
-export const podcasts: Podcast<typeof podcastTags[number]>[] = [
+export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 	{
 		title: "Modern Web",
 		image:
@@ -53,7 +53,7 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 	{
 		title: "Deno Developer Show",
 		description:
-			"This show talks about utilizing your Javascript or Typescript skills so you can do backend development in Deno, a robust and secure runtime for Javascript and Typescript.",
+			"This show talks about utilizing your Javascript or TypeScript skills so you can do backend development in Deno, a robust and secure runtime for Javascript and TypeScript.",
 		hosts: ["Authvow, LLC"],
 		href: "https://denodeveloper.buzzsprout.com/",
 		rss: "https://feeds.buzzsprout.com/1951607.rss",

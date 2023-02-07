@@ -109,7 +109,8 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		name: "DevTernity",
 		description:
 			"Turning developers into architects and engineering leaders since 2015.",
-		image: "https://s3-eu-west-1.amazonaws.com/tpd/logos/59f726140000ff0005af0f23/0x0.png",
+		image:
+			"https://s3-eu-west-1.amazonaws.com/tpd/logos/59f726140000ff0005af0f23/0x0.png",
 		type: "Live Events",
 		href: "https://devternity.com/",
 		tags: ["conferences"],
@@ -180,7 +181,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		tags: ["conferences"],
 	},
 	{
-		name: "Typescript Congress",
+		name: "TypeScript Congress",
 		description:
 			"TS Congress is an online event for web developers on all things TypeScript",
 		image: "https://typescriptcongress.com/img/logo.svg",
@@ -230,8 +231,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 	},
 	{
 		name: "Web3 Tech Summit",
-		description:
-			"Start Building on the Web3 using your current stack Today!",
+		description: "Start Building on the Web3 using your current stack Today!",
 		image: "https://events.geekle.us/web3/static/media/logo-mob.3a843aa6.svg",
 		type: "Online Events",
 		href: "https://events.geekle.us/web3/",
@@ -242,7 +242,8 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		name: "Tech Unite Africa",
 		description:
 			"Tech Unite Africa is a conference, exhibition and a networking platform for the African Tech industry.",
-		image: "https://techuniteafrica.com/wp-content/uploads/2022/10/cropped-Tech-Unite-Africa-New-Logo-2.png",
+		image:
+			"https://techuniteafrica.com/wp-content/uploads/2022/10/cropped-Tech-Unite-Africa-New-Logo-2.png",
 		type: "Live Events",
 		href: "https://techuniteafrica.com/",
 		tags: ["conferences"],
@@ -251,7 +252,8 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		name: "Render ATL",
 		description:
 			"A TECH CONFERENCE; A CULTURAL FESTIVAL; WHERE TALENT FEELS WELCOMED",
-		image: "https://s.mkswft.com/RmlsZTo0ZGZhOTdlYy1kOTdiLTQ5ZjMtYTJlMC1kYTcwMjAwYzRiN2Q=/logo-white.svg",
+		image:
+			"https://s.mkswft.com/RmlsZTo0ZGZhOTdlYy1kOTdiLTQ5ZjMtYTJlMC1kYTcwMjAwYzRiN2Q=/logo-white.svg",
 		type: "Live Events",
 		href: "https://www.renderatl.com/",
 		darkImageBackground: true,
@@ -261,15 +263,15 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		name: "CSS Day Conf",
 		description:
 			"We're a conference with an informal vibe and plenty of breaks, where each person can approach one another.",
-		image: "https://pbs.twimg.com/profile_images/3086361545/375adf0a29fbd0e21eb6315f3fd681c6_400x400.png",
+		image:
+			"https://pbs.twimg.com/profile_images/3086361545/375adf0a29fbd0e21eb6315f3fd681c6_400x400.png",
 		type: "Live Events",
 		href: "https://cssday.nl/2023",
 		tags: ["conferences"],
 	},
 	{
 		name: "Front Conference",
-		description:
-			"Where design meets technology",
+		description: "Where design meets technology",
 		image: "https://frontconference.com/static/neon.svg",
 		type: "Live and Online Events",
 		href: "https://frontconference.com/",
@@ -279,7 +281,8 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		name: "JsNation",
 		description:
 			"Understand the latest trends in JavaScript development. See what 20k+ JS developers are up to. Meet those who shape the present and the future of the prospering nation.",
-		image: "https://d33wubrfki0l68.cloudfront.net/9e3b2b2e7d375ad7003010a688bf021e994fc591/1b06b/img/logo.svg",
+		image:
+			"https://d33wubrfki0l68.cloudfront.net/9e3b2b2e7d375ad7003010a688bf021e994fc591/1b06b/img/logo.svg",
 		type: "Live and Online Events",
 		href: "https://jsnation.com/",
 		darkImageBackground: true,
@@ -294,5 +297,5 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		href: "https://www.jsday.ie/",
 		darkImageBackground: true,
 		tags: ["conferences"],
-	}
+	},
 ]
