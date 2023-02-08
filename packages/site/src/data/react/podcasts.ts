@@ -10,17 +10,6 @@ export const podcastTags = [
 
 export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 	{
-		title: "Modern Web",
-		image:
-			"https://pbcdn1.podbean.com/imglogo/image-logo/984467/modern_web_9bpnd.jpg",
-		hosts: ["ThisDot Labs"],
-		description:
-			"Modern Web is a podcast that explores next generation frameworks, standards, and techniques.",
-		rss: "https://www.podbean.com/site/podcatcher/index/blog/7YqKYcoGcvP",
-		href: "https://modernweb.podbean.com/",
-		tags: ["general"],
-	},
-	{
 		title: "React Podcast",
 		image:
 			"https://image.simplecastcdn.com/images/bdb43d4d-bd1d-4fbc-bd60-40f1e3299aa3/20f97d0b-6dab-4005-a995-0ab8fc2cf31c/640x640/1550288890-artwork.jpg",
@@ -29,15 +18,6 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 		rss: "https://feeds.simplecast.com/JoR28o79",
 		href: "https://reactpodcast.com/",
 		tags: ["react"],
-	},
-	{
-		title: "JavaScript Air",
-		image: "https://javascriptair.com/favicon.ico",
-		hosts: ["Kent C. Dodds"],
-		description: "The live broadcast podcast all about JavaScript",
-		rss: "https://feed.podbean.com/audio.javascriptair.com/feed.xml",
-		href: "https://javascriptair.com/",
-		tags: ["general"],
 	},
 	{
 		title: "React Native Radio",
@@ -75,6 +55,36 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 		rss: "https://reactroundup.com/rss",
 		href: "https://reactroundup.com/",
 		tags: ["react"],
+	},
+	{
+		title: "Epic React",
+		image:
+			"https://image.simplecastcdn.com/images/1105175e-7479-432b-910e-60e1e20f351f/84c729af-3bfb-4b6a-b80a-e0e0d0eb58d3/epic-react-podcast-show-artwork.jpg",
+		hosts: ["Kent C. Dodds"],
+		description: "Learn By Consuming, Building, And Teaching",
+		rss: "https://feeds.simplecast.com/giYVu3vJ",
+		href: "https://epicreact.dev/podcast/learn-by-consuming-building-and-teaching",
+		tags: ["react"],
+	},
+	{
+		title: "Modern Web",
+		image:
+			"https://pbcdn1.podbean.com/imglogo/image-logo/984467/modern_web_9bpnd.jpg",
+		hosts: ["ThisDot Labs"],
+		description:
+			"Modern Web is a podcast that explores next generation frameworks, standards, and techniques.",
+		rss: "https://www.podbean.com/site/podcatcher/index/blog/7YqKYcoGcvP",
+		href: "https://modernweb.podbean.com/",
+		tags: ["general"],
+	},
+	{
+		title: "JavaScript Air",
+		image: "https://javascriptair.com/favicon.ico",
+		hosts: ["Kent C. Dodds"],
+		description: "The live broadcast podcast all about JavaScript",
+		rss: "https://feed.podbean.com/audio.javascriptair.com/feed.xml",
+		href: "https://javascriptair.com/",
+		tags: ["general"],
 	},
 	{
 		title: "Syntax",
@@ -115,16 +125,6 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 		rss: "https://www.podbean.com/site/podcatcher/index/blog/yOanVRcNMt7v",
 		href: "https://www.reactnativenerds.com/",
 		tags: ["react native"],
-	},
-	{
-		title: "Epic React",
-		image:
-			"https://image.simplecastcdn.com/images/1105175e-7479-432b-910e-60e1e20f351f/84c729af-3bfb-4b6a-b80a-e0e0d0eb58d3/epic-react-podcast-show-artwork.jpg",
-		hosts: ["Kent C. Dodds"],
-		description: "Learn By Consuming, Building, And Teaching",
-		rss: "https://feeds.simplecast.com/giYVu3vJ",
-		href: "https://epicreact.dev/podcast/learn-by-consuming-building-and-teaching",
-		tags: ["react"],
 	},
 	{
 		title: "iteration",
