@@ -14,24 +14,6 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		tags: [],
 	},
 	{
-		name: "Vue Meetup / State of Vue",
-		description:
-			"This Dot Media presents Vue Contributor Day! The goal of this event is to not only give important updates to the community, but also as a forum to provide a voice for anyone using Vue.js to have direct access to core contributors and authors of various libraries and frameworks through live chat and an online broadcast.",
-		image: "https://github.com/thisdot.png",
-		type: "Live Events",
-		href: "https://www.vuemeetup.com/",
-		tags: ["meetups"],
-	},
-	{
-		name: "DigitalOcean Community",
-		description:
-			"DigitalOcean Community is a blog related to general Web development, with categories spanning across CSS, general JavaScript, and frameworks like Vue",
-		image: "https://www.digitalocean.com/_next/static/media/logo.87a8f3b8.svg",
-		type: "forum",
-		href: "https://www.digitalocean.com/community/tags/vue-js",
-		tags: [],
-	},
-	{
 		name: "VueConf Toronto",
 		description:
 			"VueConf Toronto is a Canadian conference with talks and workshops from Vue.js core team members and industry experts.",
@@ -82,6 +64,24 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		type: "Online and Live Events",
 		href: "https://vuejslive.com/",
 		tags: ["conferences"],
+	},
+	{
+		name: "DigitalOcean Community",
+		description:
+			"DigitalOcean Community is a blog related to general Web development, with categories spanning across CSS, general JavaScript, and frameworks like Vue",
+		image: "https://www.digitalocean.com/_next/static/media/logo.87a8f3b8.svg",
+		type: "forum",
+		href: "https://www.digitalocean.com/community/tags/vue-js",
+		tags: [],
+	},
+	{
+		name: "Vue Meetup / State of Vue",
+		description:
+			"This Dot Media presents Vue Contributor Day! The goal of this event is to not only give important updates to the community, but also as a forum to provide a voice for anyone using Vue.js to have direct access to core contributors and authors of various libraries and frameworks through live chat and an online broadcast.",
+		image: "https://github.com/thisdot.png",
+		type: "Live Events",
+		href: "https://www.vuemeetup.com/",
+		tags: ["meetups"],
 	},
 	{
 		name: "Front Stage",
