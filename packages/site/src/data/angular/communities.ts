@@ -12,15 +12,6 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		tags: [],
 	},
 	{
-		name: "Angular Meetup / State of Angular",
-		description:
-			"This Dot hosted events with members of the Angular community. Live chats about the current state of Angular, upcoming features, and mentoring.",
-		image: "https://github.com/thisdot.png",
-		type: "Live Events",
-		href: "https://www.angularmeetup.com/",
-		tags: ["meetups"],
-	},
-	{
 		name: "Angular Community Meetup",
 		description:
 			"Angular Community is a virtual meetup that is held twice a month: once for European and African time zones, and once for American timezones.",
@@ -71,6 +62,15 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		type: "Live Events",
 		href: "https://ng-be.org/",
 		tags: ["conferences"],
+	},
+	{
+		name: "Angular Meetup / State of Angular",
+		description:
+			"This Dot hosted events with members of the Angular community. Live chats about the current state of Angular, upcoming features, and mentoring.",
+		image: "https://github.com/thisdot.png",
+		type: "Live Events",
+		href: "https://www.angularmeetup.com/",
+		tags: ["meetups"],
 	},
 	{
 		name: "Front Stage",
