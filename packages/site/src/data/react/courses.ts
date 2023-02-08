@@ -31,7 +31,7 @@ export const courseTags = [
 	"static site generation",
 ] as const
 
-export const courses: Course<(typeof courseTags)[number]>[] = [
+export const courses: Course<typeof courseTags[number]>[] = [
 	{
 		title: "Code 15 React Projects - Complete Course",
 		author: "John Smilga",
@@ -96,7 +96,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 	},
 	{
 		title: "Front End Development - React course",
-		author: "FreeCodeCamp",
+		author: "freeCodeCamp",
 		image: "https://github.com/freeCodeCamp.png",
 		description:
 			"In the Front End Development Libraries Certification, you'll learn how to style your site quickly with Bootstrap. You'll also learn how add logic to your CSS styles and extend them with Sass.",
@@ -116,7 +116,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 	},
 	{
 		title: "React crash course",
-		author: "FreeCodeCamp",
+		author: "freeCodeCamp",
 		image: "https://github.com/freeCodeCamp.png",
 		description:
 			"This is a full premium course. Learn React.js from the ground up with fundamentals to more intermediate and advanced topics. You will learn by building a real app!",
@@ -228,7 +228,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 	},
 	{
 		title: "React TypeScript Tutorial - Build a Quiz App",
-		author: "FreeCodeCamp",
+		author: "freeCodeCamp",
 		image: "https://github.com/freeCodeCamp.png",
 		description:
 			"Learn how to use React and TypeScript to create a quiz app project. You will also learn how to use Styled-Components with React.",

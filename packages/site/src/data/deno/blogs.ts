@@ -51,7 +51,7 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 	},
 	{
 		title: "The Deno handbook",
-		author: "FreeCodeCamp",
+		author: "freeCodeCamp",
 		description: "A TypeScript Runtime Tutorial with Code Examples",
 		image: "https://github.com/freeCodeCamp.png",
 		href: "https://www.freecodecamp.org/news/the-deno-handbook/",

@@ -29,7 +29,7 @@ export type ExampleTag = typeof exampleTags[number]
 export const exampleCourses: Course<ExampleTag>[] = [
 	{
 		title: "Code 15 React Projects - Complete Course",
-		author: "freeCodeCamp.org",
+		author: "freeCodeCamp",
 		image: logo1,
 		description:
 			"Improve your skills with the React JavaScript library by building 15 projects using React.",

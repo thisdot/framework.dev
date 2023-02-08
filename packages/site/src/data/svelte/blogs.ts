@@ -171,8 +171,8 @@ export const blogs: Blog<typeof blogTags[number]>[] = [
 		tags: [],
 	},
 	{
-		title: "Freecodecamp",
-		author: "Freecodecamp contributors",
+		title: "freeCodeCamp",
+		author: "freeCodeCamp contributors",
 		description: "Svelte related blogs",
 		image:
 			"https://cdn.icon-icons.com/icons2/3206/PNG/512/free_code_camp_icon_195851.png",
