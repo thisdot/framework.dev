@@ -10,7 +10,7 @@ export const toolTags = [
 	"development",
 ] as const
 
-export const tools: Tool<typeof toolTags[number]>[] = [
+export const tools: Tool<(typeof toolTags)[number]>[] = [
 	{
 		name: "useHooks",
 		author: "ui.dev",
@@ -38,6 +38,34 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 			"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
 		href: "https://addons.mozilla.org/en-US/firefox/addon/react-devtools/",
 		tags: ["firefox"],
+	},
+	{
+		name: "ES7 React/Redux/GraphQL/React-Native snippets",
+		author: "dsznajder",
+		description:
+			"Simple extensions for React, Redux and Graphql in JS/TS with ES7 syntax",
+		image:
+			"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
+		href: "https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets",
+		tags: ["VSCode"],
+	},
+	{
+		name: "React Native Tools",
+		author: "Microsoft",
+		description: "Debugging and integrated commands for React Native",
+		image:
+			"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
+		href: "https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native",
+		tags: ["VSCode", "react native"],
+	},
+	{
+		name: "Simple React Snippets",
+		author: "Burke Holland",
+		description: "Dead simple React snippets you will actually use",
+		image:
+			"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
+		href: "https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets",
+		tags: ["VSCode"],
 	},
 	{
 		name: "GraphQL Playground for Chrome",
@@ -74,34 +102,6 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		tags: ["firefox"],
 	},
 	{
-		name: "ES7 React/Redux/GraphQL/React-Native snippets",
-		author: "dsznajder",
-		description:
-			"Simple extensions for React, Redux and Graphql in JS/TS with ES7 syntax",
-		image:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
-		href: "https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets",
-		tags: ["VSCode"],
-	},
-	{
-		name: "React Native Tools",
-		author: "Microsoft",
-		description: "Debugging and integrated commands for React Native",
-		image:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
-		href: "https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native",
-		tags: ["VSCode", "react native"],
-	},
-	{
-		name: "Simple React Snippets",
-		author: "Burke Holland",
-		description: "Dead simple React snippets you will actually use",
-		image:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
-		href: "https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets",
-		tags: ["VSCode"],
-	},
-	{
 		name: "Anima",
 		author: "Anima",
 		description:
@@ -118,5 +118,5 @@ export const tools: Tool<typeof toolTags[number]>[] = [
 		image: "https://framerusercontent.com/images/3ydDYhTbVKKzF5xDzZpZKoMmc.png",
 		href: "https://www.framer.com/",
 		tags: ["UI Design"],
-	}
+	},
 ]
