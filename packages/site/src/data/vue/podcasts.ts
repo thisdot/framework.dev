@@ -2,18 +2,7 @@ import { Podcast } from "@framework/system/src/models/podcast"
 
 export const podcastTags = ["general", "GraphQL", "vue", "quasar"] as const
 
-export const podcasts: Podcast<typeof podcastTags[number]>[] = [
-	{
-		title: "Modern Web",
-		image:
-			"https://pbcdn1.podbean.com/imglogo/image-logo/984467/modern_web_9bpnd.jpg",
-		hosts: ["ThisDot Labs"],
-		description:
-			"Modern Web is a podcast that explores next generation frameworks, standards, and techniques.",
-		rss: "https://www.podbean.com/site/podcatcher/index/blog/7YqKYcoGcvP",
-		href: "https://modernweb.podbean.com/",
-		tags: ["general"],
-	},
+export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 	{
 		title: "Views on Vue",
 		image:
@@ -73,5 +62,16 @@ export const podcasts: Podcast<typeof podcastTags[number]>[] = [
 		rss: "https://feeds.transistor.fm/quasar-vue-life",
 		href: "https://quasarcast.com/podcasts/quasar-life",
 		tags: ["vue", "quasar"],
+	},
+	{
+		title: "Modern Web",
+		image:
+			"https://pbcdn1.podbean.com/imglogo/image-logo/984467/modern_web_9bpnd.jpg",
+		hosts: ["ThisDot Labs"],
+		description:
+			"Modern Web is a podcast that explores next generation frameworks, standards, and techniques.",
+		rss: "https://www.podbean.com/site/podcatcher/index/blog/7YqKYcoGcvP",
+		href: "https://modernweb.podbean.com/",
+		tags: ["general"],
 	},
 ]
