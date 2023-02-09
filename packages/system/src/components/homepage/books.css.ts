@@ -14,7 +14,7 @@ export const emptyState = style([
 	sprinkles({}),
 	{
 		background: "white",
-		height: "75%",
+		height: 400,
 		padding: "12px",
 		borderRadius: "12	px",
 		display: "flex",
