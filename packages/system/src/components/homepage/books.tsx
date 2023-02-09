@@ -2,7 +2,18 @@ import classNames from "classnames"
 import React from "react"
 import sampleSize from "lodash/sampleSize"
 import { Book } from "../../models/book"
-import { booksStyle } from "./books.css"
+import {
+	booksStyle,
+	emptyState,
+	emptyStateContainer,
+	emptyStateContentContainer,
+	emptyStateTitle,
+	emptyStateDescription,
+	emptyStateBookContainer,
+	emptyStateBookBinding,
+	emptyStateBookCover,
+	emptyStateBookTitle,
+} from "./books.css"
 import { FeatureAndList } from "./feature-and-list"
 
 export interface BooksProps extends React.ComponentPropsWithoutRef<"div"> {
@@ -27,7 +38,29 @@ export function Books({ className, books, ...props }: BooksProps) {
 				}
 			})}
 			hideFeature
+			emptyStateElement={<EmptyState />}
 			{...props}
 		/>
+	)
+}
+
+function EmptyState() {
+	return (
+		<div className={emptyState}>
+			<div className={emptyStateContainer}>
+				<div className={emptyStateContentContainer}>
+					<h5 className={emptyStateTitle}>No books added yet</h5>
+					<p className={emptyStateDescription}>
+						If you want to submit a new book, please create a PR!
+					</p>
+				</div>
+				<div className={emptyStateBookContainer}>
+					<div className={emptyStateBookBinding} />
+					<div className={emptyStateBookCover}>
+						<p className={emptyStateBookTitle}>An empty book</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	)
 }

@@ -44,6 +44,7 @@ export interface FeatureAndListProps
 		description: string
 	}[]
 	hideFeature?: boolean
+	emptyStateElement?: React.ReactNode
 }
 
 export function FeatureAndList({
@@ -52,6 +53,7 @@ export function FeatureAndList({
 	title,
 	viewAll,
 	items,
+	emptyStateElement,
 	...props
 }: FeatureAndListProps) {
 	const featured = items[0]
@@ -160,8 +162,10 @@ export function FeatureAndList({
 						{viewAll.title}
 					</a>
 				</>
+			) : emptyStateElement ? (
+				emptyStateElement
 			) : (
-				<p>No featured item yet</p>
+				<p>This list of items is currently empty</p>
 			)}
 		</div>
 	)
