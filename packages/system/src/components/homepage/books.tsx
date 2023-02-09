@@ -26,6 +26,7 @@ export function Books({ className, books, ...props }: BooksProps) {
 					attributes: [["level", book.level]],
 				}
 			})}
+			hideFeature
 			{...props}
 		/>
 	)
