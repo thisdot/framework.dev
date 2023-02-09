@@ -1,6 +1,8 @@
 import classNames from "classnames"
 import React from "react"
 import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { Tag } from "../tag"
+import { formatFieldValue } from "../../util/string-utils"
 import {
 	resourceListStyle,
 	resourceListHeadingStyle,
@@ -27,6 +29,7 @@ export interface ResourceListProps
 		metadata: string
 		href: string
 		description: string
+		tags?: string[]
 	}[]
 }
 
@@ -69,6 +72,15 @@ export function ResourceList({
 									<p className={resourceListItemDescriptionStyle}>
 										{item.description}
 									</p>
+									{item.tags && (
+										<div>
+											{item.tags?.map((tag) => (
+												<Tag key={formatFieldValue(tag)}>
+													{formatFieldValue(tag)}
+												</Tag>
+											))}
+										</div>
+									)}
 								</a>
 							</li>
 						)

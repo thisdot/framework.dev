@@ -43,13 +43,17 @@ export interface FeatureAndListProps
 		attributes: AttributeDefinition[]
 		description: string
 	}[]
+	hideFeature?: boolean
+	emptyStateElement?: React.ReactNode
 }
 
 export function FeatureAndList({
+	hideFeature = false,
 	className,
 	title,
 	viewAll,
 	items,
+	emptyStateElement,
 	...props
 }: FeatureAndListProps) {
 	const featured = items[0]
@@ -59,49 +63,54 @@ export function FeatureAndList({
 			<h2 className={featureAndListHeadingStyle}>{title}</h2>
 			{!isEmpty ? (
 				<>
-					<div className={featureAndListBoxStyle}>
-						<article className={featureAndListFeaturedStyle}>
-							<a href={featured.href} target="_blank" rel="noreferrer">
-								{featured.image &&
-									(featured.image.style === "book" ? (
-										<div className={featureAndListFeatureBookContainerStyle}>
-											<BookDecorator>
-												<img
-													className={featureAndListFeatureBookStyle}
-													src={featured.image.src}
-													alt=""
-												/>
-											</BookDecorator>
-										</div>
-									) : (
-										<img
-											className={featureAndListFeatureImageStyle}
-											src={featured.image.src}
-											alt=""
-										/>
-									))}
-								<h3 className={featureAndListFeatureTitleStyle}>
-									{featured.title}
-								</h3>
-								<p className={featureAndListMetadataStyle}>
-									{featured.metadata}
-								</p>
-								<div className={featureAndListFeatureAttributesStyle}>
-									{featured.attributes.map((attribute) => {
-										return (
-											<DiscreteAttribute
-												key={`${featured.title}-${attribute[0]}`}
-												attribute={attribute}
-												colorize={true}
+					<div
+						className={featureAndListBoxStyle}
+						style={hideFeature ? { gridTemplateColumns: "1fr" } : {}}
+					>
+						{!hideFeature ? (
+							<article className={featureAndListFeaturedStyle}>
+								<a href={featured.href} target="_blank" rel="noreferrer">
+									{featured.image &&
+										(featured.image.style === "book" ? (
+											<div className={featureAndListFeatureBookContainerStyle}>
+												<BookDecorator>
+													<img
+														className={featureAndListFeatureBookStyle}
+														src={featured.image.src}
+														alt=""
+													/>
+												</BookDecorator>
+											</div>
+										) : (
+											<img
+												className={featureAndListFeatureImageStyle}
+												src={featured.image.src}
+												alt=""
 											/>
-										)
-									})}
-								</div>
-								<p className={featureAndListFeatureDescription}>
-									{featured.description}
-								</p>
-							</a>
-						</article>
+										))}
+									<h3 className={featureAndListFeatureTitleStyle}>
+										{featured.title}
+									</h3>
+									<p className={featureAndListMetadataStyle}>
+										{featured.metadata}
+									</p>
+									<div className={featureAndListFeatureAttributesStyle}>
+										{featured.attributes.map((attribute) => {
+											return (
+												<DiscreteAttribute
+													key={`${featured.title}-${attribute[0]}`}
+													attribute={attribute}
+													colorize={true}
+												/>
+											)
+										})}
+									</div>
+									<p className={featureAndListFeatureDescription}>
+										{featured.description}
+									</p>
+								</a>
+							</article>
+						) : null}
 						<div className={featureAndListListStyle}>
 							{items.slice(1).map((item) => (
 								<article key={item.title}>
@@ -153,8 +162,10 @@ export function FeatureAndList({
 						{viewAll.title}
 					</a>
 				</>
+			) : emptyStateElement ? (
+				emptyStateElement
 			) : (
-				<p>No featured item yet</p>
+				<p>This list of items is currently empty</p>
 			)}
 		</div>
 	)

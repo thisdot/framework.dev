@@ -24,6 +24,7 @@ export function LatestTools({ className, tools, ...props }: LatestToolsProps) {
 					metadata: tool.author,
 					href: tool.href,
 					description: tool.description,
+					tags: tool.tags,
 				}
 			})}
 			{...props}

@@ -91,6 +91,9 @@ export const resourceListItemDescriptionStyle = style([
 		color: "regularText",
 		textStyle: "bodyLong2",
 	}),
+	{
+		margin: "12px 0",
+	},
 ])
 
 export const resourceListViewAllStyle = sprinkles({

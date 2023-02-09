@@ -104,8 +104,8 @@ export function Homepage({
 				</div>
 				<ContributorBanner contributors={contributorsData}></ContributorBanner>
 				<div className={homepageTwoAndOneSectionStyle}>
-					<Books books={books} />
 					<LatestTools tools={tools} />
+					<Books books={books} />
 				</div>
 				<Communities communities={communities} />
 
