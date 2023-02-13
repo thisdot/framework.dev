@@ -13,7 +13,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		tags: ["meetups"],
 	},
 	{
-		name: "Discord",
+		name: "Official SolidJS Discord",
 		description:
 			"Solid is a declarative reactive Javascript library for creating user interfaces. | 5809 members.",
 		image:
@@ -23,7 +23,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		tags: [],
 	},
 	{
-		name: "Twitter",
+		name: "SolidJS Twitter",
 		description:
 			"Simple and performant reactivity for building user interfaces.",
 		image:
