@@ -30,4 +30,13 @@ export const blogs: Blog<(typeof blogTags)[number]>[] = [
 		href: "https://typeofnan.dev/solid-js-feels-like-what-i-always-wanted-react-to-be/",
 		tags: [],
 	},
+	{
+		title: "This Dot Blog",
+		author: "This Dot Labs",
+		description:
+			"Variety of topics related to SolidJS, written by the team at This Dot",
+		image: "https://github.com/thisdot.png",
+		href: "https://www.thisdot.co/blog/?filter=SolidJS#result",
+		tags: [],
+	},
 ]
