@@ -14,10 +14,12 @@ export const getContributorsData = async (): Promise<ContributorData[]> => {
 			"https://api.github.com/repos/thisdot/framework.dev/contributors?anon=1"
 		)
 		if (!response.ok) {
+			await new Promise((resolve) => setTimeout(resolve, 1000))
 			throw abortError
 		}
 		const data = await response.json()
 		if (!data) {
+			await new Promise((resolve) => setTimeout(resolve, 1000))
 			throw abortError
 		}
 
@@ -31,8 +33,6 @@ export const getContributorsData = async (): Promise<ContributorData[]> => {
 				console.log(
 					`getContributorsData Failure: Attempt ${error.attemptNumber} failed. There are ${error.retriesLeft} retries left.`
 				)
-				// resolve promise after 1 second
-				return new Promise((resolve) => setTimeout(resolve, 1000))
 			},
 		})
 
