@@ -11,7 +11,12 @@ export const getContributorsData = async (): Promise<ContributorData[]> => {
 	const runFetch = async () => {
 		const abortError = new AbortError("Failed to fetch contributors")
 		const response = await fetch(
-			"https://api.github.com/repos/thisdot/framework.dev/contributors?anon=1"
+			"https://api.github.com/repos/thisdot/framework.dev/contributors?anon=1",
+			{
+				headers: {
+					Authorization: `Token ${process.env.GITHUB_API_ACCESS_TOKEN}`,
+				},
+			}
 		)
 		if (!response.ok) {
 			throw abortError
