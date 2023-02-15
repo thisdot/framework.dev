@@ -31,6 +31,8 @@ export const getContributorsData = async (): Promise<ContributorData[]> => {
 				console.log(
 					`getContributorsData Failure: Attempt ${error.attemptNumber} failed. There are ${error.retriesLeft} retries left.`
 				)
+				// resolve promise after 1 second
+				return new Promise((resolve) => setTimeout(resolve, 1000))
 			},
 		})
 
