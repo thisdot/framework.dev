@@ -1,18 +1,18 @@
-import { style } from "@vanilla-extract/css"
-import { breakpoints, sprinkles } from "../../sprinkles/sprinkles.css"
-import { pxToRem } from "../../util/style-utils"
+import { style } from '@vanilla-extract/css'
+import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css'
+import { pxToRem } from '../../util/style-utils'
 
 export const comparisonTableStyle = style([
 	sprinkles({
-		color: "regularText",
-		display: "grid",
-		textStyle: "bodyShort2",
+		color: 'regularText',
+		display: 'grid',
+		textStyle: 'bodyShort2',
 	}),
 	{
-		gridTemplateColumns: "0.5fr repeat(6, minmax(max-content, 1fr))",
+		gridTemplateColumns: '0.5fr repeat(6, minmax(max-content, 1fr))',
 		gridAutoRows: pxToRem(44),
-		position: "relative",
-		"@media": {
+		position: 'relative',
+		'@media': {
 			[breakpoints.tablet]: {
 				gridAutoRows: pxToRem(56),
 			},

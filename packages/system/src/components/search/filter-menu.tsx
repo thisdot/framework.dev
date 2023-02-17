@@ -1,19 +1,19 @@
-import React, { useState } from "react"
-import { Button } from "../button"
-import { CardDivider } from "../card-divider"
+import React, { useState } from 'react'
+import { Button } from '../button'
+import { CardDivider } from '../card-divider'
 import {
 	filterMenuFilterContainerStyle,
 	filterMenuFooterStyle,
 	filterMenuStyle,
-} from "./filter-menu.css"
-import { FilterSet, QueryParams } from "./types"
-import { Filter } from "./filter"
-import { TagFilter } from "./tag-filter"
-import classNames from "classnames"
-import { TextInput } from "../text-input"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
+} from './filter-menu.css'
+import { FilterSet, QueryParams } from './types'
+import { Filter } from './filter'
+import { TagFilter } from './tag-filter'
+import classNames from 'classnames'
+import { TextInput } from '../text-input'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
 
-export type FilterMenuProps = React.ComponentPropsWithoutRef<"form"> & {
+export type FilterMenuProps = React.ComponentPropsWithoutRef<'form'> & {
 	params: QueryParams
 	availableFilters: FilterSet
 	onConfirm: (newParams: QueryParams) => void
@@ -100,18 +100,14 @@ export function FilterMenu({
 					color="plain"
 					onClick={() =>
 						setParams({
-							textSearch: "",
+							textSearch: '',
 							filters: { category: [], field: [], tag: [] },
 						})
 					}
 				>
 					Clear filters
 				</Button>
-				<Button
-					as="button"
-					type="submit"
-					color="primary"
-				>
+				<Button as="button" type="submit" color="primary">
 					Search
 				</Button>
 			</footer>

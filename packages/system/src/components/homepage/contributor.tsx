@@ -1,6 +1,6 @@
-import classNames from "classnames"
-import React from "react"
-import { contributorImageStyle } from "./contributor.css"
+import classNames from 'classnames'
+import React from 'react'
+import { contributorImageStyle } from './contributor.css'
 
 export interface ContributorData {
 	login: string
@@ -8,7 +8,7 @@ export interface ContributorData {
 	avatarUrl: string
 }
 
-export interface ContributorProps extends React.ComponentPropsWithoutRef<"a"> {
+export interface ContributorProps extends React.ComponentPropsWithoutRef<'a'> {
 	contributor: ContributorData
 }
 

@@ -1,18 +1,18 @@
-import classnames from "classnames"
-import React from "react"
-import { AngularFrameworkIcon } from "../icons/angular-framework-icon"
-import { FrameworkDevIcon } from "../icons/framework-dev-icon"
-import { NodejsFrameworkIcon } from "../icons/nodejs-framework-icon"
-import { QwikFrameworkIcon } from "../icons/qwik-framework-icon"
-import { ReactFrameworkIcon } from "../icons/react-framework-icon"
-import { SolidJSFrameworkIcon } from "../icons/solidjs-framework-icon"
-import { SvelteFrameworkIcon } from "../icons/svelte-framework-icon"
-import { VueFrameworkIcon } from "../icons/vue-framework-icon"
-import { GraphQLFrameworkIcon } from "../icons/graphql-framework-icon"
-import { logoStyle } from "./logo.css"
-import { DenoFrameworkIcon } from "../icons/deno-framework-icon"
+import classnames from 'classnames'
+import React from 'react'
+import { AngularFrameworkIcon } from '../icons/angular-framework-icon'
+import { FrameworkDevIcon } from '../icons/framework-dev-icon'
+import { NodejsFrameworkIcon } from '../icons/nodejs-framework-icon'
+import { QwikFrameworkIcon } from '../icons/qwik-framework-icon'
+import { ReactFrameworkIcon } from '../icons/react-framework-icon'
+import { SolidJSFrameworkIcon } from '../icons/solidjs-framework-icon'
+import { SvelteFrameworkIcon } from '../icons/svelte-framework-icon'
+import { VueFrameworkIcon } from '../icons/vue-framework-icon'
+import { GraphQLFrameworkIcon } from '../icons/graphql-framework-icon'
+import { logoStyle } from './logo.css'
+import { DenoFrameworkIcon } from '../icons/deno-framework-icon'
 
-export type LogoProps = React.ComponentPropsWithoutRef<"div"> & {
+export type LogoProps = React.ComponentPropsWithoutRef<'div'> & {
 	siteName?: string
 	stretched?: boolean
 }

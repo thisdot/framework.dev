@@ -1,5 +1,5 @@
-import { SearchableRecord } from "./search";
-import { LibraryTag } from "./library-tag";
+import { SearchableRecord } from './search'
+import { LibraryTag } from './library-tag'
 
 /**
  * Represents a Javascript library. Different
@@ -41,23 +41,23 @@ export interface Library extends SearchableRecord<LibraryTag> {
 	 * Language associate with the library
 	 */
 	language:
-		| "TypeScript"
-		| "JavaScript"
-		| "NodeJS"
-		| "CSS"
-		| "Java"
-		| "Scala"
-		| "Haskell"
-		| "Python"
-		| "Elixir"
-		| "Go"
-		| "C#"
-		| "Swift"
-		| "unknown"
+		| 'TypeScript'
+		| 'JavaScript'
+		| 'NodeJS'
+		| 'CSS'
+		| 'Java'
+		| 'Scala'
+		| 'Haskell'
+		| 'Python'
+		| 'Elixir'
+		| 'Go'
+		| 'C#'
+		| 'Swift'
+		| 'unknown'
 }
 
 export const libraryIndexMetadata = {
-	name: "libraries",
-	searchableFields: ["author", "description", "name"],
+	name: 'libraries',
+	searchableFields: ['author', 'description', 'name'],
 	filterableFields: {},
 } as const

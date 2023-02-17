@@ -1,31 +1,31 @@
-import classNames from "classnames"
-import React, { useState } from "react"
+import classNames from 'classnames'
+import React, { useState } from 'react'
 import {
 	menuButtonStyle,
 	mobileNavDialogStyle,
 	mobileNavSponorIconContainerStyle,
 	mobileNavStyle,
-} from "./mobile-nav.css"
-import { SideDialog } from "./side-dialog"
-import { SearchIcon } from "../icons/search-icon"
-import { HomeIcon } from "../icons/home-icon"
-import { BurgerIcon } from "../icons/burger-icon"
-import { CloseBurgerIcon } from "../icons/close-burger-icon"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { GithubIcon } from "../icons/github-icon"
-import { SponsorIcon } from "../icons/sponsor-icon"
+} from './mobile-nav.css'
+import { SideDialog } from './side-dialog'
+import { SearchIcon } from '../icons/search-icon'
+import { HomeIcon } from '../icons/home-icon'
+import { BurgerIcon } from '../icons/burger-icon'
+import { CloseBurgerIcon } from '../icons/close-burger-icon'
+import { sprinkles } from '../sprinkles/sprinkles.css'
+import { GithubIcon } from '../icons/github-icon'
+import { SponsorIcon } from '../icons/sponsor-icon'
 
-type MenuState = "open" | "closed"
+type MenuState = 'open' | 'closed'
 
-export type MobileNavProps = React.ComponentProps<"nav"> & {
+export type MobileNavProps = React.ComponentProps<'nav'> & {
 	initialMenuState?: MenuState
 }
 
-const menuButtonId = "burger-menu-button"
+const menuButtonId = 'burger-menu-button'
 
 export function MobileNav({
 	className,
-	initialMenuState = "closed",
+	initialMenuState = 'closed',
 	children,
 	...props
 }: MobileNavProps) {
@@ -33,7 +33,7 @@ export function MobileNav({
 
 	return (
 		<nav className={classNames(className, mobileNavStyle)} {...props}>
-			{menuState === "closed" ? (
+			{menuState === 'closed' ? (
 				<>
 					<button
 						type="button"
@@ -45,7 +45,7 @@ export function MobileNav({
 								) as HTMLInputElement | null
 							)?.focus()
 						}
-						className={sprinkles({ layout: "row" })}
+						className={sprinkles({ layout: 'row' })}
 					>
 						<SearchIcon size="large" />
 					</button>
@@ -53,7 +53,7 @@ export function MobileNav({
 						className={menuButtonStyle}
 						type="button"
 						id={menuButtonId}
-						onClick={() => setMenuState("open")}
+						onClick={() => setMenuState('open')}
 					>
 						<BurgerIcon size="large" />
 						Categories
@@ -61,7 +61,7 @@ export function MobileNav({
 					<a
 						aria-label="Home"
 						href="/"
-						className={sprinkles({ layout: "row" })}
+						className={sprinkles({ layout: 'row' })}
 					>
 						<HomeIcon size="large" />
 					</a>
@@ -73,7 +73,7 @@ export function MobileNav({
 						className={menuButtonStyle}
 						type="button"
 						id={menuButtonId}
-						onClick={() => setMenuState("closed")}
+						onClick={() => setMenuState('closed')}
 					>
 						<CloseBurgerIcon size="large" />
 						Close
@@ -83,18 +83,18 @@ export function MobileNav({
 			)}
 			<SideDialog
 				position="bottom"
-				isOpen={menuState !== "closed"}
-				onDismiss={() => setMenuState("closed")}
+				isOpen={menuState !== 'closed'}
+				onDismiss={() => setMenuState('closed')}
 				aria-labelledby={menuButtonId}
 				className={mobileNavDialogStyle}
 				zIndex={3}
 			>
 				<div
 					className={sprinkles({
-						borderBottom: "thin",
+						borderBottom: 'thin',
 						paddingY: 24,
 						paddingX: 32,
-						layout: "stack",
+						layout: 'stack',
 						gap: 14,
 					})}
 				>
@@ -103,11 +103,11 @@ export function MobileNav({
 					</div>
 					<a
 						className={sprinkles({
-							textStyle: "bodyShort2",
-							fontWeight: "bold",
-							color: "softText",
-							layout: "row",
-							alignItems: "center",
+							textStyle: 'bodyShort2',
+							fontWeight: 'bold',
+							color: 'softText',
+							layout: 'row',
+							alignItems: 'center',
 							gap: 12,
 						})}
 						href="https://github.com/thisdot/framework.dev"

@@ -1,15 +1,15 @@
-import { AllCategories } from "@framework/system/src/models/all-categories"
-import { blogIndexMetadata } from "@framework/system/src/models/blog"
-import { bookIndexMetadata } from "@framework/system/src/models/book"
-import { communityIndexMetadata } from "@framework/system/src/models/community"
-import { courseIndexMetadata } from "@framework/system/src/models/course"
+import { AllCategories } from '@framework/system/src/models/all-categories'
+import { blogIndexMetadata } from '@framework/system/src/models/blog'
+import { bookIndexMetadata } from '@framework/system/src/models/book'
+import { communityIndexMetadata } from '@framework/system/src/models/community'
+import { courseIndexMetadata } from '@framework/system/src/models/course'
 import {
 	Library,
 	libraryIndexMetadata,
-} from "@framework/system/src/models/library"
-import { podcastIndexMetadata } from "@framework/system/src/models/podcast"
-import { toolIndexMetadata } from "@framework/system/src/models/tool"
-import { LibraryTag } from "@framework/system/src/models/library-tag"
+} from '@framework/system/src/models/library'
+import { podcastIndexMetadata } from '@framework/system/src/models/podcast'
+import { toolIndexMetadata } from '@framework/system/src/models/tool'
+import { LibraryTag } from '@framework/system/src/models/library-tag'
 
 export async function getSearchData(
 	framework: string
@@ -52,9 +52,9 @@ export async function getSearchData(
 			name: communityIndexMetadata.name,
 			tags: communityTags,
 			subCategories: [
-				"meetups",
-				"conferences",
-			] as typeof communityTags[number][],
+				'meetups',
+				'conferences',
+			] as (typeof communityTags)[number][],
 		},
 		{
 			data: podcasts,

@@ -1,10 +1,10 @@
-import React from "react"
-import { IconProps } from "./shared-icon-types"
-import classNames from "classnames"
-import { iconStyle } from "./icon.css"
+import React from 'react'
+import { IconProps } from './shared-icon-types'
+import classNames from 'classnames'
+import { iconStyle } from './icon.css'
 
 export const DenoIcon = React.forwardRef<SVGSVGElement, IconProps>(
-	function DenoIcon({ className, size, ...props }, ref) {
+	function DenoIcon({ className, size, ...props }) {
 		return (
 			<svg
 				className={classNames(className, iconStyle({ size }))}

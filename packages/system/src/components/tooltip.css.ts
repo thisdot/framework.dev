@@ -1,21 +1,21 @@
-import { globalStyle, style } from "@vanilla-extract/css"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { vars } from "../themes/themes.css"
+import { globalStyle, style } from '@vanilla-extract/css'
+import { sprinkles } from '../sprinkles/sprinkles.css'
+import { vars } from '../themes/themes.css'
 
-globalStyle(":root", {
+globalStyle(':root', {
 	vars: {
-		"--reach-tooltip": "1",
+		'--reach-tooltip': '1',
 	},
 })
 
 export const tooltipStyle = style([
 	sprinkles({
 		padding: 8,
-		textStyle: "caption",
+		textStyle: 'caption',
 		borderRadius: 6,
 	}),
 	{
-		position: "absolute",
+		position: 'absolute',
 		backgroundColor: vars.palette.neutral20,
 		color: vars.palette.neutral95,
 		zIndex: 10,
@@ -23,6 +23,6 @@ export const tooltipStyle = style([
 ])
 
 export const tooltipTriangleStyle = style({
-	position: "absolute",
+	position: 'absolute',
 	fill: vars.palette.neutral20,
 })

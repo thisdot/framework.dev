@@ -1,9 +1,9 @@
-import { Story, Meta } from "@storybook/react"
-import { examplePodcasts } from "../../util/example-content"
-import { Podcasts as PodcastsComponent, PodcastsProps } from "./podcasts"
+import { Story, Meta } from '@storybook/react'
+import { examplePodcasts } from '../../util/example-content'
+import { Podcasts as PodcastsComponent, PodcastsProps } from './podcasts'
 
 export default {
-	title: "Home/Podcasts",
+	title: 'Home/Podcasts',
 	component: PodcastsComponent,
 	args: {
 		podcasts: examplePodcasts,

@@ -1,5 +1,5 @@
-import pRetry, { AbortError } from "p-retry"
-import { ContributorData } from "../components/homepage/contributor"
+import pRetry, { AbortError } from 'p-retry'
+import { ContributorData } from '../components/homepage/contributor'
 
 interface ContributorApiData {
 	login: string
@@ -9,9 +9,9 @@ interface ContributorApiData {
 
 export const getContributorsData = async (): Promise<ContributorData[]> => {
 	const runFetch = async () => {
-		const abortError = new AbortError("Failed to fetch contributors")
+		const abortError = new AbortError('Failed to fetch contributors')
 		const response = await fetch(
-			"https://api.github.com/repos/thisdot/framework.dev/contributors?anon=1",
+			'https://api.github.com/repos/thisdot/framework.dev/contributors?anon=1',
 			{
 				headers: {
 					Authorization: `Token ${process.env.GITHUB_API_ACCESS_TOKEN}`,
@@ -46,7 +46,7 @@ export const getContributorsData = async (): Promise<ContributorData[]> => {
 		}))
 	} catch (error) {
 		throw new Error(
-			"Failed to fetch contributors. Please try rebuilding the website."
+			'Failed to fetch contributors. Please try rebuilding the website.'
 		)
 	}
 }

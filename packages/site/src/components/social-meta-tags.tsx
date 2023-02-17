@@ -1,4 +1,4 @@
-import { titleCase } from "title-case"
+import { titleCase } from 'title-case'
 
 type SocialMetaTagsProps = {
 	title: string
@@ -10,21 +10,21 @@ export function SocialMetaTags({ siteName, title }: SocialMetaTagsProps) {
 	const titleCasedTitle = titleCase(title)
 	function formatAllFrameworkTitles() {
 		switch (siteName) {
-			case "graphql":
-				return "GraphQL";
-			case "solidjs":
-				return "SolidJS";
+			case 'graphql':
+				return 'GraphQL'
+			case 'solidjs':
+				return 'SolidJS'
 			default:
-				return titleCasedSiteName;
+				return titleCasedSiteName
 		}
 	}
 
 	const description =
-		siteName === "landing"
+		siteName === 'landing'
 			? `Search, compare, and discover top libraries and community-driven resources.`
 			: `Search, compare, and discover top ${formatAllFrameworkTitles()} libraries and community-driven resources in ${formatAllFrameworkTitles()}.`
 	const url =
-		siteName === "landing"
+		siteName === 'landing'
 			? `https://framework.dev`
 			: `https://${siteName}.framework.dev`
 	const imageUrl = `${url}/${siteName}-framework-1200x630.png`

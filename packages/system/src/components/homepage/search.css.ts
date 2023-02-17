@@ -1,5 +1,5 @@
-import { style } from "@vanilla-extract/css"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
+import { style } from '@vanilla-extract/css'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
 import {
 	searchInputBoxStyle,
 	searchInputIconStyle,
@@ -7,15 +7,15 @@ import {
 	searchInputLabelStyle,
 	searchInputResetButtonStyle,
 	searchInputStaticPrefixStyle,
-} from "../search/search-input.css"
+} from '../search/search-input.css'
 
 export const searchStyle = style([
 	sprinkles({
-		display: "grid",
+		display: 'grid',
 		gap: 12,
 	}),
 	{
-		gridTemplateColumns: "1fr min-content",
+		gridTemplateColumns: '1fr min-content',
 	},
 ])
 export const searchBoxStyle = style([
@@ -23,7 +23,7 @@ export const searchBoxStyle = style([
 	{
 		selectors: {
 			[`${searchInputBoxStyle}&`]: {
-				gridTemplateColumns: "min-content 1fr",
+				gridTemplateColumns: 'min-content 1fr',
 			},
 		},
 	},

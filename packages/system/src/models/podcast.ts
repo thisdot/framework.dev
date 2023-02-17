@@ -1,4 +1,4 @@
-import { SearchableRecord } from "./search"
+import { SearchableRecord } from './search'
 
 /**
  * Represents a podcast that talks about the
@@ -20,7 +20,7 @@ export interface Podcast<T extends string> extends SearchableRecord<T> {
 }
 
 export const podcastIndexMetadata = {
-	name: "podcasts",
-	searchableFields: ["hosts", "description", "title"],
+	name: 'podcasts',
+	searchableFields: ['hosts', 'description', 'title'],
 	filterableFields: {},
 } as const

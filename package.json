@@ -34,7 +34,8 @@
 		"prepare": "husky install",
 		"verify": "run-s verify:*",
 		"verify:types": "tsc",
-		"new": "plop"
+		"new": "plop",
+		"format": "prettier --config ./.prettierrc --write packages/**/*.tsx packages/**/*.ts"
 	},
 	"devDependencies": {
 		"@astrojs/react": "^1.2.2",

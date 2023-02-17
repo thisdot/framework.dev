@@ -1,16 +1,16 @@
-import { Story, Meta } from "@storybook/react"
-import { exampleTags } from "../../util/example-content"
-import { TagFilter as TagFilterComponent, TagFilterProps } from "./tag-filter"
+import { Story, Meta } from '@storybook/react'
+import { exampleTags } from '../../util/example-content'
+import { TagFilter as TagFilterComponent, TagFilterProps } from './tag-filter'
 
 export default {
-	title: "Search/Tag Filter",
+	title: 'Search/Tag Filter',
 	component: TagFilterComponent,
 	args: {
 		options: exampleTags,
-		value: ["accessibility"],
+		value: ['accessibility'],
 	},
 	argTypes: {
-		onUpdate: { action: "update" },
+		onUpdate: { action: 'update' },
 	},
 } as Meta
 

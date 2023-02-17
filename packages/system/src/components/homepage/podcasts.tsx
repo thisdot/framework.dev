@@ -1,9 +1,9 @@
-import React from "react"
-import sampleSize from "lodash/sampleSize"
-import { Podcast } from "../../models/podcast"
-import { ContentBanner } from "./content-banner"
+import React from 'react'
+import sampleSize from 'lodash/sampleSize'
+import { Podcast } from '../../models/podcast'
+import { ContentBanner } from './content-banner'
 
-export interface PodcastsProps extends React.ComponentPropsWithoutRef<"div"> {
+export interface PodcastsProps extends React.ComponentPropsWithoutRef<'div'> {
 	podcasts: Podcast<string>[]
 }
 
@@ -12,11 +12,11 @@ export function Podcasts({ className, podcasts, ...props }: PodcastsProps) {
 	return (
 		<ContentBanner
 			title="Get smarter on the go"
-			viewAll={{ title: "View all podcasts", href: "/categories/podcasts" }}
+			viewAll={{ title: 'View all podcasts', href: '/categories/podcasts' }}
 			items={randomPodcasts.map((podcast) => {
 				return {
 					title: podcast.title,
-					metadata: podcast.hosts.join(", "),
+					metadata: podcast.hosts.join(', '),
 					image: podcast.image,
 					href: podcast.href,
 				}

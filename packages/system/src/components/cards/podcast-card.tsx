@@ -1,17 +1,17 @@
-import { Podcast } from "../../models/podcast"
-import { ResourceCard, ResourceCardProps } from "./resource-card"
+import { Podcast } from '../../models/podcast'
+import { ResourceCard, ResourceCardProps } from './resource-card'
 
 export type PodcastCardProps = Omit<
 	ResourceCardProps,
-	| "title"
-	| "subtitle"
-	| "image"
-	| "layout"
-	| "imageLayout"
-	| "href"
-	| "tags"
-	| "attributes"
-	| "children"
+	| 'title'
+	| 'subtitle'
+	| 'image'
+	| 'layout'
+	| 'imageLayout'
+	| 'href'
+	| 'tags'
+	| 'attributes'
+	| 'children'
 > & {
 	podcast: Podcast<string>
 	lastPublishedDate?: string
@@ -21,7 +21,7 @@ export function PodcastCard({ podcast, ...props }: PodcastCardProps) {
 	return (
 		<ResourceCard
 			title={podcast.title}
-			subtitle={podcast.hosts.join(", ")}
+			subtitle={podcast.hosts.join(', ')}
 			href={podcast.href}
 			tags={podcast.tags}
 			layout="imageFirst"

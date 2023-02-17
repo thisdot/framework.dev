@@ -1,12 +1,12 @@
-import { recipe } from "@vanilla-extract/recipes"
-import type { VariantSelection } from "@framework/system/src/util/type-utils"
+import { recipe } from '@vanilla-extract/recipes'
+import type { VariantSelection } from '@framework/system/src/util/type-utils'
 
-import { sprinkles } from "../sprinkles/sprinkles.css"
+import { sprinkles } from '../sprinkles/sprinkles.css'
 
 const counterVariants = {
 	size: {
-		small: sprinkles({ textStyle: "buttonSmall", paddingX: 8 }),
-		medium: sprinkles({ textStyle: "button", paddingX: 10 }),
+		small: sprinkles({ textStyle: 'buttonSmall', paddingX: 8 }),
+		medium: sprinkles({ textStyle: 'button', paddingX: 10 }),
 	},
 } as const
 
@@ -16,11 +16,11 @@ export const counterStyle = recipe({
 	base: sprinkles({
 		borderRadius: 24,
 		paddingY: 4,
-		backgroundColor: "onSurface",
-		color: "surface",
+		backgroundColor: 'onSurface',
+		color: 'surface',
 	}),
 	variants: counterVariants,
 	defaultVariants: {
-		size: "medium",
+		size: 'medium',
 	},
 })

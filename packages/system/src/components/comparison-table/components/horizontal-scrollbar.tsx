@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef, useCallback } from "react"
-import classNames from "classnames"
+import React, { useState, useEffect, useRef, useCallback } from 'react'
+import classNames from 'classnames'
 import {
 	horizontalScrollbarContainerStyle,
 	horizontalScrollbarContentStyle,
@@ -10,14 +10,14 @@ import {
 	horizontalScrollbarButtonContainerStyle,
 	horizontalScrollbarButtonStyle,
 	horizontalScrollbarButtonIconStyle,
-} from "./horizontal-scrollbar.css"
-import { ChevronIcon } from "../../../icons/chevron-icon"
+} from './horizontal-scrollbar.css'
+import { ChevronIcon } from '../../../icons/chevron-icon'
 
 export const HorizontalScrollbar = ({
 	children,
 	className,
 	...props
-}: React.ComponentPropsWithoutRef<"div">) => {
+}: React.ComponentPropsWithoutRef<'div'>) => {
 	const scrollContentRef = useRef<HTMLDivElement | null>(null)
 	const scrollTrackRef = useRef<HTMLDivElement | null>(null)
 	const scrollThumbRef = useRef<HTMLDivElement | null>(null)
@@ -31,11 +31,11 @@ export const HorizontalScrollbar = ({
 		setThumbWidth(Math.max((clientWidth / scrollWidth) * track, 20))
 	}
 
-	function handleScrollButton(direction: "left" | "right") {
+	function handleScrollButton(direction: 'left' | 'right') {
 		const { current } = scrollContentRef
 		if (current) {
-			const scrollAmount = direction === "right" ? 200 : -200
-			current.scrollBy({ left: scrollAmount, behavior: "smooth" })
+			const scrollAmount = direction === 'right' ? 200 : -200
+			current.scrollBy({ left: scrollAmount, behavior: 'smooth' })
 		}
 	}
 
@@ -56,7 +56,7 @@ export const HorizontalScrollbar = ({
 				console.log(clickRatio, thumbOffset, scrollAmount)
 				contentCurrent.scrollTo({
 					left: scrollAmount,
-					behavior: "smooth",
+					behavior: 'smooth',
 				})
 			}
 		},
@@ -141,24 +141,24 @@ export const HorizontalScrollbar = ({
 			const observer = new ResizeObserver(() => {
 				handleResize(ref, track.clientWidth)
 			})
-			const firstChild = ref.getElementsByTagName("table")[0]
+			const firstChild = ref.getElementsByTagName('table')[0]
 			observer.observe(firstChild)
-			ref.addEventListener("scroll", handleThumbPosition)
+			ref.addEventListener('scroll', handleThumbPosition)
 			return () => {
 				observer.unobserve(firstChild)
-				ref.removeEventListener("scroll", handleThumbPosition)
+				ref.removeEventListener('scroll', handleThumbPosition)
 			}
 		}
 	}, [handleThumbPosition])
 
 	useEffect(() => {
-		document.addEventListener("mousemove", handleThumbMousemove)
-		document.addEventListener("mouseup", handleThumbMouseup)
-		document.addEventListener("mouseleave", handleThumbMouseup)
+		document.addEventListener('mousemove', handleThumbMousemove)
+		document.addEventListener('mouseup', handleThumbMouseup)
+		document.addEventListener('mouseleave', handleThumbMouseup)
 		return () => {
-			document.removeEventListener("mousemove", handleThumbMousemove)
-			document.removeEventListener("mouseup", handleThumbMouseup)
-			document.removeEventListener("mouseleave", handleThumbMouseup)
+			document.removeEventListener('mousemove', handleThumbMousemove)
+			document.removeEventListener('mouseup', handleThumbMouseup)
+			document.removeEventListener('mouseleave', handleThumbMouseup)
 		}
 	}, [handleThumbMousemove, handleThumbMouseup])
 
@@ -178,7 +178,7 @@ export const HorizontalScrollbar = ({
 						ref={scrollTrackRef}
 						onClick={handleTrackClick}
 						style={{
-							cursor: isDragging ? "grabbing" : "pointer",
+							cursor: isDragging ? 'grabbing' : 'pointer',
 						}}
 					></div>
 					<div
@@ -187,21 +187,21 @@ export const HorizontalScrollbar = ({
 						ref={scrollThumbRef}
 						style={{
 							width: `${thumbWidth}px`,
-							cursor: isDragging ? "grabbing" : "grab",
+							cursor: isDragging ? 'grabbing' : 'grab',
 						}}
 					></div>
 				</div>
 				<div className={horizontalScrollbarButtonContainerStyle}>
 					<button
 						className={horizontalScrollbarButtonStyle}
-						onClick={() => handleScrollButton("left")}
+						onClick={() => handleScrollButton('left')}
 						aria-roledescription="scroll left"
 					>
 						<ChevronIcon className={horizontalScrollbarButtonIconStyle} />
 					</button>
 					<button
 						className={horizontalScrollbarButtonStyle}
-						onClick={() => handleScrollButton("right")}
+						onClick={() => handleScrollButton('right')}
 						aria-roledescription="scroll right"
 					>
 						<ChevronIcon

@@ -1,33 +1,33 @@
-import { Story, Meta } from "@storybook/react"
+import { Story, Meta } from '@storybook/react'
 import {
 	ContributorBanner as ContributorBannerComponent,
 	ContributorBannerProps,
-} from "./contributor-banner"
+} from './contributor-banner'
 
 export default {
-	title: "Home/Contributor Banner",
+	title: 'Home/Contributor Banner',
 	component: ContributorBannerComponent,
 	args: {
 		contributors: [
 			{
-				login: "jbachhardie",
-				url: "https://github.com/jbachhardie",
-				avatarUrl: "https://github.com/jbachhardie.png",
+				login: 'jbachhardie',
+				url: 'https://github.com/jbachhardie',
+				avatarUrl: 'https://github.com/jbachhardie.png',
 			},
 			{
-				login: "tvanantwerp",
-				url: "https://github.com/tvanantwerp",
-				avatarUrl: "https://github.com/tvanantwerp.png",
+				login: 'tvanantwerp',
+				url: 'https://github.com/tvanantwerp',
+				avatarUrl: 'https://github.com/tvanantwerp.png',
 			},
 			{
-				login: "markshenouda",
-				url: "https://github.com/markshenouda",
-				avatarUrl: "https://github.com/markshenouda.png",
+				login: 'markshenouda',
+				url: 'https://github.com/markshenouda',
+				avatarUrl: 'https://github.com/markshenouda.png',
 			},
 			{
-				login: "ktrz",
-				url: "https://github.com/ktrz",
-				avatarUrl: "https://github.com/ktrz.png",
+				login: 'ktrz',
+				url: 'https://github.com/ktrz',
+				avatarUrl: 'https://github.com/ktrz.png',
 			},
 		],
 	},

@@ -1,15 +1,15 @@
-import classNames from "classnames"
-import React from "react"
-import { IconProps } from "../icons/shared-icon-types"
-import { Counter } from "./counter"
+import classNames from 'classnames'
+import React from 'react'
+import { IconProps } from '../icons/shared-icon-types'
+import { Counter } from './counter'
 import {
 	navItemIconStyle,
 	navItemLabelStyle,
 	navItemStyle,
 	navItemHiddenUntilFocus,
-} from "./nav-item.css"
+} from './nav-item.css'
 
-export interface NavItemProps extends React.ComponentPropsWithoutRef<"a"> {
+export interface NavItemProps extends React.ComponentPropsWithoutRef<'a'> {
 	icon?: React.ComponentType<IconProps>
 	count?: number
 	hiddenUntilFocus?: boolean

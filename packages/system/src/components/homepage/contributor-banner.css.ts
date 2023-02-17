@@ -1,6 +1,6 @@
-import { style } from "@vanilla-extract/css"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { pxToRem } from "../../util/style-utils"
+import { style } from '@vanilla-extract/css'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { pxToRem } from '../../util/style-utils'
 
 export const contributorBannerStyle = style([
 	sprinkles({
@@ -8,15 +8,15 @@ export const contributorBannerStyle = style([
 		borderRadius: 12,
 		gap: { mobile: 32, tablet: 16 },
 		display: {
-			mobile: "flex",
-			tablet: "grid",
+			mobile: 'flex',
+			tablet: 'grid',
 		},
-		flexDirection: "column",
-		alignItems: "start",
+		flexDirection: 'column',
+		alignItems: 'start',
 	}),
 	{
-		backgroundColor: "transparent",
-		gridTemplateColumns: "1fr 3fr min-content",
+		backgroundColor: 'transparent',
+		gridTemplateColumns: '1fr 3fr min-content',
 	},
 ])
 
@@ -37,5 +37,5 @@ export const buttonStyles = style([
 	sprinkles({
 		paddingX: 24,
 	}),
-	{ height: pxToRem(48), width: "92%", marginTop: pxToRem(12) },
+	{ height: pxToRem(48), width: '92%', marginTop: pxToRem(12) },
 ])

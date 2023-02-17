@@ -1,21 +1,21 @@
-import { Story, Meta } from "@storybook/react"
+import { Story, Meta } from '@storybook/react'
 import {
 	CommunityCard as CommunityCardComponent,
 	CommunityCardProps,
-} from "./community-card"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { exampleCommunities } from "../../util/example-content"
-import { imageFirstCardGrid } from "./card-layouts.css"
+} from './community-card'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { exampleCommunities } from '../../util/example-content'
+import { imageFirstCardGrid } from './card-layouts.css'
 
 export default {
-	title: "Cards/Community Card",
+	title: 'Cards/Community Card',
 	component: CommunityCardComponent,
 	args: {
-		headingTag: "h1",
+		headingTag: 'h1',
 	},
 	argTypes: {
 		onTagClick: {
-			action: "onTagClick",
+			action: 'onTagClick',
 		},
 	},
 } as Meta
@@ -23,7 +23,7 @@ export default {
 const Template: Story<CommunityCardProps> = (args) => (
 	<div
 		className={sprinkles({
-			backgroundColor: "surface4",
+			backgroundColor: 'surface4',
 			padding: 16,
 		})}
 	>

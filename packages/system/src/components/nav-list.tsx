@@ -1,8 +1,8 @@
-import classNames from "classnames"
-import React from "react"
-import { navListItemStyle, navListStyle } from "./nav-list.css"
+import classNames from 'classnames'
+import React from 'react'
+import { navListItemStyle, navListStyle } from './nav-list.css'
 
-export interface NavListProps extends React.ComponentPropsWithoutRef<"ul"> {}
+export interface NavListProps extends React.ComponentPropsWithoutRef<'ul'> {}
 
 export function NavList({ children, className, ...props }: NavListProps) {
 	return (
@@ -13,7 +13,7 @@ export function NavList({ children, className, ...props }: NavListProps) {
 }
 
 export interface NavListItemProps
-	extends React.ComponentPropsWithoutRef<"li"> {}
+	extends React.ComponentPropsWithoutRef<'li'> {}
 
 export function NavListItem({
 	children,

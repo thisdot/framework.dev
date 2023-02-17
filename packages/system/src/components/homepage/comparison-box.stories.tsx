@@ -1,13 +1,13 @@
-import { Meta, Story } from "@storybook/react"
+import { Meta, Story } from '@storybook/react'
 import {
 	ComparisonBox as ComparisonBoxComponent,
 	ComparisonBoxProps,
-} from "./comparison-box"
-import { pxToRem } from "../../util/style-utils"
-import { LibraryTag } from "../../models/library-tag"
+} from './comparison-box'
+import { pxToRem } from '../../util/style-utils'
+import { LibraryTag } from '../../models/library-tag'
 
 export default {
-	title: "Home/Comparison Box",
+	title: 'Home/Comparison Box',
 	component: ComparisonBoxComponent,
 	args: {
 		libraryTags: Object.values(LibraryTag),

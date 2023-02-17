@@ -1,17 +1,17 @@
-import { Story, Meta } from "@storybook/react"
+import { Story, Meta } from '@storybook/react'
 import {
 	Contributor as ContributorComponent,
 	ContributorProps,
-} from "./contributor"
+} from './contributor'
 
 export default {
-	title: "Home/Contributor",
+	title: 'Home/Contributor',
 	component: ContributorComponent,
 	args: {
 		contributor: {
-			login: "ktrz",
-			url: "https://github.com/ktrz",
-			avatarUrl: "https://github.com/ktrz.png",
+			login: 'ktrz',
+			url: 'https://github.com/ktrz',
+			avatarUrl: 'https://github.com/ktrz.png',
 		},
 	},
 } as Meta
