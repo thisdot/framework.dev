@@ -35,7 +35,7 @@
 		"verify": "run-s verify:*",
 		"verify:types": "tsc",
 		"new": "plop",
-		"format": "prettier --config ./.prettierrc --write packages/**/*.tsx packages/**/*.ts"
+		"format": "prettier --config ./.prettierrc --write 'packages/**/*.{ts,tsx}'"
 	},
 	"devDependencies": {
 		"@astrojs/react": "^1.2.2",
