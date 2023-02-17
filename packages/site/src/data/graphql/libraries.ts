@@ -1,5 +1,5 @@
-import { Library } from "@framework/system/src/models/library";
-import { LibraryTag } from "@framework/system/src/models/library-tag";
+import { Library } from "@framework/system/src/models/library"
+import { LibraryTag } from "@framework/system/src/models/library-tag"
 
 // The default image here for use
 // on libraries that don't have an image
@@ -516,17 +516,5 @@ export const libraries: Library[] = [
 		image: defaultImage,
 		language: "TypeScript",
 		tags: [LibraryTag.DATA_FETCHING],
-	},
-	{
-		name: "Prisma",
-		author: "Prisma",
-		repo: "https://www.github.com/prisma/prisma",
-		package: "https://www.npmjs.com/package/@prisma/client",
-		href: "https://www.prisma.io/graphql",
-		description:
-			"Simple Database Access in GraphQL servers Query data from MySQL, PostgreSQL & SQL Server databases in GraphQL with Prisma - a better ORM for JavaScript and TypeScript.",
-		image: "https://github.com/prisma.png",
-		language: "NodeJS",
-		tags: [LibraryTag.ORM],
 	},
 ]
