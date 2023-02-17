@@ -1,5 +1,5 @@
-import classNames from "classnames"
-import React from "react"
+import classNames from 'classnames'
+import React from 'react'
 import {
 	featureAndListStyle,
 	featureAndListHeadingStyle,
@@ -19,14 +19,14 @@ import {
 	featureAndListListTitleStyle,
 	featureAndListListMetadataStyle,
 	featureAndListViewAllStyle,
-} from "./feature-and-list.css"
-import { AttributeDefinition } from "../../models/all-categories"
-import { DiscreteAttribute, DiscreteAttributeIcon } from "../discrete-attribute"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { BookDecorator } from "../book-decorator"
+} from './feature-and-list.css'
+import { AttributeDefinition } from '../../models/all-categories'
+import { DiscreteAttribute, DiscreteAttributeIcon } from '../discrete-attribute'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { BookDecorator } from '../book-decorator'
 
 export interface FeatureAndListProps
-	extends React.ComponentPropsWithoutRef<"div"> {
+	extends React.ComponentPropsWithoutRef<'div'> {
 	title: string
 	viewAll: {
 		title: string
@@ -35,7 +35,7 @@ export interface FeatureAndListProps
 	items: {
 		image?: {
 			src: string
-			style: "normal" | "book"
+			style: 'normal' | 'book'
 		}
 		title: string
 		metadata: string
@@ -65,13 +65,13 @@ export function FeatureAndList({
 				<>
 					<div
 						className={featureAndListBoxStyle}
-						style={hideFeature ? { gridTemplateColumns: "1fr" } : {}}
+						style={hideFeature ? { gridTemplateColumns: '1fr' } : {}}
 					>
 						{!hideFeature ? (
 							<article className={featureAndListFeaturedStyle}>
 								<a href={featured.href} target="_blank" rel="noreferrer">
 									{featured.image &&
-										(featured.image.style === "book" ? (
+										(featured.image.style === 'book' ? (
 											<div className={featureAndListFeatureBookContainerStyle}>
 												<BookDecorator>
 													<img
@@ -121,7 +121,7 @@ export function FeatureAndList({
 										className={featureAndListListItemStyle}
 									>
 										{item.image &&
-											(item.image.style === "book" ? (
+											(item.image.style === 'book' ? (
 												<BookDecorator>
 													<img
 														className={featureAndListListBookStyle}
@@ -136,7 +136,7 @@ export function FeatureAndList({
 													alt=""
 												/>
 											))}
-										<div className={sprinkles({ layout: "stack", gap: 4 })}>
+										<div className={sprinkles({ layout: 'stack', gap: 4 })}>
 											<h3 className={featureAndListListTitleStyle}>
 												{item.title}
 											</h3>

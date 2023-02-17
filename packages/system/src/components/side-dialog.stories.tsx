@@ -1,23 +1,23 @@
-import { Story, Meta } from "@storybook/react"
-import { useState } from "react"
-import { Button } from "./button"
+import { Story, Meta } from '@storybook/react'
+import { useState } from 'react'
+import { Button } from './button'
 import {
 	SideDialog as SideDialogComponent,
 	SideDialogProps,
-} from "./side-dialog"
+} from './side-dialog'
 
 export default {
-	title: "Side Dialog",
+	title: 'Side Dialog',
 	component: SideDialogComponent,
 	args: {
-		children: "Hello world",
-		"aria-label": "Example dialog",
-		position: "left",
+		children: 'Hello world',
+		'aria-label': 'Example dialog',
+		position: 'left',
 	},
 	argTypes: {
 		position: {
-			options: ["left", "right"],
-			control: "radio",
+			options: ['left', 'right'],
+			control: 'radio',
 		},
 	},
 } as Meta

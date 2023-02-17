@@ -1,14 +1,14 @@
-import classNames from "classnames"
-import React from "react"
-import { DialogOverlay, DialogContent } from "@reach/dialog"
+import classNames from 'classnames'
+import React from 'react'
+import { DialogOverlay, DialogContent } from '@reach/dialog'
 import {
 	infoPopupArrowStyle,
 	infoPopupContentStyle,
 	infoPopupOverlayStyle,
-} from "./info-popup.css"
-import useMeasure from "../util/use-measure"
+} from './info-popup.css'
+import useMeasure from '../util/use-measure'
 
-export interface InfoPopupProps extends React.ComponentPropsWithoutRef<"div"> {
+export interface InfoPopupProps extends React.ComponentPropsWithoutRef<'div'> {
 	isOpen?: boolean
 	onDismiss: () => void
 	targetRef: React.RefObject<HTMLElement>
@@ -23,7 +23,7 @@ const blankDOMRect = {
 	bottom: 0,
 	x: 0,
 	y: 0,
-	toJSON: () => "{}",
+	toJSON: () => '{}',
 }
 
 export function InfoPopup({
@@ -34,12 +34,14 @@ export function InfoPopup({
 	targetRef,
 	...props
 }: InfoPopupProps) {
-	const [contentRef, contentBounds] = useMeasure<HTMLDivElement>({ box: "border-box" })
+	const [contentRef, contentBounds] = useMeasure<HTMLDivElement>({
+		box: 'border-box',
+	})
 	const targetBounds =
 		targetRef.current?.getBoundingClientRect() ?? blankDOMRect
 	const contentPosition = calculateContentPosition(targetBounds, contentBounds)
 	const arrowOrientation =
-		contentPosition.top > targetBounds.top ? "up" : "down"
+		contentPosition.top > targetBounds.top ? 'up' : 'down'
 	return (
 		<DialogOverlay
 			className={infoPopupOverlayStyle}
@@ -73,11 +75,10 @@ function calculateContentPosition(
 	targetBounds: DOMRect,
 	contentBounds: ResizeObserverSize
 ): { top: number; left: number } {
-	if (typeof document === "undefined") return { top: 0, left: 0 }
+	if (typeof document === 'undefined') return { top: 0, left: 0 }
 	const position = {
 		top: targetBounds.top - contentBounds.blockSize - 8,
-		left:
-			targetBounds.left,
+		left: targetBounds.left,
 	}
 	const wouldOverflowTop = position.top < 0
 	const wouldOverflowLeft = position.left < 0

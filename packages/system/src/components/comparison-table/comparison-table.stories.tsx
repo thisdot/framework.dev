@@ -1,19 +1,19 @@
-import { Story, Meta } from "@storybook/react"
+import { Story, Meta } from '@storybook/react'
 import {
 	ComparisonTable as ComparisonTableComponent,
 	ComparisonTableProps,
-} from "./index"
-import { exampleLibraries } from "../../util/example-content"
-import { fullscreen } from "../../styles/layouts.css"
+} from './index'
+import { exampleLibraries } from '../../util/example-content'
+import { fullscreen } from '../../styles/layouts.css'
 
 export default {
-	title: "Comparison Table",
+	title: 'Comparison Table',
 	component: ComparisonTableComponent,
 	args: {
 		libraries: exampleLibraries,
 	},
 	parameters: {
-		layout: "fullscreen",
+		layout: 'fullscreen',
 	},
 } as Meta
 

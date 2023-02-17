@@ -1,11 +1,11 @@
-import { Story, Meta } from "@storybook/react"
-import { Skeleton as SkeletonComponent, SkeletonProps } from "./skeleton"
+import { Story, Meta } from '@storybook/react'
+import { Skeleton as SkeletonComponent, SkeletonProps } from './skeleton'
 
 export default {
-	title: "Skeleton",
+	title: 'Skeleton',
 	component: SkeletonComponent,
 	args: {
-		variant: "circle",
+		variant: 'circle',
 		height: 20,
 		width: 20,
 	},

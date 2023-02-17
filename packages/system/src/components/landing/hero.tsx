@@ -1,8 +1,8 @@
-import classNames from "classnames"
-import React from "react"
-import { Logo } from "../logo"
-import { LinkCardGroup } from "./link-card-group"
-import { LinkCardProps } from "./link-card"
+import classNames from 'classnames'
+import React from 'react'
+import { Logo } from '../logo'
+import { LinkCardGroup } from './link-card-group'
+import { LinkCardProps } from './link-card'
 import {
 	heroStyle,
 	heroInnerStyle,
@@ -13,9 +13,9 @@ import {
 	heroSubtitleStyle,
 	linkCardGroupStyle,
 	heroIconTyle,
-} from "./hero.css"
+} from './hero.css'
 
-export interface HeroProps extends React.ComponentPropsWithoutRef<"header"> {
+export interface HeroProps extends React.ComponentPropsWithoutRef<'header'> {
 	heroText: {
 		highlightedTitle?: string
 		icon?: JSX.Element
@@ -43,7 +43,7 @@ export function Hero({ className, heroText, linkCards, ...props }: HeroProps) {
 
 							{heroText.softTitle && (
 								<span className={heroSoftTitleStyle}>
-									{" "}
+									{' '}
 									{heroText.softTitle}
 								</span>
 							)}

@@ -1,12 +1,12 @@
-import { Story, Meta } from "@storybook/react"
-import { TextInput as TextInputComponent, TextInputProps } from "./text-input"
+import { Story, Meta } from '@storybook/react'
+import { TextInput as TextInputComponent, TextInputProps } from './text-input'
 
 export default {
-	title: "Text Input",
+	title: 'Text Input',
 	component: TextInputComponent,
 	args: {
-		label: "Label",
-		placeholder: "Placeholder",
+		label: 'Label',
+		placeholder: 'Placeholder',
 		disabled: false,
 		hideLabel: false,
 	},

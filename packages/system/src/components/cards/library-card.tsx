@@ -1,23 +1,23 @@
-import { Library } from "../../models/library"
-import { libraryCardBadgeStyle } from "./library-card.css"
+import { Library } from '../../models/library'
+import { libraryCardBadgeStyle } from './library-card.css'
 import {
 	getBundleSizeBadge,
 	getGitHubStarsBadge,
 	getNpmDownloadsBadge,
-} from "../../util/stats-util"
-import { ResourceCard, ResourceCardProps } from "./resource-card"
+} from '../../util/stats-util'
+import { ResourceCard, ResourceCardProps } from './resource-card'
 
 export type LibraryCardProps = Omit<
 	ResourceCardProps,
-	| "title"
-	| "subtitle"
-	| "image"
-	| "layout"
-	| "imageLayout"
-	| "href"
-	| "tags"
-	| "attributes"
-	| "children"
+	| 'title'
+	| 'subtitle'
+	| 'image'
+	| 'layout'
+	| 'imageLayout'
+	| 'href'
+	| 'tags'
+	| 'attributes'
+	| 'children'
 > & {
 	library: Library
 }
@@ -34,46 +34,46 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 			allowSelection={!!library.package}
 			badges={
 				<>
-					{library?.repo.includes("github.com") ? (
+					{library?.repo.includes('github.com') ? (
 						<Badge
 							data={getGitHubStarsBadge(
-								library.repo.replace(/https:\/\/(www\.)?github\.com\//, "")
+								library.repo.replace(/https:\/\/(www\.)?github\.com\//, '')
 							)}
 							href={library.repo}
 							label={`${library.name} GitHub Repository`}
 						/>
-					) : library?.repo !== "" ? (
+					) : library?.repo !== '' ? (
 						// TODO: Have other frameworks decide what image to use if not GitHub
 						<Badge
-							data={""}
+							data={''}
 							href={library.repo}
 							label={`${library.name} GitHub Repository`}
 						/>
 					) : null}
-					{library?.package.includes("npmjs") ? (
+					{library?.package.includes('npmjs') ? (
 						<>
 							<Badge
 								data={getNpmDownloadsBadge(
-									library.package.replace("https://www.npmjs.com/package/", "")
+									library.package.replace('https://www.npmjs.com/package/', '')
 								)}
 								href={library.package}
 								label={`${library.name} NPM Package`}
 							/>
 							<Badge
 								data={getBundleSizeBadge(
-									library.package.replace("https://www.npmjs.com/package/", "")
+									library.package.replace('https://www.npmjs.com/package/', '')
 								)}
 								href={`https://bundlephobia.com/package/${library.package.replace(
-									"https://www.npmjs.com/package/",
-									""
+									'https://www.npmjs.com/package/',
+									''
 								)}`}
 								label={`${library.name} Bundle Size Stats`}
 							/>
 						</>
-					) : library?.package !== "" ? (
+					) : library?.package !== '' ? (
 						// TODO: Have other frameworks decide what image to use if not npm
 						<Badge
-							data={""}
+							data={''}
 							href={library.package}
 							label={`${library.name} Package`}
 						/>

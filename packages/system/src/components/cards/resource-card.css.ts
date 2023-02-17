@@ -1,20 +1,20 @@
-import { style, styleVariants } from "@vanilla-extract/css"
-import { breakpoints, sprinkles } from "../../sprinkles/sprinkles.css"
-import { vars } from "../../themes/themes.css"
-import { pxToRem } from "../../util/style-utils"
+import { style, styleVariants } from '@vanilla-extract/css'
+import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css'
+import { vars } from '../../themes/themes.css'
+import { pxToRem } from '../../util/style-utils'
 
 const base = style([
 	sprinkles({
-		backgroundColor: "white",
-		border: "thin",
+		backgroundColor: 'white',
+		border: 'thin',
 		borderRadius: 12,
 	}),
 	{
-		display: "grid",
+		display: 'grid',
 		padding: pxToRem(15),
 		selectors: {
-			"&:not(:hover)": {
-				borderColor: "transparent",
+			'&:not(:hover)': {
+				borderColor: 'transparent',
 			},
 			'&[data-selected="true"]': {
 				borderWidth: pxToRem(4),
@@ -32,8 +32,8 @@ const titleFirst = style([
 		"body body"
 		"footer footer"
 		`,
-		gridTemplateColumns: "min-content 1fr",
-		gridTemplateRows: "auto 1fr auto",
+		gridTemplateColumns: 'min-content 1fr',
+		gridTemplateRows: 'auto 1fr auto',
 	},
 ])
 const imageFirst = style([
@@ -45,11 +45,11 @@ const imageFirst = style([
 		"image footer"
 		`,
 		gridTemplateColumns: `${pxToRem(112)} 1fr`,
-		gridTemplateRows: "auto 1fr auto",
-		"@media": {
+		gridTemplateRows: 'auto 1fr auto',
+		'@media': {
 			[breakpoints.tablet]: {
-				gridTemplateColumns: "1fr",
-				gridTemplateRows: "auto auto 1fr auto",
+				gridTemplateColumns: '1fr',
+				gridTemplateRows: 'auto auto 1fr auto',
 				gridTemplateAreas: `
 				"image"
 				"header"
@@ -66,22 +66,22 @@ export const resourceCardStyle = styleVariants({
 })
 
 export const resourceCardHeaderStyle = style({
-	display: "flex",
-	gridArea: "header",
+	display: 'flex',
+	gridArea: 'header',
 	selectors: {
 		[`${titleFirst} &`]: {
-			flexDirection: "row",
+			flexDirection: 'row',
 			gap: pxToRem(12),
 		},
 		[`${imageFirst} &`]: {
-			flexDirection: "column",
+			flexDirection: 'column',
 			gap: pxToRem(16),
 		},
 	},
 })
 
 export const resourceCardTitleContainerStyle = style([
-	sprinkles({ layout: "stack", gap: 4 }),
+	sprinkles({ layout: 'stack', gap: 4 }),
 	{
 		flexGrow: 1,
 	},
@@ -90,34 +90,34 @@ export const resourceCardTitleContainerStyle = style([
 export const resourceCardImageContainerStyle = style([
 	sprinkles({ borderRadius: 8 }),
 	{
-		gridArea: "image",
-		overflow: "hidden",
-		display: "grid",
-		alignItems: "center",
-		justifyItems: "center",
+		gridArea: 'image',
+		overflow: 'hidden',
+		display: 'grid',
+		alignItems: 'center',
+		justifyItems: 'center',
 		selectors: {
 			[`${titleFirst} &`]: {
 				width: pxToRem(40),
 				height: pxToRem(40),
-				border: "1px solid rgba(0, 0, 0, 0.04)",
-				alignItems: "center",
+				border: '1px solid rgba(0, 0, 0, 0.04)',
+				alignItems: 'center',
 			},
 			[`${imageFirst} &`]: {
 				minHeight: pxToRem(144),
 			},
 			'&.darkBackground': {
 				backgroundColor: vars.palette.primary0,
-			}
+			},
 		},
-	}, 
+	},
 	{
 		height: '12rem',
-	}
+	},
 ])
 
 export const bookImageContainerStyle = style({
 	backgroundColor: vars.palette.neutral95,
-	alignItems: "center",
+	alignItems: 'center',
 })
 
 export const resourceCardBookImageDecoration = style({
@@ -127,7 +127,7 @@ export const resourceCardBookImageDecoration = style({
 export const resourceCardImageStyle = style([
 	sprinkles({ borderRadius: 8 }),
 	{
-		maxHeight: "180px",
+		maxHeight: '180px',
 		selectors: {
 			[`${bookImageContainerStyle} &`]: {
 				borderRadius: 0,
@@ -136,24 +136,24 @@ export const resourceCardImageStyle = style([
 	},
 ])
 export const resourceCardTitleStyle = style([
-	sprinkles({ textStyle: "bodyShort1", fontWeight: "bold", margin: 0 }),
+	sprinkles({ textStyle: 'bodyShort1', fontWeight: 'bold', margin: 0 }),
 	{
-		":hover": {
-			textDecoration: "underline",
+		':hover': {
+			textDecoration: 'underline',
 		},
 	},
 ])
 export const resourceCardSubtitleStyle = style([
-	sprinkles({ textStyle: "bodyShort3", color: "softText" }),
+	sprinkles({ textStyle: 'bodyShort3', color: 'softText' }),
 ])
 export const resourceCardBodyStyle = style([
-	sprinkles({ textStyle: "bodyLong2", layout: "stack", gap: 12 }),
-	{ gridArea: "body" },
+	sprinkles({ textStyle: 'bodyLong2', layout: 'stack', gap: 12 }),
+	{ gridArea: 'body' },
 ])
 export const resourceCardFooterStyle = style([
-	sprinkles({ layout: "stack" }),
+	sprinkles({ layout: 'stack' }),
 	{
-		justifyContent: "flex-end",
-		gridArea: "footer",
+		justifyContent: 'flex-end',
+		gridArea: 'footer',
 	},
 ])

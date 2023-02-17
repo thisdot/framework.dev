@@ -1,21 +1,21 @@
-import { Story, Meta } from "@storybook/react"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { exampleLibraries } from "../../util/example-content"
-import { titleFirstCardGrid } from "./card-layouts.css"
+import { Story, Meta } from '@storybook/react'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { exampleLibraries } from '../../util/example-content'
+import { titleFirstCardGrid } from './card-layouts.css'
 import {
 	LibraryCard as LibraryCardComponent,
 	LibraryCardProps,
-} from "./library-card"
+} from './library-card'
 
 export default {
-	title: "Cards/Library Card",
+	title: 'Cards/Library Card',
 	component: LibraryCardComponent,
 	args: {
-		headingTag: "h1",
+		headingTag: 'h1',
 	},
 	argTypes: {
 		onTagClick: {
-			action: "onTagClick",
+			action: 'onTagClick',
 		},
 	},
 } as Meta
@@ -23,7 +23,7 @@ export default {
 const Template: Story<LibraryCardProps> = (args) => (
 	<div
 		className={sprinkles({
-			backgroundColor: "surface4",
+			backgroundColor: 'surface4',
 			padding: 16,
 		})}
 	>

@@ -1,17 +1,17 @@
-import { Community } from "../../models/community"
-import { ResourceCard, ResourceCardProps } from "./resource-card"
+import { Community } from '../../models/community'
+import { ResourceCard, ResourceCardProps } from './resource-card'
 
 export type CommunityCardProps = Omit<
 	ResourceCardProps,
-	| "title"
-	| "subtitle"
-	| "image"
-	| "layout"
-	| "imageLayout"
-	| "href"
-	| "tags"
-	| "attributes"
-	| "children"
+	| 'title'
+	| 'subtitle'
+	| 'image'
+	| 'layout'
+	| 'imageLayout'
+	| 'href'
+	| 'tags'
+	| 'attributes'
+	| 'children'
 > & {
 	community: Community<string>
 }

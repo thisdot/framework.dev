@@ -1,9 +1,9 @@
-import classNames from "classnames"
-import React from "react"
-import { bookDecoratorStyle } from "./book-decorator.css"
+import classNames from 'classnames'
+import React from 'react'
+import { bookDecoratorStyle } from './book-decorator.css'
 
 export interface BookDecoratorProps
-	extends React.ComponentPropsWithoutRef<"div"> {}
+	extends React.ComponentPropsWithoutRef<'div'> {}
 
 export function BookDecorator({ children, className }: BookDecoratorProps) {
 	return (

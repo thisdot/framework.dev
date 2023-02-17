@@ -1,9 +1,9 @@
-import classNames from "classnames"
-import React from "react"
-import { counterStyle, CounterVariants } from "./counter.css"
+import classNames from 'classnames'
+import React from 'react'
+import { counterStyle, CounterVariants } from './counter.css'
 
 export interface CounterProps extends React.HTMLAttributes<HTMLSpanElement> {
-	size?: CounterVariants["size"]
+	size?: CounterVariants['size']
 }
 
 export function Counter({ children, className, size, ...props }: CounterProps) {

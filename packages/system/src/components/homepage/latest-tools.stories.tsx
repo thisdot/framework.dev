@@ -1,13 +1,13 @@
-import { Story, Meta } from "@storybook/react"
+import { Story, Meta } from '@storybook/react'
 import {
 	LatestTools as LatestToolsComponent,
 	LatestToolsProps,
-} from "./latest-tools"
-import { exampleTools } from "../../util/example-content"
-import { pxToRem } from "../../util/style-utils"
+} from './latest-tools'
+import { exampleTools } from '../../util/example-content'
+import { pxToRem } from '../../util/style-utils'
 
 export default {
-	title: "Home/Latest Tools",
+	title: 'Home/Latest Tools',
 	component: LatestToolsComponent,
 	args: {
 		tools: exampleTools,

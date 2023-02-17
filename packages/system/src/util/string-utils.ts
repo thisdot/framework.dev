@@ -1,8 +1,8 @@
-import camelCase from "lodash/camelCase"
-import kebabCase from "lodash/kebabCase"
-import startCase from "lodash/startCase"
+import camelCase from 'lodash/camelCase'
+import kebabCase from 'lodash/kebabCase'
+import startCase from 'lodash/startCase'
 
-import { titleCase } from "title-case"
+import { titleCase } from 'title-case'
 
 export function deserializeFieldValue<T extends string>(
 	inputValue: string,
@@ -38,10 +38,10 @@ export function formatFieldValue(inputValue: string) {
 
 export function formatAllFrameworkTitles(inputValue: string) {
 	switch (inputValue) {
-		case "graphql":
-			return "GraphQL"
-		case "solidjs":
-			return "SolidJS"
+		case 'graphql':
+			return 'GraphQL'
+		case 'solidjs':
+			return 'SolidJS'
 		default:
 			return formatFieldValue(inputValue)
 	}

@@ -1,4 +1,4 @@
-import { ISortConfig, ILibrary } from "./types"
+import { ISortConfig, ILibrary } from './types'
 
 export function sortLibraries(
 	libraries: ILibrary[],
@@ -6,12 +6,12 @@ export function sortLibraries(
 ): ILibrary[] {
 	return [...libraries].sort((a, b) => {
 		const valueA =
-			typeof a[sortConfig.by] === "string"
+			typeof a[sortConfig.by] === 'string'
 				? (a[sortConfig.by] as string).toUpperCase()
 				: a[sortConfig.by]
 
 		const valueB =
-			typeof b[sortConfig.by] === "string"
+			typeof b[sortConfig.by] === 'string'
 				? (b[sortConfig.by] as string).toUpperCase()
 				: b[sortConfig.by]
 
@@ -32,7 +32,7 @@ export function formatPercentage(value: number) {
 	}
 
 	return new Intl.NumberFormat([], {
-		style: "percent",
+		style: 'percent',
 	}).format(value)
 }
 

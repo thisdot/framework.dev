@@ -1,14 +1,14 @@
-import classNames from "classnames"
-import React from "react"
-import { GithubIcon } from "../../icons/github-icon"
-import { SponsorIcon } from "../../icons/sponsor-icon"
+import classNames from 'classnames'
+import React from 'react'
+import { GithubIcon } from '../../icons/github-icon'
+import { SponsorIcon } from '../../icons/sponsor-icon'
 import {
 	footerLinkStyle,
 	footerSponsorIconContainerStyle,
 	footerStyle,
-} from "./footer.css"
+} from './footer.css'
 
-export interface FooterProps extends React.ComponentPropsWithoutRef<"footer"> {}
+export interface FooterProps extends React.ComponentPropsWithoutRef<'footer'> {}
 
 export function Footer({ children, className, ...props }: FooterProps) {
 	return (
@@ -25,11 +25,11 @@ export function Footer({ children, className, ...props }: FooterProps) {
 			<div className={footerSponsorIconContainerStyle}>
 				<div>
 					<a href="https://www.netlify.com">
-						{" "}
+						{' '}
 						<img
 							src="https://www.netlify.com/v3/img/components/netlify-light.svg"
 							alt="Deploys by Netlify"
-						/>{" "}
+						/>{' '}
 					</a>
 				</div>
 				<div>

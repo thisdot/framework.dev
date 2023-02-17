@@ -1,4 +1,4 @@
-import { SearchableRecord } from "./search"
+import { SearchableRecord } from './search'
 
 /**
  * Represents a blog or community that
@@ -15,12 +15,12 @@ export interface Community<T extends string> extends SearchableRecord<T> {
 	type: string
 	/** A link to the community's website */
 	href: string
- 	/** Option to add a dark color to the background of the image */
+	/** Option to add a dark color to the background of the image */
 	darkImageBackground?: boolean
 }
 
 export const communityIndexMetadata = {
-	name: "communities",
-	searchableFields: ["description", "name"],
+	name: 'communities',
+	searchableFields: ['description', 'name'],
 	filterableFields: {},
 } as const

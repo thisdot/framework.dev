@@ -1,17 +1,17 @@
-import classNames from "classnames"
-import React from "react"
+import classNames from 'classnames'
+import React from 'react'
 import {
 	comparisonBoxStyle,
 	comparisonBoxHeadingStyle,
 	comparisonBoxHeadingSoftStyle,
 	comparisonBoxWhichLibsStyle,
 	comparisonBoxImageStyle,
-} from "./comparison-box.css"
-import { Chip } from "../chip"
-import { serializeFieldValue } from "../../util/string-utils"
+} from './comparison-box.css'
+import { Chip } from '../chip'
+import { serializeFieldValue } from '../../util/string-utils'
 
 export interface ComparisonBoxProps
-	extends React.ComponentPropsWithoutRef<"div"> {
+	extends React.ComponentPropsWithoutRef<'div'> {
 	imageSource?: string
 	libraryTags: string[]
 }
@@ -26,7 +26,7 @@ export function ComparisonBox({
 	return (
 		<div className={classNames(className, comparisonBoxStyle)} {...props}>
 			<h2 className={comparisonBoxHeadingStyle}>
-				Compare and select libraries{" "}
+				Compare and select libraries{' '}
 				<span className={comparisonBoxHeadingSoftStyle}>
 					based on your needs
 				</span>
@@ -38,7 +38,7 @@ export function ComparisonBox({
 				{libraryTags.slice(0, 6).map((tag) => (
 					<Chip
 						as="a"
-						style={{ margin: "0 8px 8px 0" }}
+						style={{ margin: '0 8px 8px 0' }}
 						key={tag}
 						href={`/categories/libraries/tags/${serializeFieldValue(tag)}`}
 					>
@@ -47,7 +47,7 @@ export function ComparisonBox({
 				))}
 			</div>
 			{imageSource && (
-				<img className={comparisonBoxImageStyle} src={imageSource} alt=""/>
+				<img className={comparisonBoxImageStyle} src={imageSource} alt="" />
 			)}
 		</div>
 	)

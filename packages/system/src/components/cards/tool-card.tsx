@@ -1,17 +1,17 @@
-import { Tool } from "../../models/tool"
-import { ResourceCard, ResourceCardProps } from "./resource-card"
+import { Tool } from '../../models/tool'
+import { ResourceCard, ResourceCardProps } from './resource-card'
 
 export type ToolCardProps = Omit<
 	ResourceCardProps,
-	| "title"
-	| "subtitle"
-	| "image"
-	| "layout"
-	| "imageLayout"
-	| "href"
-	| "tags"
-	| "attributes"
-	| "children"
+	| 'title'
+	| 'subtitle'
+	| 'image'
+	| 'layout'
+	| 'imageLayout'
+	| 'href'
+	| 'tags'
+	| 'attributes'
+	| 'children'
 > & {
 	tool: Tool<string>
 }

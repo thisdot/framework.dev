@@ -1,6 +1,6 @@
-import { style } from "@vanilla-extract/css"
-import { recipe, RecipeVariants } from "@vanilla-extract/recipes"
-import { pxToRem } from "../util/style-utils"
+import { style } from '@vanilla-extract/css'
+import { recipe, RecipeVariants } from '@vanilla-extract/recipes'
+import { pxToRem } from '../util/style-utils'
 
 export const iconStyle = recipe({
 	variants: {
@@ -14,17 +14,17 @@ export const iconStyle = recipe({
 				width: pxToRem(24),
 			},
 			full: {
-				height: "100%",
-				width: "100%",
+				height: '100%',
+				width: '100%',
 			},
 		},
 	},
 	defaultVariants: {
-		size: "medium",
+		size: 'medium',
 	},
 })
 export const flipHorizontallyStyle = style({
-	transform: "scaleX(-1)",
+	transform: 'scaleX(-1)',
 })
 
 export type IconVariants = RecipeVariants<typeof iconStyle>

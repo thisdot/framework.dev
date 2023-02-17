@@ -1,6 +1,6 @@
-import classNames from "classnames"
-import React from "react"
-import sampleSize from "lodash/sampleSize"
+import classNames from 'classnames'
+import React from 'react'
+import sampleSize from 'lodash/sampleSize'
 import {
 	contentBannerStyle,
 	contentBannerTextAreaStyle,
@@ -9,10 +9,10 @@ import {
 	contentBannerCardImageStyle,
 	contentBannerTitleStyle,
 	contentBannerHostStyle,
-} from "./content-banner.css"
+} from './content-banner.css'
 
 export interface ContentBannerProps
-	extends React.ComponentPropsWithoutRef<"div"> {
+	extends React.ComponentPropsWithoutRef<'div'> {
 	title: string
 	viewAll: { title: string; href: string }
 	items: {

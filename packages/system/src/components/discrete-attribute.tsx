@@ -1,21 +1,21 @@
-import classNames from "classnames"
-import React from "react"
-import { AdvancedIcon } from "../icons/advanced-icon"
-import { ArticleIcon } from "../icons/article-icon"
-import { BeginnerIcon } from "../icons/beginner-icon"
-import { FreeIcon } from "../icons/free-icon"
-import { InteractiveIcon } from "../icons/interactive-icon"
-import { IntermediateIcon } from "../icons/intermediate-icon"
-import { PaidIcon } from "../icons/paid-icon"
-import { IconProps } from "../icons/shared-icon-types"
-import { VideoIcon } from "../icons/video-icon"
-import { AttributeDefinition } from "../models/all-categories"
-import { sprinkles } from "../sprinkles/sprinkles.css"
-import { ColorTheme } from "../themes/theme-from-palette"
-import { formatFieldValue } from "../util/string-utils"
+import classNames from 'classnames'
+import React from 'react'
+import { AdvancedIcon } from '../icons/advanced-icon'
+import { ArticleIcon } from '../icons/article-icon'
+import { BeginnerIcon } from '../icons/beginner-icon'
+import { FreeIcon } from '../icons/free-icon'
+import { InteractiveIcon } from '../icons/interactive-icon'
+import { IntermediateIcon } from '../icons/intermediate-icon'
+import { PaidIcon } from '../icons/paid-icon'
+import { IconProps } from '../icons/shared-icon-types'
+import { VideoIcon } from '../icons/video-icon'
+import { AttributeDefinition } from '../models/all-categories'
+import { sprinkles } from '../sprinkles/sprinkles.css'
+import { ColorTheme } from '../themes/theme-from-palette'
+import { formatFieldValue } from '../util/string-utils'
 
 export interface DiscreteAttributeProps
-	extends React.ComponentPropsWithoutRef<"div"> {
+	extends React.ComponentPropsWithoutRef<'div'> {
 	attribute: AttributeDefinition
 	colorize?: boolean
 }
@@ -33,7 +33,7 @@ export function DiscreteAttribute({
 		<div
 			className={classNames(
 				className,
-				sprinkles({ layout: "row", alignItems: "center", gap: 6 }),
+				sprinkles({ layout: 'row', alignItems: 'center', gap: 6 }),
 				colorize && color && sprinkles({ color })
 			)}
 			{...props}
@@ -69,31 +69,31 @@ function attributeIcon(
 	attribute: AttributeDefinition
 ): React.ComponentType<IconProps> {
 	switch (attribute[0]) {
-		case "format": {
+		case 'format': {
 			switch (attribute[1]) {
-				case "interactive":
+				case 'interactive':
 					return InteractiveIcon
-				case "text":
+				case 'text':
 					return ArticleIcon
-				case "video":
+				case 'video':
 					return VideoIcon
 			}
 		}
-		case "level": {
+		case 'level': {
 			switch (attribute[1]) {
-				case "beginner":
+				case 'beginner':
 					return BeginnerIcon
-				case "intermediate":
+				case 'intermediate':
 					return IntermediateIcon
-				case "advanced":
+				case 'advanced':
 					return AdvancedIcon
 			}
 		}
-		case "paymentType": {
+		case 'paymentType': {
 			switch (attribute[1]) {
-				case "free":
+				case 'free':
 					return FreeIcon
-				case "paid":
+				case 'paid':
 					return PaidIcon
 			}
 		}
@@ -102,16 +102,16 @@ function attributeIcon(
 
 function attributeColor(
 	attribute: AttributeDefinition
-): keyof ColorTheme["themeColors"] | null {
+): keyof ColorTheme['themeColors'] | null {
 	switch (attribute[0]) {
-		case "level": {
+		case 'level': {
 			switch (attribute[1]) {
-				case "beginner":
-					return "beginner"
-				case "intermediate":
-					return "intermediate"
-				case "advanced":
-					return "advanced"
+				case 'beginner':
+					return 'beginner'
+				case 'intermediate':
+					return 'intermediate'
+				case 'advanced':
+					return 'advanced'
 			}
 		}
 		default:

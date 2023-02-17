@@ -1,7 +1,7 @@
-import classNames from "classnames"
-import React from "react"
-import sampleSize from "lodash/sampleSize"
-import { Book } from "../../models/book"
+import classNames from 'classnames'
+import React from 'react'
+import sampleSize from 'lodash/sampleSize'
+import { Book } from '../../models/book'
 import {
 	booksStyle,
 	emptyState,
@@ -13,10 +13,10 @@ import {
 	emptyStateBookBinding,
 	emptyStateBookCover,
 	emptyStateBookTitle,
-} from "./books.css"
-import { FeatureAndList } from "./feature-and-list"
+} from './books.css'
+import { FeatureAndList } from './feature-and-list'
 
-export interface BooksProps extends React.ComponentPropsWithoutRef<"div"> {
+export interface BooksProps extends React.ComponentPropsWithoutRef<'div'> {
 	books: Book<string>[]
 }
 
@@ -26,15 +26,15 @@ export function Books({ className, books, ...props }: BooksProps) {
 		<FeatureAndList
 			className={classNames(className, booksStyle)}
 			title="Top-tier books to read"
-			viewAll={{ title: "View all books", href: "/categories/books" }}
+			viewAll={{ title: 'View all books', href: '/categories/books' }}
 			items={randomBooks.map((book) => {
 				return {
-					image: { src: book.image, style: "book" },
+					image: { src: book.image, style: 'book' },
 					title: book.title,
-					metadata: book.authors.join(", "),
+					metadata: book.authors.join(', '),
 					href: book.href,
 					description: book.description,
-					attributes: [["level", book.level]],
+					attributes: [['level', book.level]],
 				}
 			})}
 			hideFeature

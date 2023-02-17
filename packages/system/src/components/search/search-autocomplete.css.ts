@@ -1,18 +1,18 @@
-import { globalStyle, style } from "@vanilla-extract/css"
-import { sprinkles } from "../../sprinkles/sprinkles.css"
-import { vars } from "../../themes/themes.css"
+import { globalStyle, style } from '@vanilla-extract/css'
+import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { vars } from '../../themes/themes.css'
 
-globalStyle(":root", {
+globalStyle(':root', {
 	vars: {
-		"--reach-combobox": "1",
+		'--reach-combobox': '1',
 	},
 })
 
 export const searchAutocompletePopoverStyle = sprinkles({
-	backgroundColor: "white",
-	textStyle: "bodyShort2",
-	borderX: "thin",
-	borderBottom: "thin",
+	backgroundColor: 'white',
+	textStyle: 'bodyShort2',
+	borderX: 'thin',
+	borderBottom: 'thin',
 })
 
 export const searchAutocompleteOptionStyle = style([
@@ -21,7 +21,7 @@ export const searchAutocompleteOptionStyle = style([
 		paddingY: 4,
 	}),
 	{
-		cursor: "pointer",
+		cursor: 'pointer',
 		selectors: {
 			'&[aria-selected="true"], &:hover': {
 				backgroundColor: vars.themeColors.primaryContainer,

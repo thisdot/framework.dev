@@ -1,10 +1,10 @@
-import Fuse from "fuse.js"
-import groupBy from "lodash/groupBy"
-import map from "lodash/map"
-import mapValues from "lodash/mapValues"
-import toPairs from "lodash/toPairs"
-import uniq from "lodash/uniq"
-import without from "lodash/without"
+import Fuse from 'fuse.js'
+import groupBy from 'lodash/groupBy'
+import map from 'lodash/map'
+import mapValues from 'lodash/mapValues'
+import toPairs from 'lodash/toPairs'
+import uniq from 'lodash/uniq'
+import without from 'lodash/without'
 import {
 	AllCategories,
 	AllModels,
@@ -12,16 +12,16 @@ import {
 	AttributeDefinition,
 	CategoryName,
 	FieldFilter,
-} from "../../models/all-categories"
-import { hasFieldEqualToValue } from "../../util/data-utils"
+} from '../../models/all-categories'
+import { hasFieldEqualToValue } from '../../util/data-utils'
 import {
 	deserializeFieldName,
 	deserializeFieldValue,
 	deserializeFieldValues,
 	serializeFieldName,
 	serializeFieldValue,
-} from "../../util/string-utils"
-import { FilterSet, QueryParams } from "./types"
+} from '../../util/string-utils'
+import { FilterSet, QueryParams } from './types'
 
 const filterRegex = /(\S+):(\S+)/g
 export function parseQueryString(
@@ -34,8 +34,8 @@ export function parseQueryString(
 
 	const isValidCategoryFilter = (
 		filterCandidate: readonly [string, string]
-	): filterCandidate is readonly ["in", CategoryName] =>
-		filterCandidate[0] === "in" &&
+	): filterCandidate is readonly ['in', CategoryName] =>
+		filterCandidate[0] === 'in' &&
 		availableFilters.category.some(
 			(possibleValue) => possibleValue === filterCandidate[1]
 		)
@@ -46,7 +46,7 @@ export function parseQueryString(
 		.map(([_, value]) => value)
 
 	const tags = deserializeFieldValues(
-		filters.filter(([key]) => key === "tag").map(([_key, value]) => value),
+		filters.filter(([key]) => key === 'tag').map(([_key, value]) => value),
 		availableFilters.tag
 	)
 
@@ -75,7 +75,7 @@ export function parseQueryString(
 	const fields = groupFieldFilters(
 		filters.map(deserializeFieldFilter).filter(isValidFieldFilter)
 	)
-	const textSearch = queryString.replace(filterRegex, "").trim()
+	const textSearch = queryString.replace(filterRegex, '').trim()
 
 	return {
 		filters: {
@@ -132,7 +132,7 @@ export function serializeQueryParams(params: QueryParams): string {
 			`${serializeFieldName(fieldName)}:${serializeFieldValue(value)}`
 	)
 
-	return [...categories, ...tags, ...fields, params.textSearch].join(" ")
+	return [...categories, ...tags, ...fields, params.textSearch].join(' ')
 }
 
 export function getWordCoordinatesAt(

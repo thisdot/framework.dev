@@ -1,18 +1,18 @@
-import React, { useCallback, useEffect, useRef, useState } from "react"
-import { Library } from "../../models/library"
+import React, { useCallback, useEffect, useRef, useState } from 'react'
+import { Library } from '../../models/library'
 import {
 	comparisonTableLibraryIconStyle,
 	comparisonTableStyle,
-} from "./comparison-table.css"
-import { ColHeading, RowHeading, TD } from "./components/cells"
-import { HorizontalScrollbar } from "./components/horizontal-scrollbar"
-import { ILibrary, ISortConfig } from "./types"
-import { formatNumber, formatPercentage, sortLibraries } from "./utils"
-import { CardSelector } from "./../cards/card-selector"
-import { Skeleton } from "../skeleton"
+} from './comparison-table.css'
+import { ColHeading, RowHeading, TD } from './components/cells'
+import { HorizontalScrollbar } from './components/horizontal-scrollbar'
+import { ILibrary, ISortConfig } from './types'
+import { formatNumber, formatPercentage, sortLibraries } from './utils'
+import { CardSelector } from './../cards/card-selector'
+import { Skeleton } from '../skeleton'
 
 export interface ComparisonTableProps
-	extends React.ComponentPropsWithoutRef<"div"> {
+	extends React.ComponentPropsWithoutRef<'div'> {
 	libraries: Library[]
 }
 
@@ -25,7 +25,7 @@ export function ComparisonTable({
 	const mountedRef = useRef<boolean>(false)
 	const [data, setData] = useState<ILibrary[]>([])
 	const [sortConfig, setSortConfig] = useState<ISortConfig>({
-		by: "name",
+		by: 'name',
 		asc: false,
 	})
 
@@ -35,7 +35,7 @@ export function ComparisonTable({
 				if (prevSort.by === heading) {
 					return { by: heading, asc: !prevSort.asc }
 				}
-				if (heading === "name" || heading === "author") {
+				if (heading === 'name' || heading === 'author') {
 					return { by: heading, asc: true }
 				}
 				return { by: heading, asc: false }
@@ -46,10 +46,10 @@ export function ComparisonTable({
 
 	useEffect(() => {
 		const parsedLibraries = libraries.map((library) => {
-			if (library.package.includes("npmjs.com")) {
+			if (library.package.includes('npmjs.com')) {
 				library.package = library.package.replace(
 					/(?:http(?:s)?:\/\/(?:www\.)?)npmjs\.com\/package\//,
-					""
+					''
 				)
 			}
 			return library
@@ -60,17 +60,17 @@ export function ComparisonTable({
 		async function fetchData() {
 			setLoading(true)
 			const npmsio = await fetch(`https://api.npms.io/v2/package/mget`, {
-				method: "POST",
+				method: 'POST',
 				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
+					'Content-Type': 'application/json',
+					Accept: 'application/json',
 				},
 				body: JSON.stringify(parsedLibraries.map((library) => library.package)),
 				signal: abortController.signal,
 			})
 				.then((res) => res.json())
 				.catch((error) => {
-					if (error.name === "AbortError") {
+					if (error.name === 'AbortError') {
 						return
 					}
 				})
@@ -96,10 +96,10 @@ export function ComparisonTable({
 
 			fetchData()
 				.then(() => {
-					handleSort("name")
+					handleSort('name')
 				})
 				.catch((error) => {
-					if (error.name === "AbortError") {
+					if (error.name === 'AbortError') {
 						return
 					}
 				})
@@ -121,7 +121,7 @@ export function ComparisonTable({
 			// Return 3 times
 			return Array.from({ length: 3 }, () => (
 				<>
-					<tr style={{ display: "contents" }}>
+					<tr style={{ display: 'contents' }}>
 						<RowHeading>
 							<Skeleton variant="circle" width={20} height={20} />
 						</RowHeading>
@@ -150,7 +150,7 @@ export function ComparisonTable({
 		}
 
 		return libraryStats.map((library) => (
-			<tr style={{ display: "contents" }} key={library.name}>
+			<tr style={{ display: 'contents' }} key={library.name}>
 				<RowHeading>
 					<CardSelector
 						checked={true}
@@ -181,10 +181,10 @@ export function ComparisonTable({
 					</a>
 				</TD>
 				<TD>{library.author}</TD>
-				<TD>{library.coverage ? formatPercentage(library.coverage) : "N/A"}</TD>
-				<TD>{library.downloads ? formatNumber(library.downloads) : "N/A"}</TD>
-				<TD>{library.health ? formatPercentage(library.health) : "N/A"}</TD>
-				<TD>{library.stars ? formatNumber(library.stars) : "N/A"}</TD>
+				<TD>{library.coverage ? formatPercentage(library.coverage) : 'N/A'}</TD>
+				<TD>{library.downloads ? formatNumber(library.downloads) : 'N/A'}</TD>
+				<TD>{library.health ? formatPercentage(library.health) : 'N/A'}</TD>
+				<TD>{library.stars ? formatNumber(library.stars) : 'N/A'}</TD>
 			</tr>
 		))
 	}
@@ -194,54 +194,54 @@ export function ComparisonTable({
 			{libraryStats && (
 				<HorizontalScrollbar>
 					<table className={comparisonTableStyle}>
-						<thead style={{ display: "contents" }}>
-							<tr style={{ display: "contents" }}>
+						<thead style={{ display: 'contents' }}>
+							<tr style={{ display: 'contents' }}>
 								<ColHeading></ColHeading>
 								<ColHeading
 									name="name"
 									sort={sortConfig}
-									onClick={() => handleSort("name")}
+									onClick={() => handleSort('name')}
 								>
 									Name
 								</ColHeading>
 								<ColHeading
 									name="author"
 									sort={sortConfig}
-									onClick={() => handleSort("author")}
+									onClick={() => handleSort('author')}
 								>
 									Author
 								</ColHeading>
 								<ColHeading
 									name="coverage"
 									sort={sortConfig}
-									onClick={() => handleSort("coverage")}
+									onClick={() => handleSort('coverage')}
 								>
 									Testing Coverage
 								</ColHeading>
 								<ColHeading
 									name="downloads"
 									sort={sortConfig}
-									onClick={() => handleSort("downloads")}
+									onClick={() => handleSort('downloads')}
 								>
 									Weekly Downloads
 								</ColHeading>
 								<ColHeading
 									name="health"
 									sort={sortConfig}
-									onClick={() => handleSort("health")}
+									onClick={() => handleSort('health')}
 								>
 									Overall Health
 								</ColHeading>
 								<ColHeading
 									name="stars"
 									sort={sortConfig}
-									onClick={() => handleSort("stars")}
+									onClick={() => handleSort('stars')}
 								>
 									Stars
 								</ColHeading>
 							</tr>
 						</thead>
-						<tbody style={{ display: "contents" }}>{handleTableRows()}</tbody>
+						<tbody style={{ display: 'contents' }}>{handleTableRows()}</tbody>
 					</table>
 				</HorizontalScrollbar>
 			)}

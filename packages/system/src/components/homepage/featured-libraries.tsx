@@ -1,17 +1,17 @@
-import classNames from "classnames"
-import React from "react"
-import sampleSize from "lodash/sampleSize"
+import classNames from 'classnames'
+import React from 'react'
+import sampleSize from 'lodash/sampleSize'
 import {
 	featuredLibrariesHeadingStyle,
 	featuredLibrariesListStyle,
 	featuredLibrariesStyle,
 	featuredLibrariesViewAllStyle,
-} from "./featured-libraries.css"
-import { Library } from "../../models/library"
-import { LibraryCard } from "../cards/library-card"
+} from './featured-libraries.css'
+import { Library } from '../../models/library'
+import { LibraryCard } from '../cards/library-card'
 
 export interface FeaturedLibrariesProps
-	extends React.ComponentPropsWithoutRef<"div"> {
+	extends React.ComponentPropsWithoutRef<'div'> {
 	title: string
 	libraries: Library[]
 	libraryTags: string[]

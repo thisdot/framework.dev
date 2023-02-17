@@ -1,19 +1,19 @@
-import { createTheme, createThemeContract } from "@vanilla-extract/css"
-import { angularColorPalette } from "./angular-color-scheme"
-import { landingColorPalette } from "./landing-color-scheme"
-import { nodejsColorPalette } from "./nodejs-color-scheme"
-import { qwikColorPalette } from "./qwik-color-scheme"
-import { reactColorPalette } from "./react-color-scheme"
-import { solidJSColorPalette } from "./solidjs-color-scheme"
-import { svelteColorPalette } from "./svelte-color-scheme"
-import { graphqlColorPalette } from "./graphql-color-scheme"
+import { createTheme, createThemeContract } from '@vanilla-extract/css'
+import { angularColorPalette } from './angular-color-scheme'
+import { landingColorPalette } from './landing-color-scheme'
+import { nodejsColorPalette } from './nodejs-color-scheme'
+import { qwikColorPalette } from './qwik-color-scheme'
+import { reactColorPalette } from './react-color-scheme'
+import { solidJSColorPalette } from './solidjs-color-scheme'
+import { svelteColorPalette } from './svelte-color-scheme'
+import { graphqlColorPalette } from './graphql-color-scheme'
 import {
 	blankPalette,
 	darkThemeFromPalette,
 	lightThemeFromPalette,
-} from "./theme-from-palette"
-import { vueColorPalette } from "./vue-color-scheme"
-import { denoColorPalette } from "./deno-color-scheme"
+} from './theme-from-palette'
+import { vueColorPalette } from './vue-color-scheme'
+import { denoColorPalette } from './deno-color-scheme'
 
 export const vars = createThemeContract(lightThemeFromPalette(blankPalette))
 

@@ -1,5 +1,5 @@
-import classNames from "classnames"
-import React from "react"
+import classNames from 'classnames'
+import React from 'react'
 
 import {
 	searchStyle,
@@ -7,12 +7,12 @@ import {
 	searchIconStyle,
 	searchInputStyle,
 	searchLabelStyle,
-} from "./search.css"
-import { SearchIcon } from "../../icons/search-icon"
-import { visuallyHidden } from "../../styles/utilities.css"
-import { Button } from "../button"
+} from './search.css'
+import { SearchIcon } from '../../icons/search-icon'
+import { visuallyHidden } from '../../styles/utilities.css'
+import { Button } from '../button'
 
-export interface SearchProps extends React.ComponentPropsWithoutRef<"input"> {}
+export interface SearchProps extends React.ComponentPropsWithoutRef<'input'> {}
 
 export function Search({ className, onReset, ...props }: SearchProps) {
 	return (
