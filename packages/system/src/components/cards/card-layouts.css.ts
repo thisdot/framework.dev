@@ -17,6 +17,9 @@ export const titleFirstCardGrid = style([
 			[breakpoints.tablet]: {
 				gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))",
 			},
+			[breakpoints.desktop]: {
+				gridTemplateColumns: "repeat(auto-fit, minmax(360px, .5fr))",
+			},
 		},
 	},
 ])
