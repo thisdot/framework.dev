@@ -69,7 +69,8 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		name: 'DigitalOcean Community',
 		description:
 			'DigitalOcean Community is a blog related to general Web development, with categories spanning across CSS, general JavaScript, and frameworks like Vue',
-		image: 'https://www.digitalocean.com/_next/static/media/logo.87a8f3b8.svg',
+		image:
+			'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/DigitalOcean_logo.svg/1200px-DigitalOcean_logo.svg.png',
 		type: 'forum',
 		href: 'https://www.digitalocean.com/community/tags/vue-js',
 		tags: [],
