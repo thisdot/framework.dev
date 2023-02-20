@@ -9,16 +9,6 @@ Framework.dev is a knowledge base for different frontend frameworks
 - `@framework/site` is the code for the actual sites. Each site has a different
   set of data in the `src/data` folder.
 
-## Creating the .env file
-
-Add the following contents to the `.env`. This file will be used to set the node
-environment to development.
-
-```bash
-NODE_ENV=development
-
-```
-
 ## Running locally
 
 First of all, `yarn install`
