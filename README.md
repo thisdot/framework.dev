@@ -11,16 +11,11 @@ Framework.dev is a knowledge base for different frontend frameworks
 
 ## Creating the .env file
 
-Run the following code below to copy the contents of the `.env.example` file
-over to a new `.env` file. This file will be used to set the node environment to
-development.
+Add the following contents to the `.env`. This file will be used to set the node
+environment to development.
 
 ```bash
-# macOS/Linux
-cp .env.example .env
-
-# Windows
-copy .env.example .env
+NODE_ENV=development
 
 ```
 
