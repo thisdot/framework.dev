@@ -13,8 +13,8 @@ Framework.dev is a knowledge base for different frontend frameworks
 
 First of all, `yarn install`
 
-Dev servers for specific packages can be run with `yarn dev:<package-name>`
-e.g. `yarn dev:system` or `yarn dev:react`.
+Dev servers for specific packages can be run with `yarn dev:<package-name>` e.g.
+`yarn dev:system` or `yarn dev:react`.
 
 ### Known issues
 
