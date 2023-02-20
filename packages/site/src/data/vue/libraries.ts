@@ -122,10 +122,10 @@ export const libraries: Library[] = [
 		author: 'quatrochan',
 		repo: 'https://www.github.com/quatrochan/Equal',
 		package: 'https://www.npmjs.com/package/equal-vue',
-		href: 'https://quatrochan.github.io/Equal/',
+		href: 'https://equal-ui.github.io/Equal/',
 		description:
 			'Equal UI is a Vue 3 components library with 30+ components based on TypeScript and personal design system.',
-		image: 'https://quatrochan.github.io/Equal/eqqqual.png',
+		image: 'https://equal-ui.github.io/Equal/logo.svg',
 		tags: [LibraryTag.COMPONENT],
 		language: 'TypeScript',
 	},
@@ -150,7 +150,7 @@ export const libraries: Library[] = [
 		description:
 			'PrimeVue is a rich set of open source UI Components for Vue. See PrimeVue homepage for live showcase and documentation.',
 		image:
-			'https://www.primefaces.org/primevue/demo/images/primevue-logo-dark.svg',
+			'https://primefaces.org/cdn/primevue/images/landing/overview-icon.svg',
 		tags: [LibraryTag.COMPONENT],
 		language: 'TypeScript',
 	},
@@ -246,7 +246,7 @@ export const libraries: Library[] = [
 		href: 'https://www.naiveui.com/',
 		description:
 			'A Vue 3 Component Library. Fairly Complete, Customizable Themes, Uses TypeScript, Not Too Slow. Kinda Interesting.',
-		image: 'https://www.naiveui.com/assets/naivelogo.93278402.svg',
+		image: 'https://www.naiveui.com/assets/naivelogo-93278402.svg',
 		tags: [LibraryTag.COMPONENT],
 		language: 'TypeScript',
 	},
