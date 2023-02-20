@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import { iconStyle } from './icon.css'
 
 export const DenoIcon = React.forwardRef<SVGSVGElement, IconProps>(
-	function DenoIcon({ className, size, ...props }) {
+	function DenoIcon({ className, size, ...props }, ref) {
 		return (
 			<svg
 				className={classNames(className, iconStyle({ size }))}
@@ -13,6 +13,7 @@ export const DenoIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				viewBox="0 0 256 256"
 				version="1.1"
 				xmlns="http://www.w3.org/2000/svg"
+				ref={ref}
 				{...props}
 			>
 				<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
