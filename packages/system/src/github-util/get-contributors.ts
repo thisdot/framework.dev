@@ -10,14 +10,21 @@ interface ContributorApiData {
 export const getContributorsData = async (): Promise<ContributorData[]> => {
 	const runFetch = async () => {
 		const abortError = new AbortError('Failed to fetch contributors')
-		const response = await fetch(
-			'https://api.github.com/repos/thisdot/framework.dev/contributors?anon=1',
-			{
-				headers: {
-					Authorization: `Token ${process.env.GITHUB_API_ACCESS_TOKEN}`,
-				},
-			}
-		)
+		const response =
+			process.env.NODE_ENV !== 'development'
+				? await fetch(
+						'https://api.github.com/repos/thisdot/framework.dev/contributors?anon=1',
+
+						{
+							headers: {
+								Authorization: `Token ${process.env.GITHUB_API_ACCESS_TOKEN}`,
+							},
+						}
+				  )
+				: await fetch(
+						'https://api.github.com/repos/thisdot/framework.dev/contributors?anon=1'
+				  )
+
 		if (!response.ok) {
 			throw abortError
 		}

@@ -9,12 +9,27 @@ Framework.dev is a knowledge base for different frontend frameworks
 - `@framework/site` is the code for the actual sites. Each site has a different
   set of data in the `src/data` folder.
 
+## Creating the .env file
+
+Run the following code below to copy the contents of the `.env.example` file
+over to a new `.env` file. This file will be used to set the node environment to
+development.
+
+```bash
+# macOS/Linux
+cp .env.example .env
+
+# Windows
+copy .env.example .env
+
+```
+
 ## Running locally
 
 First of all, `yarn install`
 
-Dev servers for specific packages can be run with `yarn dev:<package-name>`
-e.g. `yarn dev:system` or `yarn dev:react`.
+Dev servers for specific packages can be run with `yarn dev:<package-name>` e.g.
+`yarn dev:system` or `yarn dev:react`.
 
 ### Known issues
 
