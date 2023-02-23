@@ -15,17 +15,6 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 		tags: ['general, node, full stack'],
 	},
 	{
-		title: 'Build IT Better',
-		image:
-			'https://deow9bq0xqvbj.cloudfront.net/image-logo/15574924/Logo_49ei9w.jpg',
-		hosts: ['This Dot Media'],
-		description:
-			'Build it Better is a podcast that focuses on advanced architecture and web development. In each episode, experts in these fields share their insights and knowledge on the latest technologies, techniques, and trends in the industry.',
-		rss: 'https://feed.podbean.com/builditbetter/feed.xml',
-		href: 'https://builditbetter.podbean.com',
-		tags: ['general, node, full stack'],
-	},
-	{
 		title: 'Node University',
 		image:
 			'https://image.simplecastcdn.com/images/22e03652-cb4c-4b80-920e-6a552342f860/3d943f85-29f1-4f33-ab5e-0d5f6c74edec/480x480/1515463707-artwork@2x.jpg',
@@ -176,6 +165,17 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 			"Full Stack Leader is a series of interviews with today's leading technology leaders. The show will cover how they work across some of the main concepts in organizational leadership and resourcing, with a slant toward the digital space. In each episode we sit down with a different leader to hear key stories about their leadership journey as well as run through their Top 5 Tips for inspiring a great team of creators, builders, and innovative thinkers.",
 		rss: 'https://feeds.buzzsprout.com/1815739.rss',
 		href: 'https://player.fm/series/full-stack-leader',
+		tags: ['general, node, full stack'],
+	},
+	{
+		title: 'Build IT Better',
+		image:
+			'https://deow9bq0xqvbj.cloudfront.net/image-logo/15574924/Logo_49ei9w.jpg',
+		hosts: ['This Dot Media'],
+		description:
+			'Build it Better is a podcast that focuses on advanced architecture and web development. In each episode, experts in these fields share their insights and knowledge on the latest technologies, techniques, and trends in the industry.',
+		rss: 'https://feed.podbean.com/builditbetter/feed.xml',
+		href: 'https://builditbetter.podbean.com',
 		tags: ['general, node, full stack'],
 	},
 ]

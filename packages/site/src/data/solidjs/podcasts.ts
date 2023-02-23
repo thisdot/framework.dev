@@ -4,17 +4,6 @@ export const podcastTags = ['general', 'solidjs'] as const
 
 export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 	{
-		title: 'Build IT Better',
-		image:
-			'https://deow9bq0xqvbj.cloudfront.net/image-logo/15574924/Logo_49ei9w.jpg',
-		hosts: ['This Dot Media'],
-		description:
-			'Build it Better is a podcast that focuses on advanced architecture and web development. In each episode, experts in these fields share their insights and knowledge on the latest technologies, techniques, and trends in the industry.',
-		rss: 'https://feed.podbean.com/builditbetter/feed.xml',
-		href: 'https://builditbetter.podbean.com',
-		tags: ['general'],
-	},
-	{
 		title: 'A Solid option for building UIs',
 		image: 'https://public.overcast-cdn.com/art/554901?v198',
 		hosts: ['JS Party', 'Ryan Carniato'],
@@ -55,5 +44,16 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 		rss: '',
 		href: 'https://modernweb.podbean.com/e/s09e12-modern-web-podcast-introduction-to-solidjs-with-ryan-carniato/',
 		tags: ['solidjs'],
+	},
+	{
+		title: 'Build IT Better',
+		image:
+			'https://deow9bq0xqvbj.cloudfront.net/image-logo/15574924/Logo_49ei9w.jpg',
+		hosts: ['This Dot Media'],
+		description:
+			'Build it Better is a podcast that focuses on advanced architecture and web development. In each episode, experts in these fields share their insights and knowledge on the latest technologies, techniques, and trends in the industry.',
+		rss: 'https://feed.podbean.com/builditbetter/feed.xml',
+		href: 'https://builditbetter.podbean.com',
+		tags: ['general'],
 	},
 ]

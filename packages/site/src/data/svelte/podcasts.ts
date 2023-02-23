@@ -15,17 +15,6 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 		tags: ['general'],
 	},
 	{
-		title: 'Build IT Better',
-		image:
-			'https://deow9bq0xqvbj.cloudfront.net/image-logo/15574924/Logo_49ei9w.jpg',
-		hosts: ['This Dot Media'],
-		description:
-			'Build it Better is a podcast that focuses on advanced architecture and web development. In each episode, experts in these fields share their insights and knowledge on the latest technologies, techniques, and trends in the industry.',
-		rss: 'https://feed.podbean.com/builditbetter/feed.xml',
-		href: 'https://builditbetter.podbean.com',
-		tags: ['general'],
-	},
-	{
 		title: 'Svelte Radio',
 		image:
 			'https://is2-ssl.mzstatic.com/image/thumb/Podcasts125/v4/aa/0e/a5/aa0ea55d-8062-f108-8795-e6235bfc2981/mza_13727194331333927580.jpg/500x500bb.jpg',
@@ -66,6 +55,17 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 			'In this Hasty Treat, Wes and Scott talk about how to do things in Svelte.',
 		rss: 'http://feed.syntax.fm/rss',
 		href: 'https://syntax.fm/show/413/how-to-do-things-in-svelte',
+		tags: ['general'],
+	},
+	{
+		title: 'Build IT Better',
+		image:
+			'https://deow9bq0xqvbj.cloudfront.net/image-logo/15574924/Logo_49ei9w.jpg',
+		hosts: ['This Dot Media'],
+		description:
+			'Build it Better is a podcast that focuses on advanced architecture and web development. In each episode, experts in these fields share their insights and knowledge on the latest technologies, techniques, and trends in the industry.',
+		rss: 'https://feed.podbean.com/builditbetter/feed.xml',
+		href: 'https://builditbetter.podbean.com',
 		tags: ['general'],
 	},
 ]
