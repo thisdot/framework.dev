@@ -15,6 +15,17 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 		tags: ['general, node, full stack'],
 	},
 	{
+		title: 'Build IT Better',
+		image:
+			'https://deow9bq0xqvbj.cloudfront.net/image-logo/15574924/Logo_49ei9w.jpg',
+		hosts: ['This Dot Media'],
+		description:
+			'Build it Better is a podcast that focuses on advanced architecture and web development. In each episode, experts in these fields share their insights and knowledge on the latest technologies, techniques, and trends in the industry.',
+		rss: 'https://feed.podbean.com/builditbetter/feed.xml',
+		href: 'https://builditbetter.podbean.com',
+		tags: ['general, node, full stack'],
+	},
+	{
 		title: 'Node University',
 		image:
 			'https://image.simplecastcdn.com/images/22e03652-cb4c-4b80-920e-6a552342f860/3d943f85-29f1-4f33-ab5e-0d5f6c74edec/480x480/1515463707-artwork@2x.jpg',
