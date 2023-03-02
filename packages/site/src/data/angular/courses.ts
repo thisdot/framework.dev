@@ -205,7 +205,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 		title: 'Decoded Frontend',
 		author: 'Dmytro Mezhenskyi',
 		image:
-			'https://yt3.ggpht.com/ytc/AKedOLTRAN09hQv5mKM-q_dPdOo57tg14n3qKnx-bQNu0Q=s88-c-k-c0x00ffffff-no-rj',
+			'https://yt3.googleusercontent.com/ytc/AL5GRJXYcSu1PodvdB-HYAtiaFVjig2HJbCiJXTS7TGZmg=s900-c-k-c0x00ffffff-no-rj',
 		description:
 			'Decoded Training is a series of video tutorials about Angular and generally about web development. New videos are published on a biweekly basis.',
 		paymentType: 'free',
