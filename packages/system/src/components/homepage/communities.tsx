@@ -19,7 +19,7 @@ export function Communities({
 	return (
 		<ContentBanner
 			className={classNames(className, communitiesStyle)}
-			title="Connect with the React Community"
+			title="Discover new communities"
 			viewAll={{
 				title: 'View all communities',
 				href: '/categories/communities',
