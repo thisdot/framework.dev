@@ -27,7 +27,7 @@ export function ResourcesInfoBanner({
 }: ResourcesInfoBannerProps) {
 	return (
 		<div {...props} className={classNames(className, resourcesInfoBannerStyle)}>
-			<h4 className={resourcesInfoBannerHeadingStyle}>{title}</h4>
+			<h2 className={resourcesInfoBannerHeadingStyle}>{title}</h2>
 			<p className={resourcesInfoBannerDescriptionStyle}>{description}</p>
 			<LinkCardGroupComponent
 				className={resourcesInfoBannerCardsStyle}
