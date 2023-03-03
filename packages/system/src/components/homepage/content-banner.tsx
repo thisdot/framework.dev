@@ -35,7 +35,7 @@ export function ContentBanner({
 	return (
 		<div className={classNames(className, contentBannerStyle)} {...props}>
 			<div className={contentBannerTextAreaStyle}>
-				<h2 className={contentBannerHeadingStyle}>Discover new communities</h2>
+				<h2 className={contentBannerHeadingStyle}>{title}</h2>
 				<a className={contentBannersViewAllStyle} href={viewAll.href}>
 					{viewAll.title}
 				</a>
