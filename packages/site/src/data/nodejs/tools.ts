@@ -138,7 +138,8 @@ export const tools: Tool<(typeof toolTags)[number]>[] = [
 		author: 'Marcel Klehr',
 		description:
 			'A node.js and npm version manager for the windows folks out there. Inspired by n. And nodenv.',
-		image: '', // could not find a logo
+		image:
+			'https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/node-512.png',
 		href: 'https://github.com/nullivex/nodist',
 		tags: ['development'],
 	},

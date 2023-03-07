@@ -57,7 +57,7 @@ export const blogs: Blog<(typeof blogTags)[number]>[] = [
 		description:
 			'Personal developer blog of online courses creator and Syntax podcast host, Wes Bos',
 		image:
-			'https://wesbos.com/static/46c8f12c015f9bdd7cccd17d294da646/497c6/logo.png',
+			'https://wesbos.com/static/46c8f12c015f9bdd7cccd17d294da646/34fa1/logo.webp',
 		href: 'https://wesbos.com/blog',
 		tags: [],
 	},
