@@ -101,8 +101,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		name: 'JS Conf Chile',
 		description:
 			'2 days of international speakers, community, learning and connections.',
-		image:
-			'https://pbs.twimg.com/profile_images/1355572943552655362/QpnPItbv_400x400.jpg',
+		image: 'https://jsconf.com/images/jsconf_cl.png',
 		type: 'Live Events',
 		href: 'https://jsconf.cl/',
 		tags: ['conferences'],

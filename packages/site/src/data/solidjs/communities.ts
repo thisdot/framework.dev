@@ -99,8 +99,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		name: 'Xtremejs',
 		description:
 			'Professional development conference dedicated to all things JavaScript.',
-		image:
-			'https://pbs.twimg.com/profile_images/1355572943552655362/QpnPItbv_400x400.jpg',
+		image: 'https://jsconf.com/images/jsconf_cl.png',
 		type: 'Online Events',
 		href: 'https://xtremejs.dev/',
 		tags: ['conferences'],
