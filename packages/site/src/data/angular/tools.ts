@@ -68,7 +68,7 @@ export const tools: Tool<(typeof toolTags)[number]>[] = [
 		description:
 			'An open source tool for building enterprise angular components, directives, and pipes in isolation.',
 		image:
-			'https://raw.githubusercontent.com/SoCreate/angular-playground/HEAD/assets/angular-playground.png',
+			'https://user-images.githubusercontent.com/76821/223243218-ac34d657-3bc1-4718-9b29-9acd98874756.png',
 		href: 'https://angularplayground.it/',
 		tags: ['development'],
 	},
