@@ -87,7 +87,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 		level: 'intermediate',
 		format: 'video',
 		image:
-			'https://yt3.ggpht.com/XnZIeUhhkHTU1iY_veQpGnWqTwLKWLM7r44sMRmQxZ7Xg3RUdmZYik3oBI5rYCj78TG1MeD5BLY=s88-c-k-c0x00ffffff-no-rj',
+			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZBw_ifNJp7Gy91I-USs9ZuCEdEsuj_xi956AKcENkyg&s',
 		href: 'https://www.youtube.com/watch?v=rvTkn1fffQ8',
 		tags: ['deno', 'backend', 'fresh framework', 'typescript', 'data fetching'],
 	},
@@ -100,7 +100,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 		level: 'advanced',
 		format: 'video',
 		image:
-			'https://yt3.ggpht.com/ytc/AMLnZu9UWrGceKWaqm8AF89vuxrEt8MO3E59qOoQ785Lew=s88-c-k-c0x00ffffff-no-rj',
+			'https://d33wubrfki0l68.cloudfront.net/bbfa33a202e8612d49b6c1ed05c1fdd8e4001566/bbdd1/img/fcc_secondary_small.svg',
 		href: 'https://www.youtube.com/watch?v=TQUy8ENesGY',
 		tags: [
 			'deno',
@@ -120,7 +120,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 		level: 'advanced',
 		format: 'video',
 		image:
-			'https://yt3.ggpht.com/ytc/AMLnZu_7gy6Bvbaws1-hAz7h9mNLCtiIpzxYqq7bcg-SVg=s88-c-k-c0x00ffffff-no-rj',
+			'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZBw_ifNJp7Gy91I-USs9ZuCEdEsuj_xi956AKcENkyg&s',
 		href: 'https://www.youtube.com/watch?v=nBrcmlrekV4',
 		tags: ['deno', 'backend', 'fresh framework', 'typescript'],
 	},
