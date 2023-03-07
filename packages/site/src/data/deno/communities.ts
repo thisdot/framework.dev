@@ -98,7 +98,8 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		name: 'DevTernity',
 		description:
 			'Turning developers into architects and engineering leaders since 2015.',
-		image: 'https://devternity.com/images/favicon.png',
+		image:
+			'https://raw.githubusercontent.com/devternity/graphics/master/logos/devternity_2017_square_black_bg.png',
 		type: 'Live Events',
 		href: 'https://devternity.com/',
 		tags: ['conferences'],

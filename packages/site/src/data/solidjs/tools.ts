@@ -18,7 +18,7 @@ export const tools: Tool<(typeof toolTags)[number]>[] = [
 		description:
 			'Create elegant screenshots of your source code. Built with SolidJS.',
 		image:
-			'https://github.com/riccardoperra/codeimage/raw/main/banner.png?raw=true',
+			'https://raw.githubusercontent.com/riccardoperra/codeimage/main/apps/website/public/favicon.svg',
 		href: 'https://github.com/riccardoperra/codeimage',
 		tags: ['generator'],
 	},
@@ -27,7 +27,7 @@ export const tools: Tool<(typeof toolTags)[number]>[] = [
 		author: 'MrFoxPro',
 		description: 'Blocks-based collaborative editor more coming soon...',
 		image:
-			'https://user-images.githubusercontent.com/17229619/167316774-9ed7ffa6-32a6-4c82-8a76-f79e0d2f9a17.png',
+			'https://raw.githubusercontent.com/MrFoxPro/bloki/master/web/assets/img/logo-bricks.svg',
 		href: 'https://github.com/MrFoxPro/bloki',
 		tags: ['Editor'],
 	},
@@ -36,7 +36,8 @@ export const tools: Tool<(typeof toolTags)[number]>[] = [
 		author: 'Kevin Jin',
 		description:
 			'This tool is designed to generate contrast ready color pallets built specifically for UIUX design.',
-		image: 'https://github.com/kevintyj/ambient/raw/master/public/ambient.png',
+		image:
+			'https://raw.githubusercontent.com/kevintyj/ambient/master/public/safari-pinned-tab.svg',
 		href: 'https://ambient-rvx.web.app',
 		tags: ['generator'],
 	},
@@ -44,7 +45,7 @@ export const tools: Tool<(typeof toolTags)[number]>[] = [
 		name: 'Solid Markdown',
 		author: 'Andi Rosca',
 		description: 'Render Markdown as Solid components',
-		image: 'https://github.com/andi23rosca.png',
+		image: 'https://github.com/solidjs-community.png',
 		href: 'https://github.com/andi23rosca/solid-markdown',
 		tags: ['markdown'],
 	},
@@ -53,8 +54,7 @@ export const tools: Tool<(typeof toolTags)[number]>[] = [
 		author: 'thisbeyond',
 		description:
 			'A lightweight, performant, extensible drag and drop toolkit for Solid JS.',
-		image:
-			'https://github.com/thisbeyond/solid-dnd/raw/main/resources/solid-dnd-website-preview.png',
+		image: 'https://github.com/solidjs-community.png',
 		href: 'https://solid-dnd.com',
 		tags: ['dragndrop'],
 	},
@@ -73,7 +73,7 @@ export const tools: Tool<(typeof toolTags)[number]>[] = [
 		description:
 			'Click on UI Component in the browser to open its code in your IDE.',
 		image:
-			'https://github.com/infi-pc/locatorjs/raw/master/docs/logo-noborders.png',
+			'https://raw.githubusercontent.com/infi-pc/locatorjs/master/apps/web/public/icon.svg',
 		href: 'https://github.com/infi-pc/locatorjs',
 		tags: ['development'],
 	},
@@ -82,7 +82,7 @@ export const tools: Tool<(typeof toolTags)[number]>[] = [
 		author: 'Aditya Agarwal',
 		description: 'UI Library for Command Palette in SolidJS webapps.',
 		image:
-			'https://github.com/itaditya/solid-command-palette/raw/main/public/images/branding/logo-dark-horizontal-large.png#gh-dark-mode-only',
+			'https://solid-command-palette.vercel.app/images/branding/logo-light-stamp.svg',
 		href: 'https://github.com/itaditya/solid-command-palette',
 		tags: ['Command palette'],
 	},
@@ -91,8 +91,7 @@ export const tools: Tool<(typeof toolTags)[number]>[] = [
 		author: 'Damian Tarnawski',
 		description:
 			'Library of developer tools, reactivity debugger & Devtools Chrome extension for visualizing SolidJS reactivity graph',
-		image:
-			'https://camo.githubusercontent.com/a27d2ac8b884980c310307e9f3052388051e1ebf8dd2cc39d4e3f4883eca937f/68747470733a2f2f6173736574732e736f6c69646a732e636f6d2f62616e6e65723f747970653d446576656c6f706572253230546f6f6c73266261636b67726f756e643d74696c65732670726f6a6563743d253230',
+		image: 'https://github.com/solidjs-community.png',
 		href: 'https://github.com/thetarnav/solid-devtools',
 		tags: ['development'],
 	},
