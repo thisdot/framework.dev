@@ -297,4 +297,13 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		href: 'https://www.jsday.ie/',
 		tags: ['conferences'],
 	},
+	{
+		name: 'Angular Nation',
+		description:
+			'A free and friendly place to network and collaborate with Angular developers just  like you!',
+		image: 'https://pbs.twimg.com/profile_images/1331571398834315264/xtrGFRx-_400x400.jpg',
+		type: 'Online Events',
+		href: 'https://www.angularnation.net/',
+		tags: ['meetups'],
+	}
 ]
