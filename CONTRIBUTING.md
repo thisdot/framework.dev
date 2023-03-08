@@ -5,13 +5,27 @@ repository, you are agreeing to its rules.
 
 ## Table of contents<!-- omit in toc -->
 
+- [How to run the project locally](#how-to-run-the-project-locally)
 - [Guidelines for content submission](#guidelines-for-content-submission)
   - [Courses](#courses)
   - [Blogs](#blogs)
 - [How to add content to framework.dev](#how-to-add-content-to-frameworkdev)
 - [Code Guidelines](#code-guidelines)
 - [Submitting a Pull Request (PR)](#submitting-a-pull-request-pr)
-- [New framework Guidelines](#new-framework-guidelines)
+- [New Framework Guidelines](#new-framework-guidelines)
+
+## How to run the project locally
+
+After you have cloned the project, run `yarn install` in your terminal to
+install the dependencies.
+
+To run any of the dev servers for specific packages, you can use `yarn dev:<package-name>`.
+
+For example:
+
+- `yarn dev:system`
+- `yarn dev:react`
+- `yarn dev:angular`
 
 ## Guidelines for content submission
 
@@ -43,7 +57,8 @@ documentation on how each field should be populated, so consult them before
 filling out new content.
 
 Each list of content items have as well a list of tags used to tag the content,
-such tags are type-checked with a `const` tags variable at the top of each file. There are certain rules to add a new tag:
+such tags are type-checked with a `const` tags variable at the top of each file.
+There are certain rules to add a new tag:
 
 - **Naming convention** - Tag names can be written in all lowercase except when
   the technology has more than one capital letter in it. For example, React will
