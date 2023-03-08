@@ -139,7 +139,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 		title: 'Server-Side GraphQL ',
 		author: 'Scott Moss',
 		image:
-			'https://pbs.twimg.com/profile_images/1563402109764022274/GYLY9j6g_400x400.jpg',
+			'https://static.frontendmasters.com/assets/courses/2019-11-25-server-graphql-nodejs/thumb.webp',
 		description:
 			'Learn everything you need to create a GraphQL API on the server in Node.js with Apollo Server.',
 		paymentType: 'paid',
@@ -152,7 +152,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 		title: 'Client-Side GraphQL ',
 		author: 'Scott Moss',
 		image:
-			'https://pbs.twimg.com/profile_images/1563402109764022274/GYLY9j6g_400x400.jpg',
+			'https://static.frontendmasters.com/assets/courses/2019-12-03-client-graphql-react/thumb.webp',
 		description:
 			'Learn to use GraphQL on the client-side using React with Apollo Client.',
 		paymentType: 'paid',
@@ -256,7 +256,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 		title: 'Advanced GraphQL ',
 		author: 'Scott Moss',
 		image:
-			'https://pbs.twimg.com/profile_images/1563402109764022274/GYLY9j6g_400x400.jpg',
+			'https://static.frontendmasters.com/assets/courses/2020-02-17-advanced-graphql-v2/thumb.webp',
 		description:
 			'Become a GraphQL master by learning to build production-ready GraphQL APIs in Node.js and Apollo Server.',
 		paymentType: 'paid',
