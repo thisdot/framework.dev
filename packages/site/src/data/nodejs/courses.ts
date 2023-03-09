@@ -91,7 +91,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 		title: 'Node.js Tutorial for Beginners: Learn Node in 1 Hour',
 		author: 'Mosh Hamedani',
 		image:
-			'https://yt3.ggpht.com/tBEPr-zTNXEeae7VZKSZYfiy6azzs9OHowq5ZvogJeHoVtKtEw2PXSwzMBKVR7W0MI7gyND8=s88-c-k-c0x00ffffff-no-rj',
+			'https://yt3.ggpht.com/tBEPr-zTNXEeae7VZKSZYfiy6azzs9OHowq5ZvogJeHoVtKtEw2PXSwzMBKVR7W0MI7gyND8=s353-c-k-c0x00ffffff-no-rj',
 		description:
 			'Learn the basics of the Node.js with this Programming with Mosh course.',
 		paymentType: 'free',
@@ -105,7 +105,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 			'Node.js Full Course for Beginners | Complete All-in-One Tutorial | 7 Hours',
 		author: 'Dave Gray',
 		image:
-			'https://yt3.ggpht.com/ytc/AMLnZu-hi-TxVHQwPnZh3h9-F0OAQyqoETBJQWXjDzILGg=s88-c-k-c0x00ffffff-no-rj',
+			'https://yt3.ggpht.com/ytc/AMLnZu-hi-TxVHQwPnZh3h9-F0OAQyqoETBJQWXjDzILGg=s353-c-k-c0x00ffffff-no-rj',
 		description:
 			'This Node.js Full Course for Beginners is an all-in-one beginner tutorial and complete course full of nearly 7 hours of Node JS code and instruction to level up your programming skills. This course teaches NodeJS, the Express JS framework, and MongoDB. Think of this Node.js full course tutorial as a Node JS video textbook with 15 clearly defined chapters.',
 		paymentType: 'free',
@@ -131,7 +131,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 			'Node.js Tutorial for Beginners - Getting Started with NodeJS Basics',
 		author: 'Academind',
 		image:
-			'https://yt3.ggpht.com/ytc/AMLnZu_Uksjq0hZKO8HU1hqf8LTFE91m1CeiSOe__5L8BA=s88-c-k-c0x00ffffff-no-rj',
+			'https://yt3.ggpht.com/ytc/AMLnZu_Uksjq0hZKO8HU1hqf8LTFE91m1CeiSOe__5L8BA=s353-c-k-c0x00ffffff-no-rj',
 		description: 'Learn the basics of Node.js with this free 2 hour video.',
 		paymentType: 'free',
 		level: 'beginner',
