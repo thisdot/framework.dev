@@ -416,7 +416,7 @@ export const libraries: Library[] = [
 		href: 'https://wundergraph.com/',
 		description:
 			'WunderGraph is the Serverless API Developer Platform with a focus on Developer Experience.',
-		image: 'https://github.com/wundergraph.png',
+		image: 'https://hub.wundergraph.com/images/logo.svg',
 		language: 'NodeJS',
 		tags: [LibraryTag.DATA_PROCESSING],
 	},
@@ -453,7 +453,8 @@ export const libraries: Library[] = [
 		href: 'https://github.com/B2o5T/graphql-eslint',
 		description:
 			'This project integrates GraphQL and ESLint, for a better developer experience.',
-		image: 'https://github.com/B2o5T/graphql-eslint/raw/master/logo.png',
+		image:
+			'https://raw.githubusercontent.com/B2o5T/graphql-eslint/master/website/public/logo.png',
 		language: 'TypeScript',
 		tags: [LibraryTag.TOOLING, LibraryTag.CLI],
 	},

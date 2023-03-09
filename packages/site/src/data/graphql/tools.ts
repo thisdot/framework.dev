@@ -84,8 +84,7 @@ export const tools: Tool<(typeof toolTags)[number]>[] = [
 		author: 'wp-graphql',
 		description:
 			'WPGraphQL allows you to separate your CMS from your presentation layer. Content creators can use the CMS they know, while developers can use the frameworks and tools they love.',
-		image:
-			'https://pbs.twimg.com/profile_images/1313701545452601345/cWC3a4Ux_400x400.jpg',
+		image: 'https://www.wpgraphql.com/logo-wpgraphql.svg',
 		href: 'https://www.wpgraphql.com/',
 		tags: ['schemas', 'frontend', 'backend', 'development'],
 	},
@@ -124,8 +123,7 @@ export const tools: Tool<(typeof toolTags)[number]>[] = [
 		author: 'WunderGraph',
 		description:
 			'Declaratively turn your services, databases and 3rd party APIs into a secure, unified, and extensible API. Compose, integrate, ship.',
-		image:
-			'https://pbs.twimg.com/profile_images/1588538504971272192/MGxcr3cH_400x400.jpg',
+		image: 'https://hub.wundergraph.com/images/logo.svg',
 		href: 'https://wundergraph.com/',
 		tags: ['schemas', 'frontend', 'backend', 'development'],
 	},
@@ -150,7 +148,8 @@ export const tools: Tool<(typeof toolTags)[number]>[] = [
 		author: 'AWS',
 		description:
 			'Accelerate application development with serverless GraphQL and Pub/Sub APIs',
-		image: 'https://appirio.com/images/partners/aws_logo-1.png',
+		image:
+			'https://seeklogo.com/images/A/aws-appsync-logo-1B6E8E9937-seeklogo.com.png',
 		href: 'https://aws.amazon.com/appsync/',
 		tags: ['schemas', 'frontend', 'backend', 'development'],
 	},
