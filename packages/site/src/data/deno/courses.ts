@@ -67,7 +67,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 		paymentType: 'paid',
 		level: 'beginner',
 		format: 'video',
-		image: 'https://pluralsight.imgix.net/author/lg/brice-wilson-v2.jpg?w=200',
+		image: 'https://pluralsight.imgix.net/author/lg/brice-wilson-v2.jpg?w=353',
 		href: 'https://www.pluralsight.com/courses/deno-getting-started',
 		tags: [
 			'deno',
@@ -133,7 +133,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 		level: 'intermediate',
 		format: 'interactive',
 		image:
-			'https://images.ctfassets.net/aq13lwl6616q/719IZvU4LVWt9rECcR0oG3/a0da40259fde3f116d7e419d5536e86d/bdIvNmsR_400x400.jpg?w=30&fm=webp',
+			'https://images.ctfassets.net/aq13lwl6616q/719IZvU4LVWt9rECcR0oG3/a0da40259fde3f116d7e419d5536e86d/bdIvNmsR_400x400.jpg?w=353',
 		href: 'https://zerotomastery.io/courses/learn-deno/',
 		tags: ['deno', 'backend', 'debugging', 'typescript', 'aws', 'docker'],
 	},
