@@ -745,6 +745,18 @@ export const exampleLibraries: Library[] = [
 		description: 'A general purpose internationalization library in 298 bytes',
 		language: 'JavaScript',
 	},
+	{
+		name: 'Ignite UI for React',
+		author: 'Infragistics',
+		repo: 'https://github.com/IgniteUI/igniteui-react',
+		package: 'https://www.npmjs.com/package/igniteui-react',
+		href: 'https://www.infragistics.com/products/ignite-ui-react',
+		image: 'https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg',
+		tags: [LibraryTag.COMPONENT, LibraryTag.FRAMEWORKS, LibraryTag.CLI],
+		description:
+			'Ignite UI for React includes a wide range of easy to use React UI components that have been designed and optimized for high-performance, high-volume data scenarios.',
+		language: 'TypeScript',
+	}
 ]
 
 export const exampleBooks: Book<string>[] = [

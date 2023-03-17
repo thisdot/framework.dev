@@ -618,4 +618,16 @@ export const libraries: Library[] = [
 			'Storybook is a development environment for UI components. It allows you to browse a component library, view the different states of each component, and interactively develop and test components.',
 		language: 'NodeJS',
 	},
+	{
+		name: 'Ignite UI',
+		author: 'Infragistics',
+		repo: 'https://github.com/IgniteUI/igniteui-angular',
+		package: 'https://www.npmjs.com/package/igniteui-angular',
+		href: 'https://www.infragistics.com/products/ignite-ui-angular',
+		image: 'https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg',
+		description:
+			'60+ feature-rich, Material-based components for building better UX and modern-day web apps.',
+		tags: [LibraryTag.COMPONENT, LibraryTag.FRAMEWORKS, LibraryTag.CLI],
+		language: 'TypeScript',
+	}
 ]
