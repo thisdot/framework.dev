@@ -217,7 +217,8 @@ export const libraries: Library[] = [
 		href: 'https://axios-http.com/',
 		description:
 			'Axios is a promise-based HTTP Client for node.js and the browser. On the server-side it uses the native node.js http module, while on the client (browser) it uses XMLHttpRequests.',
-		image: defaultImage,
+		image:
+			'https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/node-512.png',
 		tags: [LibraryTag.FRAMEWORKS],
 		language: 'NodeJS',
 	},
