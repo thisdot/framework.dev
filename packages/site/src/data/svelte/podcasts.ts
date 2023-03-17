@@ -68,4 +68,34 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 		href: 'https://builditbetter.podbean.com',
 		tags: ['general'],
 	},
+	{
+		title: 'JavaScript Air',
+		image:
+			'https://is4-ssl.mzstatic.com/image/thumb/Podcasts115/v4/68/98/c5/6898c591-1df3-dbdf-7173-72d66cc191ea/mza_12268657556293204019.png/626x0w.webp',
+		hosts: ['Kent C. Dodds'],
+		description: 'The live broadcast podcast all about JavaScript',
+		rss: 'https://feed.podbean.com/audio.javascriptair.com/feed.xml',
+		href: 'https://podcasts.apple.com/us/podcast/javascript-air/id1066446588',
+		tags: ['general'],
+	},
+	{
+		title: 'JS Party',
+		image:
+			'https://cdn.changelog.com/uploads/covers/js-party-original.png?v=63725770332',
+		hosts: [
+			'Jerod Santo',
+			'Feross Aboukhadijeh',
+			'Amelia Wattenberger',
+			'Kevin Ball',
+			'Nick Nisi',
+			'Divya',
+			'Mikeal Rogers',
+			'Christopher Hiller',
+			'Amal Hussein',
+		],
+		description: 'a weekly celebration of JavaScript and the web',
+		rss: 'https://jsparty.fm/rss',
+		href: 'https://changelog.com/topic/svelte/podcasts',
+		tags: ['general'],
+	},
 ]

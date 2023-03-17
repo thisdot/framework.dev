@@ -209,4 +209,16 @@ export const libraries: Library[] = [
 			'A component that allows you to set head meta information, canonical, title, Twitter and Facebook Open Graph tags.',
 		language: 'TypeScript',
 	},
+	{
+		name: 'Axios',
+		author: 'Matt Zabriskie',
+		repo: 'https://github.com/axios/axios',
+		package: 'https://www.npmjs.com/package/axios',
+		href: 'https://axios-http.com/',
+		description:
+			'Axios is a promise-based HTTP Client for node.js and the browser. On the server-side it uses the native node.js http module, while on the client (browser) it uses XMLHttpRequests.',
+		image: defaultImage,
+		tags: [LibraryTag.FRAMEWORKS],
+		language: 'NodeJS',
+	},
 ]
