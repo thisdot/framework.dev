@@ -624,7 +624,7 @@ export const libraries: Library[] = [
 		repo: 'https://github.com/IgniteUI/igniteui-angular',
 		package: 'https://www.npmjs.com/package/igniteui-angular',
 		href: 'https://www.infragistics.com/products/ignite-ui-angular',
-		image: 'https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg',
+		image: 'https://avatars.githubusercontent.com/u/5366066?s=200&v=4',
 		description:
 			'60+ feature-rich, Material-based components for building better UX and modern-day web apps.',
 		tags: [LibraryTag.COMPONENT, LibraryTag.FRAMEWORKS, LibraryTag.CLI],
