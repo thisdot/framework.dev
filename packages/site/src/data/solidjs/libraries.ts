@@ -9,7 +9,7 @@ const defaultImage =
 export const libraries: Library[] = [
 	{
 		name: 'Solid Store',
-		author: 'SolidJs',
+		author: 'SolidJS',
 		repo: 'https://www.github.com/solidjs/solid/tree/main/packages/solid/store',
 		package: '',
 		href: 'https://www.solidjs.com/tutorial/stores_createstore',
@@ -59,7 +59,7 @@ export const libraries: Library[] = [
 	},
 	{
 		name: 'Solid Resources',
-		author: 'SolidJs',
+		author: 'SolidJS',
 		repo: 'https://github.com/solidjs/solid',
 		package: '',
 		href: 'https://www.solidjs.com/tutorial/async_resources',
@@ -135,7 +135,7 @@ export const libraries: Library[] = [
 		repo: 'https://www.github.com/DigiChanges/solid-multiselect',
 		package: 'https://www.npmjs.com/package/@digichanges/solid-multiselect',
 		href: 'https://github.com/DigiChanges/solid-multiselect',
-		description: 'A multi-select dropdown implementation for SolidJs',
+		description: 'A multi-select dropdown implementation for SolidJS',
 		image:
 			'https://opengraph.githubassets.com/3d77a1fbc9cc60af77bbd066466a010b7fd84422c2564802223a006317e81e7e/DigiChanges/solid-multiselect',
 		tags: [LibraryTag.COMPONENT],
@@ -160,7 +160,7 @@ export const libraries: Library[] = [
 		repo: 'https://www.github.com/swordev/suid',
 		package: 'https://www.npmjs.com/package/suid',
 		href: 'https://suid.io/',
-		description: 'A port of MUI built with SolidJs',
+		description: 'A port of MUI built with SolidJS',
 		image: 'https://suid.io/assets/preview.png',
 		tags: [LibraryTag.COMPONENT],
 		language: 'TypeScript',
@@ -180,7 +180,7 @@ export const libraries: Library[] = [
 	},
 	{
 		name: 'Solid Start',
-		author: 'SolidJs',
+		author: 'SolidJS',
 		repo: 'https://www.github.com/solidjs/solid-start',
 		package: '',
 		href: 'https://start.solidjs.com/getting-started/what-is-solidstart',
@@ -193,7 +193,7 @@ export const libraries: Library[] = [
 	},
 	{
 		name: 'Solid Form Handler',
-		author: 'SolidJs',
+		author: 'SolidJS',
 		repo: 'https://www.github.com/webblocksapp/solid-form-handler',
 		package: 'https://www.npmjs.com/package/solid-form-handler',
 		href: 'https://solid-form-handler.com/docs/introduction',
@@ -242,7 +242,7 @@ export const libraries: Library[] = [
 	},
 	{
 		name: 'Solid Router',
-		author: 'SolidJs',
+		author: 'SolidJS',
 		repo: 'https://github.com/solidjs/solid-router',
 		package: '',
 		description:
