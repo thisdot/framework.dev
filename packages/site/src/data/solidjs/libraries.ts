@@ -59,7 +59,7 @@ export const libraries: Library[] = [
 	},
 	{
 		name: 'Solid Resources',
-		author: 'Solidjs',
+		author: 'SolidJs',
 		repo: 'https://github.com/solidjs/solid',
 		package: '',
 		href: 'https://www.solidjs.com/tutorial/async_resources',
@@ -180,7 +180,7 @@ export const libraries: Library[] = [
 	},
 	{
 		name: 'Solid Start',
-		author: 'solidjs',
+		author: 'SolidJs',
 		repo: 'https://www.github.com/solidjs/solid-start',
 		package: '',
 		href: 'https://start.solidjs.com/getting-started/what-is-solidstart',
@@ -193,7 +193,7 @@ export const libraries: Library[] = [
 	},
 	{
 		name: 'Solid Form Handler',
-		author: 'solidjs',
+		author: 'SolidJs',
 		repo: 'https://www.github.com/webblocksapp/solid-form-handler',
 		package: 'https://www.npmjs.com/package/solid-form-handler',
 		href: 'https://solid-form-handler.com/docs/introduction',
@@ -238,6 +238,19 @@ export const libraries: Library[] = [
 		image: 'https://vitejs.dev/logo.svg',
 		href: 'https://github.com/vitejs/vite',
 		tags: [LibraryTag.TOOLING],
+		language: 'TypeScript',
+	},
+	{
+		name: 'Solid Router',
+		author: 'SolidJs',
+		repo: 'https://github.com/solidjs/solid-router',
+		package: '',
+		description:
+			'A universal router for Solid inspired by Ember and React Router',
+		image:
+			'https://opengraph.githubassets.com/41111dcd4fc2ba4f3f3c097212fa56ffc1e2e6abde27785dba293e8341132d49/solidjs/solid-router',
+		href: 'https://github.com/solidjs/solid-router',
+		tags: [LibraryTag.ROUTING],
 		language: 'TypeScript',
 	},
 	{
