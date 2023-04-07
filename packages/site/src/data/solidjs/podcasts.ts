@@ -1,6 +1,6 @@
 import { Podcast } from '@framework/system/src/models/podcast'
 
-export const podcastTags = ['general', 'solidjs'] as const
+export const podcastTags = ['general', 'SolidJS'] as const
 
 export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 	{
@@ -11,7 +11,7 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 			'Discussion on the origin story of SolidJS, how it came to be and what the author hopes to accomplish with it',
 		rss: 'https://changelog.com/jsparty/feed',
 		href: 'https://overcast.fm/+Id5U6EB5M',
-		tags: ['solidjs'],
+		tags: ['SolidJS'],
 	},
 	{
 		title: 'React vs Svelte vs Solid & MicroFrontends | Ryan Carniato',
@@ -21,7 +21,7 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 			'On the hard choices all companies are facing right now with their websites, especially with the performance.',
 		rss: '',
 		href: 'https://show.nikoskatsikanis.com/episodes/ryan-carniato',
-		tags: ['solidjs'],
+		tags: ['SolidJS'],
 	},
 	{
 		title: 'The Deep Dive Episode 4: Reactive frontend frameworks',
@@ -42,8 +42,8 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 		description:
 			'In this episode of the Modern Web podcast, hosts Rob Ocel and Nacho Vazquez sit down with Ryan Carniato to talk about SolidJS. They talk about how the frontend JavaScript framework came to be, and what sets SolidJS apart from other technologies in the JavaScript ecosystem. ',
 		rss: '',
-		href: 'https://modernweb.podbean.com/e/s09e12-modern-web-podcast-introduction-to-solidjs-with-ryan-carniato/',
-		tags: ['solidjs'],
+		href: 'https://modernweb.podbean.com/e/s09e12-modern-web-podcast-introduction-to-SolidJS-with-ryan-carniato/',
+		tags: ['SolidJS'],
 	},
 	{
 		title: 'Build IT Better',
