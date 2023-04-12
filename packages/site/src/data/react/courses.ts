@@ -13,7 +13,6 @@ export const courseTags = [
 	'SCSS',
 	'CSS',
 	'bootstrap',
-	'React',
 	'react context',
 	'hooks',
 	'TypeScript',
@@ -476,7 +475,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 		level: 'intermediate',
 		format: 'interactive',
 		href: 'https://react.gg/visualized',
-		tags: ['React'],
+		tags: ['hooks', 'state management'],
 	},
 	{
 		title: 'The Joy of React',
@@ -488,6 +487,6 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 		level: 'intermediate',
 		format: 'interactive',
 		href: 'https://www.joyofreact.com/',
-		tags: ['React'],
+		tags: ['hooks', 'state management'],
 	},
 ]
