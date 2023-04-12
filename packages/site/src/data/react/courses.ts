@@ -29,6 +29,7 @@ export const courseTags = [
 	'FaunaDB',
 	'sass',
 	'static site generation',
+	'fundamentals',
 ] as const
 
 export const courses: Course<(typeof courseTags)[number]>[] = [
@@ -475,7 +476,7 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 		level: 'intermediate',
 		format: 'interactive',
 		href: 'https://react.gg/visualized',
-		tags: ['hooks', 'state management'],
+		tags: ['hooks', 'state management', 'fundamentals'],
 	},
 	{
 		title: 'The Joy of React',
@@ -487,6 +488,6 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 		level: 'intermediate',
 		format: 'interactive',
 		href: 'https://www.joyofreact.com/',
-		tags: ['hooks', 'state management'],
+		tags: ['hooks', 'state management', 'fundamentals'],
 	},
 ]
