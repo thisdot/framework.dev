@@ -20,6 +20,7 @@ import {
 	parseQueryString,
 	serializeQueryParams,
 } from './query-util'
+import { track } from '../../util/analytics-utils'
 import { SearchAutocomplete } from './search-autocomplete'
 import { FilterIcon } from '../../icons/filter-icon'
 import { FilterSet, QueryParams } from './types'
@@ -64,6 +65,20 @@ export function Search({
 		[data, appliedPreFilters]
 	)
 	const queryParams = parseQueryString(activeQuery, availableFilters)
+
+	useEffect(() => {
+		if (isEmptyFilterSet(queryParams.filters) && queryParams.textSearch) {
+			track('search', {
+				search_term: queryParams.textSearch,
+			})
+		} else if (!isEmptyFilterSet(queryParams.filters)) {
+			track('advanced_search_run', {
+				search_term: queryParams.textSearch,
+				params: queryParams.filters,
+			})
+		}
+	}, [queryParams])
+
 	const scrollableContainerRef = useRef<null | HTMLDivElement>(null)
 	return (
 		<section className={classNames(className, searchStyle)} {...props}>
@@ -175,7 +190,10 @@ function SearchBar({
 					as="button"
 					color="tertiary"
 					size="large"
-					onClick={() => setFilterMenuOpen(true)}
+					onClick={() => {
+						track('advanced_search_open')
+						setFilterMenuOpen(true)
+					}}
 				>
 					Advanced <FilterIcon />
 				</Button>
@@ -335,7 +353,13 @@ function ComparisonBar({
 			<div
 				className={sprinkles({ display: { mobile: 'none', desktop: 'block' } })}
 			>
-				<Button color="destructive" onClick={() => onSelectionChange([])}>
+				<Button
+					color="destructive"
+					onClick={() => {
+						track('resource_compare_reset')
+						onSelectionChange([])
+					}}
+				>
 					Reset <ResetIcon />
 				</Button>
 			</div>
@@ -344,13 +368,22 @@ function ComparisonBar({
 					size="square"
 					color="destructive"
 					aria-label="Reset"
-					onClick={() => onSelectionChange([])}
+					onClick={() => {
+						track('resource_compare_reset')
+						onSelectionChange([])
+					}}
 				>
 					<ResetIcon />
 				</Button>
 			</div>
 
-			<Button color="tertiary" onClick={() => onSelectionChange(allLibraries)}>
+			<Button
+				color="tertiary"
+				onClick={() => {
+					track('resource_compare_select_all')
+					onSelectionChange(allLibraries)
+				}}
+			>
 				Select all
 			</Button>
 
@@ -363,6 +396,7 @@ function ComparisonBar({
 					gap: 4,
 				})}
 				type="submit"
+				onClick={() => track('resource_compare_open')}
 			>
 				Compare ({selectedLibraries.length})
 			</Button>

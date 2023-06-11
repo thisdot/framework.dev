@@ -10,6 +10,7 @@ import { ILibrary, ISortConfig } from './types'
 import { formatNumber, formatPercentage, sortLibraries } from './utils'
 import { CardSelector } from './../cards/card-selector'
 import { Skeleton } from '../skeleton'
+import { track } from '../../util/analytics-utils'
 
 export interface ComparisonTableProps
 	extends React.ComponentPropsWithoutRef<'div'> {
@@ -33,11 +34,17 @@ export function ComparisonTable({
 		(heading: typeof sortConfig.by) => {
 			setSortConfig((prevSort) => {
 				if (prevSort.by === heading) {
+					track('resource_compare_sort', {
+						order: !prevSort.asc ? 'asc' : 'desc',
+					})
 					return { by: heading, asc: !prevSort.asc }
 				}
 				if (heading === 'name' || heading === 'author') {
+					track('resource_compare_sort', { order: 'asc' })
 					return { by: heading, asc: true }
 				}
+
+				track('resource_compare_sort', { order: 'desc' })
 				return { by: heading, asc: false }
 			})
 		},
@@ -158,6 +165,9 @@ export function ComparisonTable({
 							e.stopPropagation()
 
 							if (!e.target.checked) {
+								track('resource_compare_remove', {
+									resource_name: library.name,
+								})
 								const updatedLibraryStats = libraryStats
 
 								updatedLibraryStats.splice(

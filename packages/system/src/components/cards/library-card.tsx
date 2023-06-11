@@ -5,6 +5,7 @@ import {
 	getGitHubStarsBadge,
 	getNpmDownloadsBadge,
 } from '../../util/stats-util'
+import { track } from '../../util/analytics-utils'
 import { ResourceCard, ResourceCardProps } from './resource-card'
 
 export type LibraryCardProps = Omit<
@@ -26,6 +27,9 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 	return (
 		<ResourceCard
 			title={library.name}
+			onTitleClick={() =>
+				track('resource_clicked', { resource_name: library.name })
+			}
 			subtitle={library.author}
 			image={library.image}
 			darkImageBackground={library.darkImageBackground}
