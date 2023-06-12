@@ -29,6 +29,7 @@ import { visuallyHidden } from '../../styles/utilities.css'
 import { useId } from '@reach/auto-id'
 import { BannerTooltip } from '../banner-tooltip'
 import { LocalStorageItems } from '../../models/common'
+import { track } from '../../util/analytics-utils'
 
 export type ResultsCategoryProps<T extends CategoryName> = Omit<
 	React.ComponentPropsWithoutRef<'div'>,
@@ -70,7 +71,7 @@ export function ResultsCategory<T extends CategoryName>({
 				isComparable &&
 				!localStorage.getItem(LocalStorageItems.CompareToolTip)
 		)
-	}, [category, results.length])
+	}, [category, results])
 
 	switch (variant) {
 		case 'bare':
@@ -213,7 +214,13 @@ function renderCard<T extends CategoryName>({
 					key={index}
 					library={record}
 					onSelect={
-						onSelect && ((selected) => onSelect(record as Model<T>, selected))
+						onSelect &&
+						((selected) => {
+							track(`resource_compare_${selected ? 'add' : 'remove'}`, {
+								resource_name: record.name,
+							})
+							onSelect(record as Model<T>, selected)
+						})
 					}
 					selected={selectedItems.includes(record as Model<T>)}
 					{...props}

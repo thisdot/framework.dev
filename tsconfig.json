@@ -3,6 +3,7 @@
 	"compilerOptions": {
 		"strict": true,
 		"lib": ["ES2021", "DOM"],
+		"module": "ES2022",
 		"moduleResolution": "node",
 		"esModuleInterop": true,
 		"noEmit": true,
@@ -12,6 +13,7 @@
 		"skipLibCheck": true,
 		"paths": {
 			"@framework/system": ["./packages/system/*"]
-		}
+		},
+		"types": ["vite/client", "gtag.js"]
 	}
 }

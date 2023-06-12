@@ -41,6 +41,7 @@ export interface ResourceCardProps
 	tags: string[]
 	selected?: boolean
 	allowSelection?: boolean
+	onTitleClick?: () => void
 	onSelect?: (selected: boolean) => void
 	onTagClick: (tag: string) => void
 }
@@ -62,6 +63,7 @@ export function ResourceCard({
 	allowSelection = true,
 	onSelect,
 	badges,
+	onTitleClick,
 	onTagClick,
 	...props
 }: ResourceCardProps) {
@@ -95,7 +97,12 @@ export function ResourceCard({
 			)}
 			<header className={resourceCardHeaderStyle}>
 				<div className={resourceCardTitleContainerStyle}>
-					<a href={href} target="_blank" rel="noreferrer">
+					<a
+						href={href}
+						target="_blank"
+						rel="noreferrer"
+						onClick={onTitleClick}
+					>
 						<H className={resourceCardTitleStyle} id={titleId}>
 							{title}
 						</H>
