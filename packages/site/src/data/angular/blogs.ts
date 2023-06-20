@@ -57,4 +57,12 @@ export const blogs: Blog<(typeof blogTags)[number]>[] = [
 		href: 'https://www.thisdot.co/blog/?filter=Angular#result',
 		tags: [],
 	},
+	{
+		title: 'Daniel Kreider',
+		author: 'Daniel Kreider',
+		description: 'Angular Expert & Consultant',
+		image: 'https://danielk.tech/user/themes/zenita/img/favicon.webp',
+		href: 'https://danielk.tech/',
+		tags: [],
+	},
 ]
