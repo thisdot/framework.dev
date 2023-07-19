@@ -21,7 +21,7 @@ jobs:
                   "type": "header",
                   "text": {
                     "type": "plain_text",
-                    "text": "Another PR was just merged into framework.dev :tada:",
+                    "text": "A PR was just merged into framework.dev :tada:",
                     "emoji": true
                   }
                 },
