@@ -302,7 +302,7 @@ export const libraries: Library[] = [
 		description:
 			'Over 80 Angular UI Components with top-notch quality to help you implement all your UI requirements in style.',
 		image:
-			'https://www.primefaces.org/primeng/assets/showcase/images/primeng-logo-dark.svg',
+			'https://pbs.twimg.com/profile_images/1345334019131666432/7d8KUAdI_400x400.jpg',
 		tags: [LibraryTag.COMPONENT],
 		language: 'TypeScript',
 	},
@@ -637,7 +637,8 @@ export const libraries: Library[] = [
 		package: 'https://www.npmjs.com/package/@analogjs/platform',
 		href: 'https://analogjs.org/',
 		image: 'https://analogjs.org/img/favicon.ico',
-		description: 'Analog is a meta-framework for building applications and websites with Angular.',
+		description:
+			'Analog is a meta-framework for building applications and websites with Angular.',
 		tags: [LibraryTag.FRAMEWORKS],
 		language: 'TypeScript',
 	},
@@ -648,7 +649,8 @@ export const libraries: Library[] = [
 		package: 'https://www.npmjs.com/package/taiga-ui',
 		href: 'https://taiga-ui.dev/',
 		image: 'https://taiga-ui.dev/assets/favicon-32x32.png',
-		description: 'Taiga UI is fully-treeshakable Angular UI Kit that contains 130+ components, 100+ directives, dozens of tokens, utils and tools.',
+		description:
+			'Taiga UI is fully-treeshakable Angular UI Kit that contains 130+ components, 100+ directives, dozens of tokens, utils and tools.',
 		tags: [LibraryTag.COMPONENT],
 		language: 'TypeScript',
 	},
@@ -659,7 +661,8 @@ export const libraries: Library[] = [
 		package: 'https://www.npmjs.com/package/@nebular/theme',
 		href: 'https://akveo.github.io/nebular/',
 		image: 'https://akveo.github.io/nebular/favicon.png',
-		description: 'Nebular is a customizable Angular UI library that contains 40+ UI components, four visual themes, and Auth and Security modules.',
+		description:
+			'Nebular is a customizable Angular UI library that contains 40+ UI components, four visual themes, and Auth and Security modules.',
 		tags: [LibraryTag.COMPONENT],
 		language: 'TypeScript',
 	},

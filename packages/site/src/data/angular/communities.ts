@@ -149,7 +149,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		name: 'International Javascript Conference',
 		description: 'Conference dedicated to full stack JavaScript development',
 		image:
-			'https://pbs.twimg.com/profile_images/841217931455401984/uzU4VfwA_400x400.jpg',
+			'https://pbs.twimg.com/profile_images/1650499473653608452/8PA1Tnvl_400x400.jpg',
 		type: 'Live Events',
 		href: 'https://javascript-conference.com/',
 		tags: ['conferences'],
@@ -264,7 +264,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		description:
 			'CSS Day Conf features a mix of CSS designers, developers, spec writers and browser vendors, who take pride in what they know and do.',
 		image:
-			'https://pbs.twimg.com/profile_images/3086361545/375adf0a29fbd0e21eb6315f3fd681c6_400x400.png',
+			'https://pbs.twimg.com/profile_images/1643163121668718594/s3pkjWE6_400x400.jpg',
 		type: 'Live Events',
 		href: 'https://cssday.nl/2022',
 		tags: ['conferences'],
@@ -300,9 +300,10 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		name: 'Angular Nation',
 		description:
 			'A free and friendly place to network and collaborate with Angular developers just  like you!',
-		image: 'https://pbs.twimg.com/profile_images/1331571398834315264/xtrGFRx-_400x400.jpg',
+		image:
+			'https://pbs.twimg.com/profile_images/1331571398834315264/xtrGFRx-_400x400.jpg',
 		type: 'Online Events',
 		href: 'https://www.angularnation.net/',
 		tags: ['meetups'],
-	}
+	},
 ]

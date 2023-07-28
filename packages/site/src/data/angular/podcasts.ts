@@ -4,16 +4,6 @@ export const podcastTags = ['general'] as const
 
 export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 	{
-		title: 'Angular Experience',
-		image: 'https://ngxp.show/assets/images/ngxpSiteImage2%20(1).png',
-		hosts: ['Brooke Avery', 'Erik Slack'],
-		description:
-			'NgXP a weekly podcast produced by Brooke Avery and Erik Slack, two programmers and event planners who are passionate about all things Angular and programming.',
-		rss: '',
-		href: 'https://ngxp.show/home',
-		tags: ['general'],
-	},
-	{
 		title: 'Angular Air',
 		image: 'https://angularair.com/assets/angularairlogo.png',
 		hosts: ['Justin Schwartzenberger'],
