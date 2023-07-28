@@ -33,7 +33,7 @@ export const books: Book<(typeof bookTags)[number]>[] = [
 	{
 		title: 'Vue The Road To Enterprise',
 		authors: ['Thomas Findlay'],
-		image: 'https://theroadtoenterprise.com/_nuxt/img/fdc3f54.png',
+		image: 'https://theroadtoenterprise.com/images/vue-book-cover-3d.png',
 		description:
 			'Take your skills to the next level and become a Vue pro by mastering advanced patterns, best practices, and cutting-edge techniques for the development of Vue 2 & 3 applications.',
 		yearOfPublication: 2021,
