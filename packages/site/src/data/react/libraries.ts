@@ -1037,5 +1037,16 @@ export const libraries: Library[] = [
 		description:
 			'Ignite UI for React includes a wide range of easy to use React UI components that have been designed and optimized for high-performance, high-volume data scenarios.',
 		language: 'TypeScript',
+	},
+	{
+		name: 'Mantine UI',
+		author: 'Rtishchev',
+		repo: 'https://github.com/mantinedev/mantine',
+		package: 'https://www.npmjs.com/package/@mantine/core',
+		href: 'https://mantine.dev/',
+		image: 'https://github.com/mantinedev.png',
+		tags: [LibraryTag.COMPONENT],
+		description: 'A fully featured React components library.',
+		language: 'TypeScript',
 	}
 ]
