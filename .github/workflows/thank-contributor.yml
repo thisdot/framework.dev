@@ -20,18 +20,23 @@ jobs:
           username="${{ github.event.pull_request.user.login }}"
           repo="${{ github.repository }}"
           if [[ "$username" =~ [[:punct:]] ]]; then
+            echo "User has punctuation in the name, so opting for a generic message"
             message="Hi @$username. :wave:\n\nYour PR has been approved and merged. :tada:\n\nThank you for your contribution to framework.dev. :heart:\n\nKeep up the great work!"
           else
+            echo "fetching user from org to see if he contributed before"
             response=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $ISSUES_BOT_TOKEN" "https://api.github.com/repos/$repo/collaborators/$username")
             if [ "$response" = "204" ]; then
+              echo "Returning user"
               message="Hi @$username. :wave:\n\nYour PR has been approved and merged. :tada:\n\nThank you for your continued contributions to framework.dev. :heart:\n\nKeep up the great work!"
             elif [ "$response" = "404" ]; then
+              echo "New User"
               message="Hi @$username. :wave:\n\nCongrats on your first PR being approved and merged! :tada:\n\nThank you for taking the time to contribute to framework.dev. :heart:\n\nWe look forward to your next contribution. :rocket:"
             else
               echo "Invalid or expired token: $ISSUES_BOT_TOKEN"
               exit 1
             fi
           fi
+          echo "Writing message on the ticket"
           curl -X POST \
             -H "Authorization: Bearer $ISSUES_BOT_TOKEN" \
             -H "Content-Type: application/json" \
