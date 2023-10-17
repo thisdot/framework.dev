@@ -26,14 +26,14 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 		tags: ['general'],
 	},
 	{
-		title: 'HTML All Things: Svelte Is Here to Stay',
+		title: 'HTML All Things',
 		image:
 			'https://uploads-ssl.webflow.com/5f188c7c01b1cd56e383610e/611580f35095d16fc5b11f7a_hatt_logo_transparency_white-p-500.png',
-		hosts: ['Matt', 'Mike'],
+		hosts: ['Matt Lawrence', ' Mike Karan'],
 		description:
-			"In this episode Matt and Mike discuss Svelte, a JavaScript framework that compiles when you build your app. Other frameworks like Vue and React do a lot of their work in the browser, Svelte's compile step does that work instead. The duo discuss Mike's impressions of Svelte and where it's going in the future, followed by Matt's recent introduction to Svelte and JavaScript frameworks in general.",
+			"The adventures of Matt Lawrence and Mike Karan through the world of web development, web design, and small business management. They commonly discuss foundational web development technologies like HTML, CSS, and JavaScript - including popular frameworks and tools such as Tailwind CSS, Svelte, WordPress, Vue, and more.",
 		rss: 'https://podcast.htmlallthethings.com/feed.xml',
-		href: 'https://www.htmlallthethings.com/podcasts/svelte-is-here-to-stay',
+		href: 'https://www.htmlallthethings.com/podcast',
 		tags: ['general'],
 	},
 	{
@@ -48,13 +48,12 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 		tags: ['general'],
 	},
 	{
-		title: 'How To Do Things In Svelte',
-		image: 'https://syntax.fm/static/logo.png',
+		title: 'Syntax.fm',
+		description: 'A Tasty Treats Podcast for Web Developers.',
 		hosts: ['Wes Bos', 'Scott Tolinski'],
-		description:
-			'In this Hasty Treat, Wes and Scott talk about how to do things in Svelte.',
+		href: 'https://syntax.fm/',
 		rss: 'http://feed.syntax.fm/rss',
-		href: 'https://syntax.fm/show/413/how-to-do-things-in-svelte',
+		image: 'https://syntax.fm/static/logo.png',
 		tags: ['general'],
 	},
 	{

@@ -4,14 +4,24 @@ export const podcastTags = ['general', 'SolidJS'] as const
 
 export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 	{
-		title: 'A Solid option for building UIs',
-		image: 'https://public.overcast-cdn.com/art/554901?v198',
-		hosts: ['JS Party', 'Ryan Carniato'],
-		description:
-			'Discussion on the origin story of SolidJS, how it came to be and what the author hopes to accomplish with it',
-		rss: 'https://changelog.com/jsparty/feed',
-		href: 'https://overcast.fm/+Id5U6EB5M',
-		tags: ['SolidJS'],
+		title: 'JS Party',
+		image:
+			'https://cdn.changelog.com/uploads/covers/js-party-original.png?v=63725770332',
+		hosts: [
+			'Jerod Santo',
+			'Feross Aboukhadijeh',
+			'Amelia Wattenberger',
+			'Kevin Ball',
+			'Nick Nisi',
+			'Divya',
+			'Mikeal Rogers',
+			'Christopher Hiller',
+			'Amal Hussein',
+		],
+		description: 'A weekly celebration of JavaScript and the web',
+		rss: 'https://jsparty.fm/rss',
+		href: 'https://changelog.com/jsparty',
+		tags: ['general'],
 	},
 	{
 		title: 'React vs Svelte vs Solid & MicroFrontends | Ryan Carniato',
@@ -24,26 +34,25 @@ export const podcasts: Podcast<(typeof podcastTags)[number]>[] = [
 		tags: ['SolidJS'],
 	},
 	{
-		title: 'The Deep Dive Episode 4: Reactive frontend frameworks',
+		title: 'The Deep Dive',
 		image: 'https://github.com/layZeeDK.png',
-		hosts: ['Lars Gyrup Brink Nielsen.', 'Kos Palchyk', 'Ryan Carniato'],
+		hosts: ['Lars Gyrup Brink Nielsen'],
 		description:
-			'Listen to the creator of Solidjs talk about Reactivity and application frameworks.',
-		rss: '',
-		href: 'https://www.youtube.com/watch?v=iyY1lT8-ZDA',
+			'The Deep Dive is an advanced web development podcast brought to you by inDepth.dev.',
+		rss: 'https://www.listennotes.com/podcasts/the-deep-dive-dev-indepthdev-rc_SkJZFRyW/#',
+		href: 'https://www.listennotes.com/podcasts/the-deep-dive-dev-indepthdev-rc_SkJZFRyW/#',
 		tags: ['general'],
 	},
 	{
-		title:
-			'S09E12 Modern Web Podcast- Introduction to SolidJS with Ryan Carniato',
+		title: 'Modern Web',
 		image:
 			'https://pbcdn1.podbean.com/imglogo/image-logo/984467/modern_web_9bpnd.jpg',
-		hosts: ['Ryan Carniato', 'Rob Ocel', 'Nacho Vazquez'],
+		hosts: ['ThisDot Labs'],
 		description:
-			'In this episode of the Modern Web podcast, hosts Rob Ocel and Nacho Vazquez sit down with Ryan Carniato to talk about SolidJS. They talk about how the frontend JavaScript framework came to be, and what sets SolidJS apart from other technologies in the JavaScript ecosystem. ',
-		rss: '',
-		href: 'https://modernweb.podbean.com/e/s09e12-modern-web-podcast-introduction-to-SolidJS-with-ryan-carniato/',
-		tags: ['SolidJS'],
+			'Modern Web is a podcast that explores next generation frameworks, standards, and techniques.',
+		rss: 'https://www.podbean.com/site/podcatcher/index/blog/7YqKYcoGcvP',
+		href: 'https://modernweb.podbean.com/',
+		tags: ['general'],
 	},
 	{
 		title: 'Build IT Better',
