@@ -17,7 +17,7 @@ export const blogs: Blog<(typeof blogTags)[number]>[] = [
 		title: 'Joy of Code',
 		author: 'Matija',
 		description:
-			"Matija from 🇭🇷 Croatia and he's infinitely curious at how things work but he's mostly passionate about ☕ JavaScript and 🎨 UI/UX design.",
+			"Matija from Croatia and he's infinitely curious at how things work but he's mostly passionate about JavaScript and UI/UX design.",
 		image:
 			'https://yt3.ggpht.com/f-nkXHIt4t8B7yFIOdkQBGEyTY0LVrS8DWkAnF6W7KazXPtcD2XHzWPSsOx_vAjVgs3RQu736cY=s176-c-k-c0x00ffffff-no-rj-mo',
 		href: 'https://joyofcode.xyz/categories/svelte',
@@ -83,16 +83,6 @@ export const blogs: Blog<(typeof blogTags)[number]>[] = [
 		image:
 			'https://magrippis.com/_next/image?url=%2Fimages%2Fhero.jpg&w=256&q=75',
 		href: 'https://magrippis.com/blog',
-		tags: [],
-	},
-	{
-		title: 'Rodney Lab',
-		author: 'Rodney',
-		description:
-			'Hello and welcome! I’m Rodney, a web developer based in the UK 🇬🇧 and am available for consultancy work.',
-		image:
-			'https://rodneylab.com/assets/rodney-johnson-about-rodneylab-1350x1350.208d1490.avif',
-		href: 'https://rodneylab.com/tags/sveltekit/',
 		tags: [],
 	},
 	{

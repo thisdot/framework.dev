@@ -76,9 +76,8 @@ export const libraries: Library[] = [
 		package: 'https://www.npmjs.com/package/@tanstack/solid-query',
 		href: 'https://tanstack.com/query/v4/docs/adapters/solid-query',
 		description:
-			'🤖 Powerful asynchronous state management, server-state utilities and data fetching for TS/JS, React, Solid, Svelte and Vue. - query/packages at main · TanStack/query',
-		image:
-			'https://raw.githubusercontent.com/TanStack/query/beta/media/repo-header.png',
+			'Powerful asynchronous state management, server-state utilities and data fetching for TS/JS, React, Solid, Svelte and Vue. - query/packages at main · TanStack/query',
+		image: 'https://avatars.githubusercontent.com/u/72518640?s=200&v=4',
 		tags: [LibraryTag.DATA_FETCHING],
 		language: 'TypeScript',
 	},
