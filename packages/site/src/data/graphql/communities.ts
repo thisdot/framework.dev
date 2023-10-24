@@ -71,7 +71,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		name: 'International Javascript Conference',
 		description: 'Conference dedicated to full stack JavaScript development',
 		image:
-			'https://pbs.twimg.com/profile_images/841217931455401984/uzU4VfwA_400x400.jpg',
+			'https://javascript-conference.com/wp-content/uploads/2019/12/Konferenzlogos_Website_Navi_68979_v1_iJS.png',
 		type: 'Live Events',
 		href: 'https://javascript-conference.com/',
 		tags: ['conferences'],

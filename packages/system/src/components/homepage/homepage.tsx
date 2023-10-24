@@ -103,10 +103,14 @@ export function Homepage({
 					<Blogs blogs={blogs} />
 				</div>
 				<ContributorBanner contributors={contributorsData}></ContributorBanner>
-				<div className={homepageTwoAndOneSectionStyle}>
+				{books.length > 0 ? (
+					<div className="homepageTwoAndOneSectionStyle">
+						<LatestTools tools={tools} />
+						<Books books={books} />
+					</div>
+				) : (
 					<LatestTools tools={tools} />
-					<Books books={books} />
-				</div>
+				)}
 				<Communities communities={communities} />
 
 				<ResourcesInfoBanner

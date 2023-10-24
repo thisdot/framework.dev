@@ -35,7 +35,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		name: 'Svelte Summit',
 		description:
 			'Svelte Summit is an event dedicated to Svelte and everything that is happening in the community.',
-		image: 'https://www.sveltesummit.com/_app/assets/logo-3e24e7c2.svg',
+		image: 'https://sveltesociety.dev/images/logo.svg',
 		type: 'Live Events',
 		href: 'https://www.sveltesummit.com/',
 		tags: [],
@@ -54,7 +54,7 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		name: 'International Javascript Conference',
 		description: 'Conference dedicated to full stack JavaScript development',
 		image:
-			'https://pbs.twimg.com/profile_images/841217931455401984/uzU4VfwA_400x400.jpg',
+			'https://javascript-conference.com/wp-content/uploads/2019/12/Konferenzlogos_Website_Navi_68979_v1_iJS.png',
 		type: 'Live Events',
 		href: 'https://javascript-conference.com/',
 		tags: ['conferences'],
@@ -199,14 +199,6 @@ export const communities: Community<(typeof communityTags)[number]>[] = [
 		image: 'https://www.jsday.ie//media/jslogo.png?imwidth=64',
 		type: 'Live Events',
 		href: 'https://www.jsday.ie/',
-		tags: ['conferences'],
-	},
-	{
-		name: 'Svelte Summit',
-		description: 'A meetup dedicated to the latest release of Svelte',
-		image: 'https://sveltesociety.dev/images/logo.svg',
-		type: 'Live Events',
-		href: 'https://beta.guild.host/svelte-society-london/events',
 		tags: ['conferences'],
 	},
 	{
