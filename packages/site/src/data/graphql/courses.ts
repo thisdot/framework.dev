@@ -294,13 +294,13 @@ export const courses: Course<(typeof courseTags)[number]>[] = [
 	{
 		title: 'Intro to GraphQL DataLoaders',
 		author: 'Star Richardson',
-		image: 'https://avatars.githubusercontent.com/u/67430892?v=4',
+		image: 'https://pbs.twimg.com/profile_images/1249804296469778433/uRRNm6-n_400x400.png',
 		description:
 			"How to implement DataLoaders in your GraphQL project. We'll walk through setup and configuration, and build a simple API to demonstrate how GraphQL DataLoaders can dramatically reduce duplicate API calls.",
 		paymentType: 'free',
 		level: 'intermediate',
 		format: 'video',
-		href: 'www.youtube.com/watch?v=Zc6xv5bcky8',
+		href: 'https://www.youtube.com/watch?v=Zc6xv5bcky8',
 		tags: ['data fetching', 'graphQL', 'javascript marathon', 'services'],
 	},
 ]
