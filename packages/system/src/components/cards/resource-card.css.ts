@@ -157,3 +157,15 @@ export const resourceCardFooterStyle = style([
 		gridArea: 'footer',
 	},
 ])
+
+export const resourceCardFooterItemsRowStyle = style([
+	sprinkles({
+		layout: 'row',
+		gap: 4,
+		paddingBottom: 12,
+		flexWrap: 'wrap',
+	}),
+	{
+		alignItems: 'flex-start',
+	},
+])

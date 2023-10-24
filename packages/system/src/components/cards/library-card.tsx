@@ -1,5 +1,10 @@
+import classNames from 'classnames'
 import { Library } from '../../models/library'
-import { libraryCardBadgeStyle } from './library-card.css'
+import {
+	libraryCardBadgeStyle,
+	libraryPackageLinkStyle,
+	libraryPackageTextStyle,
+} from './library-card.css'
 import {
 	getBundleSizeBadge,
 	getGitHubStarsBadge,
@@ -76,11 +81,16 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 						</>
 					) : library?.package !== '' ? (
 						// TODO: Have other frameworks decide what image to use if not npm
-						<Badge
-							data={''}
-							href={library.package}
-							label={`${library.name} Package`}
-						/>
+						<div
+							className={classNames(
+								libraryPackageLinkStyle,
+								libraryCardBadgeStyle
+							)}
+						>
+							<a className={libraryPackageTextStyle} href={library.package}>
+								📦 Package
+							</a>
+						</div>
 					) : null}
 				</>
 			}
