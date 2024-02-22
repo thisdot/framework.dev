@@ -14,6 +14,7 @@
 		"paths": {
 			"@framework/system": ["./packages/system/*"]
 		},
-		"types": ["vite/client", "gtag.js"]
+		"types": ["vite/client", "gtag.js"],
+		"verbatimModuleSyntax": true
 	}
 }
