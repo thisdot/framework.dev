@@ -104,7 +104,7 @@ export function Homepage({
 				</div>
 				<ContributorBanner contributors={contributorsData}></ContributorBanner>
 				{books.length > 0 ? (
-					<div className="homepageTwoAndOneSectionStyle">
+					<div className={homepageTwoAndOneSectionStyle}>
 						<LatestTools tools={tools} />
 						<Books books={books} />
 					</div>

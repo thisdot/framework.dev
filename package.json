@@ -42,8 +42,6 @@
 		"@astrojs/renderer-react": "^0.5.0",
 		"@mdx-js/mdx": "^2.2.1",
 		"@mdx-js/preact": "^2.2.1",
-		"@percy/cli": "^1.16.0",
-		"@percy/storybook": "^4.3.4",
 		"@storybook/addon-actions": "^6.5.15",
 		"@storybook/addon-essentials": "^6.5.15",
 		"@storybook/addon-links": "^6.5.15",
@@ -61,8 +59,7 @@
 		"@vanilla-extract/sprinkles": "^1.5.1",
 		"@vanilla-extract/vite-plugin": "^3.7.0",
 		"@vanilla-extract/webpack-plugin": "^2.2.0",
-		"astro": "^1.9.1",
-		"babel-loader": "^9.1.2",
+		"astro": "2.10.15",
 		"color": "^4.2.3",
 		"cross-env": "^7.0.3",
 		"eslint": "^8.31.0",
@@ -83,7 +80,6 @@
 		"typescript": "4.9.4"
 	},
 	"dependencies": {
-		"@babel/core": "^7.20.12",
 		"@reach/auto-id": "^0.18.0",
 		"@reach/combobox": "^0.18.0",
 		"@reach/dialog": "^0.18.0",
