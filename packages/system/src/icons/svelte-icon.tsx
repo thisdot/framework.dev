@@ -26,5 +26,5 @@ export const SvelteIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				/>
 			</svg>
 		)
-	}
+	},
 )

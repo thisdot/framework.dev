@@ -92,5 +92,5 @@ export const SolidJSIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				/>
 			</svg>
 		)
-	}
+	},
 )

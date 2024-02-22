@@ -1,4 +1,4 @@
-import { ColorPalette } from './theme-from-palette'
+import { type ColorPalette } from './theme-from-palette'
 
 export const vueColorPalette: ColorPalette = {
 	highlight: '#73DAA4',

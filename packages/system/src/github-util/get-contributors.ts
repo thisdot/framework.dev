@@ -18,11 +18,11 @@ export const getContributorsData = async (): Promise<ContributorData[]> => {
 						headers: {
 							Authorization: `Token ${process.env.GITHUB_API_ACCESS_TOKEN}`,
 						},
-					}
-			  )
+					},
+				)
 			: await fetch(
-					'https://api.github.com/repos/thisdot/framework.dev/contributors?anon=1'
-			  )
+					'https://api.github.com/repos/thisdot/framework.dev/contributors?anon=1',
+				)
 
 		if (!response.ok) {
 			throw abortError
@@ -40,7 +40,7 @@ export const getContributorsData = async (): Promise<ContributorData[]> => {
 			retries: 3,
 			onFailedAttempt: (error) => {
 				console.log(
-					`getContributorsData Failure: Attempt ${error.attemptNumber} failed. There are ${error.retriesLeft} retries left.`
+					`getContributorsData Failure: Attempt ${error.attemptNumber} failed. There are ${error.retriesLeft} retries left.`,
 				)
 			},
 		})
@@ -52,7 +52,7 @@ export const getContributorsData = async (): Promise<ContributorData[]> => {
 		}))
 	} catch (error) {
 		throw new Error(
-			'Failed to fetch contributors. Please try rebuilding the website.'
+			'Failed to fetch contributors. Please try rebuilding the website.',
 		)
 	}
 }

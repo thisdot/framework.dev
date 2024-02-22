@@ -2,7 +2,7 @@ import { ISortConfig, ILibrary } from './types'
 
 export function sortLibraries(
 	libraries: ILibrary[],
-	sortConfig: ISortConfig
+	sortConfig: ISortConfig,
 ): ILibrary[] {
 	return [...libraries].sort((a, b) => {
 		const valueA =

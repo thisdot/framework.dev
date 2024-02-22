@@ -25,5 +25,5 @@ export const DenoIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				</g>
 			</svg>
 		)
-	}
+	},
 )

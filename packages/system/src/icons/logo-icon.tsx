@@ -53,5 +53,5 @@ export const LogoIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				</defs>
 			</svg>
 		)
-	}
+	},
 )

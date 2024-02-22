@@ -69,7 +69,7 @@ export function ResultsCategory<T extends CategoryName>({
 		setShowBannerTooltip(
 			results.length > 0 &&
 				isComparable &&
-				!localStorage.getItem(LocalStorageItems.CompareToolTip)
+				!localStorage.getItem(LocalStorageItems.CompareToolTip),
 		)
 	}, [category, results])
 
@@ -108,7 +108,7 @@ export function ResultsCategory<T extends CategoryName>({
 									onTagClick,
 									onSelect,
 									selectedItems,
-								})
+								}),
 							)
 						) : (
 							<p
@@ -132,7 +132,7 @@ export function ResultsCategory<T extends CategoryName>({
 							backgroundColor: 'surface1',
 							padding: 24,
 							borderRadius: 12,
-						})
+						}),
 					)}
 					aria-labelledby={headerId}
 					role="region"
@@ -152,7 +152,7 @@ export function ResultsCategory<T extends CategoryName>({
 									onTagClick,
 									onSelect,
 									selectedItems,
-								})
+								}),
 							)
 						) : (
 							<p
@@ -174,7 +174,7 @@ export function ResultsCategory<T extends CategoryName>({
 
 type RenderCardFn<T extends CategoryName> = (
 	value: Model<T>,
-	index: number
+	index: number,
 ) => JSX.Element
 
 type RenderCardProps<T extends CategoryName> = {

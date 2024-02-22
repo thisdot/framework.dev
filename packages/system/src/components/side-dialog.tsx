@@ -43,7 +43,7 @@ export function SideDialog({
 					dialogContentStyle({
 						state: menuStateToAnimationState(menuState),
 						position,
-					})
+					}),
 				)}
 				{...props}
 			>
@@ -55,7 +55,7 @@ export function SideDialog({
 
 function useMenuState(isOpen: boolean): MenuState {
 	const [menuState, setMenuState] = useState<MenuState>(
-		isOpen ? 'open' : 'closed'
+		isOpen ? 'open' : 'closed',
 	)
 	useEffect(() => {
 		if (isOpen) {

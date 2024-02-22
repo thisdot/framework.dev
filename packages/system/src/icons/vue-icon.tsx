@@ -30,5 +30,5 @@ export const VueIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				/>
 			</svg>
 		)
-	}
+	},
 )

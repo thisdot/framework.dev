@@ -42,5 +42,5 @@ export const ExternalLinkIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				/>
 			</svg>
 		)
-	}
+	},
 )

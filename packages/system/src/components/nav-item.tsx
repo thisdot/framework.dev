@@ -28,7 +28,7 @@ export function NavItem({
 			className={classNames(
 				className,
 				navItemStyle,
-				hiddenUntilFocus && navItemHiddenUntilFocus
+				hiddenUntilFocus && navItemHiddenUntilFocus,
 			)}
 			{...props}
 		>

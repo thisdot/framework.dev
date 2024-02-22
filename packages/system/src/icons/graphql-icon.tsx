@@ -31,5 +31,5 @@ export const GraphQLIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				</defs>
 			</svg>
 		)
-	}
+	},
 )

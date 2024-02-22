@@ -34,5 +34,5 @@ export const ReactIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				/>
 			</svg>
 		)
-	}
+	},
 )

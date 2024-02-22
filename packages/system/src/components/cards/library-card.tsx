@@ -46,7 +46,7 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 					{library?.repo.includes('github.com') ? (
 						<Badge
 							data={getGitHubStarsBadge(
-								library.repo.replace(/https:\/\/(www\.)?github\.com\//, '')
+								library.repo.replace(/https:\/\/(www\.)?github\.com\//, ''),
 							)}
 							href={library.repo}
 							label={`${library.name} GitHub Repository`}
@@ -63,18 +63,18 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 						<>
 							<Badge
 								data={getNpmDownloadsBadge(
-									library.package.replace('https://www.npmjs.com/package/', '')
+									library.package.replace('https://www.npmjs.com/package/', ''),
 								)}
 								href={library.package}
 								label={`${library.name} NPM Package`}
 							/>
 							<Badge
 								data={getBundleSizeBadge(
-									library.package.replace('https://www.npmjs.com/package/', '')
+									library.package.replace('https://www.npmjs.com/package/', ''),
 								)}
 								href={`https://bundlephobia.com/package/${library.package.replace(
 									'https://www.npmjs.com/package/',
-									''
+									'',
 								)}`}
 								label={`${library.name} Bundle Size Stats`}
 							/>
@@ -84,7 +84,7 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 						<div
 							className={classNames(
 								libraryPackageLinkStyle,
-								libraryCardBadgeStyle
+								libraryCardBadgeStyle,
 							)}
 						>
 							<a className={libraryPackageTextStyle} href={library.package}>

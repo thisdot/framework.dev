@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { useState } from 'react'
 import { Button } from './button'
 import {

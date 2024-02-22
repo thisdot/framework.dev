@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { useState } from 'react'
 import { AttributeDefinition } from '../../models/all-categories'
 import {

@@ -48,7 +48,7 @@ export function ComparisonTable({
 				return { by: heading, asc: false }
 			})
 		},
-		[sortConfig]
+		[sortConfig],
 	)
 
 	useEffect(() => {
@@ -56,7 +56,7 @@ export function ComparisonTable({
 			if (library.package.includes('npmjs.com')) {
 				library.package = library.package.replace(
 					/(?:http(?:s)?:\/\/(?:www\.)?)npmjs\.com\/package\//,
-					''
+					'',
 				)
 			}
 			return library
@@ -120,7 +120,7 @@ export function ComparisonTable({
 
 	const libraryStats = React.useMemo(
 		() => sortLibraries(data, sortConfig),
-		[data, sortConfig]
+		[data, sortConfig],
 	)
 
 	function handleTableRows() {
@@ -172,7 +172,7 @@ export function ComparisonTable({
 
 								updatedLibraryStats.splice(
 									updatedLibraryStats.indexOf(library),
-									1
+									1,
 								)
 
 								setData(updatedLibraryStats)

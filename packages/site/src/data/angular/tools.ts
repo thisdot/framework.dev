@@ -106,7 +106,8 @@ export const tools: Tool<(typeof toolTags)[number]>[] = [
 		href: 'https://www.infragistics.com/products/appbuilder',
 		description:
 			'A cloud-based drag & drop tool, enabling design and dev teams to build apps 80% faster. With production-ready code generation in Angular, Blazor, Web Components and 60+ UI controls.',
-		image: 'https://static.infragistics.com/marketing/Website/products/app-builder/app-builder-icon.svg',
+		image:
+			'https://static.infragistics.com/marketing/Website/products/app-builder/app-builder-icon.svg',
 		tags: ['UI Design', 'development'],
-	}
+	},
 ]

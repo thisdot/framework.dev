@@ -70,7 +70,7 @@ export function FilterMenu({
 										...oldParams.filters,
 										field: [
 											...filters.field.filter(
-												([name]) => name !== fieldFilter[0]
+												([name]) => name !== fieldFilter[0],
 											),
 											newValue,
 										],

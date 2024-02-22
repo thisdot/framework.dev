@@ -16,5 +16,5 @@ export const AddIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				<path d="M14.2502 9.75H9.75024V14.25H8.25024V9.75H3.75024V8.25H8.25024V3.75H9.75024V8.25H14.2502V9.75Z" />
 			</svg>
 		)
-	}
+	},
 )

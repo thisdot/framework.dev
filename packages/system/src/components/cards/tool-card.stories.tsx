@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { sprinkles } from '../../sprinkles/sprinkles.css'
 import { exampleTools } from '../../util/example-content'
 import { titleFirstCardGrid } from './card-layouts.css'

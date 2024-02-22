@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { Search as SearchComponent, SearchProps } from './search'
 
 export default {

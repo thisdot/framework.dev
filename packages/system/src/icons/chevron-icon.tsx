@@ -21,5 +21,5 @@ export const ChevronIcon = React.forwardRef<SVGSVGElement, ChevronIconProps>(
 				/>
 			</svg>
 		)
-	}
+	},
 )

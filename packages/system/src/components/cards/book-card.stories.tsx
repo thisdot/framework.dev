@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { sprinkles } from '../../sprinkles/sprinkles.css'
 import { BookCard as BookCardComponent, BookCardProps } from './book-card'
 import { exampleBooks } from '../../util/example-content'

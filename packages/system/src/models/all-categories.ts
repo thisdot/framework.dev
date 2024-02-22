@@ -1,15 +1,15 @@
 import {
-	ArrayElement,
-	RecordElement,
-	UnionToIntersection,
+	type ArrayElement,
+	type RecordElement,
+	type UnionToIntersection,
 } from '../util/type-utils'
-import { Blog, blogIndexMetadata } from './blog'
-import { Book, bookIndexMetadata } from './book'
-import { Community, communityIndexMetadata } from './community'
-import { Course, courseIndexMetadata } from './course'
-import { Library, libraryIndexMetadata } from './library'
-import { Podcast, podcastIndexMetadata } from './podcast'
-import { Tool, toolIndexMetadata } from './tool'
+import { type Blog, blogIndexMetadata } from './blog'
+import { type Book, bookIndexMetadata } from './book'
+import { type Community, communityIndexMetadata } from './community'
+import { type Course, courseIndexMetadata } from './course'
+import { type Library, libraryIndexMetadata } from './library'
+import { type Podcast, podcastIndexMetadata } from './podcast'
+import { type Tool, toolIndexMetadata } from './tool'
 
 export const allCategoriesMetadata = {
 	[bookIndexMetadata.name]: bookIndexMetadata,
@@ -27,7 +27,7 @@ export type CategoryMetadata<T extends keyof typeof allCategoriesMetadata> =
 export type CategoryName = keyof typeof allCategoriesMetadata
 
 export const allCategoryNames = Object.keys(
-	allCategoriesMetadata
+	allCategoriesMetadata,
 ) as CategoryName[]
 
 export type AllModelsByName = {
@@ -67,9 +67,9 @@ type AllFilterableFields<M = CategoryMetadata<CategoryName>> =
 		? {
 				[FieldName in keyof M['filterableFields']]: [
 					FieldName,
-					ArrayElement<M['filterableFields'][FieldName]>
+					ArrayElement<M['filterableFields'][FieldName]>,
 				]
-		  }
+			}
 		: never
 
 export type AttributeDefinition = Readonly<
@@ -81,9 +81,9 @@ type AllFieldFilters<M = CategoryMetadata<CategoryName>> =
 		? {
 				[FieldName in keyof M['filterableFields']]: [
 					FieldName,
-					Readonly<ArrayElement<M['filterableFields'][FieldName]>[]>
+					Readonly<ArrayElement<M['filterableFields'][FieldName]>[]>,
 				]
-		  }
+			}
 		: never
 
 export type FieldFilter = Readonly<

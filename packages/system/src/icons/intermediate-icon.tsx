@@ -21,5 +21,5 @@ export const IntermediateIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				<path d="M1.50037 12L1.50037 13.5L16.5004 13.5L16.5004 12L1.50037 12Z" />
 			</svg>
 		)
-	}
+	},
 )

@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { ReactIcon } from '../../icons/react-icon'
 import { LinkCard as LinkCardComponent, LinkCardProps } from './link-card'
 

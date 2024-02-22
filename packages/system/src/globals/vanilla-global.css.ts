@@ -21,7 +21,7 @@ globalStyle('input[type=search]::-ms-clear, input[type=search]::-ms-reveal', {
 
 globalStyle(
 	'input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration',
-	{ display: 'none' }
+	{ display: 'none' },
 )
 
 globalStyle('*:focus-visible', {

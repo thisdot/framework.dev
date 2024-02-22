@@ -2,11 +2,11 @@ import classNames from 'classnames'
 import React from 'react'
 import { tagContainerStyle, tagTextStyle } from './tag.css'
 
-export interface TagProps extends React.ComponentPropsWithoutRef<'button'> {}
+export type TagProps = React.ComponentPropsWithoutRef<'button'>
 
 export const Tag = React.forwardRef<HTMLSpanElement, TagProps>(function Tag(
 	{ children, className, ...props },
-	ref
+	ref,
 ) {
 	return (
 		<span ref={ref} className={classNames(className, tagContainerStyle)}>

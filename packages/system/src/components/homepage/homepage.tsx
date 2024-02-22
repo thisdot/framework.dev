@@ -78,7 +78,7 @@ export function Homepage({
 					sprinkles({
 						paddingBottom: { mobile: 24, desktop: 16 },
 						paddingTop: { mobile: 0, desktop: 16 },
-					})
+					}),
 				)}
 			>
 				<Search />
@@ -89,7 +89,7 @@ export function Homepage({
 			<div
 				className={classNames(
 					homepageContentContainerStyle,
-					homepageGutterStyle
+					homepageGutterStyle,
 				)}
 			>
 				<FeaturedLibraries

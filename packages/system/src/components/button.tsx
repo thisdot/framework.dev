@@ -18,7 +18,7 @@ export const Button = React.forwardRef(function Button(
 		type = 'button',
 		...props
 	},
-	ref
+	ref,
 ): JSX.Element {
 	return (
 		<Comp

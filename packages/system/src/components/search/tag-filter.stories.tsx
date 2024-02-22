@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { exampleTags } from '../../util/example-content'
 import { TagFilter as TagFilterComponent, TagFilterProps } from './tag-filter'
 

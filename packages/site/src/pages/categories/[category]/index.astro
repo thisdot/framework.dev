@@ -40,6 +40,6 @@ const title = `${formatFieldName(category)} | ${
 	/>
 </head>
 <BaseLayout title={title} currentCategory={category}>
-	<h1 class={visuallyHidden}>{title}</h1>
+	<h1 className={visuallyHidden}>{title}</h1>
 	<Search client:load {...props} siteName={import.meta.env.VITE_FRAMEWORK} />
 </BaseLayout>

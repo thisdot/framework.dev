@@ -26,18 +26,18 @@ import { FilterSet, QueryParams } from './types'
 const filterRegex = /(\S+):(\S+)/g
 export function parseQueryString(
 	queryString: string,
-	availableFilters: FilterSet
+	availableFilters: FilterSet,
 ): QueryParams {
 	const filters = Array.from(queryString.matchAll(filterRegex)).map(
-		([_match, key, value]) => [key, value] as const
+		([_match, key, value]) => [key, value] as const,
 	)
 
 	const isValidCategoryFilter = (
-		filterCandidate: readonly [string, string]
+		filterCandidate: readonly [string, string],
 	): filterCandidate is readonly ['in', CategoryName] =>
 		filterCandidate[0] === 'in' &&
 		availableFilters.category.some(
-			(possibleValue) => possibleValue === filterCandidate[1]
+			(possibleValue) => possibleValue === filterCandidate[1],
 		)
 
 	const categories = filters
@@ -47,11 +47,11 @@ export function parseQueryString(
 
 	const tags = deserializeFieldValues(
 		filters.filter(([key]) => key === 'tag').map(([_key, value]) => value),
-		availableFilters.tag
+		availableFilters.tag,
 	)
 
 	const isValidFieldFilter = (
-		filterCandidate: readonly [string, string | undefined]
+		filterCandidate: readonly [string, string | undefined],
 	): filterCandidate is AttributeDefinition =>
 		!!availableFilters.field
 			.find(([fieldName]) => filterCandidate[0] === fieldName)?.[1]
@@ -59,7 +59,7 @@ export function parseQueryString(
 
 	const deserializeFieldFilter = ([fieldName, filterValue]: readonly [
 		string,
-		string
+		string,
 	]): readonly [string, string | undefined] =>
 		[
 			deserializeFieldName(fieldName),
@@ -67,13 +67,13 @@ export function parseQueryString(
 				filterValue,
 				findAvailableFiltersForField(
 					availableFilters,
-					deserializeFieldName(fieldName)
-				)
+					deserializeFieldName(fieldName),
+				),
 			),
 		] as const
 
 	const fields = groupFieldFilters(
-		filters.map(deserializeFieldFilter).filter(isValidFieldFilter)
+		filters.map(deserializeFieldFilter).filter(isValidFieldFilter),
 	)
 	const textSearch = queryString.replace(filterRegex, '').trim()
 
@@ -89,47 +89,47 @@ export function parseQueryString(
 
 function findAvailableFiltersForField(
 	availableFilters: FilterSet,
-	fieldName: string
+	fieldName: string,
 ) {
 	return (
 		availableFilters.field.find(
-			([availableFilterName]) => availableFilterName === fieldName
+			([availableFilterName]) => availableFilterName === fieldName,
 		)?.[1] ?? []
 	)
 }
 
 export function calculateAvailableFilters(
 	allCategories: AllCategories[],
-	preFilters: FilterSet
+	preFilters: FilterSet,
 ): FilterSet {
 	const availableCategories = uniq(
-		allCategories.map((category) => category.name)
+		allCategories.map((category) => category.name),
 	)
 	return {
 		category: preFilters.category.length > 0 ? [] : availableCategories,
 		tag: without(
 			uniq(allCategories.flatMap((category) => category.tags)),
-			...preFilters.tag
+			...preFilters.tag,
 		),
 		field:
 			allCategories.length === 1
 				? Object.entries(allCategories[0].indexMetadata.filterableFields).map(
-						([key, values]) => [key, [...values]] as FieldFilter
-				  )
+						([key, values]) => [key, [...values]] as FieldFilter,
+					)
 				: [],
 	}
 }
 
 export function serializeQueryParams(params: QueryParams): string {
 	const categories = params.filters.category.map(
-		(category) => `in:${serializeFieldName(category)}`
+		(category) => `in:${serializeFieldName(category)}`,
 	)
 	const tags = params.filters.tag.map(
-		(tag) => `tag:${serializeFieldValue(tag)}`
+		(tag) => `tag:${serializeFieldValue(tag)}`,
 	)
 	const fields = ungroupFieldFilters(params.filters.field).map(
 		([fieldName, value]) =>
-			`${serializeFieldName(fieldName)}:${serializeFieldValue(value)}`
+			`${serializeFieldName(fieldName)}:${serializeFieldValue(value)}`,
 	)
 
 	return [...categories, ...tags, ...fields, params.textSearch].join(' ')
@@ -137,7 +137,7 @@ export function serializeQueryParams(params: QueryParams): string {
 
 export function getWordCoordinatesAt(
 	text: string,
-	position = 0
+	position = 0,
 ): [number, number] | null {
 	if (!position) return null
 	// Search for the word's beginning and end.
@@ -152,7 +152,7 @@ export function getWordCoordinatesAt(
 
 type SearchArgs<
 	K extends CategoryName,
-	T extends AllModelsByName[K] = AllModelsByName[K]
+	T extends AllModelsByName[K] = AllModelsByName[K],
 > = {
 	category: K
 	data: T[]
@@ -180,14 +180,14 @@ export function filterCategories(data: AllCategories[], filters: FilterSet) {
 		(category) =>
 			filters.category.length === 0 ||
 			filters.category.some(
-				(filterCategory) => filterCategory === category.name
-			)
+				(filterCategory) => filterCategory === category.name,
+			),
 	)
 }
 
 export function filterRecords<T extends AllModels>(
 	data: T[],
-	filters: FilterSet
+	filters: FilterSet,
 ): T[] {
 	return data.filter(
 		(record) =>
@@ -195,40 +195,40 @@ export function filterRecords<T extends AllModels>(
 				record.tags.some((tag) => filters.tag.includes(tag))) &&
 			filters.field.every(([fieldName, fieldValues]) =>
 				fieldValues.some((fieldValue) =>
-					hasFieldEqualToValue(record, fieldName, fieldValue)
-				)
-			)
+					hasFieldEqualToValue(record, fieldName, fieldValue),
+				),
+			),
 	)
 }
 
 export function applyPreFilters(
 	initialData: AllCategories[],
-	preFilters: FilterSet
+	preFilters: FilterSet,
 ): AllCategories[] {
 	return filterCategories(initialData, preFilters).map<AllCategories>(
 		<T extends AllCategories>(category: T) =>
 			({
 				...category,
 				data: filterRecords(category.data as any, preFilters),
-			} as T)
+			}) as T,
 	)
 }
 
 export function groupFieldFilters(
-	filters: AttributeDefinition[]
+	filters: AttributeDefinition[],
 ): FieldFilter[] {
 	return toPairs(
-		mapValues(groupBy(filters, 0), (values) => map(values, 1))
+		mapValues(groupBy(filters, 0), (values) => map(values, 1)),
 	) as FieldFilter[]
 }
 
 export function ungroupFieldFilters(
-	groupedFilters: FieldFilter[]
+	groupedFilters: FieldFilter[],
 ): AttributeDefinition[] {
 	return groupedFilters.flatMap(([k, vs]) =>
 		// This is a dirty cast but the code to make TypeScript understand
 		// what is happening here would be even worse
-		vs.map((v) => [k, v] as AttributeDefinition)
+		vs.map((v) => [k, v] as AttributeDefinition),
 	)
 }
 
@@ -241,7 +241,7 @@ export function ungroupFieldFilter<T extends FieldFilter>([
 	fieldValues,
 ]: T): UngroupedFieldFilter<T> {
 	return fieldValues.map(
-		(v) => [fieldName, v] as const
+		(v) => [fieldName, v] as const,
 	) as UngroupedFieldFilter<T>
 }
 

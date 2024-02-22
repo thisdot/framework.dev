@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import startCase from 'lodash/startCase'
 import { sprinkles } from '../sprinkles/sprinkles.css'
 import { Sidebar as SidebarComponent, SidebarProps } from './sidebar'

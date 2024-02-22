@@ -41,13 +41,13 @@ export function SearchAutocomplete({
 	const inputRef = useRef<HTMLInputElement>(null)
 	const currentWordCoordinates = getWordCoordinatesAt(
 		value,
-		inputRef.current?.selectionStart ?? 0
+		inputRef.current?.selectionStart ?? 0,
 	)
 	const autoCompleteResults = currentWordCoordinates
 		? calculateAutocompleteResults(
 				availableFilters,
-				value.slice(...currentWordCoordinates)
-		  )
+				value.slice(...currentWordCoordinates),
+			)
 		: []
 	return (
 		<Combobox
@@ -56,7 +56,7 @@ export function SearchAutocomplete({
 				onChange(
 					value.slice(0, currentWordCoordinates[0]) +
 						selection +
-						value.slice(currentWordCoordinates[1])
+						value.slice(currentWordCoordinates[1]),
 				)
 			}
 			aria-label="Search"
@@ -102,29 +102,29 @@ type AutocompleteResult = {
 
 function calculateAutocompleteResults(
 	availableFilters: FilterSet,
-	word: string
+	word: string,
 ): AutocompleteResult[] {
 	if (!word) return []
 
 	const categoryFilterSuggestions: AutocompleteResult[] = Array.from(
-		availableFilters.category
+		availableFilters.category,
 	).map((name) => ({
 		value: `in:${serializeFieldName(name)}`,
 		description: `Limit search to ${formatFieldName(name)}`,
 	}))
 	const tagFilterSuggestions: AutocompleteResult[] = Array.from(
-		availableFilters.tag
+		availableFilters.tag,
 	).map((name) => ({
 		value: `tag:${serializeFieldValue(name)}`,
 		description: `Only results tagged ${name}`,
 	}))
 	const fieldFilterSuggestions: AutocompleteResult[] = Array.from(
-		availableFilters.field
+		availableFilters.field,
 	).flatMap(([key, values]) =>
 		Array.from(values).map((value) => ({
 			value: `${serializeFieldName(key)}:${serializeFieldValue(value)}`,
 			description: `Only results where the ${formatFieldName(key)} is ${value}`,
-		}))
+		})),
 	)
 	return [
 		...categoryFilterSuggestions,

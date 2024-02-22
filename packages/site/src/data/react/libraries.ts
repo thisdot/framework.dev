@@ -1,12 +1,6 @@
 import { Library } from '@framework/system/src/models/library'
 import { LibraryTag } from '@framework/system/src/models/library-tag'
 
-// The default image here for use
-// on libraries that don't have an image
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const defaultImage =
-	'https://w7.pngwing.com/pngs/79/518/png-transparent-js-react-js-logo-react-react-native-logos-icon-thumbnail.png'
-
 export const libraries: Library[] = [
 	{
 		name: 'Flux',
@@ -1032,7 +1026,8 @@ export const libraries: Library[] = [
 		repo: 'https://github.com/IgniteUI/igniteui-react',
 		package: 'https://www.npmjs.com/package/igniteui-react',
 		href: 'https://www.infragistics.com/products/ignite-ui-react',
-		image: 'https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg',
+		image:
+			'https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg',
 		tags: [LibraryTag.COMPONENT, LibraryTag.FRAMEWORKS, LibraryTag.CLI],
 		description:
 			'Ignite UI for React includes a wide range of easy to use React UI components that have been designed and optimized for high-performance, high-volume data scenarios.',
@@ -1048,5 +1043,5 @@ export const libraries: Library[] = [
 		tags: [LibraryTag.COMPONENT],
 		description: 'A fully featured React components library.',
 		language: 'TypeScript',
-	}
+	},
 ]

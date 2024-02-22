@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { allCategoryNames } from '../../models/all-categories'
 import { exampleTags } from '../../util/example-content'
 import {

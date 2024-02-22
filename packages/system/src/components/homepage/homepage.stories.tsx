@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { Homepage as HomepageComponent, HomepageProps } from './homepage'
 import {
 	exampleBlogs,

@@ -41,5 +41,5 @@ export const LibraryCardIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				/>
 			</svg>
 		)
-	}
+	},
 )

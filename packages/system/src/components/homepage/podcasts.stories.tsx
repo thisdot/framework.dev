@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { examplePodcasts } from '../../util/example-content'
 import { Podcasts as PodcastsComponent, PodcastsProps } from './podcasts'
 

@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { AngularIcon } from '../../icons/angular-icon'
 import { ReactIcon } from '../../icons/react-icon'
 import { SvelteIcon } from '../../icons/svelte-icon'

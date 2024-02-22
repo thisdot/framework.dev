@@ -139,7 +139,7 @@ export function ResourceCard({
 						<div
 							className={classNames(
 								resourceCardFooterItemsRowStyle,
-								'hide-in-percy'
+								'hide-in-percy',
 							)}
 						>
 							{badges}

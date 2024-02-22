@@ -19,96 +19,96 @@ export const vars = createThemeContract(lightThemeFromPalette(blankPalette))
 
 export const reactTheme = createTheme(
 	vars,
-	lightThemeFromPalette(reactColorPalette)
+	lightThemeFromPalette(reactColorPalette),
 )
 
 export const reactThemeDark = createTheme(
 	vars,
-	darkThemeFromPalette(reactColorPalette)
+	darkThemeFromPalette(reactColorPalette),
 )
 
 export const solidjsTheme = createTheme(
 	vars,
-	lightThemeFromPalette(solidJSColorPalette)
+	lightThemeFromPalette(solidJSColorPalette),
 )
 
 export const solidjsThemeDark = createTheme(
 	vars,
-	darkThemeFromPalette(solidJSColorPalette)
+	darkThemeFromPalette(solidJSColorPalette),
 )
 
 export const angularTheme = createTheme(
 	vars,
-	lightThemeFromPalette(angularColorPalette)
+	lightThemeFromPalette(angularColorPalette),
 )
 
 export const angularThemeDark = createTheme(
 	vars,
-	darkThemeFromPalette(angularColorPalette)
+	darkThemeFromPalette(angularColorPalette),
 )
 
 export const vueTheme = createTheme(
 	vars,
-	lightThemeFromPalette(vueColorPalette)
+	lightThemeFromPalette(vueColorPalette),
 )
 
 export const vueThemeDark = createTheme(
 	vars,
-	darkThemeFromPalette(vueColorPalette)
+	darkThemeFromPalette(vueColorPalette),
 )
 
 export const qwikTheme = createTheme(
 	vars,
-	lightThemeFromPalette(qwikColorPalette)
+	lightThemeFromPalette(qwikColorPalette),
 )
 
 export const qwikThemeDark = createTheme(
 	vars,
-	darkThemeFromPalette(qwikColorPalette)
+	darkThemeFromPalette(qwikColorPalette),
 )
 
 export const svelteTheme = createTheme(
 	vars,
-	lightThemeFromPalette(svelteColorPalette)
+	lightThemeFromPalette(svelteColorPalette),
 )
 
 export const svelteThemeDark = createTheme(
 	vars,
-	darkThemeFromPalette(svelteColorPalette)
+	darkThemeFromPalette(svelteColorPalette),
 )
 
 export const nodejsTheme = createTheme(
 	vars,
-	lightThemeFromPalette(nodejsColorPalette)
+	lightThemeFromPalette(nodejsColorPalette),
 )
 
 export const nodejsThemeDark = createTheme(
 	vars,
-	darkThemeFromPalette(nodejsColorPalette)
+	darkThemeFromPalette(nodejsColorPalette),
 )
 
 export const graphqlTheme = createTheme(
 	vars,
-	lightThemeFromPalette(graphqlColorPalette)
+	lightThemeFromPalette(graphqlColorPalette),
 )
 
 export const graphqlThemeDark = createTheme(
 	vars,
-	darkThemeFromPalette(graphqlColorPalette)
+	darkThemeFromPalette(graphqlColorPalette),
 )
 export const denoTheme = createTheme(
 	vars,
-	lightThemeFromPalette(denoColorPalette)
+	lightThemeFromPalette(denoColorPalette),
 )
 
 export const denoThemeDark = createTheme(
 	vars,
-	darkThemeFromPalette(denoColorPalette)
+	darkThemeFromPalette(denoColorPalette),
 )
 
 export const landingTheme = createTheme(
 	vars,
-	lightThemeFromPalette(landingColorPalette)
+	lightThemeFromPalette(landingColorPalette),
 )
 
 export const derivedAttributes = {

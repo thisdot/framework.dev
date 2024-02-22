@@ -34,7 +34,7 @@ export function DiscreteAttribute({
 			className={classNames(
 				className,
 				sprinkles({ layout: 'row', alignItems: 'center', gap: 6 }),
-				colorize && color && sprinkles({ color })
+				colorize && color && sprinkles({ color }),
 			)}
 			{...props}
 		>
@@ -56,7 +56,7 @@ export function DiscreteAttributeIcon({
 		<div
 			className={classNames(
 				className,
-				colorize && color && sprinkles({ color })
+				colorize && color && sprinkles({ color }),
 			)}
 			{...props}
 		>
@@ -66,7 +66,7 @@ export function DiscreteAttributeIcon({
 }
 
 function attributeIcon(
-	attribute: AttributeDefinition
+	attribute: AttributeDefinition,
 ): React.ComponentType<IconProps> {
 	switch (attribute[0]) {
 		case 'format': {
@@ -101,7 +101,7 @@ function attributeIcon(
 }
 
 function attributeColor(
-	attribute: AttributeDefinition
+	attribute: AttributeDefinition,
 ): keyof ColorTheme['themeColors'] | null {
 	switch (attribute[0]) {
 		case 'level': {

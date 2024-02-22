@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { useRef, useState } from 'react'
 import { Button } from './button'
 import { InfoPopup as InfoPopupComponent, InfoPopupProps } from './info-popup'

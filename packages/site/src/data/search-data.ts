@@ -12,7 +12,7 @@ import { toolIndexMetadata } from '@framework/system/src/models/tool'
 import { LibraryTag } from '@framework/system/src/models/library-tag'
 
 export async function getSearchData(
-	framework: string
+	framework: string,
 ): Promise<AllCategories[]> {
 	const { blogs, blogTags } = await import(`./${framework}/blogs.ts`)
 	const { books, bookTags } = await import(`./${framework}/books.ts`)
@@ -31,7 +31,7 @@ export async function getSearchData(
 			name: libraryIndexMetadata.name,
 			tags: Object.values(LibraryTag),
 			subCategories: Array.from(
-				new Set(libraries.flatMap((lib: Library) => lib.tags))
+				new Set(libraries.flatMap((lib: Library) => lib.tags)),
 			),
 		},
 		{

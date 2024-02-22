@@ -22,5 +22,5 @@ export const WavyArrowIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				/>
 			</svg>
 		)
-	}
+	},
 )

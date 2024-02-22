@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { InteractiveIcon } from '../icons/interactive-icon'
 import { Tooltip as TooltipComponent, TooltipProps } from './tooltip'
 

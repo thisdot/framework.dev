@@ -8,7 +8,7 @@ import {
 	footerStyle,
 } from './footer.css'
 
-export interface FooterProps extends React.ComponentPropsWithoutRef<'footer'> {}
+export type FooterProps = React.ComponentPropsWithoutRef<'footer'>
 
 export function Footer({ children, className, ...props }: FooterProps) {
 	return (

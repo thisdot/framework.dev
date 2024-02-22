@@ -62,7 +62,7 @@ export function Search({
 	const [comparisonTableOpen, setComparisonTableOpen] = useState(false)
 	const availableFilters = useMemo(
 		() => calculateAvailableFilters(data, appliedPreFilters),
-		[data, appliedPreFilters]
+		[data, appliedPreFilters],
 	)
 	const queryParams = parseQueryString(activeQuery, availableFilters)
 
@@ -116,7 +116,7 @@ export function Search({
 											...queryParams.filters,
 											tag: uniq([...queryParams.filters.tag, tag]),
 										},
-									})
+									}),
 								)
 								scrollableContainerRef.current?.scrollTo(0, 0)
 							}}
@@ -262,9 +262,9 @@ function SearchResults({
 						threshold: 0.2,
 						useExtendedSearch: true,
 					}),
-				])
+				]),
 			),
-		[data]
+		[data],
 	)
 	return (
 		<div
@@ -282,7 +282,7 @@ function SearchResults({
 					.filter((category) =>
 						queryParams.filters.category.length > 0
 							? isInFilteredCategories(category)
-							: true
+							: true,
 					)
 					.map((category, _index) => {
 						const searchIndex = searchIndices[category.name]
@@ -296,7 +296,7 @@ function SearchResults({
 										data: category.data,
 										params: queryParams,
 										searchIndex,
-								  })
+									})
 								: [],
 							onTagClick,
 						} as const
@@ -308,7 +308,7 @@ function SearchResults({
 										onLibrarySelect(
 											selected
 												? uniq([...selectedLibraries, item])
-												: without(selectedLibraries, item)
+												: without(selectedLibraries, item),
 										)
 									}
 									selectedItems={selectedLibraries}
@@ -323,7 +323,7 @@ function SearchResults({
 
 	function isInFilteredCategories(category: AllCategories): unknown {
 		return queryParams.filters.category.some(
-			(includedCategory) => includedCategory === category.name
+			(includedCategory) => includedCategory === category.name,
 		)
 	}
 }

@@ -138,5 +138,5 @@ export const QwikIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				</defs>
 			</svg>
 		)
-	}
+	},
 )
