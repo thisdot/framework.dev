@@ -15,6 +15,7 @@
 			"@framework/system": ["./packages/system/*"]
 		},
 		"types": ["vite/client", "gtag.js"],
-		"verbatimModuleSyntax": true
+		"verbatimModuleSyntax": false,
+		"allowImportingTsExtensions": true
 	}
 }
