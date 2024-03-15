@@ -1,0 +1,11 @@
+{
+	"title": "Test-Driven Development with React",
+	"authors": ["Juntao Qiu"],
+	"image": "https://www.oreilly.com/library/cover/9781484269725/",
+	"description": "Learn to use accelerated test-driven development (TDD) to build a React application from scratch. This book explains how your React components will be integrated, and how to refactor code to make it more concise and flexible.",
+	"yearOfPublication": 2021,
+	"numberOfPages": 166,
+	"level": "intermediate",
+	"href": "https://www.oreilly.com/library/view/test-driven-development-with/9781484269725/",
+	"tags": ["testing"]
+}

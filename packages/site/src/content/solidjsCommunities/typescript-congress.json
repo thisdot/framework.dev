@@ -1,0 +1,9 @@
+{
+	"name": "TypeScript Congress",
+	"description": "TS Congress is an online event for web developers on all things TypeScript",
+	"image": "https://typescriptcongress.com/img/logo.svg",
+	"type": "Live Events",
+	"href": "https://typescriptcongress.com/",
+	"darkImageBackground": true,
+	"tags": ["conferences"]
+}

@@ -1,0 +1,11 @@
+{
+	"name": "dotenv",
+	"author": "Scott Motte",
+	"repo": "https://github.com/motdotla/dotenv",
+	"package": "https://www.npmjs.com/package/dotenv",
+	"href": "https://github.com/motdotla/dotenv",
+	"description": "Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.",
+	"image": "https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.svg",
+	"tags": ["frameworks"],
+	"language": "NodeJS"
+}

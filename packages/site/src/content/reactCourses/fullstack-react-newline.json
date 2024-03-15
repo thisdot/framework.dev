@@ -1,0 +1,19 @@
+{
+	"title": "Fullstack React",
+	"author": "newline",
+	"image": "https://github.com/fullstackio.png",
+	"description": "The up-to-date, in-depth, complete guide to React and friends.",
+	"paymentType": "paid",
+	"level": "beginner",
+	"format": "text",
+	"href": "https://www.newline.co/fullstack-react/",
+	"tags": [
+		"routing",
+		"testing",
+		"GraphQL",
+		"native",
+		"forms",
+		"state management",
+		"redux"
+	]
+}

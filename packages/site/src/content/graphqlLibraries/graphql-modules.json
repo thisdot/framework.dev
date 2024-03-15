@@ -1,0 +1,11 @@
+{
+	"name": "GraphQL Modules",
+	"author": "Uri Goldshtein",
+	"repo": "https://www.github.com/Urigo/graphql-modules",
+	"package": "https://www.npmjs.com/package/graphql-modules",
+	"href": "https://www.the-guild.dev/graphql/modules",
+	"description": "GraphQL Modules is a toolset of libraries and guidelines dedicated to create reusable, maintainable, testable and extendable modules out of your GraphQL server.",
+	"image": "https://github.com/Urigo.png",
+	"language": "NodeJS",
+	"tags": ["data processing"]
+}

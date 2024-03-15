@@ -1,0 +1,11 @@
+{
+	"title": "Node.js in Action, Second Edition",
+	"authors": ["Bradley Meck Alex Young and Mike Cantelon"],
+	"description": "\"Node.js in Action, Second Edition\" is a thoroughly revised book based on the best-selling first edition. It starts at square one and guides you through all the features, techniques, and concepts you'll need to build production-quality Node applications. You'll master key design concepts such as asynchronous programming, state management, and event-driven programming. And you'll learn to put together MVC servers using Express and Connect, design web APIs, and set up the perfect production environment to build, lint, and test.",
+	"image": "https://learning.oreilly.com/library/cover/9781617292576/250w/",
+	"href": "https://www.oreilly.com/api/v1/book/9781617292576/",
+	"tags": ["full stack", "servers", "patterns"],
+	"yearOfPublication": 2017,
+	"numberOfPages": 634,
+	"level": "beginner"
+}

@@ -1,0 +1,11 @@
+{
+	"title": "The Road to GraphQL",
+	"authors": ["Robin Wieruch"],
+	"image": "https://m.media-amazon.com/images/I/31MMS6yrIbS._SX384_BO1,204,203,200_.jpg",
+	"description": "The Road to GraphQL is your personal journey to master pragmatic GraphQL in JavaScript.",
+	"yearOfPublication": 2018,
+	"numberOfPages": 352,
+	"level": "beginner",
+	"href": "https://www.amazon.com/Road-GraphQL-pragmatic-JavaScript-React-js/dp/1730853935/ref=asc_df_1730853935/?tag=hyprod-20&linkCode=df0&hvadid=312114711253&hvpos=&hvnetw=g&hvrand=8926488608331483187&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9010373&hvtargid=pla-570403080883&psc=1",
+	"tags": ["graphQL", "reactJS", "nodeJS"]
+}

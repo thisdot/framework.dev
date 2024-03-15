@@ -1,0 +1,11 @@
+{
+	"title": "React 17 Design Patterns and Best Practices",
+	"authors": ["Carlos Santana Roldan"],
+	"image": "https://www.oreilly.com/library/cover/9781800560444/",
+	"description": "This book will help you to use React effectively to make your applications more flexible, easier to maintain, and improve their performance, while giving your workflow a huge boost by improving speed without affecting quality.",
+	"yearOfPublication": 2021,
+	"numberOfPages": 353,
+	"level": "advanced",
+	"href": "https://www.oreilly.com/library/view/react-17-design/9781800560444/",
+	"tags": ["GraphQL", "recipes"]
+}

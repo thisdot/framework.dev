@@ -1,0 +1,11 @@
+{
+	"name": "XState",
+	"author": "David Khourshid",
+	"repo": "https://www.github.com/statelyai/xstate",
+	"package": "https://www.npmjs.com/package/xstate",
+	"href": "https://xstate.js.org/docs/packages/xstate-vue/#xstate-vue",
+	"description": "JavaScript and TypeScript finite state machines and statecharts for the modern web.",
+	"image": "https://github.com/statelyai.png",
+	"tags": ["state management"],
+	"language": "TypeScript"
+}

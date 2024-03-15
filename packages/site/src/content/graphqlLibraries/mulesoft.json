@@ -1,0 +1,11 @@
+{
+	"name": "MuleSoft",
+	"author": "salesforce",
+	"repo": "https://github.com/mulesoft",
+	"package": "https://www.npmjs.com/~mulesoft-npm",
+	"href": "https://www.mulesoft.com/",
+	"description": "Deliver end-to-end automation and orchestrate across all of your systems to deliver connected customer experiences, faster.",
+	"image": "https://mma.prnewswire.com/media/1512177/MuleSoft_Logo.jpg?p=twitter",
+	"language": "unknown",
+	"tags": ["utilities"]
+}

@@ -1,0 +1,11 @@
+{
+	"name": "Ant Design",
+	"author": "Ant",
+	"repo": "https://www.github.com/ant-design/ant-design",
+	"package": "https://www.npmjs.com/package/antd",
+	"href": "https://ant.design/",
+	"image": "https://github.com/ant-design.png",
+	"tags": ["component"],
+	"description": "An enterprise-class UI design language and React UI library.",
+	"language": "TypeScript"
+}

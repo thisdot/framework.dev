@@ -1,0 +1,9 @@
+{
+	"title": "Epic React",
+	"image": "https://image.simplecastcdn.com/images/1105175e-7479-432b-910e-60e1e20f351f/84c729af-3bfb-4b6a-b80a-e0e0d0eb58d3/epic-react-podcast-show-artwork.jpg",
+	"hosts": ["Kent C. Dodds"],
+	"description": "Learn By Consuming, Building, And Teaching",
+	"rss": "https://feeds.simplecast.com/giYVu3vJ",
+	"href": "https://epicreact.dev/podcast/learn-by-consuming-building-and-teaching",
+	"tags": ["react"]
+}

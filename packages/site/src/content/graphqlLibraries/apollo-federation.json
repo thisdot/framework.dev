@@ -1,0 +1,11 @@
+{
+	"name": "Apollo Federation",
+	"author": "Apollo GraphQL",
+	"repo": "https://www.github.com/apollographql/federation",
+	"package": "",
+	"href": "https://www.apollographql.com/docs/federation/",
+	"description": "Combine GraphQL APIs into a unified supergraph",
+	"image": "https://github.com/apollographql.png",
+	"language": "NodeJS",
+	"tags": ["database drivers", "frameworks"]
+}

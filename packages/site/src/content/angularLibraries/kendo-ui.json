@@ -1,0 +1,11 @@
+{
+	"name": "Kendo UI",
+	"author": "Telerik",
+	"repo": "https://www.github.com/telerik/kendo-angular",
+	"package": "https://www.npmjs.com/package/@progress/kendo-angular-intl",
+	"href": "https://www.telerik.com/kendo-angular-ui",
+	"description": "100+ fully native components for building high-quality modern Angular UI in no time.",
+	"image": "https://d585tldpucybw.cloudfront.net/sfimages/default-source/labs/kendo/2020-revamp/a_kendo_mascot.svg?sfvrsn=eb49ba02_2",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

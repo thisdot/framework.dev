@@ -1,0 +1,11 @@
+{
+	"name": "React Spring",
+	"author": "Paul Henschel and contributors",
+	"repo": "https://www.github.com/pmndrs/react-spring",
+	"package": "https://www.npmjs.com/package/react-spring",
+	"href": "https://www.react-spring.io/",
+	"image": "https://camo.githubusercontent.com/973c99d17e4ce72d08c4433449045d8391948711f11ac5f328a585e2a7bc8663/68747470733a2f2f692e696d6775722e636f6d2f515a6f776e68672e706e67",
+	"tags": ["animation"],
+	"description": "react-spring is a spring-physics based animation library that should cover most of your UI related animation needs. It gives you tools flexible enough to confidently cast your ideas into moving interfaces.",
+	"language": "TypeScript"
+}

@@ -1,0 +1,11 @@
+{
+	"name": "mock",
+	"description": "Utilities to help mock behavior, spy on function calls, stub methods, and fake time for tests.",
+	"href": "https://deno.land/x/mock",
+	"package": "",
+	"repo": "https://github.com/udibo/mock",
+	"author": "Udibo",
+	"image": "https://avatars.githubusercontent.com/u/6780232?s=200&v=4",
+	"tags": ["utilities", "testing"],
+	"language": "TypeScript"
+}

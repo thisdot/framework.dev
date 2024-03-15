@@ -1,0 +1,11 @@
+{
+	"name": "bytes_formater",
+	"description": "Formatting bytes(Uint8Array、Uint16Array、Uint32Array、ArrayBufferView..) output, is very useful when debugging IO functions",
+	"href": "https://deno.land/x/bytes_formater",
+	"package": "",
+	"repo": "https://github.com/manyuanrong/bytes_formater",
+	"author": "EnokMan",
+	"image": "https://avatars.githubusercontent.com/u/7514524?v=4",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

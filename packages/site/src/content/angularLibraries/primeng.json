@@ -1,0 +1,11 @@
+{
+	"name": "PrimeNG",
+	"author": "PrimeFaces",
+	"repo": "https://www.github.com/primefaces/primeng",
+	"package": "https://www.npmjs.com/package/primeng",
+	"href": "https://primefaces.org/primeng/",
+	"description": "Over 80 Angular UI Components with top-notch quality to help you implement all your UI requirements in style.",
+	"image": "https://www.primefaces.org/primeng/assets/showcase/images/primeng-logo-dark.svg",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

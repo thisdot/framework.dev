@@ -1,0 +1,11 @@
+{
+	"name": "svelte-i18n",
+	"author": "kaisermann",
+	"repo": "https://www.github.com/kaisermann/svelte-i18n",
+	"package": "https://www.npmjs.com/package/svelte-i18n",
+	"href": "https://github.com/kaisermann/svelte-i18n",
+	"image": "https://github.com/kaisermann.png",
+	"tags": ["internationalization"],
+	"description": "svelte-i18n helps you localize your app using the reactive tools Svelte provides. By using stores to keep track of the current locale, dictionary of messages and to format messages, we keep everything neat, in sync and easy to use on your svelte files.",
+	"language": "TypeScript"
+}

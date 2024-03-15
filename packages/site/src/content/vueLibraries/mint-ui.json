@@ -1,0 +1,11 @@
+{
+	"name": "Mint UI",
+	"author": "mint-ui",
+	"repo": "https://www.github.com/ElemeFE/mint-ui",
+	"package": "https://www.npmjs.com/package/mint-ui",
+	"href": "https://mint-ui.github.io/#!/en",
+	"description": "Mobile UI elements for Vue 2.0",
+	"image": "https://i.ibb.co/sR3BGbk/mint-ui-logo.png",
+	"tags": ["component"],
+	"language": "JavaScript"
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Node.js Design Patterns - Third Edition",
+	"authors": ["Mario Casciaro", "Luciano Mammino"],
+	"description": "Learn proven patterns, techniques, and tricks to take full advantage of the Node.js platform. Master well-known design principles to create applications that are readable, extensible, and that can grow big",
+	"image": "https://learning.oreilly.com/library/cover/9781839214110/250w/",
+	"href": "https://www.oreilly.com/api/v1/book/9781839214110/",
+	"tags": ["patterns"],
+	"yearOfPublication": 2020,
+	"numberOfPages": 802,
+	"level": "intermediate"
+}

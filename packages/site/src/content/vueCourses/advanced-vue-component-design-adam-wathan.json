@@ -1,0 +1,11 @@
+{
+	"title": "Advanced Vue Component Design",
+	"author": "Adam Wathan",
+	"image": "https://github.com/adamwathan.png",
+	"description": "Learn how to design simpler, more flexible components that are both more powerful and easier to maintain.",
+	"paymentType": "paid",
+	"level": "advanced",
+	"format": "video",
+	"href": "https://adamwathan.me/advanced-vue-component-design/",
+	"tags": ["component design", "vue 2"]
+}

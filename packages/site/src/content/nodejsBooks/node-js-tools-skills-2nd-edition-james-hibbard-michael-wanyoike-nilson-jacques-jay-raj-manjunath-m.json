@@ -1,0 +1,17 @@
+{
+	"title": "Node.js: Tools & Skills, 2nd Edition",
+	"authors": [
+		"James Hibbard",
+		"Michael Wanyoike",
+		"Nilson Jacques",
+		"Jay Raj",
+		"Manjunath M"
+	],
+	"description": "In this book, we'll take a look at a selection of the related tools and skills that will make you a much more productive Node developer by learning to manage Node version with NVM, create an Express.js app with Express Generator, and integrate with databases like MySQL and MongoDB.",
+	"image": "https://learning.oreilly.com/library/cover/9781098122836/250w/",
+	"href": "https://www.oreilly.com/api/v1/book/9781098122836/",
+	"tags": ["patterns", "full stack"],
+	"yearOfPublication": 2020,
+	"numberOfPages": 87,
+	"level": "beginner"
+}

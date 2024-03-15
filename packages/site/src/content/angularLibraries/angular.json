@@ -1,0 +1,11 @@
+{
+	"name": "Angular",
+	"author": "Google",
+	"repo": "https://www.github.com/angular/angular",
+	"package": "https://www.npmjs.com/package/@angular/core",
+	"href": "https://angular.io/guide/developer-guide-overview",
+	"description": "Angular is a development platform for building mobile and desktop web applications using TypeScript/JavaScript and other languages.",
+	"image": "https://github.com/angular.png",
+	"tags": ["frameworks"],
+	"language": "TypeScript"
+}

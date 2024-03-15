@@ -1,0 +1,11 @@
+{
+	"title": "SolidJS Crash Course",
+	"author": "Ebenezer Don",
+	"image": "https://github.com/ebenezerdon.png",
+	"description": "In this SolidJS tutorial, you'll learn state management, routing, data fetching, use of components, web storage and more!  With SolidJS' straightforward state management, fine-grained reactivity and high performance, the framework has put itself on a pedestal for other JavaScript frameworks. Learn Solid.js by building a GitHub repos application.",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.youtube.com/watch?v=WDodWU-B-aY",
+	"tags": ["state management", "routing", "data fetching"]
+}

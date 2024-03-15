@@ -1,0 +1,11 @@
+{
+	"name": "Solid Router",
+	"author": "SolidJS",
+	"repo": "https://github.com/solidjs/solid-router",
+	"package": "",
+	"description": "A universal router for Solid inspired by Ember and React Router",
+	"image": "https://opengraph.githubassets.com/41111dcd4fc2ba4f3f3c097212fa56ffc1e2e6abde27785dba293e8341132d49/solidjs/solid-router",
+	"href": "https://github.com/solidjs/solid-router",
+	"tags": ["routing"],
+	"language": "TypeScript"
+}

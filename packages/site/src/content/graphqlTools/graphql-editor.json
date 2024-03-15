@@ -1,0 +1,8 @@
+{
+	"name": "GraphQL Editor",
+	"author": "GraphQL editor",
+	"description": "Build a complex GraphQL API in no time using only your browser. The power of GraphQL is now at your fingertips!",
+	"image": "https://avatars.githubusercontent.com/u/39584554?s=200&v=4",
+	"href": "https://graphqleditor.com/",
+	"tags": ["schemas", "frontend", "backend", "development"]
+}

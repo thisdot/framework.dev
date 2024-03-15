@@ -1,0 +1,11 @@
+{
+	"title": "Node.js 12: The Big Picture",
+	"author": "Paul O'Fallon",
+	"image": "https://www.pluralsight.com/etc.clientlibs/pluralsight/clientlibs/clientlib-main/resources/images/favicons/favicon-96x96.png",
+	"description": "In this course, we look at how Node is commonly used, examine its asynchronous development model, explore leveraging the npm module ecosystem, and assemble a set of tools to help get you started on your journey!",
+	"paymentType": "paid",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.pluralsight.com/courses/nodejs-big-picture",
+	"tags": ["backend"]
+}

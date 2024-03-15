@@ -1,0 +1,8 @@
+{
+	"name": "Node Congress",
+	"description": "A two-day conference on all things Node.js, Edge-native workers (Cloudflare & others), Serverless, Deno & other JavaScript backend run times.",
+	"image": "https://nodecongress.com/img/ogImage.png",
+	"type": "Live Events",
+	"href": "https://nodecongress.com/",
+	"tags": ["conferences"]
+}

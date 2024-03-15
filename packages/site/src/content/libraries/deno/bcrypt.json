@@ -1,1 +1,0 @@
-{"name":"bcrypt","description":"A port of jBCrypt to TypeScript for use as a Deno module","href":"https://deno.land/x/bcrypt","package":"","repo":"https://github.com/JamesBroadberry/deno-bcrypt","author":"James Broadberry","image":"https://avatars.githubusercontent.com/u/11461387?v=4","tags":["utilities"],"language":"TypeScript"}

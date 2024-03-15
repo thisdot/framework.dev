@@ -1,0 +1,8 @@
+{
+	"name": "Knex.js",
+	"author": "Tim Griesser",
+	"description": "A query builder for PostgreSQL, MySQL, CockroachDB, SQL Server, SQLite3 and Oracle, designed to be flexible, portable, and fun to use.",
+	"image": "https://knexjs.org/knex-logo.png",
+	"href": "https://knexjs.org",
+	"tags": ["database"]
+}

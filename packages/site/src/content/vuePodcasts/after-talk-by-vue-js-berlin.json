@@ -1,0 +1,9 @@
+{
+	"title": "After Talk by Vue.js Berlin",
+	"image": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts125/v4/3f/90/f5/3f90f5f9-e23d-73c1-403a-742279b040e5/mza_5117638571604012425.png/313x0w.webp",
+	"hosts": ["vuejsberlin"],
+	"description": "Vue.js // Berlin Podcast with interesting people from Vue.js and Programming Community.",
+	"rss": "https://anchor.fm/s/2f6e7074/podcast/rss",
+	"href": "https://vuejs.berlin/",
+	"tags": ["vue"]
+}

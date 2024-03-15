@@ -1,0 +1,9 @@
+{
+	"title": "The Changelog",
+	"description": "Conversations with the hackers, leaders, and innovators of the software world.",
+	"hosts": ["Adam Stacoviak", "Jerod Santo"],
+	"href": "https://changelog.com/podcast",
+	"rss": "https://changelog.fm/rss",
+	"image": "https://cdn.changelog.com/uploads/covers/the-changelog-original.png?v=63725770322",
+	"tags": ["how-to", "open source", "technology"]
+}

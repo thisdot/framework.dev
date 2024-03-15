@@ -1,0 +1,11 @@
+{
+	"name": "Vite",
+	"author": "Yuxi (Evan) You and Vite contributors",
+	"repo": "https://github.com/vitejs/vite",
+	"package": "",
+	"description": "Next Generation Frontend Tooling",
+	"image": "https://vitejs.dev/logo.svg",
+	"href": "https://github.com/vitejs/vite",
+	"tags": ["tooling"],
+	"language": "TypeScript"
+}

@@ -1,0 +1,11 @@
+{
+	"name": "Strawberry",
+	"author": "Strawberry GraphQL",
+	"repo": "https://www.github.com/strawberry-graphql/strawberry",
+	"package": "",
+	"href": "https://strawberry.rocks/",
+	"description": "Strawberry is a new GraphQL library for Python 3, inspired by dataclasses.",
+	"image": "https://github.com/strawberry-graphql.png",
+	"language": "Python",
+	"tags": ["data processing"]
+}

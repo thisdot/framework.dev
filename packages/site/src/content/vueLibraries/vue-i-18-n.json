@@ -1,0 +1,11 @@
+{
+	"name": "Vue I18n",
+	"author": "Kazuya Kawaguchi",
+	"repo": "https://www.github.com/kazupon/vue-i18n",
+	"package": "https://www.npmjs.com/package/vue-i18n",
+	"href": "https://kazupon.github.io/vue-i18n/",
+	"image": "https://kazupon.github.io/vue-i18n/vue-i18n-logo.png",
+	"tags": ["internationalization"],
+	"description": "Vue I18n is internationalization plugin for Vue.js",
+	"language": "JavaScript"
+}

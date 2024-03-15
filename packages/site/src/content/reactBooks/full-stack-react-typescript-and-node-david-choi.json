@@ -1,0 +1,11 @@
+{
+	"title": "Full-Stack React, TypeScript, and Node",
+	"authors": ["David Choi"],
+	"image": "https://www.oreilly.com/library/cover/9781839219931/",
+	"description": "This book takes a hands-on approach to implementing modern web technologies and the associated methodologies for building full-stack apps using Node.js, Express, and GraphQL.",
+	"yearOfPublication": 2020,
+	"numberOfPages": 627,
+	"level": "advanced",
+	"href": "https://www.oreilly.com/library/view/full-stack-react-typescript/9781839219931/",
+	"tags": ["TypeScript", "GraphQL"]
+}

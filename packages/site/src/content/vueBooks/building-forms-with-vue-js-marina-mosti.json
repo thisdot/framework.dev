@@ -1,0 +1,11 @@
+{
+	"title": "Building Forms with Vue.js",
+	"authors": ["Marina Mosti"],
+	"image": "https://images-na.ssl-images-amazon.com/images/I/41vzI7SkEIL._SX403_BO1,204,203,200_.jpg",
+	"description": "Almost every web application and site out there handles user input in one way or another, from registration forms and log-in handling to registration and landing pages. Building Forms with Vue.js follows a step-by-step approach to help you create an efficient user interface (UI) and seamless user experience (UX) by building quick and easy-to-use forms.",
+	"yearOfPublication": 2019,
+	"numberOfPages": 110,
+	"level": "beginner",
+	"href": "https://www.amazon.com/Building-Forms-Vue-js-Patterns-building-ebook/dp/B07YY7MGDD",
+	"tags": ["vuex", "forms", "patterns", "vue 2"]
+}

@@ -1,0 +1,8 @@
+{
+	"name": "GraphQL Voyager",
+	"author": "Ivan Goncharov",
+	"description": "Represent any GraphQL API as an interactive graph",
+	"image": "https://pbs.twimg.com/profile_images/780770136701669376/zdsTOcpK_400x400.jpg",
+	"href": "https://ivangoncharov.github.io/graphql-voyager/",
+	"tags": ["schemas", "frontend", "backend", "development"]
+}

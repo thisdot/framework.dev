@@ -1,0 +1,11 @@
+{
+	"name": "Stream HTTP",
+	"author": "John Hiesey",
+	"repo": "https://www.github.com/jhiesey/stream-http",
+	"package": "https://www.npmjs.com/package/stream-http",
+	"href": "https://github.com/jhiesey/stream-http",
+	"description": "This module is an implementation of Node's native http module for the browser. It tries to match Node's API and behavior as closely as possible, but some features aren't available, since browsers don't give nearly as much control over requests.",
+	"image": "https://github.com/jhiesey.png",
+	"tags": ["http client"],
+	"language": "JavaScript"
+}

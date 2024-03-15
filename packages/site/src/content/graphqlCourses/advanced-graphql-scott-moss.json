@@ -1,0 +1,11 @@
+{
+	"title": "Advanced GraphQL ",
+	"author": "Scott Moss",
+	"image": "https://static.frontendmasters.com/assets/courses/2020-02-17-advanced-graphql-v2/thumb.webp",
+	"description": "Become a GraphQL master by learning to build production-ready GraphQL APIs in Node.js and Apollo Server.",
+	"paymentType": "paid",
+	"level": "advanced",
+	"format": "interactive",
+	"href": "https://frontendmasters.com/courses/advanced-graphql-v2/",
+	"tags": ["components", "data fetching", "graphQL", "testing"]
+}

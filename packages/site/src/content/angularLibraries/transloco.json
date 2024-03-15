@@ -1,0 +1,11 @@
+{
+	"name": "Transloco",
+	"author": "Transloco",
+	"repo": "https://www.github.com/ngneat/transloco",
+	"package": "https://www.npmjs.com/package/@ngneat/transloco",
+	"href": "https://ngneat.github.io/transloco/docs/getting-started/installation",
+	"description": "The internationalization (i18n) library for Angular",
+	"image": "https://raw.githubusercontent.com/ngneat/transloco/master/logo.svg",
+	"tags": ["internationalization"],
+	"language": "TypeScript"
+}

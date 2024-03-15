@@ -1,0 +1,11 @@
+{
+	"name": "Ant Design Vue",
+	"author": "ant-design-vue",
+	"repo": "https://www.github.com/vueComponent/ant-design-vue",
+	"package": "https://www.npmjs.com/package/ant-design-vue",
+	"href": "https://www.antdv.com/docs/vue/introduce/",
+	"description": "Following the Ant Design specification, we developed a Vue UI library that contains a set of high quality components and demos for building rich, interactive user interfaces.",
+	"image": "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

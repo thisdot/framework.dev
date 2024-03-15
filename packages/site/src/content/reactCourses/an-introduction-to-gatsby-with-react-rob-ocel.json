@@ -1,0 +1,11 @@
+{
+	"title": "An Introduction to Gatsby with React",
+	"author": "Rob Ocel",
+	"image": "https://github.com/thisdot.png",
+	"description": "Static site generators are one of the hottest technologies, and GatsbyJS is one of the most popular static site generators (especially for React).",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://youtu.be/ldGJmqtpHh8",
+	"tags": ["GatsbyJS", "static site generation", "JavaScript marathon"]
+}

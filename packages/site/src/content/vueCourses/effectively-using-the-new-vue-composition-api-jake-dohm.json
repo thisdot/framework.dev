@@ -1,0 +1,11 @@
+{
+	"title": "Effectively Using the New Vue Composition API",
+	"author": "Jake Dohm",
+	"image": "https://github.com/thisdot.png",
+	"description": "Come join us as we walk through the new Composition API that will be released as part of Vue 3. The Composition API is a way to abstract functionality in your application, using some new internal APIs that Vue is exposing. Inspired by React Hooks, it makes it much easier to share logic, data, and methods across components in your app.",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://youtu.be/E6hjtY3e8H0",
+	"tags": ["vue 3", "JavaScript marathon"]
+}

@@ -1,0 +1,9 @@
+{
+	"title": "Learn with Jason",
+	"image": "https://i3.ytimg.com/vi/_PDpoJUacuc/hqdefault.jpg",
+	"hosts": ["Jason Learns - Misko Hevery"],
+	"description": "Qwik lets us build resumable apps by requiring nearly zero JavaScript for pages to become interactive + fine-grained lazy loading to only load what's used. Miško Hevery will teach us how to get started..",
+	"rss": "https://www.youtube.com/watch?v=_PDpoJUacuc",
+	"href": "https://www.youtube.com/watch?v=_PDpoJUacuc",
+	"tags": ["qwik"]
+}

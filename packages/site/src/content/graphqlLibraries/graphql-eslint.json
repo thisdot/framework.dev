@@ -1,0 +1,11 @@
+{
+	"name": "GraphQL ESLint",
+	"author": "Dimitri POSTOLOV",
+	"repo": "https://www.github.com/B2o5T/graphql-eslint",
+	"package": "https://www.npmjs.com/package/@graphql-eslint/eslint-plugin",
+	"href": "https://github.com/B2o5T/graphql-eslint",
+	"description": "This project integrates GraphQL and ESLint, for a better developer experience.",
+	"image": "https://raw.githubusercontent.com/B2o5T/graphql-eslint/master/website/public/logo.png",
+	"language": "TypeScript",
+	"tags": ["tooling", "CLI"]
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Node.js: Novice to Ninja",
+	"authors": ["Craig Buckler"],
+	"description": "\"Node.js: Novice to Ninja\" is your hands-on guide to learning everything needed to build a professional web application using Node.js, the hugely popular open-source, cross-platform, back-end JavaScript runtime environment. You'll start off by getting familiar with the basics - installation and building your first apps - before moving onto more advanced concepts, including debugging, asynchronous programming, using Express.js, working with databases, deployment, and more",
+	"image": "https://learning.oreilly.com/library/cover/9781098141004/250w/",
+	"href": "https://www.oreilly.com/api/v1/book/9781098141004/",
+	"tags": ["full stack"],
+	"yearOfPublication": 2022,
+	"numberOfPages": 268,
+	"level": "beginner"
+}

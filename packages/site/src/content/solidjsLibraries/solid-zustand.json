@@ -1,0 +1,11 @@
+{
+	"name": "Solid Zustand",
+	"author": "Wobsoriano",
+	"repo": "https://www.github.com/wobsoriano/solid-zustand",
+	"package": "https://www.npmjs.com/package/solid-zustand",
+	"href": "https://github.com/wobsoriano/solid-zustand",
+	"description": "🐻 State management in Solid using zustand. Contribute to wobsoriano/solid-zustand development by creating an account on GitHub.",
+	"image": "https://opengraph.githubassets.com/0e09b9ed47ad0ddb03deebe8d82dc55f3960f66b1f90ce00b2e3bba234fd2979/wobsoriano/solid-zustand",
+	"tags": ["state management"],
+	"language": "TypeScript"
+}

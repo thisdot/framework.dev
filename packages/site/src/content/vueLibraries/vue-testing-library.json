@@ -1,0 +1,11 @@
+{
+	"name": "Vue Testing Library",
+	"author": "testing-library",
+	"repo": "https://www.github.com/testing-library/vue-testing-library",
+	"package": "https://www.npmjs.com/package/@testing-library/vue",
+	"href": "https://testing-library.com/docs/vue-testing-library/intro",
+	"image": "https://github.com/testing-library.png",
+	"tags": ["testing"],
+	"description": "Simple and complete Vue.js testing utilities that encourage good testing practices.",
+	"language": "NodeJS"
+}

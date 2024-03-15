@@ -1,0 +1,11 @@
+{
+	"name": "React XR",
+	"author": "Poimandres",
+	"repo": "https://www.github.com/pmndrs/react-xr",
+	"package": "https://www.npmjs.com/package/@react-three/xr",
+	"href": "https://github.com/pmndrs/react-xr",
+	"image": "https://github.com/pmndrs.png",
+	"tags": ["animation"],
+	"description": "React components and hooks for creating VR/AR applications with react-three-fiber",
+	"language": "TypeScript"
+}

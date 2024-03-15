@@ -1,0 +1,11 @@
+{
+	"title": "Server-side Development with NodeJS, Express and MongoDB",
+	"author": "Coursera",
+	"image": "https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/android-chrome-v2-192x192.png",
+	"description": "The courses starts with a brief overview of HTTP, HTTPS, NodeJS and Express. On the database side, we review basic CRUD operations, NoSQL databases, in particular MongoDB and Mongoose for accessing MongoDB from NodeJS. We examine the REST concepts and building a RESTful API. We touch upon authentication and security.",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://www.coursera.org/learn/server-side-nodejs",
+	"tags": ["backend"]
+}

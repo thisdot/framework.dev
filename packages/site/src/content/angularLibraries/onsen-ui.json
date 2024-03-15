@@ -1,0 +1,11 @@
+{
+	"name": "Onsen UI",
+	"author": "Onsen UI",
+	"repo": "https://www.github.com/OnsenUI/OnsenUI",
+	"package": "https://www.npmjs.com/package/ngx-onsenui",
+	"href": "https://onsen.io/",
+	"description": "A set of components to build HTML5 hybrid and mobile web apps. Supports many frameworks, including Angular.",
+	"image": "https://github.com/OnsenUI.png",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

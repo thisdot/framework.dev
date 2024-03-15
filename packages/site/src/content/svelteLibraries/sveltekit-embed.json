@@ -1,0 +1,11 @@
+{
+	"name": "SvelteKit Embed",
+	"author": "Scott Spence",
+	"repo": "https://github.com/spences10/sveltekit-embed",
+	"package": "https://www.npmjs.com/package/sveltekit-embed",
+	"href": "https://storybook.js.org/",
+	"image": "https://avatars.githubusercontent.com/u/234708?v=4",
+	"tags": ["component"],
+	"description": "A collections of embed components you may find useful during development",
+	"language": "TypeScript"
+}

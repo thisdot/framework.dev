@@ -1,0 +1,9 @@
+{
+	"title": "Elm Radio",
+	"image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/02/39/47/023947f9-9ff7-33cb-7403-a165b4672253/mza_4858302214988168629.jpg/313x0w.webp",
+	"hosts": ["Dillon Kearns", "Jeroen Engels"],
+	"description": "Tune in to the tools and techniques in the Elm ecosystem.",
+	"rss": "https://elm-radio.com/feed.xml",
+	"href": "https://elm-radio.com/",
+	"tags": ["general"]
+}

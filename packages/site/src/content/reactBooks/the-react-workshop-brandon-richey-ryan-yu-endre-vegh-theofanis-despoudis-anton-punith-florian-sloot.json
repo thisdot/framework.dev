@@ -1,0 +1,18 @@
+{
+	"title": "The React Workshop",
+	"authors": [
+		"Brandon Richey",
+		"Ryan Yu",
+		"Endre Vegh",
+		"Theofanis Despoudis",
+		"Anton Punith",
+		"Florian Sloot"
+	],
+	"image": "https://www.oreilly.com/library/cover/9781838645564/",
+	"description": "Work through engaging exercises and activities and gain practical skills to make your web applications function effortlessly with the help of React",
+	"yearOfPublication": 2020,
+	"numberOfPages": 665,
+	"level": "beginner",
+	"href": "https://www.oreilly.com/library/view/the-react-workshop/9781838645564/",
+	"tags": ["projects"]
+}

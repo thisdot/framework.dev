@@ -1,0 +1,11 @@
+{
+	"title": "Build a Twelve-Factor Node.js App with Docker",
+	"author": "Mark Shust",
+	"image": "https://egghead.io/_next/image?url=https%3A%2F%2Fd2eip9sf3oo6c2.cloudfront.net%2Fplaylists%2Fsquare_covers%2F000%2F432%2F681%2Fsquare_480%2FEGH_NodeDocker_1000.png&w=1080&q=100",
+	"description": "In this course we will take a simple Node.js app that connects to a MongoDB database and uses an Express web server, and learn how to setup a full software development deployment process as well as how to properly “Dockerize” the app.",
+	"paymentType": "paid",
+	"level": "advanced",
+	"format": "video",
+	"href": "https://egghead.io/courses/build-a-twelve-factor-node-js-app-with-docker",
+	"tags": ["backend"]
+}

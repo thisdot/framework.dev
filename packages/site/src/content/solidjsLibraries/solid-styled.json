@@ -1,0 +1,11 @@
+{
+	"name": "Solid Styled",
+	"author": "LXSMNSYC",
+	"repo": "https://www.github.com/LXSMNSYC/solid-styled",
+	"package": "https://www.npmjs.com/package/solid-styled",
+	"href": "https://github.com/LXSMNSYC/solid-styled",
+	"description": "Reactive stylesheets for solidjs",
+	"image": "https://opengraph.githubassets.com/647460914dea6f99c7f3e314dc5d0fef67e1ba61f432556c7ad0b38da95414b9/lxsmnsyc/solid-styled",
+	"tags": ["styling"],
+	"language": "TypeScript"
+}

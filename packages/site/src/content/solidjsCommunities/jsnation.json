@@ -1,0 +1,9 @@
+{
+	"name": "JsNation",
+	"description": "Understand the latest trends in JavaScript development. See what 20k+ JS developers are up to. Meet those who shape the present and the future of the prospering nation.",
+	"image": "https://d33wubrfki0l68.cloudfront.net/9e3b2b2e7d375ad7003010a688bf021e994fc591/1b06b/img/logo.svg",
+	"type": "Live and Online Events",
+	"href": "https://jsnation.com/",
+	"darkImageBackground": true,
+	"tags": ["conferences"]
+}

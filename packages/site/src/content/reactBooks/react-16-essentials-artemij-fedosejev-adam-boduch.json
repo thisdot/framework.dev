@@ -1,0 +1,11 @@
+{
+	"title": "React 16 Essentials",
+	"authors": ["Artemij Fedosejev", "Adam Boduch"],
+	"image": "https://www.oreilly.com/library/cover/9781787126046/",
+	"description": "This book will take you on a fast-paced, hands-on journey through building your own maintainable React 16 applications.",
+	"yearOfPublication": 2017,
+	"numberOfPages": 249,
+	"level": "beginner",
+	"href": "https://www.oreilly.com/library/view/react-16-essentials/9781787126046/",
+	"tags": ["redux", "testing"]
+}

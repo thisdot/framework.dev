@@ -1,0 +1,11 @@
+{
+	"title": "Svelte 3 Up and Running",
+	"authors": ["Alessandro Segala"],
+	"image": "https://static.packt-cdn.com/products/9781839213625/cover/smaller",
+	"description": "Svelte is a modern JavaScript framework used to build static web apps that are fast and lean, as well as being fun for developers to use. This book is a concise and practical introduction for those who are new to the Svelte framework which will have you up to speed with building apps quickly, and teach you how to use Svelte 3 to build apps that offer a great app user experience (UX)",
+	"yearOfPublication": 2020,
+	"numberOfPages": 168,
+	"level": "beginner",
+	"href": "https://www.packtpub.com/product/svelte-3-up-and-running/9781839213625?_ga=2.241838663.41819582.1666278278-289651615.1666278278",
+	"tags": ["projects", "CI/CD", "testing"]
+}

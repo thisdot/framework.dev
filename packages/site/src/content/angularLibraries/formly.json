@@ -1,0 +1,11 @@
+{
+	"name": "Formly",
+	"author": "ngx-formly",
+	"repo": "https://www.github.com/ngx-formly/ngx-formly",
+	"package": "https://www.npmjs.com/package/@ngx-formly/core",
+	"href": "https://formly.dev/",
+	"description": "Formly is a dynamic (JSON-powered) form library for Angular.",
+	"image": "https://github.com/ngx-formly.png",
+	"tags": ["forms"],
+	"language": "TypeScript"
+}

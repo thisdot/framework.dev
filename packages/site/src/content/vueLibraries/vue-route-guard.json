@@ -1,0 +1,11 @@
+{
+	"name": "Vue Route Guard",
+	"author": "This Dot Labs",
+	"repo": "https://www.github.com/thisdot/open-source",
+	"package": "https://www.npmjs.com/package/@this-dot/vue-route-guard",
+	"href": "https://www.npmjs.com/package/@this-dot/vue-route-guard",
+	"image": "https://github.com/thisdot.png",
+	"tags": ["routing"],
+	"description": "Vue Route Guard is an Vue library that wraps around the vue-router and extends it to provide helpful methods to handle page guards via token authorization and permissions.",
+	"language": "NodeJS"
+}

@@ -1,0 +1,8 @@
+{
+	"name": "Node Congress",
+	"description": "A two-day conference on all things Node.js, Edge-native workers (Cloudflare & others), Serverless, Deno & other JavaScript backend runtimes, gathering Back-end and Full-stack engineers across the globe in the cloud.",
+	"image": "https://egghead.io/_next/image?url=https%3A%2F%2Fd2eip9sf3oo6c2.cloudfront.net%2Ftags%2Fimages%2F000%2F000%2F256%2Fsquare_480%2Fnodejslogo.png&w=640&q=100",
+	"type": "Live Events",
+	"href": "https://nodecongress.com/",
+	"tags": ["conferences"]
+}

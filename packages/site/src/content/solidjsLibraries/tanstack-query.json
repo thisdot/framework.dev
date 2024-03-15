@@ -1,0 +1,11 @@
+{
+	"name": "TanStack Query",
+	"author": "Tanner Linsley",
+	"repo": "https://www.github.com/TanStack/query/tree/main/packages/solid-query",
+	"package": "https://www.npmjs.com/package/@tanstack/solid-query",
+	"href": "https://tanstack.com/query/v4/docs/adapters/solid-query",
+	"description": "Powerful asynchronous state management, server-state utilities and data fetching for TS/JS, React, Solid, Svelte and Vue. - query/packages at main · TanStack/query",
+	"image": "https://avatars.githubusercontent.com/u/72518640?s=200&v=4",
+	"tags": ["data fetching"],
+	"language": "TypeScript"
+}

@@ -1,0 +1,11 @@
+{
+	"name": "deno_slack_hooks",
+	"description": "Helper library implementing the contract between the Slack CLI and Slack application SDKs",
+	"href": "https://deno.land/x/deno_slack_hooks",
+	"package": "",
+	"repo": "https://github.com/slackapi/deno-slack-hooks",
+	"author": "SlackAPI",
+	"image": "https://avatars.githubusercontent.com/u/6962987?s=200&v=4",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

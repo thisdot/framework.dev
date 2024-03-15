@@ -1,0 +1,11 @@
+{
+	"name": "Popsicle",
+	"author": "Blake Embrey",
+	"repo": "https://www.github.com/serviejs/popsicle",
+	"package": "https://www.npmjs.com/package/popsicle",
+	"href": "https://github.com/serviejs/popsicle",
+	"description": "Advanced HTTP requests in node.js and browsers, using Servie, a set of standard, framework-agnostic HTTP interfaces for JavaScript servers and clients",
+	"image": "https://github.com/serviejs.png",
+	"tags": ["http client"],
+	"language": "TypeScript"
+}

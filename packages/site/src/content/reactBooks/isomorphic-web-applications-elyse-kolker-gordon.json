@@ -1,0 +1,11 @@
+{
+	"title": "Isomorphic Web Applications",
+	"authors": ["Elyse Kolker Gordon"],
+	"image": "https://www.oreilly.com/library/cover/9781617294396/",
+	"description": "This book teaches you to build production-quality web apps using isomorphic architecture. You'll learn to create and render views for both server and browser, optimize local storage, streamline server interactions, and handle data serialization.",
+	"yearOfPublication": 2018,
+	"numberOfPages": 532,
+	"level": "advanced",
+	"href": "https://www.oreilly.com/library/view/isomorphic-web-applications/9781617294396/",
+	"tags": ["redux"]
+}

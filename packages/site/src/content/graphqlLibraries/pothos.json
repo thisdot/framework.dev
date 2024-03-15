@@ -1,0 +1,11 @@
+{
+	"name": "Pothos",
+	"author": "Michael Hayes",
+	"repo": "https://www.github.com/hayes/pothos",
+	"package": "https://www.npmjs.com/package/@pothos/core",
+	"href": "https://pothos-graphql.dev/",
+	"description": "Pothos is a plugin based GraphQL schema builder for TypeScript.",
+	"image": "https://github.com/hayes.png",
+	"language": "NodeJS",
+	"tags": ["database drivers", "data processing"]
+}

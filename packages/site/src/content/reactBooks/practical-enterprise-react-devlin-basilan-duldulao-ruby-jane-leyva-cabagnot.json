@@ -1,0 +1,11 @@
+{
+	"title": "Practical Enterprise React",
+	"authors": ["Devlin Basilan Duldulao", "Ruby Jane Leyva Cabagnot"],
+	"image": "https://www.oreilly.com/library/cover/9781484269756/",
+	"description": "Knowing the basics of React is important, but what is more important is knowing the common third-party libraries and how to use them. The book is perfect for intermediate to experienced React developers or busy React developers who would like to get things done and have maintainable React code.",
+	"yearOfPublication": 2021,
+	"numberOfPages": 383,
+	"level": "intermediate",
+	"href": "https://www.oreilly.com/library/view/practical-enterprise-react/9781484269756/",
+	"tags": ["routing", "authentication", "TypeScript"]
+}

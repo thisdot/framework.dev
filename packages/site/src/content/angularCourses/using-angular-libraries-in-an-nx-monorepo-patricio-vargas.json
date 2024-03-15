@@ -1,0 +1,11 @@
+{
+	"title": "Using Angular Libraries in an Nx Monorepo",
+	"author": "Patricio Vargas",
+	"image": "https://github.com/thisdot.png",
+	"description": "Using Angular Libraries in an Nx Monorepo with Patricio Vargas Learn how to use Angular libraries, and share code between multiple enterprise applications in your current or your future monorepo project using Nx by the Nrwl team.",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://youtu.be/frswk1syMiw",
+	"tags": ["nx monorepo", "JavaScript marathon"]
+}

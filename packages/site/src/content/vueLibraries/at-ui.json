@@ -1,0 +1,11 @@
+{
+	"name": "AT-UI",
+	"author": "O2Team",
+	"repo": "https://www.github.com/at-ui/at-ui",
+	"package": "https://www.npmjs.com/package/at-ui",
+	"href": "https://github.com/at-ui/at-ui",
+	"description": "AT-UI is a modular front-end UI framework for developing fast and powerful web interfaces based on Vue.js.",
+	"image": "https://camo.githubusercontent.com/1c853ebd899a4287544a0c9268ff5455f6ea42af19f38ce47a68ac1c05552a25/687474703a2f2f73746f726167652e333630627579696d672e636f6d2f6d74642f686f6d652f6c6f676f2d6174313530323731383232313638362e737667",
+	"tags": ["component"],
+	"language": "JavaScript"
+}

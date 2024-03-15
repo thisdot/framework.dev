@@ -1,0 +1,11 @@
+{
+	"name": "passport",
+	"author": "Jared Hanson",
+	"repo": "https://github.com/jaredhanson/passport",
+	"package": "https://www.npmjs.com/package/passport",
+	"href": "https://www.passportjs.org/",
+	"description": "Passport is Express-compatible authentication middleware for Node.js.",
+	"image": "https://www.passportjs.org/images/logo.svg",
+	"tags": ["auth", "frameworks"],
+	"language": "NodeJS"
+}

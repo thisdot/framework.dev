@@ -1,0 +1,11 @@
+{
+	"name": "Taiga UI",
+	"author": "Tinkoff Bank",
+	"repo": "https://github.com/tinkoff/taiga-ui",
+	"package": "https://www.npmjs.com/package/taiga-ui",
+	"href": "https://taiga-ui.dev/",
+	"image": "https://taiga-ui.dev/assets/favicon-32x32.png",
+	"description": "Taiga UI is fully-treeshakable Angular UI Kit that contains 130+ components, 100+ directives, dozens of tokens, utils and tools.",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

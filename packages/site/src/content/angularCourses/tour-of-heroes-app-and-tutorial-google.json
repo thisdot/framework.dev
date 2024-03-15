@@ -1,0 +1,17 @@
+{
+	"title": "Tour of Heroes App and Tutorial",
+	"author": "Google",
+	"image": "https://github.com/angular.png",
+	"description": "In this official Angular tutorial, you build your own application from the ground up, providing experience with the typical development process, as well as an introduction to basic app-design concepts, tools, and terminology.",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "interactive",
+	"href": "https://angular.io/tutorial",
+	"tags": [
+		"state management",
+		"components",
+		"data fetching",
+		"routing",
+		"services"
+	]
+}

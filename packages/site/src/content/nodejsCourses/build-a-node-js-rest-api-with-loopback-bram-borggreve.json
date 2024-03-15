@@ -1,0 +1,11 @@
+{
+	"title": "Build a Node.js REST API with LoopBack",
+	"author": "Bram Borggreve",
+	"image": "https://egghead.io/_next/image?url=https%3A%2F%2Fd2eip9sf3oo6c2.cloudfront.net%2Finstructors%2Favatars%2F000%2F000%2F118%2Fmedium%2Ffoto-bram-square-500.png&w=3840&q=100",
+	"description": "In this course the developer will learn how to create a LoopBack API and build it out to an API that can be used as a backend for apps. We will start by creating a basic LoopBack API project and gradually enhance it to a production ready API. The API we create defines a few models to persist the data and has custom functionality, validation and hooks added to those models.",
+	"paymentType": "paid",
+	"level": "advanced",
+	"format": "video",
+	"href": "https://egghead.io/courses/build-a-node-js-rest-api-with-loopback",
+	"tags": ["backend"]
+}

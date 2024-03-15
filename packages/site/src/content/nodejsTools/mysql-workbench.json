@@ -1,0 +1,8 @@
+{
+	"name": "MySQL Workbench",
+	"author": "Oracle",
+	"description": "MySQL Workbench is a unified visual tool for database architects, developers, and DBAs. MySQL Workbench provides data modeling, SQL development, and comprehensive administration tools for server configuration, user administration, backup, and much more. MySQL Workbench is available on Windows, Linux and Mac OS X.",
+	"image": "https://pbs.twimg.com/profile_images/621577553376100352/lvR3kClO_400x400.png",
+	"href": "https://www.mysql.com/products/workbench/",
+	"tags": ["database"]
+}

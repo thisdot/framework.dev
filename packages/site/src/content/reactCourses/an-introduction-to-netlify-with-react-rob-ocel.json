@@ -1,0 +1,11 @@
+{
+	"title": "An Introduction to Netlify with React",
+	"author": "Rob Ocel",
+	"image": "https://github.com/thisdot.png",
+	"description": "Netlify is a service for automating your site's hosting, continuous integration, continuous deployment, and serverless requirements.",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://youtu.be/DX3zlPwZqk4",
+	"tags": ["netlify", "continuous integration", "JavaScript marathon"]
+}

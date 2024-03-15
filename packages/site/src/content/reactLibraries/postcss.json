@@ -1,0 +1,11 @@
+{
+	"name": "PostCSS",
+	"author": "Andrey Sitnik",
+	"repo": "https://www.github.com/postcss/postcss",
+	"package": "https://www.npmjs.com/package/postcss",
+	"href": "https://github.com/postcss/postcss",
+	"description": "PostCSS takes a CSS file and provides an API to analyze and modify its rules (by transforming them into an Abstract Syntax Tree). This API can then be used by plugins to do a lot of useful things, e.g., to find errors automatically, or to insert vendor prefixes.",
+	"image": "https://github.com/postcss.png",
+	"tags": ["tooling", "styling"],
+	"language": "NodeJS"
+}

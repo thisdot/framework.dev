@@ -1,0 +1,11 @@
+{
+	"name": "Flux",
+	"author": "Facebook",
+	"repo": "https://www.github.com/facebook/flux",
+	"package": "https://www.npmjs.com/package/flux",
+	"href": "https://facebook.github.io/flux/",
+	"description": "The original state management architecture for React utilizing a unidirectional data flow. Now deprecated and in maintenance mode.",
+	"image": "https://camo.githubusercontent.com/d281ce16f30146daddb2800415d6c177fccf9a7f198d21aacfe81f0f6ebb1490/68747470733a2f2f66616365626f6f6b2e6769746875622e696f2f666c75782f696d672f666c75782d6c6f676f2d636f6c6f722e737667",
+	"tags": ["state management"],
+	"language": "JavaScript"
+}

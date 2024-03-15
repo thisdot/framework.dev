@@ -1,0 +1,11 @@
+{
+	"title": "Learn Node.js: The Complete Course for Beginners",
+	"author": "Educative",
+	"image": "https://egghead.io/_next/image?url=https%3A%2F%2Fd2eip9sf3oo6c2.cloudfront.net%2Ftags%2Fimages%2F000%2F000%2F256%2Fsquare_480%2Fnodejslogo.png&w=640&q=100",
+	"description": "Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a web browser. This course is your guide for learning the fundamentals of Node.js.",
+	"paymentType": "paid",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.educative.io/courses/learn-nodejs-complete-course-for-beginners",
+	"tags": ["backend"]
+}

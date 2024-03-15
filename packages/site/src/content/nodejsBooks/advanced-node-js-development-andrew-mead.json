@@ -1,0 +1,11 @@
+{
+	"title": "Advanced Node.js Development",
+	"authors": ["Andrew Mead"],
+	"description": "\"Advanced Node.js Development\" takes you through creating your own API, building a full real-time web app, securing your Node systems, and practical applications of the latest Async and Await technologies. It maps out everything in a comprehensive, easy-to-follow package designed to get you up and running quickly.",
+	"image": "https://learning.oreilly.com/library/cover/9781788393935/250w/",
+	"href": "https://www.oreilly.com/api/v1/book/9781788393935/",
+	"tags": ["projects", "servers"],
+	"yearOfPublication": 2018,
+	"numberOfPages": 717,
+	"level": "beginner"
+}

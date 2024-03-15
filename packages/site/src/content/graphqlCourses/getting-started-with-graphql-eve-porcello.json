@@ -1,0 +1,11 @@
+{
+	"title": "Getting Started With GraphQL ",
+	"author": "Eve Porcello",
+	"image": "https://pbs.twimg.com/profile_images/1470581497249734657/LDfCopdL_400x400.jpg",
+	"description": "In this hands-on workshop, we'll get acquainted with the fundamentals of GraphQL.",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.youtube.com/watch?v=Ijy7XU1rJow",
+	"tags": ["data fetching", "graphQL"]
+}

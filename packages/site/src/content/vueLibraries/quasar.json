@@ -1,0 +1,11 @@
+{
+	"name": "Quasar",
+	"author": "Razvan Stoenescu",
+	"repo": "https://www.github.com/quasarframework/quasar",
+	"package": "https://www.npmjs.com/package/quasar",
+	"href": "https://quasar.dev",
+	"description": "Effortlessly build high-performance & high-quality Vue.js 3 and Vue.js 2 user interfaces in record time",
+	"image": "https://upload.wikimedia.org/wikipedia/en/2/29/Quasar_Logo.png",
+	"tags": ["component"],
+	"language": "JavaScript"
+}

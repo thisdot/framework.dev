@@ -1,0 +1,11 @@
+{
+	"name": "fresh",
+	"description": "The next-gen web framework.",
+	"href": "https://deno.land/x/fresh",
+	"package": "",
+	"repo": "https://github.com/denoland/fresh",
+	"author": "Deno",
+	"image": "https://avatars.githubusercontent.com/u/42048915?s=200&v=4",
+	"tags": ["frameworks", "web servers"],
+	"language": "TypeScript"
+}

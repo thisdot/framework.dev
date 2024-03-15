@@ -1,0 +1,11 @@
+{
+	"name": "denodb",
+	"description": "Deno-based ORM supporting PostgreSQL, MySQL, MariaDB, SQLite and MongoDB.",
+	"href": "https://deno.land/x/denodb",
+	"package": "",
+	"repo": "https://github.com/eveningkid/denodb",
+	"author": "eveningkid",
+	"image": "https://avatars.githubusercontent.com/u/42048915?s=200&v=4",
+	"tags": ["frameworks", "ORM"],
+	"language": "TypeScript"
+}

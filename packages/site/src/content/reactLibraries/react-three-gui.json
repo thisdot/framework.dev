@@ -1,0 +1,11 @@
+{
+	"name": "React Three GUI",
+	"author": "Birkir Gudjonsson",
+	"repo": "https://www.github.com/birkir/react-three-gui",
+	"package": "https://www.npmjs.com/package/react-three-gui",
+	"href": "https://github.com/birkir/react-three-gui",
+	"image": "https://github.com/birkir.png",
+	"tags": ["animation"],
+	"description": "A graphical user interface for changing variable states in React.",
+	"language": "TypeScript"
+}

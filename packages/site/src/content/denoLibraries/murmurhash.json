@@ -1,0 +1,11 @@
+{
+	"name": "murmurhash",
+	"description": "An incremental implementation of MurmurHash3 for JavaScript",
+	"href": "https://deno.land/x/murmurhash",
+	"package": "",
+	"repo": "https://github.com/justjavac/deno-murmurhash",
+	"author": "迷渡",
+	"image": "https://avatars.githubusercontent.com/u/359395?v=4",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

@@ -1,0 +1,11 @@
+{
+	"name": "Guillotin",
+	"author": "xstevenyung",
+	"repo": "https://www.github.com/xstevenyung/guillotin-solid-v1",
+	"package": "https://www.npmjs.com/package/@guillotin/solid",
+	"href": "https://guillotin.recodable.io/",
+	"description": "Collection of Headless Components for demanding developers",
+	"image": "https://opengraph.githubassets.com/f167dc5a21f3b9cc4313cd4f53c9bbb871bbc7f1f2351333696551da2b955505/xstevenyung/guillotin-solid-v1",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

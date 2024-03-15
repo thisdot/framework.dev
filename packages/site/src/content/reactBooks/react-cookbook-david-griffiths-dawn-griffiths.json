@@ -1,0 +1,11 @@
+{
+	"title": "React Cookbook",
+	"authors": ["David Griffiths", "Dawn Griffiths"],
+	"image": "https://www.oreilly.com/library/cover/9781492085836/",
+	"description": "Many books teach you how to get started, understand the framework, or use a component library with React, but very few provide examples to help you solve particular problems. This easy-to-use cookbook includes the example code developers need to unravel the most common problems when using React, categorized by topic area and problem.",
+	"yearOfPublication": 2021,
+	"numberOfPages": 577,
+	"level": "intermediate",
+	"href": "https://www.oreilly.com/library/view/react-cookbook/9781492085836/",
+	"tags": ["recipes", "authentication", "A11Y", "GraphQL"]
+}

@@ -1,0 +1,16 @@
+{
+	"title": "Front End Happy Hour",
+	"image": "https://www.frontendhappyhour.com/public/img/front-end-happy-hour.svg?v2",
+	"hosts": [
+		"Ryan Burgess",
+		"Jem Young",
+		"Stacy London",
+		"Augustus Yuan",
+		"Mars Jullian",
+		"Shirley Wu"
+	],
+	"description": "A software engineering podcast featuring a panel of Software Engineers from Netflix, Twitch, & Atlassian talking over drinks about Frontend, JavaScript, and career development.",
+	"rss": "https://feeds.soundcloud.com/users/soundcloud:users:206137365/sounds.rss",
+	"href": "https://www.frontendhappyhour.com/",
+	"tags": ["general"]
+}

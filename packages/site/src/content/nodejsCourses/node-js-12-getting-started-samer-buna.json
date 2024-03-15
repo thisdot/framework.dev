@@ -1,0 +1,11 @@
+{
+	"title": "Node.js 12: Getting Started",
+	"author": "Samer Buna",
+	"image": "https://www.pluralsight.com/etc.clientlibs/pluralsight/clientlibs/clientlib-main/resources/images/favicons/favicon-96x96.png",
+	"description": "This course will teach you the fundamentals of this very popular runtime and get you comfortable writing code for Node.",
+	"paymentType": "paid",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.pluralsight.com/courses/nodejs-getting-started",
+	"tags": ["backend"]
+}

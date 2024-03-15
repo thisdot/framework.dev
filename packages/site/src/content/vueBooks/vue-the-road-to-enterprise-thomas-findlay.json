@@ -1,0 +1,19 @@
+{
+	"title": "Vue The Road To Enterprise",
+	"authors": ["Thomas Findlay"],
+	"image": "https://theroadtoenterprise.com/images/vue-book-cover-3d.png",
+	"description": "Take your skills to the next level and become a Vue pro by mastering advanced patterns, best practices, and cutting-edge techniques for the development of Vue 2 & 3 applications.",
+	"yearOfPublication": 2021,
+	"numberOfPages": 300,
+	"level": "advanced",
+	"href": "https://theroadtoenterprise.com/books/vue-the-road-to-enterprise",
+	"tags": [
+		"state management",
+		"best practices",
+		"patterns",
+		"testing",
+		"authentication",
+		"vue 2",
+		"vue 3"
+	]
+}

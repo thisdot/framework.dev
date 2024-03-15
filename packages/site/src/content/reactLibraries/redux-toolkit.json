@@ -1,0 +1,11 @@
+{
+	"name": "Redux Toolkit",
+	"author": "Mark Erikson",
+	"repo": "https://www.github.com/reduxjs/redux-toolkit",
+	"package": "https://www.npmjs.com/package/@reduxjs/toolkit",
+	"href": "https://redux-toolkit.js.org/",
+	"description": "The official, opinionated, batteries-included toolset for efficient Redux development",
+	"image": "https://github.com/reduxjs.png",
+	"tags": ["utilities", "state management"],
+	"language": "TypeScript"
+}

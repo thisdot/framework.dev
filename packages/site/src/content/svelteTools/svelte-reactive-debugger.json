@@ -1,0 +1,8 @@
+{
+	"name": "Svelte Reactive Debugger",
+	"author": "unloco",
+	"description": "A tool that allows to monitor the reactive statements easily by showing the statements as they are executed and also by showing the state snapshots before and after the statement has been invoked.",
+	"image": "https://addons.mozilla.org/user-media/addon_icons/2682/2682079-64.png?modified=985bf941",
+	"href": "https://chrome.google.com/webstore/detail/svelte-reactive-debugger/mieppkcamgfhpjedhnfdlbndijhohmjf",
+	"tags": ["Chrome", "extension"]
+}

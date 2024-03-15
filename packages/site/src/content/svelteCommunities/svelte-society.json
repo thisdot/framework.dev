@@ -1,0 +1,8 @@
+{
+	"name": "Svelte Society",
+	"description": "A list of Svelte societies around the world for summits and meetups.",
+	"image": "https://sveltesociety.dev/images/logo.svg",
+	"type": "Live Events",
+	"href": "https://sveltesociety.dev/events",
+	"tags": []
+}

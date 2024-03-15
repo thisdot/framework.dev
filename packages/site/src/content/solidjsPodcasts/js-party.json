@@ -1,0 +1,19 @@
+{
+	"title": "JS Party",
+	"image": "https://cdn.changelog.com/uploads/covers/js-party-original.png?v=63725770332",
+	"hosts": [
+		"Jerod Santo",
+		"Feross Aboukhadijeh",
+		"Amelia Wattenberger",
+		"Kevin Ball",
+		"Nick Nisi",
+		"Divya",
+		"Mikeal Rogers",
+		"Christopher Hiller",
+		"Amal Hussein"
+	],
+	"description": "A weekly celebration of JavaScript and the web",
+	"rss": "https://jsparty.fm/rss",
+	"href": "https://changelog.com/jsparty",
+	"tags": ["general"]
+}

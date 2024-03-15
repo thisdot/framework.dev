@@ -1,0 +1,11 @@
+{
+	"title": "Beginning Deno Development",
+	"href": "https://www.amazon.ca/Beginning-Deno-Development-Greg-Lim/dp/9811474648",
+	"image": "https://m.media-amazon.com/images/I/41b8dBODVxL.jpg",
+	"authors": ["Greg Lim"],
+	"description": "In this book, we take you on a fun, hands-on and pragmatic journey to learning Deno development. You'll start building your first Deno app within minutes. Every chapter is written in a bite-sized manner and straight to the point as I don't want to waste your time (and most certainly mine) on the content you don't need. In the end, you will have the skills to create a Deno web app and a Deno REST API.",
+	"level": "beginner",
+	"numberOfPages": 106,
+	"tags": ["foundational", "oak"],
+	"yearOfPublication": 2020
+}

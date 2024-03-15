@@ -1,0 +1,8 @@
+{
+	"name": "Apollo Workbench",
+	"author": "Apollo",
+	"description": "Apollo Workbench is a VS Code extension that helps you design and reason about your organization's graph without writing any server code.",
+	"image": "https://pbs.twimg.com/profile_images/1498346889724317697/qzxJVuVR_400x400.png",
+	"href": "https://www.apollographql.com/docs/federation/v1/workbench/overview/",
+	"tags": ["schemas", "frontend", "backend", "development"]
+}

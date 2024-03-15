@@ -1,1 +1,0 @@
-{"name":"eszip","description":"A compact file format to losslessly serialize an ECMAScript module graph into a single file","href":"https://deno.land/x/eszip","package":"","repo":"https://github.com/denoland/eszip","author":"Deno","image":"https://avatars.githubusercontent.com/u/42048915?s=200&v=4","tags":["utilities"],"language":"TypeScript"}

@@ -1,0 +1,11 @@
+{
+	"name": "A11y",
+	"author": "Poimandres",
+	"repo": "https://github.com/pmndrs/react-three-a11y",
+	"package": "https://www.npmjs.com/package/@react-three/a11y",
+	"href": "https://docs.pmnd.rs/a11y/introduction",
+	"image": "https://github.com/pmndrs.png",
+	"tags": ["animation", "internationalization"],
+	"description": "@react-three/a11y brings accessibility to webGL with easy-to-use react-three-fiber components",
+	"language": "TypeScript"
+}

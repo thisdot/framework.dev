@@ -1,0 +1,11 @@
+{
+	"name": "PrimeVUE",
+	"author": "PrimeTek",
+	"repo": "https://www.github.com/primefaces/primevue",
+	"package": "https://www.npmjs.com/package/primevue",
+	"href": "https://www.primefaces.org/primevue/",
+	"description": "PrimeVue is a rich set of open source UI Components for Vue. See PrimeVue homepage for live showcase and documentation.",
+	"image": "https://primefaces.org/cdn/primevue/images/landing/overview-icon.svg",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

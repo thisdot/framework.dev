@@ -1,0 +1,11 @@
+{
+	"name": "Apollo Data Sources",
+	"author": "Apollo GraphQL",
+	"repo": "https://www.github.com/apollographql/apollo-server/tree/version-2",
+	"package": "https://www.npmjs.com/package/apollo-server",
+	"href": "https://www.apollographql.com/docs/apollo-server/v2/data/data-sources/",
+	"description": "Data sources are classes that Apollo Server can use to encapsulate fetching data from a particular source, such as a database or a REST API. ",
+	"image": "https://github.com/apollographql.png",
+	"language": "TypeScript",
+	"tags": ["data processing"]
+}

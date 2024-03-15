@@ -1,0 +1,8 @@
+{
+	"name": "Apollo Client Devtools",
+	"author": "Apollo",
+	"description": "Apollo Client Devtools is a Chrome extension for the open-source GraphQL client, Apollo Client.",
+	"image": "https://pbs.twimg.com/profile_images/1498346889724317697/qzxJVuVR_400x400.png",
+	"href": "https://chrome.google.com/webstore/detail/apollo-client-devtools/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en-US",
+	"tags": ["schemas", "frontend", "backend", "development"]
+}

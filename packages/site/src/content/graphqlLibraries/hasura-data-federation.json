@@ -1,0 +1,11 @@
+{
+	"name": "Hasura Data Federation",
+	"author": "Hasura",
+	"repo": "https://www.github.com/hasura/graphql-engine",
+	"package": "",
+	"href": "https://hasura.io/docs/latest/data-federation/index/",
+	"description": "Hasura's data federation capabilities allow you to compose data from different sources that reside in independent data stores but are semantically related.",
+	"image": "https://github.com/hasura.png",
+	"language": "Haskell",
+	"tags": ["CLI", "tooling"]
+}

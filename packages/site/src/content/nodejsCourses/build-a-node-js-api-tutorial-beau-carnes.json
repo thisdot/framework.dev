@@ -1,0 +1,11 @@
+{
+	"title": "Build a Node.js API - tutorial",
+	"author": "Beau Carnes",
+	"image": "https://github.com/freeCodeCamp.png",
+	"description": "Learn how to create basic CRUD routes with Node.js, Express, and MongoDB.",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.youtube.com/watch?v=fsCjFHuMXj0",
+	"tags": ["backend"]
+}

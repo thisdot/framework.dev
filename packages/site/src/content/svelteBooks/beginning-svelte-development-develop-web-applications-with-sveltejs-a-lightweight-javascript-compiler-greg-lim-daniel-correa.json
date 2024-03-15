@@ -1,0 +1,11 @@
+{
+	"title": "Beginning Svelte Development: Develop web applications with SvelteJS - a lightweight JavaScript compiler",
+	"authors": ["Greg Lim", "Daniel Correa"],
+	"image": "https://m.media-amazon.com/images/I/41fUTeMOZSL._SX404_BO1,204,203,200_.jpg",
+	"description": "In this book, we take you on a fun, hands-on and pragmatic journey to quickly learn Svelte and get familiar with how it works. You'll start building Svelte apps within minutes. Every section is written in a bite-sized manner and straight to the point as I don’t want to waste your time (and most certainly mine) on the content you don't need. In the end, you will have what it takes to develop a real-life app.",
+	"yearOfPublication": 2022,
+	"numberOfPages": 121,
+	"level": "beginner",
+	"href": "https://www.amazon.com/Beginning-Svelte-Development-applications-lightweight/dp/B0B67292T4/ref=sr_1_1?crid=2MVZL5D0X9N89&keywords=svelte&qid=1666285611&qu=eyJxc2MiOiI0LjM2IiwicXNhIjoiMy45MCIsInFzcCI6IjMuNTEifQ%3D%3D&s=books&sprefix=svelte%2Cstripbooks-intl-ship%2C216&sr=1-1",
+	"tags": ["projects", "state management", "forms", "data fetching"]
+}

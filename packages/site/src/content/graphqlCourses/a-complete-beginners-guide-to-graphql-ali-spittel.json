@@ -1,0 +1,11 @@
+{
+	"title": "A Complete Beginner's Guide to GraphQL",
+	"author": "Ali Spittel",
+	"image": "https://pbs.twimg.com/profile_images/1499419445063655424/aBi7ZB7W_400x400.jpg",
+	"description": "What is GraphQL? Why would you use it? Why wouldn't you use it? How do you create an API and query with it in GraphQL? Learn all that and much more in this tutorial.",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.youtube.com/watch?v=c2fJ7T0N1Sk&t=20s",
+	"tags": ["components", "data fetching", "graphQL"]
+}

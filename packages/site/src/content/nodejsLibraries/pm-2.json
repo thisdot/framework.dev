@@ -1,0 +1,11 @@
+{
+	"name": "pm2",
+	"author": "Alexandre Strzelewicz",
+	"repo": "https://github.com/Unitech/pm2",
+	"package": "https://www.npmjs.com/package/pm2",
+	"href": "http://pm2.keymetrics.io/",
+	"description": "PM2 is a production process manager for Node.js applications with a built-in load balancer.",
+	"image": "https://raw.githubusercontent.com/Unitech/pm2/master/pres/pm2-v4.png",
+	"tags": ["frameworks"],
+	"language": "NodeJS"
+}

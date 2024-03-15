@@ -1,0 +1,18 @@
+{
+	"title": "Deno Course - Better than Node.js?",
+	"author": "freeCodeCamp",
+	"description": "Learn how to use Deno in this complete course. Deno is a Node.js alternative created by the same person who created Node.js. In this tutorial course, you will learn how to build real apps with Deno. You will also learn the basics of the TypeScript. You will see how to use Deno to build a survey app with a REST API using MongoDB.",
+	"paymentType": "free",
+	"level": "advanced",
+	"format": "video",
+	"image": "https://d33wubrfki0l68.cloudfront.net/bbfa33a202e8612d49b6c1ed05c1fdd8e4001566/bbdd1/img/fcc_secondary_small.svg",
+	"href": "https://www.youtube.com/watch?v=TQUy8ENesGY",
+	"tags": [
+		"deno",
+		"backend",
+		"oak framework",
+		"typescript",
+		"data fetching",
+		"mongodb"
+	]
+}

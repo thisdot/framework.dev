@@ -1,0 +1,11 @@
+{
+	"name": "Angular Material",
+	"author": "Google",
+	"repo": "https://www.github.com/angular/components",
+	"package": "https://www.npmjs.com/package/@angular/material",
+	"href": "https://material.angular.io/guide/getting-started",
+	"description": "Material Design UI components for Angular applications.",
+	"image": "https://github.com/angular.png",
+	"tags": ["styling", "component"],
+	"language": "TypeScript"
+}

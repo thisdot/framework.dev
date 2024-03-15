@@ -1,0 +1,9 @@
+{
+	"title": "Quasar Vue Life",
+	"image": "https://images.transistor.fm/file/transistor/images/show/20124/thumb_1617845833-artwork.jpg",
+	"hosts": ["Luke Diebold"],
+	"description": "This show is for coders who want to learn the mindset, and life skills behind being a Web Developer. Learn from Luke Diebold. Core Quasar Team member, and creator of QuasarCast.Com",
+	"rss": "https://feeds.transistor.fm/quasar-vue-life",
+	"href": "https://quasarcast.com/podcasts/quasar-life",
+	"tags": ["vue", "quasar"]
+}

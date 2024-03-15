@@ -1,0 +1,11 @@
+{
+	"title": "Building React Apps with Server-Side Rendering",
+	"authors": ["Mohit Thakkar"],
+	"image": "https://www.oreilly.com/library/cover/9781484258699/",
+	"description": "Leverage the benefits of both client-side and server-side rendering to get the most out of your React applications. By the end of this book you will be able to build and deploy React applications using the Next.js framework to fully render server-side HTML on every Web page.",
+	"yearOfPublication": 2020,
+	"numberOfPages": 194,
+	"level": "beginner",
+	"href": "https://www.oreilly.com/library/view/building-react-apps/9781484258699/",
+	"tags": ["NextJS"]
+}

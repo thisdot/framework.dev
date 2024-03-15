@@ -1,0 +1,11 @@
+{
+	"title": "React Hooks Tutorial",
+	"author": "Ben Awad",
+	"image": "https://github.com/benawad.png",
+	"description": "React hooks playlist for beginners on YouTube",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://youtube.com/playlist?list=PLN3n1USn4xlmyw3ebYuZmGp60mcENitdM",
+	"tags": ["data fetching", "hooks", "forms", "react context"]
+}

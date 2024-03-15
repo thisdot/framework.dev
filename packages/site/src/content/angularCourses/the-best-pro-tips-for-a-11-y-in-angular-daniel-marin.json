@@ -1,0 +1,11 @@
+{
+	"title": "The Best Pro Tips for A11Y in Angular",
+	"author": "Daniel Marin",
+	"image": "https://github.com/thisdot.png",
+	"description": "Angular helps us build more dynamic applications easier than with just javascript. Given how easy it is, it is common to see developers doing things in their own way, instead of using what's available. In this training you'll learn what NOT to do, so your applications stay accessible even using Angular.",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://youtu.be/JsS052A1CVg",
+	"tags": ["A11Y", "JavaScript marathon"]
+}
