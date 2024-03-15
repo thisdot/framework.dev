@@ -1,0 +1,1 @@
+{"name":"udd","description":"Update Deno Dependencies - update dependency urls to their latest published versions","href":"https://deno.land/x/udd","package":"","repo":"https://github.com/hayd/deno-udd","author":"Andy Hayden","image":"https://avatars.githubusercontent.com/u/1931852?v=4","tags":["utilities","tooling"],"language":"TypeScript"}
