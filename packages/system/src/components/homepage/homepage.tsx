@@ -32,7 +32,6 @@ import { LogoIcon } from '../../icons/logo-icon'
 export interface HomepageProps extends React.ComponentPropsWithoutRef<'div'> {
 	librariesTitle: string
 	libraries: Library[]
-	libraryTags: string[]
 	podcasts: Podcast<string>[]
 	courses: Course<string>[]
 	blogs: Blog<string>[]
@@ -48,7 +47,6 @@ export function Homepage({
 	className,
 	librariesTitle,
 	libraries,
-	libraryTags,
 	podcasts,
 	courses,
 	blogs,
@@ -92,11 +90,7 @@ export function Homepage({
 					homepageGutterStyle,
 				)}
 			>
-				<FeaturedLibraries
-					libraries={libraries}
-					libraryTags={libraryTags}
-					title={librariesTitle}
-				/>
+				<FeaturedLibraries libraries={libraries} title={librariesTitle} />
 				<Podcasts podcasts={podcasts} />
 				<div className={homepageTwoAndOneSectionStyle}>
 					<Courses courses={courses} />

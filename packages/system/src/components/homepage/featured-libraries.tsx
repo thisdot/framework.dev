@@ -14,7 +14,6 @@ export interface FeaturedLibrariesProps
 	extends React.ComponentPropsWithoutRef<'div'> {
 	title: string
 	libraries: Library[]
-	libraryTags: string[]
 }
 
 export function FeaturedLibraries({
@@ -22,7 +21,6 @@ export function FeaturedLibraries({
 	className,
 	title,
 	libraries,
-	libraryTags,
 	...props
 }: FeaturedLibrariesProps) {
 	const randomLibraries = sampleSize(libraries, 6)
