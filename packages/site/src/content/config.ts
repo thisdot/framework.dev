@@ -1,6 +1,13 @@
 import { z, defineCollection } from 'astro:content'
 
-type CollectionTypes = 'blogs' | 'books'
+export type CollectionTypes =
+	| 'blogs'
+	| 'books'
+	| 'communities'
+	| 'courses'
+	| 'libraries'
+	| 'podcasts'
+	| 'tools'
 type Frameworks =
 	| 'angular'
 	| 'deno'
@@ -12,35 +19,32 @@ type Frameworks =
 	| 'svelte'
 	| 'vue'
 
-export const collections = {
-	angularBooks: generateBookSchema('angular'),
-	denoBooks: generateBookSchema('deno'),
-	graphqlBooks: generateBookSchema('graphql'),
-	nodejsBooks: generateBookSchema('nodejs'),
-	qwikBooks: generateBookSchema('qwik'),
-	reactBooks: generateBookSchema('react'),
-	solidjsBooks: generateBookSchema('solidjs'),
-	svelteBooks: generateBookSchema('svelte'),
-	vueBooks: generateBookSchema('vue'),
-}
-
-function generateBookSchema(framework: Frameworks) {
-	return defineCollection({
-		type: 'data',
-		schema: z.object({
-			title: z.string(),
-			authors: z.array(z.string()),
-			description: z.string(),
-			yearOfPublication: z.number(), // filter to 4 characters
-			numberOfPages: z.number(),
-			level: z.enum(['beginner', 'intermediate', 'advanced']),
-			href: z.string().url(),
-			image: z.string().url(),
-			tags: z.array(z.enum(getTagsType('books', framework))),
-		}),
-	})
-}
-
+const LIBRARY_TAGS: [string, ...string[]] = [
+	'animation',
+	'API libraries',
+	'auth',
+	'CLI',
+	'component',
+	'data fetching',
+	'data processing',
+	'database drivers',
+	'documentation',
+	'forms',
+	'frameworks',
+	'http client',
+	'internationalization',
+	'logging',
+	'ORM',
+	'performance tools',
+	'routing',
+	'state management',
+	'styling',
+	'templating',
+	'testing',
+	'tooling',
+	'utilities',
+	'web servers',
+]
 const TAGS: Record<string, Record<string, [string, ...string[]]>> = {
 	angular: {
 		blogs: [''],
@@ -76,7 +80,7 @@ const TAGS: Record<string, Record<string, [string, ...string[]]>> = {
 			'angular patterns',
 			'TypeScript',
 		],
-		libraries: [''],
+		libraries: LIBRARY_TAGS,
 		podcasts: ['general'],
 		tools: ['chrome', 'VSCode', 'RxJS', 'development', 'testing', 'UI Design'],
 	},
@@ -98,7 +102,7 @@ const TAGS: Record<string, Record<string, [string, ...string[]]>> = {
 			'testing',
 			'debugging',
 		],
-		libraries: [''],
+		libraries: LIBRARY_TAGS,
 		podcasts: ['general', 'how-to', 'technology', 'open source', 'career'],
 		tools: ['vscode', 'webstorm'],
 	},
@@ -147,7 +151,7 @@ const TAGS: Record<string, Record<string, [string, ...string[]]>> = {
 			'graphQL',
 			'JS drops',
 		],
-		libraries: [''],
+		libraries: LIBRARY_TAGS,
 	},
 	nodejs: {
 		blogs: [''],
@@ -171,7 +175,7 @@ const TAGS: Record<string, Record<string, [string, ...string[]]>> = {
 			'events',
 			'javascript marathon',
 		],
-		libraries: [''],
+		libraries: LIBRARY_TAGS,
 		podcasts: ['general, node, full stack'],
 		tools: ['VSCode', 'development', 'testing', 'database', 'API testing'],
 	},
@@ -180,7 +184,7 @@ const TAGS: Record<string, Record<string, [string, ...string[]]>> = {
 		books: ['projects'],
 		communities: ['conferences'],
 		courses: ['state management', 'data fetching', 'structure', 'routing'],
-		libraries: [''],
+		libraries: LIBRARY_TAGS,
 		podcasts: ['general', 'qwik'],
 		tools: [
 			'VSCode',
@@ -237,7 +241,7 @@ const TAGS: Record<string, Record<string, [string, ...string[]]>> = {
 			'sass',
 			'static site generation',
 		],
-		libraries: [''],
+		libraries: LIBRARY_TAGS,
 		podcasts: ['general', 'react', 'GraphQL', 'react native', 'redux'],
 		tools: [
 			'VSCode',
@@ -265,7 +269,7 @@ const TAGS: Record<string, Record<string, [string, ...string[]]>> = {
 			'lifecycle methods',
 			'control flow',
 		],
-		libraries: [''],
+		libraries: LIBRARY_TAGS,
 		podcasts: ['general', 'SolidJS'],
 		tools: [
 			'UI Design',
@@ -310,7 +314,7 @@ const TAGS: Record<string, Record<string, [string, ...string[]]>> = {
 			'accessibility',
 			'reactivity',
 		],
-		libraries: [''],
+		libraries: LIBRARY_TAGS,
 		podcasts: ['general'],
 		tools: [
 			'Jetbrains',
@@ -369,7 +373,7 @@ const TAGS: Record<string, Record<string, [string, ...string[]]>> = {
 			'JavaScript marathon',
 			'sass',
 		],
-		libraries: [''],
+		libraries: LIBRARY_TAGS,
 		podcasts: ['general', 'GraphQL', 'vue', 'quasar'],
 		tools: [
 			'VSCode',
@@ -383,6 +387,205 @@ const TAGS: Record<string, Record<string, [string, ...string[]]>> = {
 	},
 }
 
+export const collections = {
+	// angular
+	'angular-books': generateBookSchema('angular'),
+	'angular-blogs': generateBlogSchema('angular'),
+	'angular-communities': generateCommunitySchema('angular'),
+	'angular-courses': generateCourseSchema('angular'),
+	'angular-libraries': generateLibrarySchema('angular'),
+	'angular-podcasts': generatePodcastSchema('angular'),
+	'angular-tools': generateToolSchema('angular'),
+	// deno
+	'deno-books': generateBookSchema('deno'),
+	'deno-blogs': generateBlogSchema('deno'),
+	'deno-communities': generateCommunitySchema('deno'),
+	'deno-courses': generateCourseSchema('deno'),
+	'deno-libraries': generateLibrarySchema('deno'),
+	'deno-podcasts': generatePodcastSchema('deno'),
+	'deno-tools': generateToolSchema('deno'),
+	// graphql
+	'graphql-books': generateBookSchema('graphql'),
+	'graphql-blogs': generateBlogSchema('graphql'),
+	'graphql-communities': generateCommunitySchema('graphql'),
+	'graphql-courses': generateCourseSchema('graphql'),
+	'graphql-libraries': generateLibrarySchema('graphql'),
+	'graphql-podcasts': generatePodcastSchema('graphql'),
+	'graphql-tools': generateToolSchema('graphql'),
+	// nodejs
+	'nodejs-books': generateBookSchema('nodejs'),
+	'nodejs-blogs': generateBlogSchema('nodejs'),
+	'nodejs-communities': generateCommunitySchema('nodejs'),
+	'nodejs-courses': generateCourseSchema('nodejs'),
+	'nodejs-libraries': generateLibrarySchema('nodejs'),
+	'nodejs-podcasts': generatePodcastSchema('nodejs'),
+	'nodejs-tools': generateToolSchema('nodejs'),
+	// qwik
+	'qwik-books': generateBookSchema('qwik'),
+	'qwik-blogs': generateBlogSchema('qwik'),
+	'qwik-communities': generateCommunitySchema('qwik'),
+	'qwik-courses': generateCourseSchema('qwik'),
+	'qwik-libraries': generateLibrarySchema('qwik'),
+	'qwik-podcasts': generatePodcastSchema('qwik'),
+	'qwik-tools': generateToolSchema('qwik'),
+	// react
+	'react-books': generateBookSchema('react'),
+	'react-blogs': generateBlogSchema('react'),
+	'react-communities': generateCommunitySchema('react'),
+	'react-courses': generateCourseSchema('react'),
+	'react-libraries': generateLibrarySchema('react'),
+	'react-podcasts': generatePodcastSchema('react'),
+	'react-tools': generateToolSchema('react'),
+	// solidjs
+	'solidjs-books': generateBookSchema('solidjs'),
+	'solidjs-blogs': generateBlogSchema('solidjs'),
+	'solidjs-communities': generateCommunitySchema('solidjs'),
+	'solidjs-courses': generateCourseSchema('solidjs'),
+	'solidjs-libraries': generateLibrarySchema('solidjs'),
+	'solidjs-podcasts': generatePodcastSchema('solidjs'),
+	'solidjs-tools': generateToolSchema('solidjs'),
+	// svelte
+	'svelte-books': generateBookSchema('svelte'),
+	'svelte-blogs': generateBlogSchema('svelte'),
+	'svelte-communities': generateCommunitySchema('svelte'),
+	'svelte-courses': generateCourseSchema('svelte'),
+	'svelte-libraries': generateLibrarySchema('svelte'),
+	'svelte-podcasts': generatePodcastSchema('svelte'),
+	'svelte-tools': generateToolSchema('svelte'),
+	// vue
+	'vue-books': generateBookSchema('vue'),
+	'vue-blogs': generateBlogSchema('vue'),
+	'vue-communities': generateCommunitySchema('vue'),
+	'vue-courses': generateCourseSchema('vue'),
+	'vue-libraries': generateLibrarySchema('vue'),
+	'vue-podcasts': generatePodcastSchema('vue'),
+	'vue-tools': generateToolSchema('vue'),
+}
+
+function generateBookSchema(framework: Frameworks) {
+	return defineCollection({
+		type: 'data',
+		schema: z.object({
+			title: z.string(),
+			authors: z.array(z.string()),
+			description: z.string(),
+			yearOfPublication: z.number(), // filter to 4 characters
+			numberOfPages: z.number(),
+			level: z.enum(['beginner', 'intermediate', 'advanced']),
+			href: z.string().url(),
+			image: z.string().url(),
+			tags: z.array(z.enum(getTagsType('books', framework))),
+		}),
+	})
+}
+
+function generateBlogSchema(framework: Frameworks) {
+	return defineCollection({
+		type: 'data',
+		schema: z.object({
+			title: z.string(),
+			author: z.string(),
+			description: z.string(),
+			href: z.string().url(),
+			image: z.string().url(),
+			tags: z.array(z.enum(getTagsType('blogs', framework))),
+		}),
+	})
+}
+
+function generateCommunitySchema(framework: Frameworks) {
+	return defineCollection({
+		type: 'data',
+		schema: z.object({
+			name: z.string(),
+			description: z.string(),
+			type: z.string(),
+			href: z.string().url(),
+			image: z.string().url(),
+			darkImageBackground: z.boolean().optional(),
+			tags: z.array(z.enum(getTagsType('communities', framework))),
+		}),
+	})
+}
+
+function generateCourseSchema(framework: Frameworks) {
+	return defineCollection({
+		type: 'data',
+		schema: z.object({
+			title: z.string(),
+			author: z.string(),
+			description: z.string(),
+			href: z.string().url(),
+			image: z.string().url(),
+			level: z.enum(['beginner', 'intermediate', 'advanced']),
+			paymentType: z.enum(['free', 'paid']),
+			format: z.enum(['text', 'interactive', 'video']),
+			tags: z.array(z.enum(getTagsType('courses', framework))),
+		}),
+	})
+}
+
+function generateLibrarySchema(framework: Frameworks) {
+	return defineCollection({
+		type: 'data',
+		schema: z.object({
+			name: z.string(),
+			href: z.string().url(),
+			author: z.string(),
+			description: z.string(),
+			repo: z.string(),
+			package: z.string(),
+			image: z.string().url(),
+			darkImageBackground: z.boolean().optional(),
+			language: z.enum([
+				'C#',
+				'CSS',
+				'Elixir',
+				'Go',
+				'Haskell',
+				'Java',
+				'JavaScript',
+				'NodeJS',
+				'Python',
+				'Scala',
+				'Swift',
+				'TypeScript',
+				'unknown',
+			]),
+			tags: z.array(z.enum(getTagsType('libraries', framework))),
+		}),
+	})
+}
+
+function generatePodcastSchema(framework: Frameworks) {
+	return defineCollection({
+		type: 'data',
+		schema: z.object({
+			title: z.string(),
+			href: z.string().url(),
+			hosts: z.array(z.string()),
+			description: z.string(),
+			rss: z.string().url().optional(),
+			image: z.string().url(),
+			tags: z.array(z.enum(getTagsType('podcasts', framework))),
+		}),
+	})
+}
+
+function generateToolSchema(framework: Frameworks) {
+	return defineCollection({
+		type: 'data',
+		schema: z.object({
+			name: z.string(),
+			href: z.string().url(),
+			author: z.string(),
+			description: z.string(),
+			image: z.string().url(),
+			tags: z.array(z.enum(getTagsType('tools', framework))),
+		}),
+	})
+}
+
 function getTagsType(collectionType: CollectionTypes, framework: Frameworks) {
-	return TAGS[collectionType][framework]
+	return TAGS[framework][collectionType]
 }
