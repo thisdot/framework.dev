@@ -1,7 +1,7 @@
 {
 	"title": "React Hooks Tutorial",
 	"author": "Ben Awad",
-	"image": "https://github.com/benawad.png",
+	"image": "./assets/react-hooks-tutorial-ben-awad.png",
 	"description": "React hooks playlist for beginners on YouTube",
 	"paymentType": "free",
 	"level": "intermediate",

@@ -1,7 +1,7 @@
 {
 	"title": "Advanced GraphQL ",
 	"author": "Scott Moss",
-	"image": "https://static.frontendmasters.com/assets/courses/2020-02-17-advanced-graphql-v2/thumb.webp",
+	"image": "./assets/advanced-graphql-scott-moss.octet-stream",
 	"description": "Become a GraphQL master by learning to build production-ready GraphQL APIs in Node.js and Apollo Server.",
 	"paymentType": "paid",
 	"level": "advanced",

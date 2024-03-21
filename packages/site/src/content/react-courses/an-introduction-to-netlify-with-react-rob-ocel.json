@@ -1,7 +1,7 @@
 {
 	"title": "An Introduction to Netlify with React",
 	"author": "Rob Ocel",
-	"image": "https://github.com/thisdot.png",
+	"image": "./assets/an-introduction-to-netlify-with-react-rob-ocel.png",
 	"description": "Netlify is a service for automating your site's hosting, continuous integration, continuous deployment, and serverless requirements.",
 	"paymentType": "free",
 	"level": "intermediate",

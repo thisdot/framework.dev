@@ -1,7 +1,7 @@
 {
 	"title": "React Quickly",
 	"authors": ["Azat Mardan"],
-	"image": "https://www.oreilly.com/library/cover/9781617293344/",
+	"image": "./assets/react-quickly-azat-mardan.jpeg",
 	"description": "React Quickly is for anyone who wants to learn React.js fast. This hands-on book teaches you the concepts you need with lots of examples, tutorials, and a large main project that gets built throughout the book.",
 	"yearOfPublication": 2017,
 	"numberOfPages": 829,

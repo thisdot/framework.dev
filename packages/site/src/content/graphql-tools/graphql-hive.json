@@ -2,7 +2,7 @@
 	"name": "GraphQL Hive",
 	"author": "The Guild",
 	"description": "Prevent breaking changes, monitor performance of your GraphQL API, and manage your API gateway",
-	"image": "https://pbs.twimg.com/profile_images/1471121634606161920/ao7qMZBJ_400x400.jpg",
+	"image": "./assets/graphql-hive.jpeg",
 	"href": "https://graphql-hive.com/",
 	"tags": ["schemas", "frontend", "backend", "development"]
 }

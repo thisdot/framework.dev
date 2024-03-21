@@ -1,7 +1,7 @@
 {
 	"title": "Simplify Testing with React Testing Library",
 	"authors": ["Scottie Crump"],
-	"image": "https://www.oreilly.com/library/cover/9781800564459/",
+	"image": "./assets/simplify-testing-with-react-testing-library-scottie-crump.jpeg",
 	"description": "React Testing Library (RTL) is a lightweight and easy-to-use tool for testing the document object model (DOM) output of components. This book will show you how to use this modern, user-friendly tool to test React components, reducing the risk that your application will not work as expected in production.",
 	"yearOfPublication": 2021,
 	"numberOfPages": 261,

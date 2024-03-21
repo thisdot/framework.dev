@@ -1,7 +1,7 @@
 {
 	"title": "Building Modern Node.js Applications on AWS",
 	"author": "Coursera",
-	"image": "https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/android-chrome-v2-192x192.png",
+	"image": "./assets/building-modern-node-js-applications-on-aws-coursera.png",
 	"description": "Building Modern Node.js Applications on AWS will explore how to build an API driven application using Amazon API Gateway for serverless API hosting, AWS Lambda for serverless computing, and Amazon Cognito for serverless authentication. ",
 	"paymentType": "free",
 	"level": "intermediate",

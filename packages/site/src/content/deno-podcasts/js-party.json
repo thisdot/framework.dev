@@ -14,6 +14,6 @@
 	],
 	"href": "https://changelog.com/jsparty",
 	"rss": "https://jsparty.fm/rss",
-	"image": "https://cdn.changelog.com/uploads/covers/js-party-original.png?v=63725770332",
+	"image": "./assets/js-party.png",
 	"tags": ["how-to", "technology"]
 }

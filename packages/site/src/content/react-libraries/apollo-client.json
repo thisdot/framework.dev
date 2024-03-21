@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@apollo/client",
 	"href": "https://www.apollographql.com/docs/react/",
 	"description": "A fully-featured caching GraphQL client with integrations for React that also has functionality for managing local state.",
-	"image": "https://github.com/apollographql.png",
+	"image": "./assets/apollo-client.png",
 	"tags": ["data fetching", "state management"],
 	"language": "TypeScript"
 }

@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/mercurius",
 	"href": "https://mercurius.dev/",
 	"description": "Mercurius is a GraphQL adapter for Fastify",
-	"image": "https://github.com/mercurius-js.png",
+	"image": "./assets/mercurius.png",
 	"language": "NodeJS",
 	"tags": ["web servers", "data processing"]
 }

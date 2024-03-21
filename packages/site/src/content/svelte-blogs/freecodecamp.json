@@ -2,7 +2,7 @@
 	"title": "freeCodeCamp",
 	"author": "freeCodeCamp contributors",
 	"description": "Svelte related blogs",
-	"image": "https://cdn.icon-icons.com/icons2/3206/PNG/512/free_code_camp_icon_195851.png",
+	"image": "./assets/freecodecamp.png",
 	"href": "https://www.freecodecamp.org/news/search?query=svelte",
 	"tags": []
 }

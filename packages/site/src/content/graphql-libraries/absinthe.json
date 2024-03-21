@@ -5,7 +5,7 @@
 	"package": "",
 	"href": "https://absinthe-graphql.org/",
 	"description": "The GraphQL toolkit for Elixir",
-	"image": "https://github.com/absinthe-graphql.png",
+	"image": "./assets/absinthe.png",
 	"language": "Elixir",
 	"tags": ["web servers"]
 }

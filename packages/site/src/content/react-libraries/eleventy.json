@@ -4,7 +4,7 @@
 	"repo": "https://www.github.com/11ty/eleventy",
 	"package": "https://www.npmjs.com/package/@11ty/eleventy",
 	"href": "https://www.11ty.dev/",
-	"image": "https://github.com/11ty.png",
+	"image": "./assets/eleventy.png",
 	"tags": ["frameworks"],
 	"description": "A simpler static site generator. An alternative to Jekyll. Written in JavaScript. Transforms a directory of templates (of varying types) into HTML. Works with HTML, Markdown, Liquid, Nunjucks, Handlebars, Mustache, EJS, Haml, Pug, and JavaScript Template Literals.",
 	"language": "JavaScript"

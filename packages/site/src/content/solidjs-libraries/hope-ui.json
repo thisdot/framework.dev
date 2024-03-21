@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@hope-ui/solid",
 	"href": "https://hope-ui.com/docs/getting-started",
 	"description": "Hope UI is a composable and accessible component library that gives you the foundation to build your next SolidJS application.",
-	"image": "https://opengraph.githubassets.com/73d54d4bfc8030c11c32733e99afb3f0443ad9085d6a2d8dfa7348274c90f934/hope-ui/hope-ui",
+	"image": "./assets/hope-ui.png",
 	"tags": ["component"],
 	"language": "TypeScript"
 }

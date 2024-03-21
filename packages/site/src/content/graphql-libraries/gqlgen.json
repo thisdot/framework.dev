@@ -5,7 +5,7 @@
 	"package": "",
 	"href": "https://gqlgen.com/",
 	"description": "gqlgen is a Go library for building GraphQL servers without any fuss.",
-	"image": "https://user-images.githubusercontent.com/980499/133180111-d064b38c-6eb9-444b-a60f-7005a6e68222.png",
+	"image": "./assets/gqlgen.png",
 	"language": "Go",
 	"tags": ["web servers"]
 }

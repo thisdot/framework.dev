@@ -1,7 +1,7 @@
 {
 	"title": "Node.js API Masterclass With Express & MongoDB",
 	"author": "Brad Traversy",
-	"image": "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+	"image": "./assets/node-js-api-masterclass-with-express-mongodb-brad-traversy.jpeg",
 	"description": "Create a real world backend for a bootcamp directory app",
 	"paymentType": "paid",
 	"level": "advanced",

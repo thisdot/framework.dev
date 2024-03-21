@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/mobx",
 	"href": "https://mobx.js.org/",
 	"description": "A battle tested library that makes state management simple and scalable by transparently applying functional reactive programming. Uses observable data structures instead of actions and reducers.",
-	"image": "https://camo.githubusercontent.com/0dc3b9afa37acc792f49624b1f8dd364b55c9107167fd291ffde1d81917aceba/68747470733a2f2f6d6f62782e6a732e6f72672f6173736574732f6d6f62782e706e67",
+	"image": "./assets/mobx.plain; charset=utf-8",
 	"tags": ["state management"],
 	"language": "TypeScript"
 }

@@ -1,7 +1,7 @@
 {
 	"name": "Jamstack",
 	"description": "Jamstack Conf is for engineers, technology leaders, and digital agencies who are embracing the next evolution of modern web development architecture.",
-	"image": "https://jamstack.org/conf/assets/logo-jamstack-mark.56918026.svg",
+	"image": "./assets/jamstack.svg+xml",
 	"type": "Live and Online Events",
 	"href": "https://jamstack.org/conf/",
 	"tags": ["conferences"]

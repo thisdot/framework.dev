@@ -1,7 +1,7 @@
 {
 	"title": "Build Angular Apps in Minutes",
 	"author": "Brian Lagunas & Jason Beres",
-	"image": "https://github.com/thisdot.png",
+	"image": "./assets/build-angular-apps-in-minutes-brian-lagunas-jason-beres.png",
 	"description": "Angular schematics drive the productivity features of the Angular CLI. With the added benefits of tools, such as Ignite UI from Infragistics, you can take the CLI to the next step with built in component and app templates, and customized themes, and more to kickstart the app experience you need. In the webinar, Brian Lagunas and Jason Beres from Infragistics product teams will walk you through how to use the CLI and how you can create your own customizations to bring hyper-productivity to your teams.",
 	"paymentType": "free",
 	"level": "beginner",

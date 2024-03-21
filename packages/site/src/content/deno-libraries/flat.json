@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/githubocto/flat-postprocessing",
 	"author": "GitHub Next",
-	"image": "https://avatars.githubusercontent.com/u/68357280?s=200&v=4",
+	"image": "./assets/flat.png",
 	"tags": ["utilities"],
 	"language": "TypeScript"
 }

@@ -4,7 +4,7 @@
 	"repo": "https://github.com/analogjs/analog",
 	"package": "https://www.npmjs.com/package/@analogjs/platform",
 	"href": "https://analogjs.org/",
-	"image": "https://analogjs.org/img/favicon.ico",
+	"image": "./assets/analog.vnd.microsoft.icon",
 	"description": "Analog is a meta-framework for building applications and websites with Angular.",
 	"tags": ["frameworks"],
 	"language": "TypeScript"

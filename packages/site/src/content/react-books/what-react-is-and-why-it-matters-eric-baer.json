@@ -1,7 +1,7 @@
 {
 	"title": "What React Is and Why It Matters",
 	"authors": ["Eric Baer"],
-	"image": "https://www.oreilly.com/library/cover/9781491996744/",
+	"image": "./assets/what-react-is-and-why-it-matters-eric-baer.jpeg",
 	"description": "Many excellent resources will teach you how to use React, but few get into just why this library matters. In this ebook, author Eric Baer examines React’s core innovations with as little jargon as possible to help promote a diverse set of views in your conversations about technology.",
 	"yearOfPublication": 2018,
 	"numberOfPages": 63,

@@ -1,7 +1,7 @@
 {
 	"name": "Angular Community Meetup",
 	"description": "Angular Community is a virtual meetup that is held twice a month: once for European and African time zones, and once for American timezones.",
-	"image": "https://angularcommunity.net/assets/images/ACM_logo_main%20copy.png",
+	"image": "./assets/angular-community-meetup.png",
 	"type": "Live Events",
 	"href": "https://angularcommunity.net/home",
 	"tags": ["meetups"]

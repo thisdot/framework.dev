@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/lodash/lodash",
 	"author": "Lodash Utilities",
-	"image": "https://avatars.githubusercontent.com/u/2565403?s=200&v=4",
+	"image": "./assets/lodash.png",
 	"tags": ["utilities", "data processing"],
 	"language": "TypeScript"
 }

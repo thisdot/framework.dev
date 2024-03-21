@@ -4,7 +4,7 @@
 	"repo": "https://www.github.com/chakra-ui/chakra-ui",
 	"package": "https://www.npmjs.com/package/@chakra-ui/react",
 	"href": "https://chakra-ui.com/",
-	"image": "https://github.com/chakra-ui.png",
+	"image": "./assets/chakra-ui.png",
 	"tags": ["component"],
 	"description": "⚡️ Simple, Modular & Accessible UI Components for your React Applications",
 	"language": "TypeScript"

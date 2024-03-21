@@ -1,8 +1,8 @@
 {
 	"name": "NgRome",
 	"description": "The largest Italian Angular conference.",
-	"image": "https://ngrome.io/assets/logo/logo-horizontal.svg",
+	"image": "./assets/ngrome.svg",
 	"type": "Live Events",
-	"href": "https://ngrome.io/home",
+	"href": "https://ngrome.io",
 	"tags": ["conferences"]
 }

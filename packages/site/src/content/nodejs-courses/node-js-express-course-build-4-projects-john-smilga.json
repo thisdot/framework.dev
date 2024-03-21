@@ -1,7 +1,7 @@
 {
 	"title": "Node.js / Express Course - Build 4 Projects",
 	"author": "John Smilga",
-	"image": "https://github.com/freeCodeCamp.png",
+	"image": "./assets/node-js-express-course-build-4-projects-john-smilga.jpeg",
 	"description": "Node.js and Express.js are popular technologies used for JavaScript backend web development. In this course, you will improve your skills by building four projects using Node and Express.",
 	"paymentType": "free",
 	"level": "advanced",

@@ -2,7 +2,7 @@
 	"title": "Modern Web Development with Deno",
 	"description": "This book will teach all you need to know about Deno's primitives, its ideas, and how you can use them to build applications that work in the real world.",
 	"href": "https://www.amazon.com/Modern-Web-Development-Deno-JavaScript/dp/9355510969",
-	"image": "https://m.media-amazon.com/images/P/B0BHKWYVMG.01._SCLZZZZZZZ_SX500_.jpg",
+	"image": "./assets/modern-web-development-with-deno-mayur-borse.jpeg",
 	"authors": ["Mayur Borse"],
 	"level": "intermediate",
 	"numberOfPages": 200,

@@ -1,7 +1,7 @@
 {
 	"title": "Fullstack React",
 	"author": "newline",
-	"image": "https://github.com/fullstackio.png",
+	"image": "./assets/fullstack-react-newline.png",
 	"description": "The up-to-date, in-depth, complete guide to React and friends.",
 	"paymentType": "paid",
 	"level": "beginner",

@@ -5,7 +5,7 @@
 	"paymentType": "paid",
 	"level": "advanced",
 	"format": "video",
-	"image": "https://img-c.udemycdn.com/user/200_H/12531206_c058_5.jpg",
+	"image": "./assets/master-deno-react-mongo-nginx-running-with-docker-compose-icaro-lavrador.jpeg",
 	"href": "https://www.udemy.com/course/deno-and-react/",
 	"tags": [
 		"mongodb",

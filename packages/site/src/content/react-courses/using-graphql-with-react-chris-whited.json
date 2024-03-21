@@ -1,7 +1,7 @@
 {
 	"title": "Using GraphQL with React",
 	"author": "Chris Whited",
-	"image": "https://github.com/thisdot.png",
+	"image": "./assets/using-graphql-with-react-chris-whited.png",
 	"description": "This training will focus on the GraphQL system, libs we can use to interact with GraphQL APIs, structuring our components to think in our graph type system, and using this type system to build resilient components.",
 	"paymentType": "free",
 	"level": "beginner",

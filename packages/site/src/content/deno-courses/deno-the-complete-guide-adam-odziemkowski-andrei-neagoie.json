@@ -5,7 +5,7 @@
 	"paymentType": "paid",
 	"level": "intermediate",
 	"format": "interactive",
-	"image": "https://images.ctfassets.net/aq13lwl6616q/719IZvU4LVWt9rECcR0oG3/a0da40259fde3f116d7e419d5536e86d/bdIvNmsR_400x400.jpg?w=353",
+	"image": "./assets/deno-the-complete-guide-adam-odziemkowski-andrei-neagoie.jpeg",
 	"href": "https://zerotomastery.io/courses/learn-deno/",
 	"tags": ["deno", "backend", "debugging", "typescript", "aws", "docker"]
 }

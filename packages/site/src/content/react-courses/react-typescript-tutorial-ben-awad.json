@@ -1,7 +1,7 @@
 {
 	"title": "React TypeScript Tutorial",
 	"author": "Ben Awad",
-	"image": "https://github.com/benawad.png",
+	"image": "./assets/react-typescript-tutorial-ben-awad.png",
 	"description": "Learn how to start using TypeScript in your React code. I go over props, hooks, and render props.",
 	"paymentType": "free",
 	"level": "intermediate",

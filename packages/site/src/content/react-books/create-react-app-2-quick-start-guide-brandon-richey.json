@@ -1,7 +1,7 @@
 {
 	"title": "Create React App 2 Quick Start Guide",
 	"authors": ["Brandon Richey"],
-	"image": "https://www.oreilly.com/library/cover/9781789952766/",
+	"image": "./assets/create-react-app-2-quick-start-guide-brandon-richey.jpeg",
 	"description": "This book will help you use CRA to write React programs without significant configuration-related difficulties. With this quick start guide, you will integrate your applications with React to build efficient professional web services.",
 	"yearOfPublication": 2019,
 	"numberOfPages": 251,

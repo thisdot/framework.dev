@@ -1,7 +1,7 @@
 {
 	"name": "Web3 Tech Summit",
 	"description": "Start Building on the Web3 using your current stack Today!",
-	"image": "https://events.geekle.us/web3/static/media/logo-mob.3a843aa6.svg",
+	"image": "./assets/web-3-tech-summit.svg+xml",
 	"type": "Online Events",
 	"href": "https://events.geekle.us/web3/",
 	"darkImageBackground": true,

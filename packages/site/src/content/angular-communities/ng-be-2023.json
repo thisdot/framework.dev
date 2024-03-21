@@ -1,7 +1,7 @@
 {
 	"name": "NG-BE 2023",
 	"description": "Belgium's Angular conference.",
-	"image": "https://images.squarespace-cdn.com/content/v1/5b7b64d52714e503eebf914c/1534819802976-CJNVLSR6NCPX4XODKL0N/ng-be-logo.png?format=1500w",
+	"image": "./assets/ng-be-2023.png",
 	"type": "Live Events",
 	"href": "https://ng-be.org/",
 	"tags": ["conferences"]

@@ -5,7 +5,7 @@
 	"package": "",
 	"href": "https://strawberry.rocks/",
 	"description": "Strawberry is a new GraphQL library for Python 3, inspired by dataclasses.",
-	"image": "https://github.com/strawberry-graphql.png",
+	"image": "./assets/strawberry.png",
 	"language": "Python",
 	"tags": ["data processing"]
 }

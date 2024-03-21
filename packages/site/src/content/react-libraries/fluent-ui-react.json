@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@fluentui/react",
 	"href": "https://aka.ms/fluentui-react",
 	"description": "Fluent UI web represents a collection of utilities, React components, and web components for building web applications. It is the web version of Microsoft's cross-platform Fluent UI design framework.",
-	"image": "https://github.com/microsoft.png",
+	"image": "./assets/fluent-ui-react.png",
 	"tags": ["component"],
 	"language": "TypeScript"
 }

@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/solid-bootstrap",
 	"href": "https://solid-libs.github.io/solid-bootstrap/#/",
 	"description": "Solid-Bootstrap replaces the Bootstrap JavaScript. Each component has been carefully ported into a true SolidJS component, without unneeded dependencies like jQuery.",
-	"image": "https://opengraph.githubassets.com/824c95680dd01104c9412933dd5cfd21dc6da2a7d090e253ee7f92e4222f0ec8/solid-libs/solid-bootstrap",
+	"image": "./assets/solid-bootstrap.png",
 	"tags": ["component"],
 	"language": "TypeScript"
 }

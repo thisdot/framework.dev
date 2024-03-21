@@ -1,7 +1,7 @@
 {
 	"name": "React Advanced London",
 	"description": "React Advanced is a London-based annual conference for advanced React.js engineers.",
-	"image": "https://reactadvanced.com/img/logo-alt.svg",
+	"image": "./assets/react-advanced-london.svg+xml",
 	"type": "Live Events",
 	"href": "https://reactadvanced.com/",
 	"tags": ["conferences"]

@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/graphql-helix",
 	"href": "https://www.graphql-helix.com/",
 	"description": "Build your own extensible and framework-agnostic GraphQL Server",
-	"image": "https://raw.githubusercontent.com/contra/graphql-helix/main/logo.svg",
+	"image": "./assets/helix.svg+xml",
 	"language": "NodeJS",
 	"tags": ["web servers", "data processing"]
 }

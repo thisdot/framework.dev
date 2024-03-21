@@ -1,7 +1,7 @@
 {
 	"title": "ReactJS by Example",
 	"authors": ["Vipul A M", "Prathamesh Sonpatki"],
-	"image": "https://www.oreilly.com/library/cover/9781785289644/",
+	"image": "./assets/reactjs-by-example-vipul-a-m-prathamesh-sonpatki.jpeg",
 	"description": "An easy-to-follow program to learn ReactJS with the help of real world projects. Each topic is explained within the context of a project and provides plenty of tips and tricks for using ReactJS.",
 	"yearOfPublication": 2016,
 	"numberOfPages": 268,

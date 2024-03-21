@@ -2,7 +2,7 @@
 	"title": "Nodejs.dev",
 	"author": "Node.js",
 	"description": "The latest Node.js news, case studies, tutorials, and resources.",
-	"image": "https://pbs.twimg.com/profile_images/1262824892535373825/BiXDFDDp_400x400.jpg",
+	"image": "./assets/nodejs-dev.jpeg",
 	"href": "https://nodejs.dev/en/blog/",
 	"tags": []
 }

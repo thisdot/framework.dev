@@ -5,7 +5,7 @@
 	"paymentType": "paid",
 	"level": "beginner",
 	"format": "video",
-	"image": "https://img-c.udemycdn.com/user/200_H/23757898_e87f_4.jpg",
+	"image": "./assets/mastering-deno-js-beginner-to-expert-2022-ilkin-guluzada.jpeg",
 	"href": "https://www.udemy.com/course/mastering-denojs-beginner-to-expert/",
 	"tags": ["deno", "typescript", "mongodb", "backend"]
 }

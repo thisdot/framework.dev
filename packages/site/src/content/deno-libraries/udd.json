@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/hayd/deno-udd",
 	"author": "Andy Hayden",
-	"image": "https://avatars.githubusercontent.com/u/1931852?v=4",
+	"image": "./assets/udd.jpeg",
 	"tags": ["utilities", "tooling"],
 	"language": "TypeScript"
 }

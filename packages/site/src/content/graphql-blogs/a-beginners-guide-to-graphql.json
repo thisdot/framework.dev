@@ -2,7 +2,7 @@
 	"title": "A Beginner's Guide to GraphQL",
 	"author": "freeCodeCamp",
 	"description": "This is a beginner friendly guide to help developers start learning GraphQL",
-	"image": "https://github.com/freeCodeCamp.png",
+	"image": "./assets/a-beginners-guide-to-graphql.jpeg",
 	"href": "https://www.freecodecamp.org/news/a-beginners-guide-to-graphql-86f849ce1bec/",
 	"tags": []
 }

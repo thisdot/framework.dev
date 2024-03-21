@@ -1,7 +1,7 @@
 {
 	"title": "Getting started with Angular",
 	"author": "Google",
-	"image": "https://github.com/angular.png",
+	"image": "./assets/getting-started-with-angular-google.png",
 	"description": "Introduces you to the essentials of Angular by walking you through building an e-commerce site with a catalog, shopping cart, and check-out form.",
 	"paymentType": "free",
 	"level": "beginner",

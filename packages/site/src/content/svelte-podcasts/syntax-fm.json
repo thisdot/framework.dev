@@ -4,6 +4,6 @@
 	"hosts": ["Wes Bos", "Scott Tolinski"],
 	"href": "https://syntax.fm/",
 	"rss": "http://feed.syntax.fm/rss",
-	"image": "https://syntax.fm/static/logo.png",
+	"image": "./assets/syntax-fm.html",
 	"tags": ["general"]
 }

@@ -1,7 +1,7 @@
 {
 	"title": "Introduction to Gatsby v2 ",
 	"author": "Jason Lengstorf",
-	"image": "https://pbs.twimg.com/profile_images/1524064394157576193/tB5HL_ES_400x400.jpg",
+	"image": "./assets/introduction-to-gatsby-v-2-jason-lengstorf.jpeg",
 	"description": "Learn to build blazing-fast apps and websites with React using Gatsby!",
 	"paymentType": "paid",
 	"level": "beginner",

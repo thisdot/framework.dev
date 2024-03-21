@@ -4,7 +4,7 @@
 	"repo": "https://www.github.com/lukeed/rosetta",
 	"package": "https://www.npmjs.com/package/rosetta",
 	"href": "https://github.com/lukeed/rosetta",
-	"image": "https://github.com/lukeed.png",
+	"image": "./assets/rosetta.jpeg",
 	"tags": ["internationalization"],
 	"description": "A general purpose internationalization library in 298 bytes",
 	"language": "JavaScript"

@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/lucacasonato/deno-puppeteer",
 	"author": "Luca Casonato",
-	"image": "https://avatars.githubusercontent.com/u/7829205?v=4",
+	"image": "./assets/puppeteer.jpeg",
 	"tags": ["utilities", "testing"],
 	"language": "TypeScript"
 }

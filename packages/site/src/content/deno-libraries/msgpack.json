@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/Srinivasa314/msgpack-deno",
 	"author": "Srinivasa Mahesh",
-	"image": "https://avatars.githubusercontent.com/u/62195746?v=4",
+	"image": "./assets/msgpack.png",
 	"tags": ["utilities"],
 	"language": "TypeScript"
 }

@@ -1,7 +1,7 @@
 {
 	"title": "Learn and Understand NodeJS",
 	"author": "Anthony Alicea",
-	"image": "https://egghead.io/_next/image?url=https%3A%2F%2Fd2eip9sf3oo6c2.cloudfront.net%2Ftags%2Fimages%2F000%2F000%2F256%2Fsquare_480%2Fnodejslogo.png&w=640&q=100",
+	"image": "./assets/learn-and-understand-nodejs-anthony-alicea.png",
 	"description": "Dive deep under the hood of NodeJS. Learn V8, Express, the MEAN stack, core Javascript concepts, and more.",
 	"paymentType": "paid",
 	"level": "beginner",

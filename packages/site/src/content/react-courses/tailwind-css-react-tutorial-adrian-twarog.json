@@ -1,7 +1,7 @@
 {
 	"title": "Tailwind CSS React Tutorial",
 	"author": "Adrian Twarog",
-	"image": "https://github.com/adriantwarog.png",
+	"image": "./assets/tailwind-css-react-tutorial-adrian-twarog.jpeg",
 	"description": "If you're looking to learn tailwindcss with react, this tutorial should cover the basics of getting it up and running. It's based on the official documentation",
 	"paymentType": "free",
 	"level": "intermediate",

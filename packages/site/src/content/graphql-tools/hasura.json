@@ -2,7 +2,7 @@
 	"name": "Hasura",
 	"author": "Hasura",
 	"description": "The top stories from Hasura: engineering, tutorials, product updates, GraphQL, frontend & backend frameworks & more!",
-	"image": "https://pbs.twimg.com/profile_images/1450802929527447554/kRyVEq8q_400x400.jpg",
+	"image": "./assets/hasura.jpeg",
 	"href": "https://hasura.io/blog/",
 	"tags": ["schemas", "frontend", "backend", "development"]
 }

@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/meteor",
 	"href": "https://www.meteor.com/",
 	"description": "Meteor is an open source platform for seamlessly building and deploying Web, Mobile, and Desktop applications in Javascript.",
-	"image": "https://assets.website-files.com/5dd3f8176674eb0829f184d5/5dd41eb9049df81f8773946e_meteor-logo.svg",
+	"image": "./assets/meteor.svg+xml",
 	"tags": ["frameworks"],
 	"language": "NodeJS"
 }

@@ -1,7 +1,7 @@
 {
 	"title": "Learning RxJS in 1 Hour",
 	"author": "Ben Lesh",
-	"image": "https://github.com/thisdot.png",
+	"image": "./assets/learning-rxjs-in-1-hour-ben-lesh.png",
 	"description": "Learning about Observables and operators including how to build an Observable from scratch with Ben Lesh, author of RxJS",
 	"paymentType": "free",
 	"level": "beginner",

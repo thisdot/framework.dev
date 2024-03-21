@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@angular-redux/store",
 	"href": "https://github.com/angular-redux/ng-redux",
 	"description": "This library provides Angular bindings for Redux, allowing you to easily connect your Angular components with Redux.",
-	"image": "https://github.com/angular-redux.png",
+	"image": "./assets/angular-redux.png",
 	"tags": ["state management"],
 	"language": "TypeScript"
 }

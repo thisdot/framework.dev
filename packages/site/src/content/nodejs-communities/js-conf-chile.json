@@ -1,7 +1,7 @@
 {
 	"name": "JS Conf Chile",
 	"description": "2 days of international speakers, community, learning and connections.",
-	"image": "https://jsconf.com/images/jsconf_cl.png",
+	"image": "./assets/js-conf-chile.png",
 	"type": "Live Events",
 	"href": "https://jsconf.cl/",
 	"tags": ["conferences"]

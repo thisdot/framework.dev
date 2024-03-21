@@ -1,7 +1,7 @@
 {
 	"name": "Front Conference",
 	"description": "Conference where design meets technology.",
-	"image": "https://frontconference.com/static/neon.svg",
+	"image": "./assets/front-conference.svg+xml",
 	"type": "Live Events",
 	"href": "https://frontconference.com/",
 	"tags": ["conferences"]

@@ -1,7 +1,7 @@
 {
 	"title": "Introduction to React",
 	"authors": ["Cory Gackenheimer"],
-	"image": "https://www.oreilly.com/library/cover/9781484212455/",
+	"image": "./assets/introduction-to-react-cory-gackenheimer.jpeg",
 	"description": "Get to know the React API and it’s specific JavaScript extension, JSX, which makes authoring React components easier and maintainable. You will also learn how to test your React applications and about the tools you can use while building.",
 	"yearOfPublication": 2015,
 	"numberOfPages": 157,

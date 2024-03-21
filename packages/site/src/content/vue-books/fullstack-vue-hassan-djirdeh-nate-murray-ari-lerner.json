@@ -1,7 +1,7 @@
 {
 	"title": "Fullstack Vue",
 	"authors": ["Hassan Djirdeh, Nate Murray, Ari Lerner"],
-	"image": "https://dzxbosgk90qga.cloudfront.net/x800/n/20210201233729182_book-cover-quarter.jpg",
+	"image": "./assets/fullstack-vue-hassan-djirdeh-nate-murray-ari-lerner.jpeg",
 	"description": "The Fullstack Vue book is the complete guide to Vue.js. With dozens of code examples showing every step, you will master this delightful framework.",
 	"yearOfPublication": 2021,
 	"numberOfPages": 620,

@@ -1,7 +1,7 @@
 {
 	"title": "JS Drops",
 	"author": "Various",
-	"image": "https://github.com/thisdot.png",
+	"image": "./assets/js-drops-various.png",
 	"description": "JS Drops is a weekly series of online courses on Vue, React, TypeScript, GraphQL, and other topics in the JS ecosystem. Learn about leading web development technologies and concepts!",
 	"paymentType": "free",
 	"level": "intermediate",

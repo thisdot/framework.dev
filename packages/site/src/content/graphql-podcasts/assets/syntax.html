@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+		<link rel="shortcut icon" href="/favicon.png" type="image/png" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script
+			defer
+			data-domain="syntax.fm"
+			src="https://plausible.io/js/script.js"
+		></script>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+			<h1>404</h1>
+			<p>Not Found</p>
+
+			<script>
+				{
+					__sveltekit_1svggac = {
+						base: new URL('..', location).pathname.slice(0, -1),
+					}
+
+					const element = document.currentScript.parentElement
+
+					const data = [null, null]
+
+					Promise.all([
+						import('../_app/immutable/entry/start.BsIQfkRm.js'),
+						import('../_app/immutable/entry/app.Bea7SObz.js'),
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 1],
+							data,
+							form: null,
+							error: { message: 'Not Found' },
+							status: 404,
+						})
+					})
+				}
+			</script>
+		</div>
+	</body>
+</html>

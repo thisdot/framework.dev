@@ -2,7 +2,7 @@
 	"name": "WunderGraph",
 	"author": "WunderGraph",
 	"description": "Declaratively turn your services, databases and 3rd party APIs into a secure, unified, and extensible API. Compose, integrate, ship.",
-	"image": "https://hub.wundergraph.com/images/logo.svg",
+	"image": "./assets/wundergraph.svg+xml",
 	"href": "https://wundergraph.com/",
 	"tags": ["schemas", "frontend", "backend", "development"]
 }

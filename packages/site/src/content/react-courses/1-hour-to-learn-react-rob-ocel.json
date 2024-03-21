@@ -1,7 +1,7 @@
 {
 	"title": "1 Hour to Learn React",
 	"author": "Rob Ocel",
-	"image": "https://github.com/thisdot.png",
+	"image": "./assets/1-hour-to-learn-react-rob-ocel.png",
 	"description": "Learning React is easy. We're going to create a new project using the Create React App CLI and introduce the JSX templating syntax.",
 	"paymentType": "free",
 	"level": "beginner",

@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/timonson/djwt",
 	"author": "Timo Rossa",
-	"image": "https://avatars.githubusercontent.com/u/54777088?v=4",
+	"image": "./assets/djwt.jpeg",
 	"tags": ["utilities"],
 	"language": "TypeScript"
 }

@@ -4,7 +4,7 @@
 	"repo": "https://www.github.com/sveltejs/language-tools",
 	"package": "https://www.npmjs.com/package/svelte-check",
 	"href": "https://github.com/sveltejs/language-tools",
-	"image": "https://avatars.githubusercontent.com/u/23617963?s=200&v=4",
+	"image": "./assets/svelte-check.png",
 	"tags": ["tooling"],
 	"description": "Svelte Language Tools contains a library implementing the Language Server Protocol (LSP). LSP powers the VSCode extension, which is also hosted in this repository. Additionally, LSP is capable of powering plugins for numerous other IDEs.",
 	"language": "TypeScript"

@@ -1,8 +1,8 @@
 {
 	"name": "Ng-Conf",
 	"description": "Join us for this 3-day immersion into everything Angular. You'll meet members of the Angular Team, learn cutting-edge developments firsthand, and meet all kinds of interesting people who understand your syntax.",
-	"image": "https://2022.ng-conf.org/wp-content/uploads/2021/10/cropped-ng-conf-logo-grey_002-192x192.png",
+	"image": "./assets/ng-conf.png",
 	"type": "Live Events",
-	"href": "https://2022.ng-conf.org/",
+	"href": "https://ng-conf.org/",
 	"tags": ["conferences"]
 }

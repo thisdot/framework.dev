@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/roonie007/url-join",
 	"author": "Mouadh HSOUMI",
-	"image": "https://avatars.githubusercontent.com/u/7860859?v=4",
+	"image": "./assets/url-join.png",
 	"tags": ["utilities"],
 	"language": "TypeScript"
 }

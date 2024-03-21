@@ -1,7 +1,7 @@
 {
 	"title": "The Beginner's Guide to React",
 	"author": "Kent C. Dodds",
-	"image": "https://github.com/kentcdodds.png",
+	"image": "./assets/the-beginners-guide-to-react-kent-c-dodds.jpeg",
 	"description": "This course is for React newbies and anyone looking to build a solid foundation. It's designed to teach you everything you need to start building web applications in React right away.",
 	"paymentType": "free",
 	"level": "beginner",

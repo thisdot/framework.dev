@@ -1,7 +1,7 @@
 {
 	"title": "React for Real",
 	"authors": ["Ludovico Fischer"],
-	"image": "https://www.oreilly.com/library/cover/9781680502817/",
+	"image": "./assets/react-for-real-ludovico-fischer.jpeg",
 	"description": "Craft isolated components that make your apps easier to develop and maintain, with plenty of guidance on best practices. Set up automated tests, and make pages render fast for your users. See how to use your React skills to integrate with other front-end technologies when needed.",
 	"yearOfPublication": 2017,
 	"numberOfPages": 146,

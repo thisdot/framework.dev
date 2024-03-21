@@ -1,7 +1,7 @@
 {
 	"name": "Angular @ Reddit",
 	"description": "Very active Angular community on Reddit.",
-	"image": "https://styles.redditmedia.com/t5_36qrt/styles/communityIcon_essg5v68ccu01.png?width=256&s=9ddf3239f71edb50bb9da77b371f43812d6b223f",
+	"image": "./assets/angular-reddit.png",
 	"type": "Reddit",
 	"href": "https://www.reddit.com/r/Angular2/",
 	"tags": []

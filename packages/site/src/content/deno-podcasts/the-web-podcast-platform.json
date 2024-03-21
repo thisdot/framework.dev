@@ -4,6 +4,6 @@
 	"hosts": ["Justin Ribeiro", "Danny Blue", "Amal Hussein", "Leon Revill"],
 	"href": "https://thewebplatformpodcast.com/",
 	"rss": "https://thewebplatformpodcast.com/rss",
-	"image": "https://i.scdn.co/image/79e44158769aaa756916b5ee9accf796227c5115",
+	"image": "./assets/the-web-podcast-platform.jpeg",
 	"tags": ["how-to", "technology"]
 }

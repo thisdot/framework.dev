@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@ngx-formly/core",
 	"href": "https://formly.dev/",
 	"description": "Formly is a dynamic (JSON-powered) form library for Angular.",
-	"image": "https://github.com/ngx-formly.png",
+	"image": "./assets/formly.png",
 	"tags": ["forms"],
 	"language": "TypeScript"
 }

@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/keen-ui",
 	"href": "https://josephuspaye.github.io/Keen-UI",
 	"description": "Keen UI is a Vue 2 UI library with a simple API, inspired by Google's Material Design.",
-	"image": "https://madewithnetworkfra.fra1.digitaloceanspaces.com/spatie-space-production/1157/keen.jpg",
+	"image": "./assets/keen-ui.jpeg",
 	"tags": ["component"],
 	"language": "JavaScript"
 }

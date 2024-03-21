@@ -1,6 +1,6 @@
 {
 	"title": "Resumable Apps in Qwik w/ Miško Hevery (creator of Angular!)",
-	"image": "https://i3.ytimg.com/vi/LbMRs7l4czI/hqdefault.jpg",
+	"image": "./assets/resumable-apps-in-qwik-w-misko-hevery-creator-of-angular.jpeg",
 	"hosts": ["Tony Alicea - Misko Hevery"],
 	"description": "Miško Hevery (creator of Angular) shows us the exciting new resumable, performance-optimized JavaScript framework Qwik",
 	"rss": "https://www.youtube.com/watch?v=LbMRs7l4czI",

@@ -3,6 +3,6 @@
 	"description": "This plugin adds support for using Deno with JetBrains WebStorm.",
 	"author": "JetBrains",
 	"href": "https://plugins.jetbrains.com/plugin/14382-deno",
-	"image": "https://plugins.jetbrains.com/static/versions/24971/jetbrains-simple.svg",
+	"image": "./assets/webstorm-plugin-for-deno.svg+xml",
 	"tags": ["webstorm"]
 }

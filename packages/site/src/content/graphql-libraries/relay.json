@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/react-relay",
 	"href": "https://relay.dev/",
 	"description": "The GraphQL client that scales with you.",
-	"image": "https://github.com/facebook.png",
+	"image": "./assets/relay.png",
 	"language": "JavaScript",
 	"tags": ["data fetching"]
 }

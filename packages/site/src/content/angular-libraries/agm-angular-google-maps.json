@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@agm/core",
 	"href": "https://angular-maps.com/guides/getting-started/",
 	"description": "Angular components for Google Maps.",
-	"image": "https://raw.githubusercontent.com/SebastianM/angular-google-maps/master/assets/images/angular-google-maps-logo.png",
+	"image": "./assets/agm-angular-google-maps.png",
 	"tags": ["component"],
 	"language": "TypeScript"
 }

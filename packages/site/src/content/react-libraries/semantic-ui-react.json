@@ -4,7 +4,7 @@
 	"repo": "https://www.github.com/Semantic-Org/Semantic-UI-React",
 	"package": "https://www.npmjs.com/package/semantic-ui-react",
 	"href": "https://react.semantic-ui.com/",
-	"image": "https://github.com/Semantic-Org/Semantic-UI-React/raw/master/docs/public/logo.png",
+	"image": "./assets/semantic-ui-react.png",
 	"tags": ["component"],
 	"description": "Semantic UI React is the official React integration for Semantic UI, a popular UI development framework.",
 	"language": "TypeScript"

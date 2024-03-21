@@ -2,7 +2,7 @@
 	"name": "Quokka",
 	"author": "Wallaby Pty Ltd",
 	"description": "Quokka makes exploring, learning, and testing JavaScript / TypeScript blazingly fast. By default no config is required, simply open a new Quokka file and start experimenting. Focus on writing code instead of writing bespoke config files just to try a simple idea or learn a new language feature.",
-	"image": "https://ph-files.imgix.net/9ae1a85d-4096-429c-95cc-5c7cff7fcdad.png?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=64&h=64&fit=crop&frame=1&dpr=1",
+	"image": "./assets/quokka.png",
 	"href": "https://quokkajs.com/",
 	"tags": ["VSCode", "development", "testing"]
 }

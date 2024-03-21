@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@angular/cli",
 	"href": "https://angular.io/cli",
 	"description": "The Angular CLI is a command-line interface tool that you use to initialize, develop, scaffold, and maintain Angular applications directly from a command shell",
-	"image": "https://github.com/angular.png",
+	"image": "./assets/angular-cli.png",
 	"tags": ["CLI"],
 	"language": "NodeJS"
 }

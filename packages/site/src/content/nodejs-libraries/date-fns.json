@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/date-fns",
 	"href": "https://date-fns.org/",
 	"description": "date-fns provides the most comprehensive, yet simple and consistent toolset for manipulating JavaScript dates in a browser & Node.js.",
-	"image": "https://pbs.twimg.com/profile_images/680459696088551424/jwEH4RiN_400x400.png",
+	"image": "./assets/date-fns.png",
 	"tags": ["utilities"],
 	"language": "NodeJS"
 }

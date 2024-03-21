@@ -1,7 +1,7 @@
 {
 	"title": "Node JS: Advanced Concepts",
 	"author": "Stephen Grider",
-	"image": "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg",
+	"image": "./assets/node-js-advanced-concepts-stephen-grider.jpeg",
 	"description": "Get advanced with Node.Js! Learn caching with Redis, speed up through clustering, and add image upload with S3 and Node!",
 	"paymentType": "paid",
 	"level": "advanced",

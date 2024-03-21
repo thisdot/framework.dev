@@ -1,7 +1,7 @@
 {
 	"title": "Test-Driven React",
 	"authors": ["Trevor Burnham"],
-	"image": "https://www.oreilly.com/library/cover/9781680507058/",
+	"image": "./assets/test-driven-react-trevor-burnham.jpeg",
 	"description": "Test-Driven React helps you refine your React workflow to give you the feedback you need as quickly as possible. Write strong tests and run them continuously as you work, split complex code up into manageable pieces, and stay focused on what's important by automating away mundane, trivial tasks.",
 	"yearOfPublication": 2019,
 	"numberOfPages": 209,

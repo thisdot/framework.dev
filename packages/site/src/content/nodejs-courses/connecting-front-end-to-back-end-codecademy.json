@@ -1,7 +1,7 @@
 {
 	"title": "Connecting Front-End to Back-End",
 	"author": "Codecademy",
-	"image": "https://www.codecademy.com/apple-touch-icon.png",
+	"image": "./assets/connecting-front-end-to-back-end-codecademy.png",
 	"description": "Learn how to connect the two to gain a powerful skill, become a better web developer, and improve your understanding of how web apps work. In this course, you’ll learn about the various methods for rendering a website, how to structure a REST API, and how to design apps using the Model, View, Controller (MVC) pattern.",
 	"paymentType": "paid",
 	"level": "intermediate",

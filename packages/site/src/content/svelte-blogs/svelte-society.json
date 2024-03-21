@@ -2,7 +2,7 @@
 	"title": "Svelte Society",
 	"author": "Global Network of svelte fans",
 	"description": "We are a volunteer global network of Svelte fans that strive to promote Svelte and its ecosystem. ",
-	"image": "https://sveltesociety.dev/images/logo.svg",
+	"image": "./assets/svelte-society.svg+xml",
 	"href": "https://sveltesociety.dev/recipes",
 	"tags": []
 }

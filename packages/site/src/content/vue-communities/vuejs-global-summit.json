@@ -1,7 +1,7 @@
 {
 	"name": "Vuejs Global Summit",
 	"description": "Online global summit to discuss all things Vue.",
-	"image": "https://events.geekle.us/vuejs/static/media/logo.579e43d2.svg",
+	"image": "./assets/vuejs-global-summit.html",
 	"type": "Online Events",
 	"href": "https://events.geekle.us/vuejs/",
 	"tags": ["conferences"]

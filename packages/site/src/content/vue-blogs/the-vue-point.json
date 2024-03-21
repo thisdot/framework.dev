@@ -2,7 +2,7 @@
 	"title": "The Vue Point",
 	"author": "Evan You",
 	"description": "Updates, tips & opinions from the maintainers of Vue.js.",
-	"image": "https://github.com/yyx990803.png",
+	"image": "./assets/the-vue-point.jpeg",
 	"href": "https://blog.vuejs.org/",
 	"tags": []
 }

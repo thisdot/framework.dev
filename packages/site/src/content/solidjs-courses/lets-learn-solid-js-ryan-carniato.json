@@ -1,7 +1,7 @@
 {
 	"title": "Let's Learn Solid JS",
 	"author": "Ryan Carniato",
-	"image": "https://github.com/ryansolid.png",
+	"image": "./assets/lets-learn-solid-js-ryan-carniato.jpeg",
 	"description": "Ryan will demo Solid for us, and we’ll discuss how and why React developers might want to check out Solid.",
 	"paymentType": "free",
 	"level": "intermediate",

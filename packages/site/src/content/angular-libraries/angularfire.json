@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@angular/fire",
 	"href": "https://firebaseopensource.com/projects/angular/angularfire2/",
 	"description": "The official Angular library for Firebase.",
-	"image": "https://github.com/firebase.png",
+	"image": "./assets/angularfire.png",
 	"tags": ["data fetching", "database drivers"],
 	"language": "TypeScript"
 }

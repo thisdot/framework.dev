@@ -1,7 +1,7 @@
 {
 	"title": "Mastering React",
 	"author": "Mosh Hamedani",
-	"image": "https://github.com/mosh-hamedani.png",
+	"image": "./assets/mastering-react-mosh-hamedani.jpeg",
 	"description": "If you're on React 15, take your components to new levels with these advanced patterns, lectures, exercises, and more.",
 	"paymentType": "paid",
 	"level": "intermediate",

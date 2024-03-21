@@ -1,7 +1,7 @@
 {
 	"title": "Front End Development - React course",
 	"author": "freeCodeCamp",
-	"image": "https://github.com/freeCodeCamp.png",
+	"image": "./assets/front-end-development-react-course-freecodecamp.jpeg",
 	"description": "In the Front End Development Libraries Certification, you'll learn how to style your site quickly with Bootstrap. You'll also learn how add logic to your CSS styles and extend them with Sass.",
 	"paymentType": "free",
 	"level": "beginner",

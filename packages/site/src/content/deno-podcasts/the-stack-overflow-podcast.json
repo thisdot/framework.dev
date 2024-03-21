@@ -9,6 +9,6 @@
 	],
 	"href": "https://stackoverflow.blog/podcast/",
 	"rss": "https://feeds.simplecast.com/XA_851k3",
-	"image": "https://149351115.v2.pressablecdn.com/wp-content/uploads/2022/03/blog-podcast-relaunch-1.png",
+	"image": "./assets/the-stack-overflow-podcast.html",
 	"tags": ["how-to", "technology"]
 }

@@ -1,7 +1,7 @@
 {
 	"title": "GraphQL in Action",
 	"authors": ["Samer Buna"],
-	"image": "https://m.media-amazon.com/images/I/41mws+LwCgL._SX406_BO1,204,203,200_.jpg",
+	"image": "./assets/graphql-in-action-samer-buna.jpeg",
 	"description": "Practical and example-driven, GraphQL in Action gives you the tools to get comfortable with the GraphQL language, build and optimize a data API service, and use it in a front-end client application.",
 	"yearOfPublication": 2021,
 	"numberOfPages": 384,

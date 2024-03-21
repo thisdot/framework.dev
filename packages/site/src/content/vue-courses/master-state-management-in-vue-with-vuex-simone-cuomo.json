@@ -1,7 +1,7 @@
 {
 	"title": "Master State Management in Vue with VueX",
 	"author": "Simone Cuomo",
-	"image": "https://github.com/thisdot.png",
+	"image": "./assets/master-state-management-in-vue-with-vuex-simone-cuomo.png",
 	"description": "State management is an extremely important feature of web applications. In this training, we are going to walk through VueX. Topic covered will include: Installation, basic usage, best practices, modules and much more.",
 	"paymentType": "free",
 	"level": "beginner",

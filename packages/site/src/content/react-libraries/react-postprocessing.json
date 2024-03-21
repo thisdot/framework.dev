@@ -4,7 +4,7 @@
 	"repo": "https://www.github.com/pmndrs/react-postprocessing",
 	"package": "https://www.npmjs.com/package/@react-three/postprocessing",
 	"href": "https://docs.pmnd.rs/react-postprocessing/introduction",
-	"image": "https://github.com/pmndrs.png",
+	"image": "./assets/react-postprocessing.png",
 	"tags": ["animation"],
 	"description": "react-postprocessing is a postprocessing wrapper for @react-three/fiber",
 	"language": "TypeScript"

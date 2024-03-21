@@ -2,7 +2,7 @@
 	"name": "Anima",
 	"author": "Anima",
 	"description": "Anima helps teams to create interactive prototypes using Figma, XD, & Sketch. Then automatically convert them to React, Vue & HTML code.",
-	"image": "https://a.storyblok.com/f/89137/x/e1adbda50a/anima-logo.svg",
+	"image": "./assets/anima.svg+xml",
 	"href": "https://www.animaapp.com/",
 	"tags": ["UI Design"]
 }

@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@ngxs/store",
 	"href": "https://www.ngxs.io/",
 	"description": "State management patter and library for Angular, modeled after the CQRS pattern popularly implemented in libraries like Redux and NgRx. Reduces boilerplate by using modern TypeScript features such as classes and decorators.",
-	"image": "https://github.com/ngxs.png",
+	"image": "./assets/ngxs.png",
 	"tags": ["state management"],
 	"language": "TypeScript"
 }

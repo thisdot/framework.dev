@@ -2,7 +2,7 @@
 	"name": "GraphQL Config",
 	"author": "The Guild",
 	"description": "One configuration for all your GraphQL tools. The easiest way to configure your development environment with your GraphQL Schema.",
-	"image": "https://pbs.twimg.com/profile_images/1471121634606161920/ao7qMZBJ_400x400.jpg",
+	"image": "./assets/graphql-config.jpeg",
 	"href": "https://www.the-guild.dev/graphql/config",
 	"tags": ["schemas", "frontend", "backend", "development"]
 }

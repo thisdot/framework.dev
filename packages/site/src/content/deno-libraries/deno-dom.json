@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/b-fuze/deno-dom",
 	"author": "b-fuze",
-	"image": "https://avatars.githubusercontent.com/u/10504957?v=4",
+	"image": "./assets/deno-dom.png",
 	"tags": ["utilities"],
 	"language": "TypeScript"
 }

@@ -1,7 +1,7 @@
 {
 	"title": "Svelte Crash Course through Projects with Backend Connections",
 	"author": "Dr. Mohammad Nauman",
-	"image": "https://img-c.udemycdn.com/user/200_H/38022828_bc07_5.jpg",
+	"image": "./assets/svelte-crash-course-through-projects-with-backend-connections-dr-mohammad-nauman.jpeg",
 	"description": "Learn Svelte through 2 Projects (includes Reactivity, Components, Backend Connectivity and Best Practices)",
 	"paymentType": "paid",
 	"level": "beginner",

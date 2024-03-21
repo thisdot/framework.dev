@@ -1,7 +1,7 @@
 {
 	"title": "React TypeScript Tutorial - Build a Quiz App",
 	"author": "freeCodeCamp",
-	"image": "https://github.com/freeCodeCamp.png",
+	"image": "./assets/react-typescript-tutorial-build-a-quiz-app-freecodecamp.jpeg",
 	"description": "Learn how to use React and TypeScript to create a quiz app project. You will also learn how to use Styled-Components with React.",
 	"paymentType": "free",
 	"level": "beginner",

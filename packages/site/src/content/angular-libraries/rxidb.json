@@ -4,7 +4,7 @@
 	"repo": "https://www.github.com/thisdot/open-source",
 	"package": "https://www.npmjs.com/package/@this-dot/rxidb",
 	"href": "https://www.npmjs.com/package/@this-dot/rxidb",
-	"image": "https://github.com/thisdot.png",
+	"image": "./assets/rxidb.png",
 	"tags": ["data fetching", "state management"],
 	"description": "RxIDB is a library for storing and retrieving data from indexedDB databases, using an RxJS based API.",
 	"language": "TypeScript"

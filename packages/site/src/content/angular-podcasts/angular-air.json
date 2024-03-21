@@ -1,6 +1,6 @@
 {
 	"title": "Angular Air",
-	"image": "https://angularair.com/assets/angularairlogo.png",
+	"image": "./assets/angular-air.png",
 	"hosts": ["Justin Schwartzenberger"],
 	"description": "This is an Angular videocast hosted by Justin Schwartzenberger, discussing almost exclusively Angular topics and sometimes even walking you through building real projects with Angular.",
 	"rss": "https://anchor.fm/s/166001ec/podcast/rss",

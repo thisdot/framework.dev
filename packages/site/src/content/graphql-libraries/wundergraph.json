@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@wundergraph/sdk",
 	"href": "https://wundergraph.com/",
 	"description": "WunderGraph is the Serverless API Developer Platform with a focus on Developer Experience.",
-	"image": "https://hub.wundergraph.com/images/logo.svg",
+	"image": "./assets/wundergraph.svg+xml",
 	"language": "NodeJS",
 	"tags": ["data processing"]
 }

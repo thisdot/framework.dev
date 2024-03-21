@@ -1,7 +1,7 @@
 {
 	"title": "Beginning GraphQL",
 	"author": "Packt Publishing",
-	"image": "https://img-c.udemycdn.com/user/200_H/5058914_a218_6.jpg",
+	"image": "./assets/beginning-graphql-packt-publishing.jpeg",
 	"description": "Learn faster data fetching using this query language and improve the performance of your application.",
 	"paymentType": "paid",
 	"level": "beginner",

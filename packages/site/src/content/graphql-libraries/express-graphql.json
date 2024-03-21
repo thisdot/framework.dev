@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/express-graphql",
 	"href": "https://github.com/graphql/express-graphql",
 	"description": "Create a GraphQL HTTP server with any HTTP web framework that supports connect styled middleware, including Connect itself, Express and Restify.",
-	"image": "https://github.com/graphql.png",
+	"image": "./assets/express-graphql.png",
 	"language": "NodeJS",
 	"tags": ["web servers"]
 }

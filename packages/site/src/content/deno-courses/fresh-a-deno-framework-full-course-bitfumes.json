@@ -5,7 +5,7 @@
 	"paymentType": "free",
 	"level": "intermediate",
 	"format": "video",
-	"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZBw_ifNJp7Gy91I-USs9ZuCEdEsuj_xi956AKcENkyg&s",
+	"image": "./assets/fresh-a-deno-framework-full-course-bitfumes.png",
 	"href": "https://www.youtube.com/watch?v=rvTkn1fffQ8",
 	"tags": ["deno", "backend", "fresh framework", "typescript", "data fetching"]
 }

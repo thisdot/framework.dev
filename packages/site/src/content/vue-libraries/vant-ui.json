@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/vant",
 	"href": "https://vant-contrib.gitee.io/vant/#/en-US/",
 	"description": "Mobile UI Components built on Vue",
-	"image": "https://cdn.jsdelivr.net/npm/@vant/assets/logo.png",
+	"image": "./assets/vant-ui.png",
 	"tags": ["component"],
 	"language": "JavaScript"
 }

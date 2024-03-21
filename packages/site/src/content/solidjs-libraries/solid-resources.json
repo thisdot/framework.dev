@@ -5,7 +5,7 @@
 	"package": "",
 	"href": "https://www.solidjs.com/tutorial/async_resources",
 	"description": "Resources are special Signals designed specifically to handle Async loading.",
-	"image": "https://repository-images.githubusercontent.com/130884470/ad63fd00-7ab2-11ea-9c57-6c114391183a",
+	"image": "./assets/solid-resources.png",
 	"tags": ["data fetching"],
 	"language": "TypeScript"
 }

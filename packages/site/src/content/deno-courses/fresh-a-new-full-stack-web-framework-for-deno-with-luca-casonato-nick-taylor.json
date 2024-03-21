@@ -5,7 +5,7 @@
 	"paymentType": "free",
 	"level": "advanced",
 	"format": "video",
-	"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZBw_ifNJp7Gy91I-USs9ZuCEdEsuj_xi956AKcENkyg&s",
+	"image": "./assets/fresh-a-new-full-stack-web-framework-for-deno-with-luca-casonato-nick-taylor.png",
 	"href": "https://www.youtube.com/watch?v=nBrcmlrekV4",
 	"tags": ["deno", "backend", "fresh framework", "typescript"]
 }

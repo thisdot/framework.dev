@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/browserify",
 	"href": "https://browserify.org/",
 	"description": "Browserify lets you require('modules') in the browser by bundling up all of your dependencies.",
-	"image": "https://browserify.org/images/wizard_hat_blue.png",
+	"image": "./assets/browserify.png",
 	"tags": ["frameworks"],
 	"language": "NodeJS"
 }

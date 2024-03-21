@@ -1,7 +1,7 @@
 {
 	"title": "Learning React",
 	"authors": ["Eve Porcello", "Alex Banks"],
-	"image": "https://www.oreilly.com/library/cover/9781492051718/",
+	"image": "./assets/learning-react-eve-porcello-alex-banks.jpeg",
 	"description": "If you want to learn how to build efficient React applications, this is your book. Ideal for web developers and software engineers who understand how JavaScript, CSS, and HTML work in the browser, this updated edition provides best practices and patterns for writing modern React code.",
 	"yearOfPublication": 2020,
 	"numberOfPages": 358,

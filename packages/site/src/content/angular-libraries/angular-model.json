@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@angular-extensions/model",
 	"href": "https://tomastrajan.github.io/angular-model-pattern-example#/about",
 	"description": "Simple state management with minimalistic API, one way data flow, multiple models support and immutable data exposed as RxJS Observable.",
-	"image": "https://github.com/angular-extensions.png",
+	"image": "./assets/angular-model.png",
 	"tags": ["state management"],
 	"language": "TypeScript"
 }

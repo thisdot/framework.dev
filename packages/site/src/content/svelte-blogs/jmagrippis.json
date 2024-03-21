@@ -2,7 +2,7 @@
 	"title": "jmagrippis",
 	"author": "Johnny",
 	"description": "I’m challenging the need to “have a niche”",
-	"image": "https://magrippis.com/_next/image?url=%2Fimages%2Fhero.jpg&w=256&q=75",
+	"image": "./assets/jmagrippis.html",
 	"href": "https://magrippis.com/blog",
 	"tags": []
 }

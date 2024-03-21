@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@graphql-tools/schema",
 	"href": "https://www.the-guild.dev/graphql/tools",
 	"description": "GraphQL Tools is a set of NPM packages and an opinionated structure for how to build a GraphQL schema and resolvers in JavaScript, following the GraphQL-first development workflow.",
-	"image": "https://github.com/ardatan.png",
+	"image": "./assets/schema-stitching-graphql-tools.jpeg",
 	"language": "NodeJS",
 	"tags": ["data processing"]
 }

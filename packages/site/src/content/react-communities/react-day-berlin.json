@@ -1,7 +1,7 @@
 {
 	"name": "React Day Berlin",
 	"description": "Conference dedicated to all things React.",
-	"image": "https://pbs.twimg.com/profile_images/909710573885181952/Doe05-jp_400x400.jpg",
+	"image": "./assets/react-day-berlin.jpeg",
 	"type": "Live Events",
 	"href": "https://reactday.berlin/",
 	"tags": ["conferences"]

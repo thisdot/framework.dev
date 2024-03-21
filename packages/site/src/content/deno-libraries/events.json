@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/deno-library/events",
 	"author": "Deno Library",
-	"image": "https://avatars.githubusercontent.com/u/63284956?s=200&v=4",
+	"image": "./assets/events.png",
 	"tags": ["utilities"],
 	"language": "TypeScript"
 }

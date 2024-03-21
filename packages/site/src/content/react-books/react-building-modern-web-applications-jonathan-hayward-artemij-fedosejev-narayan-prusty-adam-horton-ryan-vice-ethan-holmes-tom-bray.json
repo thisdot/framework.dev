@@ -9,7 +9,7 @@
 		"Ethan Holmes",
 		"Tom Bray"
 	],
-	"image": "https://www.oreilly.com/library/cover/9781786462268/",
+	"image": "./assets/react-building-modern-web-applications-jonathan-hayward-artemij-fedosejev-narayan-prusty-adam-horton-ryan-vice-ethan-holmes-tom-bray.jpeg",
 	"description": "Consisting of five separate modules, journey from the fundamentals of reactive programming to the exciting possibilities of React Native. Each module builds on each other, helping you to incrementally develop your skills and knowledge.",
 	"yearOfPublication": 2016,
 	"numberOfPages": 991,

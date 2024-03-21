@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@envelop/core",
 	"href": "https://www.the-guild.dev/graphql/envelop",
 	"description": "Develop and share plugins that are usable with any GraphQL server framework or schema.",
-	"image": "https://github.com/n1ru4l/envelop/raw/main/logo.png",
+	"image": "./assets/envelop.png",
 	"language": "NodeJS",
 	"tags": ["tooling"]
 }

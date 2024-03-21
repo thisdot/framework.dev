@@ -5,7 +5,7 @@
 	"package": "",
 	"href": "https://swift-graphql.com",
 	"description": "SwiftGraphQL comes with a lightweight client that supports queries, mutations and subscriptions. And they all work the same way.",
-	"image": "https://github.com/maticzav.png",
+	"image": "./assets/swift-graphql.jpeg",
 	"language": "Swift",
 	"tags": ["data fetching"]
 }

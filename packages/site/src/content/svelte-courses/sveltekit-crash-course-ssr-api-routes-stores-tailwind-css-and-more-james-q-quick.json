@@ -1,7 +1,7 @@
 {
 	"title": "SvelteKit Crash Course - SSR, API Routes, Stores, Tailwind CSS, and More!",
 	"author": "James Q Quick",
-	"image": "https://avatars.githubusercontent.com/u/5391915?v=4",
+	"image": "./assets/sveltekit-crash-course-ssr-api-routes-stores-tailwind-css-and-more-james-q-quick.jpeg",
 	"description": "SvelteKit is one of the most exciting frameworks in Web Development. With the success and growth of Next.js (framework built on top of React), SvelteKit is a promising competitor. With SvelteKit, you can create Server Side Rendered pages (SSR), API routes, and a lot more while leveraging the natural and concise syntax of Svelte.",
 	"paymentType": "free",
 	"level": "beginner",

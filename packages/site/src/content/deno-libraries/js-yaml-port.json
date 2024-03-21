@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/KSXGitHub/simple-js-yaml-port-for-deno",
 	"author": "Khải",
-	"image": "https://avatars.githubusercontent.com/u/11488886?v=4",
+	"image": "./assets/js-yaml-port.png",
 	"tags": ["utilities"],
 	"language": "TypeScript"
 }

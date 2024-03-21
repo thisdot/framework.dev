@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/ngx-bootstrap",
 	"href": "https://valor-software.com/ngx-bootstrap/#/",
 	"description": "Provides a collection of Bootstrap components, all powered by Angular.",
-	"image": "https://valor-software.com/ngx-bootstrap/assets/images/logos/ngx-bootstrap-logo.svg",
+	"image": "./assets/ngx-bootstrap.svg+xml",
 	"tags": ["component"],
 	"language": "TypeScript"
 }

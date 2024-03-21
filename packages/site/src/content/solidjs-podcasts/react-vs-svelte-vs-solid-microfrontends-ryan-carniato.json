@@ -1,8 +1,9 @@
 {
 	"title": "React vs Svelte vs Solid & MicroFrontends | Ryan Carniato",
-	"image": "https://github.com/ryansolid.png",
+	"image": "./assets/react-vs-svelte-vs-solid-microfrontends-ryan-carniato.jpeg",
 	"hosts": ["Ryan Carniato"],
 	"description": "On the hard choices all companies are facing right now with their websites, especially with the performance.",
+	"rss": "",
 	"href": "https://show.nikoskatsikanis.com/episodes/ryan-carniato",
 	"tags": ["SolidJS"]
 }

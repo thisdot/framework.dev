@@ -2,7 +2,7 @@
 	"name": "Waterline",
 	"author": "Mike McNeil & The Sails Company",
 	"description": "Waterline is a new kind of storage and retrieval engine. It provides a uniform API for accessing stuff from different kinds of databases, protocols, and 3rd party APIs. That means you write the same code to get and store things like users, whether they live in Redis, mySQL, LDAP, MongoDB, or Postgres.",
-	"image": "https://waterlinejs.org/images/waterline-logo.png",
+	"image": "./assets/waterline.png",
 	"href": "https://waterlinejs.org/",
 	"tags": ["database"]
 }

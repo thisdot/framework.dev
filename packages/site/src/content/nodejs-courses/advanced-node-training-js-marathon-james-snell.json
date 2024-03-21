@@ -1,7 +1,7 @@
 {
 	"title": "Advanced Node Training - JS Marathon",
 	"author": "James Snell",
-	"image": "https://github.com/thisdot.png",
+	"image": "./assets/advanced-node-training-js-marathon-james-snell.png",
 	"description": "As developers it is sometimes ignored how the underlying tools that we use work. NodeJS is one of the most used engines in the world and it is unique in the approach the it follows to make our code work. In this training with James Snell, we will dive deep into the NodeJS internal by learning the Event Loop and the asynchronous model of NodeJS. We will understand Event Emitters and how they power almost everything inside Node, and then we will build on that knowledge to understand what Streams are. Finally, we will move to Promises: the loved and feared NodeJS feature that developers use every day.",
 	"paymentType": "free",
 	"level": "advanced",

@@ -4,7 +4,7 @@
 	"repo": "https://www.github.com/formsy/formsy-react",
 	"package": "https://www.npmjs.com/package/formsy-react",
 	"href": "https://github.com/formsy/formsy-react",
-	"image": "https://github.com/formsy.png",
+	"image": "./assets/formsy-react.png",
 	"tags": ["forms"],
 	"description": "christianalfoni wrote an article on forms and validation with React, Nailing that validation with React JS, the result of that was this library. The main concept is that forms, inputs, and validation are done very differently across developers and projects. This React component aims to be that “sweet spot” between flexibility and reusability.",
 	"language": "TypeScript"

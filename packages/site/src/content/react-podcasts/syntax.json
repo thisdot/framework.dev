@@ -1,6 +1,6 @@
 {
 	"title": "Syntax",
-	"image": "https://syntax.fm/static/logo.png",
+	"image": "./assets/syntax.html",
 	"hosts": ["Wes Bos", "Scott Tolinski"],
 	"description": "A Tasty Treats Podcast for Web Developers.",
 	"rss": "http://feed.syntax.fm/rss",

@@ -1,6 +1,6 @@
 {
 	"title": "Full Stack Journey - Packet Pushers",
-	"image": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts125/v4/ad/fe/2c/adfe2ca4-b0f0-47a0-e690-7f7d32983e7d/mza_18132213338788869921.png/626x0w.webp",
+	"image": "./assets/full-stack-journey-packet-pushers.webp",
 	"hosts": ["Scott Lowe"],
 	"description": "Full Stack Journey tells personal stories about the ongoing quest to become a full stack engineer: an IT pro who can move among multiple silos and work across multiple layers of the modern data center.",
 	"rss": "https://feeds.packetpushers.net/fullstackjourney",

@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/hayd/deno-lambda",
 	"author": "Andy Hayden",
-	"image": "https://avatars.githubusercontent.com/u/1931852?v=4",
+	"image": "./assets/lambda.jpeg",
 	"tags": ["utilities"],
 	"language": "TypeScript"
 }

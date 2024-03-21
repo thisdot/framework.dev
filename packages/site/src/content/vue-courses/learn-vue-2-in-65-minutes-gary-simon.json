@@ -1,7 +1,7 @@
 {
 	"title": "Learn Vue 2 in 65 Minutes",
 	"author": "Gary Simon",
-	"image": "https://github.com/designcourse.png",
+	"image": "./assets/learn-vue-2-in-65-minutes-gary-simon.jpeg",
 	"description": "This tutorial teaches you how to build Vue apps through nine interactive screencasts. You'll learn basic Vue.js concepts, and also take part in building two super fun apps: Schrödingers Div and the Emoji Color Picker!",
 	"paymentType": "free",
 	"level": "beginner",

@@ -1,7 +1,7 @@
 {
 	"title": "Beginning Svelte Development: Develop web applications with SvelteJS - a lightweight JavaScript compiler",
 	"authors": ["Greg Lim", "Daniel Correa"],
-	"image": "https://m.media-amazon.com/images/I/41fUTeMOZSL._SX404_BO1,204,203,200_.jpg",
+	"image": "./assets/beginning-svelte-development-develop-web-applications-with-sveltejs-a-lightweight-javascript-compiler-greg-lim-daniel-correa.jpeg",
 	"description": "In this book, we take you on a fun, hands-on and pragmatic journey to quickly learn Svelte and get familiar with how it works. You'll start building Svelte apps within minutes. Every section is written in a bite-sized manner and straight to the point as I don’t want to waste your time (and most certainly mine) on the content you don't need. In the end, you will have what it takes to develop a real-life app.",
 	"yearOfPublication": 2022,
 	"numberOfPages": 121,

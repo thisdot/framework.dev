@@ -1,7 +1,7 @@
 {
 	"title": "Enteprise Angular Monorepo Patterns",
 	"authors": ["Muhammad Ahsan Ayaz"],
-	"image": "https://images-na.ssl-images-amazon.com/images/I/411QTHyJ12L._SX404_BO1,204,203,200_.jpg",
+	"image": "./assets/enteprise-angular-monorepo-patterns-muhammad-ahsan-ayaz.jpeg",
 	"description": "The Angular Cookbook provides many recipes that help you learn Angular concepts in depth using a step-by-step approach. You'll develop web components with Angular and go on to cover advanced concepts such as dynamic components, state management using NgRx, effectively testing your Angular apps, and building PWAs.",
 	"yearOfPublication": 2021,
 	"numberOfPages": 652,

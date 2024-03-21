@@ -1,7 +1,7 @@
 {
 	"title": "Pro React 16",
 	"authors": ["Adam Freeman"],
-	"image": "https://www.oreilly.com/library/cover/9781484244517/",
+	"image": "./assets/pro-react-16-adam-freeman.jpeg",
 	"description": "Best-selling author Adam Freeman explains how to get the most from React. He begins by describing the React architecture and the benefits it offers and then shows you how to use React and its associated tools and libraries in your projects.",
 	"yearOfPublication": 2019,
 	"numberOfPages": 966,

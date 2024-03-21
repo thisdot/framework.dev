@@ -1,7 +1,7 @@
 {
 	"title": "SolidJS Official Tutorial",
 	"author": "SolidJS",
-	"image": "https://github.com/solidjs.png",
+	"image": "./assets/solidjs-official-tutorial-solidjs.png",
 	"description": "This interactive guide will walk you through Solid's main features.",
 	"paymentType": "free",
 	"level": "beginner",

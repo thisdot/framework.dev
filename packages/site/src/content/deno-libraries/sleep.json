@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/michael-spengler/sleep",
 	"author": "michael spengler",
-	"image": "https://avatars.githubusercontent.com/u/43786652?v=4",
+	"image": "./assets/sleep.jpeg",
 	"tags": ["utilities"],
 	"language": "TypeScript"
 }

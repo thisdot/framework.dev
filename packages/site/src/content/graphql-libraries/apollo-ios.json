@@ -5,7 +5,7 @@
 	"package": "",
 	"href": "https://www.apollographql.com/docs/ios/",
 	"description": "Apollo iOS is a strongly-typed, caching GraphQL client, written in Swift.",
-	"image": "https://github.com/apollographql.png",
+	"image": "./assets/apollo-ios.png",
 	"language": "Swift",
 	"tags": ["data fetching"]
 }

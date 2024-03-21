@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/remix",
 	"href": "https://github.com/remix-run/remix",
 	"description": "Remix is a full stack web framework that lets you focus on the user interface and work back through web standards to deliver a fast, slick, and resilient user experience. People are gonna love using your stuff.",
-	"image": "https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/node-512.png",
+	"image": "./assets/remix.png",
 	"tags": ["frameworks"],
 	"language": "NodeJS"
 }

@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/gpasq/deno-sendgrid",
 	"author": "Greg Pasquariello",
-	"image": "https://avatars.githubusercontent.com/u/3801469?v=4",
+	"image": "./assets/sendgrid.png",
 	"tags": ["utilities", "API libraries"],
 	"language": "TypeScript"
 }

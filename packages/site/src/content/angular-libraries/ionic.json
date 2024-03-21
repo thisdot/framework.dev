@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@ionic/angular",
 	"href": "https://ionicframework.com/docs/angular/overview",
 	"description": "@ionic/angular combines the core Ionic experience with the tooling and APIs that are tailored to Angular Developers.",
-	"image": "https://github.com/ionic-team.png",
+	"image": "./assets/ionic.png",
 	"tags": ["frameworks"],
 	"language": "TypeScript"
 }

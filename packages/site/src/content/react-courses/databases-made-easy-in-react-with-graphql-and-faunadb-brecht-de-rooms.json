@@ -1,7 +1,7 @@
 {
 	"title": "Databases made easy in React with GraphQL and FaunaDB",
 	"author": "Brecht De Rooms",
-	"image": "https://github.com/thisdot.png",
+	"image": "./assets/databases-made-easy-in-react-with-graphql-and-faunadb-brecht-de-rooms.png",
 	"description": "In this training, we will learn how to build stateful applications with ReachJS using FaunaDB as the serverless datastore. We will setup an efficient GraphQL endpoint in minutes and plug it into a ReactJS frontend to fetch user profiles for our app.",
 	"paymentType": "free",
 	"level": "intermediate",

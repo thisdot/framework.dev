@@ -1,6 +1,6 @@
 {
 	"title": "JavaScript Air",
-	"image": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts115/v4/68/98/c5/6898c591-1df3-dbdf-7173-72d66cc191ea/mza_12268657556293204019.png/626x0w.webp",
+	"image": "./assets/javascript-air.webp",
 	"hosts": ["Kent C. Dodds"],
 	"description": "The live broadcast podcast all about JavaScript",
 	"rss": "https://feed.podbean.com/audio.javascriptair.com/feed.xml",

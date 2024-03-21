@@ -5,7 +5,7 @@
 	"package": "",
 	"href": "https://start.solidjs.com/getting-started/what-is-solidstart",
 	"description": "a framework that provides many of these components out-of-the-box and integrates them seamlessly!",
-	"image": "https://opengraph.githubassets.com/03a31e6350dc6548ce8a098f167e9b5a7f90a33bdc2d4a9694b05dd6f2321c00/solidjs/solid-start",
+	"image": "./assets/solid-start.png",
 	"tags": ["frameworks"],
 	"language": "TypeScript"
 }

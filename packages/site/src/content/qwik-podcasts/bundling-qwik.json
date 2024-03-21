@@ -1,6 +1,6 @@
 {
 	"title": "Bundling: Qwik",
-	"image": "https://qwik.framework.dev/qwik-icon.png",
+	"image": "./assets/bundling-qwik.png",
 	"hosts": ["Misko Hevery"],
 	"description": "Bundling: Qwik + Slow networks => Fast interaction",
 	"rss": "https://www.loom.com/share/f9455ea557754594a28591212fd9012f",

@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/SheetJS/sheetjs",
 	"author": "SheetJS",
-	"image": "https://avatars.githubusercontent.com/u/5826089?s=200&v=4",
+	"image": "./assets/sheetjs.png",
 	"tags": ["utilities", "data processing"],
 	"language": "TypeScript"
 }

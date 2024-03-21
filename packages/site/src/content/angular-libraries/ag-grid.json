@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/ag-grid-community",
 	"href": "https://ag-grid.com/angular-data-grid/getting-started/",
 	"description": "AG Grid is a fully-featured and highly customizable JavaScript data grid.",
-	"image": "https://github.com/ag-grid.png",
+	"image": "./assets/ag-grid.png",
 	"tags": ["component"],
 	"language": "TypeScript"
 }

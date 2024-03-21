@@ -1,7 +1,7 @@
 {
 	"name": "Svelte Summit",
 	"description": "Svelte Summit is an event dedicated to Svelte and everything that is happening in the community.",
-	"image": "https://sveltesociety.dev/images/logo.svg",
+	"image": "./assets/svelte-summit.svg+xml",
 	"type": "Live Events",
 	"href": "https://www.sveltesummit.com/",
 	"tags": []

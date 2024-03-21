@@ -1,7 +1,7 @@
 {
 	"name": "Discord - Nodeiflux",
 	"description": "This is a Discord community to meet and discuss all things NodeJS.",
-	"image": "https://egghead.io/_next/image?url=https%3A%2F%2Fd2eip9sf3oo6c2.cloudfront.net%2Ftags%2Fimages%2F000%2F000%2F256%2Fsquare_480%2Fnodejslogo.png&w=640&q=100",
+	"image": "./assets/discord-nodeiflux.png",
 	"type": "Discord Community",
 	"href": "https://discord.com/invite/vUsrbjd",
 	"tags": ["meetups"]

@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/hazae41/foras",
 	"author": "Haz Æ 41",
-	"image": "https://avatars.githubusercontent.com/u/4405263?v=4",
+	"image": "./assets/denoflate.png",
 	"tags": ["utilities"],
 	"language": "TypeScript"
 }

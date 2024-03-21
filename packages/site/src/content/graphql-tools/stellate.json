@@ -2,7 +2,7 @@
 	"name": "Stellate",
 	"author": "Stellate",
 	"description": "Users rightfully expect fast and reliable services. Protect your business with GraphQL Edge Caching. Reduce your serverload by up to 99% and never worry about downtime again.",
-	"image": "https://pbs.twimg.com/profile_images/1533456954340917250/sstxH3pW_400x400.jpg",
+	"image": "./assets/stellate.jpeg",
 	"href": "https://stellate.co/",
 	"tags": ["schemas", "frontend", "backend", "development"]
 }

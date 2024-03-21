@@ -1,7 +1,7 @@
 {
 	"title": "Production Ready GraphQL",
 	"authors": ["Marc-Andre Giroux"],
-	"image": "https://book.productionreadygraphql.com/static/book.png",
+	"image": "./assets/production-ready-graphql-marc-andre-giroux.png",
 	"description": "Learn how to design and build predictable, performant, and secure GraphQL APIs at scale.",
 	"yearOfPublication": 2020,
 	"numberOfPages": 180,

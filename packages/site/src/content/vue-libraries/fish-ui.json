@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/fish-ui",
 	"href": "https://myliang.github.io/fish-ui/#/components/index",
 	"description": "A Vue 2 UI Toolkit for Web.",
-	"image": "https://github.com/myliang/fish-ui/raw/master/static/logo.png?raw=true",
+	"image": "./assets/fish-ui.png",
 	"tags": ["component"],
 	"language": "JavaScript"
 }

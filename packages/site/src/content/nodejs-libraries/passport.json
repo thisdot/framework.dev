@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/passport",
 	"href": "https://www.passportjs.org/",
 	"description": "Passport is Express-compatible authentication middleware for Node.js.",
-	"image": "https://www.passportjs.org/images/logo.svg",
+	"image": "./assets/passport.svg+xml",
 	"tags": ["auth", "frameworks"],
 	"language": "NodeJS"
 }

@@ -1,7 +1,7 @@
 {
 	"title": "Supabase & Sveltekit - Build Twitter in 75 minutes",
 	"author": "Svelte Mastery",
-	"image": "https://avatars.githubusercontent.com/u/56200325?v=4",
+	"image": "./assets/supabase-sveltekit-build-twitter-in-75-minutes-svelte-mastery.png",
 	"description": "Let's build Qwitter!. You're gonna learn about magic links, databases, row level security, storage and.. svelte cubed!",
 	"paymentType": "free",
 	"level": "intermediate",

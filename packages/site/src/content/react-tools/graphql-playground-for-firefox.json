@@ -2,7 +2,7 @@
 	"name": "GraphQL Playground for Firefox",
 	"author": "Francesco De Stefano",
 	"description": "Firefox extension for GraphQL Playground",
-	"image": "https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg",
+	"image": "./assets/graphql-playground-for-firefox.svg+xml",
 	"href": "https://addons.mozilla.org/en-US/firefox/addon/graphql-developer-tools/",
 	"tags": ["firefox"]
 }

@@ -1,7 +1,7 @@
 {
 	"title": "Server-Side GraphQL ",
 	"author": "Scott Moss",
-	"image": "https://static.frontendmasters.com/assets/courses/2019-11-25-server-graphql-nodejs/thumb.webp",
+	"image": "./assets/server-side-graphql-scott-moss.octet-stream",
 	"description": "Learn everything you need to create a GraphQL API on the server in Node.js with Apollo Server.",
 	"paymentType": "paid",
 	"level": "intermediate",

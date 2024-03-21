@@ -1,6 +1,6 @@
 {
 	"title": "Front End Happy Hour",
-	"image": "https://www.frontendhappyhour.com/public/img/front-end-happy-hour.svg?v2",
+	"image": "./assets/front-end-happy-hour.svg+xml",
 	"hosts": [
 		"Ryan Burgess",
 		"Jem Young",

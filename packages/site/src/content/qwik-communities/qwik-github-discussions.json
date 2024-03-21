@@ -1,7 +1,7 @@
 {
 	"name": "Qwik GitHub Discussions",
 	"description": "A community-ran GitHub Discussions for all things Qwik.",
-	"image": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+	"image": "./assets/qwik-github-discussions.png",
 	"type": "github",
 	"href": "https://github.com/BuilderIO/qwik/discussions",
 	"tags": []

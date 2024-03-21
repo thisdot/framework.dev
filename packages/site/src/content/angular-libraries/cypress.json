@@ -4,7 +4,7 @@
 	"repo": "https://www.github.com/cypress-io/cypress",
 	"package": "https://www.npmjs.com/package/cypress",
 	"href": "https://www.cypress.io/",
-	"image": "https://github.com/cypress-io.png",
+	"image": "./assets/cypress.png",
 	"tags": ["testing"],
 	"description": "Fast, easy and reliable testing for anything that runs in a browser.",
 	"language": "TypeScript"

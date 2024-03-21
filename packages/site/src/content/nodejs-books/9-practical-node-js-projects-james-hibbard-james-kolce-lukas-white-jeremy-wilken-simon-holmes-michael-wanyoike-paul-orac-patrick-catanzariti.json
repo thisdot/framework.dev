@@ -11,7 +11,7 @@
 		"Patrick Catanzariti"
 	],
 	"description": "This book offers a selection of nine different practical projects that you can follow along with from servers integrated with databases, file uploading with Dropzone.js, and a structured MVC application.",
-	"image": "https://learning.oreilly.com/library/cover/9781492071112/250w/",
+	"image": "./assets/9-practical-node-js-projects-james-hibbard-james-kolce-lukas-white-jeremy-wilken-simon-holmes-michael-wanyoike-paul-orac-patrick-catanzariti.jpeg",
 	"href": "https://www.oreilly.com/api/v1/book/9781492071112/",
 	"tags": ["full stack", "projects"],
 	"yearOfPublication": 2018,

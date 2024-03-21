@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@apollo/server",
 	"href": "https://www.apollographql.com/docs/apollo-server/",
 	"description": "Apollo Server is an open-source, spec-compliant GraphQL server that's compatible with any GraphQL client, including Apollo Client. It's the best way to build a production-ready, self-documenting GraphQL API that can use data from any source.",
-	"image": "https://github.com/apollographql.png",
+	"image": "./assets/apollo-server.png",
 	"language": "NodeJS",
 	"tags": ["web servers", "database drivers"]
 }

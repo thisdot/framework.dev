@@ -1,7 +1,7 @@
 {
 	"name": "React Summit",
 	"description": "The biggest React conference in the world.",
-	"image": "https://reactsummit.com/img/favicon.png",
+	"image": "./assets/react-summit.png",
 	"type": "Live Events",
 	"href": "https://reactsummit.com/",
 	"tags": ["conferences"]

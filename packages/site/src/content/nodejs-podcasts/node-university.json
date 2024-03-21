@@ -1,6 +1,6 @@
 {
 	"title": "Node University",
-	"image": "https://image.simplecastcdn.com/images/22e03652-cb4c-4b80-920e-6a552342f860/3d943f85-29f1-4f33-ab5e-0d5f6c74edec/480x480/1515463707-artwork@2x.jpg",
+	"image": "./assets/node-university.jpeg",
 	"hosts": ["Azat Mardan"],
 	"description": "Short lectures on software development with Node.js, JavaScript, and React.",
 	"rss": "https://feeds.simplecast.com/GlwKW4VA",

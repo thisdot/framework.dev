@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/nodemailer",
 	"href": "https://nodemailer.com/",
 	"description": "Send emails from Node.js – easy as cake!",
-	"image": "https://nodemailer.com/nm_logo_200x136.png",
+	"image": "./assets/nodemailer.png",
 	"tags": ["frameworks"],
 	"language": "NodeJS"
 }

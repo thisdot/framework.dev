@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/react-bootstrap",
 	"href": "https://react-bootstrap.github.io/",
 	"description": "The most popular front-end framework rebuilt for React. Each component has been built from scratch as a true React component, without unneeded dependencies like jQuery.",
-	"image": "https://github.com/react-bootstrap.png",
+	"image": "./assets/react-bootstrap.png",
 	"tags": ["component"],
 	"language": "TypeScript"
 }

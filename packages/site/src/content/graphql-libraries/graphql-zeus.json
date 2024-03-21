@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/graphql-zeus",
 	"href": "https://zeus.graphqleditor.com/",
 	"description": "Strongly Typed GraphQL from the team at GraphQL Editor",
-	"image": "https://raw.githubusercontent.com/graphql-editor/graphql-zeus/master/images/zeus-logo.png",
+	"image": "./assets/graphql-zeus.png",
 	"language": "TypeScript",
 	"tags": ["data fetching"]
 }

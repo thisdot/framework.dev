@@ -1,7 +1,7 @@
 {
 	"title": "Build a task tracker with SolidJS and TypeScript",
 	"author": "Ebenezer Don",
-	"image": "https://github.com/ebenezerdon.png",
+	"image": "./assets/build-a-task-tracker-with-solidjs-and-typescript-ebenezer-don.jpeg",
 	"description": "In this tutorial, you'll learn how to build a task tracker app with Solid.",
 	"paymentType": "free",
 	"level": "intermediate",

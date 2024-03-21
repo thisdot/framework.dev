@@ -2,7 +2,7 @@
 	"title": "LogRocket Blog",
 	"author": "LogRocket",
 	"description": "This is a blog dedicated to all things web development",
-	"image": "https://pbs.twimg.com/profile_images/1326191211850440708/uQc_hHbU_400x400.jpg",
+	"image": "./assets/logrocket-blog.jpeg",
 	"href": "https://blog.logrocket.com/",
 	"tags": []
 }

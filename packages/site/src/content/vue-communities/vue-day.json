@@ -1,7 +1,7 @@
 {
 	"name": "Vue Day",
 	"description": "This is an online and in person conference dedicated to all things Vue",
-	"image": "https://2022.vueday.it/assets/favicons/apple-touch-icon.png",
+	"image": "./assets/vue-day.png",
 	"type": "Online and Live Events",
 	"href": "https://2022.vueday.it/",
 	"tags": ["conferences"]

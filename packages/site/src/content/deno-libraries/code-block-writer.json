@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/dsherret/code-block-writer",
 	"author": "David Sherret",
-	"image": "https://avatars.githubusercontent.com/u/1609021?v=4",
+	"image": "./assets/code-block-writer.jpeg",
 	"tags": ["utilities"],
 	"language": "TypeScript"
 }

@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/css-loader",
 	"href": "https://github.com/webpack-contrib/css-loader",
 	"description": "Allows the use of CSS Modules in projects built using Webpack. Also interprets @import and url() like import/require() and will resolve them.",
-	"image": "https://github.com/webpack-contrib.png",
+	"image": "./assets/css-loader.png",
 	"tags": ["tooling", "styling"],
 	"language": "NodeJS"
 }

@@ -1,7 +1,7 @@
 {
 	"title": "Rxjs fruits",
 	"author": "Gregor Biswanger",
-	"image": "https://www.rxjs-fruits.com/assets/Rx_Logo_S.png",
+	"image": "./assets/rxjs-fruits-gregor-biswanger.png",
 	"description": "Learn the basics of how Reactive Extensions work by mixing your own fruit juice!",
 	"paymentType": "free",
 	"level": "beginner",

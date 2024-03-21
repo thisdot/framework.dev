@@ -1,7 +1,7 @@
 {
 	"title": "Full Stack Serverless",
 	"authors": ["Nader Dabit"],
-	"image": "https://m.media-amazon.com/images/I/51sispcUPXL.jpg",
+	"image": "./assets/full-stack-serverless-nader-dabit.jpeg",
 	"description": "Nader Dabit, developer advocate at Amazon Web Services, guides you through the process of building full stack applications using React, AWS, GraphQL, and AWS Amplify",
 	"yearOfPublication": 2020,
 	"numberOfPages": 224,

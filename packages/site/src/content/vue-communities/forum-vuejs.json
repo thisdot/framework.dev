@@ -1,7 +1,7 @@
 {
 	"name": "Forum Vuejs",
 	"description": "The best place to ask questions and get answers about Vue and its ecosystem.",
-	"image": "https://forum.vuejs.org/uploads/default/original/2X/5/555257b8c5e7ecf34ce4f9b952eeaf006adfa339.png",
+	"image": "./assets/forum-vuejs.html; charset=utf-8",
 	"type": "forum",
 	"href": "https://forum.vuejs.org/",
 	"tags": []

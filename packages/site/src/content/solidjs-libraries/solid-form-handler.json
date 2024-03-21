@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/solid-form-handler",
 	"href": "https://solid-form-handler.com/docs/introduction",
 	"description": "solidjs-form-handler is a lightweight library for building form components and validating forms with them.",
-	"image": "https://opengraph.githubassets.com/b15e607516c45b8906d85d0565b9c91faa0826f5468e3d5f53c001c7a4cc7245/webblocksapp/solid-form-handler",
+	"image": "./assets/solid-form-handler.png",
 	"tags": ["forms"],
 	"language": "TypeScript"
 }

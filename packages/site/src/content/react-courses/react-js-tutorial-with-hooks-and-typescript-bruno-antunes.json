@@ -1,7 +1,7 @@
 {
 	"title": "React.js Tutorial with Hooks and TypeScript",
 	"author": "Bruno Antunes",
-	"image": "https://github.com/bmvantunes.png",
+	"image": "./assets/react-js-tutorial-with-hooks-and-typescript-bruno-antunes.jpeg",
 	"description": "This playlist contains all the videos from the React.js Tutorial. We are using Function Components with Hooks and TypeScript.",
 	"paymentType": "free",
 	"level": "beginner",

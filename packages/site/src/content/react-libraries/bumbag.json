@@ -4,7 +4,7 @@
 	"repo": "https://www.github.com/jxom/bumbag-ui",
 	"package": "https://www.npmjs.com/package/bumbag",
 	"href": "https://bumbag.style/",
-	"image": "https://github.com/jxom.png",
+	"image": "./assets/bumbag.jpeg",
 	"tags": ["component"],
 	"description": "Build themeable React & React Native applications with your Bumbag",
 	"language": "TypeScript"

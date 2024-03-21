@@ -1,7 +1,7 @@
 {
 	"title": "Introduction to MongoDB",
 	"author": "Scott Moss",
-	"image": "https://frontendmasters.com/static-assets/core/m-transparent.webp",
+	"image": "./assets/introduction-to-mongodb-scott-moss.webp",
 	"description": "In this course you'll build schemas, structure models and learn to query MongoDB to get the right data. Learn the core concepts to build production-ready applications with MongoDB!",
 	"paymentType": "paid",
 	"level": "beginner",

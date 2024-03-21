@@ -1,7 +1,7 @@
 {
 	"title": "React JS Crash Course 2021",
 	"author": "Traversy Media",
-	"image": "https://github.com/bradtraversy.png",
+	"image": "./assets/react-js-crash-course-2021-traversy-media.jpeg",
 	"description": "Get started with React in this crash course. We will be building a task tracker app and look at components, props, state, hooks, working with an API and more.",
 	"paymentType": "free",
 	"level": "beginner",

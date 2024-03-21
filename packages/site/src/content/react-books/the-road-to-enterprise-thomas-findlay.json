@@ -1,7 +1,7 @@
 {
 	"title": "The Road To Enterprise",
 	"authors": ["Thomas Findlay"],
-	"image": "https://theroadtoenterprise.com/images/react-book-cover-large.png",
+	"image": "./assets/the-road-to-enterprise-thomas-findlay.png",
 	"description": "\"React - The Road To Enterprise\" is an advanced book with advanced patterns, techniques, and best practices for developing React apps. It covers crucial topics like scalable project architecture, async operations, advanced component and state management patterns, performance optimisation, Next.js and more.",
 	"yearOfPublication": 2022,
 	"numberOfPages": 433,

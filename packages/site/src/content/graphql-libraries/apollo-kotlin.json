@@ -5,7 +5,7 @@
 	"package": "",
 	"href": "https://www.apollographql.com/docs/kotlin/",
 	"description": "A strongly-typed, caching GraphQL client for Java and Kotlin multi-platform",
-	"image": "https://github.com/apollographql.png",
+	"image": "./assets/apollo-kotlin.png",
 	"language": "Java",
 	"tags": ["data fetching"]
 }

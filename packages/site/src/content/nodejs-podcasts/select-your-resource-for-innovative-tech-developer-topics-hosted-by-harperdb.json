@@ -1,6 +1,6 @@
 {
 	"title": "SELECT*: Your Resource for Innovative Tech & Developer Topics Hosted by HarperDB",
-	"image": "https://img.rss.com/harperdb-select-star/800/20220302_060355_9d3d6908e0d158b31a945a7606c05c09.jpg",
+	"image": "./assets/select-your-resource-for-innovative-tech-developer-topics-hosted-by-harperdb.jpg",
 	"hosts": ["Margo McCabe"],
 	"description": "Welcome to the Select* Podcast, hosted by HarperDB. Featuring guests across a wide range of backgrounds & topics, with the goal of being your resource for coding tips, best practices, edge computing, machine learning, diversity & inclusion, tech trends, career advice, & much, much more!",
 	"rss": "https://media.rss.com/harperdb-select-star/feed.xml",

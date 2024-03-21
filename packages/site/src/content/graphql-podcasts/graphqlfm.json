@@ -1,6 +1,6 @@
 {
 	"title": "GraphQLfm",
-	"image": "https://i.scdn.co/image/b77065accb9282396ed06fd4f5424f4d94f1622b",
+	"image": "./assets/graphqlfm.jpeg",
 	"hosts": ["Marc-Andre Giroux", "Tony Ghita"],
 	"description": "Welcome to GraphQL.FM, a Twitch Channel all about GraphQL.",
 	"rss": "https://twitchrss.appspot.com/vod/graphqlfm",

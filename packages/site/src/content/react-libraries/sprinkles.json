@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@vanilla-extract/sprinkles",
 	"href": "https://vanilla-extract.style/",
 	"description": "Generate a static set of custom utility classes and compose them either statically at build time, or dynamically at runtime, without the usual style generation overhead of CSS-in-JS. Basically, it’s like building your own zero-runtime, type-safe version of Tailwind, Styled System, etc.",
-	"image": "https://github.com/seek-oss.png",
+	"image": "./assets/sprinkles.png",
 	"tags": ["styling"],
 	"language": "TypeScript"
 }

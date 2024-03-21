@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/solid-i18n",
 	"href": "https://github.com/SanichKotikov/solid-i18n",
 	"description": "Tiny internationalization library for SolidJS.",
-	"image": "https://opengraph.githubassets.com/2ed9c41fd80336224cf4acb87a5288ff598ad89c848cf0e721635d7235480015/SanichKotikov/solid-i18n",
+	"image": "./assets/solid-i-18-n.png",
 	"tags": ["internationalization"],
 	"language": "TypeScript"
 }

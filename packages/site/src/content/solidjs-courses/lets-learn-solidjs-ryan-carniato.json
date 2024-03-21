@@ -1,7 +1,7 @@
 {
 	"title": "Let's Learn SolidJS",
 	"author": "Ryan Carniato",
-	"image": "https://github.com/ryansolid.png",
+	"image": "./assets/lets-learn-solidjs-ryan-carniato.jpeg",
 	"description": "In this episode, Ryan Carniato will teach us how to get started with our first SolidJS app!",
 	"paymentType": "free",
 	"level": "beginner",

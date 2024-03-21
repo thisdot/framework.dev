@@ -1,7 +1,7 @@
 {
 	"title": "The Road to GraphQL",
 	"authors": ["Robin Wieruch"],
-	"image": "https://m.media-amazon.com/images/I/31MMS6yrIbS._SX384_BO1,204,203,200_.jpg",
+	"image": "./assets/the-road-to-graphql-robin-wieruch.jpeg",
 	"description": "The Road to GraphQL is your personal journey to master pragmatic GraphQL in JavaScript.",
 	"yearOfPublication": 2018,
 	"numberOfPages": 352,

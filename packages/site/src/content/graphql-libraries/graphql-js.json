@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/graphql",
 	"href": "https://graphql.org/graphql-js/",
 	"description": "The JavaScript reference implementation for GraphQL, a query language for APIs created by Facebook.",
-	"image": "https://github.com/graphql.png",
+	"image": "./assets/graphql-js.png",
 	"language": "TypeScript",
 	"tags": ["frameworks"]
 }

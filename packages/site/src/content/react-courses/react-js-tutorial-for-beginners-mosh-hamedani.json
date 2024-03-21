@@ -1,7 +1,7 @@
 {
 	"title": "React.js tutorial for beginners",
 	"author": "Mosh Hamedani",
-	"image": "https://github.com/mosh-hamedani.png",
+	"image": "./assets/react-js-tutorial-for-beginners-mosh-hamedani.jpeg",
 	"description": "Get up & running with React JS: the most popular JavaScript library in the world!",
 	"paymentType": "free",
 	"level": "beginner",

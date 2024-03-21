@@ -1,7 +1,7 @@
 {
 	"name": "World Of No Code Conf",
 	"description": "This is a conference dedicated to all things no code.",
-	"image": "https://events.geekle.us/vuejs/static/media/logo.579e43d2.svg",
+	"image": "./assets/world-of-no-code-conf.html",
 	"type": "Online Events",
 	"href": "https://events.geekle.us/nocode/",
 	"tags": ["conferences"]

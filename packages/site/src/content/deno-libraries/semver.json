@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/justjavac/deno-semver",
 	"author": "迷渡",
-	"image": "https://avatars.githubusercontent.com/u/359395?v=4",
+	"image": "./assets/semver.jpeg",
 	"tags": ["utilities"],
 	"language": "TypeScript"
 }

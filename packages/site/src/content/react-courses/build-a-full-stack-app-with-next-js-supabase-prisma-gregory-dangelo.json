@@ -1,7 +1,7 @@
 {
 	"title": "Build a Full-Stack App with Next.js, Supabase & Prisma",
 	"author": "Grégory D'Angelo",
-	"image": "https://github.com/alterclassio.png",
+	"image": "./assets/build-a-full-stack-app-with-next-js-supabase-prisma-gregory-dangelo.png",
 	"description": "Learn to build a full-stack application from scratch using some of the best modern web technologies: React / Next.js, Prisma, and Supabase.",
 	"paymentType": "free",
 	"level": "beginner",

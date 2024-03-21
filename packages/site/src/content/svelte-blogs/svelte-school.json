@@ -2,7 +2,7 @@
 	"title": "Svelte School",
 	"author": "Kevin Åberg Kultalahti",
 	"description": "Svelte Training and Courses",
-	"image": "https://svelte.school/images/logo-primary.svg",
+	"image": "./assets/svelte-school.html; charset=UTF-8",
 	"href": "https://svelte.school/tutorials",
 	"tags": []
 }

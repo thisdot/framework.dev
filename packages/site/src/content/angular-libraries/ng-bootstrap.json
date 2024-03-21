@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@ng-bootstrap/ng-bootstrap",
 	"href": "https://ng-bootstrap.github.io/#/home",
 	"description": "Angular widgets built from the ground up using only Bootstrap 5 CSS with APIs designed for the Angular ecosystem.",
-	"image": "https://github.com/ng-bootstrap.png",
+	"image": "./assets/ng-bootstrap.png",
 	"tags": ["component"],
 	"language": "TypeScript"
 }

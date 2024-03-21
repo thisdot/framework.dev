@@ -1,7 +1,7 @@
 {
 	"description": "A community-ran Discord for all things Deno",
 	"href": "https://discord.com/invite/deno",
-	"image": "https://ik.imagekit.io/serenity/ByteofDev/Blog_Heading_Images/State_of_the_Web_Deno",
+	"image": "./assets/deno-discord.jpeg",
 	"name": "Deno Discord",
 	"tags": [],
 	"type": "discord"

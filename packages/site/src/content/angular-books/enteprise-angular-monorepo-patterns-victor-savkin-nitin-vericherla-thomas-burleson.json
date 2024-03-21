@@ -1,7 +1,7 @@
 {
 	"title": "Enteprise Angular Monorepo Patterns",
 	"authors": ["Victor Savkin", "Nitin Vericherla", "Thomas Burleson"],
-	"image": "https://go.nrwl.io/hs-fs/hubfs/Book_EnterpriseAngularMonorepo_V3.jpg?width=632&name=Book_EnterpriseAngularMonorepo_V3.jpg",
+	"image": "./assets/enteprise-angular-monorepo-patterns-victor-savkin-nitin-vericherla-thomas-burleson.jpeg",
 	"description": "This book focuses on common Angular development problems, especially in the enterprise, and shows how to utilize nx and its plugins to solve them. Learn strategies to organize your code into small single-purpose libraries that can be composed to make large applications, and learn how to use nx to enforce quality and consistency across your codebase.",
 	"yearOfPublication": 2018,
 	"numberOfPages": 70,

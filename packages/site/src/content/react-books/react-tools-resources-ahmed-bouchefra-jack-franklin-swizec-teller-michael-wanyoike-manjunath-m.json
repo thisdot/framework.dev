@@ -7,7 +7,7 @@
 		"Michael Wanyoike",
 		"Manjunath M"
 	],
-	"image": "https://www.oreilly.com/library/cover/9781492065364/",
+	"image": "./assets/react-tools-resources-ahmed-bouchefra-jack-franklin-swizec-teller-michael-wanyoike-manjunath-m.jpeg",
 	"description": "This book is a collection of in-depth guides to some some of the tools and resources most used with React, such as Jest and React Router, as well as a discussion about how React works well with D3, and a look at Preact, a lightweight React alternative.",
 	"yearOfPublication": 2017,
 	"numberOfPages": 70,

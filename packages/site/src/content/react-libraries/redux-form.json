@@ -4,7 +4,7 @@
 	"repo": "https://www.github.com/redux-form/redux-form",
 	"package": "https://www.npmjs.com/package/redux-form",
 	"href": "https://redux-form.com/8.3.0/",
-	"image": "https://github.com/redux-form.png",
+	"image": "./assets/redux-form.jpeg",
 	"tags": ["forms"],
 	"description": "Manage your form state in Redux. This library is largely deprecated in favor of React Final Form.",
 	"language": "JavaScript"

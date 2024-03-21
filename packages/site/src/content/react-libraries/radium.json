@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/radium",
 	"href": "https://github.com/formidablelabs/radium",
 	"description": "Radium is a set of tools to manage inline styles on React elements. It gives you powerful styling capabilities without CSS.",
-	"image": "https://github.com/FormidableLabs.png",
+	"image": "./assets/radium.jpeg",
 	"tags": ["styling"],
 	"language": "JavaScript"
 }

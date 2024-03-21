@@ -1,7 +1,7 @@
 {
 	"title": "React crash course",
 	"author": "freeCodeCamp",
-	"image": "https://github.com/freeCodeCamp.png",
+	"image": "./assets/react-crash-course-freecodecamp.jpeg",
 	"description": "This is a full premium course. Learn React.js from the ground up with fundamentals to more intermediate and advanced topics. You will learn by building a real app!",
 	"paymentType": "free",
 	"level": "beginner",

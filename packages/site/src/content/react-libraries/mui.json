@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@mui/material",
 	"href": "https://mui.com/",
 	"description": "MUI is a simple and customizable component library to build faster, beautiful, and more accessible React applications. Follow your own design system, or start with Material Design.",
-	"image": "https://github.com/mui-org.png",
+	"image": "./assets/mui.png",
 	"tags": ["component"],
 	"language": "JavaScript"
 }

@@ -1,7 +1,7 @@
 {
 	"title": "Svelte Crash Course",
 	"author": "Traversy Media",
-	"image": "https://github.com/bradtraversy.png",
+	"image": "./assets/svelte-crash-course-traversy-media.jpeg",
 	"description": "Learn the fundamentals of Svelte by building a feedback app",
 	"paymentType": "free",
 	"level": "beginner",

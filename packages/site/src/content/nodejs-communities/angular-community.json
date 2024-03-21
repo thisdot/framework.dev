@@ -1,7 +1,7 @@
 {
 	"name": "Angular Community",
 	"description": "A community-ran Discord for all things Angular.",
-	"image": "https://github.com/angular-community.png",
+	"image": "./assets/angular-community.png",
 	"type": "Discord Community",
 	"href": "https://discord.gg/angular",
 	"tags": []

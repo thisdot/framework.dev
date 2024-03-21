@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@loopback/cli",
 	"href": "https://loopback.io/",
 	"description": "A highly extensible Node.js and TypeScript framework for building APIs and microservices.",
-	"image": "https://loopback.io/images/global/loopback-full-logo-blue.svg",
+	"image": "./assets/loopback.svg+xml",
 	"tags": ["frameworks"],
 	"language": "NodeJS"
 }

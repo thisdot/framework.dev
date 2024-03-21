@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/manyuanrong/bytes_formater",
 	"author": "EnokMan",
-	"image": "https://avatars.githubusercontent.com/u/7514524?v=4",
+	"image": "./assets/bytes-formater.jpeg",
 	"tags": ["utilities"],
 	"language": "TypeScript"
 }

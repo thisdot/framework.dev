@@ -1,7 +1,7 @@
 {
 	"title": "Easy Angular Unit Testing in NgRx",
 	"author": "Frederik Prijck",
-	"image": "https://github.com/thisdot.png",
+	"image": "./assets/easy-angular-unit-testing-in-ngrx-frederik-prijck.png",
 	"description": "NgRx is awesome, but testing can be a complex job. We'll cover some of the common patterns to test NgRx's reducers, selectors, effects as well as components that are using those selectors and actions.",
 	"paymentType": "free",
 	"level": "intermediate",

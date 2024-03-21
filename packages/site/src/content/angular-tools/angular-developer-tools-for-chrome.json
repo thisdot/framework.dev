@@ -2,7 +2,7 @@
 	"name": "Angular Developer Tools for Chrome",
 	"author": "Google",
 	"description": "A tool that allows you to inspect Angular Components, their state, properties, and further debugging capabilities as it relates to them.",
-	"image": "https://github.com/angular.png",
+	"image": "./assets/angular-developer-tools-for-chrome.png",
 	"href": "https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh",
 	"tags": ["chrome"]
 }

@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@graphql-codegen/cli",
 	"href": "https://www.the-guild.dev/graphql/codegen",
 	"description": "GraphQL Code Generator is a tool that generates code out of your GraphQL schema.",
-	"image": "https://raw.githubusercontent.com/dotansimha/graphql-code-generator/master/logo.svg",
+	"image": "./assets/graph-code-generator.svg+xml",
 	"language": "NodeJS",
 	"tags": ["utilities", "CLI"]
 }

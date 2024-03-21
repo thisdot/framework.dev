@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/exhibitionist-digital/ultra",
 	"author": "Ultra",
-	"image": "https://avatars.githubusercontent.com/u/42048915?s=200&v=4",
+	"image": "./assets/ultra.png",
 	"tags": ["frameworks", "web servers"],
 	"language": "TypeScript"
 }

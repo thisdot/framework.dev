@@ -4,6 +4,6 @@
 	"hosts": ["Adam Stacoviak", "Jerod Santo"],
 	"href": "https://changelog.com/podcast",
 	"rss": "https://changelog.fm/rss",
-	"image": "https://cdn.changelog.com/uploads/covers/the-changelog-original.png?v=63725770322",
+	"image": "./assets/the-changelog.png",
 	"tags": ["how-to", "open source", "technology"]
 }

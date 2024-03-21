@@ -1,7 +1,7 @@
 {
 	"title": "Full Modern React Tutorial",
 	"author": "The Net Ninja",
-	"image": "https://github.com/iamshaunjp.png",
+	"image": "./assets/full-modern-react-tutorial-the-net-ninja.jpeg",
 	"description": "This is full React tutorial series, It will take you from novice to ninja. It covers all the basics - what React is, setting up, components & routing - before diving into state management, async code, built-in hooks & custom hooks too.",
 	"paymentType": "free",
 	"level": "beginner",

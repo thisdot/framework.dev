@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/dyedgreen/deno-sqlite",
 	"author": "Tilman Roeder",
-	"image": "https://avatars.githubusercontent.com/u/6896443?v=4",
+	"image": "./assets/sqlite.jpeg",
 	"tags": ["utilities", "database drivers"],
 	"language": "TypeScript"
 }

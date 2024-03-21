@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/body-parser",
 	"href": "https://github.com/expressjs/body-parser",
 	"description": "Parse incoming request bodies in a middleware before your handlers, available under the req.body property.",
-	"image": "https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/node-512.png",
+	"image": "./assets/body-parser.png",
 	"tags": ["frameworks"],
 	"language": "NodeJS"
 }

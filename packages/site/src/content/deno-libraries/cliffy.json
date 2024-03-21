@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/c4spar/deno-cliffy",
 	"author": "Benjamin Fischer",
-	"image": "https://avatars.githubusercontent.com/u/61995275?v=4",
+	"image": "./assets/cliffy.jpeg",
 	"tags": ["frameworks", "CLI"],
 	"language": "TypeScript"
 }

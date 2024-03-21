@@ -1,7 +1,7 @@
 {
 	"title": "Modern GraphQL with Node - Complete Developers Guide",
 	"author": "Laith Harb",
-	"image": "https://img-c.udemycdn.com/user/200_H/72111958_3971_2.jpg",
+	"image": "./assets/modern-graphql-with-node-complete-developers-guide-laith-harb.jpeg",
 	"description": "Learn and master GraphQL with Node and React by building real production ready applications.",
 	"paymentType": "paid",
 	"level": "beginner",

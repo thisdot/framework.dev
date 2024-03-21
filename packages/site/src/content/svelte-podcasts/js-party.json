@@ -1,6 +1,6 @@
 {
 	"title": "JS Party",
-	"image": "https://cdn.changelog.com/uploads/covers/js-party-original.png?v=63725770332",
+	"image": "./assets/js-party.png",
 	"hosts": [
 		"Jerod Santo",
 		"Feross Aboukhadijeh",

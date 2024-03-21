@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/graphql-request",
 	"href": "https://github.com/prisma-labs/graphql-request",
 	"description": "Minimal GraphQL client supporting Node and browsers for scripts or simple apps",
-	"image": "https://github.com/prisma-labs.png",
+	"image": "./assets/graphql-request.png",
 	"language": "TypeScript",
 	"tags": ["data fetching"]
 }

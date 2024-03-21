@@ -4,7 +4,7 @@
 	"repo": "https://www.github.com/estevanmaito/windmill-react-ui",
 	"package": "https://www.npmjs.com/package/@windmill/react-ui",
 	"href": "https://windmillui.com/",
-	"image": "https://github.com/estevanmaito.png",
+	"image": "./assets/windmill-react-ui.png",
 	"tags": ["component"],
 	"description": "🧩 The component library for fast and accessible development of gorgeous interfaces.",
 	"language": "TypeScript"

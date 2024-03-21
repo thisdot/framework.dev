@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@faker-js/faker",
 	"href": "https://github.com/faker-js/faker",
 	"description": "Generate massive amounts of fake (but realistic) data for testing and development. Faker tries to generate realistic data and not obvious fake data.",
-	"image": "https://raw.githubusercontent.com/faker-js/faker/HEAD/docs/public/logo.svg",
+	"image": "./assets/faker-js.svg+xml",
 	"tags": ["testing", "utilities"],
 	"language": "NodeJS"
 }

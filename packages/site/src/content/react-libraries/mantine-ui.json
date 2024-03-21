@@ -4,7 +4,7 @@
 	"repo": "https://github.com/mantinedev/mantine",
 	"package": "https://www.npmjs.com/package/@mantine/core",
 	"href": "https://mantine.dev/",
-	"image": "https://github.com/mantinedev.png",
+	"image": "./assets/mantine-ui.png",
 	"tags": ["component"],
 	"description": "A fully featured React components library.",
 	"language": "TypeScript"

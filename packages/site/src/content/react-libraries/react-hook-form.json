@@ -4,7 +4,7 @@
 	"repo": "https://www.github.com/react-hook-form/react-hook-form",
 	"package": "https://www.npmjs.com/package/react-hook-form",
 	"href": "https://react-hook-form.com/",
-	"image": "https://github.com/react-hook-form.png",
+	"image": "./assets/react-hook-form.png",
 	"tags": ["forms"],
 	"description": "Performant, flexible and extensible forms with easy-to-use validation. React Hook Form reduces the amount of code you need to write while removing unnecessary re-renders.",
 	"language": "TypeScript"

@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@compodoc/compodoc",
 	"href": "https://compodoc.app/guides/getting-started.html",
 	"description": "A documentation tool for Angular applications, that can generate static documentation of your application.",
-	"image": "https://github.com/compodoc.png",
+	"image": "./assets/compodoc.png",
 	"tags": ["documentation"],
 	"language": "TypeScript"
 }

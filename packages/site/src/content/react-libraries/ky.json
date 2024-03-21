@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/ky",
 	"href": "https://github.com/sindresorhus/ky",
 	"description": "Ky is a tiny and elegant HTTP client based on the browser Fetch API. Ky targets modern browsers and Deno. It's just a tiny file with no dependencies.",
-	"image": "https://github.com/sindresorhus.png",
+	"image": "./assets/ky.jpeg",
 	"tags": ["http client"],
 	"language": "TypeScript"
 }

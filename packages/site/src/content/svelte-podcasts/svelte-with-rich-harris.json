@@ -1,6 +1,6 @@
 {
 	"title": "Svelte with Rich Harris",
-	"image": "https://assets.fireside.fm/file/fireside-images/podcasts/images/3/3911462c-bca2-48c2-9103-610ba304c673/episodes/8/8a485d85-aea7-4811-86c6-de00f8399413/cover_medium.jpg?v=1",
+	"image": "./assets/svelte-with-rich-harris.jpeg",
 	"hosts": ["Rich Harris"],
 	"description": "We interview Rich Harris about Svelte's position in the landscape of frameworks, how other popular frameworks are becoming more Svelte-like, how Svelte handles state, how SvelteKit works, and more",
 	"rss": "https://podrocket.logrocket.com/rss",

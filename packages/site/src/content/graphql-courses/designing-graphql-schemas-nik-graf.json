@@ -1,7 +1,7 @@
 {
 	"title": "Designing GraphQL Schemas",
 	"author": "Nik Graf",
-	"image": "https://egghead.io/_next/image?url=https%3A%2F%2Fd2eip9sf3oo6c2.cloudfront.net%2Finstructors%2Favatars%2F000%2F000%2F111%2Fmedium%2Fnikgraf3.jpg&w=3840&q=100",
+	"image": "./assets/designing-graphql-schemas-nik-graf.jpeg",
 	"description": "GraphQL brings joy to using APIs. Even though it's based on a type system, GraphQL in many ways is more flexible than REST.",
 	"paymentType": "paid",
 	"level": "advanced",

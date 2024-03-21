@@ -5,7 +5,7 @@
 	"package": "",
 	"href": "https://www.solidjs.com/tutorial/stores_createstore",
 	"description": "This submodules contains the means for handling deeps nested reactivity.",
-	"image": "https://repository-images.githubusercontent.com/130884470/ad63fd00-7ab2-11ea-9c57-6c114391183a",
+	"image": "./assets/solid-store.png",
 	"tags": ["state management"],
 	"language": "TypeScript"
 }

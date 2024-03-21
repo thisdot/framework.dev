@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@scullyio/scully",
 	"href": "https://scully.io/",
 	"description": "Static site generator for Angular",
-	"image": "https://github.com/scullyio.png",
+	"image": "./assets/scully.png",
 	"tags": ["frameworks"],
 	"language": "TypeScript"
 }

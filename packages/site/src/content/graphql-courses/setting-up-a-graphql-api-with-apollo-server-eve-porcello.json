@@ -1,7 +1,7 @@
 {
 	"title": "Setting Up A GraphQL API with Apollo Server",
 	"author": "Eve Porcello",
-	"image": "https://pbs.twimg.com/profile_images/1470581497249734657/LDfCopdL_400x400.jpg",
+	"image": "./assets/setting-up-a-graphql-api-with-apollo-server-eve-porcello.jpeg",
 	"description": "In this JS Drop, Eve Porcello from Moon Highway will show you how to set up a GraphQL API using Apollo Server, a Node JS implementation of GraphQL server, using a schema and resolver functions, in just 33 lines of code!",
 	"paymentType": "free",
 	"level": "beginner",

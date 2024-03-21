@@ -1,7 +1,7 @@
 {
 	"title": "How to build a website using svelte that controls an Arduino & Led Matrix with navigator.serial",
 	"author": "Noah Glaser",
-	"image": "https://avatars.githubusercontent.com/u/9620015?v=4",
+	"image": "./assets/how-to-build-a-website-using-svelte-that-controls-an-arduino-led-matrix-with-navigator-serial-noah-glaser.jpeg",
 	"description": "In this video, we code a website and an Arduino that can communicate with each other directly.  It uses a new API called navigator serial. In the video, I use an Arduino UNO and Max led matrix.  Let me know if you have any questions. ",
 	"paymentType": "free",
 	"level": "intermediate",

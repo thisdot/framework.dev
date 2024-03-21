@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/graphql-hooks",
 	"href": "https://github.com/nearform/graphql-hooks",
 	"description": "Minimal hooks-first GraphQL client.",
-	"image": "https://github.com/nearform.png",
+	"image": "./assets/graphql-hooks.jpeg",
 	"language": "JavaScript",
 	"tags": ["data fetching"]
 }

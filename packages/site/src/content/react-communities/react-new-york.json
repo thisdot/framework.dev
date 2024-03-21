@@ -1,7 +1,7 @@
 {
 	"name": "React New York",
 	"description": "Level up your React chops at this New York conference.",
-	"image": "https://www.reactnewyork.com/favicon/apple-touch-icon.png",
+	"image": "./assets/react-new-york.png",
 	"type": "Live Events",
 	"href": "https://www.reactnewyork.com/",
 	"tags": ["conferences"]

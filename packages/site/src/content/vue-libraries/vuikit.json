@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/vuikit",
 	"href": "https://vuikit.js.org/",
 	"description": "A responsive Vue 2 UI library for web site interfaces based on the UIkit 3 framework.",
-	"image": "https://vuikit.js.org/img/vuikit-logo-large.1eeb1a0a.svg",
+	"image": "./assets/vuikit.svg+xml",
 	"tags": ["component"],
 	"language": "JavaScript"
 }

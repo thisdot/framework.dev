@@ -1,7 +1,7 @@
 {
 	"title": "Intro to Svelte Kit",
 	"author": "Nacho Falk",
-	"image": "https://avatars.githubusercontent.com/u/11986564?v=4",
+	"image": "./assets/intro-to-svelte-kit-nacho-falk.jpeg",
 	"description": "Understanding Svelte, the syntax, routing with Svelte, its reactivity model, and the component building blocks, You will also walk you through building a todo application",
 	"paymentType": "free",
 	"level": "beginner",

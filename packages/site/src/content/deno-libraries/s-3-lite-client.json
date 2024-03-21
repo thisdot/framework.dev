@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/bradenmacdonald/deno-s3-lite-client",
 	"author": "Braden MacDonald",
-	"image": "https://avatars.githubusercontent.com/u/945577?v=4",
+	"image": "./assets/s-3-lite-client.jpeg",
 	"tags": ["utilities", "data fetching", "API libraries"],
 	"language": "TypeScript"
 }

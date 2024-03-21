@@ -1,6 +1,6 @@
 {
 	"title": "React Native Podcast",
-	"image": "https://global-uploads.webflow.com/5f58b425f8d1c77413f14703/605b71a5676cee7fcc8daca3_oopen_graph_podcast.png",
+	"image": "./assets/react-native-podcast.png",
 	"hosts": ["Mike Grabowski"],
 	"description": "Join our experts as they discuss everything React Native Latest Episode 9 React Native News",
 	"rss": "https://feeds.soundcloud.com/users/soundcloud:users:859563619/sounds.rss",

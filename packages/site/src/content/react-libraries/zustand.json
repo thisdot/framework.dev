@@ -4,7 +4,7 @@
 	"repo": "https://www.github.com/pmndrs/zustand",
 	"package": "https://www.npmjs.com/package/zustand",
 	"href": "https://zustand-demo.pmnd.rs",
-	"image": "https://raw.githubusercontent.com/pmndrs/zustand/main/bear.jpg",
+	"image": "./assets/zustand.jpeg",
 	"tags": ["state management"],
 	"description": "A small, fast and scalable bearbones state-management solution using simplified flux principles.",
 	"language": "TypeScript"

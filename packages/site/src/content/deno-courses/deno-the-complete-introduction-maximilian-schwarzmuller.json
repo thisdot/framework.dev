@@ -5,7 +5,7 @@
 	"paymentType": "paid",
 	"level": "beginner",
 	"format": "video",
-	"image": "https://www.filepicker.io/api/file/TBHtUzkDTCykklB8apdG",
+	"image": "./assets/deno-the-complete-introduction-maximilian-schwarzmuller.jpeg",
 	"href": "https://pro.academind.com/p/deno-the-complete-introduction",
 	"tags": ["deno", "backend", "oak framework", "mongodb"]
 }

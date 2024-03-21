@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/udibo/mock",
 	"author": "Udibo",
-	"image": "https://avatars.githubusercontent.com/u/6780232?s=200&v=4",
+	"image": "./assets/mock.png",
 	"tags": ["utilities", "testing"],
 	"language": "TypeScript"
 }

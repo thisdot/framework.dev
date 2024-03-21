@@ -1,7 +1,7 @@
 {
 	"name": "Angular Nation",
 	"description": "A free and friendly place to network and collaborate with Angular developers just  like you!",
-	"image": "https://pbs.twimg.com/profile_images/1331571398834315264/xtrGFRx-_400x400.jpg",
+	"image": "./assets/angular-nation.jpeg",
 	"type": "Online Events",
 	"href": "https://www.angularnation.net/",
 	"tags": ["meetups"]

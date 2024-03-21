@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@blitzjs/core",
 	"href": "https://blitzjs.com/",
 	"description": "Blitz picks up where Next.js leaves off, providing battle-tested libraries and conventions for shipping and scaling world wide applications.",
-	"image": "https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/node-512.png",
+	"image": "./assets/blitz-js.png",
 	"tags": ["utilities"],
 	"language": "NodeJS"
 }

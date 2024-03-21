@@ -1,7 +1,7 @@
 {
 	"title": "React Cookbook",
 	"authors": ["Carlos Santana Roldan"],
-	"image": "https://www.oreilly.com/library/cover/9781783980727/",
+	"image": "./assets/react-cookbook-carlos-santana-roldan.jpeg",
 	"description": "Over 66 hands-on recipes that cover UI development, animations, component architecture, routing, databases, testing, and debugging with React",
 	"yearOfPublication": 2018,
 	"numberOfPages": 579,

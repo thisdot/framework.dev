@@ -1,7 +1,7 @@
 {
 	"title": "Resolving GraphQL Entities",
 	"author": "This Dot Media",
-	"image": "https://pbs.twimg.com/profile_images/1249804296469778433/uRRNm6-n_400x400.png",
+	"image": "./assets/resolving-graphql-entities-this-dot-media.png",
 	"description": "Learn how to connect different data types so you can connect data across services. In this training, we create a user entity with the @key to connect across services and connect back to our users through our service. We'll also look at our index file, and make some adjustments to our color.",
 	"paymentType": "free",
 	"level": "intermediate",

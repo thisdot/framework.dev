@@ -5,7 +5,7 @@
 	"paymentType": "paid",
 	"level": "beginner",
 	"format": "video",
-	"image": "https://pluralsight.imgix.net/author/lg/brice-wilson-v2.jpg?w=353",
+	"image": "./assets/deno-1-getting-started-brice-wilson.jpeg",
 	"href": "https://www.pluralsight.com/courses/deno-getting-started",
 	"tags": [
 		"deno",

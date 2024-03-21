@@ -5,7 +5,7 @@
 	"package": "",
 	"href": "https://www.apollographql.com/docs/federation/",
 	"description": "Combine GraphQL APIs into a unified supergraph",
-	"image": "https://github.com/apollographql.png",
+	"image": "./assets/apollo-federation.png",
 	"language": "NodeJS",
 	"tags": ["database drivers", "frameworks"]
 }

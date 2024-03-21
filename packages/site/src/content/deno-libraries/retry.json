@@ -5,7 +5,7 @@
 	"package": "",
 	"repo": "https://github.com/franckLdx/retry",
 	"author": "Franck Ledoux",
-	"image": "https://avatars.githubusercontent.com/u/17727359?v=4",
+	"image": "./assets/retry.png",
 	"tags": ["utilities", "data fetching"],
 	"language": "TypeScript"
 }

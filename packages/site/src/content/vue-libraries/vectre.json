@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@vectrejs/vectre",
 	"href": "https://vectrejs.github.io/docs/",
 	"description": "A Lightweight, Simple and Responsive Component Framework",
-	"image": "https://vectrejs.github.io/docs/img/logo.3b9b2fe3.svg",
+	"image": "./assets/vectre.svg+xml",
 	"tags": ["component"],
 	"language": "TypeScript"
 }

@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/xstate",
 	"href": "https://xstate.js.org/docs/packages/xstate-vue/#xstate-vue",
 	"description": "JavaScript and TypeScript finite state machines and statecharts for the modern web.",
-	"image": "https://github.com/statelyai.png",
+	"image": "./assets/xstate.png",
 	"tags": ["state management"],
 	"language": "TypeScript"
 }

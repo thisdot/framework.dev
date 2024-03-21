@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/express",
 	"href": "https://www.npmjs.com/package/express",
 	"description": "Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. With a myriad of HTTP utility methods and middleware at your disposal, creating a robust API is quick and easy.",
-	"image": "https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/node-512.png",
+	"image": "./assets/express-js.png",
 	"tags": ["frameworks"],
 	"language": "NodeJS"
 }

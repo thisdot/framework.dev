@@ -1,6 +1,6 @@
 {
 	"title": "PodRocket",
-	"image": "https://assets.fireside.fm/file/fireside-images/podcasts/images/3/3911462c-bca2-48c2-9103-610ba304c673/cover_small.jpg?v=3",
+	"image": "./assets/podrocket.jpeg",
 	"hosts": [
 		"Ben Edelstein",
 		"Kate Trahan",

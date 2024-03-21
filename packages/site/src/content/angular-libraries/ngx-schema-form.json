@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/ngx-schema-form",
 	"href": "https://github.com/guillotinaweb/ngx-schema-form",
 	"description": "Ngx Schema Form is an Angular 2+ module allowing you to instanciate an HTML form from a JSON schema.",
-	"image": "https://github.com/guillotinaweb.png",
+	"image": "./assets/ngx-schema-form.png",
 	"tags": ["forms"],
 	"language": "TypeScript"
 }

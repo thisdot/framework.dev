@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/stepzen",
 	"href": "https://stepzen.com/",
 	"description": "Build GraphQL Easily Optimize & Scale GraphQL Automatically, The only declarative approach for federated access to data!",
-	"image": "https://github.com/steprz.png",
+	"image": "./assets/stepzen.jpeg",
 	"language": "NodeJS",
 	"tags": ["data processing"]
 }

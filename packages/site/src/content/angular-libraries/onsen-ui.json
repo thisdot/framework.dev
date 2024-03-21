@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/ngx-onsenui",
 	"href": "https://onsen.io/",
 	"description": "A set of components to build HTML5 hybrid and mobile web apps. Supports many frameworks, including Angular.",
-	"image": "https://github.com/OnsenUI.png",
+	"image": "./assets/onsen-ui.png",
 	"tags": ["component"],
 	"language": "TypeScript"
 }

@@ -1,7 +1,7 @@
 {
 	"title": "Introduction to Qwik for JS Developers ft. Miško Hevery | JS Drops",
 	"author": "Misko Hevery",
-	"image": "https://i.ytimg.com/vi/0tCuUQe_ZA0/hqdefault.jpg",
+	"image": "./assets/introduction-to-qwik-for-js-developers-ft-misko-hevery-js-drops-misko-hevery.jpeg",
 	"description": "In this Drop, Miško Hevery, CTO at Qwik, demonstrates the essential tools JavaScript developers need to build rich applications using the Qwik framework.",
 	"paymentType": "free",
 	"level": "beginner",

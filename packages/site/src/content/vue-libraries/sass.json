@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/sass",
 	"href": "https://sass-lang.com/",
 	"description": "Sass is a very mature, stable, and powerful professional grade CSS extension language. It provides a superset of CSS with features like nesting, variables, imports and mixins.",
-	"image": "https://github.com/sass.png",
+	"image": "./assets/sass.png",
 	"tags": ["tooling"],
 	"language": "NodeJS"
 }
