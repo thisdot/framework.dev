@@ -2,41 +2,61 @@
 import {
 	formatFieldName,
 	formatAllFrameworkTitles,
-} from "@framework/system/src/util/string-utils"
-import { getContributorsData } from "@framework/system/src/github-util/get-contributors"
-import { scrollable } from "@framework/system/src/styles/layouts.css"
-import BaseLayout from "../layouts/base.astro"
-import Homepage from "../components/homepage"
-import { getSearchData } from "../data/search-data"
-import { FRAMEWORK_RESOURCES } from "@framework/system/src/globals/global-constants"
+} from '@framework/system/src/util/string-utils'
+import { getContributorsData } from '@framework/system/src/github-util/get-contributors'
+import { scrollable } from '@framework/system/src/styles/layouts.css'
+import BaseLayout from '../layouts/base.astro'
+import Homepage from '../components/homepage'
+import { FRAMEWORK_RESOURCES } from '@framework/system/src/globals/global-constants'
+import { getCollection, type CollectionEntry } from 'astro:content'
+import { type CollectionTypes } from '../content/config'
 
-const searchData = await getSearchData(import.meta.env.VITE_FRAMEWORK)
-const libraries = searchData.find((category) => category.name === "libraries")
-const podcasts = searchData.find((category) => category.name === "podcasts")
-const courses = searchData.find((category) => category.name === "courses")
-const blogs = searchData.find((category) => category.name === "blogs")
-const books = searchData.find((category) => category.name === "books")
-const tools = searchData.find((category) => category.name === "tools")
-const communities = searchData.find(
-	(category) => category.name === "communities"
-)
+async function getCollectionData(collectionName: CollectionTypes) {
+	const collectionData = await getCollection(
+		`${import.meta.env.VITE_FRAMEWORK}-${collectionName}`
+	)
+	return (collectionData ?? []).map(
+		(entry: CollectionEntry<typeof collectionName>) => ({
+			id: entry.id,
+			...entry.data,
+		})
+	)
+}
 
-const contributorsData = await getContributorsData()
+const [
+	books,
+	blogs,
+	communities,
+	courses,
+	libraries,
+	podcasts,
+	tools,
+	contributorsData,
+] = await Promise.all([
+	getCollectionData('books'),
+	getCollectionData('blogs'),
+	getCollectionData('communities'),
+	getCollectionData('courses'),
+	getCollectionData('libraries'),
+	getCollectionData('podcasts'),
+	getCollectionData('tools'),
+	getContributorsData(),
+])
 
 const searchableWebsiteStructuredData = {
-	"@context": "https://schema.org",
-	"@type": "WebSite",
+	'@context': 'https://schema.org',
+	'@type': 'WebSite',
 	url: `https://${import.meta.env.VITE_FRAMEWORK}.framework.dev/`,
 	name: `${formatFieldName(import.meta.env.VITE_FRAMEWORK)} Framework.dev`,
 	potentialAction: {
-		"@type": "SearchAction",
+		'@type': 'SearchAction',
 		target: {
-			"@type": "EntryPoint",
+			'@type': 'EntryPoint',
 			urlTemplate: `https://${
 				import.meta.env.VITE_FRAMEWORK
 			}.framework.dev/search?q={search_term_string}`,
 		},
-		"query-input": "required name=search_term_string",
+		'query-input': 'required name=search_term_string',
 	},
 }
 
@@ -61,14 +81,13 @@ const resourceCards = FRAMEWORK_RESOURCES().filter(
 		librariesTitle={`Featured ${formatAllFrameworkTitles(
 			import.meta.env.VITE_FRAMEWORK
 		)} Libraries`}
-		libraries={libraries?.data}
-		libraryTags={libraries?.tags}
-		podcasts={podcasts?.data}
-		courses={courses?.data}
-		blogs={blogs?.data}
-		books={books?.data}
-		tools={tools?.data}
-		communities={communities?.data}
+		libraries={libraries}
+		podcasts={podcasts}
+		courses={courses}
+		blogs={blogs}
+		books={books}
+		tools={tools}
+		communities={communities}
 		siteName={import.meta.env.VITE_FRAMEWORK}
 		resourceCards={resourceCards}
 		contributorsData={contributorsData}
