@@ -1,13 +1,5 @@
-import logo1 from './example-assets/logo-1.png'
-import logo2 from './example-assets/logo-2.png'
-import logo3 from './example-assets/logo-3.png'
-import company1 from './example-assets/company1.png'
-import tool1 from './example-assets/tool-1.png'
 import { type Course, courseIndexMetadata } from '../models/course'
 import { type Library, libraryIndexMetadata } from '../models/library'
-import book1 from './example-assets/book-1.png'
-import book2 from './example-assets/book-2.png'
-import book3 from './example-assets/book-3.png'
 import { type Book, bookIndexMetadata } from '../models/book'
 import { type Podcast, podcastIndexMetadata } from '../models/podcast'
 import { type Community, communityIndexMetadata } from '../models/community'
@@ -30,7 +22,7 @@ export const exampleCourses: Course<ExampleTag>[] = [
 	{
 		title: 'Code 15 React Projects - Complete Course',
 		author: 'freeCodeCamp',
-		image: logo1,
+		image: './example-assets/logo-1.png',
 		description:
 			'Improve your skills with the React JavaScript library by building 15 projects using React.',
 		paymentType: 'free',
@@ -42,7 +34,7 @@ export const exampleCourses: Course<ExampleTag>[] = [
 	{
 		title: 'Fullstack React',
 		author: 'newline',
-		image: logo3,
+		image: './example-assets/logo-3.png',
 		description:
 			'The up-to-date, in-depth, complete guide to React and friends.',
 		paymentType: 'paid',
@@ -54,7 +46,7 @@ export const exampleCourses: Course<ExampleTag>[] = [
 	{
 		title: 'Mastering React',
 		author: 'Mosh',
-		image: logo2,
+		image: './example-assets/logo-2.png',
 		description:
 			"If you're on React 15, take your components to new levels with these advanced patterns, lectures, exercises, and more.",
 		paymentType: 'paid',
@@ -752,7 +744,7 @@ export const exampleBooks: Book<string>[] = [
 		href: '/atomic-habits',
 		title:
 			'Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones',
-		image: book1,
+		image: './example-assets/book-1.png',
 		authors: ['James Clear'],
 		yearOfPublication: 2018,
 		numberOfPages: 320,
@@ -764,7 +756,7 @@ export const exampleBooks: Book<string>[] = [
 	{
 		href: '/harry-potter',
 		title: "Harry Potter and the Sorcerer's Stone",
-		image: book2,
+		image: './example-assets/book-2.png',
 		authors: ['J. K. Rowling', 'Robert Galbraith'],
 		yearOfPublication: 1997,
 		numberOfPages: 223,
@@ -776,7 +768,7 @@ export const exampleBooks: Book<string>[] = [
 	{
 		href: '/cryptonomicon',
 		title: 'Cryptonomicon',
-		image: book3,
+		image: './example-assets/book-3.png',
 		authors: ['Neal Stephenson'],
 		yearOfPublication: 1999,
 		numberOfPages: 918,
@@ -856,7 +848,7 @@ export const exampleCompanies: Company<'consultancy'>[] = [
 		name: 'This Dot',
 		description:
 			'Provides architectural guidance, staff augmentation, on demand Subject Matter Experts, temporary CTOs, one-on-one pairing, mentorship, and open source strategy support.',
-		image: company1,
+		image: './example-assets/company1.png',
 		numberOfEmployees: '10 to 50',
 		href: 'https://labs.thisdot.co',
 		tags: ['consultancy'],
@@ -878,7 +870,7 @@ export const exampleTools: Tool<string>[] = [
 		name: 'Doge Generator',
 		author: 'Jackson Palmer',
 		description: 'Wow. Doge meme generator. Very plugin.',
-		image: tool1,
+		image: './example-assets/tool-1.png',
 		tags: ['Data Visualization', 'Web3', 'Hooks'],
 		href: 'https://dogecoin.com/',
 	},
