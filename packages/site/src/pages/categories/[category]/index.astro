@@ -11,7 +11,7 @@ import BaseLayout from '@framework/site/src/layouts/base.astro'
 
 export async function getStaticPaths() {
 	const searchData = await getSearchData(import.meta.env.VITE_FRAMEWORK)
-	return searchData.map((category) => {
+	return searchData.flatMap((category) => {
 		const preFilters = { category: [category.name], tag: [], field: [] }
 		return {
 			params: {
