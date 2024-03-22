@@ -1,9 +1,11 @@
 {
+	"extends": "astro/tsconfigs/base",
 	"include": ["./packages/*/src/**/*", "./*.d.ts"],
 	"compilerOptions": {
 		"strict": true,
 		"lib": ["ES2021", "DOM"],
-		"module": "ES2022",
+		"module": "esnext",
+		"target": "esnext",
 		"moduleResolution": "node",
 		"esModuleInterop": true,
 		"noEmit": true,
@@ -12,10 +14,13 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"paths": {
-			"@framework/system": ["./packages/system/*"]
+			"@framework/system": ["./packages/system/*"],
+			"@framework/site": ["./packages/site/*"]
 		},
 		"types": ["vite/client", "gtag.js"],
 		"verbatimModuleSyntax": false,
-		"allowImportingTsExtensions": true
+		"allowImportingTsExtensions": true,
+		"strictNullChecks": true,
+		"allowJs": true
 	}
 }
