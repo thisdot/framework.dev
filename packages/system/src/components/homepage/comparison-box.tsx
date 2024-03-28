@@ -1,19 +1,19 @@
-import classNames from 'classnames'
-import React from 'react'
+import classNames from 'classnames';
+import React from 'react';
 import {
 	comparisonBoxStyle,
 	comparisonBoxHeadingStyle,
 	comparisonBoxHeadingSoftStyle,
 	comparisonBoxWhichLibsStyle,
 	comparisonBoxImageStyle,
-} from './comparison-box.css'
-import { Chip } from '../chip'
-import { serializeFieldValue } from '../../util/string-utils'
+} from './comparison-box.css';
+import { Chip } from '../chip';
+import { serializeFieldValue } from '../../util/string-utils';
 
 export interface ComparisonBoxProps
 	extends React.ComponentPropsWithoutRef<'div'> {
-	imageSource?: string
-	libraryTags: string[]
+	imageSource?: string;
+	libraryTags: string[];
 }
 
 export function ComparisonBox({
@@ -50,5 +50,5 @@ export function ComparisonBox({
 				<img className={comparisonBoxImageStyle} src={imageSource} alt="" />
 			)}
 		</div>
-	)
+	);
 }

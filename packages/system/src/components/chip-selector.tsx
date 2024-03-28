@@ -1,11 +1,11 @@
-import { useId } from '@reach/auto-id'
-import React from 'react'
-import { visuallyHidden } from '../styles/utilities.css'
-import { chipSelectorStyle, chipSelectorIconStyle } from './chip-selector.css'
+import { useId } from '@reach/auto-id';
+import React from 'react';
+import { visuallyHidden } from '../styles/utilities.css';
+import { chipSelectorStyle, chipSelectorIconStyle } from './chip-selector.css';
 
 export interface ChipSelectorProps
 	extends React.ComponentPropsWithoutRef<'input'> {
-	label: React.ReactNode
+	label: React.ReactNode;
 }
 
 export function ChipSelector({
@@ -14,7 +14,7 @@ export function ChipSelector({
 	id: customIdFromProps,
 	...props
 }: ChipSelectorProps) {
-	const id = useId(customIdFromProps)
+	const id = useId(customIdFromProps);
 	return (
 		<div className={className}>
 			<input type="checkbox" className={visuallyHidden} id={id} {...props} />
@@ -23,5 +23,5 @@ export function ChipSelector({
 				<div className={chipSelectorIconStyle} />
 			</label>
 		</div>
-	)
+	);
 }

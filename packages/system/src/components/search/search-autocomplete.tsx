@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef } from 'react';
 import {
 	Combobox,
 	ComboboxInput,
@@ -6,28 +6,28 @@ import {
 	ComboboxOption,
 	ComboboxOptionText,
 	ComboboxPopover,
-} from '@reach/combobox'
-import { SearchInput } from './search-input'
-import { getWordCoordinatesAt } from './query-util'
-import { type FilterSet } from './types'
-import { type AllCategories } from '../../models/all-categories'
+} from '@reach/combobox';
+import { SearchInput } from './search-input';
+import { getWordCoordinatesAt } from './query-util';
+import { type FilterSet } from './types';
+import { type AllCategories } from '../../models/all-categories';
 import {
 	formatFieldName,
 	serializeFieldName,
 	serializeFieldValue,
-} from '../../util/string-utils'
+} from '../../util/string-utils';
 import {
 	searchAutocompleteOptionStyle,
 	searchAutocompletePopoverStyle,
-} from './search-autocomplete.css'
+} from './search-autocomplete.css';
 
 export interface SearchAutocompleteProps {
-	staticPrefix?: string
-	value: string
-	onChange: (newValue: string) => void
-	data: AllCategories[]
-	availableFilters: FilterSet
-	className?: string
+	staticPrefix?: string;
+	value: string;
+	onChange: (newValue: string) => void;
+	data: AllCategories[];
+	availableFilters: FilterSet;
+	className?: string;
 }
 
 export function SearchAutocomplete({
@@ -38,17 +38,17 @@ export function SearchAutocomplete({
 	staticPrefix,
 	...props
 }: SearchAutocompleteProps) {
-	const inputRef = useRef<HTMLInputElement>(null)
+	const inputRef = useRef<HTMLInputElement>(null);
 	const currentWordCoordinates = getWordCoordinatesAt(
 		value,
 		inputRef.current?.selectionStart ?? 0,
-	)
+	);
 	const autoCompleteResults = currentWordCoordinates
 		? calculateAutocompleteResults(
 				availableFilters,
 				value.slice(...currentWordCoordinates),
 			)
-		: []
+		: [];
 	return (
 		<Combobox
 			onSelect={(selection) =>
@@ -72,7 +72,7 @@ export function SearchAutocomplete({
 				value={value}
 				staticPrefix={staticPrefix}
 				onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-					onChange(e.target.value)
+					onChange(e.target.value);
 				}}
 				onReset={() => onChange('')}
 			/>
@@ -92,32 +92,32 @@ export function SearchAutocomplete({
 				</ComboboxPopover>
 			)}
 		</Combobox>
-	)
+	);
 }
 
 type AutocompleteResult = {
-	value: string
-	description: string
-}
+	value: string;
+	description: string;
+};
 
 function calculateAutocompleteResults(
 	availableFilters: FilterSet,
 	word: string,
 ): AutocompleteResult[] {
-	if (!word) return []
+	if (!word) return [];
 
 	const categoryFilterSuggestions: AutocompleteResult[] = Array.from(
 		availableFilters.category,
 	).map((name) => ({
 		value: `in:${serializeFieldName(name)}`,
 		description: `Limit search to ${formatFieldName(name)}`,
-	}))
+	}));
 	const tagFilterSuggestions: AutocompleteResult[] = Array.from(
 		availableFilters.tag,
 	).map((name) => ({
 		value: `tag:${serializeFieldValue(name)}`,
 		description: `Only results tagged ${name}`,
-	}))
+	}));
 	const fieldFilterSuggestions: AutocompleteResult[] = Array.from(
 		availableFilters.field,
 	).flatMap(([key, values]) =>
@@ -125,10 +125,10 @@ function calculateAutocompleteResults(
 			value: `${serializeFieldName(key)}:${serializeFieldValue(value)}`,
 			description: `Only results where the ${formatFieldName(key)} is ${value}`,
 		})),
-	)
+	);
 	return [
 		...categoryFilterSuggestions,
 		...tagFilterSuggestions,
 		...fieldFilterSuggestions,
-	].filter((suggestion) => suggestion.value.startsWith(word))
+	].filter((suggestion) => suggestion.value.startsWith(word));
 }

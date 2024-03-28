@@ -1,7 +1,7 @@
-import { style } from '@vanilla-extract/css'
-import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css'
-import { vars } from '../../themes/themes.css'
-import { pxToRem } from '../../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css';
+import { vars } from '../../themes/themes.css';
+import { pxToRem } from '../../util/style-utils';
 
 export const resourcesInfoBannerStyle = style([
 	sprinkles({
@@ -17,14 +17,14 @@ export const resourcesInfoBannerStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const resourcesInfoBannerHeadingStyle = style([
 	sprinkles({
 		color: 'regularText',
 		textStyle: { desktop: 'h400', mobile: 'h300' },
 	}),
-])
+]);
 
 export const resourcesInfoBannerDescriptionStyle = style([
 	sprinkles({
@@ -34,10 +34,10 @@ export const resourcesInfoBannerDescriptionStyle = style([
 	{
 		maxWidth: pxToRem(436),
 	},
-])
+]);
 
 export const resourcesInfoBannerCardsStyle = style([
 	sprinkles({
 		marginTop: { desktop: 20, mobile: 32 },
 	}),
-])
+]);

@@ -1,7 +1,7 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../sprinkles/sprinkles.css'
-import { vars } from '../themes/themes.css'
-import { pxToRem } from '../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../sprinkles/sprinkles.css';
+import { vars } from '../themes/themes.css';
+import { pxToRem } from '../util/style-utils';
 
 export const chipStyle = style([
 	sprinkles({
@@ -32,4 +32,4 @@ export const chipStyle = style([
 			},
 		},
 	},
-])
+]);

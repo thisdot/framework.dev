@@ -1,7 +1,7 @@
 import {
 	type CollectionTypes,
 	type Frameworks,
-} from '@framework/site/src/types'
+} from '@framework/site/src/types';
 
 const LIBRARY_TAGS: [string, ...string[]] = [
 	'animation',
@@ -28,7 +28,7 @@ const LIBRARY_TAGS: [string, ...string[]] = [
 	'tooling',
 	'utilities',
 	'web servers',
-]
+];
 const TAGS: Record<string, Record<string, [string, ...string[]]>> = {
 	angular: {
 		blogs: [''],
@@ -369,11 +369,11 @@ const TAGS: Record<string, Record<string, [string, ...string[]]>> = {
 			'development',
 		],
 	},
-}
+};
 
 export function getTagsByType(
 	collectionType: CollectionTypes,
 	framework: Frameworks,
 ) {
-	return TAGS[framework][collectionType]
+	return TAGS[framework][collectionType];
 }

@@ -1,3 +1,3 @@
-import { bullet } from './bullet-divider.css'
+import { bullet } from './bullet-divider.css';
 
-export const BulletDivider = () => <span className={bullet}>•</span>
+export const BulletDivider = () => <span className={bullet}>•</span>;

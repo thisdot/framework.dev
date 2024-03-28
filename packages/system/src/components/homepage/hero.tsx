@@ -1,6 +1,6 @@
-import classNames from 'classnames'
-import React from 'react'
-import { formatAllFrameworkTitles } from '../../util/string-utils'
+import classNames from 'classnames';
+import React from 'react';
+import { formatAllFrameworkTitles } from '../../util/string-utils';
 import {
 	heroStyle,
 	heroHeadingStyle,
@@ -12,13 +12,13 @@ import {
 	heroFeatureHighlightStyle,
 	heroFeatureHighlightTitleStyle,
 	heroFeatureHighlightIconStyle,
-} from './hero.css'
-import { getBackgroundImage } from './hero-images'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { Logo } from '../logo'
+} from './hero.css';
+import { getBackgroundImage } from './hero-images';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { Logo } from '../logo';
 
 export interface HeroProps extends React.ComponentPropsWithoutRef<'div'> {
-	siteName: string
+	siteName: string;
 }
 
 export function Hero({ className, siteName, ...props }: HeroProps) {
@@ -54,7 +54,7 @@ export function Hero({ className, siteName, ...props }: HeroProps) {
 				</a>
 			</div>
 		</header>
-	)
+	);
 }
 
 const LeftHandSideLines = () => (
@@ -73,7 +73,7 @@ const LeftHandSideLines = () => (
 		<circle r="7" transform="matrix(1 0 0 -1 75 142)" fill="white" />
 		<circle r="7" transform="matrix(1 0 0 -1 8 45)" fill="white" />
 	</svg>
-)
+);
 
 const RightHandSideLines = () => (
 	<svg
@@ -91,7 +91,7 @@ const RightHandSideLines = () => (
 		<circle cx="75" cy="84" r="7" fill="white" />
 		<circle cx="8" cy="177" r="7" fill="white" />
 	</svg>
-)
+);
 
 const BrowseFeatureHighlightIcon = () => (
 	<svg
@@ -187,7 +187,7 @@ const BrowseFeatureHighlightIcon = () => (
 			</clipPath>
 		</defs>
 	</svg>
-)
+);
 
 const SearchFeatureHighlightIcon = () => (
 	<svg
@@ -250,7 +250,7 @@ const SearchFeatureHighlightIcon = () => (
 			</clipPath>
 		</defs>
 	</svg>
-)
+);
 
 const CompareFeatureHighlightIcon = () => (
 	<svg
@@ -322,4 +322,4 @@ const CompareFeatureHighlightIcon = () => (
 			className={sprinkles({ fill: 'tertiary' })}
 		/>
 	</svg>
-)
+);

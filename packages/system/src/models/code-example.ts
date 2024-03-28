@@ -1,4 +1,4 @@
-import { type SearchableRecord } from './search'
+import { type SearchableRecord } from './search';
 
 /**
  * Represents a snippet or code example that
@@ -6,17 +6,17 @@ import { type SearchableRecord } from './search'
  */
 export interface CodeExample<T extends string> extends SearchableRecord<T> {
 	/** Title of the example or snippet */
-	title: string
+	title: string;
 	/** Author of the code */
-	author: string
+	author: string;
 	/** A short description of what it is for */
-	description: string
+	description: string;
 	/** A link to the example, e.g. a gist or codesandbox */
-	href: string
+	href: string;
 }
 
 export const codeExampleIndexMetadata = {
 	name: 'codeExamples',
 	searchableFields: ['author', 'description', 'title'],
 	filterableFields: {},
-} as const
+} as const;

@@ -1,21 +1,24 @@
-import { NavItem } from '@framework/system/src/components/nav-item'
-import { NavList, NavListItem } from '@framework/system/src/components/nav-list'
+import { NavItem } from '@framework/system/src/components/nav-item';
+import {
+	NavList,
+	NavListItem,
+} from '@framework/system/src/components/nav-list';
 import {
 	type AllCategories,
 	type CategoryName,
-} from '@framework/system/src/models/all-categories'
+} from '@framework/system/src/models/all-categories';
 import {
 	formatFieldName,
 	formatFieldValue,
 	serializeFieldName,
 	serializeFieldValue,
-} from '@framework/system/src/util/string-utils'
+} from '@framework/system/src/util/string-utils';
 
 export type NavItemsProps = {
-	data: Pick<AllCategories, 'name' | 'subCategories'>[]
-	currentCategory?: CategoryName
-	currentTag?: string
-}
+	data: Pick<AllCategories, 'name' | 'subCategories'>[];
+	currentCategory?: CategoryName;
+	currentTag?: string;
+};
 
 export function NavItems({
 	currentCategory,
@@ -68,5 +71,5 @@ export function NavItems({
 				</NavListItem>
 			))}
 		</NavList>
-	)
+	);
 }

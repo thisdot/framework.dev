@@ -1,5 +1,5 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
 
 export const footerStyle = style([
 	sprinkles({
@@ -12,7 +12,7 @@ export const footerStyle = style([
 	{
 		backgroundColor: 'white',
 	},
-])
+]);
 
 export const footerLinkStyle = style([
 	sprinkles({
@@ -22,10 +22,10 @@ export const footerLinkStyle = style([
 		fontWeight: 'bold',
 		textStyle: 'bodyShort2',
 	}),
-])
+]);
 
 export const footerSponsorIconContainerStyle = style({
 	display: 'flex',
 	alignItems: 'center',
 	gap: 12,
-})
+});

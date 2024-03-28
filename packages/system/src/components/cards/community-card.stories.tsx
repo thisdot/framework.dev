@@ -1,11 +1,11 @@
-import { type Story, type Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react';
 import {
 	CommunityCard as CommunityCardComponent,
 	type CommunityCardProps,
-} from './community-card'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { exampleCommunities } from '../../util/example-content'
-import { imageFirstCardGrid } from './card-layouts.css'
+} from './community-card';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { exampleCommunities } from '../../util/example-content';
+import { imageFirstCardGrid } from './card-layouts.css';
 
 export default {
 	title: 'Cards/Community Card',
@@ -18,7 +18,7 @@ export default {
 			action: 'onTagClick',
 		},
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<CommunityCardProps> = (args) => (
 	<div
@@ -37,6 +37,6 @@ const Template: Story<CommunityCardProps> = (args) => (
 			))}
 		</div>
 	</div>
-)
+);
 
-export const CommunityCard = Template.bind({})
+export const CommunityCard = Template.bind({});

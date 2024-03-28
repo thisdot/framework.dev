@@ -1,6 +1,6 @@
-import { type Book } from '../../models/book'
-import { BulletDivider } from '../bullet-divider'
-import { ResourceCard, type ResourceCardProps } from './resource-card'
+import { type Book } from '../../models/book';
+import { BulletDivider } from '../bullet-divider';
+import { ResourceCard, type ResourceCardProps } from './resource-card';
 
 export type BookCardProps = Omit<
 	ResourceCardProps,
@@ -14,8 +14,8 @@ export type BookCardProps = Omit<
 	| 'attributes'
 	| 'children'
 > & {
-	book: Book<string>
-}
+	book: Book<string>;
+};
 
 export function BookCard({ book, ...props }: BookCardProps) {
 	return (
@@ -40,5 +40,5 @@ export function BookCard({ book, ...props }: BookCardProps) {
 		>
 			{book.description}
 		</ResourceCard>
-	)
+	);
 }

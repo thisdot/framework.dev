@@ -41,4 +41,4 @@ module.exports = {
 			{ ignoreRestSiblings: true, argsIgnorePattern: '^_' },
 		],
 	},
-}
+};

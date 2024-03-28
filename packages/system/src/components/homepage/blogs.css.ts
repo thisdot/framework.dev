@@ -1,5 +1,5 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
 
 export const blogsStyle = style([
 	sprinkles({
@@ -8,4 +8,4 @@ export const blogsStyle = style([
 	{
 		// Put custom CSS here
 	},
-])
+]);

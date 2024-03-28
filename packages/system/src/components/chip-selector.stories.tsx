@@ -1,8 +1,8 @@
-import { type Story, type Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react';
 import {
 	ChipSelector as ChipSelectorComponent,
 	type ChipSelectorProps,
-} from './chip-selector'
+} from './chip-selector';
 
 export default {
 	title: 'Chip Selector',
@@ -10,10 +10,10 @@ export default {
 	args: {
 		label: 'Hello world',
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<ChipSelectorProps> = (args) => (
 	<ChipSelectorComponent {...args} />
-)
+);
 
-export const ChipSelector = Template.bind({})
+export const ChipSelector = Template.bind({});

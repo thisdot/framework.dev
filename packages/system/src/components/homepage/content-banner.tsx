@@ -1,6 +1,6 @@
-import classNames from 'classnames'
-import React from 'react'
-import sampleSize from 'lodash/sampleSize'
+import classNames from 'classnames';
+import React from 'react';
+import sampleSize from 'lodash/sampleSize';
 import {
 	contentBannerStyle,
 	contentBannerTextAreaStyle,
@@ -9,18 +9,18 @@ import {
 	contentBannerCardImageStyle,
 	contentBannerTitleStyle,
 	contentBannerHostStyle,
-} from './content-banner.css'
+} from './content-banner.css';
 
 export interface ContentBannerProps
 	extends React.ComponentPropsWithoutRef<'div'> {
-	title: string
-	viewAll: { title: string; href: string }
+	title: string;
+	viewAll: { title: string; href: string };
 	items: {
-		title: string
-		metadata: string
-		image?: string
-		href: string
-	}[]
+		title: string;
+		metadata: string;
+		image?: string;
+		href: string;
+	}[];
 }
 
 export function ContentBanner({
@@ -31,7 +31,7 @@ export function ContentBanner({
 	items,
 	...props
 }: ContentBannerProps) {
-	const randomItems = sampleSize(items, 4)
+	const randomItems = sampleSize(items, 4);
 	return (
 		<div className={classNames(className, contentBannerStyle)} {...props}>
 			<div className={contentBannerTextAreaStyle}>
@@ -57,5 +57,5 @@ export function ContentBanner({
 				</a>
 			))}
 		</div>
-	)
+	);
 }

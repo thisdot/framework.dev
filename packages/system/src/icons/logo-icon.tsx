@@ -1,7 +1,7 @@
-import classNames from 'classnames'
-import React from 'react'
-import { iconStyle } from './icon.css'
-import { type IconProps } from './shared-icon-types'
+import classNames from 'classnames';
+import React from 'react';
+import { iconStyle } from './icon.css';
+import { type IconProps } from './shared-icon-types';
 
 export const LogoIcon = React.forwardRef<SVGSVGElement, IconProps>(
 	function LogoIcon({ className, size, ...props }, ref) {
@@ -52,6 +52,6 @@ export const LogoIcon = React.forwardRef<SVGSVGElement, IconProps>(
 					</linearGradient>
 				</defs>
 			</svg>
-		)
+		);
 	},
-)
+);

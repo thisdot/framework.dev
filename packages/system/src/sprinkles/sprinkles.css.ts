@@ -1,10 +1,10 @@
-import { defineProperties, createSprinkles } from '@vanilla-extract/sprinkles'
-import { vars } from '../themes/themes.css'
-import { pxToRem } from '../util/style-utils'
+import { defineProperties, createSprinkles } from '@vanilla-extract/sprinkles';
+import { vars } from '../themes/themes.css';
+import { pxToRem } from '../util/style-utils';
 
 const spaceInPixels = [
 	0, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 32, 40, 48, 56, 64, 152,
-] as const
+] as const;
 
 const spaceInRem = Object.fromEntries(
 	spaceInPixels.map((px) => [px, pxToRem(px)]),
@@ -12,31 +12,31 @@ const spaceInRem = Object.fromEntries(
 	[K in (typeof spaceInPixels)[Exclude<
 		keyof typeof spaceInPixels,
 		keyof []
-	>]]: string
-}
+	>]]: string;
+};
 
 const space = {
 	auto: 'auto',
 	...spaceInRem,
-}
+};
 
 export const borders = {
 	none: `none`,
 	thin: `1px solid ${vars.themeColors.outline}`,
 	light: `1px solid ${vars.themeColors.surfaceVariant}`,
 	tableCell: `1px solid ${vars.palette.neutral80}`,
-}
+};
 
 export const breakpoints = {
 	tablet: 'screen and (min-width: 768px)',
 	desktop: 'screen and (min-width: 1025px)',
-}
+};
 
 const conditions = {
 	mobile: {},
 	tablet: { '@media': breakpoints.tablet },
 	desktop: { '@media': breakpoints.desktop },
-}
+};
 
 const typography = defineProperties({
 	conditions,
@@ -133,7 +133,7 @@ const typography = defineProperties({
 			bold: 600,
 		},
 	},
-})
+});
 
 const spacing = defineProperties({
 	conditions,
@@ -160,7 +160,7 @@ const spacing = defineProperties({
 		marginY: ['marginTop', 'marginBottom'],
 		gap: ['rowGap', 'columnGap'],
 	},
-})
+});
 
 const layout = defineProperties({
 	conditions,
@@ -201,7 +201,7 @@ const layout = defineProperties({
 			},
 		},
 	},
-})
+});
 
 const colors = defineProperties({
 	properties: {
@@ -219,6 +219,6 @@ const colors = defineProperties({
 		borderY: ['borderTop', 'borderBottom'],
 		border: ['borderBottom', 'borderLeft', 'borderRight', 'borderTop'],
 	},
-})
+});
 
-export const sprinkles = createSprinkles(typography, layout, spacing, colors)
+export const sprinkles = createSprinkles(typography, layout, spacing, colors);

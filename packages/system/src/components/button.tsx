@@ -1,12 +1,12 @@
-import classNames from 'classnames'
-import React from 'react'
-import { buttonStyle, type ButtonVariants } from './button.css'
-import type * as Polymorphic from '@reach/polymorphic'
+import classNames from 'classnames';
+import React from 'react';
+import { buttonStyle, type ButtonVariants } from './button.css';
+import type * as Polymorphic from '@reach/polymorphic';
 
 export type ButtonProps = {
-	size?: ButtonVariants['size']
-	color?: ButtonVariants['color']
-}
+	size?: ButtonVariants['size'];
+	color?: ButtonVariants['color'];
+};
 
 export const Button = React.forwardRef(function Button(
 	{
@@ -29,5 +29,5 @@ export const Button = React.forwardRef(function Button(
 		>
 			{children}
 		</Comp>
-	)
-}) as Polymorphic.ForwardRefComponent<'button', ButtonProps>
+	);
+}) as Polymorphic.ForwardRefComponent<'button', ButtonProps>;

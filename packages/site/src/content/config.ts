@@ -1,6 +1,6 @@
-import { z, defineCollection } from 'astro:content'
-import { type Frameworks } from '@framework/site/src/types'
-import { getTagsByType } from '@framework/site/src/utils/tags'
+import { z, defineCollection } from 'astro:content';
+import { type Frameworks } from '@framework/site/src/types';
+import { getTagsByType } from '@framework/site/src/utils/tags';
 
 export const collections = {
 	// angular
@@ -75,7 +75,7 @@ export const collections = {
 	'vue-libraries': generateLibrarySchema('vue'),
 	'vue-podcasts': generatePodcastSchema('vue'),
 	'vue-tools': generateToolSchema('vue'),
-}
+};
 
 function generateBookSchema(framework: Frameworks) {
 	return defineCollection({
@@ -92,7 +92,7 @@ function generateBookSchema(framework: Frameworks) {
 				image: image(),
 				tags: z.array(z.enum(getTagsByType('books', framework))),
 			}),
-	})
+	});
 }
 
 function generateBlogSchema(framework: Frameworks) {
@@ -107,7 +107,7 @@ function generateBlogSchema(framework: Frameworks) {
 				image: image(),
 				tags: z.array(z.enum(getTagsByType('blogs', framework))),
 			}),
-	})
+	});
 }
 
 function generateCommunitySchema(framework: Frameworks) {
@@ -123,7 +123,7 @@ function generateCommunitySchema(framework: Frameworks) {
 				darkImageBackground: z.boolean().optional(),
 				tags: z.array(z.enum(getTagsByType('communities', framework))),
 			}),
-	})
+	});
 }
 
 function generateCourseSchema(framework: Frameworks) {
@@ -141,7 +141,7 @@ function generateCourseSchema(framework: Frameworks) {
 				format: z.enum(['text', 'interactive', 'video']),
 				tags: z.array(z.enum(getTagsByType('courses', framework))),
 			}),
-	})
+	});
 }
 
 function generateLibrarySchema(framework: Frameworks) {
@@ -174,7 +174,7 @@ function generateLibrarySchema(framework: Frameworks) {
 				]),
 				tags: z.array(z.enum(getTagsByType('libraries', framework))),
 			}),
-	})
+	});
 }
 
 function generatePodcastSchema(framework: Frameworks) {
@@ -190,7 +190,7 @@ function generatePodcastSchema(framework: Frameworks) {
 				image: image(),
 				tags: z.array(z.enum(getTagsByType('podcasts', framework))),
 			}),
-	})
+	});
 }
 
 function generateToolSchema(framework: Frameworks) {
@@ -205,5 +205,5 @@ function generateToolSchema(framework: Frameworks) {
 				image: image(),
 				tags: z.array(z.enum(getTagsByType('tools', framework))),
 			}),
-	})
+	});
 }

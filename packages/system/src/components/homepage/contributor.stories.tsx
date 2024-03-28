@@ -1,8 +1,8 @@
-import { type Story, type Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react';
 import {
 	Contributor as ContributorComponent,
 	type ContributorProps,
-} from './contributor'
+} from './contributor';
 
 export default {
 	title: 'Home/Contributor',
@@ -14,10 +14,10 @@ export default {
 			avatarUrl: 'https://github.com/ktrz.png',
 		},
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<ContributorProps> = (args) => (
 	<ContributorComponent {...args} />
-)
+);
 
-export const Contributor = Template.bind({})
+export const Contributor = Template.bind({});

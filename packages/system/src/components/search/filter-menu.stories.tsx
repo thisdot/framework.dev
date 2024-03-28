@@ -1,11 +1,11 @@
-import { type Story, type Meta } from '@storybook/react'
-import { allCategoryNames } from '../../models/all-categories'
-import { exampleTags } from '../../util/example-content'
+import { type Story, type Meta } from '@storybook/react';
+import { allCategoryNames } from '../../models/all-categories';
+import { exampleTags } from '../../util/example-content';
 import {
 	FilterMenu as FilterMenuComponent,
 	type FilterMenuProps,
-} from './filter-menu'
-import { type FilterSet, type QueryParams } from './types'
+} from './filter-menu';
+import { type FilterSet, type QueryParams } from './types';
 
 const params: QueryParams = {
 	filters: {
@@ -14,7 +14,7 @@ const params: QueryParams = {
 		tag: [],
 	},
 	textSearch: '',
-}
+};
 
 const availableFilters: FilterSet = {
 	category: allCategoryNames,
@@ -24,7 +24,7 @@ const availableFilters: FilterSet = {
 		['paymentType', ['free', 'paid']],
 		['format', ['text', 'video', 'interactive']],
 	],
-}
+};
 
 export default {
 	title: 'Search/Filter Menu',
@@ -53,10 +53,10 @@ export default {
 			},
 		},
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<FilterMenuProps> = (args) => (
 	<FilterMenuComponent {...args} />
-)
+);
 
-export const FilterMenu = Template.bind({})
+export const FilterMenu = Template.bind({});

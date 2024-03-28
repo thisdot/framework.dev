@@ -1,11 +1,11 @@
-import { style, keyframes, styleVariants } from '@vanilla-extract/css'
-import { vars } from '../themes/themes.css'
-import { pxToRem } from '../util/style-utils'
+import { style, keyframes, styleVariants } from '@vanilla-extract/css';
+import { vars } from '../themes/themes.css';
+import { pxToRem } from '../util/style-utils';
 
 const base = style({
 	height: 'var(--skeleton-height)',
 	width: 'var(--skeleton-width)',
-})
+});
 
 export const skeletonVariants = styleVariants({
 	circle: [
@@ -21,7 +21,7 @@ export const skeletonVariants = styleVariants({
 			borderRadius: pxToRem(5),
 		},
 	],
-})
+});
 
 const skeletonLoading = keyframes({
 	'0%': {
@@ -30,8 +30,8 @@ const skeletonLoading = keyframes({
 	'100%': {
 		backgroundColor: vars.palette.neutral40,
 	},
-})
+});
 
 export const skeletonAnimated = style({
 	animation: `${skeletonLoading} 1s linear infinite alternate`,
-})
+});

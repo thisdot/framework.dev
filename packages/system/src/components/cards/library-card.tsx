@@ -1,17 +1,17 @@
-import classNames from 'classnames'
-import { type Library } from '../../models/library'
+import classNames from 'classnames';
+import { type Library } from '../../models/library';
 import {
 	libraryCardBadgeStyle,
 	libraryPackageLinkStyle,
 	libraryPackageTextStyle,
-} from './library-card.css'
+} from './library-card.css';
 import {
 	getBundleSizeBadge,
 	getGitHubStarsBadge,
 	getNpmDownloadsBadge,
-} from '../../util/stats-util'
-import { track } from '../../util/analytics-utils'
-import { ResourceCard, type ResourceCardProps } from './resource-card'
+} from '../../util/stats-util';
+import { track } from '../../util/analytics-utils';
+import { ResourceCard, type ResourceCardProps } from './resource-card';
 
 export type LibraryCardProps = Omit<
 	ResourceCardProps,
@@ -25,8 +25,8 @@ export type LibraryCardProps = Omit<
 	| 'attributes'
 	| 'children'
 > & {
-	library: Library
-}
+	library: Library;
+};
 
 export function LibraryCard({ library, ...props }: LibraryCardProps) {
 	return (
@@ -98,19 +98,19 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 		>
 			{library.description}
 		</ResourceCard>
-	)
+	);
 }
 
 type BadgeProps = {
-	data?: string
-	href: string
-	label: string
-}
+	data?: string;
+	href: string;
+	label: string;
+};
 
 function Badge({ data, href, label }: BadgeProps) {
 	return (
 		<a href={href} target="_blank" rel="noreferrer">
 			<img className={libraryCardBadgeStyle} src={data} alt={label} />
 		</a>
-	)
+	);
 }

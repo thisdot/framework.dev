@@ -1,8 +1,8 @@
-import { type Story, type Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react';
 import {
 	BannerTooltip as BannerTooltipComponent,
 	type BannerTooltipProps,
-} from './banner-tooltip'
+} from './banner-tooltip';
 
 export default {
 	title: 'Banner Tooltip',
@@ -10,13 +10,13 @@ export default {
 	args: {
 		children: 'Hello world',
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<BannerTooltipProps> = (args) => (
 	<BannerTooltipComponent {...args} />
-)
+);
 
-export const BannerTooltip = Template.bind({})
+export const BannerTooltip = Template.bind({});
 
 BannerTooltip.args = {
 	pitchText: {
@@ -24,4 +24,4 @@ BannerTooltip.args = {
 		softText: 'based on your needs',
 	},
 	explanatoryText: 'Click on icon to add the lib to comparison',
-}
+};

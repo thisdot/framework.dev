@@ -1,15 +1,15 @@
-import pRetry, { AbortError } from 'p-retry'
-import { type ContributorData } from '../components/homepage/contributor'
+import pRetry, { AbortError } from 'p-retry';
+import { type ContributorData } from '../components/homepage/contributor';
 
 interface ContributorApiData {
-	login: string
-	html_url: string
-	avatar_url: string
+	login: string;
+	html_url: string;
+	avatar_url: string;
 }
 
 export const getContributorsData = async (): Promise<ContributorData[]> => {
 	const runFetch = async () => {
-		const abortError = new AbortError('Failed to fetch contributors')
+		const abortError = new AbortError('Failed to fetch contributors');
 		const response = process.env.GITHUB_API_ACCESS_TOKEN
 			? await fetch(
 					'https://api.github.com/repos/thisdot/framework.dev/contributors?anon=1',
@@ -22,18 +22,18 @@ export const getContributorsData = async (): Promise<ContributorData[]> => {
 				)
 			: await fetch(
 					'https://api.github.com/repos/thisdot/framework.dev/contributors?anon=1',
-				)
+				);
 
 		if (!response.ok) {
-			throw abortError
+			throw abortError;
 		}
-		const data = await response.json()
+		const data = await response.json();
 		if (!data) {
-			throw abortError
+			throw abortError;
 		}
 
-		return data
-	}
+		return data;
+	};
 
 	try {
 		const data = await pRetry(runFetch, {
@@ -41,18 +41,18 @@ export const getContributorsData = async (): Promise<ContributorData[]> => {
 			onFailedAttempt: (error) => {
 				console.log(
 					`getContributorsData Failure: Attempt ${error.attemptNumber} failed. There are ${error.retriesLeft} retries left.`,
-				)
+				);
 			},
-		})
+		});
 
 		return data.map((user: ContributorApiData) => ({
 			login: user.login,
 			url: user.html_url,
 			avatarUrl: user.avatar_url,
-		}))
+		}));
 	} catch (error) {
 		throw new Error(
 			'Failed to fetch contributors. Please try rebuilding the website.',
-		)
+		);
 	}
-}
+};

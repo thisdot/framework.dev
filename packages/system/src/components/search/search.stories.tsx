@@ -1,7 +1,7 @@
-import { type Story, type Meta } from '@storybook/react'
-import { fullscreen } from '../../styles/layouts.css'
-import { exampleSearchData } from '../../util/example-content'
-import { Search as SearchComponent, type SearchProps } from './search'
+import { type Story, type Meta } from '@storybook/react';
+import { fullscreen } from '../../styles/layouts.css';
+import { exampleSearchData } from '../../util/example-content';
+import { Search as SearchComponent, type SearchProps } from './search';
 
 export default {
 	title: 'Search/Search',
@@ -19,12 +19,12 @@ export default {
 			tag: [],
 		},
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<SearchProps> = (args) => (
 	<div className={fullscreen}>
 		<SearchComponent {...args} />
 	</div>
-)
+);
 
-export const Search = Template.bind({})
+export const Search = Template.bind({});

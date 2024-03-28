@@ -1,5 +1,5 @@
-import { type Story, type Meta } from '@storybook/react'
-import { Chip as ChipComponent, type ChipProps } from './chip'
+import { type Story, type Meta } from '@storybook/react';
+import { Chip as ChipComponent, type ChipProps } from './chip';
 
 export default {
 	title: 'Chip',
@@ -7,8 +7,8 @@ export default {
 	args: {
 		children: 'Hello world',
 	},
-} as Meta
+} as Meta;
 
-const Template: Story<ChipProps> = (args) => <ChipComponent {...args} />
+const Template: Story<ChipProps> = (args) => <ChipComponent {...args} />;
 
-export const Chip = Template.bind({})
+export const Chip = Template.bind({});

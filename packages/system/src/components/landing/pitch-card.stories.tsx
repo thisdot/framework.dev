@@ -1,8 +1,8 @@
-import { type Story, type Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react';
 import {
 	PitchCard as PitchCardComponent,
 	type PitchCardProps,
-} from './pitch-card'
+} from './pitch-card';
 
 export default {
 	title: 'Landing/Pitch Card',
@@ -10,7 +10,7 @@ export default {
 	args: {
 		children: 'Hello world',
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<PitchCardProps> = (args) => (
 	<PitchCardComponent
@@ -21,6 +21,6 @@ const Template: Story<PitchCardProps> = (args) => (
 		}}
 		imageUrl="/pitch-image-1.png"
 	/>
-)
+);
 
-export const PitchCard = Template.bind({})
+export const PitchCard = Template.bind({});

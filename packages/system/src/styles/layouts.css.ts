@@ -1,5 +1,5 @@
-import { style } from '@vanilla-extract/css'
-import { breakpoints, sprinkles } from '../sprinkles/sprinkles.css'
+import { style } from '@vanilla-extract/css';
+import { breakpoints, sprinkles } from '../sprinkles/sprinkles.css';
 
 export const bodyWithNav = style({
 	display: 'grid',
@@ -16,15 +16,15 @@ export const bodyWithNav = style({
 			gridTemplateRows: '1fr',
 		},
 	},
-})
+});
 
-export const shrinkable = style({ minHeight: 0 })
+export const shrinkable = style({ minHeight: 0 });
 
-export const scrollable = style({ overflow: 'auto' })
+export const scrollable = style({ overflow: 'auto' });
 
 export const fullscreen = style({
 	height: '100vh',
-})
+});
 
 export const landingBody = style([
 	sprinkles({
@@ -35,4 +35,4 @@ export const landingBody = style([
 		maxWidth: 1080,
 		margin: '0 auto',
 	},
-])
+]);

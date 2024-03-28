@@ -1,5 +1,5 @@
-import { type Meta, type Story } from '@storybook/react'
-import { Button as ButtonComponent, type ButtonProps } from './button'
+import { type Meta, type Story } from '@storybook/react';
+import { Button as ButtonComponent, type ButtonProps } from './button';
 
 export default {
 	title: 'Button',
@@ -26,14 +26,14 @@ export default {
 			control: { type: 'radio' },
 		},
 	},
-} as Meta
+} as Meta;
 
-const Template: Story<ButtonProps> = (args) => <ButtonComponent {...args} />
+const Template: Story<ButtonProps> = (args) => <ButtonComponent {...args} />;
 
-export const Button = Template.bind({})
+export const Button = Template.bind({});
 
 Button.parameters = {
 	percy: {
 		additionalSnapshots: [{ suffix: ' as anchor', args: { as: 'a' } }],
 	},
-}
+};

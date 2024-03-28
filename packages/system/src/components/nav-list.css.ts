@@ -1,13 +1,13 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../sprinkles/sprinkles.css'
-import { pxToRem } from '../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../sprinkles/sprinkles.css';
+import { pxToRem } from '../util/style-utils';
 
 export const navListItemStyle = style([
 	sprinkles({
 		// Put sprinkles here
 	}),
 	{},
-])
+]);
 
 export const navListStyle = style([
 	sprinkles({
@@ -25,4 +25,4 @@ export const navListStyle = style([
 			},
 		},
 	},
-])
+]);

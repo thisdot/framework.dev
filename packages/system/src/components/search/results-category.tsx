@@ -1,47 +1,47 @@
 /* eslint-disable react/display-name */
-import classNames from 'classnames'
-import React, { useEffect, useState } from 'react'
-import startCase from 'lodash/startCase'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { BookCard } from '../cards/book-card'
-import { type Book } from '../../models/book'
-import { CommunityCard } from '../cards/community-card'
-import { type Community } from '../../models/community'
-import { CourseCard } from '../cards/course-card'
-import { type Course } from '../../models/course'
-import { LibraryCard } from '../cards/library-card'
-import { type Library } from '../../models/library'
-import { PodcastCard } from '../cards/podcast-card'
-import { type Podcast } from '../../models/podcast'
-import { ToolCard } from '../cards/tool-card'
-import { type Tool } from '../../models/tool'
-import { Counter } from '../counter'
-import { type CategoryName, type Model } from '../../models/all-categories'
-import assertNever from 'assert-never'
-import { type ResourceCardProps } from '../cards/resource-card'
+import classNames from 'classnames';
+import React, { useEffect, useState } from 'react';
+import startCase from 'lodash/startCase';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { BookCard } from '../cards/book-card';
+import { type Book } from '../../models/book';
+import { CommunityCard } from '../cards/community-card';
+import { type Community } from '../../models/community';
+import { CourseCard } from '../cards/course-card';
+import { type Course } from '../../models/course';
+import { LibraryCard } from '../cards/library-card';
+import { type Library } from '../../models/library';
+import { PodcastCard } from '../cards/podcast-card';
+import { type Podcast } from '../../models/podcast';
+import { ToolCard } from '../cards/tool-card';
+import { type Tool } from '../../models/tool';
+import { Counter } from '../counter';
+import { type CategoryName, type Model } from '../../models/all-categories';
+import assertNever from 'assert-never';
+import { type ResourceCardProps } from '../cards/resource-card';
 import {
 	imageFirstCardGrid,
 	titleFirstCardGrid,
-} from '../cards/card-layouts.css'
-import { type Blog } from '../../models/blog'
-import { BlogCard } from '../cards/blog-card'
-import { visuallyHidden } from '../../styles/utilities.css'
-import { useId } from '@reach/auto-id'
-import { BannerTooltip } from '../banner-tooltip'
-import { LocalStorageItems } from '../../models/common'
-import { track } from '../../util/analytics-utils'
+} from '../cards/card-layouts.css';
+import { type Blog } from '../../models/blog';
+import { BlogCard } from '../cards/blog-card';
+import { visuallyHidden } from '../../styles/utilities.css';
+import { useId } from '@reach/auto-id';
+import { BannerTooltip } from '../banner-tooltip';
+import { LocalStorageItems } from '../../models/common';
+import { track } from '../../util/analytics-utils';
 
 export type ResultsCategoryProps<T extends CategoryName> = Omit<
 	React.ComponentPropsWithoutRef<'div'>,
 	'onSelect'
 > & {
-	category: T
-	searchResults: Model<T>[]
-	variant: 'withHeading' | 'bare'
-	onTagClick: (tag: string) => void
-	onSelect?: (item: Model<T>, selected: boolean) => void
-	selectedItems?: Model<T>[]
-}
+	category: T;
+	searchResults: Model<T>[];
+	variant: 'withHeading' | 'bare';
+	onTagClick: (tag: string) => void;
+	onSelect?: (item: Model<T>, selected: boolean) => void;
+	selectedItems?: Model<T>[];
+};
 
 export function ResultsCategory<T extends CategoryName>({
 	category,
@@ -53,25 +53,25 @@ export function ResultsCategory<T extends CategoryName>({
 	selectedItems = [],
 	...props
 }: ResultsCategoryProps<T>) {
-	const [showBannerTooltip, setShowBannerTooltip] = useState<boolean>(false)
-	const headerId = useId()
+	const [showBannerTooltip, setShowBannerTooltip] = useState<boolean>(false);
+	const headerId = useId();
 
 	const layout = ['books', 'communities', 'podcasts'].includes(category)
 		? imageFirstCardGrid
-		: titleFirstCardGrid
+		: titleFirstCardGrid;
 
 	useEffect(() => {
 		// Libraries are comparable only if they have a valid package
 		const isComparable =
 			category === 'libraries' &&
-			results.some((model) => !!(model as Library).package)
+			results.some((model) => !!(model as Library).package);
 
 		setShowBannerTooltip(
 			results.length > 0 &&
 				isComparable &&
 				!localStorage.getItem(LocalStorageItems.CompareToolTip),
-		)
-	}, [category, results])
+		);
+	}, [category, results]);
 
 	switch (variant) {
 		case 'bare':
@@ -80,8 +80,8 @@ export function ResultsCategory<T extends CategoryName>({
 					{showBannerTooltip && (
 						<BannerTooltip
 							onClick={() => {
-								setShowBannerTooltip(false)
-								localStorage.setItem(LocalStorageItems.CompareToolTip, 'true')
+								setShowBannerTooltip(false);
+								localStorage.setItem(LocalStorageItems.CompareToolTip, 'true');
 							}}
 							pitchText={{
 								highlightedText: 'Compare and select libraries',
@@ -122,7 +122,7 @@ export function ResultsCategory<T extends CategoryName>({
 						)}
 					</div>
 				</div>
-			)
+			);
 		case 'withHeading':
 			return (
 				<div
@@ -166,24 +166,24 @@ export function ResultsCategory<T extends CategoryName>({
 						)}
 					</div>
 				</div>
-			)
+			);
 		default:
-			assertNever(variant)
+			assertNever(variant);
 	}
 }
 
 type RenderCardFn<T extends CategoryName> = (
 	value: Model<T>,
 	index: number,
-) => JSX.Element
+) => JSX.Element;
 
 type RenderCardProps<T extends CategoryName> = {
-	headingTag: ResourceCardProps['headingTag']
-	category: T
-	selectedItems: Model<T>[]
-	onTagClick: (tag: string) => void
-	onSelect?: (item: Model<T>, selected: boolean) => void
-}
+	headingTag: ResourceCardProps['headingTag'];
+	category: T;
+	selectedItems: Model<T>[];
+	onTagClick: (tag: string) => void;
+	onSelect?: (item: Model<T>, selected: boolean) => void;
+};
 
 function renderCard<T extends CategoryName>({
 	category,
@@ -195,19 +195,19 @@ function renderCard<T extends CategoryName>({
 		case 'books':
 			return ((record: Book<string>, index: number) => (
 				<BookCard key={index} book={record} {...props} />
-			)) as RenderCardFn<T>
+			)) as RenderCardFn<T>;
 		case 'blogs':
 			return ((record: Blog<string>, index: number) => (
 				<BlogCard key={index} blog={record} {...props} />
-			)) as RenderCardFn<T>
+			)) as RenderCardFn<T>;
 		case 'communities':
 			return ((record: Community<string>, index: number) => (
 				<CommunityCard key={index} community={record} {...props} />
-			)) as RenderCardFn<T>
+			)) as RenderCardFn<T>;
 		case 'courses':
 			return ((record: Course<string>, index: number) => (
 				<CourseCard key={index} course={record} {...props} />
-			)) as RenderCardFn<T>
+			)) as RenderCardFn<T>;
 		case 'libraries':
 			return ((record: Library, index: number) => (
 				<LibraryCard
@@ -218,24 +218,24 @@ function renderCard<T extends CategoryName>({
 						((selected) => {
 							track(`resource_compare_${selected ? 'add' : 'remove'}`, {
 								resource_name: record.name,
-							})
-							onSelect(record as Model<T>, selected)
+							});
+							onSelect(record as Model<T>, selected);
 						})
 					}
 					selected={selectedItems.includes(record as Model<T>)}
 					{...props}
 				/>
-			)) as RenderCardFn<T>
+			)) as RenderCardFn<T>;
 		case 'podcasts':
 			return ((record: Podcast<string>, index: number) => (
 				<PodcastCard key={index} podcast={record} {...props} />
-			)) as RenderCardFn<T>
+			)) as RenderCardFn<T>;
 		case 'tools':
 			return ((record: Tool<string>, index: number) => (
 				<ToolCard key={index} tool={record} {...props} />
-			)) as RenderCardFn<T>
+			)) as RenderCardFn<T>;
 		default:
-			return assertNever(category)
+			return assertNever(category);
 	}
 }
 
@@ -244,8 +244,8 @@ function ResultsCategoryHeader({
 	numberOfResults,
 	...props
 }: React.ComponentPropsWithoutRef<'header'> & {
-	category: string
-	numberOfResults: number
+	category: string;
+	numberOfResults: number;
 }) {
 	return (
 		<header
@@ -269,5 +269,5 @@ function ResultsCategoryHeader({
 			</h2>
 			<Counter size="small">{numberOfResults}</Counter>
 		</header>
-	)
+	);
 }

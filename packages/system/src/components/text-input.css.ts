@@ -1,7 +1,7 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../sprinkles/sprinkles.css'
-import { vars } from '../themes/themes.css'
-import { pxToRem } from '../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../sprinkles/sprinkles.css';
+import { vars } from '../themes/themes.css';
+import { pxToRem } from '../util/style-utils';
 
 export const textInputContainerStyle = style([
 	sprinkles({
@@ -11,7 +11,7 @@ export const textInputContainerStyle = style([
 	{
 		flexDirection: 'column-reverse',
 	},
-])
+]);
 
 export const textInputLabelStyle = style([
 	sprinkles({
@@ -26,7 +26,7 @@ export const textInputLabelStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const textInputBoxStyle = style([
 	sprinkles({
@@ -58,4 +58,4 @@ export const textInputBoxStyle = style([
 				},
 		},
 	},
-])
+]);

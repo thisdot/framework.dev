@@ -1,6 +1,6 @@
-import { style } from '@vanilla-extract/css'
-import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css'
-import { pxToRem } from '../../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css';
+import { pxToRem } from '../../util/style-utils';
 
 export const linkCardStyle = style([
 	sprinkles({
@@ -47,7 +47,7 @@ export const linkCardStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const linkCardIndicatorIconStyle = style([
 	sprinkles({
@@ -69,7 +69,7 @@ export const linkCardIndicatorIconStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const linkCardIconContainerStyle = style([
 	sprinkles({
@@ -83,7 +83,7 @@ export const linkCardIconContainerStyle = style([
 		position: 'relative',
 		width: pxToRem(56),
 	},
-])
+]);
 
 export const linkCardRawIconContainerStyle = style([
 	{
@@ -92,7 +92,7 @@ export const linkCardRawIconContainerStyle = style([
 		position: 'relative',
 		width: pxToRem(56),
 	},
-])
+]);
 
 export const linkCardIconStyle = style([
 	sprinkles({
@@ -106,7 +106,7 @@ export const linkCardIconStyle = style([
 		width: '50%',
 		maxWidth: '50%',
 	},
-])
+]);
 
 export const linkCardTitleStyle = style([
 	sprinkles({
@@ -116,4 +116,4 @@ export const linkCardTitleStyle = style([
 	{
 		color: 'var(--link-card-color-theme)',
 	},
-])
+]);

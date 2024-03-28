@@ -1,6 +1,6 @@
-import { type Story, type Meta } from '@storybook/react'
-import { InteractiveIcon } from '../icons/interactive-icon'
-import { Tooltip as TooltipComponent, type TooltipProps } from './tooltip'
+import { type Story, type Meta } from '@storybook/react';
+import { InteractiveIcon } from '../icons/interactive-icon';
+import { Tooltip as TooltipComponent, type TooltipProps } from './tooltip';
 
 export default {
 	title: 'Tooltip',
@@ -15,7 +15,7 @@ export default {
 			control: 'inline-radio',
 		},
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<TooltipProps> = (args) => (
 	<div
@@ -30,6 +30,6 @@ const Template: Story<TooltipProps> = (args) => (
 			<InteractiveIcon />
 		</TooltipComponent>
 	</div>
-)
+);
 
-export const Tooltip = Template.bind({})
+export const Tooltip = Template.bind({});

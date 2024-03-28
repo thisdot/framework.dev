@@ -1,4 +1,4 @@
-import { type ColorPalette } from './theme-from-palette'
+import { type ColorPalette } from './theme-from-palette';
 
 export const solidJSColorPalette: ColorPalette = {
 	highlight: '#2c4f7c',
@@ -81,4 +81,4 @@ export const solidJSColorPalette: ColorPalette = {
 	error20: '#680003',
 	error10: '#410001',
 	error0: '#000000',
-}
+};

@@ -1,10 +1,10 @@
-import { type Story, type Meta } from '@storybook/react'
-import { useState } from 'react'
-import { Button } from './button'
+import { type Story, type Meta } from '@storybook/react';
+import { useState } from 'react';
+import { Button } from './button';
 import {
 	SideDialog as SideDialogComponent,
 	type SideDialogProps,
-} from './side-dialog'
+} from './side-dialog';
 
 export default {
 	title: 'Side Dialog',
@@ -20,10 +20,10 @@ export default {
 			control: 'radio',
 		},
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<SideDialogProps> = (args) => {
-	const [open, setOpen] = useState(false)
+	const [open, setOpen] = useState(false);
 	return (
 		<>
 			<Button as="button" onClick={() => setOpen(true)}>
@@ -35,7 +35,7 @@ const Template: Story<SideDialogProps> = (args) => {
 				onDismiss={() => setOpen(false)}
 			/>
 		</>
-	)
-}
+	);
+};
 
-export const SideDialog = Template.bind({})
+export const SideDialog = Template.bind({});

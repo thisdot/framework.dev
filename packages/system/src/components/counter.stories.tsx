@@ -1,5 +1,5 @@
-import { type Story, type Meta } from '@storybook/react'
-import { Counter as CounterComponent, type CounterProps } from './counter'
+import { type Story, type Meta } from '@storybook/react';
+import { Counter as CounterComponent, type CounterProps } from './counter';
 
 export default {
 	title: 'Counter',
@@ -10,12 +10,12 @@ export default {
 			control: { type: 'radio' },
 		},
 	},
-} as Meta
+} as Meta;
 
-const Template: Story<CounterProps> = (args) => <CounterComponent {...args} />
+const Template: Story<CounterProps> = (args) => <CounterComponent {...args} />;
 
-export const Counter = Template.bind({})
+export const Counter = Template.bind({});
 
 Counter.args = {
 	children: '16',
-}
+};

@@ -1,4 +1,4 @@
-import { type ColorPalette } from './theme-from-palette'
+import { type ColorPalette } from './theme-from-palette';
 
 export const graphqlColorPalette: ColorPalette = {
 	highlight: '#E10098',
@@ -81,4 +81,4 @@ export const graphqlColorPalette: ColorPalette = {
 	error20: '#690005',
 	error10: '#410002',
 	error0: '#000000',
-}
+};

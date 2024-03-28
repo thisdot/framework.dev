@@ -1,22 +1,22 @@
-import { type Course, courseIndexMetadata } from '../models/course'
-import { type Library, libraryIndexMetadata } from '../models/library'
-import { type Book, bookIndexMetadata } from '../models/book'
-import { type Podcast, podcastIndexMetadata } from '../models/podcast'
-import { type Community, communityIndexMetadata } from '../models/community'
-import { type Company } from '../models/company'
-import { type CodeExample } from '../models/code-example'
-import { type Tool, toolIndexMetadata } from '../models/tool'
-import { type AllCategories } from '../models/all-categories'
-import { type Blog, blogIndexMetadata } from '../models/blog'
-import { LibraryTag } from '../models/library-tag'
+import { type Course, courseIndexMetadata } from '../models/course';
+import { type Library, libraryIndexMetadata } from '../models/library';
+import { type Book, bookIndexMetadata } from '../models/book';
+import { type Podcast, podcastIndexMetadata } from '../models/podcast';
+import { type Community, communityIndexMetadata } from '../models/community';
+import { type Company } from '../models/company';
+import { type CodeExample } from '../models/code-example';
+import { type Tool, toolIndexMetadata } from '../models/tool';
+import { type AllCategories } from '../models/all-categories';
+import { type Blog, blogIndexMetadata } from '../models/blog';
+import { LibraryTag } from '../models/library-tag';
 
 export const exampleTags = [
 	'accessibility',
 	'state management',
 	'redux',
-] as const
+] as const;
 
-export type ExampleTag = (typeof exampleTags)[number]
+export type ExampleTag = (typeof exampleTags)[number];
 
 export const exampleCourses: Course<ExampleTag>[] = [
 	{
@@ -55,7 +55,7 @@ export const exampleCourses: Course<ExampleTag>[] = [
 		href: 'https://codewithmosh.com/p/mastering-react',
 		tags: ['state management'],
 	},
-]
+];
 
 export const exampleLibraries: Library[] = [
 	{
@@ -737,7 +737,7 @@ export const exampleLibraries: Library[] = [
 		description: 'A general purpose internationalization library in 298 bytes',
 		language: 'JavaScript',
 	},
-]
+];
 
 export const exampleBooks: Book<string>[] = [
 	{
@@ -777,7 +777,7 @@ export const exampleBooks: Book<string>[] = [
 		description:
 			'Randy Waterhouse spearheads a movement to create a safe haven for data in a world where information equals power and big business and government seek to control the flow of knowledge.',
 	},
-]
+];
 
 export const examplePodcasts: Podcast<string>[] = [
 	{
@@ -810,7 +810,7 @@ export const examplePodcasts: Podcast<string>[] = [
 		tags: ['react'],
 		href: 'https://devchat.tv/podcasts/react-round-up/',
 	},
-]
+];
 
 export const exampleCommunities: Community<string>[] = [
 	{
@@ -841,7 +841,7 @@ export const exampleCommunities: Community<string>[] = [
 		tags: ['graphQL'],
 		href: 'https://duckduckgo.com',
 	},
-]
+];
 
 export const exampleCompanies: Company<'consultancy'>[] = [
 	{
@@ -853,7 +853,7 @@ export const exampleCompanies: Company<'consultancy'>[] = [
 		href: 'https://labs.thisdot.co',
 		tags: ['consultancy'],
 	},
-]
+];
 
 export const exampleCodeExamples: CodeExample<ExampleTag>[] = [
 	{
@@ -863,7 +863,7 @@ export const exampleCodeExamples: CodeExample<ExampleTag>[] = [
 		href: 'https://codesandbox.io/s/un8my',
 		tags: ['redux', 'state management'],
 	},
-]
+];
 
 export const exampleTools: Tool<string>[] = [
 	{
@@ -874,7 +874,7 @@ export const exampleTools: Tool<string>[] = [
 		tags: ['Data Visualization', 'Web3', 'Hooks'],
 		href: 'https://dogecoin.com/',
 	},
-]
+];
 
 export const exampleBlogs: Blog<ExampleTag>[] = [
 	{
@@ -903,7 +903,7 @@ export const exampleBlogs: Blog<ExampleTag>[] = [
 		href: 'https://www.robinwieruch.de/categories/react/',
 		tags: [],
 	},
-]
+];
 
 export const exampleSearchData: AllCategories[] = [
 	{
@@ -948,4 +948,4 @@ export const exampleSearchData: AllCategories[] = [
 		name: toolIndexMetadata.name,
 		tags: exampleTags,
 	},
-]
+];

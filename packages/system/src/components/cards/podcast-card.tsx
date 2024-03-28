@@ -1,5 +1,5 @@
-import { type Podcast } from '../../models/podcast'
-import { ResourceCard, type ResourceCardProps } from './resource-card'
+import { type Podcast } from '../../models/podcast';
+import { ResourceCard, type ResourceCardProps } from './resource-card';
 
 export type PodcastCardProps = Omit<
 	ResourceCardProps,
@@ -13,9 +13,9 @@ export type PodcastCardProps = Omit<
 	| 'attributes'
 	| 'children'
 > & {
-	podcast: Podcast<string>
-	lastPublishedDate?: string
-}
+	podcast: Podcast<string>;
+	lastPublishedDate?: string;
+};
 
 export function PodcastCard({ podcast, ...props }: PodcastCardProps) {
 	return (
@@ -30,5 +30,5 @@ export function PodcastCard({ podcast, ...props }: PodcastCardProps) {
 		>
 			{podcast.description}
 		</ResourceCard>
-	)
+	);
 }

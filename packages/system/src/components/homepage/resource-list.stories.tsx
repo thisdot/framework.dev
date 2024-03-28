@@ -1,9 +1,9 @@
-import { type Story, type Meta } from '@storybook/react'
-import { exampleBlogs } from '../../util/example-content'
+import { type Story, type Meta } from '@storybook/react';
+import { exampleBlogs } from '../../util/example-content';
 import {
 	ResourceList as ResourceListComponent,
 	type ResourceListProps,
-} from './resource-list'
+} from './resource-list';
 
 export default {
 	title: 'Resource List',
@@ -18,13 +18,13 @@ export default {
 				metadata: blog.author,
 				href: blog.href,
 				description: blog.description,
-			}
+			};
 		}),
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<ResourceListProps> = (args) => (
 	<ResourceListComponent {...args} />
-)
+);
 
-export const ResourceList = Template.bind({})
+export const ResourceList = Template.bind({});

@@ -8,4 +8,4 @@ export const hasFieldEqualToValue = <
 	subject: T,
 	fieldName: string | number | symbol,
 	fieldValue: unknown,
-): boolean => subject[fieldName] === fieldValue
+): boolean => subject[fieldName] === fieldValue;

@@ -1,12 +1,12 @@
-import { type Story, type Meta } from '@storybook/react'
-import { useRef, useState } from 'react'
-import { Button } from './button'
+import { type Story, type Meta } from '@storybook/react';
+import { useRef, useState } from 'react';
+import { Button } from './button';
 import {
 	InfoPopup as InfoPopupComponent,
 	type InfoPopupProps,
-} from './info-popup'
+} from './info-popup';
 
-const alignmentOptions = ['center', 'start', 'end']
+const alignmentOptions = ['center', 'start', 'end'];
 export default {
 	title: 'Info Popup',
 	component: InfoPopupComponent,
@@ -26,16 +26,16 @@ export default {
 			control: 'inline-radio',
 		},
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<
 	InfoPopupProps & {
-		alignItems: (typeof alignmentOptions)[number]
-		justifyItems: (typeof alignmentOptions)[number]
+		alignItems: (typeof alignmentOptions)[number];
+		justifyItems: (typeof alignmentOptions)[number];
 	}
 > = ({ alignItems, justifyItems, ...args }) => {
-	const [open, setOpen] = useState(false)
-	const targetRef = useRef<HTMLButtonElement | null>(null)
+	const [open, setOpen] = useState(false);
+	const targetRef = useRef<HTMLButtonElement | null>(null);
 	return (
 		<div
 			style={{
@@ -56,7 +56,7 @@ const Template: Story<
 				onDismiss={() => setOpen(false)}
 			/>
 		</div>
-	)
-}
+	);
+};
 
-export const InfoPopup = Template.bind({})
+export const InfoPopup = Template.bind({});

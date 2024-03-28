@@ -1,7 +1,7 @@
-import classNames from 'classnames'
-import React from 'react'
-import { iconStyle } from './icon.css'
-import { type IconProps } from './shared-icon-types'
+import classNames from 'classnames';
+import React from 'react';
+import { iconStyle } from './icon.css';
+import { type IconProps } from './shared-icon-types';
 
 export const SolidJSIcon = React.forwardRef<SVGSVGElement, IconProps>(
 	function SolidJSIcon({ className, size, ...props }, ref) {
@@ -91,6 +91,6 @@ export const SolidJSIcon = React.forwardRef<SVGSVGElement, IconProps>(
 					fill="url(#d)"
 				/>
 			</svg>
-		)
+		);
 	},
-)
+);

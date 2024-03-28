@@ -1,12 +1,12 @@
-import { type Story, type Meta } from '@storybook/react'
-import { useState } from 'react'
-import { bodyWithNav } from '../styles/layouts.css'
-import { NavItem } from './nav-item'
+import { type Story, type Meta } from '@storybook/react';
+import { useState } from 'react';
+import { bodyWithNav } from '../styles/layouts.css';
+import { NavItem } from './nav-item';
 import {
 	NavList as NavListComponent,
 	type NavListProps,
 	NavListItem,
-} from './nav-list'
+} from './nav-list';
 
 export default {
 	title: 'Nav List',
@@ -14,11 +14,11 @@ export default {
 	args: {
 		children: 'Hello world',
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<NavListProps> = (args) => {
-	const [current, setCurrent] = useState<string | null>(null)
-	const isCurrent = (name: string) => (name === current ? 'page' : undefined)
+	const [current, setCurrent] = useState<string | null>(null);
+	const isCurrent = (name: string) => (name === current ? 'page' : undefined);
 	return (
 		<div className={bodyWithNav}>
 			<NavListComponent {...args}>
@@ -140,7 +140,7 @@ const Template: Story<NavListProps> = (args) => {
 				</NavListItem>
 			</NavListComponent>
 		</div>
-	)
-}
+	);
+};
 
-export const NavList = Template.bind({})
+export const NavList = Template.bind({});

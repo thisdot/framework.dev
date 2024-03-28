@@ -1,24 +1,24 @@
-import { type Story, type Meta } from '@storybook/react'
-import { AngularIcon } from '../../icons/angular-icon'
-import { ReactIcon } from '../../icons/react-icon'
-import { SvelteIcon } from '../../icons/svelte-icon'
-import { VueIcon } from '../../icons/vue-icon'
+import { type Story, type Meta } from '@storybook/react';
+import { AngularIcon } from '../../icons/angular-icon';
+import { ReactIcon } from '../../icons/react-icon';
+import { SvelteIcon } from '../../icons/svelte-icon';
+import { VueIcon } from '../../icons/vue-icon';
 import {
 	LinkCardGroup as LinkCardGroupComponent,
 	type LinkCardGroupProps,
-} from './link-card-group'
-import { DenoIcon } from '../../icons/deno-icon'
+} from './link-card-group';
+import { DenoIcon } from '../../icons/deno-icon';
 
 export default {
 	title: 'Landing/Link Card Group',
 	component: LinkCardGroupComponent,
-} as Meta
+} as Meta;
 
 const Template: Story<LinkCardGroupProps> = (args) => (
 	<LinkCardGroupComponent {...args} />
-)
+);
 
-export const LinkCardGroup = Template.bind({})
+export const LinkCardGroup = Template.bind({});
 
 LinkCardGroup.args = {
 	cards: [
@@ -26,7 +26,7 @@ LinkCardGroup.args = {
 			title: 'Angular Resources',
 			href: 'https://angular.framework.dev/',
 			Icon(props) {
-				return <AngularIcon {...props} />
+				return <AngularIcon {...props} />;
 			},
 			backgroundColor: '#C3002F',
 		},
@@ -34,7 +34,7 @@ LinkCardGroup.args = {
 			title: 'React Resources',
 			href: 'https://react.framework.dev/',
 			Icon(props) {
-				return <ReactIcon {...props} />
+				return <ReactIcon {...props} />;
 			},
 			backgroundColor: '#00BCDA',
 		},
@@ -42,7 +42,7 @@ LinkCardGroup.args = {
 			title: 'Vue Resources',
 			href: 'https://vue.framework.dev/',
 			Icon(props) {
-				return <VueIcon {...props} />
+				return <VueIcon {...props} />;
 			},
 			backgroundColor: '#41B883',
 			bigSize: true,
@@ -51,7 +51,7 @@ LinkCardGroup.args = {
 			title: 'Svelte Resources',
 			href: 'https://svelte.framework.dev/',
 			Icon(props) {
-				return <SvelteIcon {...props} />
+				return <SvelteIcon {...props} />;
 			},
 			backgroundColor: '#FF3E00',
 		},
@@ -59,9 +59,9 @@ LinkCardGroup.args = {
 			title: 'Deno Resources',
 			href: 'https://deno.framework.dev/',
 			Icon(props) {
-				return <DenoIcon {...props} />
+				return <DenoIcon {...props} />;
 			},
 			backgroundColor: '#12124B',
 		},
 	],
-}
+};

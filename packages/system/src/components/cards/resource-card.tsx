@@ -1,12 +1,12 @@
-import classNames from 'classnames'
-import React, { useRef, useState, type ReactNode } from 'react'
-import { type AttributeDefinition } from '../../models/all-categories'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { formatFieldValue } from '../../util/string-utils'
-import { CardDivider } from '../card-divider'
-import { CardSelector } from './card-selector'
-import { DiscreteAttribute } from '../discrete-attribute'
-import { InfoPopup } from '../info-popup'
+import classNames from 'classnames';
+import React, { useRef, useState, type ReactNode } from 'react';
+import { type AttributeDefinition } from '../../models/all-categories';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { formatFieldValue } from '../../util/string-utils';
+import { CardDivider } from '../card-divider';
+import { CardSelector } from './card-selector';
+import { DiscreteAttribute } from '../discrete-attribute';
+import { InfoPopup } from '../info-popup';
 import {
 	resourceCardBodyStyle,
 	resourceCardBookImageDecoration,
@@ -19,32 +19,32 @@ import {
 	resourceCardTitleContainerStyle,
 	resourceCardTitleStyle,
 	resourceCardFooterItemsRowStyle,
-} from './resource-card.css'
-import { Tag } from '../tag'
-import { useId } from '@reach/auto-id'
-import { BookDecorator } from '../book-decorator'
+} from './resource-card.css';
+import { Tag } from '../tag';
+import { useId } from '@reach/auto-id';
+import { BookDecorator } from '../book-decorator';
 
 export interface ResourceCardProps
 	extends Omit<
 		React.ComponentPropsWithoutRef<'article'>,
 		'onSelect' | 'title'
 	> {
-	headingTag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
-	title: React.ReactNode
-	subtitle: React.ReactNode
-	badges?: React.ReactNode
-	image?: string
-	attributes?: AttributeDefinition[]
-	layout?: 'titleFirst' | 'imageFirst'
-	imageLayout?: 'logo' | 'book'
-	darkImageBackground?: boolean
-	href: string
-	tags: string[]
-	selected?: boolean
-	allowSelection?: boolean
-	onTitleClick?: () => void
-	onSelect?: (selected: boolean) => void
-	onTagClick: (tag: string) => void
+	headingTag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+	title: React.ReactNode;
+	subtitle: React.ReactNode;
+	badges?: React.ReactNode;
+	image?: string;
+	attributes?: AttributeDefinition[];
+	layout?: 'titleFirst' | 'imageFirst';
+	imageLayout?: 'logo' | 'book';
+	darkImageBackground?: boolean;
+	href: string;
+	tags: string[];
+	selected?: boolean;
+	allowSelection?: boolean;
+	onTitleClick?: () => void;
+	onSelect?: (selected: boolean) => void;
+	onTagClick: (tag: string) => void;
 }
 
 export function ResourceCard({
@@ -68,12 +68,12 @@ export function ResourceCard({
 	onTagClick,
 	...props
 }: ResourceCardProps) {
-	const maxTags = maxTagsByLayout[layout]
-	const visibleTags = tags.length > maxTags ? tags.slice(0, maxTags - 1) : tags
-	const tagsInPopup = tags.length > maxTags ? tags.slice(maxTags - 1) : []
-	const [popupOpen, setPopupOpen] = useState(false)
-	const popupButtonRef = useRef(null)
-	const titleId = useId()
+	const maxTags = maxTagsByLayout[layout];
+	const visibleTags = tags.length > maxTags ? tags.slice(0, maxTags - 1) : tags;
+	const tagsInPopup = tags.length > maxTags ? tags.slice(maxTags - 1) : [];
+	const [popupOpen, setPopupOpen] = useState(false);
+	const popupButtonRef = useRef(null);
+	const titleId = useId();
 	return (
 		<article
 			aria-labelledby={titleId}
@@ -114,9 +114,9 @@ export function ResourceCard({
 					<CardSelector
 						checked={selected}
 						onChange={(e) => {
-							e.stopPropagation()
+							e.stopPropagation();
 
-							return onSelect(e.target.checked)
+							return onSelect(e.target.checked);
 						}}
 					/>
 				)}
@@ -196,18 +196,18 @@ export function ResourceCard({
 				</div>
 			</footer>
 		</article>
-	)
+	);
 }
 
 export const BookImageDecoration: React.FunctionComponent<{
-	children: ReactNode
+	children: ReactNode;
 }> = ({ children }) => (
 	<BookDecorator className={resourceCardBookImageDecoration}>
 		{children}
 	</BookDecorator>
-)
+);
 
 const maxTagsByLayout = {
 	titleFirst: 3,
 	imageFirst: 2,
-}
+};

@@ -1,31 +1,31 @@
-import { getCollection, type CollectionEntry } from 'astro:content'
-import { type AllCategories } from '@framework/system/src/models/all-categories'
-import { blogIndexMetadata } from '@framework/system/src/models/blog'
-import { bookIndexMetadata } from '@framework/system/src/models/book'
-import { communityIndexMetadata } from '@framework/system/src/models/community'
-import { courseIndexMetadata } from '@framework/system/src/models/course'
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { type AllCategories } from '@framework/system/src/models/all-categories';
+import { blogIndexMetadata } from '@framework/system/src/models/blog';
+import { bookIndexMetadata } from '@framework/system/src/models/book';
+import { communityIndexMetadata } from '@framework/system/src/models/community';
+import { courseIndexMetadata } from '@framework/system/src/models/course';
 import {
 	type Library,
 	libraryIndexMetadata,
-} from '@framework/system/src/models/library'
-import { podcastIndexMetadata } from '@framework/system/src/models/podcast'
-import { toolIndexMetadata } from '@framework/system/src/models/tool'
-import { getTagsByType } from '@framework/site/src/utils/tags'
+} from '@framework/system/src/models/library';
+import { podcastIndexMetadata } from '@framework/system/src/models/podcast';
+import { toolIndexMetadata } from '@framework/system/src/models/tool';
+import { getTagsByType } from '@framework/site/src/utils/tags';
 import {
 	type CollectionTypes,
 	type Frameworks,
-} from '@framework/site/src/types'
+} from '@framework/site/src/types';
 
 async function getCollectionData(collectionName: CollectionTypes) {
 	const collectionData = await getCollection(
 		`${import.meta.env.VITE_FRAMEWORK}-${collectionName}`,
-	)
+	);
 	return (collectionData ?? []).map(
 		(entry: CollectionEntry<typeof collectionName>) => ({
 			id: entry.id,
 			...entry.data,
 		}),
-	)
+	);
 }
 
 export async function getSearchData(
@@ -40,7 +40,7 @@ export async function getSearchData(
 			getCollectionData('libraries'),
 			getCollectionData('podcasts'),
 			getCollectionData('tools'),
-		])
+		]);
 
 	return [
 		{
@@ -89,5 +89,5 @@ export async function getSearchData(
 			name: blogIndexMetadata.name,
 			tags: getTagsByType('blogs', framework),
 		},
-	]
+	];
 }

@@ -1,7 +1,7 @@
-import classNames from 'classnames'
-import React from 'react'
-import { iconStyle } from './icon.css'
-import { type IconProps } from './shared-icon-types'
+import classNames from 'classnames';
+import React from 'react';
+import { iconStyle } from './icon.css';
+import { type IconProps } from './shared-icon-types';
 
 export const GraphQLIcon = React.forwardRef<SVGSVGElement, IconProps>(
 	function GraphQLIcon({ className, size, ...props }, ref) {
@@ -30,6 +30,6 @@ export const GraphQLIcon = React.forwardRef<SVGSVGElement, IconProps>(
 					</clipPath>
 				</defs>
 			</svg>
-		)
+		);
 	},
-)
+);

@@ -5,7 +5,7 @@ export type CollectionTypes =
 	| 'courses'
 	| 'libraries'
 	| 'podcasts'
-	| 'tools'
+	| 'tools';
 
 export type Frameworks =
 	| 'angular'
@@ -16,4 +16,4 @@ export type Frameworks =
 	| 'react'
 	| 'solidjs'
 	| 'svelte'
-	| 'vue'
+	| 'vue';

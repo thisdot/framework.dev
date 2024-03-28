@@ -1,20 +1,20 @@
-import classNames from 'classnames'
-import React, { useEffect, useMemo, useRef, useState } from 'react'
-import Fuse from 'fuse.js'
+import classNames from 'classnames';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import Fuse from 'fuse.js';
 import {
 	compareBarStyle,
 	searchContainerStyle,
 	searchStyle,
-} from './search.css'
+} from './search.css';
 import {
 	type AllCategories,
 	type AllModelsByName,
-} from '../../models/all-categories'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { FilterMenu } from './filter-menu'
-import { SideDialog } from '../side-dialog'
-import { Button } from '../button'
-import { ResultsCategory, type ResultsCategoryProps } from './results-category'
+} from '../../models/all-categories';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { FilterMenu } from './filter-menu';
+import { SideDialog } from '../side-dialog';
+import { Button } from '../button';
+import { ResultsCategory, type ResultsCategoryProps } from './results-category';
 import {
 	calculateAvailableFilters,
 	emptyFilterSet,
@@ -22,27 +22,27 @@ import {
 	isEmptyFilterSet,
 	parseQueryString,
 	serializeQueryParams,
-} from './query-util'
-import { track } from '../../util/analytics-utils'
-import { SearchAutocomplete } from './search-autocomplete'
-import { FilterIcon } from '../../icons/filter-icon'
-import { type FilterSet, type QueryParams } from './types'
-import uniq from 'lodash/uniq'
-import map from 'lodash/map'
-import sortBy from 'lodash/sortBy'
-import take from 'lodash/take'
-import without from 'lodash/without'
-import { type Library } from '../../models/library'
-import { ComparisonTable } from '../comparison-table'
-import { CloseIcon } from '../../icons/close-icon'
-import { ResetIcon } from '../../icons/reset-icon'
-import { AddIcon } from '../../icons/add-icon'
+} from './query-util';
+import { track } from '../../util/analytics-utils';
+import { SearchAutocomplete } from './search-autocomplete';
+import { FilterIcon } from '../../icons/filter-icon';
+import { type FilterSet, type QueryParams } from './types';
+import uniq from 'lodash/uniq';
+import map from 'lodash/map';
+import sortBy from 'lodash/sortBy';
+import take from 'lodash/take';
+import without from 'lodash/without';
+import { type Library } from '../../models/library';
+import { ComparisonTable } from '../comparison-table';
+import { CloseIcon } from '../../icons/close-icon';
+import { ResetIcon } from '../../icons/reset-icon';
+import { AddIcon } from '../../icons/add-icon';
 
 export interface SearchProps extends React.ComponentPropsWithoutRef<'section'> {
-	data: AllCategories[]
-	initialQuery?: string
-	appliedPreFilters?: FilterSet
-	siteName: string
+	data: AllCategories[];
+	initialQuery?: string;
+	appliedPreFilters?: FilterSet;
+	siteName: string;
 }
 
 export function Search({
@@ -53,36 +53,36 @@ export function Search({
 	siteName,
 	...props
 }: SearchProps) {
-	const [query, setQuery] = useState(initialQuery)
-	const [activeQuery, setActiveQuery] = useState(initialQuery)
+	const [query, setQuery] = useState(initialQuery);
+	const [activeQuery, setActiveQuery] = useState(initialQuery);
 	useEffect(() => {
-		const timeout = setTimeout(() => setActiveQuery(query), 500)
+		const timeout = setTimeout(() => setActiveQuery(query), 500);
 		return () => {
-			clearTimeout(timeout)
-		}
-	}, [query])
-	const [selectedLibraries, setSelectedLibraries] = useState<Library[]>([])
-	const [comparisonTableOpen, setComparisonTableOpen] = useState(false)
+			clearTimeout(timeout);
+		};
+	}, [query]);
+	const [selectedLibraries, setSelectedLibraries] = useState<Library[]>([]);
+	const [comparisonTableOpen, setComparisonTableOpen] = useState(false);
 	const availableFilters = useMemo(
 		() => calculateAvailableFilters(data, appliedPreFilters),
 		[data, appliedPreFilters],
-	)
-	const queryParams = parseQueryString(activeQuery, availableFilters)
+	);
+	const queryParams = parseQueryString(activeQuery, availableFilters);
 
 	useEffect(() => {
 		if (isEmptyFilterSet(queryParams.filters) && queryParams.textSearch) {
 			track('search', {
 				search_term: queryParams.textSearch,
-			})
+			});
 		} else if (!isEmptyFilterSet(queryParams.filters)) {
 			track('advanced_search_run', {
 				search_term: queryParams.textSearch,
 				params: queryParams.filters,
-			})
+			});
 		}
-	}, [queryParams])
+	}, [queryParams]);
 
-	const scrollableContainerRef = useRef<null | HTMLDivElement>(null)
+	const scrollableContainerRef = useRef<null | HTMLDivElement>(null);
 	return (
 		<section className={classNames(className, searchStyle)} {...props}>
 			{comparisonTableOpen ? (
@@ -90,8 +90,8 @@ export function Search({
 					selectedLibraries={selectedLibraries}
 					onClose={() => setComparisonTableOpen(false)}
 					onReset={() => {
-						setSelectedLibraries([])
-						setComparisonTableOpen(false)
+						setSelectedLibraries([]);
+						setComparisonTableOpen(false);
 					}}
 				/>
 			) : (
@@ -104,8 +104,8 @@ export function Search({
 							preFilters={appliedPreFilters}
 							value={query}
 							onSubmit={(e) => {
-								e.preventDefault()
-								setActiveQuery(query)
+								e.preventDefault();
+								setActiveQuery(query);
 							}}
 						/>
 						<SearchResults
@@ -120,8 +120,8 @@ export function Search({
 											tag: uniq([...queryParams.filters.tag, tag]),
 										},
 									}),
-								)
-								scrollableContainerRef.current?.scrollTo(0, 0)
+								);
+								scrollableContainerRef.current?.scrollTo(0, 0);
 							}}
 							preFilters={appliedPreFilters}
 							selectedLibraries={selectedLibraries}
@@ -142,17 +142,17 @@ export function Search({
 				</>
 			)}
 		</section>
-	)
+	);
 }
 
 type SearchBarProps = {
-	preFilters: FilterSet
-	availableFilters: FilterSet
-	onChange: (newValue: string) => void
-	onSubmit: React.FormEventHandler<HTMLFormElement>
-	value: string
-	data: AllCategories[]
-}
+	preFilters: FilterSet;
+	availableFilters: FilterSet;
+	onChange: (newValue: string) => void;
+	onSubmit: React.FormEventHandler<HTMLFormElement>;
+	value: string;
+	data: AllCategories[];
+};
 
 function SearchBar({
 	preFilters,
@@ -162,9 +162,9 @@ function SearchBar({
 	value,
 	data,
 }: SearchBarProps) {
-	const [filterMenuOpen, setFilterMenuOpen] = useState(false)
-	const popularTags = useMemo(() => calculatePopularTags(data), [data])
-	const queryParams = parseQueryString(value, availableFilters)
+	const [filterMenuOpen, setFilterMenuOpen] = useState(false);
+	const popularTags = useMemo(() => calculatePopularTags(data), [data]);
+	const queryParams = parseQueryString(value, availableFilters);
 	return (
 		<form
 			role="search"
@@ -194,8 +194,8 @@ function SearchBar({
 					color="tertiary"
 					size="large"
 					onClick={() => {
-						track('advanced_search_open')
-						setFilterMenuOpen(true)
+						track('advanced_search_open');
+						setFilterMenuOpen(true);
 					}}
 				>
 					Advanced <FilterIcon />
@@ -224,24 +224,24 @@ function SearchBar({
 					params={queryParams}
 					availableFilters={availableFilters}
 					onConfirm={(newParams) => {
-						onChange(serializeQueryParams(newParams))
-						setFilterMenuOpen(false)
+						onChange(serializeQueryParams(newParams));
+						setFilterMenuOpen(false);
 					}}
 					popularTags={popularTags}
 				/>
 			</SideDialog>
 		</form>
-	)
+	);
 }
 
 type SearchResultsProps = {
-	queryParams: QueryParams
-	preFilters: FilterSet
-	selectedLibraries: Library[]
-	onLibrarySelect: (newSelection: Library[]) => void
-	onTagClick: (tag: string) => void
-	data: AllCategories[]
-}
+	queryParams: QueryParams;
+	preFilters: FilterSet;
+	selectedLibraries: Library[];
+	onLibrarySelect: (newSelection: Library[]) => void;
+	onTagClick: (tag: string) => void;
+	data: AllCategories[];
+};
 
 function SearchResults({
 	queryParams,
@@ -252,7 +252,7 @@ function SearchResults({
 	data = [],
 }: SearchResultsProps) {
 	const searchIndices: {
-		[K in keyof AllModelsByName]?: Fuse<AllModelsByName[K]>
+		[K in keyof AllModelsByName]?: Fuse<AllModelsByName[K]>;
 	} = useMemo(
 		() =>
 			Object.fromEntries(
@@ -268,7 +268,7 @@ function SearchResults({
 				]),
 			),
 		[data],
-	)
+	);
 	return (
 		<div
 			className={sprinkles({
@@ -288,7 +288,7 @@ function SearchResults({
 							: true,
 					)
 					.map((category, _index) => {
-						const searchIndex = searchIndices[category.name]
+						const searchIndex = searchIndices[category.name];
 						const commonProps = {
 							category: category.name,
 							variant:
@@ -302,7 +302,7 @@ function SearchResults({
 									})
 								: [],
 							onTagClick,
-						} as const
+						} as const;
 						if (category.name === 'libraries') {
 							return (
 								<ResultsCategory
@@ -317,26 +317,26 @@ function SearchResults({
 									selectedItems={selectedLibraries}
 									{...(commonProps as ResultsCategoryProps<'libraries'>)}
 								/>
-							)
+							);
 						}
-						return <ResultsCategory key={category.name} {...commonProps} />
+						return <ResultsCategory key={category.name} {...commonProps} />;
 					})}
 		</div>
-	)
+	);
 
 	function isInFilteredCategories(category: AllCategories): unknown {
 		return queryParams.filters.category.some(
 			(includedCategory) => includedCategory === category.name,
-		)
+		);
 	}
 }
 
 type ComparisonBarProps = {
-	selectedLibraries: Library[]
-	allLibraries: Library[]
-	onSelectionChange: (selection: Library[]) => void
-	onOpenClick: () => void
-}
+	selectedLibraries: Library[];
+	allLibraries: Library[];
+	onSelectionChange: (selection: Library[]) => void;
+	onOpenClick: () => void;
+};
 
 function ComparisonBar({
 	selectedLibraries,
@@ -347,8 +347,8 @@ function ComparisonBar({
 	return (
 		<form
 			onSubmit={(e) => {
-				e.preventDefault()
-				onOpenClick()
+				e.preventDefault();
+				onOpenClick();
 			}}
 			className={compareBarStyle}
 			aria-label={`Compare ${selectedLibraries.length} libraries`}
@@ -359,8 +359,8 @@ function ComparisonBar({
 				<Button
 					color="destructive"
 					onClick={() => {
-						track('resource_compare_reset')
-						onSelectionChange([])
+						track('resource_compare_reset');
+						onSelectionChange([]);
 					}}
 				>
 					Reset <ResetIcon />
@@ -372,8 +372,8 @@ function ComparisonBar({
 					color="destructive"
 					aria-label="Reset"
 					onClick={() => {
-						track('resource_compare_reset')
-						onSelectionChange([])
+						track('resource_compare_reset');
+						onSelectionChange([]);
 					}}
 				>
 					<ResetIcon />
@@ -383,8 +383,8 @@ function ComparisonBar({
 			<Button
 				color="tertiary"
 				onClick={() => {
-					track('resource_compare_select_all')
-					onSelectionChange(allLibraries)
+					track('resource_compare_select_all');
+					onSelectionChange(allLibraries);
 				}}
 			>
 				Select all
@@ -404,26 +404,26 @@ function ComparisonBar({
 				Compare ({selectedLibraries.length})
 			</Button>
 		</form>
-	)
+	);
 }
 
 function calculatePopularTags(data: AllCategories[]): string[] {
-	const tags = new Map<string, number>()
+	const tags = new Map<string, number>();
 	for (const category of data) {
 		for (const record of category.data) {
 			for (const tag of record.tags) {
-				tags.set(tag, tags.get(tag) ?? 0 + 1)
+				tags.set(tag, tags.get(tag) ?? 0 + 1);
 			}
 		}
 	}
-	return map(take(sortBy(Array.from(tags.entries()), [1]), 5), 0)
+	return map(take(sortBy(Array.from(tags.entries()), [1]), 5), 0);
 }
 
 type LibraryComparisonProps = {
-	selectedLibraries: Library[]
-	onClose: () => void
-	onReset: () => void
-}
+	selectedLibraries: Library[];
+	onClose: () => void;
+	onReset: () => void;
+};
 
 function LibraryComparison({
 	selectedLibraries,
@@ -479,5 +479,5 @@ function LibraryComparison({
 				</Button>
 			</div>
 		</div>
-	)
+	);
 }

@@ -1,21 +1,21 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const htmlElements = Object.keys(require('html-element-list'))
-const _ = require('lodash')
-const fs = require('fs/promises')
+const htmlElements = Object.keys(require('html-element-list'));
+const _ = require('lodash');
+const fs = require('fs/promises');
 
 module.exports = function (
 	/** @type {import('plop').NodePlopAPI} */
 	plop,
 ) {
-	plop.setPrompt('autocomplete', require('inquirer-autocomplete-prompt'))
+	plop.setPrompt('autocomplete', require('inquirer-autocomplete-prompt'));
 	plop.setPrompt(
 		'file-selector',
 		require('inquirer-file-tree-selection-prompt'),
-	)
-	plop.setHelper('startCase', _.startCase)
-	plop.setHelper('kebabCase', _.kebabCase)
-	plop.setHelper('camelCase', _.camelCase)
-	plop.setHelper('pascalCase', _.flow(_.camelCase, _.upperFirst))
+	);
+	plop.setHelper('startCase', _.startCase);
+	plop.setHelper('kebabCase', _.kebabCase);
+	plop.setHelper('camelCase', _.camelCase);
+	plop.setHelper('pascalCase', _.flow(_.camelCase, _.upperFirst));
 	plop.setGenerator('component', {
 		description: 'design system component',
 		prompts: [
@@ -49,7 +49,7 @@ module.exports = function (
 				templateFile: 'plop-templates/component.stories.hbs',
 			},
 		],
-	})
+	});
 	plop.setGenerator('icon', {
 		description: 'design system icon',
 		prompts: [
@@ -67,7 +67,7 @@ module.exports = function (
 				templateFile: 'plop-templates/icon.hbs',
 			},
 		],
-	})
+	});
 	plop.setGenerator('color scheme', {
 		description: 'generate a color scheme from a DSP tokens file',
 		prompts: [
@@ -85,8 +85,8 @@ module.exports = function (
 		],
 		actions: [
 			async function (data) {
-				const tokensFile = await fs.readFile(data.tokensFile)
-				const tokensData = JSON.parse(tokensFile)
+				const tokensFile = await fs.readFile(data.tokensFile);
+				const tokensData = JSON.parse(tokensFile);
 				data.palette = JSON.stringify(
 					Object.fromEntries(
 						tokensData.entities
@@ -96,7 +96,7 @@ module.exports = function (
 								color.value,
 							]),
 					),
-				)
+				);
 			},
 			{
 				type: 'add',
@@ -104,5 +104,5 @@ module.exports = function (
 				templateFile: 'plop-templates/color-scheme.hbs',
 			},
 		],
-	})
-}
+	});
+};

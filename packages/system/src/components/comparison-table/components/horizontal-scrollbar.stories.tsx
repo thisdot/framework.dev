@@ -1,8 +1,8 @@
-import { type Story, type Meta } from '@storybook/react'
-import { HorizontalScrollbar as HorizontalScrollbarComponent } from './horizontal-scrollbar'
-import { vars } from '../../../themes/themes.css'
-import { exampleScrollbarTableData } from './example-data'
-import React from 'react'
+import { type Story, type Meta } from '@storybook/react';
+import { HorizontalScrollbar as HorizontalScrollbarComponent } from './horizontal-scrollbar';
+import { vars } from '../../../themes/themes.css';
+import { exampleScrollbarTableData } from './example-data';
+import React from 'react';
 
 export default {
 	title: 'Horizontal Scrollbar',
@@ -20,7 +20,7 @@ export default {
 		},
 		viewport: { defaultViewport: 'tablet' },
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<React.ComponentPropsWithoutRef<'div'>> = () => (
 	<HorizontalScrollbarComponent>
@@ -41,6 +41,6 @@ const Template: Story<React.ComponentPropsWithoutRef<'div'>> = () => (
 			</tbody>
 		</table>
 	</HorizontalScrollbarComponent>
-)
+);
 
-export const HorizontalScrollbar = Template.bind({})
+export const HorizontalScrollbar = Template.bind({});

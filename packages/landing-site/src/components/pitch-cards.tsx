@@ -1,5 +1,5 @@
-import { PitchCard } from '@framework/system/src/components/landing/pitch-card'
-import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css'
+import { PitchCard } from '@framework/system/src/components/landing/pitch-card';
+import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css';
 
 export default function PitchCards() {
 	return (
@@ -37,5 +37,5 @@ export default function PitchCards() {
 				imageUrl="/pitch-image-1.png"
 			/>
 		</div>
-	)
+	);
 }

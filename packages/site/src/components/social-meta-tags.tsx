@@ -1,33 +1,33 @@
-import { titleCase } from 'title-case'
+import { titleCase } from 'title-case';
 
 type SocialMetaTagsProps = {
-	title: string
-	siteName: string
-}
+	title: string;
+	siteName: string;
+};
 
 export function SocialMetaTags({ siteName, title }: SocialMetaTagsProps) {
-	const titleCasedSiteName = titleCase(siteName)
-	const titleCasedTitle = titleCase(title)
+	const titleCasedSiteName = titleCase(siteName);
+	const titleCasedTitle = titleCase(title);
 	function formatAllFrameworkTitles() {
 		switch (siteName) {
 			case 'graphql':
-				return 'GraphQL'
+				return 'GraphQL';
 			case 'solidjs':
-				return 'SolidJS'
+				return 'SolidJS';
 			default:
-				return titleCasedSiteName
+				return titleCasedSiteName;
 		}
 	}
 
 	const description =
 		siteName === 'landing'
 			? `Search, compare, and discover top libraries and community-driven resources.`
-			: `Search, compare, and discover top ${formatAllFrameworkTitles()} libraries and community-driven resources in ${formatAllFrameworkTitles()}.`
+			: `Search, compare, and discover top ${formatAllFrameworkTitles()} libraries and community-driven resources in ${formatAllFrameworkTitles()}.`;
 	const url =
 		siteName === 'landing'
 			? `https://framework.dev`
-			: `https://${siteName}.framework.dev`
-	const imageUrl = `${url}/${siteName}-framework-1200x630.png`
+			: `https://${siteName}.framework.dev`;
+	const imageUrl = `${url}/${siteName}-framework-1200x630.png`;
 
 	return (
 		<>
@@ -46,5 +46,5 @@ export function SocialMetaTags({ siteName, title }: SocialMetaTagsProps) {
 			<meta name="twitter:description" content={description} />
 			<meta name="twitter:image" content={imageUrl} />
 		</>
-	)
+	);
 }

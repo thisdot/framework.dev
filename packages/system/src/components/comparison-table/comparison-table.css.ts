@@ -1,6 +1,6 @@
-import { style } from '@vanilla-extract/css'
-import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css'
-import { pxToRem } from '../../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css';
+import { pxToRem } from '../../util/style-utils';
 
 export const comparisonTableStyle = style([
 	sprinkles({
@@ -18,9 +18,9 @@ export const comparisonTableStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const comparisonTableLibraryIconStyle = style({
 	height: pxToRem(24),
 	width: pxToRem(24),
-})
+});

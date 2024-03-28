@@ -1,9 +1,9 @@
-import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css'
+import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css';
 import {
 	MobileNav as MobileNavComponent,
 	type MobileNavProps,
-} from '@framework/system/src/components/mobile-nav'
-import { NavItems, type NavItemsProps } from './nav-items'
+} from '@framework/system/src/components/mobile-nav';
+import { NavItems, type NavItemsProps } from './nav-items';
 
 export function MobileNav({
 	currentCategory,
@@ -21,5 +21,5 @@ export function MobileNav({
 				/>
 			</div>
 		</MobileNavComponent>
-	)
+	);
 }

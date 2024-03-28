@@ -1,7 +1,7 @@
-import classNames from 'classnames'
-import React from 'react'
-import { iconStyle } from './icon.css'
-import { type IconProps } from './shared-icon-types'
+import classNames from 'classnames';
+import React from 'react';
+import { iconStyle } from './icon.css';
+import { type IconProps } from './shared-icon-types';
 
 export const AdvancedIcon = React.forwardRef<SVGSVGElement, IconProps>(
 	function AdvancedIcon({ className, size, ...props }, ref) {
@@ -17,6 +17,6 @@ export const AdvancedIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				<path d="M1.50037 8.24997L1.50037 9.74997L16.5004 9.74997L16.5004 8.24997L1.50037 8.24997Z" />
 				<path d="M1.50037 12L1.50037 13.5L16.5004 13.5L16.5004 12L1.50037 12Z" />
 			</svg>
-		)
+		);
 	},
-)
+);

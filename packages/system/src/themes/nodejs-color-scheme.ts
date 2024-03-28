@@ -1,4 +1,4 @@
-import { type ColorPalette } from './theme-from-palette'
+import { type ColorPalette } from './theme-from-palette';
 
 export const nodejsColorPalette: ColorPalette = {
 	highlight: '#ffb3b3',
@@ -81,4 +81,4 @@ export const nodejsColorPalette: ColorPalette = {
 	error20: '#680003',
 	error10: '#410001',
 	error0: '#000000',
-}
+};

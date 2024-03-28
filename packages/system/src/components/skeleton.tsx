@@ -1,14 +1,14 @@
-import classNames from 'classnames'
-import React from 'react'
-import { pxToRem } from '../util/style-utils'
-import { skeletonAnimated, skeletonVariants } from './skeleton.css'
+import classNames from 'classnames';
+import React from 'react';
+import { pxToRem } from '../util/style-utils';
+import { skeletonAnimated, skeletonVariants } from './skeleton.css';
 
-type VariantOptions = 'circle' | 'text'
+type VariantOptions = 'circle' | 'text';
 
 export interface SkeletonProps extends React.ComponentPropsWithoutRef<'div'> {
-	variant: VariantOptions
-	height?: number
-	width?: number
+	variant: VariantOptions;
+	height?: number;
+	width?: number;
 }
 
 export function Skeleton({
@@ -30,5 +30,5 @@ export function Skeleton({
 			}
 			{...props}
 		></div>
-	)
+	);
 }

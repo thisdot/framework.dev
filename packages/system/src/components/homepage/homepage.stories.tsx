@@ -1,5 +1,5 @@
-import { type Story, type Meta } from '@storybook/react'
-import { Homepage as HomepageComponent, type HomepageProps } from './homepage'
+import { type Story, type Meta } from '@storybook/react';
+import { Homepage as HomepageComponent, type HomepageProps } from './homepage';
 import {
 	exampleBlogs,
 	exampleBooks,
@@ -9,7 +9,7 @@ import {
 	examplePodcasts,
 	exampleTags,
 	exampleTools,
-} from '../../util/example-content'
+} from '../../util/example-content';
 
 export default {
 	title: 'Home/Homepage',
@@ -25,8 +25,10 @@ export default {
 		communities: exampleCommunities,
 		siteName: 'react',
 	},
-} as Meta
+} as Meta;
 
-const Template: Story<HomepageProps> = (args) => <HomepageComponent {...args} />
+const Template: Story<HomepageProps> = (args) => (
+	<HomepageComponent {...args} />
+);
 
-export const Homepage = Template.bind({})
+export const Homepage = Template.bind({});

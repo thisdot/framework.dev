@@ -1,6 +1,6 @@
-import { ResourcesInfoBanner as _ResourcesInfoBanner } from '@framework/system/src/components/landing/resources-info-banner'
-import { FRAMEWORK_RESOURCES } from '@framework/system/src/globals/global-constants'
-import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css'
+import { ResourcesInfoBanner as _ResourcesInfoBanner } from '@framework/system/src/components/landing/resources-info-banner';
+import { FRAMEWORK_RESOURCES } from '@framework/system/src/globals/global-constants';
+import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css';
 
 export default function ResourcesInfoBanner() {
 	return (
@@ -12,5 +12,5 @@ export default function ResourcesInfoBanner() {
 				marginTop: { mobile: 32, desktop: 64 },
 			})}
 		/>
-	)
+	);
 }

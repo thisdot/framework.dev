@@ -1,19 +1,19 @@
-import React from 'react'
-import { Logo } from './logo'
+import React from 'react';
+import { Logo } from './logo';
 import {
 	sidebarStyle,
 	sidebarContentsStyle,
 	sidebarHeaderStyle,
 	sidebarBodyStyle,
 	sidebarSponsorIconContainerStyle,
-} from './sidebar.css'
-import { sprinkles } from '../sprinkles/sprinkles.css'
-import { GithubIcon } from '../icons/github-icon'
-import { SponsorIcon } from '../icons/sponsor-icon'
+} from './sidebar.css';
+import { sprinkles } from '../sprinkles/sprinkles.css';
+import { GithubIcon } from '../icons/github-icon';
+import { SponsorIcon } from '../icons/sponsor-icon';
 
 export type SidebarProps = React.ComponentPropsWithoutRef<'nav'> & {
-	siteName: string
-}
+	siteName: string;
+};
 
 export function Sidebar({
 	children,
@@ -69,5 +69,5 @@ export function Sidebar({
 				</footer>
 			</div>
 		</nav>
-	)
+	);
 }

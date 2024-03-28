@@ -1,5 +1,5 @@
-import { style } from '@vanilla-extract/css'
-import { derivedAttributes } from '../../themes/themes.css'
+import { style } from '@vanilla-extract/css';
+import { derivedAttributes } from '../../themes/themes.css';
 
 export const cardSelectorLabelStyle = style({
 	cursor: 'pointer',
@@ -8,4 +8,4 @@ export const cardSelectorLabelStyle = style({
 			outline: derivedAttributes.outline,
 		},
 	},
-})
+});

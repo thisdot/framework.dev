@@ -1,5 +1,5 @@
-import { type Community } from '../../models/community'
-import { ResourceCard, type ResourceCardProps } from './resource-card'
+import { type Community } from '../../models/community';
+import { ResourceCard, type ResourceCardProps } from './resource-card';
 
 export type CommunityCardProps = Omit<
 	ResourceCardProps,
@@ -13,8 +13,8 @@ export type CommunityCardProps = Omit<
 	| 'attributes'
 	| 'children'
 > & {
-	community: Community<string>
-}
+	community: Community<string>;
+};
 
 export function CommunityCard({ community, ...props }: CommunityCardProps) {
 	return (
@@ -30,5 +30,5 @@ export function CommunityCard({ community, ...props }: CommunityCardProps) {
 		>
 			{community.description}
 		</ResourceCard>
-	)
+	);
 }

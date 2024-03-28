@@ -1,5 +1,5 @@
-import classNames from 'classnames'
-import React from 'react'
+import classNames from 'classnames';
+import React from 'react';
 import {
 	linkCardStyle,
 	linkCardIndicatorIconStyle,
@@ -7,18 +7,18 @@ import {
 	linkCardIconStyle,
 	linkCardTitleStyle,
 	linkCardRawIconContainerStyle,
-} from './link-card.css'
-import { ExternalLinkIcon } from '../../icons/external-link'
-import { type IconProps } from '../../icons/shared-icon-types'
+} from './link-card.css';
+import { ExternalLinkIcon } from '../../icons/external-link';
+import { type IconProps } from '../../icons/shared-icon-types';
 
 export interface LinkCardProps extends React.ComponentPropsWithoutRef<'a'> {
-	title: string
-	href: string
-	bigSize?: boolean
-	Icon?: (props: IconProps) => JSX.Element
-	RawIcon?: (props: IconProps) => JSX.Element
-	backgroundColor?: string
-	color?: string
+	title: string;
+	href: string;
+	bigSize?: boolean;
+	Icon?: (props: IconProps) => JSX.Element;
+	RawIcon?: (props: IconProps) => JSX.Element;
+	backgroundColor?: string;
+	color?: string;
 }
 
 export function LinkCard({
@@ -61,5 +61,5 @@ export function LinkCard({
 			<span className={linkCardTitleStyle}>{title}</span>
 			<ExternalLinkIcon className={linkCardIndicatorIconStyle} />
 		</a>
-	)
+	);
 }

@@ -1,11 +1,11 @@
-import { type Story, type Meta } from '@storybook/react'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { exampleCourses } from '../../util/example-content'
-import { titleFirstCardGrid } from './card-layouts.css'
+import { type Story, type Meta } from '@storybook/react';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { exampleCourses } from '../../util/example-content';
+import { titleFirstCardGrid } from './card-layouts.css';
 import {
 	CourseCard as CourseCardComponent,
 	type CourseCardProps,
-} from './course-card'
+} from './course-card';
 
 export default {
 	title: 'Cards/Course Card',
@@ -18,7 +18,7 @@ export default {
 			action: 'onTagClick',
 		},
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<CourseCardProps> = (args) => (
 	<div
@@ -33,6 +33,6 @@ const Template: Story<CourseCardProps> = (args) => (
 			))}
 		</div>
 	</div>
-)
+);
 
-export const CourseCard = Template.bind({})
+export const CourseCard = Template.bind({});

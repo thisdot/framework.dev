@@ -1,4 +1,4 @@
-import { type ColorPalette } from './theme-from-palette'
+import { type ColorPalette } from './theme-from-palette';
 
 export const reactColorPalette: ColorPalette = {
 	highlight: '#14D9FA',
@@ -81,4 +81,4 @@ export const reactColorPalette: ColorPalette = {
 	error20: '#680003',
 	error10: '#410001',
 	error0: '#000000',
-}
+};

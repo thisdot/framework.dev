@@ -1,11 +1,11 @@
-import { type Story, type Meta } from '@storybook/react'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { examplePodcasts } from '../../util/example-content'
-import { imageFirstCardGrid } from './card-layouts.css'
+import { type Story, type Meta } from '@storybook/react';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { examplePodcasts } from '../../util/example-content';
+import { imageFirstCardGrid } from './card-layouts.css';
 import {
 	PodcastCard as PodcastCardComponent,
 	type PodcastCardProps,
-} from './podcast-card'
+} from './podcast-card';
 
 export default {
 	title: 'Cards/Podcast Card',
@@ -21,7 +21,7 @@ export default {
 	parameters: {
 		layout: 'fullscreen',
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<PodcastCardProps> = (args) => (
 	<div
@@ -41,6 +41,6 @@ const Template: Story<PodcastCardProps> = (args) => (
 			))}
 		</div>
 	</div>
-)
+);
 
-export const PodcastCard = Template.bind({})
+export const PodcastCard = Template.bind({});

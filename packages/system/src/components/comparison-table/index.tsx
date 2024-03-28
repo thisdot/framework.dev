@@ -1,20 +1,20 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { type Library } from '../../models/library'
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { type Library } from '../../models/library';
 import {
 	comparisonTableLibraryIconStyle,
 	comparisonTableStyle,
-} from './comparison-table.css'
-import { ColHeading, RowHeading, TD } from './components/cells'
-import { HorizontalScrollbar } from './components/horizontal-scrollbar'
-import { type ILibrary, type ISortConfig } from './types'
-import { formatNumber, formatPercentage, sortLibraries } from './utils'
-import { CardSelector } from './../cards/card-selector'
-import { Skeleton } from '../skeleton'
-import { track } from '../../util/analytics-utils'
+} from './comparison-table.css';
+import { ColHeading, RowHeading, TD } from './components/cells';
+import { HorizontalScrollbar } from './components/horizontal-scrollbar';
+import { type ILibrary, type ISortConfig } from './types';
+import { formatNumber, formatPercentage, sortLibraries } from './utils';
+import { CardSelector } from './../cards/card-selector';
+import { Skeleton } from '../skeleton';
+import { track } from '../../util/analytics-utils';
 
 export interface ComparisonTableProps
 	extends React.ComponentPropsWithoutRef<'div'> {
-	libraries: Library[]
+	libraries: Library[];
 }
 
 export function ComparisonTable({
@@ -22,13 +22,13 @@ export function ComparisonTable({
 	className,
 	...props
 }: ComparisonTableProps) {
-	const [loading, setLoading] = useState<boolean>(false)
-	const mountedRef = useRef<boolean>(false)
-	const [data, setData] = useState<ILibrary[]>([])
+	const [loading, setLoading] = useState<boolean>(false);
+	const mountedRef = useRef<boolean>(false);
+	const [data, setData] = useState<ILibrary[]>([]);
 	const [sortConfig, setSortConfig] = useState<ISortConfig>({
 		by: 'name',
 		asc: false,
-	})
+	});
 
 	const handleSort = useCallback(
 		(heading: typeof sortConfig.by) => {
@@ -36,20 +36,20 @@ export function ComparisonTable({
 				if (prevSort.by === heading) {
 					track('resource_compare_sort', {
 						order: !prevSort.asc ? 'asc' : 'desc',
-					})
-					return { by: heading, asc: !prevSort.asc }
+					});
+					return { by: heading, asc: !prevSort.asc };
 				}
 				if (heading === 'name' || heading === 'author') {
-					track('resource_compare_sort', { order: 'asc' })
-					return { by: heading, asc: true }
+					track('resource_compare_sort', { order: 'asc' });
+					return { by: heading, asc: true };
 				}
 
-				track('resource_compare_sort', { order: 'desc' })
-				return { by: heading, asc: false }
-			})
+				track('resource_compare_sort', { order: 'desc' });
+				return { by: heading, asc: false };
+			});
 		},
 		[sortConfig],
-	)
+	);
 
 	useEffect(() => {
 		const parsedLibraries = libraries.map((library) => {
@@ -57,15 +57,15 @@ export function ComparisonTable({
 				library.package = library.package.replace(
 					/(?:http(?:s)?:\/\/(?:www\.)?)npmjs\.com\/package\//,
 					'',
-				)
+				);
 			}
-			return library
-		})
+			return library;
+		});
 
-		const abortController = new AbortController()
+		const abortController = new AbortController();
 
 		async function fetchData() {
-			setLoading(true)
+			setLoading(true);
 			const npmsio = await fetch(`https://api.npms.io/v2/package/mget`, {
 				method: 'POST',
 				headers: {
@@ -78,9 +78,9 @@ export function ComparisonTable({
 				.then((res) => res.json())
 				.catch((error) => {
 					if (error.name === 'AbortError') {
-						return
+						return;
 					}
-				})
+				});
 
 			const data: ILibrary[] = parsedLibraries.map((library) => {
 				return {
@@ -93,35 +93,35 @@ export function ComparisonTable({
 						npmsio[library.package]?.collected?.npm?.downloads[1]?.count,
 					health: npmsio[library.package]?.evaluation?.quality?.health,
 					stars: npmsio[library.package]?.collected?.github?.starsCount,
-				}
-			})
-			setData(data)
+				};
+			});
+			setData(data);
 		}
 
 		if (!mountedRef.current) {
-			mountedRef.current = true
+			mountedRef.current = true;
 
 			fetchData()
 				.then(() => {
-					handleSort('name')
+					handleSort('name');
 				})
 				.catch((error) => {
 					if (error.name === 'AbortError') {
-						return
+						return;
 					}
 				})
 				.finally(() => {
-					setLoading(false)
-				})
+					setLoading(false);
+				});
 		}
 
-		return () => abortController.abort()
-	}, [handleSort, libraries])
+		return () => abortController.abort();
+	}, [handleSort, libraries]);
 
 	const libraryStats = React.useMemo(
 		() => sortLibraries(data, sortConfig),
 		[data, sortConfig],
-	)
+	);
 
 	function handleTableRows() {
 		if (loading) {
@@ -153,7 +153,7 @@ export function ComparisonTable({
 						</TD>
 					</tr>
 				</>
-			))
+			));
 		}
 
 		return libraryStats.map((library) => (
@@ -162,20 +162,20 @@ export function ComparisonTable({
 					<CardSelector
 						checked={true}
 						onChange={(e) => {
-							e.stopPropagation()
+							e.stopPropagation();
 
 							if (!e.target.checked) {
 								track('resource_compare_remove', {
 									resource_name: library.name,
-								})
-								const updatedLibraryStats = libraryStats
+								});
+								const updatedLibraryStats = libraryStats;
 
 								updatedLibraryStats.splice(
 									updatedLibraryStats.indexOf(library),
 									1,
-								)
+								);
 
-								setData(updatedLibraryStats)
+								setData(updatedLibraryStats);
 							}
 						}}
 					/>
@@ -196,7 +196,7 @@ export function ComparisonTable({
 				<TD>{library.health ? formatPercentage(library.health) : 'N/A'}</TD>
 				<TD>{library.stars ? formatNumber(library.stars) : 'N/A'}</TD>
 			</tr>
-		))
+		));
 	}
 
 	return (
@@ -256,5 +256,5 @@ export function ComparisonTable({
 				</HorizontalScrollbar>
 			)}
 		</div>
-	)
+	);
 }

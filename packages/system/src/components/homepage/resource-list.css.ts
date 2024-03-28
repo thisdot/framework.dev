@@ -1,7 +1,7 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { pxToRem } from '../../util/style-utils'
-import { vars } from '../../themes/themes.css'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { pxToRem } from '../../util/style-utils';
+import { vars } from '../../themes/themes.css';
 
 export const resourceListStyle = style([
 	sprinkles({
@@ -10,7 +10,7 @@ export const resourceListStyle = style([
 	{
 		gridTemplateRows: 'auto 1fr auto',
 	},
-])
+]);
 
 export const resourceListHeadingStyle = style([
 	sprinkles({
@@ -20,7 +20,7 @@ export const resourceListHeadingStyle = style([
 	{
 		color: vars.palette.neutralVariant20,
 	},
-])
+]);
 
 export const resourceListListStyle = style([
 	sprinkles({
@@ -32,7 +32,7 @@ export const resourceListListStyle = style([
 		alignItems: 'start',
 		gridAutoFlow: 'row',
 	},
-])
+]);
 
 export const resourceListItemStyle = style([
 	sprinkles({
@@ -53,14 +53,14 @@ export const resourceListItemStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const resourceListItemHeaderStyle = style([
 	sprinkles({
 		gap: 12,
 		layout: 'row',
 	}),
-])
+]);
 
 export const resourceListItemTitleStyle = style([
 	sprinkles({
@@ -68,14 +68,14 @@ export const resourceListItemTitleStyle = style([
 		marginBottom: 4,
 		textStyle: 'bodyShort2',
 	}),
-])
+]);
 
 export const resourceListItemMetadataStyle = style([
 	sprinkles({
 		color: 'softText',
 		textStyle: 'bodyShort3',
 	}),
-])
+]);
 
 export const resourceListItemImageStyle = style([
 	sprinkles({ borderRadius: 8 }),
@@ -84,7 +84,7 @@ export const resourceListItemImageStyle = style([
 		objectFit: 'cover',
 		width: pxToRem(40),
 	},
-])
+]);
 
 export const resourceListItemDescriptionStyle = style([
 	sprinkles({
@@ -94,9 +94,9 @@ export const resourceListItemDescriptionStyle = style([
 	{
 		margin: '12px 0',
 	},
-])
+]);
 
 export const resourceListViewAllStyle = sprinkles({
 	color: 'tertiary',
 	textStyle: 'button',
-})
+});

@@ -1,5 +1,5 @@
-import { style } from '@vanilla-extract/css'
-import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css'
+import { style } from '@vanilla-extract/css';
+import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css';
 
 const base = style([
 	sprinkles({ gap: { mobile: 12, desktop: 24 } }),
@@ -7,7 +7,7 @@ const base = style([
 		display: 'grid',
 		gridAutoRows: 'max-content',
 	},
-])
+]);
 
 export const titleFirstCardGrid = style([
 	base,
@@ -22,7 +22,7 @@ export const titleFirstCardGrid = style([
 			},
 		},
 	},
-])
+]);
 
 export const imageFirstCardGrid = style([
 	base,
@@ -34,4 +34,4 @@ export const imageFirstCardGrid = style([
 			},
 		},
 	},
-])
+]);

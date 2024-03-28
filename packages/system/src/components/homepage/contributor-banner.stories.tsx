@@ -1,8 +1,8 @@
-import { type Story, type Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react';
 import {
 	ContributorBanner as ContributorBannerComponent,
 	type ContributorBannerProps,
-} from './contributor-banner'
+} from './contributor-banner';
 
 export default {
 	title: 'Home/Contributor Banner',
@@ -31,10 +31,10 @@ export default {
 			},
 		],
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<ContributorBannerProps> = (args) => (
 	<ContributorBannerComponent {...args} />
-)
+);
 
-export const ContributorBanner = Template.bind({})
+export const ContributorBanner = Template.bind({});

@@ -1,10 +1,10 @@
-import { type Story, type Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react';
 import {
 	ComparisonTable as ComparisonTableComponent,
 	type ComparisonTableProps,
-} from './index'
-import { exampleLibraries } from '../../util/example-content'
-import { fullscreen } from '../../styles/layouts.css'
+} from './index';
+import { exampleLibraries } from '../../util/example-content';
+import { fullscreen } from '../../styles/layouts.css';
 
 export default {
 	title: 'Comparison Table',
@@ -15,10 +15,10 @@ export default {
 	parameters: {
 		layout: 'fullscreen',
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<ComparisonTableProps> = (args) => (
 	<ComparisonTableComponent className={fullscreen} {...args} />
-)
+);
 
-export const ComparisonTable = Template.bind({})
+export const ComparisonTable = Template.bind({});

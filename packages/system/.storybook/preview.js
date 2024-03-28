@@ -1,4 +1,4 @@
-import '../src/globals/global-styles'
+import '../src/globals/global-styles';
 import {
 	vars,
 	reactTheme,
@@ -19,18 +19,18 @@ import {
 	graphqlThemeDark,
 	denoTheme,
 	denoThemeDark,
-} from '../src/themes/themes.css'
-import { addDecorator } from '@storybook/react'
-import { withThemes } from 'storybook-addon-themes/react'
-import { useEffect } from 'react'
+} from '../src/themes/themes.css';
+import { addDecorator } from '@storybook/react';
+import { withThemes } from 'storybook-addon-themes/react';
+import { useEffect } from 'react';
 
-addDecorator(withThemes)
+addDecorator(withThemes);
 
 function Decorator({ themeClasses, children }) {
 	useEffect(() => {
-		document.documentElement.className = themeClasses
-	}, [themeClasses])
-	return children
+		document.documentElement.className = themeClasses;
+	}, [themeClasses]);
+	return children;
 }
 
 export const parameters = {
@@ -80,4 +80,4 @@ export const parameters = {
 			{ name: 'denoDark', class: denoThemeDark, color: '#f2f2fa' },
 		],
 	},
-}
+};

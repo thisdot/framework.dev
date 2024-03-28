@@ -1,8 +1,8 @@
-import { type Story, type Meta } from '@storybook/react'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { exampleTools } from '../../util/example-content'
-import { titleFirstCardGrid } from './card-layouts.css'
-import { ToolCard as ToolCardComponent, type ToolCardProps } from './tool-card'
+import { type Story, type Meta } from '@storybook/react';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { exampleTools } from '../../util/example-content';
+import { titleFirstCardGrid } from './card-layouts.css';
+import { ToolCard as ToolCardComponent, type ToolCardProps } from './tool-card';
 
 export default {
 	title: 'Cards/Tool Card',
@@ -15,7 +15,7 @@ export default {
 			action: 'onTagClick',
 		},
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<ToolCardProps> = (args) => (
 	<div
@@ -30,6 +30,6 @@ const Template: Story<ToolCardProps> = (args) => (
 			))}
 		</div>
 	</div>
-)
+);
 
-export const ToolCard = Template.bind({})
+export const ToolCard = Template.bind({});

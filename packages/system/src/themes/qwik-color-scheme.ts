@@ -1,4 +1,4 @@
-import { type ColorPalette } from './theme-from-palette'
+import { type ColorPalette } from './theme-from-palette';
 
 export const qwikColorPalette: ColorPalette = {
 	highlight: '#18b6f6',
@@ -81,4 +81,4 @@ export const qwikColorPalette: ColorPalette = {
 	error20: '#680003',
 	error10: '#410001',
 	error0: '#000000',
-}
+};

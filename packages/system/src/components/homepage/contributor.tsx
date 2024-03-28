@@ -1,15 +1,15 @@
-import classNames from 'classnames'
-import React from 'react'
-import { contributorImageStyle } from './contributor.css'
+import classNames from 'classnames';
+import React from 'react';
+import { contributorImageStyle } from './contributor.css';
 
 export interface ContributorData {
-	login: string
-	url: string
-	avatarUrl: string
+	login: string;
+	url: string;
+	avatarUrl: string;
 }
 
 export interface ContributorProps extends React.ComponentPropsWithoutRef<'a'> {
-	contributor: ContributorData
+	contributor: ContributorData;
 }
 
 export const Contributor = ({
@@ -25,4 +25,4 @@ export const Contributor = ({
 			alt={login}
 		/>
 	</a>
-)
+);

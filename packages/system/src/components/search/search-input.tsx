@@ -1,6 +1,6 @@
-import classNames from 'classnames'
-import React from 'react'
-import { useId } from '@reach/auto-id'
+import classNames from 'classnames';
+import React from 'react';
+import { useId } from '@reach/auto-id';
 import {
 	searchInputBoxStyle,
 	searchInputContainerStyle,
@@ -9,17 +9,17 @@ import {
 	searchInputLabelStyle,
 	searchInputResetButtonStyle,
 	searchInputStaticPrefixStyle,
-} from './search-input.css'
-import { SearchIcon } from '../../icons/search-icon'
-import { CloseIcon } from '../../icons/close-icon'
-import { visuallyHidden } from '../../styles/utilities.css'
+} from './search-input.css';
+import { SearchIcon } from '../../icons/search-icon';
+import { CloseIcon } from '../../icons/close-icon';
+import { visuallyHidden } from '../../styles/utilities.css';
 
 export interface SearchInputProps
 	extends React.ComponentPropsWithoutRef<'input'> {
-	label: string
-	staticPrefix?: string
-	hideLabel?: boolean
-	onReset: () => void
+	label: string;
+	staticPrefix?: string;
+	hideLabel?: boolean;
+	onReset: () => void;
 }
 
 export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
@@ -35,7 +35,7 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
 		}: SearchInputProps,
 		ref,
 	) {
-		const id = useId(customIdFromProps)
+		const id = useId(customIdFromProps);
 		return (
 			<div className={classNames(className, searchInputContainerStyle)}>
 				<div className={searchInputBoxStyle}>
@@ -67,6 +67,6 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
 					{label}
 				</label>
 			</div>
-		)
+		);
 	},
-)
+);

@@ -1,8 +1,8 @@
-import { type Story, type Meta } from '@storybook/react'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { BookCard as BookCardComponent, type BookCardProps } from './book-card'
-import { exampleBooks } from '../../util/example-content'
-import { imageFirstCardGrid } from './card-layouts.css'
+import { type Story, type Meta } from '@storybook/react';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { BookCard as BookCardComponent, type BookCardProps } from './book-card';
+import { exampleBooks } from '../../util/example-content';
+import { imageFirstCardGrid } from './card-layouts.css';
 
 export default {
 	title: 'Cards/Book Card',
@@ -18,7 +18,7 @@ export default {
 			action: 'onTagClick',
 		},
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<BookCardProps> = (args) => (
 	<div
@@ -33,6 +33,6 @@ const Template: Story<BookCardProps> = (args) => (
 			))}
 		</div>
 	</div>
-)
+);
 
-export const BookCard = Template.bind({})
+export const BookCard = Template.bind({});

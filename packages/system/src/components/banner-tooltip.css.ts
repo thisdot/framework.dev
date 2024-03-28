@@ -1,6 +1,6 @@
-import { style } from '@vanilla-extract/css'
-import { breakpoints, sprinkles } from '../sprinkles/sprinkles.css'
-import { pxToRem } from '../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { breakpoints, sprinkles } from '../sprinkles/sprinkles.css';
+import { pxToRem } from '../util/style-utils';
 
 export const bannerTooltipStyle = style([
 	sprinkles({
@@ -21,7 +21,7 @@ export const bannerTooltipStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const bannerTooltipHeadingStyle = style([
 	sprinkles({
@@ -42,11 +42,11 @@ export const bannerTooltipHeadingStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const bannerTooltipHeadingSoftStyle = sprinkles({
 	color: 'secondary',
-})
+});
 
 export const bannerTooltipIconStyle = style([
 	sprinkles({
@@ -70,7 +70,7 @@ export const bannerTooltipIconStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const bannerTooltipExplanatoryText = style([
 	sprinkles({
@@ -88,7 +88,7 @@ export const bannerTooltipExplanatoryText = style([
 			},
 		},
 	},
-])
+]);
 
 export const bannerTooltipWavyArrowIcon = style([
 	sprinkles({
@@ -105,13 +105,13 @@ export const bannerTooltipWavyArrowIcon = style([
 			},
 		},
 	},
-])
+]);
 
 export const bannerTooltipCardIcon = style({
 	gridColumn: '1/3',
 	alignSelf: 'end',
 	justifySelf: 'center',
-})
+});
 
 export const bannerTooltipCloseIcon = style({
 	position: 'absolute',
@@ -126,4 +126,4 @@ export const bannerTooltipCloseIcon = style({
 			marginRight: 32,
 		},
 	},
-})
+});

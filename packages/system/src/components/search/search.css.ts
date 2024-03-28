@@ -1,6 +1,6 @@
-import { style } from '@vanilla-extract/css'
-import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css'
-import { pxToRem } from '../../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css';
+import { pxToRem } from '../../util/style-utils';
 
 export const searchStyle = style([
 	sprinkles({
@@ -11,7 +11,7 @@ export const searchStyle = style([
 		position: 'relative',
 		gridTemplateRows: '1fr auto',
 	},
-])
+]);
 
 export const searchContainerStyle = style([
 	sprinkles({
@@ -23,7 +23,7 @@ export const searchContainerStyle = style([
 	{
 		overflowY: 'auto',
 	},
-])
+]);
 
 export const compareBarStyle = style([
 	sprinkles({
@@ -45,4 +45,4 @@ export const compareBarStyle = style([
 			},
 		},
 	},
-])
+]);

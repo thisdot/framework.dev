@@ -1,5 +1,5 @@
-import { type Story, type Meta } from '@storybook/react'
-import { Tag as TagComponent, type TagProps } from './tag'
+import { type Story, type Meta } from '@storybook/react';
+import { Tag as TagComponent, type TagProps } from './tag';
 
 export default {
 	title: 'Tag',
@@ -9,13 +9,13 @@ export default {
 			action: 'onClick',
 		},
 	},
-} as Meta
+} as Meta;
 
-const Template: Story<TagProps> = (args) => <TagComponent {...args} />
+const Template: Story<TagProps> = (args) => <TagComponent {...args} />;
 
-export const Tag = Template.bind({})
+export const Tag = Template.bind({});
 
 Tag.args = {
 	children: 'data visualization',
 	color: 'neutral',
-}
+};

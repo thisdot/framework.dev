@@ -1,7 +1,7 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { vars } from '../../themes/themes.css'
-import { breakpoints } from '../../sprinkles/sprinkles.css'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { vars } from '../../themes/themes.css';
+import { breakpoints } from '../../sprinkles/sprinkles.css';
 
 export const featuredLibrariesStyle = style([
 	sprinkles({
@@ -10,7 +10,7 @@ export const featuredLibrariesStyle = style([
 	{
 		// Put custom CSS here
 	},
-])
+]);
 
 export const featuredLibrariesHeadingStyle = style([
 	sprinkles({
@@ -20,7 +20,7 @@ export const featuredLibrariesHeadingStyle = style([
 	{
 		color: vars.palette.neutralVariant20,
 	},
-])
+]);
 
 export const featuredLibrariesListStyle = style([
 	sprinkles({
@@ -56,9 +56,9 @@ export const featuredLibrariesListStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const featuredLibrariesViewAllStyle = sprinkles({
 	color: 'tertiary',
 	textStyle: 'button',
-})
+});

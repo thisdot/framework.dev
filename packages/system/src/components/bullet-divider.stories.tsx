@@ -1,6 +1,6 @@
-import { type Story, type Meta } from '@storybook/react'
-import { sprinkles } from '../sprinkles/sprinkles.css'
-import { BulletDivider as BulletDividerComponent } from './bullet-divider'
+import { type Story, type Meta } from '@storybook/react';
+import { sprinkles } from '../sprinkles/sprinkles.css';
+import { BulletDivider as BulletDividerComponent } from './bullet-divider';
 
 export default {
 	title: 'Bullet Divider',
@@ -10,7 +10,7 @@ export default {
 			disabled: true,
 		},
 	},
-} as Meta
+} as Meta;
 
 const Template: Story = (args) => (
 	<div className={sprinkles({ textStyle: 'overline' })}>
@@ -18,6 +18,6 @@ const Template: Story = (args) => (
 		<BulletDividerComponent {...args} />
 		<span>Other text</span>
 	</div>
-)
+);
 
-export const BulletDivider = Template.bind({})
+export const BulletDivider = Template.bind({});

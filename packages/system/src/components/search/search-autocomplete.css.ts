@@ -1,19 +1,19 @@
-import { globalStyle, style } from '@vanilla-extract/css'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { vars } from '../../themes/themes.css'
+import { globalStyle, style } from '@vanilla-extract/css';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { vars } from '../../themes/themes.css';
 
 globalStyle(':root', {
 	vars: {
 		'--reach-combobox': '1',
 	},
-})
+});
 
 export const searchAutocompletePopoverStyle = sprinkles({
 	backgroundColor: 'white',
 	textStyle: 'bodyShort2',
 	borderX: 'thin',
 	borderBottom: 'thin',
-})
+});
 
 export const searchAutocompleteOptionStyle = style([
 	sprinkles({
@@ -28,8 +28,8 @@ export const searchAutocompleteOptionStyle = style([
 			},
 		},
 	},
-])
+]);
 
 globalStyle(`${searchAutocompleteOptionStyle} [data-suggested-value]`, {
 	fontWeight: 600,
-})
+});

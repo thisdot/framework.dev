@@ -1,17 +1,17 @@
-import classNames from 'classnames'
-import React from 'react'
-import sampleSize from 'lodash/sampleSize'
-import { type Tool } from '../../models/tool'
-import { latestToolsStyle } from './latest-tools.css'
-import { ResourceList } from './resource-list'
+import classNames from 'classnames';
+import React from 'react';
+import sampleSize from 'lodash/sampleSize';
+import { type Tool } from '../../models/tool';
+import { latestToolsStyle } from './latest-tools.css';
+import { ResourceList } from './resource-list';
 
 export interface LatestToolsProps
 	extends React.ComponentPropsWithoutRef<'div'> {
-	tools: Tool<string>[]
+	tools: Tool<string>[];
 }
 
 export function LatestTools({ className, tools, ...props }: LatestToolsProps) {
-	const randromTools = sampleSize(tools, 4)
+	const randromTools = sampleSize(tools, 4);
 	return (
 		<ResourceList
 			className={classNames(className, latestToolsStyle)}
@@ -25,9 +25,9 @@ export function LatestTools({ className, tools, ...props }: LatestToolsProps) {
 					href: tool.href,
 					description: tool.description,
 					tags: tool.tags,
-				}
+				};
 			})}
 			{...props}
 		/>
-	)
+	);
 }

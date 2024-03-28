@@ -1,10 +1,10 @@
-import { type Story, type Meta } from '@storybook/react'
-import { allCategoriesMetadata } from '../models/all-categories'
+import { type Story, type Meta } from '@storybook/react';
+import { allCategoriesMetadata } from '../models/all-categories';
 import {
 	DiscreteAttribute as DiscreteAttributeComponent,
 	type DiscreteAttributeProps,
-} from './discrete-attribute'
-import { ungroupFieldFilters } from './search/query-util'
+} from './discrete-attribute';
+import { ungroupFieldFilters } from './search/query-util';
 
 const attributeMapping = Object.fromEntries(
 	Object.values(allCategoriesMetadata)
@@ -12,7 +12,7 @@ const attributeMapping = Object.fromEntries(
 			ungroupFieldFilters(Object.entries(metadata.filterableFields) as any),
 		)
 		.map((entry) => [entry.join(':'), entry]),
-)
+);
 
 export default {
 	title: 'Discrete Attribute',
@@ -28,10 +28,10 @@ export default {
 			mapping: attributeMapping,
 		},
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<DiscreteAttributeProps> = (args) => (
 	<DiscreteAttributeComponent {...args} />
-)
+);
 
-export const DiscreteAttribute = Template.bind({})
+export const DiscreteAttribute = Template.bind({});

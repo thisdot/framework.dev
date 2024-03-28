@@ -1,13 +1,13 @@
-import classNames from 'classnames'
-import React, { useMemo, useState } from 'react'
+import classNames from 'classnames';
+import React, { useMemo, useState } from 'react';
 import {
 	Combobox,
 	ComboboxInput,
 	ComboboxList,
 	ComboboxOption,
 	ComboboxPopover,
-} from '@reach/combobox'
-import { TextInput } from '../text-input'
+} from '@reach/combobox';
+import { TextInput } from '../text-input';
 import {
 	tagFilterBodyStyle,
 	tagFilterListboxOptionStyle,
@@ -17,26 +17,26 @@ import {
 	tagFilterSearchTitleStyle,
 	tagFilterStyle,
 	tagFilterTitleStyle,
-} from './tag-filter.css'
+} from './tag-filter.css';
 import {
 	deserializeFieldValue,
 	formatFieldValue,
 	serializeFieldValue,
-} from '../../util/string-utils'
-import { CloseIcon } from '../../icons/close-icon'
-import { Chip } from '../chip'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { Tag } from '../tag'
-import Fuse from 'fuse.js'
-import map from 'lodash/map'
-import take from 'lodash/take'
+} from '../../util/string-utils';
+import { CloseIcon } from '../../icons/close-icon';
+import { Chip } from '../chip';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { Tag } from '../tag';
+import Fuse from 'fuse.js';
+import map from 'lodash/map';
+import take from 'lodash/take';
 
 export interface TagFilterProps<T extends string>
 	extends React.ComponentPropsWithoutRef<'fieldset'> {
-	options: T[]
-	value: T[]
-	suggestions?: T[]
-	onUpdate: (newValue: T[]) => void
+	options: T[];
+	value: T[];
+	suggestions?: T[];
+	onUpdate: (newValue: T[]) => void;
 }
 
 export function TagFilter<T extends string>({
@@ -48,30 +48,30 @@ export function TagFilter<T extends string>({
 	value,
 	...props
 }: TagFilterProps<T>) {
-	const [tagSearch, setTagSearch] = useState('')
+	const [tagSearch, setTagSearch] = useState('');
 	const searchIndex = useMemo(
 		() => new Fuse(options, { threshold: 0.3 }),
 		[options],
-	)
+	);
 	const searchResults = take(
 		map(searchIndex.search(tagSearch), 'item').filter(
 			(o) => !value.includes(o),
 		),
 		5,
-	)
+	);
 	return (
 		<fieldset className={classNames(className, tagFilterStyle)} {...props}>
 			<legend className={tagFilterTitleStyle}>Tags</legend>
 			<div className={tagFilterBodyStyle}>
 				<Combobox
 					onSelect={(selection: string) => {
-						setTagSearch('')
+						setTagSearch('');
 						const deserializedSelection = deserializeFieldValue(
 							serializeFieldValue(selection),
 							options,
-						)
+						);
 						if (deserializedSelection) {
-							onUpdate([...value, deserializedSelection])
+							onUpdate([...value, deserializedSelection]);
 						}
 					}}
 					aria-label="Search tags"
@@ -140,5 +140,5 @@ export function TagFilter<T extends string>({
 				)}
 			</div>
 		</fieldset>
-	)
+	);
 }

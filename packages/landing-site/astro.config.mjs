@@ -1,6 +1,6 @@
-import { defineConfig } from 'astro/config'
-import react from '@astrojs/react'
-import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
+import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 
 export default defineConfig({
 	// Enable the React renderer to support React JSX components.
@@ -12,4 +12,4 @@ export default defineConfig({
 	vite: {
 		plugins: [vanillaExtractPlugin()],
 	},
-})
+});

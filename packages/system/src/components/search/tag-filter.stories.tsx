@@ -1,9 +1,9 @@
-import { type Story, type Meta } from '@storybook/react'
-import { exampleTags } from '../../util/example-content'
+import { type Story, type Meta } from '@storybook/react';
+import { exampleTags } from '../../util/example-content';
 import {
 	TagFilter as TagFilterComponent,
 	type TagFilterProps,
-} from './tag-filter'
+} from './tag-filter';
 
 export default {
 	title: 'Search/Tag Filter',
@@ -15,10 +15,10 @@ export default {
 	argTypes: {
 		onUpdate: { action: 'update' },
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<TagFilterProps<string>> = (args) => (
 	<TagFilterComponent {...args} />
-)
+);
 
-export const TagFilter = Template.bind({})
+export const TagFilter = Template.bind({});

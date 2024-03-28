@@ -1,7 +1,7 @@
-import classNames from 'classnames'
-import React from 'react'
-import { iconStyle } from './icon.css'
-import { type FrameworkIconProps } from './shared-icon-types'
+import classNames from 'classnames';
+import React from 'react';
+import { iconStyle } from './icon.css';
+import { type FrameworkIconProps } from './shared-icon-types';
 
 export const QwikFrameworkIcon = React.forwardRef<
 	SVGSVGElement,
@@ -172,5 +172,5 @@ export const QwikFrameworkIcon = React.forwardRef<
 				</linearGradient>
 			</defs>
 		</svg>
-	)
-})
+	);
+});

@@ -1,46 +1,46 @@
-import classNames from 'classnames'
-import React from 'react'
-import { type ContributorData } from './contributor'
+import classNames from 'classnames';
+import React from 'react';
+import { type ContributorData } from './contributor';
 import {
 	homepageContentContainerStyle,
 	homepageGutterStyle,
 	homepageStyle,
 	homepageTwoAndOneSectionStyle,
-} from './homepage.css'
-import { Search } from './search'
-import { Hero } from './hero'
-import { FeaturedLibraries } from './featured-libraries'
-import { Podcasts } from './podcasts'
-import { Courses } from './courses'
-import { Blogs } from './blogs'
-import { ContributorBanner } from './contributor-banner'
-import { Books } from './books'
-import { LatestTools } from './latest-tools'
-import { Communities } from './communities'
-import { type Library } from '../../models/library'
-import { type Podcast } from '../../models/podcast'
-import { type Course } from '../../models/course'
-import { type Blog } from '../../models/blog'
-import { type Book } from '../../models/book'
-import { type Tool } from '../../models/tool'
-import { type Community } from '../../models/community'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { ResourcesInfoBanner } from '../landing/resources-info-banner'
-import { type LinkCardProps } from '../landing/link-card'
-import { LogoIcon } from '../../icons/logo-icon'
+} from './homepage.css';
+import { Search } from './search';
+import { Hero } from './hero';
+import { FeaturedLibraries } from './featured-libraries';
+import { Podcasts } from './podcasts';
+import { Courses } from './courses';
+import { Blogs } from './blogs';
+import { ContributorBanner } from './contributor-banner';
+import { Books } from './books';
+import { LatestTools } from './latest-tools';
+import { Communities } from './communities';
+import { type Library } from '../../models/library';
+import { type Podcast } from '../../models/podcast';
+import { type Course } from '../../models/course';
+import { type Blog } from '../../models/blog';
+import { type Book } from '../../models/book';
+import { type Tool } from '../../models/tool';
+import { type Community } from '../../models/community';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { ResourcesInfoBanner } from '../landing/resources-info-banner';
+import { type LinkCardProps } from '../landing/link-card';
+import { LogoIcon } from '../../icons/logo-icon';
 
 export interface HomepageProps extends React.ComponentPropsWithoutRef<'div'> {
-	librariesTitle: string
-	libraries: Library[]
-	podcasts: Podcast<string>[]
-	courses: Course<string>[]
-	blogs: Blog<string>[]
-	books: Book<string>[]
-	tools: Tool<string>[]
-	communities: Community<string>[]
-	siteName: string
-	resourceCards: LinkCardProps[]
-	contributorsData: ContributorData[]
+	librariesTitle: string;
+	libraries: Library[];
+	podcasts: Podcast<string>[];
+	courses: Course<string>[];
+	blogs: Blog<string>[];
+	books: Book<string>[];
+	tools: Tool<string>[];
+	communities: Community<string>[];
+	siteName: string;
+	resourceCards: LinkCardProps[];
+	contributorsData: ContributorData[];
 }
 
 export function Homepage({
@@ -62,11 +62,11 @@ export function Homepage({
 		title: 'Framework.dev',
 		href: 'https://framework.dev/',
 		RawIcon(props) {
-			return <LogoIcon {...props} />
+			return <LogoIcon {...props} />;
 		},
 		backgroundColor: '#F6FDFF',
 		color: '#2E3132',
-	})
+	});
 
 	return (
 		<div className={classNames(className, homepageStyle)} {...props}>
@@ -117,5 +117,5 @@ export function Homepage({
 				/>
 			</div>
 		</div>
-	)
+	);
 }

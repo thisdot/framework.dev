@@ -1,9 +1,9 @@
-import { type Story, type Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react';
 import {
 	ContentBanner as ContentBannerComponent,
 	type ContentBannerProps,
-} from './content-banner'
-import { examplePodcasts } from '../../util/example-content'
+} from './content-banner';
+import { examplePodcasts } from '../../util/example-content';
 
 export default {
 	title: 'Home/Content Banner',
@@ -20,13 +20,13 @@ export default {
 				metadata: podcast.hosts.join(', '),
 				image: podcast.image,
 				href: podcast.href,
-			}
+			};
 		}),
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<ContentBannerProps> = (args) => (
 	<ContentBannerComponent {...args} />
-)
+);
 
-export const ContentBanner = Template.bind({})
+export const ContentBanner = Template.bind({});

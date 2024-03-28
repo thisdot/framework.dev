@@ -1,6 +1,6 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { pxToRem } from '../../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { pxToRem } from '../../util/style-utils';
 
 export const contributorImageStyle = style([
 	sprinkles({ borderColor: 'onSecondaryContainer' }),
@@ -10,4 +10,4 @@ export const contributorImageStyle = style([
 		borderWidth: pxToRem(4),
 		borderStyle: 'solid',
 	},
-])
+]);

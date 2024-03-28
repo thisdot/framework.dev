@@ -1,6 +1,6 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { vars } from '../../themes/themes.css'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { vars } from '../../themes/themes.css';
 
 export const comparisonBoxStyle = style([
 	sprinkles({
@@ -21,18 +21,18 @@ export const comparisonBoxStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const comparisonBoxHeadingStyle = sprinkles({
 	color: 'regularText',
 	paddingRight: 16,
 	textStyle: 'h200',
-})
+});
 
 export const comparisonBoxHeadingSoftStyle = sprinkles({
 	color: 'softText',
 	paddingRight: 16,
-})
+});
 
 export const comparisonBoxWhichLibsStyle = style([
 	sprinkles({
@@ -43,8 +43,8 @@ export const comparisonBoxWhichLibsStyle = style([
 	{
 		color: vars.palette.neutralVariant20,
 	},
-])
+]);
 
 export const comparisonBoxImageStyle = style({
 	alignSelf: 'end',
-})
+});

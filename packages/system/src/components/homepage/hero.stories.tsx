@@ -1,5 +1,5 @@
-import { type Story, type Meta } from '@storybook/react'
-import { Hero as HeroComponent, type HeroProps } from './hero'
+import { type Story, type Meta } from '@storybook/react';
+import { Hero as HeroComponent, type HeroProps } from './hero';
 
 export default {
 	title: 'Home/Hero',
@@ -7,11 +7,11 @@ export default {
 	args: {
 		children: 'Hello world',
 	},
-} as Meta
+} as Meta;
 
-const Template: Story<HeroProps> = (args) => <HeroComponent {...args} />
+const Template: Story<HeroProps> = (args) => <HeroComponent {...args} />;
 
-export const Hero = Template.bind({})
+export const Hero = Template.bind({});
 Hero.args = {
 	siteName: 'react',
-}
+};

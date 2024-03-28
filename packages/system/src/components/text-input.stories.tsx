@@ -1,8 +1,8 @@
-import { type Story, type Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react';
 import {
 	TextInput as TextInputComponent,
 	type TextInputProps,
-} from './text-input'
+} from './text-input';
 
 export default {
 	title: 'Text Input',
@@ -13,10 +13,10 @@ export default {
 		disabled: false,
 		hideLabel: false,
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<TextInputProps> = (args) => (
 	<TextInputComponent {...args} />
-)
+);
 
-export const TextInput = Template.bind({})
+export const TextInput = Template.bind({});

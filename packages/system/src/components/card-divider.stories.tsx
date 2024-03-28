@@ -1,9 +1,9 @@
-import { type Story, type Meta } from '@storybook/react'
-import { sprinkles } from '../sprinkles/sprinkles.css'
+import { type Story, type Meta } from '@storybook/react';
+import { sprinkles } from '../sprinkles/sprinkles.css';
 import {
 	CardDivider as CardDividerComponent,
 	type CardDividerProps,
-} from './card-divider'
+} from './card-divider';
 
 export default {
 	title: 'Card Divider',
@@ -11,7 +11,7 @@ export default {
 	args: {
 		className: sprinkles({ marginY: 12 }),
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<CardDividerProps> = (args) => (
 	<div>
@@ -42,6 +42,6 @@ const Template: Story<CardDividerProps> = (args) => (
 			lacus.
 		</p>
 	</div>
-)
+);
 
-export const CardDivider = Template.bind({})
+export const CardDivider = Template.bind({});

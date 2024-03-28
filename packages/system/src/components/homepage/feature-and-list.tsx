@@ -1,5 +1,5 @@
-import classNames from 'classnames'
-import React from 'react'
+import classNames from 'classnames';
+import React from 'react';
 import {
 	featureAndListStyle,
 	featureAndListHeadingStyle,
@@ -19,32 +19,35 @@ import {
 	featureAndListListTitleStyle,
 	featureAndListListMetadataStyle,
 	featureAndListViewAllStyle,
-} from './feature-and-list.css'
-import { type AttributeDefinition } from '../../models/all-categories'
-import { DiscreteAttribute, DiscreteAttributeIcon } from '../discrete-attribute'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { BookDecorator } from '../book-decorator'
+} from './feature-and-list.css';
+import { type AttributeDefinition } from '../../models/all-categories';
+import {
+	DiscreteAttribute,
+	DiscreteAttributeIcon,
+} from '../discrete-attribute';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { BookDecorator } from '../book-decorator';
 
 export interface FeatureAndListProps
 	extends React.ComponentPropsWithoutRef<'div'> {
-	title: string
+	title: string;
 	viewAll: {
-		title: string
-		href: string
-	}
+		title: string;
+		href: string;
+	};
 	items: {
 		image?: {
-			src: string
-			style: 'normal' | 'book'
-		}
-		title: string
-		metadata: string
-		href: string
-		attributes: AttributeDefinition[]
-		description: string
-	}[]
-	hideFeature?: boolean
-	emptyStateElement?: React.ReactNode
+			src: string;
+			style: 'normal' | 'book';
+		};
+		title: string;
+		metadata: string;
+		href: string;
+		attributes: AttributeDefinition[];
+		description: string;
+	}[];
+	hideFeature?: boolean;
+	emptyStateElement?: React.ReactNode;
 }
 
 export function FeatureAndList({
@@ -56,8 +59,8 @@ export function FeatureAndList({
 	emptyStateElement,
 	...props
 }: FeatureAndListProps) {
-	const featured = items[0]
-	const isEmpty = items.length === 0
+	const featured = items[0];
+	const isEmpty = items.length === 0;
 	return (
 		<div className={classNames(className, featureAndListStyle)} {...props}>
 			<h2 className={featureAndListHeadingStyle}>{title}</h2>
@@ -76,7 +79,7 @@ export function FeatureAndList({
 												<BookDecorator>
 													<img
 														className={featureAndListFeatureBookStyle}
-														src={featured.image.src}
+														src={featured.image}
 														alt=""
 													/>
 												</BookDecorator>
@@ -84,7 +87,7 @@ export function FeatureAndList({
 										) : (
 											<img
 												className={featureAndListFeatureImageStyle}
-												src={featured.image.src}
+												src={featured.image}
 												alt=""
 											/>
 										))}
@@ -102,7 +105,7 @@ export function FeatureAndList({
 													attribute={attribute}
 													colorize={true}
 												/>
-											)
+											);
 										})}
 									</div>
 									<p className={featureAndListFeatureDescription}>
@@ -125,14 +128,14 @@ export function FeatureAndList({
 												<BookDecorator>
 													<img
 														className={featureAndListListBookStyle}
-														src={item.image.src}
+														src={item.image}
 														alt=""
 													/>
 												</BookDecorator>
 											) : (
 												<img
 													className={featureAndListListImageStyle}
-													src={item.image.src}
+													src={item.image}
 													alt=""
 												/>
 											))}
@@ -149,7 +152,7 @@ export function FeatureAndList({
 															attribute={attribute}
 															colorize={true}
 														/>
-													)
+													);
 												})}
 											</div>
 										</div>
@@ -168,5 +171,5 @@ export function FeatureAndList({
 				<p>This list of items is currently empty</p>
 			)}
 		</div>
-	)
+	);
 }

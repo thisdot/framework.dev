@@ -1,15 +1,15 @@
-import { type Story, type Meta } from '@storybook/react'
-import { useState } from 'react'
-import { type AttributeDefinition } from '../../models/all-categories'
+import { type Story, type Meta } from '@storybook/react';
+import { useState } from 'react';
+import { type AttributeDefinition } from '../../models/all-categories';
 import {
 	exampleBooks,
 	exampleCourses,
 	exampleTags,
-} from '../../util/example-content'
+} from '../../util/example-content';
 import {
 	ResourceCard as ResourceCardComponent,
 	type ResourceCardProps,
-} from './resource-card'
+} from './resource-card';
 
 export default {
 	title: 'Cards/Resource Card',
@@ -54,17 +54,17 @@ export default {
 			action: 'onTagClick',
 		},
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<ResourceCardProps> = ({ onSelect, ...args }) => {
-	const [selected, setSelected] = useState(false)
+	const [selected, setSelected] = useState(false);
 	return (
 		<ResourceCardComponent
 			{...args}
 			selected={selected}
 			onSelect={onSelect ? (selected) => setSelected(selected) : undefined}
 		/>
-	)
-}
+	);
+};
 
-export const ResourceCard = Template.bind({})
+export const ResourceCard = Template.bind({});

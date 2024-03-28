@@ -1,9 +1,9 @@
-import { type Story, type Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react';
 import {
 	FeatureAndList as FeatureAndListComponent,
 	type FeatureAndListProps,
-} from './feature-and-list'
-import { exampleCourses } from '../../util/example-content'
+} from './feature-and-list';
+import { exampleCourses } from '../../util/example-content';
 
 export default {
 	title: 'Feature And List',
@@ -23,13 +23,13 @@ export default {
 					['format', course.format],
 					['paymentType', course.paymentType],
 				],
-			}
+			};
 		}),
 	},
-} as Meta
+} as Meta;
 
 const Template: Story<FeatureAndListProps> = (args) => (
 	<FeatureAndListComponent {...args} />
-)
+);
 
-export const FeatureAndList = Template.bind({})
+export const FeatureAndList = Template.bind({});
