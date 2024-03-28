@@ -1,14 +1,14 @@
 - [x] Finish moving collections to types
 - [x] Fix fetchers on pages to use new collections
 - [x] Update migration to handle fetching images and storing them
-- [ ] Use the migration script to create framework entry generator -
+- [x] Use the migration script to create framework entry generator -
       https://docs.google.com/spreadsheets/d/1yJJc5cSzZX6D1C3UL6DU_NvxvlpDHaGBuYQ-6P2B1I4/edit#gid=0
 
   - [x] identify which kit/kits
   - [x] identify what type of entry
-  - [-] collect needed fields
-  - save file
-  - format file
+  - [x] collect needed fields
+  - [x] save file
+  - [x] format file
 
 - [ ] Fix broken images
 

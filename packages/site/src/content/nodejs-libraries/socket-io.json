@@ -1,11 +1,12 @@
 {
-	"name": "socket.io",
+	"name": "Socket.io",
+	"href": "https://socket.io/",
+	"image": "./assets/socket-io.svg",
+	"description": "Socket.IO enables real-time bidirectional event-based communication.",
+	"tags": ["data fetching", "frameworks"],
 	"author": "Guillermo Rauch, Damien Arrachequesne",
+	"darkImageBackground": true,
 	"repo": "https://github.com/socketio/socket.io",
 	"package": "https://www.npmjs.com/package/socket.io",
-	"href": "https://socket.io/",
-	"description": "Socket.IO enables real-time bidirectional event-based communication.",
-	"image": "./assets/socket-io.svg+xml",
-	"tags": ["frameworks"],
 	"language": "NodeJS"
 }

@@ -117,7 +117,14 @@ function generateCommunitySchema(framework: Frameworks) {
 			z.object({
 				name: z.string(),
 				description: z.string(),
-				type: z.string(),
+				type: z.enum([
+					'Discord Community',
+					'Live and Online Events',
+					'Live Events',
+					'Online Events',
+					'Online',
+					'Reddit',
+				]),
 				href: z.string().url(),
 				image: image(),
 				darkImageBackground: z.boolean().optional(),
