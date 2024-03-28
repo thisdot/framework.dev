@@ -4,7 +4,7 @@ import { examplePodcasts } from '../../util/example-content'
 import { imageFirstCardGrid } from './card-layouts.css'
 import {
 	PodcastCard as PodcastCardComponent,
-	PodcastCardProps,
+	type PodcastCardProps,
 } from './podcast-card'
 
 export default {

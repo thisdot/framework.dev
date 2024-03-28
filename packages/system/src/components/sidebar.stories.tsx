@@ -1,7 +1,7 @@
 import { type Story, type Meta } from '@storybook/react'
 import startCase from 'lodash/startCase'
 import { sprinkles } from '../sprinkles/sprinkles.css'
-import { Sidebar as SidebarComponent, SidebarProps } from './sidebar'
+import { Sidebar as SidebarComponent, type SidebarProps } from './sidebar'
 import { NavItem } from './nav-item'
 import { allCategoryNames } from '../models/all-categories'
 import { bodyWithNav } from '../styles/layouts.css'

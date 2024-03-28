@@ -1,7 +1,7 @@
 import { type Story, type Meta } from '@storybook/react'
 import {
 	ComparisonTable as ComparisonTableComponent,
-	ComparisonTableProps,
+	type ComparisonTableProps,
 } from './index'
 import { exampleLibraries } from '../../util/example-content'
 import { fullscreen } from '../../styles/layouts.css'

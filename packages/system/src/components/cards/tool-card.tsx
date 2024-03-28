@@ -1,5 +1,5 @@
-import { Tool } from '../../models/tool'
-import { ResourceCard, ResourceCardProps } from './resource-card'
+import { type Tool } from '../../models/tool'
+import { ResourceCard, type ResourceCardProps } from './resource-card'
 
 export type ToolCardProps = Omit<
 	ResourceCardProps,

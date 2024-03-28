@@ -7,7 +7,7 @@ import {
 	featuredLibrariesStyle,
 	featuredLibrariesViewAllStyle,
 } from './featured-libraries.css'
-import { Library } from '../../models/library'
+import { type Library } from '../../models/library'
 import { LibraryCard } from '../cards/library-card'
 
 export interface FeaturedLibrariesProps

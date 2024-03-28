@@ -1,6 +1,6 @@
-import { Book } from '../../models/book'
+import { type Book } from '../../models/book'
 import { BulletDivider } from '../bullet-divider'
-import { ResourceCard, ResourceCardProps } from './resource-card'
+import { ResourceCard, type ResourceCardProps } from './resource-card'
 
 export type BookCardProps = Omit<
 	ResourceCardProps,

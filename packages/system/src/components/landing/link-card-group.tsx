@@ -4,7 +4,7 @@ import {
 	LinkCardGroupItemStyle,
 	LinkCardGroupStyle,
 } from './link-card-group.css'
-import { LinkCard, LinkCardProps } from './link-card'
+import { LinkCard, type LinkCardProps } from './link-card'
 
 export interface LinkCardGroupProps
 	extends React.ComponentPropsWithoutRef<'div'> {

@@ -1,7 +1,7 @@
 import { type Story, type Meta } from '@storybook/react'
 import {
 	FeatureAndList as FeatureAndListComponent,
-	FeatureAndListProps,
+	type FeatureAndListProps,
 } from './feature-and-list'
 import { exampleCourses } from '../../util/example-content'
 

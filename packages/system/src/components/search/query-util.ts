@@ -6,12 +6,12 @@ import toPairs from 'lodash/toPairs'
 import uniq from 'lodash/uniq'
 import without from 'lodash/without'
 import {
-	AllCategories,
-	AllModels,
-	AllModelsByName,
-	AttributeDefinition,
-	CategoryName,
-	FieldFilter,
+	type AllCategories,
+	type AllModels,
+	type AllModelsByName,
+	type AttributeDefinition,
+	type CategoryName,
+	type FieldFilter,
 } from '../../models/all-categories'
 import { hasFieldEqualToValue } from '../../util/data-utils'
 import {
@@ -21,7 +21,7 @@ import {
 	serializeFieldName,
 	serializeFieldValue,
 } from '../../util/string-utils'
-import { FilterSet, QueryParams } from './types'
+import { type FilterSet, type QueryParams } from './types'
 
 const filterRegex = /(\S+):(\S+)/g
 export function parseQueryString(

@@ -1,5 +1,8 @@
 import { type Story, type Meta } from '@storybook/react'
-import { PitchCard as PitchCardComponent, PitchCardProps } from './pitch-card'
+import {
+	PitchCard as PitchCardComponent,
+	type PitchCardProps,
+} from './pitch-card'
 
 export default {
 	title: 'Landing/Pitch Card',

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Button } from './button'
 import {
 	SideDialog as SideDialogComponent,
-	SideDialogProps,
+	type SideDialogProps,
 } from './side-dialog'
 
 export default {

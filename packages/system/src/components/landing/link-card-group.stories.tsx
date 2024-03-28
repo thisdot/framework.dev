@@ -5,7 +5,7 @@ import { SvelteIcon } from '../../icons/svelte-icon'
 import { VueIcon } from '../../icons/vue-icon'
 import {
 	LinkCardGroup as LinkCardGroupComponent,
-	LinkCardGroupProps,
+	type LinkCardGroupProps,
 } from './link-card-group'
 import { DenoIcon } from '../../icons/deno-icon'
 

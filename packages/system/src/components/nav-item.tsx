@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import React from 'react'
-import { IconProps } from '../icons/shared-icon-types'
+import { type IconProps } from '../icons/shared-icon-types'
 import { Counter } from './counter'
 import {
 	navItemIconStyle,

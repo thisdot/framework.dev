@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import React from 'react'
-import { buttonStyle, ButtonVariants } from './button.css'
+import { buttonStyle, type ButtonVariants } from './button.css'
 import type * as Polymorphic from '@reach/polymorphic'
 
 export type ButtonProps = {

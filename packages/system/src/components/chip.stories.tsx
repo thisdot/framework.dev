@@ -1,5 +1,5 @@
 import { type Story, type Meta } from '@storybook/react'
-import { Chip as ChipComponent, ChipProps } from './chip'
+import { Chip as ChipComponent, type ChipProps } from './chip'
 
 export default {
 	title: 'Chip',

@@ -2,7 +2,7 @@ import { type Story, type Meta } from '@storybook/react'
 import { sprinkles } from '../../sprinkles/sprinkles.css'
 import { exampleTools } from '../../util/example-content'
 import { titleFirstCardGrid } from './card-layouts.css'
-import { ToolCard as ToolCardComponent, ToolCardProps } from './tool-card'
+import { ToolCard as ToolCardComponent, type ToolCardProps } from './tool-card'
 
 export default {
 	title: 'Cards/Tool Card',

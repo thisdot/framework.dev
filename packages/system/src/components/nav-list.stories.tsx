@@ -4,7 +4,7 @@ import { bodyWithNav } from '../styles/layouts.css'
 import { NavItem } from './nav-item'
 import {
 	NavList as NavListComponent,
-	NavListProps,
+	type NavListProps,
 	NavListItem,
 } from './nav-list'
 

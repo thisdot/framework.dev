@@ -9,8 +9,8 @@ import {
 } from '@reach/combobox'
 import { SearchInput } from './search-input'
 import { getWordCoordinatesAt } from './query-util'
-import { FilterSet } from './types'
-import { AllCategories } from '../../models/all-categories'
+import { type FilterSet } from './types'
+import { type AllCategories } from '../../models/all-categories'
 import {
 	formatFieldName,
 	serializeFieldName,

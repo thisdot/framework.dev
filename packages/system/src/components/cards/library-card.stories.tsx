@@ -4,7 +4,7 @@ import { exampleLibraries } from '../../util/example-content'
 import { titleFirstCardGrid } from './card-layouts.css'
 import {
 	LibraryCard as LibraryCardComponent,
-	LibraryCardProps,
+	type LibraryCardProps,
 } from './library-card'
 
 export default {

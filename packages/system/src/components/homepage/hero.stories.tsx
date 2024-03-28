@@ -1,5 +1,5 @@
 import { type Story, type Meta } from '@storybook/react'
-import { Hero as HeroComponent, HeroProps } from './hero'
+import { Hero as HeroComponent, type HeroProps } from './hero'
 
 export default {
 	title: 'Home/Hero',

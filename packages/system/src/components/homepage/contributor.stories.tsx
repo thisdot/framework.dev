@@ -1,7 +1,7 @@
 import { type Story, type Meta } from '@storybook/react'
 import {
 	Contributor as ContributorComponent,
-	ContributorProps,
+	type ContributorProps,
 } from './contributor'
 
 export default {

@@ -46,18 +46,4 @@ module.exports = {
 			},
 		}
 	},
-	async previewHead(head) {
-		const { fontHeadTags } = await import('../src/globals/font-import.mjs')
-		return `
-		<style>
-			@media only percy {
-				.hide-in-percy {
-					visibility: hidden;
-				}
-			}
-		</style>
-			${head}
-			${fontHeadTags}
-		`
-	},
 }

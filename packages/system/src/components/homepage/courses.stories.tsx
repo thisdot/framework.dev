@@ -1,5 +1,5 @@
 import { type Story, type Meta } from '@storybook/react'
-import { Courses as CoursesComponent, CoursesProps } from './courses'
+import { Courses as CoursesComponent, type CoursesProps } from './courses'
 import { exampleCourses } from '../../util/example-content'
 import { pxToRem } from '../../util/style-utils'
 

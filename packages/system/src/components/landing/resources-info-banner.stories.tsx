@@ -3,10 +3,10 @@ import { AngularIcon } from '../../icons/angular-icon'
 import { ReactIcon } from '../../icons/react-icon'
 import { SvelteIcon } from '../../icons/svelte-icon'
 import { VueIcon } from '../../icons/vue-icon'
-import { LinkCardProps } from './link-card'
+import { type LinkCardProps } from './link-card'
 import {
 	ResourcesInfoBanner as ResourcesInfoBannerComponent,
-	ResourcesInfoBannerProps,
+	type ResourcesInfoBannerProps,
 } from './resources-info-banner'
 import { DenoIcon } from '../../icons/deno-icon'
 

@@ -6,7 +6,7 @@ import {
 	filterMenuFooterStyle,
 	filterMenuStyle,
 } from './filter-menu.css'
-import { FilterSet, QueryParams } from './types'
+import { type FilterSet, type QueryParams } from './types'
 import { Filter } from './filter'
 import { TagFilter } from './tag-filter'
 import classNames from 'classnames'

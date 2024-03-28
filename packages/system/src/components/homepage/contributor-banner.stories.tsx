@@ -1,7 +1,7 @@
 import { type Story, type Meta } from '@storybook/react'
 import {
 	ContributorBanner as ContributorBannerComponent,
-	ContributorBannerProps,
+	type ContributorBannerProps,
 } from './contributor-banner'
 
 export default {

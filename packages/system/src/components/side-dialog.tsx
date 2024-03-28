@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { DialogOverlay, DialogContent } from '@reach/dialog'
 import {
 	dialogContentStyle,
-	DialogContentVariants,
+	type DialogContentVariants,
 	dialogOverlayStyle,
 } from './side-dialog.css'
 import assertNever from 'assert-never'

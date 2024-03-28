@@ -2,7 +2,7 @@ import { type Story, type Meta } from '@storybook/react'
 import { sprinkles } from '../../sprinkles/sprinkles.css'
 import { exampleBlogs } from '../../util/example-content'
 import { titleFirstCardGrid } from './card-layouts.css'
-import { BlogCard as BlogCardComponent, BlogCardProps } from './blog-card'
+import { BlogCard as BlogCardComponent, type BlogCardProps } from './blog-card'
 
 export default {
 	title: 'Cards/Blog Card',

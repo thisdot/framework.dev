@@ -1,6 +1,6 @@
 import { type Story, type Meta } from '@storybook/react'
 import { InteractiveIcon } from '../icons/interactive-icon'
-import { NavItem as NavItemComponent, NavItemProps } from './nav-item'
+import { NavItem as NavItemComponent, type NavItemProps } from './nav-item'
 
 export default {
 	title: 'Nav Item',

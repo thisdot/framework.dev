@@ -5,7 +5,7 @@ import {
 	filterStyle,
 	filterTitleStyle,
 } from './filter.css'
-import { FieldFilter } from '../../models/all-categories'
+import { type FieldFilter } from '../../models/all-categories'
 import { ChipSelector } from '../chip-selector'
 import { DiscreteAttribute } from '../discrete-attribute'
 import { ungroupFieldFilter } from './query-util'

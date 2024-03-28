@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import React from 'react'
-import { ContributorData } from './contributor'
+import { type ContributorData } from './contributor'
 import {
 	homepageContentContainerStyle,
 	homepageGutterStyle,
@@ -17,16 +17,16 @@ import { ContributorBanner } from './contributor-banner'
 import { Books } from './books'
 import { LatestTools } from './latest-tools'
 import { Communities } from './communities'
-import { Library } from '../../models/library'
-import { Podcast } from '../../models/podcast'
-import { Course } from '../../models/course'
-import { Blog } from '../../models/blog'
-import { Book } from '../../models/book'
-import { Tool } from '../../models/tool'
-import { Community } from '../../models/community'
+import { type Library } from '../../models/library'
+import { type Podcast } from '../../models/podcast'
+import { type Course } from '../../models/course'
+import { type Blog } from '../../models/blog'
+import { type Book } from '../../models/book'
+import { type Tool } from '../../models/tool'
+import { type Community } from '../../models/community'
 import { sprinkles } from '../../sprinkles/sprinkles.css'
 import { ResourcesInfoBanner } from '../landing/resources-info-banner'
-import { LinkCardProps } from '../landing/link-card'
+import { type LinkCardProps } from '../landing/link-card'
 import { LogoIcon } from '../../icons/logo-icon'
 
 export interface HomepageProps extends React.ComponentPropsWithoutRef<'div'> {

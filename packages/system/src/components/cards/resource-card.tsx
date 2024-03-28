@@ -1,6 +1,6 @@
 import classNames from 'classnames'
-import React, { useRef, useState, ReactNode } from 'react'
-import { AttributeDefinition } from '../../models/all-categories'
+import React, { useRef, useState, type ReactNode } from 'react'
+import { type AttributeDefinition } from '../../models/all-categories'
 import { sprinkles } from '../../sprinkles/sprinkles.css'
 import { formatFieldValue } from '../../util/string-utils'
 import { CardDivider } from '../card-divider'

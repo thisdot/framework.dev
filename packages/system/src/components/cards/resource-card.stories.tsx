@@ -1,6 +1,6 @@
 import { type Story, type Meta } from '@storybook/react'
 import { useState } from 'react'
-import { AttributeDefinition } from '../../models/all-categories'
+import { type AttributeDefinition } from '../../models/all-categories'
 import {
 	exampleBooks,
 	exampleCourses,
@@ -8,7 +8,7 @@ import {
 } from '../../util/example-content'
 import {
 	ResourceCard as ResourceCardComponent,
-	ResourceCardProps,
+	type ResourceCardProps,
 } from './resource-card'
 
 export default {

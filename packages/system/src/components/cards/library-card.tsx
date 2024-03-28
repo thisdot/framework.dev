@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { Library } from '../../models/library'
+import { type Library } from '../../models/library'
 import {
 	libraryCardBadgeStyle,
 	libraryPackageLinkStyle,
@@ -11,7 +11,7 @@ import {
 	getNpmDownloadsBadge,
 } from '../../util/stats-util'
 import { track } from '../../util/analytics-utils'
-import { ResourceCard, ResourceCardProps } from './resource-card'
+import { ResourceCard, type ResourceCardProps } from './resource-card'
 
 export type LibraryCardProps = Omit<
 	ResourceCardProps,

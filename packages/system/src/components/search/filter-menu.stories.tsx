@@ -3,9 +3,9 @@ import { allCategoryNames } from '../../models/all-categories'
 import { exampleTags } from '../../util/example-content'
 import {
 	FilterMenu as FilterMenuComponent,
-	FilterMenuProps,
+	type FilterMenuProps,
 } from './filter-menu'
-import { FilterSet, QueryParams } from './types'
+import { type FilterSet, type QueryParams } from './types'
 
 const params: QueryParams = {
 	filters: {

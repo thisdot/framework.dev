@@ -1,7 +1,10 @@
 import { type Story, type Meta } from '@storybook/react'
 import { useRef, useState } from 'react'
 import { Button } from './button'
-import { InfoPopup as InfoPopupComponent, InfoPopupProps } from './info-popup'
+import {
+	InfoPopup as InfoPopupComponent,
+	type InfoPopupProps,
+} from './info-popup'
 
 const alignmentOptions = ['center', 'start', 'end']
 export default {

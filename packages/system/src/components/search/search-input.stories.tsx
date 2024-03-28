@@ -1,7 +1,7 @@
 import { type Story, type Meta } from '@storybook/react'
 import {
 	SearchInput as SearchInputComponent,
-	SearchInputProps,
+	type SearchInputProps,
 } from './search-input'
 
 export default {

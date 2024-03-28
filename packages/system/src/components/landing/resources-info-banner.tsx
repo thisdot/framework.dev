@@ -7,7 +7,7 @@ import {
 	resourcesInfoBannerStyle,
 } from './resources-info-banner.css'
 import { LinkCardGroup as LinkCardGroupComponent } from './link-card-group'
-import { LinkCardProps } from './link-card'
+import { type LinkCardProps } from './link-card'
 
 export interface ResourcesInfoBannerProps
 	extends React.ComponentPropsWithoutRef<'div'> {

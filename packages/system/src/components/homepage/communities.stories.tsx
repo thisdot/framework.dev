@@ -1,7 +1,7 @@
 import { type Story, type Meta } from '@storybook/react'
 import {
 	Communities as CommunitiesComponent,
-	CommunitiesProps,
+	type CommunitiesProps,
 } from './communities'
 import { exampleCommunities } from '../../util/example-content'
 

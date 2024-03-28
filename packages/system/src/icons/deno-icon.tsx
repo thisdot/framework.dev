@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconProps } from './shared-icon-types'
+import { type IconProps } from './shared-icon-types'
 import classNames from 'classnames'
 import { iconStyle } from './icon.css'
 

@@ -6,12 +6,15 @@ import {
 	searchContainerStyle,
 	searchStyle,
 } from './search.css'
-import { AllCategories, AllModelsByName } from '../../models/all-categories'
+import {
+	type AllCategories,
+	type AllModelsByName,
+} from '../../models/all-categories'
 import { sprinkles } from '../../sprinkles/sprinkles.css'
 import { FilterMenu } from './filter-menu'
 import { SideDialog } from '../side-dialog'
 import { Button } from '../button'
-import { ResultsCategory, ResultsCategoryProps } from './results-category'
+import { ResultsCategory, type ResultsCategoryProps } from './results-category'
 import {
 	calculateAvailableFilters,
 	emptyFilterSet,
@@ -23,13 +26,13 @@ import {
 import { track } from '../../util/analytics-utils'
 import { SearchAutocomplete } from './search-autocomplete'
 import { FilterIcon } from '../../icons/filter-icon'
-import { FilterSet, QueryParams } from './types'
+import { type FilterSet, type QueryParams } from './types'
 import uniq from 'lodash/uniq'
 import map from 'lodash/map'
 import sortBy from 'lodash/sortBy'
 import take from 'lodash/take'
 import without from 'lodash/without'
-import { Library } from '../../models/library'
+import { type Library } from '../../models/library'
 import { ComparisonTable } from '../comparison-table'
 import { CloseIcon } from '../../icons/close-icon'
 import { ResetIcon } from '../../icons/reset-icon'

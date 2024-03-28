@@ -1,4 +1,4 @@
-import { ISortConfig, ILibrary } from './types'
+import { type ISortConfig, type ILibrary } from './types'
 
 export function sortLibraries(
 	libraries: ILibrary[],

@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
 import { iconStyle } from './icon.css'
-import { FrameworkIconProps } from './shared-icon-types'
+import { type FrameworkIconProps } from './shared-icon-types'
 
 export const GraphQLFrameworkIcon = React.forwardRef<
 	SVGSVGElement,

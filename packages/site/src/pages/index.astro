@@ -9,7 +9,7 @@ import BaseLayout from '../layouts/base.astro'
 import Homepage from '../components/homepage'
 import { FRAMEWORK_RESOURCES } from '@framework/system/src/globals/global-constants'
 import { getCollection, type CollectionEntry } from 'astro:content'
-import { type CollectionTypes } from '../content/config'
+import { type CollectionTypes } from '@framework/site/src/types'
 
 async function getCollectionData(collectionName: CollectionTypes) {
 	const collectionData = await getCollection(

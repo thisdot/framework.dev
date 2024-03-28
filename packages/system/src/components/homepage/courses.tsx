@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import React from 'react'
 import sampleSize from 'lodash/sampleSize'
 import { coursesStyle } from './courses.css'
-import { Course } from '../../models/course'
+import { type Course } from '../../models/course'
 import { FeatureAndList } from './feature-and-list'
 
 export interface CoursesProps extends React.ComponentPropsWithoutRef<'div'> {

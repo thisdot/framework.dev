@@ -18,7 +18,7 @@
 			"@framework/site": ["./packages/site/*"]
 		},
 		"types": ["vite/client", "gtag.js"],
-		"verbatimModuleSyntax": false,
+		"verbatimModuleSyntax": true,
 		"allowImportingTsExtensions": true,
 		"strictNullChecks": true,
 		"allowJs": true

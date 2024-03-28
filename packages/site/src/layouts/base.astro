@@ -1,7 +1,7 @@
 ---
 import { Logo } from '@framework/system/src/components/logo'
 import { Sidebar } from '@framework/system/src/components/sidebar'
-import { fontHeadTags } from '@framework/system/src/globals/font-import.mjs'
+import FontHeadTags from '@framework/system/src/globals/font-import.astro'
 import '@framework/system/src/globals/global-styles.ts'
 import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css'
 import {
@@ -18,12 +18,15 @@ import { getSearchData } from '@framework/site/src/utils/search-data'
 const { title, currentCategory, currentTag, className } = Astro.props
 const searchData = await getSearchData(import.meta.env.VITE_FRAMEWORK)
 const navData = searchData.map((o) => pick(o, ['name', 'subCategories']))
+const themeClass = themes[
+	`${import.meta.env.VITE_FRAMEWORK}Theme` as keyof typeof themes
+] as string
 ---
 
 <!doctype html>
-<html class={themes[`${import.meta.env.VITE_FRAMEWORK}Theme`]} lang="en">
+<html class={themeClass} lang="en">
 	<head>
-		<Fragment set:html={fontHeadTags} />
+		<FontHeadTags />
 		<title>{title}</title>
 
 		<meta name="robots" content="noindex" />

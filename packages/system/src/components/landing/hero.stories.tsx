@@ -3,7 +3,7 @@ import { AngularIcon } from '../../icons/angular-icon'
 import { ReactIcon } from '../../icons/react-icon'
 import { VueIcon } from '../../icons/vue-icon'
 import { SvelteIcon } from '../../icons/svelte-icon'
-import { Hero as HeroComponent, HeroProps } from './hero'
+import { Hero as HeroComponent, type HeroProps } from './hero'
 import { DenoIcon } from '../../icons/deno-icon'
 
 export default {

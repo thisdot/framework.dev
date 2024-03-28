@@ -1,6 +1,6 @@
 import { type Story, type Meta } from '@storybook/react'
 import { ReactIcon } from '../../icons/react-icon'
-import { LinkCard as LinkCardComponent, LinkCardProps } from './link-card'
+import { LinkCard as LinkCardComponent, type LinkCardProps } from './link-card'
 
 export default {
 	title: 'Landing/Link Card',

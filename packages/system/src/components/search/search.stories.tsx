@@ -1,7 +1,7 @@
 import { type Story, type Meta } from '@storybook/react'
 import { fullscreen } from '../../styles/layouts.css'
 import { exampleSearchData } from '../../util/example-content'
-import { Search as SearchComponent, SearchProps } from './search'
+import { Search as SearchComponent, type SearchProps } from './search'
 
 export default {
 	title: 'Search/Search',

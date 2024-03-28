@@ -1,7 +1,7 @@
 import { type Story, type Meta } from '@storybook/react'
 import {
 	ContentBanner as ContentBannerComponent,
-	ContentBannerProps,
+	type ContentBannerProps,
 } from './content-banner'
 import { examplePodcasts } from '../../util/example-content'
 

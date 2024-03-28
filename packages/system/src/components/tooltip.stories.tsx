@@ -1,6 +1,6 @@
 import { type Story, type Meta } from '@storybook/react'
 import { InteractiveIcon } from '../icons/interactive-icon'
-import { Tooltip as TooltipComponent, TooltipProps } from './tooltip'
+import { Tooltip as TooltipComponent, type TooltipProps } from './tooltip'
 
 export default {
 	title: 'Tooltip',

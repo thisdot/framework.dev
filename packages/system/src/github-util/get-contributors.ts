@@ -1,5 +1,5 @@
 import pRetry, { AbortError } from 'p-retry'
-import { ContributorData } from '../components/homepage/contributor'
+import { type ContributorData } from '../components/homepage/contributor'
 
 interface ContributorApiData {
 	login: string

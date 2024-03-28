@@ -1,7 +1,7 @@
 import { type Story, type Meta } from '@storybook/react'
 import {
 	FeaturedLibraries as FeaturedLibrariesComponent,
-	FeaturedLibrariesProps,
+	type FeaturedLibrariesProps,
 } from './featured-libraries'
 import { exampleLibraries, exampleTags } from '../../util/example-content'
 

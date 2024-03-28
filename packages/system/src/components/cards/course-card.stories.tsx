@@ -4,7 +4,7 @@ import { exampleCourses } from '../../util/example-content'
 import { titleFirstCardGrid } from './card-layouts.css'
 import {
 	CourseCard as CourseCardComponent,
-	CourseCardProps,
+	type CourseCardProps,
 } from './course-card'
 
 export default {

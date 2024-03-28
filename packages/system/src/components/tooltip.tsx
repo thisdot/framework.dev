@@ -1,14 +1,14 @@
 import {
-	TooltipParams,
+	type TooltipParams,
 	TooltipPopup,
-	TooltipPopupProps,
+	type TooltipPopupProps,
 	useTooltip,
 } from '@reach/tooltip'
 import { Portal } from '@reach/portal'
 import classNames from 'classnames'
-import React, { CSSProperties } from 'react'
+import React, { type CSSProperties } from 'react'
 import { tooltipStyle, tooltipTriangleStyle } from './tooltip.css'
-import { Position } from '@reach/popover'
+import { type Position } from '@reach/popover'
 
 type TooltipPosition = 'top' | 'bottom' | 'left' | 'right'
 

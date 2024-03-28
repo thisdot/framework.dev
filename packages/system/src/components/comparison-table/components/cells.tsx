@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Headings, ISortConfig } from '../types'
+import { type Headings, type ISortConfig } from '../types'
 import {
 	cellTHStyle,
 	cellTDStyle,

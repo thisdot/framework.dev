@@ -1,7 +1,7 @@
 import { type Story, type Meta } from '@storybook/react'
 import {
 	CardSelector as CardSelectorComponent,
-	CardSelectorProps,
+	type CardSelectorProps,
 } from './card-selector'
 
 export default {

@@ -1,7 +1,7 @@
 import { type Story, type Meta } from '@storybook/react'
 import {
 	CommunityCard as CommunityCardComponent,
-	CommunityCardProps,
+	type CommunityCardProps,
 } from './community-card'
 import { sprinkles } from '../../sprinkles/sprinkles.css'
 import { exampleCommunities } from '../../util/example-content'

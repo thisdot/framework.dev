@@ -9,7 +9,7 @@ import {
 	linkCardRawIconContainerStyle,
 } from './link-card.css'
 import { ExternalLinkIcon } from '../../icons/external-link'
-import { IconProps } from '../../icons/shared-icon-types'
+import { type IconProps } from '../../icons/shared-icon-types'
 
 export interface LinkCardProps extends React.ComponentPropsWithoutRef<'a'> {
 	title: string

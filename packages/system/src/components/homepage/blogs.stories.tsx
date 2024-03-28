@@ -1,5 +1,5 @@
 import { type Story, type Meta } from '@storybook/react'
-import { Blogs as BlogsComponent, BlogsProps } from './blogs'
+import { Blogs as BlogsComponent, type BlogsProps } from './blogs'
 import { exampleBlogs } from '../../util/example-content'
 import { pxToRem } from '../../util/style-utils'
 

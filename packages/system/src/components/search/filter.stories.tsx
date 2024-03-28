@@ -1,7 +1,7 @@
 import { type Story, type Meta } from '@storybook/react'
 import { bookIndexMetadata } from '../../models/book'
 import { exampleTags } from '../../util/example-content'
-import { Filter as FilterComponent, FilterProps } from './filter'
+import { Filter as FilterComponent, type FilterProps } from './filter'
 
 export default {
 	title: 'Search/Filter',

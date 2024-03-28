@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import React from 'react'
 import sampleSize from 'lodash/sampleSize'
 import { blogsStyle } from './blogs.css'
-import { Blog } from '../../models/blog'
+import { type Blog } from '../../models/blog'
 import { ResourceList } from './resource-list'
 
 export interface BlogsProps extends React.ComponentPropsWithoutRef<'div'> {
