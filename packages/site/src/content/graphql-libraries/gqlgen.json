@@ -1,0 +1,11 @@
+{
+	"name": "gqlgen",
+	"author": "99designs",
+	"repo": "https://www.github.com/99designs/gqlgen",
+	"package": "",
+	"href": "https://gqlgen.com/",
+	"description": "gqlgen is a Go library for building GraphQL servers without any fuss.",
+	"image": "./assets/gqlgen.png",
+	"language": "Go",
+	"tags": ["web servers"]
+}

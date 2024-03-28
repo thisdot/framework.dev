@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { Library } from '../../models/library'
+import { type Library } from '../../models/library'
 import {
 	libraryCardBadgeStyle,
 	libraryPackageLinkStyle,
@@ -11,7 +11,7 @@ import {
 	getNpmDownloadsBadge,
 } from '../../util/stats-util'
 import { track } from '../../util/analytics-utils'
-import { ResourceCard, ResourceCardProps } from './resource-card'
+import { ResourceCard, type ResourceCardProps } from './resource-card'
 
 export type LibraryCardProps = Omit<
 	ResourceCardProps,
@@ -46,7 +46,7 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 					{library?.repo.includes('github.com') ? (
 						<Badge
 							data={getGitHubStarsBadge(
-								library.repo.replace(/https:\/\/(www\.)?github\.com\//, '')
+								library.repo.replace(/https:\/\/(www\.)?github\.com\//, ''),
 							)}
 							href={library.repo}
 							label={`${library.name} GitHub Repository`}
@@ -63,18 +63,18 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 						<>
 							<Badge
 								data={getNpmDownloadsBadge(
-									library.package.replace('https://www.npmjs.com/package/', '')
+									library.package.replace('https://www.npmjs.com/package/', ''),
 								)}
 								href={library.package}
 								label={`${library.name} NPM Package`}
 							/>
 							<Badge
 								data={getBundleSizeBadge(
-									library.package.replace('https://www.npmjs.com/package/', '')
+									library.package.replace('https://www.npmjs.com/package/', ''),
 								)}
 								href={`https://bundlephobia.com/package/${library.package.replace(
 									'https://www.npmjs.com/package/',
-									''
+									'',
 								)}`}
 								label={`${library.name} Bundle Size Stats`}
 							/>
@@ -84,7 +84,7 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 						<div
 							className={classNames(
 								libraryPackageLinkStyle,
-								libraryCardBadgeStyle
+								libraryCardBadgeStyle,
 							)}
 						>
 							<a className={libraryPackageTextStyle} href={library.package}>

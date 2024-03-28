@@ -1,0 +1,11 @@
+{
+	"name": "Remix",
+	"author": "Remix",
+	"repo": "https://www.github.com/remix-run/remix",
+	"package": "https://www.npmjs.com/package/remix",
+	"href": "https://remix.run/",
+	"description": "Remix is a full stack web framework (from the creators of React Router) that lets you focus on the user interface and work back through web fundamentals to deliver a fast, slick, and resilient user experience.",
+	"image": "./assets/remix.png",
+	"tags": ["frameworks", "routing", "data fetching", "forms"],
+	"language": "NodeJS"
+}

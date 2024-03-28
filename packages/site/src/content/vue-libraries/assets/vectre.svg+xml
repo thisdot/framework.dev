@@ -1,0 +1,9 @@
+<svg viewBox="143.432 149.522 95.63 33.947" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="pattern-0" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+      <rect x="0" y="0" width="50" height="100" style="fill: black;"></rect>
+    </pattern>
+  </defs>
+  <path d="M 163.357 175.77 L 157.997 158.41 L 161.207 158.41 L 164.837 171.95 L 164.837 175.77 L 163.357 175.77 Z M 165.797 171.2 L 169.457 158.41 L 172.637 158.41 L 167.017 175.77 L 165.797 175.77 L 165.797 171.2 Z" transform="matrix(0.7770920395851135, -0.7247429490089417, 1.1366750001907349, 1.2712900638580322, -159.40650939941406, 73.25423431396484)" style="white-space: pre;"></path>
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-size: 24px;font-family: sans-serif;" x="173.723" y="177.999">vectre</text>
+</svg>

@@ -1,0 +1,11 @@
+{
+	"name": "puppeteer",
+	"description": "A port of puppeteer running on Deno",
+	"href": "https://deno.land/x/puppeteer",
+	"package": "",
+	"repo": "https://github.com/lucacasonato/deno-puppeteer",
+	"author": "Luca Casonato",
+	"image": "./assets/puppeteer.jpeg",
+	"tags": ["utilities", "testing"],
+	"language": "TypeScript"
+}

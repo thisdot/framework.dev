@@ -23,7 +23,7 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 			id: customIdFromProps,
 			...props
 		}: TextInputProps,
-		ref
+		ref,
 	) {
 		const id = useId(customIdFromProps)
 		return (
@@ -39,12 +39,12 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 					htmlFor={id}
 					className={classNames(
 						textInputLabelStyle,
-						hideLabel && visuallyHidden
+						hideLabel && visuallyHidden,
 					)}
 				>
 					{label}
 				</label>
 			</div>
 		)
-	}
+	},
 )

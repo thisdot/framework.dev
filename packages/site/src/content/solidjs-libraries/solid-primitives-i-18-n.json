@@ -1,0 +1,11 @@
+{
+	"name": "Solid primitives i18n",
+	"author": "Solid Community",
+	"repo": "https://www.github.com/solidjs-community/solid-primitives/tree/main/packages/i18n",
+	"package": "https://www.npmjs.com/package/@solid-primitives/i18n",
+	"href": "https://github.com/solidjs-community/solid-primitives/tree/main/packages/i18n",
+	"description": "A library of high-quality primitives that extend SolidJS reactivity.",
+	"image": "./assets/solid-primitives-i-18-n.jpeg",
+	"tags": ["internationalization"],
+	"language": "TypeScript"
+}

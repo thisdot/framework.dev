@@ -1,0 +1,11 @@
+{
+	"title": "Vue Foundations",
+	"author": "Anthony Gore",
+	"image": "./assets/vue-foundations-anthony-gore.jpeg",
+	"description": "Learn Vue 3 from scratch by building real-world web apps. Plus key tools like Vue CLI and Vue Router.",
+	"paymentType": "paid",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://vuejsdevelopers.com/courses/foundations/",
+	"tags": ["data fetching", "vue 3", "routing"]
+}

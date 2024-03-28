@@ -3,33 +3,33 @@
 version: 2
 updates:
   # root
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     # Only do security updates
     open-pull-requests-limit: 0
 
   # landing-site
-  - package-ecosystem: "npm"
-    directory: "/packages/landing-site/"
+  - package-ecosystem: 'npm'
+    directory: '/packages/landing-site/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     # Only do security updates
     open-pull-requests-limit: 0
 
   # site
-  - package-ecosystem: "npm"
-    directory: "/packages/site/"
+  - package-ecosystem: 'npm'
+    directory: '/packages/site/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     # Only do security updates
     open-pull-requests-limit: 0
 
   # system
-  - package-ecosystem: "npm"
-    directory: "/packages/system/"
+  - package-ecosystem: 'npm'
+    directory: '/packages/system/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     # Only do security updates
     open-pull-requests-limit: 0

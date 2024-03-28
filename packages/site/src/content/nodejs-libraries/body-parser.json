@@ -1,0 +1,11 @@
+{
+	"name": "body-parser",
+	"author": "Douglas Wilson",
+	"repo": "https://github.com/expressjs/body-parser",
+	"package": "https://www.npmjs.com/package/body-parser",
+	"href": "https://github.com/expressjs/body-parser",
+	"description": "Parse incoming request bodies in a middleware before your handlers, available under the req.body property.",
+	"image": "./assets/body-parser.png",
+	"tags": ["frameworks"],
+	"language": "NodeJS"
+}

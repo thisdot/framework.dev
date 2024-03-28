@@ -1,0 +1,8 @@
+{
+	"title": "ui.dev",
+	"author": "Tyler McGinnis",
+	"description": "A JavaScript blog with a focus on React content.",
+	"image": "./assets/ui-dev.jpeg",
+	"href": "https://ui.dev/blog/",
+	"tags": []
+}

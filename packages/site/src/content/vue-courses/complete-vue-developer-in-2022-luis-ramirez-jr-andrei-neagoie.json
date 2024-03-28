@@ -1,0 +1,21 @@
+{
+	"title": "Complete Vue Developer in 2022",
+	"author": "Luis Ramirez Jr & Andrei Neagoie",
+	"image": "./assets/complete-vue-developer-in-2022-luis-ramirez-jr-andrei-neagoie.jpeg",
+	"description": "The only Vue.js tutorial + projects course you need to learn Vue (including all new Vue 3 features), build large-scale Vue applications from scratch, and get hired as a Vue developer in 2022. Go from Zero To VUE Mastery.",
+	"paymentType": "paid",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://zerotomastery.io/courses/learn-vue-js/",
+	"tags": [
+		"PWA",
+		"vue 3",
+		"testing",
+		"routing",
+		"vuex",
+		"authentication",
+		"forms",
+		"component design",
+		"CSS"
+	]
+}

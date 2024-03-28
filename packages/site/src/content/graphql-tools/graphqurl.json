@@ -1,0 +1,8 @@
+{
+	"name": "graphqurl",
+	"author": "Hasura",
+	"description": "curl for GraphQL with autocomplete, subscriptions and GraphiQL. Also a dead-simple universal javascript GraphQL client.",
+	"image": "./assets/graphqurl.png",
+	"href": "https://github.com/hasura/graphqurl",
+	"tags": ["schemas", "frontend", "backend", "development"]
+}

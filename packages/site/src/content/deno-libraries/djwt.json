@@ -1,0 +1,11 @@
+{
+	"name": "djwt",
+	"description": "Create and verify JSON Web Tokens (JWT) with Deno or the browser.",
+	"href": "https://deno.land/x/djwt",
+	"package": "",
+	"repo": "https://github.com/timonson/djwt",
+	"author": "Timo Rossa",
+	"image": "./assets/djwt.jpeg",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

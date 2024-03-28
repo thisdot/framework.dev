@@ -1,10 +1,10 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { sprinkles } from '../../sprinkles/sprinkles.css'
 import { exampleCourses } from '../../util/example-content'
 import { titleFirstCardGrid } from './card-layouts.css'
 import {
 	CourseCard as CourseCardComponent,
-	CourseCardProps,
+	type CourseCardProps,
 } from './course-card'
 
 export default {

@@ -1,0 +1,11 @@
+{
+	"name": "sqlite",
+	"description": "Deno SQLite module",
+	"href": "https://deno.land/x/sqlite",
+	"package": "",
+	"repo": "https://github.com/dyedgreen/deno-sqlite",
+	"author": "Tilman Roeder",
+	"image": "./assets/sqlite.jpeg",
+	"tags": ["utilities", "database drivers"],
+	"language": "TypeScript"
+}

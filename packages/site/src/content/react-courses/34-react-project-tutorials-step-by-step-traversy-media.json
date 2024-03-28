@@ -1,0 +1,20 @@
+{
+	"title": "34 React Project Tutorials step by step",
+	"author": "Traversy Media",
+	"image": "./assets/34-react-project-tutorials-step-by-step-traversy-media.jpeg",
+	"description": "A playlist with 34 walkthrough projects for beginners",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://youtube.com/playlist?list=PLillGF-RfqbY3c2r0htQyVbDJJoBFE6Rb",
+	"tags": [
+		"hooks",
+		"forms",
+		"data fetching",
+		"state management",
+		"CSS",
+		"routing",
+		"redux",
+		"react context"
+	]
+}

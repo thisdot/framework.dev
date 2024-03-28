@@ -1,0 +1,8 @@
+{
+	"name": "JSWORLD Conference USA",
+	"description": "Global conference connecting JavaScript leaders from around the world.",
+	"image": "./assets/jsworld-conference-usa.png",
+	"type": "Live Events",
+	"href": "https://usa.jsworldconference.com/",
+	"tags": ["conferences"]
+}

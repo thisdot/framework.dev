@@ -1,0 +1,11 @@
+{
+	"name": "Redwood",
+	"author": "Redwood",
+	"repo": "https://www.github.com/redwoodjs/redwood",
+	"package": "https://www.npmjs.com/package/@redwoodjs/core",
+	"href": "https://redwoodjs.com/",
+	"image": "./assets/redwood.png",
+	"tags": ["frameworks"],
+	"description": "Redwood is an opinionated, full-stack, serverless-ready web application framework that will allow you to build and deploy with ease. Imagine a React frontend, statically delivered by CDN, that talks via GraphQL to your backend running on AWS Lambdas (or containers) around the world, all deployable with just a git push—that's Redwood.",
+	"language": "TypeScript"
+}

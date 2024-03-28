@@ -1,0 +1,11 @@
+{
+	"title": "Full-Stack React Projects",
+	"authors": ["Shama Hoque"],
+	"image": "./assets/full-stack-react-projects-shama-hoque.jpeg",
+	"description": "This book guides you through preparing the development environment for MERN stack-based web development, to creating a basic skeleton application and extending it to build four different web applications.",
+	"yearOfPublication": 2018,
+	"numberOfPages": 726,
+	"level": "intermediate",
+	"href": "https://www.oreilly.com/library/view/full-stack-react-projects/9781788835534/",
+	"tags": ["projects", "authentication"]
+}

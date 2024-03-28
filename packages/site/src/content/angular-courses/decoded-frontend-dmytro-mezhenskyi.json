@@ -1,0 +1,11 @@
+{
+	"title": "Decoded Frontend",
+	"author": "Dmytro Mezhenskyi",
+	"image": "./assets/decoded-frontend-dmytro-mezhenskyi.jpeg",
+	"description": "Decoded Training is a series of video tutorials about Angular and generally about web development. New videos are published on a biweekly basis.",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.youtube.com/c/DecodedFrontend/videos",
+	"tags": ["state management", "routing", "services"]
+}

@@ -4,7 +4,7 @@ export type UseMeasureRect = ResizeObserverSize
 export type UseMeasureRef<E extends Element = Element> = (element: E) => void
 export type UseMeasureResult<E extends Element = Element> = [
 	UseMeasureRef<E>,
-	UseMeasureRect
+	UseMeasureRect,
 ]
 
 const defaultState: UseMeasureRect = {
@@ -13,7 +13,7 @@ const defaultState: UseMeasureRect = {
 }
 
 function useMeasure<E extends Element = Element>(
-	options?: ResizeObserverOptions
+	options?: ResizeObserverOptions,
 ): UseMeasureResult<E> {
 	const [element, ref] = useState<E | null>(null)
 	const [rect, setRect] = useState<UseMeasureRect>(defaultState)
@@ -25,11 +25,11 @@ function useMeasure<E extends Element = Element>(
 					setRect(
 						options?.box === 'border-box'
 							? entries[0].borderBoxSize[0]
-							: entries[0].contentBoxSize[0]
+							: entries[0].contentBoxSize[0],
 					)
 				}
 			}),
-		[options?.box]
+		[options?.box],
 	)
 
 	useLayoutEffect(() => {

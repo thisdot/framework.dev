@@ -1,0 +1,11 @@
+{
+	"name": "Nx",
+	"author": "Nrwl",
+	"repo": "https://www.github.com/nrwl/nx",
+	"package": "https://www.npmjs.com/package/@nrwl/nx",
+	"href": "https://nx.dev/getting-started/intro",
+	"description": "Nx is an open source build system featuring a lot of monorepo features that help enterprise teams develop Angular at scale.",
+	"image": "./assets/nx.png",
+	"tags": ["frameworks"],
+	"language": "TypeScript"
+}

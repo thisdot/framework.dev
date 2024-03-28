@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Oops!  The page you were looking for doesn't exist (404)</title>
+  <style type="text/css">
+    body {
+      color: #222;
+      line-height: 20px;
+      font-family: 'Helvetica Neue', Helvetica, Arial;
+      font-size: 18px;
+      margin: 0;
+      padding: 0; }
+
+    a {
+      color: #00A2E2;
+      text-decoration: underline; }
+
+    a:hover, a:active {
+      text-decoration: none; }
+
+    h1, h2, h3, h4 {
+      color: #7EBA3E;
+      font-family: 'Open Sans', sans-serif; }
+
+    h1 {
+      font-size: 45px;
+      line-height: 50px;
+      letter-spacing: -2px;
+      font-weight: 800;
+      padding-bottom: 20px; }
+
+    h3 {
+      margin-top: 3em;
+      color: #222;
+      }
+
+    p {
+      line-height: 1.4;
+      }
+
+    img {
+      max-width: 100%; }
+
+    ul {
+
+    }
+
+    li {
+      padding-bottom: .5em;
+    }
+
+    /* Header
+------------------------------------------------------------------------------------ */
+
+header {
+  max-width: 100%;
+  margin: 0 40px 0 40px;
+  overflow: hidden; }
+  header #logo {
+    float: left;
+    padding-top: 30px;
+    margin-right: 30px; }
+    header #logo a {
+      background: transparent url("https://www.buzzsprout.com/images/logo/logo_buzzsprout@2x.png") no-repeat 0 0;
+      background-size: 173px 28px;
+      display: block;
+      height: 30px;
+      width: 185px;
+      text-indent: -5000px; }
+      header #logo a:hover {
+        opacity: .5;
+        -webkit-transition: 0.10s;
+        transition: 0.10s; }
+
+  header nav {
+    font-size: 16px;
+    margin: 30px 0px 0 30px; }
+    header nav a {
+      color: #7EBC3E;
+      display: block;
+      float: left;
+      margin-right: 25px;
+      padding: 3px 5px;
+      text-decoration: none; }
+    header nav a:hover {
+      color: #667D63; }
+    header nav div {
+      float: right; }
+      header nav div a.pricing_signup {
+        background: #7EBC3E;
+        color: #FFF;
+        border-radius: 3px;
+        border: 0 none;
+        cursor: pointer;
+        font-size: 16px;
+        margin: -6px 0 0 0;
+        padding: 10px;
+        text-decoration: none;
+        -webkit-transition: background 0.20s;
+        transition: background 0.20s;
+        -webkit-appearance: none; }
+        header nav a.pricing_signup:hover {
+          background: #89CD45; }
+
+    .block {
+      overflow: hidden;
+      width: 100%; }
+    .block_inner {
+      max-width: 965px;
+      margin: 0 auto;
+      padding: 50px 15px 90px 15px;
+      overflow: hidden; }
+    .block .center {
+      text-align: center; }
+    .block .left {
+      text-align: left; }
+    .intro {
+      margin: 0 auto;
+      text-align: center;
+      max-width: 670px; }
+  </style>
+
+</head>
+<body bgcolor="#FFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+ <header>
+    <div id="logo">
+      <a href="/">Buzzsprout</a>
+    </div>
+    <nav>
+      <a href="/features" class="tour">Features</a>
+      <a href="/sign_up" class="pricing">Pricing</a>
+      <a href="/how-to-make-a-podcast" class="podcasting">How to Make a Podcast</a>
+      <a href="/blog" class="blog">Blog</a>
+      <div>
+        <a class="login" href="/login">Login</a>
+        <a class="pricing_signup" href="/sign_up">Get Started Free</a>
+      </div>
+    </nav><!-- /top_nav -->
+  </header><!-- /header -->
+  <div class="block">
+    <div class="block_inner intro left">
+      <h1>Oops! We can&rsquo;t find that page.</h1>
+      <h2><a href="/">Buzzsprout Home Page</a></h2>
+      <!-- <p>Check the web address and try again, or check out the links below to start your own podcast.</p> -->
+      <h3><strong>Podcasting Resources</strong></h3>
+      <ul style="margin-bottom: 30px;">
+        <li><a href="/how-to-make-a-podcast">How to Start a Podcast: The Complete Step-by-Step Guide</a></li>
+        <li><a href="/blog/untapped-podcasting-ideas">75 Podcast Ideas and Topics</a></li>
+        <li><a href="/blog/10-tips-create-awesome-podcast-artwork">How to Design Podcast Cover Art</a></li>
+        <li><a href="/blog/how-to-get-your-podcast-featured-in-itunes-new-and-noteworthy">How to Get Featured in Apple Podcasts New and Noteworthy</a></li>
+        <li><a href="https://www.buzzsprout.com/blog/podcast-statistics">Podcast Statistics and Data</a></li>
+        <li><a href="/blog/best-sounding-audio-for-podcast">How to Get the Best Sounding Audio for Your Podcast</a></li>
+      </ul>
+    </div><!-- END block_inner -->
+  </div><!-- END block -->
+</body>
+</html>

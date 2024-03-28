@@ -33,7 +33,7 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
 			onReset,
 			...props
 		}: SearchInputProps,
-		ref
+		ref,
 	) {
 		const id = useId(customIdFromProps)
 		return (
@@ -61,12 +61,12 @@ export const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
 					htmlFor={id}
 					className={classNames(
 						searchInputLabelStyle,
-						hideLabel && visuallyHidden
+						hideLabel && visuallyHidden,
 					)}
 				>
 					{label}
 				</label>
 			</div>
 		)
-	}
+	},
 )

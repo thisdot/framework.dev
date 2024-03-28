@@ -1,9 +1,9 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { useState } from 'react'
 import { exampleSearchData } from '../../util/example-content'
 import {
 	SearchAutocomplete as SearchAutocompleteComponent,
-	SearchAutocompleteProps,
+	type SearchAutocompleteProps,
 } from './search-autocomplete'
 
 export default {

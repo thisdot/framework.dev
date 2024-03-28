@@ -1,7 +1,7 @@
-import { Meta, Story } from '@storybook/react'
+import { type Meta, type Story } from '@storybook/react'
 import {
 	ComparisonBox as ComparisonBoxComponent,
-	ComparisonBoxProps,
+	type ComparisonBoxProps,
 } from './comparison-box'
 import { pxToRem } from '../../util/style-utils'
 import { LibraryTag } from '../../models/library-tag'

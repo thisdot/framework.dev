@@ -1,4 +1,4 @@
-import { ColorPalette } from './theme-from-palette'
+import { type ColorPalette } from './theme-from-palette'
 
 export const solidJSColorPalette: ColorPalette = {
 	highlight: '#2c4f7c',

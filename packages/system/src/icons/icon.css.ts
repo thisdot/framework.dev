@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { recipe, RecipeVariants } from '@vanilla-extract/recipes'
+import { recipe, type RecipeVariants } from '@vanilla-extract/recipes'
 import { pxToRem } from '../util/style-utils'
 
 export const iconStyle = recipe({

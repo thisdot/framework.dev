@@ -1,0 +1,8 @@
+{
+	"name": "Angular Snippets",
+	"author": "John Papa",
+	"description": "Snippets to help you develop faster in Angular, TypeScript, and HTML.",
+	"image": "./assets/angular-snippets.png",
+	"href": "https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2",
+	"tags": ["VSCode"]
+}

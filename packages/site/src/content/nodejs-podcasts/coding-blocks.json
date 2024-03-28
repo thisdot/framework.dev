@@ -1,0 +1,9 @@
+{
+	"title": "Coding Blocks",
+	"image": "./assets/coding-blocks.webp",
+	"hosts": ["Allen Underwood", "Michael Outlaw", "Joe Zack"],
+	"description": "Pragmatic talk about software design best practices: design patterns, software architecture, coding for performance, object oriented programming, database design and implementation, tips, tricks and a whole lot more.",
+	"rss": "https://www.codingblocks.net/podcast-feed.xml",
+	"href": "https://www.codingblocks.net/",
+	"tags": ["general, node, full stack"]
+}

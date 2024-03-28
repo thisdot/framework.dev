@@ -1,0 +1,9 @@
+{
+	"title": "Code Chefs - Hungry Web Developer Podcast",
+	"image": "./assets/code-chefs-hungry-web-developer-podcast.webp",
+	"hosts": ["Vincent Tang", "German Gamboa"],
+	"description": "Looking to expand your skills as a Web Developer? Vincent Tang and German Gamboa break down topics in Javascript, NodeJS, CSS, DevOps, AWS, and career development!",
+	"rss": "https://www.codechefs.dev/rss.xml",
+	"href": "https://www.codechefs.dev/",
+	"tags": ["general, node, full stack"]
+}

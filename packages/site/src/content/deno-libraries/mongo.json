@@ -1,0 +1,11 @@
+{
+	"name": "mongo",
+	"description": "MongoDB driver for Deno",
+	"href": "https://deno.land/x/mongo",
+	"package": "",
+	"repo": "https://github.com/denodrivers/mongo",
+	"author": "Deno Drivers",
+	"image": "./assets/mongo.png",
+	"tags": ["utilities", "database drivers"],
+	"language": "TypeScript"
+}

@@ -1,0 +1,8 @@
+{
+	"name": "AWS AppSync",
+	"author": "AWS",
+	"description": "Accelerate application development with serverless GraphQL and Pub/Sub APIs",
+	"image": "./assets/aws-appsync.png",
+	"href": "https://aws.amazon.com/appsync/",
+	"tags": ["schemas", "frontend", "backend", "development"]
+}

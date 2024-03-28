@@ -1,4 +1,4 @@
-import { ColorPalette } from './theme-from-palette'
+import { type ColorPalette } from './theme-from-palette'
 
 export const denoColorPalette: ColorPalette = {
 	highlight: '#dfdff2',

@@ -1,5 +1,5 @@
-import { Story, Meta } from '@storybook/react'
-import { Counter as CounterComponent, CounterProps } from './counter'
+import { type Story, type Meta } from '@storybook/react'
+import { Counter as CounterComponent, type CounterProps } from './counter'
 
 export default {
 	title: 'Counter',

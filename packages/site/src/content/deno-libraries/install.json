@@ -1,0 +1,11 @@
+{
+	"name": "install",
+	"description": "Deno Binary Installer",
+	"href": "https://deno.land/x/install",
+	"package": "",
+	"repo": "https://github.com/denoland/deno_install",
+	"author": "Deno",
+	"image": "./assets/install.png",
+	"tags": ["utilities", "CLI", "tooling"],
+	"language": "TypeScript"
+}

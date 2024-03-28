@@ -1,5 +1,5 @@
-import { Blog } from '../../models/blog'
-import { ResourceCardProps, ResourceCard } from './resource-card'
+import { type Blog } from '../../models/blog'
+import { type ResourceCardProps, ResourceCard } from './resource-card'
 
 export type BlogCardProps = Omit<
 	ResourceCardProps,

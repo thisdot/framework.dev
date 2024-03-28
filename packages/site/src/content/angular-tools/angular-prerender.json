@@ -1,0 +1,8 @@
+{
+	"name": "angular-prerender",
+	"author": "Christoph Guttandin",
+	"href": "https://github.com/chrisguttandin/angular-prerender",
+	"description": "This command line tool is meant to simplify the build process of static Angular apps. It works by analyzing the config file created by the Angular CLI.",
+	"image": "./assets/angular-prerender.png",
+	"tags": ["development"]
+}

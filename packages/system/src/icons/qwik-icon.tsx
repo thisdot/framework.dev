@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
 import { iconStyle } from './icon.css'
-import { IconProps } from './shared-icon-types'
+import { type IconProps } from './shared-icon-types'
 
 export const QwikIcon = React.forwardRef<SVGSVGElement, IconProps>(
 	function QwikIcon({ className, size, ...props }, ref) {
@@ -138,5 +138,5 @@ export const QwikIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				</defs>
 			</svg>
 		)
-	}
+	},
 )

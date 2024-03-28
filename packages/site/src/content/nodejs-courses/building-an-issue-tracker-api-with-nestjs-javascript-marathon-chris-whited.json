@@ -1,0 +1,11 @@
+{
+	"title": "Building an Issue Tracker API with NestJs - JavaScript Marathon",
+	"author": "Chris Whited",
+	"image": "./assets/building-an-issue-tracker-api-with-nestjs-javascript-marathon-chris-whited.png",
+	"description": "We are going to learn how to create a new API using the NestJS NodeJS framework, and then use this API to connect to a database and build a REST API for creating, updating, and tracking issues. We will learn why NestJs is becoming one of the most popular NodeJs frameworks.",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://www.youtube.com/watch?v=DgoH4_n59Qg",
+	"tags": ["javascript marathon"]
+}

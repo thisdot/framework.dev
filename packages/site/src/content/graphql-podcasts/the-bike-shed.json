@@ -1,0 +1,9 @@
+{
+	"title": "The Bike Shed",
+	"image": "./assets/the-bike-shed.jpeg",
+	"hosts": ["Joël Quenneville", "Stephanie Minn"],
+	"description": "On The Bike Shed, hosts Joël Quenneville and Stephanie Minn discuss development experiences and challenges at thoughtbot with Ruby, Rails, JavaScript, and whatever else is drawing their attention, admiration, or ire this week.",
+	"rss": "https://www.bikeshed.fm/rss",
+	"href": "https://www.bikeshed.fm/",
+	"tags": ["general", "ruby", "rails"]
+}

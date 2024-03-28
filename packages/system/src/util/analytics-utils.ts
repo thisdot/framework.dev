@@ -34,6 +34,6 @@ export const track = <T extends keyof TrackingCustomEvents>(
 			? gtag('event', event, data[0])
 			: gtag('event', event)
 		: data[0] != null
-		? console.info('track', event, data[0])
-		: console.info('track', event)
+			? console.info('track', event, data[0])
+			: console.info('track', event)
 }

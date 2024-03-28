@@ -1,0 +1,8 @@
+{
+	"name": "PostGraphile",
+	"author": "Graphile",
+	"description": "Instantly spin-up a GraphQL API server by pointing PostGraphile at your existing PostgreSQL database",
+	"image": "./assets/postgraphile.jpeg",
+	"href": "https://www.graphile.org/postgraphile/",
+	"tags": ["schemas", "frontend", "backend", "development"]
+}

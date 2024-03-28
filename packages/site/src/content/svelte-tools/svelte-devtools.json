@@ -1,0 +1,8 @@
+{
+	"name": "Svelte Devtools",
+	"author": "RedHatter271",
+	"description": "A tool that allows you to inspect the Svelte state and component hierarchies in the Firefox or Chrome Developer Tools.",
+	"image": "./assets/svelte-devtools.png",
+	"href": "https://github.com/sveltejs/svelte-devtools",
+	"tags": ["Firefox", "Chrome", "extension"]
+}

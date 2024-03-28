@@ -1,8 +1,8 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { sprinkles } from '../sprinkles/sprinkles.css'
 import {
 	CardDivider as CardDividerComponent,
-	CardDividerProps,
+	type CardDividerProps,
 } from './card-divider'
 
 export default {

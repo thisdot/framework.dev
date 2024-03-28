@@ -1,0 +1,11 @@
+{
+	"name": "accepts",
+	"description": "Higher level content negotiation for Deno.",
+	"href": "https://deno.land/x/accepts",
+	"package": "",
+	"repo": "https://github.com/ako-deno/accepts",
+	"author": "ako-deno",
+	"image": "./assets/accepts.png",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

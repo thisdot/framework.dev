@@ -1,0 +1,11 @@
+{
+	"name": "Reach Router",
+	"author": "Ryan Florence",
+	"repo": "https://www.github.com/reach/router",
+	"package": "https://www.npmjs.com/package/@reach/router",
+	"href": "https://reach.tech/router",
+	"image": "./assets/reach-router.png",
+	"tags": ["routing"],
+	"description": "Reach Router is a small, simple router for React that borrows from React Router, Ember, and Preact Router. Reach Router has a small footprint, supports only simple route patterns by design, and has strong (but experimental) accessibility features.",
+	"language": "JavaScript"
+}

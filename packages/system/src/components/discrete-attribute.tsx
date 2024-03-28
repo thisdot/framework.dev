@@ -7,11 +7,11 @@ import { FreeIcon } from '../icons/free-icon'
 import { InteractiveIcon } from '../icons/interactive-icon'
 import { IntermediateIcon } from '../icons/intermediate-icon'
 import { PaidIcon } from '../icons/paid-icon'
-import { IconProps } from '../icons/shared-icon-types'
+import { type IconProps } from '../icons/shared-icon-types'
 import { VideoIcon } from '../icons/video-icon'
-import { AttributeDefinition } from '../models/all-categories'
+import { type AttributeDefinition } from '../models/all-categories'
 import { sprinkles } from '../sprinkles/sprinkles.css'
-import { ColorTheme } from '../themes/theme-from-palette'
+import { type ColorTheme } from '../themes/theme-from-palette'
 import { formatFieldValue } from '../util/string-utils'
 
 export interface DiscreteAttributeProps
@@ -34,7 +34,7 @@ export function DiscreteAttribute({
 			className={classNames(
 				className,
 				sprinkles({ layout: 'row', alignItems: 'center', gap: 6 }),
-				colorize && color && sprinkles({ color })
+				colorize && color && sprinkles({ color }),
 			)}
 			{...props}
 		>
@@ -56,7 +56,7 @@ export function DiscreteAttributeIcon({
 		<div
 			className={classNames(
 				className,
-				colorize && color && sprinkles({ color })
+				colorize && color && sprinkles({ color }),
 			)}
 			{...props}
 		>
@@ -66,7 +66,7 @@ export function DiscreteAttributeIcon({
 }
 
 function attributeIcon(
-	attribute: AttributeDefinition
+	attribute: AttributeDefinition,
 ): React.ComponentType<IconProps> {
 	switch (attribute[0]) {
 		case 'format': {
@@ -101,7 +101,7 @@ function attributeIcon(
 }
 
 function attributeColor(
-	attribute: AttributeDefinition
+	attribute: AttributeDefinition,
 ): keyof ColorTheme['themeColors'] | null {
 	switch (attribute[0]) {
 		case 'level': {

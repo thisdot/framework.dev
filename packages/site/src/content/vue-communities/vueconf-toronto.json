@@ -1,0 +1,8 @@
+{
+	"name": "VueConf Toronto",
+	"description": "VueConf Toronto is a Canadian conference with talks and workshops from Vue.js core team members and industry experts.",
+	"image": "./assets/vueconf-toronto.html; charset=utf-8",
+	"type": "Live Events",
+	"href": "https://www.vuetoronto.com/",
+	"tags": ["conferences"]
+}

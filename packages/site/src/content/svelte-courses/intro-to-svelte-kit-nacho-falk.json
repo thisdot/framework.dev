@@ -1,0 +1,11 @@
+{
+	"title": "Intro to Svelte Kit",
+	"author": "Nacho Falk",
+	"image": "./assets/intro-to-svelte-kit-nacho-falk.jpeg",
+	"description": "Understanding Svelte, the syntax, routing with Svelte, its reactivity model, and the component building blocks, You will also walk you through building a todo application",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.thisdot.co/resources/Intro-to-Svelte-Kit",
+	"tags": ["reactivity", "routing"]
+}

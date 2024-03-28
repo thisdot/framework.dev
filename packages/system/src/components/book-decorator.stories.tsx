@@ -1,7 +1,7 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import {
 	BookDecorator as BookDecoratorComponent,
-	BookDecoratorProps,
+	type BookDecoratorProps,
 } from './book-decorator'
 
 export default {

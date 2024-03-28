@@ -41,7 +41,7 @@ export function MobileNav({
 						onClick={() =>
 							(
 								document.querySelector(
-									'input[type="search"]'
+									'input[type="search"]',
 								) as HTMLInputElement | null
 							)?.focus()
 						}

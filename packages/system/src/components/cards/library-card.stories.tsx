@@ -1,10 +1,10 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { sprinkles } from '../../sprinkles/sprinkles.css'
 import { exampleLibraries } from '../../util/example-content'
 import { titleFirstCardGrid } from './card-layouts.css'
 import {
 	LibraryCard as LibraryCardComponent,
-	LibraryCardProps,
+	type LibraryCardProps,
 } from './library-card'
 
 export default {

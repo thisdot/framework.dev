@@ -1,0 +1,15 @@
+{
+	"title": "Views on Vue",
+	"image": "./assets/views-on-vue.webp",
+	"hosts": [
+		"Lindsay Wardell",
+		"Luke Diebold",
+		"Solomon Eseme",
+		"Steve Edwards",
+		"Charles Wood"
+	],
+	"description": "A weekly discussion among Vue developers about Vue and it's ecosystem.",
+	"rss": "https://viewsonvue.com/rss",
+	"href": "https://viewsonvue.com/",
+	"tags": ["vue"]
+}

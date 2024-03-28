@@ -1,0 +1,11 @@
+{
+	"name": "progress",
+	"description": "ProgressBar in terminal for deno",
+	"href": "https://deno.land/x/progress",
+	"package": "",
+	"repo": "https://github.com/deno-library/progress",
+	"author": "Deno Library",
+	"image": "./assets/progress.png",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

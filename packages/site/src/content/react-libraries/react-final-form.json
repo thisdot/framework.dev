@@ -1,0 +1,11 @@
+{
+	"name": "React Final Form",
+	"author": "Erik Rasmussen",
+	"repo": "https://www.github.com/final-form/react-final-form",
+	"package": "https://www.npmjs.com/package/react-final-form",
+	"href": "https://final-form.org/react",
+	"image": "./assets/react-final-form.png",
+	"tags": ["forms"],
+	"description": "High performance, zero-dependency subscription-based form state management for React",
+	"language": "JavaScript"
+}

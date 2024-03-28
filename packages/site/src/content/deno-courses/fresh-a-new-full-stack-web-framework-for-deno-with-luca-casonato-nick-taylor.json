@@ -1,0 +1,11 @@
+{
+	"title": "Fresh: a new full stack web framework for Deno with Luca Casonato",
+	"author": "Nick Taylor",
+	"description": "Fresh is a new full stack web framework for Deno. Nick Taylor is joined by Fresh creator Luca Casonato, a Software Engineer at Deno Land Inc. Luca discusses Deno and how it works, and then gives a deep dive into the Fresh web framework.",
+	"paymentType": "free",
+	"level": "advanced",
+	"format": "video",
+	"image": "./assets/fresh-a-new-full-stack-web-framework-for-deno-with-luca-casonato-nick-taylor.png",
+	"href": "https://www.youtube.com/watch?v=nBrcmlrekV4",
+	"tags": ["deno", "backend", "fresh framework", "typescript"]
+}

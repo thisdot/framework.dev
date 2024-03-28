@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { DialogOverlay, DialogContent } from '@reach/dialog'
 import {
 	dialogContentStyle,
-	DialogContentVariants,
+	type DialogContentVariants,
 	dialogOverlayStyle,
 } from './side-dialog.css'
 import assertNever from 'assert-never'
@@ -43,7 +43,7 @@ export function SideDialog({
 					dialogContentStyle({
 						state: menuStateToAnimationState(menuState),
 						position,
-					})
+					}),
 				)}
 				{...props}
 			>
@@ -55,7 +55,7 @@ export function SideDialog({
 
 function useMenuState(isOpen: boolean): MenuState {
 	const [menuState, setMenuState] = useState<MenuState>(
-		isOpen ? 'open' : 'closed'
+		isOpen ? 'open' : 'closed',
 	)
 	useEffect(() => {
 		if (isOpen) {

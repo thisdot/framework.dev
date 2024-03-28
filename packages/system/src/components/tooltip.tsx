@@ -1,14 +1,14 @@
 import {
-	TooltipParams,
+	type TooltipParams,
 	TooltipPopup,
-	TooltipPopupProps,
+	type TooltipPopupProps,
 	useTooltip,
 } from '@reach/tooltip'
 import { Portal } from '@reach/portal'
 import classNames from 'classnames'
-import React, { CSSProperties } from 'react'
+import React, { type CSSProperties } from 'react'
 import { tooltipStyle, tooltipTriangleStyle } from './tooltip.css'
-import { Position } from '@reach/popover'
+import { type Position } from '@reach/popover'
 
 type TooltipPosition = 'top' | 'bottom' | 'left' | 'right'
 
@@ -63,11 +63,11 @@ const center = (
 	triggerPos: number,
 	triggerSpan: number,
 	tooltipSpan: number,
-	docSpan: number
+	docSpan: number,
 ) =>
 	Math.min(
 		Math.max(2, triggerPos + triggerSpan / 2 - tooltipSpan / 2),
-		docSpan - tooltipSpan - 2
+		docSpan - tooltipSpan - 2,
 	)
 
 const tooltipPosition =
@@ -82,7 +82,7 @@ const tooltipPosition =
 							triggerRect.left,
 							triggerRect.width,
 							tooltipRect.width,
-							window.innerWidth
+							window.innerWidth,
 						) + window.scrollX,
 					top: triggerRect.bottom + 8 + window.scrollY,
 				}
@@ -93,7 +93,7 @@ const tooltipPosition =
 							triggerRect.left,
 							triggerRect.width,
 							tooltipRect.width,
-							window.innerWidth
+							window.innerWidth,
 						) + window.scrollX,
 					bottom: window.innerHeight - triggerRect.top + 8 - window.scrollY,
 				}
@@ -104,7 +104,7 @@ const tooltipPosition =
 							triggerRect.top,
 							triggerRect.height,
 							tooltipRect.height,
-							window.innerHeight
+							window.innerHeight,
 						) + window.scrollY,
 					left: triggerRect.right + 8 + window.scrollX,
 				}
@@ -115,7 +115,7 @@ const tooltipPosition =
 							triggerRect.top,
 							triggerRect.height,
 							tooltipRect.height,
-							window.innerHeight
+							window.innerHeight,
 						) + window.scrollY,
 					right: window.innerWidth - triggerRect.left + 8 - window.scrollX,
 				}

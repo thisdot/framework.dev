@@ -1,0 +1,8 @@
+{
+	"title": "Svelte News",
+	"author": "Svelte Enthusiasts",
+	"description": "The latest news on the Svelte framework",
+	"image": "./assets/svelte-news.png",
+	"href": "https://svelte.news/",
+	"tags": []
+}

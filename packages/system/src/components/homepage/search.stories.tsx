@@ -1,5 +1,5 @@
-import { Story, Meta } from '@storybook/react'
-import { Search as SearchComponent, SearchProps } from './search'
+import { type Story, type Meta } from '@storybook/react'
+import { Search as SearchComponent, type SearchProps } from './search'
 
 export default {
 	title: 'Home/Search',

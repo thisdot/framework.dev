@@ -1,0 +1,8 @@
+{
+	"name": "Graphene-Python",
+	"author": "graphene-Python",
+	"description": "GraphQL in Python Made Easy",
+	"image": "./assets/graphene-python.png",
+	"href": "https://graphene-python.org/",
+	"tags": ["schemas", "frontend", "backend", "development"]
+}

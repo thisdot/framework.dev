@@ -1,0 +1,11 @@
+{
+	"title": "Introduction to SolidJS",
+	"author": "Iniubong Obonguko",
+	"image": "./assets/introduction-to-solidjs-iniubong-obonguko.jpeg",
+	"description": "In this tutorial, we’ll explore how SolidJS works. To do this, we’ll build a sample “to do” app to showcase what this great framework has to offer.",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "text",
+	"href": "https://blog.logrocket.com/introduction-solidjs/",
+	"tags": ["state management", "routing", "data fetching"]
+}

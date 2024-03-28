@@ -51,13 +51,13 @@ export function TagFilter<T extends string>({
 	const [tagSearch, setTagSearch] = useState('')
 	const searchIndex = useMemo(
 		() => new Fuse(options, { threshold: 0.3 }),
-		[options]
+		[options],
 	)
 	const searchResults = take(
 		map(searchIndex.search(tagSearch), 'item').filter(
-			(o) => !value.includes(o)
+			(o) => !value.includes(o),
 		),
-		5
+		5,
 	)
 	return (
 		<fieldset className={classNames(className, tagFilterStyle)} {...props}>
@@ -68,7 +68,7 @@ export function TagFilter<T extends string>({
 						setTagSearch('')
 						const deserializedSelection = deserializeFieldValue(
 							serializeFieldValue(selection),
-							options
+							options,
 						)
 						if (deserializedSelection) {
 							onUpdate([...value, deserializedSelection])

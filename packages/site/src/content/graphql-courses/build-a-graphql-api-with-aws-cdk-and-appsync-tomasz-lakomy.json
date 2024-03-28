@@ -1,0 +1,11 @@
+{
+	"title": "Build a GraphQL API with AWS CDK and AppSync",
+	"author": "Tomasz Łakomy",
+	"image": "./assets/build-a-graphql-api-with-aws-cdk-and-appsync-tomasz-lakomy.jpeg",
+	"description": "Build a fully managed, serverless GraphQL API powered by TypeScript and AWS CDK in a matter of hours, not days.",
+	"paymentType": "paid",
+	"level": "advanced",
+	"format": "interactive",
+	"href": "https://egghead.io/courses/build-a-graphql-api-with-aws-cdk-and-appsync-7d2a5fbc",
+	"tags": ["data fetching", "graphQL", "services", "typescript"]
+}

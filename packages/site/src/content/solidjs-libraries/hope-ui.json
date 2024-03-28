@@ -1,0 +1,11 @@
+{
+	"name": "Hope UI",
+	"author": "Fabien MARIE-LOUISE",
+	"repo": "https://www.github.com/hope-ui/hope-ui",
+	"package": "https://www.npmjs.com/package/@hope-ui/solid",
+	"href": "https://hope-ui.com/docs/getting-started",
+	"description": "Hope UI is a composable and accessible component library that gives you the foundation to build your next SolidJS application.",
+	"image": "./assets/hope-ui.png",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

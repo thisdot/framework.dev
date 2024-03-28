@@ -1,0 +1,11 @@
+{
+	"name": "Valtio",
+	"author": "Poimandres",
+	"repo": "https://www.github.com/pmndrs/valtio",
+	"package": "https://www.npmjs.com/package/valtio",
+	"href": "https://github.com/pmndrs/valtio",
+	"image": "./assets/valtio.png",
+	"tags": ["state management"],
+	"description": "Lightweight Proxy-Based State Management for ReactJS and VanillaJS",
+	"language": "TypeScript"
+}

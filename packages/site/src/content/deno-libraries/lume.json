@@ -1,0 +1,11 @@
+{
+	"name": "lume",
+	"description": "🔥 Static site generator for Deno 🦕",
+	"href": "https://deno.land/x/lume",
+	"package": "",
+	"repo": "https://github.com/lumeland/lume",
+	"author": "lume",
+	"image": "./assets/lume.png",
+	"tags": ["frameworks", "templating"],
+	"language": "TypeScript"
+}

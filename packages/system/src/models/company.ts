@@ -3,7 +3,7 @@
  * to help with a given framework.
  */
 
-import { SearchableRecord } from './search'
+import { type SearchableRecord } from './search'
 
 export interface Company<T extends string> extends SearchableRecord<T> {
 	/** Company name */

@@ -1,0 +1,8 @@
+{
+	"name": "Solid Primitives",
+	"author": "SolidJS Community",
+	"description": "A project that strives to develop high-quality, community contributed Solid primitives.",
+	"image": "./assets/solid-primitives.png",
+	"href": "https://github.com/solidjs-community/solid-primitives",
+	"tags": ["primitives"]
+}

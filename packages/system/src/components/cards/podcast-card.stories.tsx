@@ -1,10 +1,10 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { sprinkles } from '../../sprinkles/sprinkles.css'
 import { examplePodcasts } from '../../util/example-content'
 import { imageFirstCardGrid } from './card-layouts.css'
 import {
 	PodcastCard as PodcastCardComponent,
-	PodcastCardProps,
+	type PodcastCardProps,
 } from './podcast-card'
 
 export default {

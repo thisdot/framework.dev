@@ -1,0 +1,8 @@
+{
+	"name": "Front Stage",
+	"description": "Online conference dedicated to all things frontend web development.",
+	"image": "./assets/front-stage.png",
+	"type": "Online Events",
+	"href": "https://frontdevstage.com/",
+	"tags": ["conferences"]
+}

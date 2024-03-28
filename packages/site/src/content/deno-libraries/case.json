@@ -1,0 +1,11 @@
+{
+	"name": "case",
+	"description": "Convert strings between camelCase, PascalCase, Title Case, snake_case and more ",
+	"href": "https://deno.land/x/case",
+	"package": "",
+	"repo": "https://github.com/justjavac/deno-change-case",
+	"author": "迷渡",
+	"image": "./assets/case.jpeg",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

@@ -1,0 +1,8 @@
+{
+	"name": "React Day Berlin",
+	"description": "Conference dedicated to all things React.",
+	"image": "./assets/react-day-berlin.jpeg",
+	"type": "Live Events",
+	"href": "https://reactday.berlin/",
+	"tags": ["conferences"]
+}

@@ -1,0 +1,11 @@
+{
+	"name": "Vuetify",
+	"author": "John Jeremy Leider",
+	"repo": "https://www.github.com/vuetifyjs/vuetify",
+	"package": "https://www.npmjs.com/package/vuetify",
+	"href": "https://vuetifyjs.com/",
+	"description": "Vuetify is a Vue UI Library with beautifully handcrafted Material Components. No design skills required — everything you need to create amazing applications is at your fingertips.",
+	"image": "./assets/vuetify.png",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

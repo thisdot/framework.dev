@@ -1,0 +1,11 @@
+{
+	"name": "deno_graph",
+	"description": "The module graph logic for Deno CLI",
+	"href": "https://deno.land/x/deno_graph",
+	"package": "",
+	"repo": "https://github.com/denoland/deno_graph",
+	"author": "Deno",
+	"image": "./assets/deno-graph.png",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

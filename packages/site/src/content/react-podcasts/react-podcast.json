@@ -1,0 +1,9 @@
+{
+	"title": "React Podcast",
+	"image": "./assets/react-podcast.jpeg",
+	"hosts": ["Michael Chan"],
+	"description": "Conversations about React with your favorite developers.",
+	"rss": "https://feeds.simplecast.com/JoR28o79",
+	"href": "https://reactpodcast.com/",
+	"tags": ["react"]
+}

@@ -1,0 +1,11 @@
+{
+	"name": "Solid Select",
+	"author": "thisbeyond",
+	"repo": "https://www.github.com/thisbeyond/solid-select",
+	"package": "https://www.npmjs.com/package/@thisbeyond/solid-select",
+	"href": "https://solid-select.com",
+	"description": "A Select component for Solid",
+	"image": "./assets/solid-select.png",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

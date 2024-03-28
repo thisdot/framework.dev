@@ -7,7 +7,7 @@ export type ChipProps = React.ComponentPropsWithoutRef<'button'>
 
 export const Chip = React.forwardRef(function Button(
 	{ as: Comp = 'button', className, children, type = 'button', ...props },
-	ref
+	ref,
 ): JSX.Element {
 	return (
 		<Comp

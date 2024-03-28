@@ -7,7 +7,7 @@ const spaceInPixels = [
 ] as const
 
 const spaceInRem = Object.fromEntries(
-	spaceInPixels.map((px) => [px, pxToRem(px)])
+	spaceInPixels.map((px) => [px, pxToRem(px)]),
 ) as {
 	[K in (typeof spaceInPixels)[Exclude<
 		keyof typeof spaceInPixels,

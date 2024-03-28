@@ -1,0 +1,8 @@
+{
+	"name": "Apollo Client Devtools for Chrome",
+	"author": "Apollo GraphQL",
+	"description": "GraphQL debugging tools for Apollo Client.",
+	"image": "./assets/apollo-client-devtools-for-chrome.png",
+	"href": "https://chrome.google.com/webstore/detail/apollo-client-devtools/jdkknkkbebbapilgoeccciglkfbmbnfm?hl=en",
+	"tags": ["chrome"]
+}

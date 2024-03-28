@@ -1,0 +1,11 @@
+{
+	"title": "Node.js Tutorial for Beginners: Learn Node in 1 Hour",
+	"author": "Mosh Hamedani",
+	"image": "./assets/node-js-tutorial-for-beginners-learn-node-in-1-hour-mosh-hamedani.webp",
+	"description": "Learn the basics of the Node.js with this Programming with Mosh course.",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.youtube.com/watch?v=TlB_eWDSMt4",
+	"tags": ["backend"]
+}

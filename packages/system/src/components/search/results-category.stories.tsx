@@ -1,9 +1,12 @@
-import { Story, Meta } from '@storybook/react'
-import { allCategoryNames, CategoryName } from '../../models/all-categories'
+import { type Story, type Meta } from '@storybook/react'
+import {
+	allCategoryNames,
+	type CategoryName,
+} from '../../models/all-categories'
 import { exampleSearchData } from '../../util/example-content'
 import {
 	ResultsCategory as ResultsCategoryComponent,
-	ResultsCategoryProps,
+	type ResultsCategoryProps,
 } from './results-category'
 
 export default {

@@ -1,0 +1,11 @@
+{
+	"name": "postgres",
+	"description": "PostgreSQL driver for Deno",
+	"href": "https://deno.land/x/postgres",
+	"package": "",
+	"repo": "https://github.com/denodrivers/postgres",
+	"author": "Deno Drivers",
+	"image": "./assets/postgres.png",
+	"tags": ["utilities", "database drivers"],
+	"language": "TypeScript"
+}

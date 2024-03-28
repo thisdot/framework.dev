@@ -7,8 +7,7 @@ import { cardSelectorLabelStyle } from './card-selector.css'
 import { Tooltip } from '../tooltip'
 import { visuallyHidden } from '../../styles/utilities.css'
 
-export interface CardSelectorProps
-	extends React.ComponentPropsWithoutRef<'input'> {}
+export type CardSelectorProps = React.ComponentPropsWithoutRef<'input'>
 
 export function CardSelector({
 	children,

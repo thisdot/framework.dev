@@ -1,4 +1,4 @@
-import { SearchableRecord } from './search'
+import { type SearchableRecord } from './search'
 
 export const courseLevels = ['beginner', 'intermediate', 'advanced'] as const
 export const coursePaymentTypes = ['free', 'paid'] as const

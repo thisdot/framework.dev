@@ -1,0 +1,11 @@
+{
+	"title": "Pro React",
+	"authors": ["Cássio de Sousa Antonio"],
+	"image": "./assets/pro-react-cassio-de-sousa-antonio.jpeg",
+	"description": "This book teaches you how to successfully structure increasingly complex front-end applications and interfaces. You'll explore the React library in depth, as well as detailing additional tools and libraries in the React ecosystem, enabling you to create complete, complex applications.",
+	"yearOfPublication": 2015,
+	"numberOfPages": 341,
+	"level": "beginner",
+	"href": "https://www.oreilly.com/library/view/pro-react/9781484212608/",
+	"tags": []
+}

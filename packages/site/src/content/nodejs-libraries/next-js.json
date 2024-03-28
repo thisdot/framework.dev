@@ -1,0 +1,11 @@
+{
+	"name": "Next.js",
+	"author": "Vercel",
+	"repo": "https://www.github.com/vercel/next.js",
+	"package": "https://www.npmjs.com/package/next",
+	"href": "https://nextjs.org/",
+	"description": "Production grade React applications that scale. The world’s leading companies use Next.js by Vercel to build static and dynamic websites and web applications.",
+	"image": "./assets/next-js.svg",
+	"tags": ["frameworks"],
+	"language": "NodeJS"
+}

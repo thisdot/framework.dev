@@ -1,0 +1,8 @@
+{
+	"title": "TkDodo's blog",
+	"author": "Dominik Dorfmeister",
+	"description": "A blog about all things React, TypeScript and of course react-query.",
+	"image": "./assets/tkdodos-blog.png",
+	"href": "https://tkdodo.eu/blog/",
+	"tags": []
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Node.js Tutorial for Beginners - Getting Started with NodeJS Basics",
+	"author": "Academind",
+	"image": "./assets/node-js-tutorial-for-beginners-getting-started-with-nodejs-basics-academind.jpeg",
+	"description": "Learn the basics of Node.js with this free 2 hour video.",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.youtube.com/watch?v=C7TFgfY7JdE",
+	"tags": ["backend"]
+}

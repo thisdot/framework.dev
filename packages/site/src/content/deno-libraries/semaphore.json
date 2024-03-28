@@ -1,0 +1,11 @@
+{
+	"name": "semaphore",
+	"description": "https://deno.land/x/semaphore@v1.1.1",
+	"href": "https://deno.land/x/semaphore",
+	"package": "",
+	"repo": "https://github.com/jd1378/deno-semaphore",
+	"author": "javad mnjd",
+	"image": "./assets/semaphore.jpeg",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

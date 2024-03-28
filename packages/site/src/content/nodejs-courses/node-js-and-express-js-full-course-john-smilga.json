@@ -1,0 +1,11 @@
+{
+	"title": "Node.js and Express.js - Full Course",
+	"author": "John Smilga",
+	"image": "./assets/node-js-and-express-js-full-course-john-smilga.jpeg",
+	"description": "Learn how to use Node and Express in this comprehensive course. First, you will learn the fundamentals of Node and Express. Then, you will learn to build a complex Rest API. Finally, you will build a MERN app and other Node projects.",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.youtube.com/watch?v=Oe421EPjeBE",
+	"tags": ["backend"]
+}

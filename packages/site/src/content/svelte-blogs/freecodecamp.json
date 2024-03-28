@@ -1,0 +1,8 @@
+{
+	"title": "freeCodeCamp",
+	"author": "freeCodeCamp contributors",
+	"description": "Svelte related blogs",
+	"image": "./assets/freecodecamp.png",
+	"href": "https://www.freecodecamp.org/news/search?query=svelte",
+	"tags": []
+}

@@ -1,5 +1,5 @@
-import { Podcast } from '../../models/podcast'
-import { ResourceCard, ResourceCardProps } from './resource-card'
+import { type Podcast } from '../../models/podcast'
+import { ResourceCard, type ResourceCardProps } from './resource-card'
 
 export type PodcastCardProps = Omit<
 	ResourceCardProps,

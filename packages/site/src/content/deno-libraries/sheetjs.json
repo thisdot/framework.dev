@@ -1,0 +1,11 @@
+{
+	"name": "SheetJS",
+	"description": "📗 SheetJS Community Edition -- Spreadsheet Data Toolkit",
+	"href": "https://deno.land/x/sheetjs",
+	"package": "",
+	"repo": "https://github.com/SheetJS/sheetjs",
+	"author": "SheetJS",
+	"image": "./assets/sheetjs.png",
+	"tags": ["utilities", "data processing"],
+	"language": "TypeScript"
+}

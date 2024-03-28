@@ -1,0 +1,9 @@
+{
+	"title": "The Undefined Podcast",
+	"image": "./assets/the-undefined-podcast.jpeg",
+	"hosts": [" Jared Palmer", "Ken Wheeler"],
+	"description": "The only engineering podcast with a 2 drink minimum! Full stack developers Jared Palmer and Ken Wheeler have peer-to-peer conversations with world-class engineers about software development.",
+	"rss": "https://feeds.simplecast.com/8lcA0Is7",
+	"href": "https://player.fm/series/the-undefined-podcast",
+	"tags": ["general, node, full stack"]
+}

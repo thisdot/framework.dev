@@ -1,0 +1,8 @@
+{
+	"name": "Conf42",
+	"description": "This conference is dedicated to all things JavaScript.",
+	"image": "./assets/conf-42.png",
+	"type": "Live Events",
+	"href": "https://www.conf42.com/js2022",
+	"tags": ["conferences"]
+}

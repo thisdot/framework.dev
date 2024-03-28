@@ -1,0 +1,11 @@
+{
+	"name": "semver",
+	"description": "The semver parser for Deno (a fork of node-semver using TypeScript) ",
+	"href": "https://deno.land/x/semver",
+	"package": "",
+	"repo": "https://github.com/justjavac/deno-semver",
+	"author": "迷渡",
+	"image": "./assets/semver.jpeg",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

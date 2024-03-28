@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import React from 'react'
 import { sprinkles } from '../../sprinkles/sprinkles.css'
 import { Button } from '../button'
-import { Contributor, ContributorData } from './contributor'
+import { Contributor, type ContributorData } from './contributor'
 import {
 	contributorBannerStyle,
 	buttonStyles,

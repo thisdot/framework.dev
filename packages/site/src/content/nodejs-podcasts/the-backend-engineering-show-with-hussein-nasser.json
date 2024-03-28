@@ -1,0 +1,9 @@
+{
+	"title": "The Backend Engineering Show with Hussein Nasser",
+	"image": "./assets/the-backend-engineering-show-with-hussein-nasser.jpg",
+	"hosts": ["Hussein Nasser"],
+	"description": "Welcome to the Backend Engineering Show podcast with your host Hussein Nasser. If you like software engineering you’ve come to the right place. I discuss all sorts of software engineering technologies and news with specific focus on the backend.",
+	"rss": "https://anchor.fm/s/1eb6d14/podcast/rss",
+	"href": "https://anchor.fm/hnasr",
+	"tags": ["general, node, full stack"]
+}

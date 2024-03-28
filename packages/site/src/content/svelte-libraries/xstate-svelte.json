@@ -1,0 +1,11 @@
+{
+	"name": "@xstate/svelte",
+	"author": "statelyai",
+	"repo": "https://github.com/statelyai/xstate",
+	"package": "https://www.npmjs.com/package/@xstate/svelte",
+	"href": "https://xstate.js.org/docs/packages/xstate-svelte",
+	"image": "./assets/xstate-svelte.png",
+	"tags": ["state management"],
+	"description": "This package contains utilities for using XState with Svelte.",
+	"language": "TypeScript"
+}

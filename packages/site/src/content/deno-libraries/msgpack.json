@@ -1,0 +1,11 @@
+{
+	"name": "msgpack",
+	"description": "msgpack-javascript ported to deno",
+	"href": "https://deno.land/x/msgpack",
+	"package": "",
+	"repo": "https://github.com/Srinivasa314/msgpack-deno",
+	"author": "Srinivasa Mahesh",
+	"image": "./assets/msgpack.png",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

@@ -1,8 +1,8 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { exampleBlogs } from '../../util/example-content'
 import {
 	ResourceList as ResourceListComponent,
-	ResourceListProps,
+	type ResourceListProps,
 } from './resource-list'
 
 export default {

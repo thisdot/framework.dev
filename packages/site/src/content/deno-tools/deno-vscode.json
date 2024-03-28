@@ -1,0 +1,8 @@
+{
+	"name": "Deno VSCode",
+	"description": "This extension adds support for using Deno with Visual Studio Code, powered by the Deno language server",
+	"author": "DenoLand",
+	"href": "https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno",
+	"image": "./assets/deno-vscode.png",
+	"tags": ["vscode"]
+}

@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
 import sampleSize from 'lodash/sampleSize'
-import { Community } from '../../models/community'
+import { type Community } from '../../models/community'
 import { communitiesStyle } from './communities.css'
 import { ContentBanner } from './content-banner'
 

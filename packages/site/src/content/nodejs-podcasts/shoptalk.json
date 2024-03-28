@@ -1,0 +1,9 @@
+{
+	"title": "ShopTalk",
+	"image": "./assets/shoptalk.png",
+	"hosts": ["Dave Rupert", "Chris Coyier"],
+	"description": "A weekly podcast about just building websites from Dave Rupert and Chris Coyier.",
+	"rss": "https://shoptalkshow.com/feed/podcast/",
+	"href": "https://shoptalkshow.com/",
+	"tags": ["general, node, full stack"]
+}

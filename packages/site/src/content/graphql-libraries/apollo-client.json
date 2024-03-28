@@ -1,0 +1,11 @@
+{
+	"name": "Apollo Client",
+	"author": "Apollo GraphQL",
+	"repo": "https://www.github.com/apollographql/apollo-client",
+	"package": "https://www.npmjs.com/package/@apollo/client",
+	"href": "https://www.apollographql.com/docs/react/",
+	"description": "Apollo Client is a comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL. Use it to fetch, cache, and modify application data, all while automatically updating your UI.",
+	"image": "./assets/apollo-client.png",
+	"language": "TypeScript",
+	"tags": ["data fetching"]
+}

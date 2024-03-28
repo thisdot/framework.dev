@@ -1,0 +1,18 @@
+{
+	"title": "Deno 1: Getting Started",
+	"author": "Brice Wilson",
+	"description": "Deno is a modern and secure runtime for JavaScript and TypeScript. This course will teach you the fundamentals of working with Deno, how it compares to similar runtimes, and how to build applications that take advantage of its many built-in features.",
+	"paymentType": "paid",
+	"level": "beginner",
+	"format": "video",
+	"image": "./assets/deno-1-getting-started-brice-wilson.jpeg",
+	"href": "https://www.pluralsight.com/courses/deno-getting-started",
+	"tags": [
+		"deno",
+		"backend",
+		"oak framework",
+		"typescript",
+		"testing",
+		"debugging"
+	]
+}

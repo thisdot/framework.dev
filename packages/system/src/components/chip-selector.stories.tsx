@@ -1,7 +1,7 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import {
 	ChipSelector as ChipSelectorComponent,
-	ChipSelectorProps,
+	type ChipSelectorProps,
 } from './chip-selector'
 
 export default {

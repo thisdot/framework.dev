@@ -7,14 +7,13 @@ import {
 	featuredLibrariesStyle,
 	featuredLibrariesViewAllStyle,
 } from './featured-libraries.css'
-import { Library } from '../../models/library'
+import { type Library } from '../../models/library'
 import { LibraryCard } from '../cards/library-card'
 
 export interface FeaturedLibrariesProps
 	extends React.ComponentPropsWithoutRef<'div'> {
 	title: string
 	libraries: Library[]
-	libraryTags: string[]
 }
 
 export function FeaturedLibraries({
@@ -22,7 +21,6 @@ export function FeaturedLibraries({
 	className,
 	title,
 	libraries,
-	libraryTags,
 	...props
 }: FeaturedLibrariesProps) {
 	const randomLibraries = sampleSize(libraries, 6)

@@ -60,7 +60,7 @@ export const HorizontalScrollbar = ({
 				})
 			}
 		},
-		[thumbWidth]
+		[thumbWidth],
 	)
 
 	const handleThumbPosition = useCallback(() => {
@@ -88,7 +88,7 @@ export const HorizontalScrollbar = ({
 				setInitialScrollLeft(scrollContentRef.current.scrollLeft)
 			setIsDragging(true)
 		},
-		[]
+		[],
 	)
 
 	const handleThumbMouseup = useCallback(
@@ -99,7 +99,7 @@ export const HorizontalScrollbar = ({
 				setIsDragging(false)
 			}
 		},
-		[isDragging]
+		[isDragging],
 	)
 
 	const handleThumbMousemove = useCallback(
@@ -113,12 +113,12 @@ export const HorizontalScrollbar = ({
 				} = scrollContentRef.current
 
 				const deltaX = Math.round(
-					(e.clientX - scrollStartPosition) * (contentOffsetWidth / thumbWidth)
+					(e.clientX - scrollStartPosition) * (contentOffsetWidth / thumbWidth),
 				)
 
 				const newScrollLeft = Math.min(
 					initialScrollLeft + deltaX,
-					contentScrollWidth - contentOffsetWidth
+					contentScrollWidth - contentOffsetWidth,
 				)
 
 				scrollContentRef.current.scrollLeft = newScrollLeft
@@ -131,7 +131,7 @@ export const HorizontalScrollbar = ({
 			isDragging,
 			scrollStartPosition,
 			thumbWidth,
-		]
+		],
 	)
 
 	useEffect(() => {

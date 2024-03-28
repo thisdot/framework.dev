@@ -1,7 +1,7 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import {
 	BannerTooltip as BannerTooltipComponent,
-	BannerTooltipProps,
+	type BannerTooltipProps,
 } from './banner-tooltip'
 
 export default {

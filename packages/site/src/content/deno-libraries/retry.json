@@ -1,0 +1,11 @@
+{
+	"name": "retry",
+	"description": "Re-execute a function until it does not throw an error or execute a function with a timeout.",
+	"href": "https://deno.land/x/retry",
+	"package": "",
+	"repo": "https://github.com/franckLdx/retry",
+	"author": "Franck Ledoux",
+	"image": "./assets/retry.png",
+	"tags": ["utilities", "data fetching"],
+	"language": "TypeScript"
+}

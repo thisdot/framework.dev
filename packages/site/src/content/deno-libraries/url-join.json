@@ -1,0 +1,11 @@
+{
+	"name": "url_join",
+	"description": "A simple port of the NodeJS module url-join to Deno with typescript",
+	"href": "https://deno.land/x/url_join",
+	"package": "",
+	"repo": "https://github.com/roonie007/url-join",
+	"author": "Mouadh HSOUMI",
+	"image": "./assets/url-join.png",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

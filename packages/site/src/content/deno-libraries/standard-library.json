@@ -1,0 +1,11 @@
+{
+	"name": "Standard Library",
+	"author": "Deno",
+	"repo": "https://github.com/denoland/deno_std",
+	"package": "",
+	"href": "https://deno.land/std",
+	"description": "A standard set of high quality code that all Deno projects can use fearlessly.",
+	"image": "./assets/standard-library.png",
+	"tags": ["testing", "utilities", "web servers", "documentation"],
+	"language": "TypeScript"
+}

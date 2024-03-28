@@ -1,6 +1,6 @@
 import React from 'react'
 import sampleSize from 'lodash/sampleSize'
-import { Podcast } from '../../models/podcast'
+import { type Podcast } from '../../models/podcast'
 import { ContentBanner } from './content-banner'
 
 export interface PodcastsProps extends React.ComponentPropsWithoutRef<'div'> {

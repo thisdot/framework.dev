@@ -1,0 +1,11 @@
+{
+	"name": "dotenv",
+	"description": "Dotenv file handling for deno.",
+	"href": "https://deno.land/x/dotenv",
+	"package": "",
+	"repo": "https://github.com/pietvanzoen/deno-dotenv",
+	"author": "Piet van Zoen",
+	"image": "./assets/dotenv.jpeg",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

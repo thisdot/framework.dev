@@ -1,5 +1,5 @@
-import { Story, Meta } from '@storybook/react'
-import { Books as BooksComponent, BooksProps } from './books'
+import { type Story, type Meta } from '@storybook/react'
+import { Books as BooksComponent, type BooksProps } from './books'
 import { exampleBooks } from '../../util/example-content'
 import { pxToRem } from '../../util/style-utils'
 

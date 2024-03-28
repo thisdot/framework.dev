@@ -1,5 +1,5 @@
 import { ContributorBanner as _ContributorBanner } from '@framework/system/src/components/homepage/contributor-banner'
-import { ContributorData } from '@framework/system/src/components/homepage/contributor'
+import { type ContributorData } from '@framework/system/src/components/homepage/contributor'
 import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css'
 
 export default function ContributorBanner({

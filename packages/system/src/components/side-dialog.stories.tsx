@@ -1,9 +1,9 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { useState } from 'react'
 import { Button } from './button'
 import {
 	SideDialog as SideDialogComponent,
-	SideDialogProps,
+	type SideDialogProps,
 } from './side-dialog'
 
 export default {

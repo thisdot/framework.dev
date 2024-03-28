@@ -1,0 +1,9 @@
+{
+	"title": "React Native Podcast",
+	"image": "./assets/react-native-podcast.png",
+	"hosts": ["Mike Grabowski"],
+	"description": "Join our experts as they discuss everything React Native Latest Episode 9 React Native News",
+	"rss": "https://feeds.soundcloud.com/users/soundcloud:users:859563619/sounds.rss",
+	"href": "https://callstack.com/podcast-react-native-show",
+	"tags": ["react native"]
+}

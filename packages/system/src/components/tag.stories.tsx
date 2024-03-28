@@ -1,5 +1,5 @@
-import { Story, Meta } from '@storybook/react'
-import { Tag as TagComponent, TagProps } from './tag'
+import { type Story, type Meta } from '@storybook/react'
+import { Tag as TagComponent, type TagProps } from './tag'
 
 export default {
 	title: 'Tag',

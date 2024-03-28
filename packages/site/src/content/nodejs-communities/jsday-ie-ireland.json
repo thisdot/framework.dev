@@ -1,0 +1,8 @@
+{
+	"name": "JSDay IE Ireland",
+	"description": "A tech conference dedicated to the JavaScript community in Ireland.",
+	"image": "./assets/jsday-ie-ireland.png",
+	"type": "Live Events",
+	"href": "https://www.jsday.ie/",
+	"tags": ["conferences"]
+}

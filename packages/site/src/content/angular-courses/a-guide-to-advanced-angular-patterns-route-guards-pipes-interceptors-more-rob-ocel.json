@@ -1,0 +1,11 @@
+{
+	"title": "A Guide to Advanced Angular Patterns (Route Guards, Pipes, Interceptors & more)",
+	"author": "Rob Ocel",
+	"image": "./assets/a-guide-to-advanced-angular-patterns-route-guards-pipes-interceptors-more-rob-ocel.png",
+	"description": "It's easy to write websites and applications in Angular using mostly basic components, services, and the built-in Angular tools (such as pipes). But, there's a lot more you can do in Angular to build your own utilities and extend the Angular platform! In this training, we'll learn how to take full advantage of the Angular platform. We'll explain and build sample route guards, pipes, interceptors, and directives.",
+	"paymentType": "free",
+	"level": "advanced",
+	"format": "video",
+	"href": "https://youtu.be/wWEJnolhb_s",
+	"tags": ["routing", "pipes", "angular patterns", "JavaScript marathon"]
+}

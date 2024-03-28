@@ -20,7 +20,7 @@ import {
 	featureAndListListMetadataStyle,
 	featureAndListViewAllStyle,
 } from './feature-and-list.css'
-import { AttributeDefinition } from '../../models/all-categories'
+import { type AttributeDefinition } from '../../models/all-categories'
 import { DiscreteAttribute, DiscreteAttributeIcon } from '../discrete-attribute'
 import { sprinkles } from '../../sprinkles/sprinkles.css'
 import { BookDecorator } from '../book-decorator'

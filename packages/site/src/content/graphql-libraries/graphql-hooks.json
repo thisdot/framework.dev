@@ -1,0 +1,11 @@
+{
+	"name": "GraphQL Hooks",
+	"author": "NearForm",
+	"repo": "https://www.github.com/nearform/graphql-hooks",
+	"package": "https://www.npmjs.com/package/graphql-hooks",
+	"href": "https://github.com/nearform/graphql-hooks",
+	"description": "Minimal hooks-first GraphQL client.",
+	"image": "./assets/graphql-hooks.jpeg",
+	"language": "JavaScript",
+	"tags": ["data fetching"]
+}

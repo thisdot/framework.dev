@@ -1,0 +1,8 @@
+{
+	"name": "React Global Summit",
+	"description": "This is an online conference dedicated to discussing the latest React builds and improving web performance.",
+	"image": "./assets/react-global-summit.png",
+	"type": "Online Events",
+	"href": "https://events.geekle.us/react3/",
+	"tags": ["conferences"]
+}

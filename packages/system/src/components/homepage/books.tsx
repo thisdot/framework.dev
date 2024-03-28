@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
 import sampleSize from 'lodash/sampleSize'
-import { Book } from '../../models/book'
+import { type Book } from '../../models/book'
 import {
 	booksStyle,
 	emptyState,

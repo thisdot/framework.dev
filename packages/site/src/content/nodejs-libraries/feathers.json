@@ -1,0 +1,11 @@
+{
+	"name": "Feathers",
+	"author": "David Luecke",
+	"repo": "https://www.github.com/feathersjs/feathers",
+	"package": "https://www.npmjs.com/package/@feathersjs/feathers",
+	"href": "https://feathersjs.com/",
+	"description": "A highly extensible Node.js and TypeScript framework for building APIs and microservices.",
+	"image": "./assets/feathers.png",
+	"tags": ["frameworks"],
+	"language": "NodeJS"
+}

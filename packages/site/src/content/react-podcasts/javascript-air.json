@@ -1,0 +1,9 @@
+{
+	"title": "JavaScript Air",
+	"image": "./assets/javascript-air.png",
+	"hosts": ["Kent C. Dodds"],
+	"description": "The live broadcast podcast all about JavaScript",
+	"rss": "https://feed.podbean.com/audio.javascriptair.com/feed.xml",
+	"href": "https://javascriptair.com/",
+	"tags": ["general"]
+}

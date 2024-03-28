@@ -1,0 +1,11 @@
+{
+	"name": "Reach UI",
+	"author": "Reach",
+	"repo": "https://www.github.com/reach/reach-ui",
+	"package": "https://www.npmjs.com/package/@reach/accordion",
+	"href": "https://reach.tech/",
+	"image": "./assets/reach-ui.png",
+	"tags": ["component"],
+	"description": "The Accessible Foundation for React Apps and Design Systems",
+	"language": "TypeScript"
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Learning React",
+	"authors": ["Kirupa Chinnathambi"],
+	"image": "./assets/learning-react-kirupa-chinnathambi.jpeg",
+	"description": "Learning React is chock-full of colorful illustrations to help you visualize difficult concepts and practical step-by-step examples to show you how to apply what you learn.",
+	"yearOfPublication": 2018,
+	"numberOfPages": 436,
+	"level": "beginner",
+	"href": "https://www.oreilly.com/library/view/learning-react-a/9780134843582/",
+	"tags": ["redux"]
+}

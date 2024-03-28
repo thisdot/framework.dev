@@ -6,12 +6,15 @@ import {
 	searchContainerStyle,
 	searchStyle,
 } from './search.css'
-import { AllCategories, AllModelsByName } from '../../models/all-categories'
+import {
+	type AllCategories,
+	type AllModelsByName,
+} from '../../models/all-categories'
 import { sprinkles } from '../../sprinkles/sprinkles.css'
 import { FilterMenu } from './filter-menu'
 import { SideDialog } from '../side-dialog'
 import { Button } from '../button'
-import { ResultsCategory, ResultsCategoryProps } from './results-category'
+import { ResultsCategory, type ResultsCategoryProps } from './results-category'
 import {
 	calculateAvailableFilters,
 	emptyFilterSet,
@@ -23,13 +26,13 @@ import {
 import { track } from '../../util/analytics-utils'
 import { SearchAutocomplete } from './search-autocomplete'
 import { FilterIcon } from '../../icons/filter-icon'
-import { FilterSet, QueryParams } from './types'
+import { type FilterSet, type QueryParams } from './types'
 import uniq from 'lodash/uniq'
 import map from 'lodash/map'
 import sortBy from 'lodash/sortBy'
 import take from 'lodash/take'
 import without from 'lodash/without'
-import { Library } from '../../models/library'
+import { type Library } from '../../models/library'
 import { ComparisonTable } from '../comparison-table'
 import { CloseIcon } from '../../icons/close-icon'
 import { ResetIcon } from '../../icons/reset-icon'
@@ -62,7 +65,7 @@ export function Search({
 	const [comparisonTableOpen, setComparisonTableOpen] = useState(false)
 	const availableFilters = useMemo(
 		() => calculateAvailableFilters(data, appliedPreFilters),
-		[data, appliedPreFilters]
+		[data, appliedPreFilters],
 	)
 	const queryParams = parseQueryString(activeQuery, availableFilters)
 
@@ -116,7 +119,7 @@ export function Search({
 											...queryParams.filters,
 											tag: uniq([...queryParams.filters.tag, tag]),
 										},
-									})
+									}),
 								)
 								scrollableContainerRef.current?.scrollTo(0, 0)
 							}}
@@ -262,9 +265,9 @@ function SearchResults({
 						threshold: 0.2,
 						useExtendedSearch: true,
 					}),
-				])
+				]),
 			),
-		[data]
+		[data],
 	)
 	return (
 		<div
@@ -282,7 +285,7 @@ function SearchResults({
 					.filter((category) =>
 						queryParams.filters.category.length > 0
 							? isInFilteredCategories(category)
-							: true
+							: true,
 					)
 					.map((category, _index) => {
 						const searchIndex = searchIndices[category.name]
@@ -296,7 +299,7 @@ function SearchResults({
 										data: category.data,
 										params: queryParams,
 										searchIndex,
-								  })
+									})
 								: [],
 							onTagClick,
 						} as const
@@ -308,7 +311,7 @@ function SearchResults({
 										onLibrarySelect(
 											selected
 												? uniq([...selectedLibraries, item])
-												: without(selectedLibraries, item)
+												: without(selectedLibraries, item),
 										)
 									}
 									selectedItems={selectedLibraries}
@@ -323,7 +326,7 @@ function SearchResults({
 
 	function isInFilteredCategories(category: AllCategories): unknown {
 		return queryParams.filters.category.some(
-			(includedCategory) => includedCategory === category.name
+			(includedCategory) => includedCategory === category.name,
 		)
 	}
 }

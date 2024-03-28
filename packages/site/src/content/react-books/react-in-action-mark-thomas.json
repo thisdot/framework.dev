@@ -1,0 +1,11 @@
+{
+	"title": "React in Action",
+	"authors": ["Mark Thomas"],
+	"image": "./assets/react-in-action-mark-thomas.jpeg",
+	"description": "React. This practical book gets you up and running quickly with hands-on examples in every chapter. You'll master core topics like rendering, lifecycle methods, JSX, data flow, forms, routing, integrating with third-party libraries, and testing.",
+	"yearOfPublication": 2018,
+	"numberOfPages": 643,
+	"level": "beginner",
+	"href": "https://www.oreilly.com/library/view/react-in-action/9781617293856/",
+	"tags": ["routing", "testing"]
+}

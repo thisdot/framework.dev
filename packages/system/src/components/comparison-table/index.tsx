@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { Library } from '../../models/library'
+import { type Library } from '../../models/library'
 import {
 	comparisonTableLibraryIconStyle,
 	comparisonTableStyle,
 } from './comparison-table.css'
 import { ColHeading, RowHeading, TD } from './components/cells'
 import { HorizontalScrollbar } from './components/horizontal-scrollbar'
-import { ILibrary, ISortConfig } from './types'
+import { type ILibrary, type ISortConfig } from './types'
 import { formatNumber, formatPercentage, sortLibraries } from './utils'
 import { CardSelector } from './../cards/card-selector'
 import { Skeleton } from '../skeleton'
@@ -48,7 +48,7 @@ export function ComparisonTable({
 				return { by: heading, asc: false }
 			})
 		},
-		[sortConfig]
+		[sortConfig],
 	)
 
 	useEffect(() => {
@@ -56,7 +56,7 @@ export function ComparisonTable({
 			if (library.package.includes('npmjs.com')) {
 				library.package = library.package.replace(
 					/(?:http(?:s)?:\/\/(?:www\.)?)npmjs\.com\/package\//,
-					''
+					'',
 				)
 			}
 			return library
@@ -120,7 +120,7 @@ export function ComparisonTable({
 
 	const libraryStats = React.useMemo(
 		() => sortLibraries(data, sortConfig),
-		[data, sortConfig]
+		[data, sortConfig],
 	)
 
 	function handleTableRows() {
@@ -172,7 +172,7 @@ export function ComparisonTable({
 
 								updatedLibraryStats.splice(
 									updatedLibraryStats.indexOf(library),
-									1
+									1,
 								)
 
 								setData(updatedLibraryStats)

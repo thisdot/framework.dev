@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import React from 'react'
 import { Logo } from '../logo'
 import { LinkCardGroup } from './link-card-group'
-import { LinkCardProps } from './link-card'
+import { type LinkCardProps } from './link-card'
 import {
 	heroStyle,
 	heroInnerStyle,

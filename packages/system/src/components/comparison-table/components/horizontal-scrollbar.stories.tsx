@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { type Story, type Meta } from '@storybook/react'
 import { HorizontalScrollbar as HorizontalScrollbarComponent } from './horizontal-scrollbar'
 import { vars } from '../../../themes/themes.css'
 import { exampleScrollbarTableData } from './example-data'

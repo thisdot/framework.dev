@@ -1,0 +1,11 @@
+{
+	"title": "Node.js Web Development",
+	"authors": ["David Herron"],
+	"description": "Node.js is the leading choice of server-side web development platform, enabling developers to use the same tools and paradigms for both server-side and client-side software. This updated fifth edition of Node.js Web Development focuses on the new features of Node.js 14, Express 4.x, and ECMAScript, taking you through modern concepts, techniques, and best practices for using Node.js.",
+	"image": "./assets/node-js-web-development-david-herron.jpeg",
+	"href": "https://www.oreilly.com/api/v1/book/9781838987572/",
+	"tags": ["full stack"],
+	"yearOfPublication": 2020,
+	"numberOfPages": 853,
+	"level": "intermediate"
+}

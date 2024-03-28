@@ -73,7 +73,7 @@ export function InfoPopup({
 
 function calculateContentPosition(
 	targetBounds: DOMRect,
-	contentBounds: ResizeObserverSize
+	contentBounds: ResizeObserverSize,
 ): { top: number; left: number } {
 	if (typeof document === 'undefined') return { top: 0, left: 0 }
 	const position = {

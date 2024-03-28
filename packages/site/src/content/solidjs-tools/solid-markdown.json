@@ -1,0 +1,8 @@
+{
+	"name": "Solid Markdown",
+	"author": "Andi Rosca",
+	"description": "Render Markdown as Solid components",
+	"image": "./assets/solid-markdown.png",
+	"href": "https://github.com/andi23rosca/solid-markdown",
+	"tags": ["markdown"]
+}

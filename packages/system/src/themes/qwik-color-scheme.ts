@@ -1,4 +1,4 @@
-import { ColorPalette } from './theme-from-palette'
+import { type ColorPalette } from './theme-from-palette'
 
 export const qwikColorPalette: ColorPalette = {
 	highlight: '#18b6f6',

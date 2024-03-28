@@ -1,4 +1,4 @@
-import { SearchableRecord } from './search'
+import { type SearchableRecord } from './search'
 
 /**
  * Represents a podcast that talks about the

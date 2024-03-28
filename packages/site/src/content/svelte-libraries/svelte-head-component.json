@@ -1,0 +1,11 @@
+{
+	"name": "Svelte Head Component",
+	"author": "Scott Spence",
+	"repo": "https://github.com/spences10/svead",
+	"package": "https://www.npmjs.com/package/svead",
+	"href": "https://svead.vercel.app/",
+	"image": "./assets/svelte-head-component.png",
+	"tags": ["component"],
+	"description": "A component that allows you to set head meta information, canonical, title, Twitter and Facebook Open Graph tags.",
+	"language": "TypeScript"
+}

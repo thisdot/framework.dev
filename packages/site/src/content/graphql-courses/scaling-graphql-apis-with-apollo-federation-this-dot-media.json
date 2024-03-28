@@ -1,0 +1,11 @@
+{
+	"title": "Scaling GraphQL APIs with Apollo Federation ",
+	"author": "This Dot Media",
+	"image": "./assets/scaling-graphql-apis-with-apollo-federation-this-dot-media.png",
+	"description": "In this workshop, you'll go beyond the basics of GraphQL to learn about some of the commonly used tools and techniques that will help you build powerful applications at scale.",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://www.youtube.com/watch?v=Pc8fON5p13Q",
+	"tags": ["data fetching", "graphQL", "services"]
+}

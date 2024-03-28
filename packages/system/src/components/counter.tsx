@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import React from 'react'
-import { counterStyle, CounterVariants } from './counter.css'
+import { counterStyle, type CounterVariants } from './counter.css'
 
 export interface CounterProps extends React.HTMLAttributes<HTMLSpanElement> {
 	size?: CounterVariants['size']

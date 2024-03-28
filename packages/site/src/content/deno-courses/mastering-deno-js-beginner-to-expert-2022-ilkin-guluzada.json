@@ -1,0 +1,11 @@
+{
+	"title": "Mastering Deno.js: Beginner to Expert [2022]",
+	"author": "Ilkin Guluzada",
+	"description": "The ultimate Deno Masterclass: Build REST API with Deno & MongoDB and learn TypeScript",
+	"paymentType": "paid",
+	"level": "beginner",
+	"format": "video",
+	"image": "./assets/mastering-deno-js-beginner-to-expert-2022-ilkin-guluzada.jpeg",
+	"href": "https://www.udemy.com/course/mastering-denojs-beginner-to-expert/",
+	"tags": ["deno", "typescript", "mongodb", "backend"]
+}

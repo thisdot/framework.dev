@@ -1,0 +1,11 @@
+{
+	"name": "denoflate",
+	"description": "WebAssembly port of Rust's flate2, a Rust implementation of Deflate, Gzip, and Zlib compressions",
+	"href": "https://deno.land/x/denoflate",
+	"package": "",
+	"repo": "https://github.com/hazae41/foras",
+	"author": "Haz Æ 41",
+	"image": "./assets/denoflate.png",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

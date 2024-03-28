@@ -1,0 +1,11 @@
+{
+	"title": "Learn the Fundamentals of Node.js for Beginners",
+	"author": "Will Button",
+	"image": "./assets/learn-the-fundamentals-of-node-js-for-beginners-will-button.png",
+	"description": "Understanding Node.js can have a significant positive impact on your career as a Javascript developer. Knowing how it works, how it scales, and how to interact with it can save you time, headaches and delays going to production which can put you well ahead of your competition. Understanding node.js can help you architect applications that are built to work with node's features and capabilities.",
+	"paymentType": "paid",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://egghead.io/courses/learn-the-fundamentals-of-node-js-for-beginners-7b6f4282",
+	"tags": ["backend"]
+}

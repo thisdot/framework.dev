@@ -1,0 +1,11 @@
+{
+	"name": "dejs",
+	"description": "ejs template engine for deno.",
+	"href": "https://deno.land/x/dejs",
+	"package": "",
+	"repo": "https://github.com/syumai/dejs",
+	"author": "syumai",
+	"image": "./assets/dejs.png",
+	"tags": ["web servers", "utilities", "templating"],
+	"language": "TypeScript"
+}

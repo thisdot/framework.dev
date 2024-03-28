@@ -1,0 +1,8 @@
+{
+	"name": "Svelte REPL",
+	"author": "Svelte",
+	"description": "Interactive Svelte playground",
+	"image": "./assets/svelte-repl.png",
+	"href": "https://svelte.dev/repl/32f4d35f41eb4914aa3be5e4a0eacbfa?version=3.55.1",
+	"tags": ["development"]
+}

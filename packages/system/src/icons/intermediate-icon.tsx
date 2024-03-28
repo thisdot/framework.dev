@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
 import { iconStyle } from './icon.css'
-import { IconProps } from './shared-icon-types'
+import { type IconProps } from './shared-icon-types'
 
 export const IntermediateIcon = React.forwardRef<SVGSVGElement, IconProps>(
 	function IntermediateIcon({ className, size, ...props }, ref) {
@@ -21,5 +21,5 @@ export const IntermediateIcon = React.forwardRef<SVGSVGElement, IconProps>(
 				<path d="M1.50037 12L1.50037 13.5L16.5004 13.5L16.5004 12L1.50037 12Z" />
 			</svg>
 		)
-	}
+	},
 )

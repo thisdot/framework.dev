@@ -1,0 +1,11 @@
+{
+	"title": "GraphQL for beginners with JavaScript",
+	"author": "James Moore",
+	"image": "./assets/graphql-for-beginners-with-javascript-james-moore.jpeg",
+	"description": "A practical guide that teaches you GraphQL with JavaScript. Optimally paced, No-nonsense. Learn quickly!",
+	"paymentType": "paid",
+	"level": "beginner",
+	"format": "interactive",
+	"href": "https://www.udemy.com/course/graphql-for-beginners-with-javascript/",
+	"tags": ["data fetching", "graphQL"]
+}

@@ -1,0 +1,8 @@
+{
+	"name": "Dgraph",
+	"author": "dgraph-io",
+	"description": "The GraphQL Cloud Platform",
+	"image": "./assets/dgraph.jpeg",
+	"href": "https://dgraph.io/",
+	"tags": ["schemas", "frontend", "backend", "development"]
+}

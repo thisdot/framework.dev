@@ -1,0 +1,8 @@
+{
+	"name": "Svelte",
+	"author": "JetBrains s.r.o.",
+	"description": "Support for Svelte in your JetBrains IDE of choice.",
+	"image": "./assets/svelte.png",
+	"href": "https://plugins.jetbrains.com/plugin/12375-svelte",
+	"tags": ["Jetbrains"]
+}

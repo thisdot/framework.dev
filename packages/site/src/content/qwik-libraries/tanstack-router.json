@@ -1,0 +1,11 @@
+{
+	"name": "TanStack Router",
+	"author": "Tanner Linsley",
+	"repo": "https://github.com/tanstack/router",
+	"package": "",
+	"description": "A fully typesafe router with first-class search-param APIs and built-in caching, built for JS/TS",
+	"image": "./assets/tanstack-router.png",
+	"href": "https://tanstack.com/router/v1/",
+	"tags": ["routing"],
+	"language": "TypeScript"
+}

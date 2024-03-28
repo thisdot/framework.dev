@@ -1,0 +1,11 @@
+{
+	"title": "Become a Node.js Developer",
+	"author": "Educative",
+	"image": "./assets/become-a-node-js-developer-educative.png",
+	"description": "Node.js is a server-side JavaScript runtime environment that executes JavaScript code outside of a browser. Node.js is commonly used by developers and is often used for enterprise applications. This path will take you from the basics of Node.js to its advanced concepts.",
+	"paymentType": "paid",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://www.educative.io/path/become-a-node-js-developer",
+	"tags": ["backend"]
+}

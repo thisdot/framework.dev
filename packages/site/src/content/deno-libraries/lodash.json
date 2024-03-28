@@ -1,0 +1,11 @@
+{
+	"name": "lodash",
+	"description": "A modern JavaScript utility library delivering modularity, performance, & extras.",
+	"href": "https://deno.land/x/lodash",
+	"package": "",
+	"repo": "https://github.com/lodash/lodash",
+	"author": "Lodash Utilities",
+	"image": "./assets/lodash.png",
+	"tags": ["utilities", "data processing"],
+	"language": "TypeScript"
+}

@@ -1,0 +1,11 @@
+{
+	"title": "React Projects",
+	"authors": ["Roy Derks"],
+	"image": "./assets/react-projects-roy-derks.jpeg",
+	"description": "React Projects is your guide to learning React development by using modern development patterns and integrating React with powerful web tools such as GraphQL, Expo, and React 360. You'll start building a real-world project right from the first chapter and get hands on with developing scalable applications as you advance to building more complex projects.",
+	"yearOfPublication": 2019,
+	"numberOfPages": 525,
+	"level": "intermediate",
+	"href": "https://www.oreilly.com/library/view/react-projects/9781789954937/",
+	"tags": ["projects", "testing", "routing"]
+}

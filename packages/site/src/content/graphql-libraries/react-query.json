@@ -1,0 +1,11 @@
+{
+	"name": "React Query",
+	"author": "TanStack",
+	"repo": "https://www.github.com/tanstack/query",
+	"package": "https://www.npmjs.com/package/@tanstack/react-query",
+	"href": "https://tanstack.com/query/v4/",
+	"description": "Powerful asynchronous state management for TS/JS, React, Solid, Vue and Svelte",
+	"image": "./assets/react-query.png",
+	"language": "TypeScript",
+	"tags": ["data fetching", "state management"]
+}

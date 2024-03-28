@@ -1,0 +1,17 @@
+{
+	"title": "Fullstack React + GraphQL in 60 Minutes",
+	"author": "Shawn Wang",
+	"image": "./assets/fullstack-react-graphql-in-60-minutes-shawn-wang.png",
+	"description": "In this session we will learn how to build a fullstack serverless React + GraphQL app from scratch with authentication, storage, and multiplayer realtime collaboration, all atop infinitely scalable AWS components, with AWS Amplify! It's never been this easy to go from idea to prototype, and each piece will be livecoded in front of your very eyes!",
+	"paymentType": "free",
+	"level": "advanced",
+	"format": "video",
+	"href": "https://youtu.be/0Js5O5a4bQ4",
+	"tags": [
+		"GraphQL",
+		"authentication",
+		"AWS",
+		"data fetching",
+		"JavaScript marathon"
+	]
+}

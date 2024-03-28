@@ -1,0 +1,8 @@
+{
+	"name": "Fauna",
+	"author": "Fauna",
+	"description": "Instantly execute GraphQL queries on your data",
+	"image": "./assets/fauna.png",
+	"href": "https://fauna.com/graphql",
+	"tags": ["schemas", "frontend", "backend", "development"]
+}

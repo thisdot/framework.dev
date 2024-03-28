@@ -1,0 +1,20 @@
+{
+	"title": "Your First Week With Node.js, 2nd Edition",
+	"authors": [
+		"James Hibbard",
+		"Craig Buckler",
+		"Mark Brown",
+		"Nilson Jacques",
+		"James Kolce",
+		"Paul Orac",
+		"M. David Green",
+		"Florian Rappl"
+	],
+	"description": "This book offers a selection of beginner-level tutorials to provide you with an introduction to Node and its related technologies, and get you under way writing your first Node applications.",
+	"image": "./assets/your-first-week-with-node-js-2nd-edition-james-hibbard-craig-buckler-mark-brown-nilson-jacques-james-kolce-paul-orac-m-david-green-florian-rappl.jpeg",
+	"href": "https://www.oreilly.com/api/v1/book/9781098122805/",
+	"tags": ["projects"],
+	"yearOfPublication": 2020,
+	"numberOfPages": 170,
+	"level": "beginner"
+}

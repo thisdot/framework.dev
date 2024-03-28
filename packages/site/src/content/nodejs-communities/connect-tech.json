@@ -1,0 +1,8 @@
+{
+	"name": "Connect.Tech",
+	"description": "The largest Frontend framework conference in the USA.",
+	"image": "./assets/connect-tech.png",
+	"type": "Live Events",
+	"href": "http://connect.tech",
+	"tags": ["conferences"]
+}

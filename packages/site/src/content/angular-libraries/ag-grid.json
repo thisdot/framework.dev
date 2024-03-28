@@ -1,0 +1,11 @@
+{
+	"name": "AG Grid",
+	"author": "AG Grid",
+	"repo": "https://www.github.com/ag-grid/ag-grid",
+	"package": "https://www.npmjs.com/package/ag-grid-community",
+	"href": "https://ag-grid.com/angular-data-grid/getting-started/",
+	"description": "AG Grid is a fully-featured and highly customizable JavaScript data grid.",
+	"image": "./assets/ag-grid.png",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

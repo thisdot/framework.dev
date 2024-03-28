@@ -1,0 +1,8 @@
+{
+	"name": "Node.js Foundation Calendar",
+	"description": "Node.js Foundation calendar provides all of the public team meetings",
+	"image": "./assets/node-js-foundation-calendar.png",
+	"type": "Live and Online Events",
+	"href": "https://calendar.google.com/calendar/u/0/embed?src=nodejs.org_nr77ama8p7d7f9ajrpnu506c98@group.calendar.google.com",
+	"tags": ["meetups"]
+}

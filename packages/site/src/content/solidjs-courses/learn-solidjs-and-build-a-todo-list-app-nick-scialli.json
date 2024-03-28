@@ -1,0 +1,11 @@
+{
+	"title": "Learn SolidJS and build a todo list app",
+	"author": "Nick Scialli",
+	"image": "./assets/learn-solidjs-and-build-a-todo-list-app-nick-scialli.png",
+	"description": "In this tutorial, you'll learn how to build a todo list app with Solid and learn about the mechanics along the way.",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "text",
+	"href": "https://typeofnan.dev/your-first-solidjs-app-todo-list/",
+	"tags": ["state management", "reactivity", "effects", "loops"]
+}

@@ -1,0 +1,11 @@
+{
+	"name": "Blueprint",
+	"author": "Palantir",
+	"repo": "https://www.github.com/palantir/blueprint",
+	"package": "https://www.npmjs.com/package/@blueprintjs/core",
+	"href": "https://blueprintjs.com/docs",
+	"image": "./assets/blueprint.png",
+	"tags": ["component"],
+	"description": "Blueprint is a React-based UI toolkit for the web. It is optimized for building complex, data-dense web interfaces for desktop applications which run in modern browsers and IE11. This is not a mobile-first UI toolkit.",
+	"language": "TypeScript"
+}

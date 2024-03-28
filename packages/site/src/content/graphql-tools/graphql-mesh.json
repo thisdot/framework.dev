@@ -1,0 +1,8 @@
+{
+	"name": "GraphQL Mesh",
+	"author": "Uri Goldshtein",
+	"description": "The Graph of Everything Federated architecture for any API service",
+	"image": "./assets/graphql-mesh.jpeg",
+	"href": "https://www.the-guild.dev/graphql/mesh",
+	"tags": ["schemas", "frontend", "backend", "development"]
+}
