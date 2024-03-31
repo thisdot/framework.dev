@@ -2,7 +2,7 @@
 	"name": "Solid Command Palette",
 	"author": "Aditya Agarwal",
 	"description": "UI Library for Command Palette in SolidJS webapps.",
-	"image": "./assets/solid-command-palette.svg+xml",
+	"image": "./assets/solid-command-palette.svg",
 	"href": "https://github.com/itaditya/solid-command-palette",
 	"tags": ["Command palette"]
 }

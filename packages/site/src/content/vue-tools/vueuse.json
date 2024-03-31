@@ -2,7 +2,7 @@
 	"name": "VueUse",
 	"author": "Anthony Fu and VueUse contributors",
 	"description": "Collection of Essential Vue Composition Utilities",
-	"image": "./assets/vueuse.svg+xml",
+	"image": "./assets/vueuse.svg",
 	"href": "https://vueuse.org/",
 	"tags": ["development"]
 }

@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/react-query",
 	"href": "https://react-query.tanstack.com/",
 	"description": "Writing your data fetching logic by hand is over. Tell React Query where to get your data and how fresh you need it to be and the rest is automatic. React Query handles caching, background updates and stale data out of the box with zero-configuration.",
-	"image": "./assets/react-query.svg+xml",
+	"image": "./assets/react-query.svg",
 	"tags": ["data fetching", "state management"],
 	"language": "TypeScript"
 }

@@ -1,7 +1,7 @@
 {
 	"name": "SolidJS Miami, FL",
 	"description": "To organize current and future members of the SolidJS Community. Members should join this group to stay up to date with upcoming in-person and live events. | 109 members.",
-	"image": "./assets/solidjs-miami-fl.svg+xml",
+	"image": "./assets/solidjs-miami-fl.svg",
 	"type": "discord",
 	"href": "https://www.meetup.com/solidjs",
 	"tags": ["meetups"]

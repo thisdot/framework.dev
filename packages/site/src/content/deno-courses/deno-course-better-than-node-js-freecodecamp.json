@@ -5,7 +5,7 @@
 	"paymentType": "free",
 	"level": "advanced",
 	"format": "video",
-	"image": "./assets/deno-course-better-than-node-js-freecodecamp.svg+xml",
+	"image": "./assets/deno-course-better-than-node-js-freecodecamp.svg",
 	"href": "https://www.youtube.com/watch?v=TQUy8ENesGY",
 	"tags": [
 		"deno",

@@ -1,7 +1,7 @@
 {
 	"name": "Qwik Discord Community",
 	"description": "A community-ran Discord for all things Qwik.",
-	"image": "./assets/qwik-discord-community.svg+xml",
+	"image": "./assets/qwik-discord-community.svg",
 	"type": "discord",
 	"href": "https://discord.com/invite/bNVSQmPzqy",
 	"tags": []

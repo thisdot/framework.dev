@@ -1,7 +1,7 @@
 {
 	"name": "JS Game Dev Summit",
 	"description": "JavaScript GameDev Summit is a 2-day online event for engineers, technical artists, and creative developers who develop games and graphics-heavy applications with Web technology. ",
-	"image": "./assets/js-game-dev-summit.svg+xml",
+	"image": "./assets/js-game-dev-summit.svg",
 	"type": "Live Events",
 	"href": "https://jsgamedev.com/",
 	"darkImageBackground": true,

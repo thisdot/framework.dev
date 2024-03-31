@@ -1,7 +1,7 @@
 {
 	"name": "Svelte js Meetup",
 	"description": "A meetup dedicated to all things Svelte",
-	"image": "./assets/svelte-js-meetup.svg+xml",
+	"image": "./assets/svelte-js-meetup.svg",
 	"type": "Live Events",
 	"href": "https://www.meetup.com/de-DE/Svelte-js-Meetup/",
 	"tags": ["conferences"]

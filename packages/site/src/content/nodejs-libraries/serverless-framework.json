@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/serverless",
 	"href": "https://www.serverless.com/",
 	"description": "All-in-one development solution for auto-scaling apps on AWS Lambda.",
-	"image": "./assets/serverless-framework.svg+xml",
+	"image": "./assets/serverless-framework.svg",
 	"tags": ["frameworks"],
 	"language": "NodeJS"
 }

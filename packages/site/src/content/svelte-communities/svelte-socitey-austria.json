@@ -1,7 +1,7 @@
 {
 	"name": "Svelte Socitey Austria",
 	"description": "Part of the larger Svelte Society organisation. We try to bring together Svelte users across Australia.",
-	"image": "./assets/svelte-socitey-austria.svg+xml",
+	"image": "./assets/svelte-socitey-austria.svg",
 	"type": "Live Events",
 	"href": "https://austria.sveltesociety.dev",
 	"tags": ["conferences"]

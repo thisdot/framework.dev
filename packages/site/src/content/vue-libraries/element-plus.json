@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/element-plus",
 	"href": "https://element-plus.org/",
 	"description": "A Vue 3 based component library for designers and developers",
-	"image": "./assets/element-plus.svg+xml",
+	"image": "./assets/element-plus.svg",
 	"tags": ["component"],
 	"language": "TypeScript"
 }

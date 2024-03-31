@@ -1,7 +1,7 @@
 {
 	"name": "JS World Conference",
 	"description": "A 3-day JavaScript Celebration together with 2139 JavaScript Developers. Packed with the Latest JavaScript Updates by Authors, Creators and Experts.",
-	"image": "./assets/js-world-conference.svg+xml",
+	"image": "./assets/js-world-conference.svg",
 	"type": "Live Events",
 	"href": "https://jsworldconference.com/",
 	"tags": ["conferences"]

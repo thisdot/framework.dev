@@ -1,7 +1,7 @@
 {
 	"name": "Render ATL",
 	"description": "A TECH CONFERENCE; A CULTURAL FESTIVAL; WHERE TALENT FEELS WELCOMED",
-	"image": "./assets/render-atl.svg+xml",
+	"image": "./assets/render-atl.svg",
 	"type": "Live Events",
 	"href": "https://www.renderatl.com/",
 	"darkImageBackground": true,

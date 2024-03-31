@@ -4,7 +4,7 @@
 	"repo": "https://github.com/colinhacks/zod",
 	"package": "https://www.npmjs.com/package/zod",
 	"href": "https://storybook.js.org/",
-	"image": "./assets/zod.svg+xml",
+	"image": "./assets/zod.svg",
 	"tags": ["tooling"],
 	"description": "TypeScript-first schema validation with static type inference",
 	"language": "TypeScript"

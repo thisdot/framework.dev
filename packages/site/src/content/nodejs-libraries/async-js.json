@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/async",
 	"href": "https://caolan.github.io/async/v3/",
 	"description": "Async is a utility module which provides straight-forward, powerful functions for working with asynchronous JavaScript.",
-	"image": "./assets/async-js.svg+xml",
+	"image": "./assets/async-js.svg",
 	"tags": ["utilities"],
 	"language": "NodeJS"
 }

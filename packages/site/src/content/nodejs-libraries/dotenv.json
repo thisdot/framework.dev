@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/dotenv",
 	"href": "https://github.com/motdotla/dotenv",
 	"description": "Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.",
-	"image": "./assets/dotenv.svg+xml",
+	"image": "./assets/dotenv.svg",
 	"tags": ["frameworks"],
 	"language": "NodeJS"
 }

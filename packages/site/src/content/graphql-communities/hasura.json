@@ -1,7 +1,7 @@
 {
 	"name": "Hasura",
 	"description": "Join the conversation with over 10k+ developers from literally everywhere.",
-	"image": "./assets/hasura.svg+xml",
+	"image": "./assets/hasura.svg",
 	"type": "Online events",
 	"href": "https://hasura.io/community/",
 	"tags": ["conferences"]

@@ -1,7 +1,7 @@
 {
 	"name": "Remix Conf EU",
 	"description": "The biggest Remix conference in the cloud.",
-	"image": "./assets/remix-conf-eu.svg+xml",
+	"image": "./assets/remix-conf-eu.svg",
 	"type": "Live Events",
 	"href": "https://remixconf.eu/",
 	"tags": ["conferences"]

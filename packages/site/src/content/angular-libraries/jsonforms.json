@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@jsonforms/core",
 	"href": "https://jsonforms.io/",
 	"description": "More forms. Less code. Complex forms in the blink of an eye.",
-	"image": "./assets/jsonforms.svg+xml",
+	"image": "./assets/jsonforms.svg",
 	"darkImageBackground": true,
 	"tags": ["forms"],
 	"language": "TypeScript"

@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/daisyui",
 	"href": "https://daisyui.com/",
 	"description": "Use Tailwind CSS but write fewer class names",
-	"image": "./assets/daisyui.svg+xml",
+	"image": "./assets/daisyui.svg",
 	"tags": ["styling"],
 	"language": "CSS"
 }

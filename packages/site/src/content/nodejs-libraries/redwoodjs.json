@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@redwoodjs/core",
 	"href": "https://redwoodjs.com/",
 	"description": "Redwood is the full-stack web framework designed to help you grow from side project to startup.",
-	"image": "./assets/redwoodjs.svg+xml",
+	"image": "./assets/redwoodjs.svg",
 	"tags": ["frameworks", "utilities"],
 	"language": "TypeScript"
 }

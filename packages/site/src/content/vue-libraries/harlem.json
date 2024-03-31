@@ -4,7 +4,7 @@
 	"repo": "https://www.github.com/andrewcourtice/harlem",
 	"package": "https://www.npmjs.com/package/@harlem/core",
 	"href": "https://harlemjs.com/",
-	"image": "./assets/harlem.svg+xml",
+	"image": "./assets/harlem.svg",
 	"tags": ["state management"],
 	"description": "Simple, unopinionated, lightweight and extensible state management for Vue 3",
 	"language": "TypeScript"

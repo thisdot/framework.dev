@@ -2,7 +2,7 @@
 	"name": "Ambient Color Generation Tool",
 	"author": "Kevin Jin",
 	"description": "This tool is designed to generate contrast ready color pallets built specifically for UIUX design.",
-	"image": "./assets/ambient-color-generation-tool.svg+xml",
+	"image": "./assets/ambient-color-generation-tool.svg",
 	"href": "https://ambient-rvx.web.app",
 	"tags": ["generator"]
 }

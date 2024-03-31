@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/pinia",
 	"href": "https://pinia.vuejs.org/",
 	"description": "The Vue Store that you will enjoy using",
-	"image": "./assets/pinia.svg+xml",
+	"image": "./assets/pinia.svg",
 	"tags": ["state management"],
 	"language": "TypeScript"
 }

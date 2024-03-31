@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/@ngneat/transloco",
 	"href": "https://ngneat.github.io/transloco/docs/getting-started/installation",
 	"description": "The internationalization (i18n) library for Angular",
-	"image": "./assets/transloco.svg+xml",
+	"image": "./assets/transloco.svg",
 	"tags": ["internationalization"],
 	"language": "TypeScript"
 }

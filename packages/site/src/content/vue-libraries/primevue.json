@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/primevue",
 	"href": "https://www.primefaces.org/primevue/",
 	"description": "PrimeVue is a rich set of open source UI Components for Vue. See PrimeVue homepage for live showcase and documentation.",
-	"image": "./assets/primevue.svg+xml",
+	"image": "./assets/primevue.svg",
 	"tags": ["component"],
 	"language": "TypeScript"
 }

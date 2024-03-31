@@ -2,7 +2,7 @@
 	"title": "Awesome Svelte",
 	"author": "TheComputerM",
 	"description": " A curated list of awesome Svelte resources",
-	"image": "./assets/awesome-svelte.svg+xml",
+	"image": "./assets/awesome-svelte.svg",
 	"href": "https://github.com/TheComputerM/awesome-svelte#official-resources",
 	"tags": []
 }

@@ -2,7 +2,7 @@
 	"name": "LocatorJS",
 	"author": "infi-pc",
 	"description": "Click on UI Component in the browser to open its code in your IDE.",
-	"image": "./assets/locatorjs.svg+xml",
+	"image": "./assets/locatorjs.svg",
 	"href": "https://github.com/infi-pc/locatorjs",
 	"tags": ["development"]
 }

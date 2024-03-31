@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/apollo-angular",
 	"href": "https://apollo-angular.com/",
 	"description": "GraphQL client for Angular. Simple to set up, and may be used in any context that Angular may be used.",
-	"image": "./assets/apollo-angular.svg+xml; charset=utf-8",
+	"image": "./assets/apollo-angular.svg; charset=utf-8",
 	"tags": ["data fetching", "state management"],
 	"language": "TypeScript"
 }
