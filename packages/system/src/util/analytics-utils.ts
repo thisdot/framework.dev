@@ -29,7 +29,7 @@ export const track = <T extends keyof TrackingCustomEvents>(
 	event: T,
 	...data: TrackingCustomEvents[T] extends void ? [] : [TrackingCustomEvents[T]]
 ): void => {
-	import.meta.env.VITE_ENVIRONMENT === 'production'
+	import.meta.env.MODE === 'production'
 		? data[0] != null
 			? gtag('event', event, data[0])
 			: gtag('event', event)

@@ -2,7 +2,7 @@
 	"name": "Hygraph",
 	"author": "Hygraph",
 	"description": "Unify, structure, enrich and distribute content from anywhere to anywhere.",
-	"image": "./assets/hygraph.jpeg",
+	"image": "./assets/hygraph.svg",
 	"href": "https://hygraph.com/",
 	"tags": ["schemas", "frontend", "backend", "development"]
 }

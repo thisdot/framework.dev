@@ -2,7 +2,7 @@
 	"name": "r/Svelte",
 	"description": "A Reddit community for learning and developing web applications using Svelte.",
 	"image": "./assets/r-svelte.png",
-	"type": "reddit",
+	"type": "Reddit",
 	"href": "https://www.reddit.com/r/sveltejs/",
 	"tags": []
 }

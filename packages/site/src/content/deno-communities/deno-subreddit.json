@@ -4,5 +4,5 @@
 	"image": "./assets/deno-subreddit.jpeg",
 	"name": "Deno Subreddit",
 	"tags": [],
-	"type": "reddit"
+	"type": "Reddit"
 }

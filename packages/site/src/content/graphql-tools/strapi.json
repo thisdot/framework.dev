@@ -2,7 +2,7 @@
 	"name": "Strapi",
 	"author": "Strapi",
 	"description": "By default Strapi create REST endpoints for each of your content-types. With the GraphQL plugin, you will be able to add a GraphQL endpoint to fetch and mutate your content.",
-	"image": "./assets/strapi.jpeg",
+	"image": "./assets/strapi.png",
 	"href": "https://docs.strapi.io/developer-docs/latest/plugins/graphql.html",
 	"tags": ["schemas", "frontend", "backend", "development"]
 }

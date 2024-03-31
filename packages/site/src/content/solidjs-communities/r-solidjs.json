@@ -2,7 +2,7 @@
 	"name": "r/SolidJS",
 	"description": "Reddit's community for learning and developing web applications using SolidJS.",
 	"image": "./assets/r-solidjs.png",
-	"type": "reddit",
+	"type": "Reddit",
 	"href": "https://www.reddit.com/r/solidjs/",
 	"tags": []
 }

@@ -2,7 +2,7 @@
 	"name": "SolidJS Twitter",
 	"description": "Simple and performant reactivity for building user interfaces.",
 	"image": "./assets/solidjs-twitter.jpeg",
-	"type": "twitter",
+	"type": "Twitter",
 	"href": "https://twitter.com/solid_js",
 	"tags": []
 }

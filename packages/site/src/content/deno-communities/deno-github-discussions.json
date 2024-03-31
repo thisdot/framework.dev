@@ -4,5 +4,5 @@
 	"image": "./assets/deno-github-discussions.png",
 	"name": "Deno Github Discussions",
 	"tags": [],
-	"type": "github"
+	"type": "Forum"
 }

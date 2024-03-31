@@ -4,6 +4,6 @@
 	"hosts": ["Authvow, LLC"],
 	"href": "https://denodeveloper.buzzsprout.com/",
 	"rss": "https://feeds.buzzsprout.com/1951607.rss",
-	"image": "./assets/deno-developer-show.html; charset=UTF-8",
+	"image": "./assets/deno-developer-show.png",
 	"tags": ["how-to", "technology"]
 }

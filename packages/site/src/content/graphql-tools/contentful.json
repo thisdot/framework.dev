@@ -2,7 +2,7 @@
 	"name": "Contentful",
 	"author": "Contentful",
 	"description": "The GraphQL Content API provides a GraphQL API interface to the content from Contentful. Each Contentful space comes with a GraphQL schema based on its content model",
-	"image": "./assets/contentful.jpeg",
+	"image": "./assets/contentful.svg",
 	"href": "https://www.contentful.com/developers/docs/references/graphql/",
 	"tags": ["schemas", "frontend", "backend", "development"]
 }

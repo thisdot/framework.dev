@@ -1,7 +1,7 @@
 {
 	"title": "Intermediate Gatsby v2",
 	"author": "Jason Lengstorf",
-	"image": "./assets/intermediate-gatsby-v-2-jason-lengstorf.jpeg",
+	"image": "./assets/intermediate-gatsby-v-2-jason-lengstorf.webp",
 	"description": "The baseline setup in Gatsby will take you far, but in any complex web app, you’ll end up needing to go beyond the defaults.",
 	"paymentType": "paid",
 	"level": "intermediate",

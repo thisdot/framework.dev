@@ -1,0 +1,8 @@
+{
+	"title": "Dev.to Qwik",
+	"author": "Dev.to",
+	"description": "DEV Community, or dev.to, is an open source online community presented as a place for programmers to share ideas and help each other grow. According to the vendor, developers are welcome to submit stories, tutorials, questions, or anything worth discussing on dev.to.",
+	"image": "./assets/dev-to-qwik.png",
+	"href": "https://dev.to/t/qwik",
+	"tags": []
+}

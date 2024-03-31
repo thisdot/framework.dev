@@ -3,6 +3,7 @@
 	"author": "Apollo",
 	"description": "The Apollo Blog helps software engineers learn about the latest developments in GraphQL",
 	"image": "./assets/apollo-blog.png",
+	"darkImageBackground": true,
 	"href": "https://www.apollographql.com/blog/",
 	"tags": []
 }

@@ -1,7 +1,7 @@
 {
 	"name": "Grafbase",
 	"description": "Contribute your ideas, meet us at events, contribute code through Pull Requests, write articles, and get rewarded.",
-	"image": "./assets/grafbase.jpeg",
+	"image": "./assets/grafbase.svg",
 	"type": "Live Events",
 	"href": "https://grafbase.com/community",
 	"tags": ["meetups"]

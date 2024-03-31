@@ -2,7 +2,7 @@
 	"name": "Official SolidJS Discord",
 	"description": "Solid is a declarative reactive Javascript library for creating user interfaces. | 5809 members.",
 	"image": "./assets/official-solidjs-discord.png",
-	"type": "discord",
+	"type": "Discord",
 	"href": "https://discord.com/invite/solidjs",
 	"tags": []
 }

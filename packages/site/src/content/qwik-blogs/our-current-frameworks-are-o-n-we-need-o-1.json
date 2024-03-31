@@ -1,8 +1,0 @@
-{
-	"title": "Our current frameworks are O(n); we need O(1)",
-	"author": "Miško Hevery",
-	"description": "CTO at builderio creator of QwikDev, @angular, @angularjs, co-creator of karmajs, compares Qwik to other framework in terms of BigO notation.",
-	"image": "./assets/our-current-frameworks-are-o-n-we-need-o-1.jpeg",
-	"href": "https://www.builder.io/blog/why-progressive-hydration-is-harder-than-you-think",
-	"tags": []
-}
