@@ -34,13 +34,11 @@
 		"prepare": "husky install",
 		"verify": "run-s verify:*",
 		"verify:types": "tsc",
-		"new": "plop",
 		"format": "prettier --config ./.prettierrc --write 'packages/**/*.{ts,tsx}'",
 		"add-entry": "npx tsx ./add-entry.ts"
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.5.5",
-		"@astrojs/react": "^3.0.10",
 		"@storybook/addon-actions": "^6.5.15",
 		"@storybook/addon-essentials": "^6.5.15",
 		"@storybook/addon-links": "^6.5.15",
@@ -63,19 +61,16 @@
 		"eslint-plugin-jsx-a11y": "^6.8.0",
 		"eslint-plugin-react": "^7.33.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
-		"html-element-list": "^1.0.0",
 		"husky": "^8.0.3",
-		"inquirer-autocomplete-prompt": "^3.0.0",
-		"inquirer-file-tree-selection-prompt": "^2.0.5",
 		"lint-staged": "^13.1.0",
 		"mini-css-extract-plugin": "^2.7.2",
 		"p-retry": "^5.1.2",
-		"plop": "^3.1.1",
 		"prettier": "^3.2.5",
 		"storybook-addon-themes": "^6.1.0",
 		"typescript": "^5.3.3"
 	},
 	"dependencies": {
+		"@astrojs/react": "^3.1.0",
 		"@reach/auto-id": "^0.18.0",
 		"@reach/combobox": "^0.18.0",
 		"@reach/dialog": "^0.18.0",
@@ -87,17 +82,12 @@
 		"assert-never": "^1.2.1",
 		"classnames": "^2.3.2",
 		"fuse.js": "^6.6.2",
-		"inquirer": "9.1.4",
 		"lodash": "^4.17.21",
 		"normalize.css": "^8.0.1",
-		"process": "^0.11.10",
 		"prompts": "^2.4.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"the-new-css-reset": "^1.8.2",
 		"title-case": "^3.0.3"
-	},
-	"resolutions": {
-		"inquirer": "7"
 	}
 }

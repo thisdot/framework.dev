@@ -5,6 +5,7 @@ import { exec } from 'node:child_process';
 
 import prompts from 'prompts';
 import { kebabCase } from 'lodash';
+import { titleCase } from 'title-case';
 
 import { getTagsByType } from '@framework/site/src/utils/tags';
 import { CollectionTypes, Frameworks } from '@framework/site/src/types';
@@ -93,10 +94,7 @@ function getPromptsForMetadata(metadata: Metadata) {
 	const availableTags = getTagsByType(metadata.collection, metadata.framework)
 		.filter((tag) => !!tag)
 		.map((tag) => ({
-			title: tag
-				.toLowerCase()
-				// @ts-expect-error this is fine
-				.replaceAll(/(?:^|\s|-)\S/g, (x) => x.toUpperCase()),
+			title: titleCase(tag.toLowerCase()),
 			value: tag,
 		}));
 	const defaultPrompts = [
