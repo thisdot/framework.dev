@@ -2,25 +2,26 @@
 import {
 	formatFieldName,
 	formatAllFrameworkTitles,
-} from '@framework/system/src/util/string-utils'
-import { getContributorsData } from '@framework/system/src/github-util/get-contributors'
-import { scrollable } from '@framework/system/src/styles/layouts.css'
-import BaseLayout from '../layouts/base.astro'
-import Homepage from '../components/homepage'
-import { FRAMEWORK_RESOURCES } from '@framework/system/src/globals/global-constants'
-import { getCollection, type CollectionEntry } from 'astro:content'
-import { type CollectionTypes } from '@framework/site/src/types'
+} from '@framework/system/src/util/string-utils';
+import { getContributorsData } from '@framework/system/src/github-util/get-contributors';
+import { scrollable } from '@framework/system/src/styles/layouts.css';
+import BaseLayout from '../layouts/base.astro';
+import Homepage from '../components/homepage';
+import { FRAMEWORK_RESOURCES } from '@framework/system/src/globals/global-constants';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { type CollectionTypes } from '@framework/site/src/types';
 
 async function getCollectionData(collectionName: CollectionTypes) {
 	const collectionData = await getCollection(
 		`${import.meta.env.VITE_FRAMEWORK}-${collectionName}`
-	)
+	);
 	return (collectionData ?? []).map(
 		(entry: CollectionEntry<typeof collectionName>) => ({
-			id: entry.id,
 			...entry.data,
+			id: entry.id,
+			image: entry.data.image.src,
 		})
-	)
+	);
 }
 
 const [
@@ -41,7 +42,7 @@ const [
 	getCollectionData('podcasts'),
 	getCollectionData('tools'),
 	getContributorsData(),
-])
+]);
 
 const searchableWebsiteStructuredData = {
 	'@context': 'https://schema.org',
@@ -58,12 +59,12 @@ const searchableWebsiteStructuredData = {
 		},
 		'query-input': 'required name=search_term_string',
 	},
-}
+};
 
 const resourceCards = FRAMEWORK_RESOURCES().filter(
 	(resource) =>
 		!resource.title.toLowerCase().includes(import.meta.env.VITE_FRAMEWORK)
-)
+);
 ---
 
 <head>

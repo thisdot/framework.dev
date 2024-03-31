@@ -79,7 +79,7 @@ export function FeatureAndList({
 												<BookDecorator>
 													<img
 														className={featureAndListFeatureBookStyle}
-														src={featured.image}
+														src={featured.image.src}
 														alt=""
 													/>
 												</BookDecorator>
@@ -87,7 +87,7 @@ export function FeatureAndList({
 										) : (
 											<img
 												className={featureAndListFeatureImageStyle}
-												src={featured.image}
+												src={featured.image.src}
 												alt=""
 											/>
 										))}
@@ -128,14 +128,14 @@ export function FeatureAndList({
 												<BookDecorator>
 													<img
 														className={featureAndListListBookStyle}
-														src={item.image}
+														src={item.image.src}
 														alt=""
 													/>
 												</BookDecorator>
 											) : (
 												<img
 													className={featureAndListListImageStyle}
-													src={item.image}
+													src={item.image.src}
 													alt=""
 												/>
 											))}

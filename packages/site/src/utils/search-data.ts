@@ -22,8 +22,9 @@ async function getCollectionData(collectionName: CollectionTypes) {
 	);
 	return (collectionData ?? []).map(
 		(entry: CollectionEntry<typeof collectionName>) => ({
-			id: entry.id,
 			...entry.data,
+			id: entry.id,
+			image: entry.data.image.src,
 		}),
 	);
 }
