@@ -2,7 +2,7 @@
 	"name": "Angular Community",
 	"description": "A community-ran Discord for all things Angular.",
 	"image": "./assets/angular-community.png",
-	"type": "Discord Community",
+	"type": "Discord",
 	"href": "https://discord.gg/angular",
 	"tags": []
 }

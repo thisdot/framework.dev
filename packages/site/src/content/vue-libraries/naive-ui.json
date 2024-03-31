@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/naive-ui",
 	"href": "https://www.naiveui.com/",
 	"description": "A Vue 3 Component Library. Fairly Complete, Customizable Themes, Uses TypeScript, Not Too Slow. Kinda Interesting.",
-	"image": "./assets/naive-ui.html; charset=utf-8",
+	"image": "./assets/naive-ui.svg",
 	"tags": ["component"],
 	"language": "TypeScript"
 }

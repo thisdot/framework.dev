@@ -161,7 +161,7 @@ function getPromptsForMetadata(metadata: Metadata) {
 					name: 'type',
 					message: 'What type of community is this?',
 					choices: [
-						{ value: 'Discord Community' },
+						{ value: 'Discord' },
 						{ value: 'Live and Online Events' },
 						{ value: 'Live Events' },
 						{ value: 'Online Events' },

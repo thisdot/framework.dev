@@ -5,7 +5,7 @@
 	"package": "https://www.npmjs.com/package/at-ui",
 	"href": "https://github.com/at-ui/at-ui",
 	"description": "AT-UI is a modular front-end UI framework for developing fast and powerful web interfaces based on Vue.js.",
-	"image": "./assets/at-ui.plain; charset=utf-8",
+	"image": "./assets/at-ui.svg",
 	"tags": ["component"],
 	"language": "JavaScript"
 }

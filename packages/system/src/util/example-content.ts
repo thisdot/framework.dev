@@ -818,7 +818,7 @@ export const exampleCommunities: Community<string>[] = [
 		description: 'Example community, full of people who, uh, commune.',
 		image:
 			'https://picsum.photos/seed/3aea63e0-3db5-517c-99e7-817a11b35b3e/250',
-		type: 'Discord Community',
+		type: 'Discord',
 		tags: ['accessibility'],
 		href: 'https://google.com',
 	},

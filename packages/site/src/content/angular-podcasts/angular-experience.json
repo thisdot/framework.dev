@@ -1,9 +1,8 @@
 {
 	"title": "Angular Experience",
-	"image": "./assets/angular-experience.html; charset=utf-8",
+	"image": "./assets/angular-experience.webp",
 	"hosts": ["Brooke Avery", "Erik Slack"],
 	"description": "NgXP a weekly podcast produced by Brooke Avery and Erik Slack, two programmers and event planners who are passionate about all things Angular and programming.",
-	"rss": "",
 	"href": "https://ngxp.show/home",
 	"tags": ["general"]
 }

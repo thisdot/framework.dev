@@ -2,7 +2,7 @@
 	"name": "r/ReactJS",
 	"description": "Reddit's largest community for learning and developing web applications using React.",
 	"image": "./assets/r-reactjs.png",
-	"type": "reddit",
+	"type": "Reddit",
 	"href": "https://www.reddit.com/r/reactjs/",
 	"tags": []
 }

@@ -4,7 +4,8 @@
 	"repo": "https://www.github.com/framer/motion",
 	"package": "https://www.npmjs.com/package/framer-motion",
 	"href": "https://www.framer.com/docs/",
-	"image": "./assets/framer-motion.plain; charset=utf-8",
+	"image": "./assets/framer-motion.png",
+	"darkImageBackground": true,
 	"tags": ["animation"],
 	"description": "Motion is a production-ready motion library for React from Framer. It brings declarative animations, effortless layout transitions and gestures while maintaining HTML and SVG semantics.",
 	"language": "TypeScript"

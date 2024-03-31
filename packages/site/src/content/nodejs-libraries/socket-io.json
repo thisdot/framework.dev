@@ -5,7 +5,7 @@
 	"description": "Socket.IO enables real-time bidirectional event-based communication.",
 	"tags": ["data fetching", "frameworks"],
 	"author": "Guillermo Rauch, Damien Arrachequesne",
-	"darkImageBackground": true,
+	"darkImageBackground": false,
 	"repo": "https://github.com/socketio/socket.io",
 	"package": "https://www.npmjs.com/package/socket.io",
 	"language": "NodeJS"

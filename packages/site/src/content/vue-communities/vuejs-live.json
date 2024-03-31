@@ -2,7 +2,7 @@
 	"name": "Vuejs Live",
 	"description": "Online and in person conference to discuss all things Vue.",
 	"image": "./assets/vuejs-live.png",
-	"type": "Online and Live Events",
+	"type": "Live and Online Events",
 	"href": "https://vuejslive.com/",
 	"tags": ["conferences"]
 }

@@ -1,7 +1,7 @@
 {
 	"name": "Vuejs Amsterdam",
 	"description": "One of the largest Vue conferences in the world",
-	"image": "./assets/vuejs-amsterdam.plain; charset=utf-8",
+	"image": "./assets/vuejs-amsterdam.svg",
 	"type": "Live Events",
 	"href": "https://vuejs.amsterdam/",
 	"tags": ["conferences"]

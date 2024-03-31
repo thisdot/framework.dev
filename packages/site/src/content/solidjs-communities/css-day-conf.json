@@ -1,7 +1,7 @@
 {
 	"name": "CSS Day Conf",
 	"description": "We're a conference with an informal vibe and plenty of breaks, where each person can approach one another.",
-	"image": "./assets/css-day-conf.png",
+	"image": "./assets/css-day-conf.svg",
 	"type": "Live Events",
 	"href": "https://cssday.nl/2023",
 	"tags": ["conferences"]

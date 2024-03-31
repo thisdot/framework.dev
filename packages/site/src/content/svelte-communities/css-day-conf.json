@@ -1,7 +1,7 @@
 {
 	"name": "CSS Day Conf",
 	"description": "CSS Day Conf features a mix of CSS designers, developers, spec writers and browser vendors, who take pride in what they know and do.",
-	"image": "./assets/css-day-conf.png",
+	"image": "./assets/css-day-conf.svg",
 	"type": "Live Events",
 	"href": "https://cssday.nl/2022",
 	"tags": ["conferences"]
