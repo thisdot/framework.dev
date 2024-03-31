@@ -11,5 +11,8 @@ export default defineConfig({
 	site: `https://framework.dev/`,
 	vite: {
 		plugins: [vanillaExtractPlugin()],
+		ssr: {
+			noExternal: ['@astrojs/react'],
+		},
 	},
 });
