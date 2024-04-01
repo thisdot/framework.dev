@@ -1,11 +1,9 @@
-import { type Story, type Meta } from '@storybook/react';
-import {
-	ContentBanner as ContentBannerComponent,
-	type ContentBannerProps,
-} from './content-banner';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { ContentBanner as ContentBannerComponent } from './content-banner';
 import { examplePodcasts } from '../../util/example-content';
 
-export default {
+const meta: Meta<typeof ContentBannerComponent> = {
 	title: 'Home/Content Banner',
 	component: ContentBannerComponent,
 	args: {
@@ -23,10 +21,11 @@ export default {
 			};
 		}),
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<ContentBannerProps> = (args) => (
-	<ContentBannerComponent {...args} />
-);
+type Story = StoryObj<typeof ContentBannerComponent>;
 
-export const ContentBanner = Template.bind({});
+export const ContentBanner: Story = {
+	render: (args) => <ContentBannerComponent {...args} />,
+};

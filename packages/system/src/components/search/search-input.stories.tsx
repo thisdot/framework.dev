@@ -1,10 +1,8 @@
-import { type Story, type Meta } from '@storybook/react';
-import {
-	SearchInput as SearchInputComponent,
-	type SearchInputProps,
-} from './search-input';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { SearchInput as SearchInputComponent } from './search-input';
 
-export default {
+const meta: Meta<typeof SearchInputComponent> = {
 	title: 'Search/Search Input',
 	component: SearchInputComponent,
 	args: {
@@ -14,10 +12,11 @@ export default {
 		disabled: false,
 		hideLabel: true,
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<SearchInputProps> = (args) => (
-	<SearchInputComponent {...args} />
-);
+type Story = StoryObj<typeof SearchInputComponent>;
 
-export const SearchInput = Template.bind({});
+export const SearchInput: Story = {
+	render: (args) => <SearchInputComponent {...args} />,
+};

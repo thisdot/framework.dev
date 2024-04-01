@@ -1,62 +1,67 @@
-import { type Story, type Meta } from '@storybook/react';
-import { useRef, useState } from 'react';
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useRef, useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './button';
 import {
 	InfoPopup as InfoPopupComponent,
 	type InfoPopupProps,
 } from './info-popup';
 
+type ArgsType = InfoPopupProps & {
+	alignItems: string;
+	justifyContent: string;
+};
+
 const alignmentOptions = ['center', 'start', 'end'];
-export default {
+const meta: Meta<ArgsType> = {
 	title: 'Info Popup',
 	component: InfoPopupComponent,
 	args: {
 		children:
 			'Enim enim incididunt cupidatat cupidatat irure amet amet incididunt esse. Tempor excepteur nostrud exercitation anim amet excepteur dolore sunt ex sit id officia nisi laboris. Labore incididunt consequat nisi ea ea consectetur ea nisi amet. Qui id amet ad aute nulla nisi pariatur. Labore enim magna aliquip nisi proident cillum labore duis reprehenderit et labore aliqua.',
 		alignItems: 'center',
-		justifyItems: 'center',
+		justifyContent: 'center',
 	},
 	argTypes: {
 		alignItems: {
 			options: alignmentOptions,
 			control: 'inline-radio',
 		},
-		justifyItems: {
+		justifyContent: {
 			options: alignmentOptions,
 			control: 'inline-radio',
 		},
 	},
-} as Meta;
-
-const Template: Story<
-	InfoPopupProps & {
-		alignItems: (typeof alignmentOptions)[number];
-		justifyItems: (typeof alignmentOptions)[number];
-	}
-> = ({ alignItems, justifyItems, ...args }) => {
-	const [open, setOpen] = useState(false);
-	const targetRef = useRef<HTMLButtonElement | null>(null);
-	return (
-		<div
-			style={{
-				display: 'grid',
-				width: '100vw',
-				height: '100vh',
-				alignItems,
-				justifyItems,
-			}}
-		>
-			<Button as="button" onClick={() => setOpen(true)} ref={targetRef}>
-				Click me
-			</Button>
-			<InfoPopupComponent
-				{...args}
-				targetRef={targetRef}
-				isOpen={open}
-				onDismiss={() => setOpen(false)}
-			/>
-		</div>
-	);
 };
+export default meta;
 
-export const InfoPopup = Template.bind({});
+type Story = StoryObj<typeof InfoPopupComponent>;
+
+export const InfoPopup: Story = {
+	// @ts-expect-error These types are just for this story
+	render: ({ alignItems, justifyItems, ...args }) => {
+		const [open, setOpen] = useState(false);
+		const targetRef = useRef<HTMLButtonElement | null>(null);
+		return (
+			<div
+				style={{
+					display: 'grid',
+					width: '100vw',
+					height: '100vh',
+					alignItems,
+					justifyItems,
+				}}
+			>
+				<Button as="button" onClick={() => setOpen(true)} ref={targetRef}>
+					Click me
+				</Button>
+				<InfoPopupComponent
+					{...args}
+					targetRef={targetRef}
+					isOpen={open}
+					onDismiss={() => setOpen(false)}
+				/>
+			</div>
+		);
+	},
+};

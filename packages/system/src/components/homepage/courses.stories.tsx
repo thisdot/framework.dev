@@ -1,20 +1,24 @@
-import { type Story, type Meta } from '@storybook/react';
-import { Courses as CoursesComponent, type CoursesProps } from './courses';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Courses as CoursesComponent } from './courses';
 import { exampleCourses } from '../../util/example-content';
 import { pxToRem } from '../../util/style-utils';
 
-export default {
+const meta: Meta<typeof CoursesComponent> = {
 	title: 'Home/Courses',
 	component: CoursesComponent,
 	args: {
 		courses: exampleCourses,
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<CoursesProps> = (args) => (
-	<div style={{ maxWidth: pxToRem(800) }}>
-		<CoursesComponent {...args} />
-	</div>
-);
+type Story = StoryObj<typeof CoursesComponent>;
 
-export const Courses = Template.bind({});
+export const Courses: Story = {
+	render: (args) => (
+		<div style={{ maxWidth: pxToRem(800) }}>
+			<CoursesComponent {...args} />
+		</div>
+	),
+};

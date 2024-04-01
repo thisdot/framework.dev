@@ -1,21 +1,22 @@
-import { type Story, type Meta } from '@storybook/react';
-import {
-	BookDecorator as BookDecoratorComponent,
-	type BookDecoratorProps,
-} from './book-decorator';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { BookDecorator as BookDecoratorComponent } from './book-decorator';
 
-export default {
+const meta: Meta<typeof BookDecoratorComponent> = {
 	title: 'Book Decorator',
 	component: BookDecoratorComponent,
 	args: {
 		children: 'Hello world',
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<BookDecoratorProps> = (args) => (
-	<BookDecoratorComponent {...args}>
-		<img src="/book-2.png" alt="" />
-	</BookDecoratorComponent>
-);
+type Story = StoryObj<typeof BookDecoratorComponent>;
 
-export const BookDecorator = Template.bind({});
+export const BookDecorator: Story = {
+	render: (args) => (
+		<BookDecoratorComponent {...args}>
+			<img src="/book-2.png" alt="" />
+		</BookDecoratorComponent>
+	),
+};

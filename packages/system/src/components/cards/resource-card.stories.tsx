@@ -1,4 +1,6 @@
-import { type Story, type Meta } from '@storybook/react';
+/* eslint-disable react-hooks/rules-of-hooks */
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 import { type AttributeDefinition } from '../../models/all-categories';
 import {
@@ -6,12 +8,9 @@ import {
 	exampleCourses,
 	exampleTags,
 } from '../../util/example-content';
-import {
-	ResourceCard as ResourceCardComponent,
-	type ResourceCardProps,
-} from './resource-card';
+import { ResourceCard as ResourceCardComponent } from './resource-card';
 
-export default {
+const meta: Meta<typeof ResourceCardComponent> = {
 	title: 'Cards/Resource Card',
 	component: ResourceCardComponent,
 	args: {
@@ -27,7 +26,7 @@ export default {
 		tags: exampleTags,
 		layout: 'titleFirst',
 		imageLayout: 'logo',
-		onSelect: false,
+		onSelect: () => false,
 		children:
 			'Mollit deserunt laborum excepteur esse excepteur incididunt irure deserunt adipisicing anim in id.',
 	},
@@ -54,17 +53,20 @@ export default {
 			action: 'onTagClick',
 		},
 	},
-} as Meta;
-
-const Template: Story<ResourceCardProps> = ({ onSelect, ...args }) => {
-	const [selected, setSelected] = useState(false);
-	return (
-		<ResourceCardComponent
-			{...args}
-			selected={selected}
-			onSelect={onSelect ? (selected) => setSelected(selected) : undefined}
-		/>
-	);
 };
+export default meta;
 
-export const ResourceCard = Template.bind({});
+type Story = StoryObj<typeof ResourceCardComponent>;
+
+export const ResourceCard: Story = {
+	render: ({ onSelect, ...args }) => {
+		const [selected, setSelected] = useState(false);
+		return (
+			<ResourceCardComponent
+				{...args}
+				selected={selected}
+				onSelect={onSelect ? (selected) => setSelected(selected) : undefined}
+			/>
+		);
+	},
+};

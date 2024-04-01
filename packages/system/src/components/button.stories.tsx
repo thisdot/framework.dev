@@ -1,7 +1,8 @@
-import { type Meta, type Story } from '@storybook/react';
-import { Button as ButtonComponent, type ButtonProps } from './button';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button as ButtonComponent } from './button';
 
-export default {
+const meta: Meta<typeof ButtonComponent> = {
 	title: 'Button',
 	component: ButtonComponent,
 	args: {
@@ -26,14 +27,11 @@ export default {
 			control: { type: 'radio' },
 		},
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<ButtonProps> = (args) => <ButtonComponent {...args} />;
+type Story = StoryObj<typeof ButtonComponent>;
 
-export const Button = Template.bind({});
-
-Button.parameters = {
-	percy: {
-		additionalSnapshots: [{ suffix: ' as anchor', args: { as: 'a' } }],
-	},
+export const Button: Story = {
+	render: (args) => <ButtonComponent {...args} />,
 };

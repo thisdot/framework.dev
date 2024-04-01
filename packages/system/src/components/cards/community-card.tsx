@@ -1,3 +1,4 @@
+import React from 'react';
 import { type Community } from '../../models/community';
 import { ResourceCard, type ResourceCardProps } from './resource-card';
 

@@ -1,15 +1,10 @@
-import { type Story, type Meta } from '@storybook/react';
-import {
-	allCategoryNames,
-	type CategoryName,
-} from '../../models/all-categories';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { allCategoryNames } from '../../models/all-categories';
 import { exampleSearchData } from '../../util/example-content';
-import {
-	ResultsCategory as ResultsCategoryComponent,
-	type ResultsCategoryProps,
-} from './results-category';
+import { ResultsCategory as ResultsCategoryComponent } from './results-category';
 
-export default {
+const meta: Meta<typeof ResultsCategoryComponent> = {
 	title: 'Search/Results Category',
 	component: ResultsCategoryComponent,
 	args: {
@@ -26,16 +21,19 @@ export default {
 			control: 'select',
 		},
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<ResultsCategoryProps<CategoryName>> = (args) => (
-	<ResultsCategoryComponent
-		{...args}
-		searchResults={
-			exampleSearchData.find((category) => category.name === args.category)
-				?.data ?? []
-		}
-	/>
-);
+type Story = StoryObj<typeof ResultsCategoryComponent>;
 
-export const ResultsCategory = Template.bind({});
+export const ResultsCategory: Story = {
+	render: (args) => (
+		<ResultsCategoryComponent
+			{...args}
+			searchResults={
+				exampleSearchData.find((category) => category.name === args.category)
+					?.data ?? []
+			}
+		/>
+	),
+};

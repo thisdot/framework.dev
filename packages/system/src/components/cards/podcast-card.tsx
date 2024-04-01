@@ -1,3 +1,4 @@
+import React from 'react';
 import { type Podcast } from '../../models/podcast';
 import { ResourceCard, type ResourceCardProps } from './resource-card';
 

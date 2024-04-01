@@ -1,16 +1,14 @@
-import { type Story, type Meta } from '@storybook/react';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import startCase from 'lodash/startCase';
 import { sprinkles } from '../sprinkles/sprinkles.css';
 import { NavItem } from './nav-item';
-import {
-	MobileNav as MobileNavComponent,
-	type MobileNavProps,
-} from './mobile-nav';
+import { MobileNav as MobileNavComponent } from './mobile-nav';
 import { allCategoryNames } from '../models/all-categories';
 import { bodyWithNav, fullscreen } from '../styles/layouts.css';
 import classNames from 'classnames';
 
-export default {
+const meta: Meta<typeof MobileNavComponent> = {
 	title: 'Mobile Nav',
 	component: MobileNavComponent,
 	parameters: {
@@ -38,21 +36,16 @@ export default {
 			control: { disable: true },
 		},
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<MobileNavProps> = (args) => (
-	<div className={classNames(bodyWithNav, fullscreen)}>
-		<div />
-		<MobileNavComponent {...args} />
-	</div>
-);
+type Story = StoryObj<typeof MobileNavComponent>;
 
-export const MobileNav: Story<MobileNavProps> = Template.bind({});
-
-MobileNav.parameters = {
-	percy: {
-		additionalSnapshots: [
-			{ suffix: ' with burger menu open', args: { initialMenuState: 'open' } },
-		],
-	},
+export const MobileNav: Story = {
+	render: (args) => (
+		<div className={classNames(bodyWithNav, fullscreen)}>
+			<div />
+			<MobileNavComponent {...args} />
+		</div>
+	),
 };

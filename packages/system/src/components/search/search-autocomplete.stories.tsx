@@ -1,12 +1,10 @@
-import { type Story, type Meta } from '@storybook/react';
-import { useState } from 'react';
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { exampleSearchData } from '../../util/example-content';
-import {
-	SearchAutocomplete as SearchAutocompleteComponent,
-	type SearchAutocompleteProps,
-} from './search-autocomplete';
+import { SearchAutocomplete as SearchAutocompleteComponent } from './search-autocomplete';
 
-export default {
+const meta: Meta<typeof SearchAutocompleteComponent> = {
 	title: 'Search/Search Autocomplete',
 	component: SearchAutocompleteComponent,
 	args: {
@@ -17,13 +15,20 @@ export default {
 			field: [['level', ['beginner', 'intermediate', 'advanced']]],
 		},
 	},
-} as Meta;
-
-const Template: Story<SearchAutocompleteProps> = (args) => {
-	const [value, setValue] = useState('');
-	return (
-		<SearchAutocompleteComponent {...args} value={value} onChange={setValue} />
-	);
 };
+export default meta;
 
-export const SearchAutocomplete = Template.bind({});
+type Story = StoryObj<typeof SearchAutocompleteComponent>;
+
+export const SearchAutocomplete: Story = {
+	render: (args) => {
+		const [value, setValue] = useState('');
+		return (
+			<SearchAutocompleteComponent
+				{...args}
+				value={value}
+				onChange={setValue}
+			/>
+		);
+	},
+};

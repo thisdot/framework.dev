@@ -1,21 +1,24 @@
-import { type Story, type Meta } from '@storybook/react';
-import { Counter as CounterComponent, type CounterProps } from './counter';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Counter as CounterComponent } from './counter';
 
-export default {
+const meta: Meta<typeof CounterComponent> = {
 	title: 'Counter',
 	component: CounterComponent,
+	args: {
+		children: '16',
+	},
 	argTypes: {
 		size: {
 			options: ['small', 'medium'],
 			control: { type: 'radio' },
 		},
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<CounterProps> = (args) => <CounterComponent {...args} />;
+type Story = StoryObj<typeof CounterComponent>;
 
-export const Counter = Template.bind({});
-
-Counter.args = {
-	children: '16',
+export const Counter: Story = {
+	render: (args) => <CounterComponent {...args} />,
 };

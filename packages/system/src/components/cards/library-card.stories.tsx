@@ -1,13 +1,11 @@
-import { type Story, type Meta } from '@storybook/react';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { sprinkles } from '../../sprinkles/sprinkles.css';
 import { exampleLibraries } from '../../util/example-content';
 import { titleFirstCardGrid } from './card-layouts.css';
-import {
-	LibraryCard as LibraryCardComponent,
-	type LibraryCardProps,
-} from './library-card';
+import { LibraryCard as LibraryCardComponent } from './library-card';
 
-export default {
+const meta: Meta<typeof LibraryCardComponent> = {
 	title: 'Cards/Library Card',
 	component: LibraryCardComponent,
 	args: {
@@ -18,21 +16,28 @@ export default {
 			action: 'onTagClick',
 		},
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<LibraryCardProps> = (args) => (
-	<div
-		className={sprinkles({
-			backgroundColor: 'surface4',
-			padding: 16,
-		})}
-	>
-		<div className={titleFirstCardGrid}>
-			{exampleLibraries.map((library) => (
-				<LibraryCardComponent key={library.name} {...args} library={library} />
-			))}
+type Story = StoryObj<typeof LibraryCardComponent>;
+
+export const LibraryCard: Story = {
+	render: (args) => (
+		<div
+			className={sprinkles({
+				backgroundColor: 'surface4',
+				padding: 16,
+			})}
+		>
+			<div className={titleFirstCardGrid}>
+				{exampleLibraries.map((library) => (
+					<LibraryCardComponent
+						key={library.name}
+						{...args}
+						library={library}
+					/>
+				))}
+			</div>
 		</div>
-	</div>
-);
-
-export const LibraryCard = Template.bind({});
+	),
+};

@@ -1,21 +1,19 @@
-import { type Story, type Meta } from '@storybook/react';
-import {
-	FeaturedLibraries as FeaturedLibrariesComponent,
-	type FeaturedLibrariesProps,
-} from './featured-libraries';
-import { exampleLibraries, exampleTags } from '../../util/example-content';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { FeaturedLibraries as FeaturedLibrariesComponent } from './featured-libraries';
+import { exampleLibraries } from '../../util/example-content';
 
-export default {
+const meta: Meta<typeof FeaturedLibrariesComponent> = {
 	title: 'Home/Featured Libraries',
 	component: FeaturedLibrariesComponent,
 	args: {
 		libraries: exampleLibraries,
-		libraryTags: exampleTags,
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<FeaturedLibrariesProps> = (args) => (
-	<FeaturedLibrariesComponent {...args} />
-);
+type Story = StoryObj<typeof FeaturedLibrariesComponent>;
 
-export const FeaturedLibraries = Template.bind({});
+export const FeaturedLibraries: Story = {
+	render: (args) => <FeaturedLibrariesComponent {...args} />,
+};

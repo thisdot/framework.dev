@@ -1,3 +1,4 @@
+import React from 'react';
 import { type Blog } from '../../models/blog';
 import { type ResourceCardProps, ResourceCard } from './resource-card';
 

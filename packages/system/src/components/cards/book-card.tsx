@@ -1,3 +1,4 @@
+import React from 'react';
 import { type Book } from '../../models/book';
 import { BulletDivider } from '../bullet-divider';
 import { ResourceCard, type ResourceCardProps } from './resource-card';

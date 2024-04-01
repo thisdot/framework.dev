@@ -1,9 +1,10 @@
-import { type Story, type Meta } from '@storybook/react';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { bookIndexMetadata } from '../../models/book';
 import { exampleTags } from '../../util/example-content';
 import { Filter as FilterComponent, type FilterProps } from './filter';
 
-export default {
+const meta: Meta<typeof FilterComponent> = {
 	title: 'Search/Filter',
 	component: FilterComponent,
 	args: {
@@ -14,8 +15,11 @@ export default {
 	argTypes: {
 		onUpdate: { action: 'update' },
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<FilterProps> = (args) => <FilterComponent {...args} />;
+type Story = StoryObj<typeof FilterComponent>;
 
-export const Filter = Template.bind({});
+export const Filter: Story = {
+	render: (args) => <FilterComponent {...args} />,
+};

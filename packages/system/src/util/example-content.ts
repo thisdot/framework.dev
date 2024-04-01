@@ -10,11 +10,7 @@ import { type AllCategories } from '../models/all-categories';
 import { type Blog, blogIndexMetadata } from '../models/blog';
 import { LibraryTag } from '../models/library-tag';
 
-export const exampleTags = [
-	'accessibility',
-	'state management',
-	'redux',
-] as const;
+export const exampleTags = ['accessibility', 'state management', 'redux'];
 
 export type ExampleTag = (typeof exampleTags)[number];
 

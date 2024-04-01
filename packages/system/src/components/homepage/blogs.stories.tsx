@@ -1,20 +1,24 @@
-import { type Story, type Meta } from '@storybook/react';
-import { Blogs as BlogsComponent, type BlogsProps } from './blogs';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Blogs as BlogsComponent } from './blogs';
 import { exampleBlogs } from '../../util/example-content';
 import { pxToRem } from '../../util/style-utils';
 
-export default {
+const meta: Meta<typeof BlogsComponent> = {
 	title: 'Home/Blogs',
 	component: BlogsComponent,
 	args: {
 		blogs: exampleBlogs,
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<BlogsProps> = (args) => (
-	<div style={{ maxWidth: pxToRem(350) }}>
-		<BlogsComponent {...args} />
-	</div>
-);
+type Story = StoryObj<typeof BlogsComponent>;
 
-export const Blogs = Template.bind({});
+export const Blogs: Story = {
+	render: (args) => (
+		<div style={{ maxWidth: pxToRem(350) }}>
+			<BlogsComponent {...args} />
+		</div>
+	),
+};

@@ -1,10 +1,8 @@
-import { type Story, type Meta } from '@storybook/react';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { allCategoryNames } from '../../models/all-categories';
 import { exampleTags } from '../../util/example-content';
-import {
-	FilterMenu as FilterMenuComponent,
-	type FilterMenuProps,
-} from './filter-menu';
+import { FilterMenu as FilterMenuComponent } from './filter-menu';
 import { type FilterSet, type QueryParams } from './types';
 
 const params: QueryParams = {
@@ -26,7 +24,7 @@ const availableFilters: FilterSet = {
 	],
 };
 
-export default {
+const meta: Meta<typeof FilterMenuComponent> = {
 	title: 'Search/Filter Menu',
 	component: FilterMenuComponent,
 	parameters: {
@@ -53,10 +51,11 @@ export default {
 			},
 		},
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<FilterMenuProps> = (args) => (
-	<FilterMenuComponent {...args} />
-);
+type Story = StoryObj<typeof FilterMenuComponent>;
 
-export const FilterMenu = Template.bind({});
+export const FilterMenu: Story = {
+	render: (args) => <FilterMenuComponent {...args} />,
+};

@@ -1,22 +1,23 @@
-import { type Story, type Meta } from '@storybook/react';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { AngularIcon } from '../../icons/angular-icon';
 import { ReactIcon } from '../../icons/react-icon';
 import { SvelteIcon } from '../../icons/svelte-icon';
 import { VueIcon } from '../../icons/vue-icon';
 import { type LinkCardProps } from './link-card';
-import {
-	ResourcesInfoBanner as ResourcesInfoBannerComponent,
-	type ResourcesInfoBannerProps,
-} from './resources-info-banner';
+import { ResourcesInfoBanner as ResourcesInfoBannerComponent } from './resources-info-banner';
 import { DenoIcon } from '../../icons/deno-icon';
 
-export default {
+const meta: Meta<typeof ResourcesInfoBannerComponent> = {
 	title: 'Landing/Resources Info Banner',
 	component: ResourcesInfoBannerComponent,
 	args: {
 		children: 'Hello world',
 	},
-} as Meta;
+};
+export default meta;
+
+type Story = StoryObj<typeof ResourcesInfoBannerComponent>;
 
 const resourceCards: LinkCardProps[] = [
 	{
@@ -61,13 +62,13 @@ const resourceCards: LinkCardProps[] = [
 	},
 ];
 
-const Template: Story<ResourcesInfoBannerProps> = (args) => (
-	<ResourcesInfoBannerComponent
-		{...args}
-		title="Get started now"
-		description="Explore some of the top resources added by a community to learn or be up to date with your framework"
-		resourceCards={resourceCards}
-	/>
-);
-
-export const ResourcesInfoBanner = Template.bind({});
+export const ResourcesInfoBanner: Story = {
+	render: (args) => (
+		<ResourcesInfoBannerComponent
+			{...args}
+			title="Get started now"
+			description="Explore some of the top resources added by a community to learn or be up to date with your framework"
+			resourceCards={resourceCards}
+		/>
+	),
+};

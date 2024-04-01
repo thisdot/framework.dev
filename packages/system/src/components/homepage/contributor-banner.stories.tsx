@@ -1,10 +1,8 @@
-import { type Story, type Meta } from '@storybook/react';
-import {
-	ContributorBanner as ContributorBannerComponent,
-	type ContributorBannerProps,
-} from './contributor-banner';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { ContributorBanner as ContributorBannerComponent } from './contributor-banner';
 
-export default {
+const meta: Meta<typeof ContributorBannerComponent> = {
 	title: 'Home/Contributor Banner',
 	component: ContributorBannerComponent,
 	args: {
@@ -31,10 +29,11 @@ export default {
 			},
 		],
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<ContributorBannerProps> = (args) => (
-	<ContributorBannerComponent {...args} />
-);
+type Story = StoryObj<typeof ContributorBannerComponent>;
 
-export const ContributorBanner = Template.bind({});
+export const ContributorBanner: Story = {
+	render: (args) => <ContributorBannerComponent {...args} />,
+};

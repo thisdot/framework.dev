@@ -1,3 +1,4 @@
+import React from 'react';
 import { type Tool } from '../../models/tool';
 import { ResourceCard, type ResourceCardProps } from './resource-card';
 

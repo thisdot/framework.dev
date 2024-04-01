@@ -1,11 +1,9 @@
-import { type Story, type Meta } from '@storybook/react';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { exampleBlogs } from '../../util/example-content';
-import {
-	ResourceList as ResourceListComponent,
-	type ResourceListProps,
-} from './resource-list';
+import { ResourceList as ResourceListComponent } from './resource-list';
 
-export default {
+const meta: Meta<typeof ResourceListComponent> = {
 	title: 'Resource List',
 	component: ResourceListComponent,
 	args: {
@@ -13,7 +11,7 @@ export default {
 		viewAll: { title: 'View all resources', href: '#' },
 		items: exampleBlogs.slice(0, 4).map((blog) => {
 			return {
-				image: { src: blog.image, style: 'normal' },
+				image: blog.image,
 				title: blog.title,
 				metadata: blog.author,
 				href: blog.href,
@@ -21,10 +19,11 @@ export default {
 			};
 		}),
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<ResourceListProps> = (args) => (
-	<ResourceListComponent {...args} />
-);
+type Story = StoryObj<typeof ResourceListComponent>;
 
-export const ResourceList = Template.bind({});
+export const ResourceList: Story = {
+	render: (args) => <ResourceListComponent {...args} />,
+};

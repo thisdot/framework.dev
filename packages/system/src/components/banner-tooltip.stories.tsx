@@ -1,27 +1,23 @@
-import { type Story, type Meta } from '@storybook/react';
-import {
-	BannerTooltip as BannerTooltipComponent,
-	type BannerTooltipProps,
-} from './banner-tooltip';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { BannerTooltip as BannerTooltipComponent } from './banner-tooltip';
 
-export default {
+const meta: Meta<typeof BannerTooltipComponent> = {
 	title: 'Banner Tooltip',
 	component: BannerTooltipComponent,
 	args: {
 		children: 'Hello world',
+		pitchText: {
+			highlightedText: 'Compare and select libraries',
+			softText: 'based on your needs',
+		},
+		explanatoryText: 'Click on icon to add the lib to comparison',
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<BannerTooltipProps> = (args) => (
-	<BannerTooltipComponent {...args} />
-);
+type Story = StoryObj<typeof BannerTooltipComponent>;
 
-export const BannerTooltip = Template.bind({});
-
-BannerTooltip.args = {
-	pitchText: {
-		highlightedText: 'Compare and select libraries',
-		softText: 'based on your needs',
-	},
-	explanatoryText: 'Click on icon to add the lib to comparison',
+export const BannerTooltip: Story = {
+	render: (args) => <BannerTooltipComponent {...args} />,
 };

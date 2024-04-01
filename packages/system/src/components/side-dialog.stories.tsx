@@ -1,41 +1,42 @@
-import { type Story, type Meta } from '@storybook/react';
-import { useState } from 'react';
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './button';
-import {
-	SideDialog as SideDialogComponent,
-	type SideDialogProps,
-} from './side-dialog';
+import { SideDialog as SideDialogComponent } from './side-dialog';
 
-export default {
+const meta: Meta<typeof SideDialogComponent> = {
 	title: 'Side Dialog',
 	component: SideDialogComponent,
 	args: {
 		children: 'Hello world',
 		'aria-label': 'Example dialog',
-		position: 'left',
+		position: 'bottom',
 	},
 	argTypes: {
 		position: {
-			options: ['left', 'right'],
+			options: ['bottom', 'right'],
 			control: 'radio',
 		},
 	},
-} as Meta;
-
-const Template: Story<SideDialogProps> = (args) => {
-	const [open, setOpen] = useState(false);
-	return (
-		<>
-			<Button as="button" onClick={() => setOpen(true)}>
-				Open dialog
-			</Button>
-			<SideDialogComponent
-				isOpen={open}
-				{...args}
-				onDismiss={() => setOpen(false)}
-			/>
-		</>
-	);
 };
+export default meta;
 
-export const SideDialog = Template.bind({});
+type Story = StoryObj<typeof SideDialogComponent>;
+
+export const SideDialog: Story = {
+	render: (args) => {
+		const [open, setOpen] = useState(false);
+		return (
+			<>
+				<Button as="button" onClick={() => setOpen(true)}>
+					Open dialog
+				</Button>
+				<SideDialogComponent
+					isOpen={open}
+					{...args}
+					onDismiss={() => setOpen(false)}
+				/>
+			</>
+		);
+	},
+};

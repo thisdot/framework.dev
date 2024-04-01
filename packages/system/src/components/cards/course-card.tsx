@@ -1,3 +1,4 @@
+import React from 'react';
 import { type Course } from '../../models/course';
 import { ResourceCard, type ResourceCardProps } from './resource-card';
 

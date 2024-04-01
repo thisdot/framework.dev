@@ -1,20 +1,19 @@
-import { type Story, type Meta } from '@storybook/react';
-import {
-	Communities as CommunitiesComponent,
-	type CommunitiesProps,
-} from './communities';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Communities as CommunitiesComponent } from './communities';
 import { exampleCommunities } from '../../util/example-content';
 
-export default {
+const meta: Meta<typeof CommunitiesComponent> = {
 	title: 'Home/Communities',
 	component: CommunitiesComponent,
 	args: {
 		communities: exampleCommunities,
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<CommunitiesProps> = (args) => (
-	<CommunitiesComponent {...args} />
-);
+type Story = StoryObj<typeof CommunitiesComponent>;
 
-export const Communities = Template.bind({});
+export const Communities: Story = {
+	render: (args) => <CommunitiesComponent {...args} />,
+};

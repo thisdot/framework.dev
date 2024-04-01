@@ -1,23 +1,24 @@
-import { type Meta, type Story } from '@storybook/react';
-import {
-	ComparisonBox as ComparisonBoxComponent,
-	type ComparisonBoxProps,
-} from './comparison-box';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { ComparisonBox as ComparisonBoxComponent } from './comparison-box';
 import { pxToRem } from '../../util/style-utils';
 import { LibraryTag } from '../../models/library-tag';
 
-export default {
+const meta: Meta<typeof ComparisonBoxComponent> = {
 	title: 'Home/Comparison Box',
 	component: ComparisonBoxComponent,
 	args: {
 		libraryTags: Object.values(LibraryTag),
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<ComparisonBoxProps> = (args) => (
-	<div style={{ maxWidth: pxToRem(350) }}>
-		<ComparisonBoxComponent {...args} />
-	</div>
-);
+type Story = StoryObj<typeof ComparisonBoxComponent>;
 
-export const ComparisonBox = Template.bind({});
+export const ComparisonBox: Story = {
+	render: (args) => (
+		<div style={{ maxWidth: pxToRem(350) }}>
+			<ComparisonBoxComponent {...args} />
+		</div>
+	),
+};

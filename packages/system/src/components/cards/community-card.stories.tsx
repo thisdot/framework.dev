@@ -1,13 +1,11 @@
-import { type Story, type Meta } from '@storybook/react';
-import {
-	CommunityCard as CommunityCardComponent,
-	type CommunityCardProps,
-} from './community-card';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { CommunityCard as CommunityCardComponent } from './community-card';
 import { sprinkles } from '../../sprinkles/sprinkles.css';
 import { exampleCommunities } from '../../util/example-content';
 import { imageFirstCardGrid } from './card-layouts.css';
 
-export default {
+const meta: Meta<typeof CommunityCardComponent> = {
 	title: 'Cards/Community Card',
 	component: CommunityCardComponent,
 	args: {
@@ -18,25 +16,28 @@ export default {
 			action: 'onTagClick',
 		},
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<CommunityCardProps> = (args) => (
-	<div
-		className={sprinkles({
-			backgroundColor: 'surface4',
-			padding: 16,
-		})}
-	>
-		<div className={imageFirstCardGrid}>
-			{exampleCommunities.map((community) => (
-				<CommunityCardComponent
-					key={community.name}
-					{...args}
-					community={community}
-				/>
-			))}
+type Story = StoryObj<typeof CommunityCardComponent>;
+
+export const CommunityCard: Story = {
+	render: (args) => (
+		<div
+			className={sprinkles({
+				backgroundColor: 'surface4',
+				padding: 16,
+			})}
+		>
+			<div className={imageFirstCardGrid}>
+				{exampleCommunities.map((community) => (
+					<CommunityCardComponent
+						key={community.name}
+						{...args}
+						community={community}
+					/>
+				))}
+			</div>
 		</div>
-	</div>
-);
-
-export const CommunityCard = Template.bind({});
+	),
+};

@@ -1,8 +1,9 @@
-import { type Story, type Meta } from '@storybook/react';
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { InteractiveIcon } from '../icons/interactive-icon';
-import { NavItem as NavItemComponent, type NavItemProps } from './nav-item';
+import { NavItem as NavItemComponent } from './nav-item';
 
-export default {
+const meta: Meta<typeof NavItemComponent> = {
 	title: 'Nav Item',
 	component: NavItemComponent,
 	args: {
@@ -17,8 +18,11 @@ export default {
 			defaultValue: undefined,
 		},
 	},
-} as Meta;
+};
+export default meta;
 
-const Template: Story<NavItemProps> = (args) => <NavItemComponent {...args} />;
+type Story = StoryObj<typeof NavItemComponent>;
 
-export const NavItem = Template.bind({});
+export const NavItem: Story = {
+	render: (args) => <NavItemComponent {...args} />,
+};
