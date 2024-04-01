@@ -6,8 +6,8 @@
 	"author": "ThisDotLabs",
 	"license": "ISC",
 	"scripts": {
-		"dev": "start-storybook -p 6006",
-		"build": "build-storybook -o dist",
+		"dev": "sb dev -p 6006",
+		"build": "sb build -o dist",
 		"verify": "tsc"
 	}
 }
