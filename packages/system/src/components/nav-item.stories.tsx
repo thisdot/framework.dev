@@ -1,13 +1,11 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { InteractiveIcon } from '../icons/interactive-icon';
 import { NavItem as NavItemComponent } from './nav-item';
 
 const meta: Meta<typeof NavItemComponent> = {
 	title: 'Nav Item',
 	component: NavItemComponent,
 	args: {
-		icon: InteractiveIcon,
 		children: 'Menu Item',
 		count: 24,
 	},

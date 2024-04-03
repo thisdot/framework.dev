@@ -32,7 +32,7 @@
 		"build:graphql": "cross-env VITE_FRAMEWORK=graphql yarn workspace @framework/site build",
 		"build:deno": "cross-env VITE_FRAMEWORK=deno yarn workspace @framework/site build",
 		"prepare": "husky install",
-		"verify": "run-s verify:*",
+		"verify": "yarn workspaces run verify",
 		"verify:types": "tsc",
 		"format": "prettier --config ./.prettierrc --write 'packages/**/*.{ts,tsx}'",
 		"add-entry": "npx tsx ./add-entry.ts"

@@ -7,7 +7,6 @@ import { FreeIcon } from '../icons/free-icon';
 import { InteractiveIcon } from '../icons/interactive-icon';
 import { IntermediateIcon } from '../icons/intermediate-icon';
 import { PaidIcon } from '../icons/paid-icon';
-import { type IconProps } from '../icons/shared-icon-types';
 import { VideoIcon } from '../icons/video-icon';
 import { type AttributeDefinition } from '../models/all-categories';
 import { sprinkles } from '../sprinkles/sprinkles.css';
@@ -65,9 +64,7 @@ export function DiscreteAttributeIcon({
 	);
 }
 
-function attributeIcon(
-	attribute: AttributeDefinition,
-): React.ComponentType<IconProps> {
+function attributeIcon(attribute: AttributeDefinition) {
 	switch (attribute[0]) {
 		case 'format': {
 			switch (attribute[1]) {
