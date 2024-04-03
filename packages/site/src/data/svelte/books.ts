@@ -92,4 +92,16 @@ export const books: Book<(typeof bookTags)[number]>[] = [
 		href: 'https://www.amazon.com/Beginning-Svelte-Development-applications-lightweight/dp/B0B67292T4/ref=sr_1_1?crid=2MVZL5D0X9N89&keywords=svelte&qid=1666285611&qu=eyJxc2MiOiI0LjM2IiwicXNhIjoiMy45MCIsInFzcCI6IjMuNTEifQ%3D%3D&s=books&sprefix=svelte%2Cstripbooks-intl-ship%2C216&sr=1-1',
 		tags: ['projects', 'state management', 'forms', 'data fetching'],
 	},
+	{
+		title: "Real-World Svelte: Supercharge your apps with Svelte 4 by mastering advanced web development concepts",
+		authors: ['Tan Li Hau'],
+		image: 'https://m.media-amazon.com/images/I/71i4pn9v8SL._SL1500_.jpg',
+		description:
+			"Harness the power of Svelte, the cutting-edge JavaScript framework used for building high-performance web applications, with this definitive guide",
+		yearOfPublication: 2023,
+		numberOfPages: 414,
+		level: 'beginner',
+		href: 'https://www.amazon.com/Real-World-Svelte-Supercharge-mastering-development-ebook/dp/B0CG1HQK19',
+		tags: ['projects', 'action', 'events', 'state management', 'transition', 'stores'],
+	},
 ]
