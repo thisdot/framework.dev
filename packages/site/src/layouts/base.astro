@@ -49,19 +49,16 @@ const themeClass = themes[
 		{
 			import.meta.env.VITE_ENVIRONMENT === 'production' && (
 				<>
-					<Fragment
-						set:html={`<script async src="https://www.googletagmanager.com/gtag/js?id=${
-							import.meta.env.VITE_GOOGLE_ANALYTICS
-						}"></script>`}
-					/>
-					<Fragment
-						set:html={`<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '${import.meta.env.VITE_GOOGLE_ANALYTICS}');
-				</script>`}
-					/>
+					<script
+						is:inline
+						src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.VITE_GOOGLE_ANALYTICS}`}>
+					</script>
+					<script is:inline>
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', '${import.meta.env.VITE_GOOGLE_ANALYTICS}');
+					</script>
 				</>
 			)
 		}
