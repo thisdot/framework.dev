@@ -1,9 +1,9 @@
-import classNames from 'classnames'
-import React from 'react'
-import { flipHorizontallyStyle } from './icon.css'
-import { IconProps } from './shared-icon-types'
+import classNames from 'classnames';
+import React from 'react';
+import { flipHorizontallyStyle } from './icon.css';
+import { type IconProps } from './shared-icon-types';
 
-type ChevronIconProps = IconProps & { flipped?: boolean }
+type ChevronIconProps = IconProps & { flipped?: boolean };
 
 export const ChevronIcon = React.forwardRef<SVGSVGElement, ChevronIconProps>(
 	function ChevronIcon({ className, flipped = false, ...props }, ref) {
@@ -20,6 +20,6 @@ export const ChevronIcon = React.forwardRef<SVGSVGElement, ChevronIconProps>(
 					fill="#191C1D"
 				/>
 			</svg>
-		)
-	}
-)
+		);
+	},
+);

@@ -1,0 +1,8 @@
+{
+	"name": "Reddit - r/node",
+	"description": "This an a Reddit group dedicated to all thins NodeJS.",
+	"image": "./assets/reddit-r-node.jpeg",
+	"type": "Reddit",
+	"href": "https://www.reddit.com/r/node/",
+	"tags": []
+}

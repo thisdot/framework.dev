@@ -1,5 +1,5 @@
-import { style } from '@vanilla-extract/css'
-import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css'
+import { style } from '@vanilla-extract/css';
+import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css';
 
 export const LinkCardGroupStyle = style([
 	sprinkles({ gap: { mobile: 12, desktop: 24 } }),
@@ -15,10 +15,10 @@ export const LinkCardGroupStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const LinkCardGroupItemStyle = style([
 	sprinkles({
 		width: { mobile: 'full', desktop: 'auto' },
 	}),
-])
+]);

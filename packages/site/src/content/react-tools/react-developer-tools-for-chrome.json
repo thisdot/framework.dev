@@ -1,0 +1,8 @@
+{
+	"name": "React Developer Tools for Chrome",
+	"author": "Facebook",
+	"description": "A tool that allows you to inspect a React tree, including the component hierarchy, props, state, and more.",
+	"image": "./assets/react-developer-tools-for-chrome.png",
+	"href": "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en",
+	"tags": ["chrome"]
+}

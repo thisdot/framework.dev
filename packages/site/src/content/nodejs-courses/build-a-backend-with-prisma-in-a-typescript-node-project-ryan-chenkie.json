@@ -1,0 +1,11 @@
+{
+	"title": "Build a Backend with Prisma in a TypeScript Node Project",
+	"author": "Ryan Chenkie",
+	"image": "./assets/build-a-backend-with-prisma-in-a-typescript-node-project-ryan-chenkie.png",
+	"description": "In this course, we will learn how to use the power of Prisma in a TypeScript backend application using SQLite. Through the course, you'll be building an application to display the details of products that have been saved in the project's database. You will learn how to initialize Prisma, use Prisma Client to create and find records, use Express to create data dynamically, and much more🔥",
+	"paymentType": "paid",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://egghead.io/courses/build-a-backend-with-prisma-in-a-typescript-node-project-ca6628d3",
+	"tags": ["backend"]
+}

@@ -1,0 +1,8 @@
+{
+	"name": "Svelte Society Stockholm",
+	"description": "Part of the larger Svelte Society organisation. We try to bring together Svelte users across Stockholm and Scandinavia.",
+	"image": "./assets/svelte-society-stockholm.svg",
+	"type": "Live Events",
+	"href": "https://www.downtomeet.com/Svelte-Society-Stockholm",
+	"tags": ["conferences"]
+}

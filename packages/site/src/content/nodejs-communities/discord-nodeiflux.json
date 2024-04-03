@@ -1,0 +1,8 @@
+{
+	"name": "Discord - Nodeiflux",
+	"description": "This is a Discord to meet and discuss all things NodeJS.",
+	"image": "./assets/discord-nodeiflux.png",
+	"type": "Discord",
+	"href": "https://discord.com/invite/vUsrbjd",
+	"tags": ["meetups"]
+}

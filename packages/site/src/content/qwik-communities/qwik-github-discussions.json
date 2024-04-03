@@ -1,0 +1,8 @@
+{
+	"name": "Qwik GitHub Discussions",
+	"description": "A community-ran GitHub Discussions for all things Qwik.",
+	"image": "./assets/qwik-github-discussions.png",
+	"type": "Forum",
+	"href": "https://github.com/BuilderIO/qwik/discussions",
+	"tags": []
+}

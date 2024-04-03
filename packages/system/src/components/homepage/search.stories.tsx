@@ -1,14 +1,18 @@
-import { Story, Meta } from '@storybook/react'
-import { Search as SearchComponent, SearchProps } from './search'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Search as SearchComponent } from './search';
 
-export default {
+const meta: Meta<typeof SearchComponent> = {
 	title: 'Home/Search',
 	component: SearchComponent,
 	args: {
-		children: 'Hello world',
+		placeholder: 'Hello world',
 	},
-} as Meta
+};
+export default meta;
 
-const Template: Story<SearchProps> = (args) => <SearchComponent {...args} />
+type Story = StoryObj<typeof SearchComponent>;
 
-export const Search = Template.bind({})
+export const Search: Story = {
+	render: (args) => <SearchComponent {...args} />,
+};

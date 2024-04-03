@@ -1,0 +1,11 @@
+{
+	"name": "sendgrid",
+	"description": "No description",
+	"href": "https://deno.land/x/sendgrid",
+	"package": "",
+	"repo": "https://github.com/gpasq/deno-sendgrid",
+	"author": "Greg Pasquariello",
+	"image": "./assets/sendgrid.png",
+	"tags": ["utilities", "API libraries"],
+	"language": "TypeScript"
+}

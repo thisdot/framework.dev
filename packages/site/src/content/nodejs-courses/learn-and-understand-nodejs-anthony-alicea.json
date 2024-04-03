@@ -1,0 +1,11 @@
+{
+	"title": "Learn and Understand NodeJS",
+	"author": "Anthony Alicea",
+	"image": "./assets/learn-and-understand-nodejs-anthony-alicea.png",
+	"description": "Dive deep under the hood of NodeJS. Learn V8, Express, the MEAN stack, core Javascript concepts, and more.",
+	"paymentType": "paid",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.udemy.com/course/understand-nodejs/",
+	"tags": ["backend"]
+}

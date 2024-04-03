@@ -1,0 +1,9 @@
+{
+	"title": "The Undefined Podcast",
+	"image": "./assets/the-undefined-podcast.webp",
+	"hosts": ["Jared Palmer", "Ken Wheeler"],
+	"description": "Full stack developers Jared Palmer and Ken Wheeler have peer-to-peer conversations with world-class engineers about software development.",
+	"rss": "https://rss.simplecast.com/podcasts/8781/rss.xml",
+	"href": "https://undefined.fm/",
+	"tags": ["general"]
+}

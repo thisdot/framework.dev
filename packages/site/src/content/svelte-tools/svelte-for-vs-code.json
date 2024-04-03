@@ -1,0 +1,8 @@
+{
+	"name": "Svelte for VS Code",
+	"author": "Svelte",
+	"description": "A tool that provides syntax highlighting and rich intellisense for Svelte components in VS Code, using the svelte language server.",
+	"image": "./assets/svelte-for-vs-code.png",
+	"href": "https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode",
+	"tags": ["VSCode"]
+}

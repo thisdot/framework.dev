@@ -1,0 +1,8 @@
+{
+	"name": "Volar",
+	"author": "Johnson Chu",
+	"description": "Volar is a Language Support plugin built specifically for Vue 3. It's based on @vue/reactivity to calculate TypeScript on-demand to optimize performance similar to the native TypeScript language service.",
+	"image": "./assets/volar.png",
+	"href": "https://marketplace.visualstudio.com/items?itemName=Vue.volar",
+	"tags": ["VSCode"]
+}

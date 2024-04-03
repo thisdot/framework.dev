@@ -1,8 +1,8 @@
-import { recipe } from '@vanilla-extract/recipes'
-import type { VariantSelection } from '@framework/system/src/util/type-utils'
-import { sprinkles } from '../sprinkles/sprinkles.css'
-import { vars } from '../themes/themes.css'
-import { pxToRem } from '../util/style-utils'
+import { recipe } from '@vanilla-extract/recipes';
+import type { VariantSelection } from '@framework/system/src/util/type-utils';
+import { sprinkles } from '../sprinkles/sprinkles.css';
+import { vars } from '../themes/themes.css';
+import { pxToRem } from '../util/style-utils';
 
 const buttonVariants = {
 	size: {
@@ -109,9 +109,9 @@ const buttonVariants = {
 			},
 		},
 	},
-}
+};
 
-export type ButtonVariants = VariantSelection<typeof buttonVariants>
+export type ButtonVariants = VariantSelection<typeof buttonVariants>;
 
 export const buttonStyle = recipe({
 	base: [
@@ -141,4 +141,4 @@ export const buttonStyle = recipe({
 		size: 'medium',
 		color: 'primary',
 	},
-})
+});

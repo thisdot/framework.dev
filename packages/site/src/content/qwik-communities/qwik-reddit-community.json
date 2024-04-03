@@ -1,0 +1,8 @@
+{
+	"name": "Qwik Reddit Community",
+	"description": "An Open-Source framework designed for best possible time to interactive, by focusing on resumability of server-side-rendering of HTML, and fine-grained lazy-loading of code",
+	"image": "./assets/qwik-reddit-community.png",
+	"type": "Reddit",
+	"href": "https://www.reddit.com/r/qwik/",
+	"tags": []
+}

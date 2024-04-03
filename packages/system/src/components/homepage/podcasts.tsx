@@ -1,14 +1,14 @@
-import React from 'react'
-import sampleSize from 'lodash/sampleSize'
-import { Podcast } from '../../models/podcast'
-import { ContentBanner } from './content-banner'
+import React from 'react';
+import sampleSize from 'lodash/sampleSize';
+import { type Podcast } from '../../models/podcast';
+import { ContentBanner } from './content-banner';
 
 export interface PodcastsProps extends React.ComponentPropsWithoutRef<'div'> {
-	podcasts: Podcast<string>[]
+	podcasts: Podcast<string>[];
 }
 
 export function Podcasts({ className, podcasts, ...props }: PodcastsProps) {
-	const randomPodcasts = sampleSize(podcasts, 4)
+	const randomPodcasts = sampleSize(podcasts, 4);
 	return (
 		<ContentBanner
 			title="Get smarter on the go"
@@ -19,9 +19,9 @@ export function Podcasts({ className, podcasts, ...props }: PodcastsProps) {
 					metadata: podcast.hosts.join(', '),
 					image: podcast.image,
 					href: podcast.href,
-				}
+				};
 			})}
 			{...props}
 		/>
-	)
+	);
 }

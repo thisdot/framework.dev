@@ -1,0 +1,11 @@
+{
+	"name": "Solid Gstatem",
+	"author": "Gstatem",
+	"repo": "https://www.github.com/gstatem/gstatem/tree/main/packages/solid-gstatem",
+	"package": "https://www.npmjs.com/package/solid-gstatem",
+	"href": "https://github.com/gstatem/gstatem/tree/main/packages/solid-gstatem",
+	"description": "GStatem is a small, simple and fast state-management tool.",
+	"image": "./assets/solid-gstatem.png",
+	"tags": ["state management"],
+	"language": "TypeScript"
+}

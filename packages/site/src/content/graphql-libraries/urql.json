@@ -1,0 +1,11 @@
+{
+	"name": "URQL",
+	"author": "Formidable",
+	"repo": "https://www.github.com/FormidableLabs/urql",
+	"package": "https://www.npmjs.com/package/urql",
+	"href": "https://formidable.com/open-source/urql/",
+	"description": "A highly customizable and versatile GraphQL client",
+	"image": "./assets/urql.svg",
+	"language": "TypeScript",
+	"tags": ["data fetching"]
+}

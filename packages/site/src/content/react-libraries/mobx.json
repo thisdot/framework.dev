@@ -1,0 +1,11 @@
+{
+	"name": "MobX",
+	"author": "Michel Weststrate",
+	"repo": "https://www.github.com/mobxjs/mobx",
+	"package": "https://www.npmjs.com/package/mobx",
+	"href": "https://mobx.js.org/",
+	"description": "A battle tested library that makes state management simple and scalable by transparently applying functional reactive programming. Uses observable data structures instead of actions and reducers.",
+	"image": "./assets/mobx.png",
+	"tags": ["state management"],
+	"language": "TypeScript"
+}

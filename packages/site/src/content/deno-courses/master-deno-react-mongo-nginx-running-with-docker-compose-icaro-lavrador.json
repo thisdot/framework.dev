@@ -1,0 +1,18 @@
+{
+	"title": "Master Deno, React, Mongo, NGINX running with Docker-Compose",
+	"author": "Icaro Lavrador",
+	"description": "Deno the new kid in town - How to use with Mongodb and React hooks running dev/prod in dockerized containers with NGINX.",
+	"paymentType": "paid",
+	"level": "advanced",
+	"format": "video",
+	"image": "./assets/master-deno-react-mongo-nginx-running-with-docker-compose-icaro-lavrador.jpeg",
+	"href": "https://www.udemy.com/course/deno-and-react/",
+	"tags": [
+		"mongodb",
+		"docker",
+		"oak framework",
+		"data validation",
+		"backend",
+		"deno"
+	]
+}

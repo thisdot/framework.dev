@@ -1,0 +1,8 @@
+{
+	"name": "QConfSF",
+	"description": "QCon San Francisco brings together the world's most innovative senior software engineers, architects and team leads across multiple domains to share their real-world implementation of emerging trends and practices.",
+	"image": "./assets/qconfsf.png",
+	"type": "Live Events",
+	"href": "https://qconsf.com/",
+	"tags": ["conferences"]
+}

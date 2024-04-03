@@ -1,0 +1,8 @@
+{
+	"name": "Solid DnD",
+	"author": "thisbeyond",
+	"description": "A lightweight, performant, extensible drag and drop toolkit for Solid JS.",
+	"image": "./assets/solid-dnd.png",
+	"href": "https://solid-dnd.com",
+	"tags": ["dragndrop"]
+}

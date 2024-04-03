@@ -1,4 +1,4 @@
-import { ColorPalette } from './theme-from-palette'
+import { type ColorPalette } from './theme-from-palette';
 
 export const denoColorPalette: ColorPalette = {
 	highlight: '#dfdff2',
@@ -81,4 +81,4 @@ export const denoColorPalette: ColorPalette = {
 	error20: '#680003',
 	error10: '#410001',
 	error0: '#000000',
-}
+};

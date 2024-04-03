@@ -1,0 +1,12 @@
+{
+	"name": "Serverless Framework",
+	"author": "Serverless, Inc",
+	"repo": "https://www.github.com/serverless/serverless",
+	"package": "https://www.npmjs.com/package/serverless",
+	"href": "https://www.serverless.com/",
+	"description": "All-in-one development solution for auto-scaling apps on AWS Lambda.",
+	"image": "./assets/serverless-framework.svg",
+	"darkImageBackground": true,
+	"tags": ["frameworks"],
+	"language": "NodeJS"
+}

@@ -1,0 +1,11 @@
+{
+	"name": "Element Plus",
+	"author": "Element Plus",
+	"repo": "https://www.github.com/element-plus/element-plus",
+	"package": "https://www.npmjs.com/package/element-plus",
+	"href": "https://element-plus.org/",
+	"description": "A Vue 3 based component library for designers and developers",
+	"image": "./assets/element-plus.svg",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

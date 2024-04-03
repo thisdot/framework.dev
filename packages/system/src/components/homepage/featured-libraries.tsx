@@ -1,20 +1,19 @@
-import classNames from 'classnames'
-import React from 'react'
-import sampleSize from 'lodash/sampleSize'
+import classNames from 'classnames';
+import React from 'react';
+import sampleSize from 'lodash/sampleSize';
 import {
 	featuredLibrariesHeadingStyle,
 	featuredLibrariesListStyle,
 	featuredLibrariesStyle,
 	featuredLibrariesViewAllStyle,
-} from './featured-libraries.css'
-import { Library } from '../../models/library'
-import { LibraryCard } from '../cards/library-card'
+} from './featured-libraries.css';
+import { type Library } from '../../models/library';
+import { LibraryCard } from '../cards/library-card';
 
 export interface FeaturedLibrariesProps
 	extends React.ComponentPropsWithoutRef<'div'> {
-	title: string
-	libraries: Library[]
-	libraryTags: string[]
+	title: string;
+	libraries: Library[];
 }
 
 export function FeaturedLibraries({
@@ -22,10 +21,9 @@ export function FeaturedLibraries({
 	className,
 	title,
 	libraries,
-	libraryTags,
 	...props
 }: FeaturedLibrariesProps) {
-	const randomLibraries = sampleSize(libraries, 6)
+	const randomLibraries = sampleSize(libraries, 6);
 	return (
 		<div className={classNames(className, featuredLibrariesStyle)} {...props}>
 			<h2 className={featuredLibrariesHeadingStyle}>{title}</h2>
@@ -36,7 +34,7 @@ export function FeaturedLibraries({
 						library={library}
 						headingTag="h3"
 						onTagClick={() => {
-							return null
+							return null;
 						}}
 					/>
 				))}
@@ -45,5 +43,5 @@ export function FeaturedLibraries({
 				View all libraries
 			</a>
 		</div>
-	)
+	);
 }

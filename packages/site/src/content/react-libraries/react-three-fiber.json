@@ -1,0 +1,11 @@
+{
+	"name": "React Three Fiber",
+	"author": "Poimandres",
+	"repo": "https://www.github.com/pmndrs/react-three-fiber",
+	"package": "https://www.npmjs.com/package/@react-three/fiber",
+	"href": "https://docs.pmnd.rs/react-three-fiber/getting-started/introduction",
+	"image": "./assets/react-three-fiber.png",
+	"tags": ["animation"],
+	"description": "A React library for Three.js to render 3D scenes in React.",
+	"language": "TypeScript"
+}

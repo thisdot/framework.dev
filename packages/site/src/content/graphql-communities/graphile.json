@@ -1,0 +1,8 @@
+{
+	"name": "Graphile",
+	"description": "Extensible high-performance automatic GraphQL API for PostgreSQL",
+	"image": "./assets/graphile.jpeg",
+	"type": "Documentation",
+	"href": "https://www.graphile.org/",
+	"tags": []
+}

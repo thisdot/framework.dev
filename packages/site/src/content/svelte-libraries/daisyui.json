@@ -1,0 +1,11 @@
+{
+	"name": "DaisyUI",
+	"author": "Pouya Saadeghi",
+	"repo": "https://github.com/saadeghi/daisyui",
+	"package": "https://www.npmjs.com/package/daisyui",
+	"href": "https://daisyui.com/",
+	"description": "Use Tailwind CSS but write fewer class names",
+	"image": "./assets/daisyui.svg",
+	"tags": ["styling"],
+	"language": "CSS"
+}

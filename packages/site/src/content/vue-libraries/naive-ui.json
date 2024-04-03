@@ -1,0 +1,11 @@
+{
+	"name": "Naive UI",
+	"author": "TuSimple",
+	"repo": "https://www.github.com/TuSimple/naive-ui",
+	"package": "https://www.npmjs.com/package/naive-ui",
+	"href": "https://www.naiveui.com/",
+	"description": "A Vue 3 Component Library. Fairly Complete, Customizable Themes, Uses TypeScript, Not Too Slow. Kinda Interesting.",
+	"image": "./assets/naive-ui.svg",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

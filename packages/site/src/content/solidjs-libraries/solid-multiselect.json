@@ -1,0 +1,11 @@
+{
+	"name": "Solid MultiSelect",
+	"author": "DigiChanges",
+	"repo": "https://www.github.com/DigiChanges/solid-multiselect",
+	"package": "https://www.npmjs.com/package/@digichanges/solid-multiselect",
+	"href": "https://github.com/DigiChanges/solid-multiselect",
+	"description": "A multi-select dropdown implementation for SolidJS",
+	"image": "./assets/solid-multiselect.png",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

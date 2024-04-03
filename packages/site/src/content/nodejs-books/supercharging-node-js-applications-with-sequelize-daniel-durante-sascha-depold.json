@@ -1,0 +1,11 @@
+{
+	"title": "Supercharging Node.js Applications with Sequelize",
+	"authors": ["Daniel Durante", "Sascha Depold"],
+	"description": "A hands-on implementation guide to application development in Node.js using the powerful Sequelize ORM.",
+	"image": "./assets/supercharging-node-js-applications-with-sequelize-daniel-durante-sascha-depold.jpeg",
+	"href": "https://www.oreilly.com/api/v1/book/9781801811552/",
+	"tags": ["database"],
+	"yearOfPublication": 2022,
+	"numberOfPages": 253,
+	"level": "intermediate"
+}

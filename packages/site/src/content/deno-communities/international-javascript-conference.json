@@ -1,0 +1,8 @@
+{
+	"name": "International Javascript Conference",
+	"description": "Conference dedicated to full stack JavaScript development",
+	"image": "./assets/international-javascript-conference.png",
+	"type": "Live Events",
+	"href": "https://javascript-conference.com/",
+	"tags": ["conferences"]
+}

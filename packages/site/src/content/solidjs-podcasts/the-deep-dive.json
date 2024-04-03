@@ -1,0 +1,9 @@
+{
+	"title": "The Deep Dive",
+	"image": "./assets/the-deep-dive.jpeg",
+	"hosts": ["Lars Gyrup Brink Nielsen"],
+	"description": "The Deep Dive is an advanced web development podcast brought to you by inDepth.dev.",
+	"rss": "https://www.listennotes.com/podcasts/the-deep-dive-dev-indepthdev-rc_SkJZFRyW/#",
+	"href": "https://www.listennotes.com/podcasts/the-deep-dive-dev-indepthdev-rc_SkJZFRyW/#",
+	"tags": ["general"]
+}

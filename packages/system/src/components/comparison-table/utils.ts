@@ -1,45 +1,45 @@
-import { ISortConfig, ILibrary } from './types'
+import { type ISortConfig, type ILibrary } from './types';
 
 export function sortLibraries(
 	libraries: ILibrary[],
-	sortConfig: ISortConfig
+	sortConfig: ISortConfig,
 ): ILibrary[] {
 	return [...libraries].sort((a, b) => {
 		const valueA =
 			typeof a[sortConfig.by] === 'string'
 				? (a[sortConfig.by] as string).toUpperCase()
-				: a[sortConfig.by]
+				: a[sortConfig.by];
 
 		const valueB =
 			typeof b[sortConfig.by] === 'string'
 				? (b[sortConfig.by] as string).toUpperCase()
-				: b[sortConfig.by]
+				: b[sortConfig.by];
 
 		if (valueA === valueB) {
-			return 0
+			return 0;
 		}
 		if (sortConfig.asc) {
-			return valueA > valueB ? 1 : -1
+			return valueA > valueB ? 1 : -1;
 		} else {
-			return valueB > valueA ? 1 : -1
+			return valueB > valueA ? 1 : -1;
 		}
-	})
+	});
 }
 
 export function formatPercentage(value: number) {
 	if (value === undefined || value === null) {
-		return
+		return;
 	}
 
 	return new Intl.NumberFormat([], {
 		style: 'percent',
-	}).format(value)
+	}).format(value);
 }
 
 export function formatNumber(value: number) {
 	if (value === undefined || value === null) {
-		return
+		return;
 	}
 
-	return new Intl.NumberFormat().format(value)
+	return new Intl.NumberFormat().format(value);
 }

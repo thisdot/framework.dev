@@ -1,0 +1,8 @@
+{
+	"name": "Angular Playground",
+	"author": "SoCreate",
+	"description": "An open source tool for building enterprise angular components, directives, and pipes in isolation.",
+	"image": "./assets/angular-playground.png",
+	"href": "https://angularplayground.it/",
+	"tags": ["development"]
+}

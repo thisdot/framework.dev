@@ -1,0 +1,11 @@
+{
+	"title": "Real-World Svelte: Supercharge your apps with Svelte 4 by mastering advanced web development concepts",
+	"href": "https://www.amazon.com/Real-World-Svelte-Supercharge-mastering-development-ebook/dp/B0CG1HQK19",
+	"image": "./assets/real-world-svelte-supercharge-your-apps-with-svelte-4-by-mastering-advanced-web-development-concepts-tan-li-hau.jpeg",
+	"description": "Harness the power of Svelte, the cutting-edge JavaScript framework used for building high-performance web applications, with this definitive guide",
+	"tags": ["projects", "state management"],
+	"authors": ["Tan Li Hau"],
+	"yearOfPublication": 2023,
+	"numberOfPages": 414,
+	"level": "beginner"
+}

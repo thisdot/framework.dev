@@ -1,0 +1,19 @@
+{
+	"title": "Full-Stack Web Development with GraphQL and React",
+	"authors": ["Sebastian Grebe"],
+	"image": "./assets/full-stack-web-development-with-graphql-and-react-sebastian-grebe.jpeg",
+	"description": "React, one of the most widely used JavaScript frameworks, allows developers to build fast and scalable front end applications for any use case. GraphQL is the modern way of querying an API.",
+	"yearOfPublication": 2019,
+	"numberOfPages": 460,
+	"level": "intermediate",
+	"href": "https://www.amazon.com/gp/product/1789134528/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1789134528&linkCode=as2&tag=booksoncode-20&linkId=483a1e2be1d2d67df7a600d255aefdf3",
+	"tags": [
+		"graphQL",
+		"reactJS",
+		"apollo",
+		"sql",
+		"testing",
+		"components",
+		"docker"
+	]
+}

@@ -1,0 +1,11 @@
+{
+	"name": "code_block_writer",
+	"description": "Code writer for JavaScript and TypeScript code.",
+	"href": "https://deno.land/x/code_block_writer",
+	"package": "",
+	"repo": "https://github.com/dsherret/code-block-writer",
+	"author": "David Sherret",
+	"image": "./assets/code-block-writer.jpeg",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

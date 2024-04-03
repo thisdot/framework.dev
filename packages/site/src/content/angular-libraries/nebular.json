@@ -1,0 +1,11 @@
+{
+	"name": "Nebular",
+	"author": "Akveo",
+	"repo": "https://github.com/akveo/nebular",
+	"package": "https://www.npmjs.com/package/@nebular/theme",
+	"href": "https://akveo.github.io/nebular/",
+	"image": "./assets/nebular.png",
+	"description": "Nebular is a customizable Angular UI library that contains 40+ UI components, four visual themes, and Auth and Security modules.",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

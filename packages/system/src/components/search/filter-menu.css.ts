@@ -1,5 +1,5 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
 
 export const filterMenuStyle = style([
 	sprinkles({ height: 'full', backgroundColor: 'white' }),
@@ -8,7 +8,7 @@ export const filterMenuStyle = style([
 		display: 'grid',
 		gridTemplateRows: '1fr auto',
 	},
-])
+]);
 
 export const filterMenuFooterStyle = sprinkles({
 	layout: 'row',
@@ -19,7 +19,7 @@ export const filterMenuFooterStyle = sprinkles({
 	backgroundColor: 'surface',
 	borderTop: 'thin',
 	alignItems: 'center',
-})
+});
 
 export const filterMenuFilterContainerStyle = style([
 	sprinkles({
@@ -30,4 +30,4 @@ export const filterMenuFilterContainerStyle = style([
 	{
 		overflowX: 'auto',
 	},
-])
+]);

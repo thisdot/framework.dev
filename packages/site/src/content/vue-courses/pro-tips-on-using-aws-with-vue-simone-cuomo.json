@@ -1,0 +1,17 @@
+{
+	"title": "Pro Tips on Using AWS with Vue",
+	"author": "Simone Cuomo",
+	"image": "./assets/pro-tips-on-using-aws-with-vue-simone-cuomo.png",
+	"description": "Cloud infrastructure can be scary, but AWS makes this task so much easier.In this training, we are going to walk you through how to set up your Vue.js application on AWS with Amplify.",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://youtu.be/7XWraodmPAk",
+	"tags": [
+		"AWS",
+		"DevOps",
+		"continuous integration",
+		"vue 2",
+		"JavaScript marathon"
+	]
+}

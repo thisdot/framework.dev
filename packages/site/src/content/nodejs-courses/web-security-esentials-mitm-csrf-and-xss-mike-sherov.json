@@ -1,0 +1,11 @@
+{
+	"title": "Web Security Esentials: MITM, CSRF, and XSS",
+	"author": "Mike Sherov",
+	"image": "./assets/web-security-esentials-mitm-csrf-and-xss-mike-sherov.jpeg",
+	"description": "In this course, you will learn about Session hijacking, how to use Charles proxy to simulate various attacks, securely configuring cookies and more.",
+	"paymentType": "paid",
+	"level": "advanced",
+	"format": "video",
+	"href": "https://egghead.io/courses/web-security-essentials-mitm-csrf-and-xss",
+	"tags": ["backend"]
+}

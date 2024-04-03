@@ -1,0 +1,8 @@
+{
+	"name": "GraphQL Playground for Chrome",
+	"author": "Dustin R. Callaway",
+	"description": "Chrome extension for GraphQL Playground",
+	"image": "./assets/graphql-playground-for-chrome.svg",
+	"href": "https://chrome.google.com/webstore/detail/graphql-playground-for-ch/kjhjcgclphafojaeeickcokfbhlegecd?hl=en",
+	"tags": ["chrome"]
+}

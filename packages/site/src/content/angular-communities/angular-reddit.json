@@ -1,0 +1,8 @@
+{
+	"name": "Angular @ Reddit",
+	"description": "Very active Angular community on Reddit.",
+	"image": "./assets/angular-reddit.png",
+	"type": "Reddit",
+	"href": "https://www.reddit.com/r/Angular2/",
+	"tags": []
+}

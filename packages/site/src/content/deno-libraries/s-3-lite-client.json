@@ -1,0 +1,11 @@
+{
+	"name": "s3_lite_client",
+	"description": "A lightweight S3 client for Deno",
+	"href": "https://deno.land/x/s3_lite_client",
+	"package": "",
+	"repo": "https://github.com/bradenmacdonald/deno-s3-lite-client",
+	"author": "Braden MacDonald",
+	"image": "./assets/s-3-lite-client.jpeg",
+	"tags": ["utilities", "data fetching", "API libraries"],
+	"language": "TypeScript"
+}

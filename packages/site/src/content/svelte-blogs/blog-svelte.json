@@ -1,0 +1,8 @@
+{
+	"title": "Svelte Blog",
+	"author": "Svelte.dev Contributors",
+	"description": "Official Svelte blog",
+	"image": "./assets/blog-svelte.png",
+	"href": "https://svelte.dev/blog",
+	"tags": []
+}

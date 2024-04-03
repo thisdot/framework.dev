@@ -1,0 +1,11 @@
+{
+	"name": "Vanilla Extract",
+	"author": "SEEK",
+	"repo": "https://www.github.com/seek-oss/vanilla-extract",
+	"package": "https://www.npmjs.com/package/@vanilla-extract/css",
+	"href": "https://vanilla-extract.style/",
+	"description": "Use TypeScript as your preprocessor. Write type‑safe, locally scoped classes, variables and themes, then generate static CSS files at build time.",
+	"image": "./assets/vanilla-extract.png",
+	"tags": ["styling", "tooling"],
+	"language": "TypeScript"
+}

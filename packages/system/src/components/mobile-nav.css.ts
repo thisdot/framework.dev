@@ -1,7 +1,7 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../sprinkles/sprinkles.css'
-import { vars } from '../themes/themes.css'
-import { pxToRem } from '../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../sprinkles/sprinkles.css';
+import { vars } from '../themes/themes.css';
+import { pxToRem } from '../util/style-utils';
 
 export const mobileNavStyle = style([
 	sprinkles({
@@ -20,7 +20,7 @@ export const mobileNavStyle = style([
 		width: '100%',
 		zIndex: 10,
 	},
-])
+]);
 
 export const menuButtonStyle = style([
 	sprinkles({
@@ -32,13 +32,13 @@ export const menuButtonStyle = style([
 		alignItems: 'center',
 		gap: 12,
 	}),
-])
+]);
 
 export const mobileNavDialogStyle = style({
 	maxHeight: 'calc(100vh - 56px)',
 	overflowY: 'auto',
-})
+});
 
 export const mobileNavSponorIconContainerStyle = style({
 	maxWidth: pxToRem(131),
-})
+});

@@ -1,0 +1,8 @@
+{
+	"name": "ConFoo",
+	"description": "ConFoo Montreal is a multi-technology conference for developers.",
+	"image": "./assets/confoo.png",
+	"type": "Live Events",
+	"href": "https://confoo.ca",
+	"tags": ["conferences"]
+}

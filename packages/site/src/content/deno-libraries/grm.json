@@ -1,0 +1,11 @@
+{
+	"name": "grm",
+	"description": "MTProto API Client for Deno 🦕",
+	"href": "https://deno.land/x/grm",
+	"package": "",
+	"repo": "https://github.com/grmjs/grm",
+	"author": "Grm",
+	"image": "./assets/grm.png",
+	"tags": ["utilities", "data fetching", "API libraries"],
+	"language": "TypeScript"
+}

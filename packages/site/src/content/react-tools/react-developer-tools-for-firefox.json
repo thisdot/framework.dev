@@ -1,0 +1,8 @@
+{
+	"name": "React Developer Tools for Firefox",
+	"author": "Facebook",
+	"description": "A tool that allows you to inspect a React tree, including the component hierarchy, props, state, and more.",
+	"image": "./assets/react-developer-tools-for-firefox.png",
+	"href": "https://addons.mozilla.org/en-US/firefox/addon/react-devtools/",
+	"tags": ["firefox"]
+}

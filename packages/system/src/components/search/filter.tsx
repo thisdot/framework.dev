@@ -1,22 +1,22 @@
-import classNames from 'classnames'
-import React from 'react'
+import classNames from 'classnames';
+import React from 'react';
 import {
 	filterCheckboxesStyle,
 	filterStyle,
 	filterTitleStyle,
-} from './filter.css'
-import { FieldFilter } from '../../models/all-categories'
-import { ChipSelector } from '../chip-selector'
-import { DiscreteAttribute } from '../discrete-attribute'
-import { ungroupFieldFilter } from './query-util'
-import without from 'lodash/without'
-import { formatFieldName } from '../../util/string-utils'
+} from './filter.css';
+import { type FieldFilter } from '../../models/all-categories';
+import { ChipSelector } from '../chip-selector';
+import { DiscreteAttribute } from '../discrete-attribute';
+import { ungroupFieldFilter } from './query-util';
+import without from 'lodash/without';
+import { formatFieldName } from '../../util/string-utils';
 
 export interface FilterProps<T extends FieldFilter = FieldFilter>
 	extends React.ComponentPropsWithoutRef<'fieldset'> {
-	options: T
-	value: T
-	onUpdate: (newValue: T) => void
+	options: T;
+	value: T;
+	onUpdate: (newValue: T) => void;
 }
 
 export function Filter<T extends FieldFilter>({
@@ -48,9 +48,9 @@ export function Filter<T extends FieldFilter>({
 								] as unknown as T)
 							}
 						/>
-					)
+					);
 				})}
 			</div>
 		</fieldset>
-	)
+	);
 }

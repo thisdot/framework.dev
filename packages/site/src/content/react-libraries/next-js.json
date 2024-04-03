@@ -1,0 +1,11 @@
+{
+	"name": "Next.js",
+	"author": "Vercel",
+	"repo": "https://www.github.com/vercel/next.js",
+	"package": "https://www.npmjs.com/package/next",
+	"href": "https://nextjs.org/",
+	"image": "./assets/next-js.svg",
+	"tags": ["frameworks", "web servers"],
+	"description": "Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.",
+	"language": "TypeScript"
+}

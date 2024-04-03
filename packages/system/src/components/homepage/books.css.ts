@@ -1,5 +1,5 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
 
 export const booksStyle = style([
 	sprinkles({
@@ -8,7 +8,7 @@ export const booksStyle = style([
 	{
 		// Put custom CSS here
 	},
-])
+]);
 
 export const emptyState = style([
 	sprinkles({}),
@@ -21,7 +21,7 @@ export const emptyState = style([
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
-])
+]);
 
 export const emptyStateContainer = style([
 	sprinkles({}),
@@ -31,14 +31,14 @@ export const emptyStateContainer = style([
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
-])
+]);
 
 export const emptyStateContentContainer = style([
 	sprinkles({}),
 	{
 		padding: 24,
 	},
-])
+]);
 
 export const emptyStateTitle = style([
 	sprinkles({}),
@@ -47,7 +47,7 @@ export const emptyStateTitle = style([
 		textAlign: 'center',
 		fontWeight: 500,
 	},
-])
+]);
 
 export const emptyStateDescription = style([
 	sprinkles({}),
@@ -55,7 +55,7 @@ export const emptyStateDescription = style([
 		fontSize: 14,
 		color: '#6B6C6F',
 	},
-])
+]);
 
 export const emptyStateBookContainer = style([
 	sprinkles({}),
@@ -68,7 +68,7 @@ export const emptyStateBookContainer = style([
 		display: 'grid',
 		gridTemplateColumns: '30px 1fr',
 	},
-])
+]);
 
 export const emptyStateBookBinding = style([
 	sprinkles({}),
@@ -79,7 +79,7 @@ export const emptyStateBookBinding = style([
 		borderTopLeftRadius: '4px',
 		borderBottomLeftRadius: '4px',
 	},
-])
+]);
 
 export const emptyStateBookCover = style([
 	sprinkles({}),
@@ -89,7 +89,7 @@ export const emptyStateBookCover = style([
 		flexDirection: 'column',
 		justifyContent: 'space-between',
 	},
-])
+]);
 
 export const emptyStateBookTitle = style([
 	sprinkles({}),
@@ -101,4 +101,4 @@ export const emptyStateBookTitle = style([
 		paddingRight: '12px',
 		marginTop: '24px',
 	},
-])
+]);

@@ -1,8 +1,8 @@
-import { style } from '@vanilla-extract/css'
-import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css'
-import { pxToRem } from '../../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css';
+import { pxToRem } from '../../util/style-utils';
 
-export const homepageStyle = style({ overflow: 'auto' })
+export const homepageStyle = style({ overflow: 'auto' });
 
 export const homepageContentContainerStyle = style([
 	sprinkles({
@@ -25,7 +25,7 @@ export const homepageContentContainerStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const homepageGutterStyle = style([
 	sprinkles({
@@ -38,7 +38,7 @@ export const homepageGutterStyle = style([
 	{
 		maxWidth: pxToRem(1200),
 	},
-])
+]);
 
 export const homepageTwoAndOneSectionStyle = style([
 	sprinkles({
@@ -53,4 +53,4 @@ export const homepageTwoAndOneSectionStyle = style([
 			},
 		},
 	},
-])
+]);

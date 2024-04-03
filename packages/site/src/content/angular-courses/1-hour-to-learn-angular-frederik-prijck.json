@@ -1,0 +1,16 @@
+{
+	"title": "1 Hour to Learn Angular",
+	"author": "Frederik Prijck",
+	"image": "./assets/1-hour-to-learn-angular-frederik-prijck.png",
+	"description": "During this hour we will walk through what the Angular CLI is and how it can help us. We'll explore a newly created Angular application as well as data binding (interpolation, attribute vs property bindings, class bindings) and components using input and outputs.",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://youtu.be/RxGieS-x3pk",
+	"tags": [
+		"state management",
+		"components",
+		"data fetching",
+		"JavaScript marathon"
+	]
+}

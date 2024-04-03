@@ -1,0 +1,11 @@
+{
+	"name": "NestJS",
+	"author": "Kamil Mysliwiec",
+	"repo": "https://www.github.com/nestjs/nest",
+	"package": "https://www.npmjs.com/package/@nestjs/cli",
+	"href": "https://nestjs.com/",
+	"description": "A progressive Node.js framework for building efficient, reliable and scalable server-side applications.",
+	"image": "./assets/nestjs.svg",
+	"tags": ["frameworks"],
+	"language": "NodeJS"
+}

@@ -1,0 +1,11 @@
+{
+	"title": "Fresh - A Deno Framework full course",
+	"author": "Bitfumes",
+	"description": "Fresh is a next generation web framework, built for speed, reliability, and simplicity.",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "video",
+	"image": "./assets/fresh-a-deno-framework-full-course-bitfumes.png",
+	"href": "https://www.youtube.com/watch?v=rvTkn1fffQ8",
+	"tags": ["deno", "backend", "fresh framework", "typescript", "data fetching"]
+}

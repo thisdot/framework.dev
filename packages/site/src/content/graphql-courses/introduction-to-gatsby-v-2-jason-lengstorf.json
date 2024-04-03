@@ -1,0 +1,11 @@
+{
+	"title": "Introduction to Gatsby v2 ",
+	"author": "Jason Lengstorf",
+	"image": "./assets/introduction-to-gatsby-v-2-jason-lengstorf.webp",
+	"description": "Learn to build blazing-fast apps and websites with React using Gatsby!",
+	"paymentType": "paid",
+	"level": "beginner",
+	"format": "interactive",
+	"href": "https://frontendmasters.com/courses/gatsby-v2/",
+	"tags": ["components", "data fetching", "graphQL", "routing"]
+}

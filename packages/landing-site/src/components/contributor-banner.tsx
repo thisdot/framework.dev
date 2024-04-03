@@ -1,11 +1,11 @@
-import { ContributorBanner as _ContributorBanner } from '@framework/system/src/components/homepage/contributor-banner'
-import { ContributorData } from '@framework/system/src/components/homepage/contributor'
-import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css'
+import { ContributorBanner as _ContributorBanner } from '@framework/system/src/components/homepage/contributor-banner';
+import { type ContributorData } from '@framework/system/src/components/homepage/contributor';
+import { sprinkles } from '@framework/system/src/sprinkles/sprinkles.css';
 
 export default function ContributorBanner({
 	contributors,
 }: {
-	contributors: ContributorData[]
+	contributors: ContributorData[];
 }) {
 	return (
 		<_ContributorBanner
@@ -14,5 +14,5 @@ export default function ContributorBanner({
 				marginTop: { mobile: 56, desktop: 152 },
 			})}
 		/>
-	)
+	);
 }

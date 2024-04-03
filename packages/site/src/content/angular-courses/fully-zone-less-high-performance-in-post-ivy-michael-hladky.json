@@ -1,0 +1,11 @@
+{
+	"title": "Fully zone-less - High Performance in post IVY",
+	"author": "Michael Hladky",
+	"image": "./assets/fully-zone-less-high-performance-in-post-ivy-michael-hladky.png",
+	"description": "We will learn why async pipe is boring! Learn what you can do with Ivy, covering topics such as: Rendering, Scheduling, Coalescing and a Rendering Demo",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://youtu.be/x0W_mbivKLk",
+	"tags": ["ivy", "JavaScript marathon"]
+}

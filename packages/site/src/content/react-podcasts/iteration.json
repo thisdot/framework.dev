@@ -1,0 +1,9 @@
+{
+	"title": "iteration",
+	"image": "./assets/iteration.jpeg",
+	"hosts": ["John", "JP"],
+	"description": "A podcast about development and design. We do our best to be code-agnostic but we talk a lot about Rails, JavaScript, React, React Native, design, business and startups.",
+	"rss": "https://feeds.simplecast.com/YmvH1ayC",
+	"href": "https://iteration.simplecast.com",
+	"tags": ["general"]
+}

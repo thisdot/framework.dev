@@ -1,0 +1,17 @@
+{
+	"title": "Let's Learn SolidJS",
+	"author": "Ryan Carniato",
+	"image": "./assets/lets-learn-solidjs-ryan-carniato.jpeg",
+	"description": "In this episode, Ryan Carniato will teach us how to get started with our first SolidJS app!",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.youtube.com/watch?v=ZZ-a7B761Ds",
+	"tags": [
+		"effects",
+		"control flow",
+		"state management",
+		"routing",
+		"data fetching"
+	]
+}

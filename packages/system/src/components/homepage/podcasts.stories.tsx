@@ -1,15 +1,19 @@
-import { Story, Meta } from '@storybook/react'
-import { examplePodcasts } from '../../util/example-content'
-import { Podcasts as PodcastsComponent, PodcastsProps } from './podcasts'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { examplePodcasts } from '../../util/example-content';
+import { Podcasts as PodcastsComponent } from './podcasts';
 
-export default {
+const meta: Meta<typeof PodcastsComponent> = {
 	title: 'Home/Podcasts',
 	component: PodcastsComponent,
 	args: {
 		podcasts: examplePodcasts,
 	},
-} as Meta
+};
+export default meta;
 
-const Template: Story<PodcastsProps> = (args) => <PodcastsComponent {...args} />
+type Story = StoryObj<typeof PodcastsComponent>;
 
-export const Podcasts = Template.bind({})
+export const Podcasts: Story = {
+	render: (args) => <PodcastsComponent {...args} />,
+};

@@ -1,0 +1,11 @@
+{
+	"name": "GraphQL Shield",
+	"author": "Dmitry Til",
+	"repo": "https://www.github.com/dimatill/graphql-shield",
+	"package": "https://www.npmjs.com/package/graphql-shield",
+	"href": "https://www.the-guild.dev/graphql/shield",
+	"description": "Implement your server permissions in a clear and deterministic way and let it guard access to your schema.",
+	"image": "./assets/graphql-shield.jpeg",
+	"language": "TypeScript",
+	"tags": ["auth"]
+}

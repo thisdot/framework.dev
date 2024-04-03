@@ -1,0 +1,11 @@
+{
+	"name": "Vuikit",
+	"author": "Miljan Aleksic",
+	"repo": "https://www.github.com/vuikit/vuikit",
+	"package": "https://www.npmjs.com/package/vuikit",
+	"href": "https://vuikit.js.org/",
+	"description": "A responsive Vue 2 UI library for web site interfaces based on the UIkit 3 framework.",
+	"image": "./assets/vuikit.svg",
+	"tags": ["component"],
+	"language": "JavaScript"
+}

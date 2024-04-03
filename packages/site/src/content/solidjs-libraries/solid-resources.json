@@ -1,0 +1,11 @@
+{
+	"name": "Solid Resources",
+	"author": "SolidJS",
+	"repo": "https://github.com/solidjs/solid",
+	"package": "",
+	"href": "https://www.solidjs.com/tutorial/async_resources",
+	"description": "Resources are special Signals designed specifically to handle Async loading.",
+	"image": "./assets/solid-resources.png",
+	"tags": ["data fetching"],
+	"language": "TypeScript"
+}

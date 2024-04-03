@@ -1,60 +1,60 @@
-import camelCase from 'lodash/camelCase'
-import kebabCase from 'lodash/kebabCase'
-import startCase from 'lodash/startCase'
+import camelCase from 'lodash/camelCase';
+import kebabCase from 'lodash/kebabCase';
+import startCase from 'lodash/startCase';
 
-import { titleCase } from 'title-case'
+import { titleCase } from 'title-case';
 
 export function deserializeFieldValue<T extends string>(
 	inputValue: string,
-	canonicalForms: readonly T[]
+	canonicalForms: readonly T[],
 ): T | undefined {
-	return canonicalForms.find((form) => kebabCase(form) === inputValue)
+	return canonicalForms.find((form) => kebabCase(form) === inputValue);
 }
 
 export function deserializeFieldValues(
 	inputValues: string[],
-	canonicalForms: readonly string[]
+	canonicalForms: readonly string[],
 ): string[] {
-	const canonicalizedValues = []
+	const canonicalizedValues = [];
 	for (const inputValue of inputValues) {
 		const canonicalForm = canonicalForms.find(
-			(form) => kebabCase(form) === inputValue
-		)
-		if (canonicalForm) canonicalizedValues.push(canonicalForm)
+			(form) => kebabCase(form) === inputValue,
+		);
+		if (canonicalForm) canonicalizedValues.push(canonicalForm);
 	}
-	return canonicalizedValues
+	return canonicalizedValues;
 }
 
 export function serializeFieldValue(inputValue: string) {
-	return kebabCase(inputValue)
+	return kebabCase(inputValue);
 }
 
 export function formatFieldValue(inputValue: string) {
-	const titleCased = titleCase(inputValue)
+	const titleCased = titleCase(inputValue);
 	// Capitalize first letter to work around edge cases with the titleCase
 	// algorithm not working correctly on single-word mixed-case values
-	return titleCased.charAt(0).toUpperCase() + titleCased.slice(1)
+	return titleCased.charAt(0).toUpperCase() + titleCased.slice(1);
 }
 
 export function formatAllFrameworkTitles(inputValue: string) {
 	switch (inputValue) {
 		case 'graphql':
-			return 'GraphQL'
+			return 'GraphQL';
 		case 'solidjs':
-			return 'SolidJS'
+			return 'SolidJS';
 		default:
-			return formatFieldValue(inputValue)
+			return formatFieldValue(inputValue);
 	}
 }
 
 export function deserializeFieldName(inputValue: string) {
-	return camelCase(inputValue)
+	return camelCase(inputValue);
 }
 
 export function serializeFieldName(inputValue: string) {
-	return kebabCase(inputValue)
+	return kebabCase(inputValue);
 }
 
 export function formatFieldName(inputValue: string) {
-	return startCase(inputValue)
+	return startCase(inputValue);
 }

@@ -1,0 +1,11 @@
+{
+	"name": "LinguiJS",
+	"author": "Tomáš Ehrlich",
+	"repo": "https://www.github.com/lingui/js-lingui",
+	"package": "https://www.npmjs.com/package/@lingui/react",
+	"href": "https://lingui.js.org/",
+	"image": "./assets/linguijs.png",
+	"tags": ["internationalization"],
+	"description": "A readable, automated, and optimized (5 kb) internationalization for JavaScript",
+	"language": "TypeScript"
+}

@@ -1,0 +1,11 @@
+{
+	"name": "GraphQL Zeus",
+	"author": "GraphQL Editor",
+	"repo": "https://www.github.com/graphql-editor/graphql-zeus",
+	"package": "https://www.npmjs.com/package/graphql-zeus",
+	"href": "https://zeus.graphqleditor.com/",
+	"description": "Strongly Typed GraphQL from the team at GraphQL Editor",
+	"image": "./assets/graphql-zeus.png",
+	"language": "TypeScript",
+	"tags": ["data fetching"]
+}

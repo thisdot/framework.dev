@@ -1,0 +1,11 @@
+{
+	"title": "Node.js Essential Training",
+	"author": "Eve Porcello",
+	"image": "./assets/node-js-essential-training-eve-porcello.jpeg",
+	"description": "Node.js is a powerful tool for controlling servers, building web applications, and creating event-driven programs. And it takes JavaScript—a language familiar to all web developers—out of the browser. With Node.js, you can build applications that run on your laptop or even the cloud. In this course, learn the essentials of Node.js and start creating your own JavaScript applications. ",
+	"paymentType": "paid",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://www.linkedin.com/learning/node-js-essential-training-14888164?replacementOf=node-js-essential-training-2019",
+	"tags": ["backend"]
+}

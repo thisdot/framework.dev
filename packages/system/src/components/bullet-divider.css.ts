@@ -1,5 +1,5 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../sprinkles/sprinkles.css'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../sprinkles/sprinkles.css';
 
 export const bullet = style([
 	sprinkles({
@@ -8,4 +8,4 @@ export const bullet = style([
 	{
 		color: 'outline',
 	},
-])
+]);

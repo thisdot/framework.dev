@@ -1,5 +1,6 @@
-import { Blog } from '../../models/blog'
-import { ResourceCardProps, ResourceCard } from './resource-card'
+import React from 'react';
+import { type Blog } from '../../models/blog';
+import { type ResourceCardProps, ResourceCard } from './resource-card';
 
 export type BlogCardProps = Omit<
 	ResourceCardProps,
@@ -13,8 +14,8 @@ export type BlogCardProps = Omit<
 	| 'attributes'
 	| 'children'
 > & {
-	blog: Blog<string>
-}
+	blog: Blog<string>;
+};
 
 export function BlogCard({ blog, ...props }: BlogCardProps) {
 	return (
@@ -28,5 +29,5 @@ export function BlogCard({ blog, ...props }: BlogCardProps) {
 		>
 			{blog.description}
 		</ResourceCard>
-	)
+	);
 }

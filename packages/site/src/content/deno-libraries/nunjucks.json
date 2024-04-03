@@ -1,0 +1,11 @@
+{
+	"name": "nunjucks",
+	"description": "A powerful templating engine with inheritance, asynchronous control, and more (Jinja 2 inspired)",
+	"href": "https://deno.land/x/nunjucks",
+	"package": "",
+	"repo": "https://github.com/valtlai/nunjucks-deno",
+	"author": "Valtteri Laitinen",
+	"image": "./assets/nunjucks.jpeg",
+	"tags": ["utilities", "templating"],
+	"language": "TypeScript"
+}

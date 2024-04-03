@@ -1,0 +1,11 @@
+{
+	"name": "NG-ZORRO",
+	"author": "NG-ZORRO",
+	"repo": "https://www.github.com/NG-ZORRO/ng-zorro-antd",
+	"package": "https://www.npmjs.com/package/ng-zorro-antd",
+	"href": "https://ng-zorro.gitee.io/docs/introduce/en",
+	"description": "An enterprise-class Angular UI component library based on Ant Design, all components are open source and free to use under MIT license.",
+	"image": "./assets/ng-zorro.png",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

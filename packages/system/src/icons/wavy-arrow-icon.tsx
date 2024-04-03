@@ -1,7 +1,7 @@
-import classNames from 'classnames'
-import React from 'react'
-import { iconStyle } from './icon.css'
-import { IconProps } from './shared-icon-types'
+import classNames from 'classnames';
+import React from 'react';
+import { iconStyle } from './icon.css';
+import { type IconProps } from './shared-icon-types';
 
 export const WavyArrowIcon = React.forwardRef<SVGSVGElement, IconProps>(
 	function WavyArrowIcon({ className, size, ...props }, ref) {
@@ -21,6 +21,6 @@ export const WavyArrowIcon = React.forwardRef<SVGSVGElement, IconProps>(
 					fill="black"
 				/>
 			</svg>
-		)
-	}
-)
+		);
+	},
+);

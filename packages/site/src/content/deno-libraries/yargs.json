@@ -1,0 +1,11 @@
+{
+	"name": "yargs",
+	"description": "yargs the modern, pirate-themed successor to optimist.",
+	"href": "https://deno.land/x/yargs",
+	"package": "",
+	"repo": "https://github.com/yargs/yargs",
+	"author": "yargs",
+	"image": "./assets/yargs.png",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

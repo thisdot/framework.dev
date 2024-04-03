@@ -1,0 +1,11 @@
+{
+	"title": "Let's Learn Solid JS",
+	"author": "Ryan Carniato",
+	"image": "./assets/lets-learn-solid-js-ryan-carniato.jpeg",
+	"description": "Ryan will demo Solid for us, and we’ll discuss how and why React developers might want to check out Solid.",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://www.youtube.com/watch?v=cFasysKU7vk",
+	"tags": ["state management", "reactivity"]
+}

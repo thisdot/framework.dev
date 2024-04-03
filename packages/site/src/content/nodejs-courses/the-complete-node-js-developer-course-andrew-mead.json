@@ -1,0 +1,11 @@
+{
+	"title": "The Complete Node.js Developer Course",
+	"author": "Andrew Mead",
+	"image": "./assets/the-complete-node-js-developer-course-andrew-mead.jpeg",
+	"description": "Learn Node.js by building real-world applications with Node JS, Express, MongoDB, Jest, and more!",
+	"paymentType": "paid",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://www.udemy.com/course/the-complete-nodejs-developer-course-2/",
+	"tags": ["backend"]
+}

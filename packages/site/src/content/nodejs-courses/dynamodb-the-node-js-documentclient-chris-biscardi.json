@@ -1,0 +1,11 @@
+{
+	"title": "DynamoDB: The Node.js DocumentClient",
+	"author": "Chris Biscardi",
+	"image": "./assets/dynamodb-the-node-js-documentclient-chris-biscardi.png",
+	"description": "This course covers all of the ways to use the Node.js DocumentClient to interact with one or more DynamoDB tables.",
+	"paymentType": "paid",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://egghead.io/courses/dynamodb-the-node-js-documentclient-1396",
+	"tags": ["backend"]
+}

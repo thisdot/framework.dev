@@ -1,6 +1,6 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../sprinkles/sprinkles.css'
-import { vars } from '../themes/themes.css'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../sprinkles/sprinkles.css';
+import { vars } from '../themes/themes.css';
 
 export const tagContainerStyle = style([
 	sprinkles({
@@ -21,7 +21,7 @@ export const tagContainerStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const tagTextStyle = style([
 	sprinkles({
@@ -36,4 +36,4 @@ export const tagTextStyle = style([
 			transition: 'none',
 		},
 	},
-])
+]);

@@ -1,0 +1,11 @@
+{
+	"name": "cliffy",
+	"description": "Command line framework for deno 🦕 Including Commandline-Interfaces, Prompts, CLI-Table, Arguments Parser and more...",
+	"href": "https://deno.land/x/cliffy",
+	"package": "",
+	"repo": "https://github.com/c4spar/deno-cliffy",
+	"author": "Benjamin Fischer",
+	"image": "./assets/cliffy.jpeg",
+	"tags": ["frameworks", "CLI"],
+	"language": "TypeScript"
+}

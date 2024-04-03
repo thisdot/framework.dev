@@ -1,0 +1,11 @@
+{
+	"name": "RxJS",
+	"author": "ReactiveX",
+	"repo": "https://www.github.com/reactivex/rxjs",
+	"package": "https://www.npmjs.com/package/rxjs",
+	"href": "https://rxjs.dev/guide/overview",
+	"description": "RxJS is a library for reactive programming using Observables, to make it easier to compose asynchronous or callback-based code.",
+	"image": "./assets/rxjs.png",
+	"tags": ["state management"],
+	"language": "TypeScript"
+}

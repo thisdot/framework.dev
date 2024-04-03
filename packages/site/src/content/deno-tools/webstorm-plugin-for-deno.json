@@ -1,0 +1,8 @@
+{
+	"name": "WebStorm Plugin for Deno",
+	"description": "This plugin adds support for using Deno with JetBrains WebStorm.",
+	"author": "JetBrains",
+	"href": "https://plugins.jetbrains.com/plugin/14382-deno",
+	"image": "./assets/webstorm-plugin-for-deno.svg",
+	"tags": ["webstorm"]
+}

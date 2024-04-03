@@ -1,0 +1,11 @@
+{
+	"name": "esbuild",
+	"description": "No description",
+	"href": "https://deno.land/x/esbuild",
+	"package": "",
+	"repo": "https://github.com/esbuild/deno-esbuild",
+	"author": "esbuild",
+	"image": "./assets/esbuild.png",
+	"tags": ["utilities", "tooling"],
+	"language": "TypeScript"
+}

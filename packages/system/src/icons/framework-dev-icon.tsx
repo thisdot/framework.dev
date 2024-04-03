@@ -1,12 +1,12 @@
-import classNames from 'classnames'
-import React from 'react'
-import { iconStyle } from './icon.css'
-import { IconProps } from './shared-icon-types'
+import classNames from 'classnames';
+import React from 'react';
+import { iconStyle } from './icon.css';
+import { type IconProps } from './shared-icon-types';
 
 export const FrameworkDevIcon = React.forwardRef<SVGSVGElement, IconProps>(
 	function FrameworkDevIcon(
 		{ className, size, color = '#191C1D', ...props },
-		ref
+		ref,
 	) {
 		return (
 			<svg
@@ -56,6 +56,6 @@ export const FrameworkDevIcon = React.forwardRef<SVGSVGElement, IconProps>(
 					</linearGradient>
 				</defs>
 			</svg>
-		)
-	}
-)
+		);
+	},
+);

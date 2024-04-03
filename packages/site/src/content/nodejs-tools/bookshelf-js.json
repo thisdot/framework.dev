@@ -1,0 +1,8 @@
+{
+	"name": "Bookshelf.js",
+	"author": "Tim Griesser",
+	"description": "A simple Node.js ORM for PostgreSQL, MySQL and SQLite3 built on top of Knex.js",
+	"image": "./assets/bookshelf-js.svg",
+	"href": "https://bookshelfjs.org",
+	"tags": ["database"]
+}

@@ -1,14 +1,14 @@
-import { globalStyle, style } from '@vanilla-extract/css'
-import { recipe } from '@vanilla-extract/recipes'
-import { sprinkles } from '../sprinkles/sprinkles.css'
-import { vars } from '../themes/themes.css'
-import { pxToRem } from '../util/style-utils'
+import { globalStyle, style } from '@vanilla-extract/css';
+import { recipe } from '@vanilla-extract/recipes';
+import { sprinkles } from '../sprinkles/sprinkles.css';
+import { vars } from '../themes/themes.css';
+import { pxToRem } from '../util/style-utils';
 
 globalStyle(':root', {
 	vars: {
 		'--reach-dialog': '1',
 	},
-})
+});
 
 export const infoPopupOverlayStyle = style({
 	position: 'fixed',
@@ -17,7 +17,7 @@ export const infoPopupOverlayStyle = style({
 	right: 0,
 	left: 0,
 	overflow: 'auto',
-})
+});
 
 export const infoPopupContentStyle = style([
 	sprinkles({
@@ -33,7 +33,7 @@ export const infoPopupContentStyle = style([
 		maxWidth: pxToRem(260),
 		position: 'absolute',
 	},
-])
+]);
 
 export const infoPopupArrowStyle = recipe({
 	base: { position: 'absolute', width: 0, height: 0 },
@@ -53,4 +53,4 @@ export const infoPopupArrowStyle = recipe({
 			},
 		},
 	},
-})
+});

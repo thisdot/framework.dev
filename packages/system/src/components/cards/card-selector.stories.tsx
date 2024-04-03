@@ -1,10 +1,8 @@
-import { Story, Meta } from '@storybook/react'
-import {
-	CardSelector as CardSelectorComponent,
-	CardSelectorProps,
-} from './card-selector'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { CardSelector as CardSelectorComponent } from './card-selector';
 
-export default {
+const meta: Meta<typeof CardSelectorComponent> = {
 	title: 'Cards/Card Selector',
 	component: CardSelectorComponent,
 	args: {
@@ -15,19 +13,22 @@ export default {
 			action: 'onChange',
 		},
 	},
-} as Meta
+};
+export default meta;
 
-const Template: Story<CardSelectorProps> = (args) => (
-	<div
-		style={{
-			display: 'grid',
-			width: '90vw',
-			height: '90vh',
-			placeItems: 'center',
-		}}
-	>
-		<CardSelectorComponent {...args} />
-	</div>
-)
+type Story = StoryObj<typeof CardSelectorComponent>;
 
-export const CardSelector = Template.bind({})
+export const CardSelector: Story = {
+	render: (args) => (
+		<div
+			style={{
+				display: 'grid',
+				width: '90vw',
+				height: '90vh',
+				placeItems: 'center',
+			}}
+		>
+			<CardSelectorComponent {...args} />
+		</div>
+	),
+};

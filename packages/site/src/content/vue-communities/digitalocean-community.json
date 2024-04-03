@@ -1,0 +1,8 @@
+{
+	"name": "DigitalOcean Community",
+	"description": "DigitalOcean Community is a blog related to general Web development, with categories spanning across CSS, general JavaScript, and frameworks like Vue",
+	"image": "./assets/digitalocean-community.png",
+	"type": "Forum",
+	"href": "https://www.digitalocean.com/community/tags/vue-js",
+	"tags": []
+}

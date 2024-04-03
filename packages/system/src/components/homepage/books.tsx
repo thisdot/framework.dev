@@ -1,7 +1,7 @@
-import classNames from 'classnames'
-import React from 'react'
-import sampleSize from 'lodash/sampleSize'
-import { Book } from '../../models/book'
+import classNames from 'classnames';
+import React from 'react';
+import sampleSize from 'lodash/sampleSize';
+import { type Book } from '../../models/book';
 import {
 	booksStyle,
 	emptyState,
@@ -13,15 +13,15 @@ import {
 	emptyStateBookBinding,
 	emptyStateBookCover,
 	emptyStateBookTitle,
-} from './books.css'
-import { FeatureAndList } from './feature-and-list'
+} from './books.css';
+import { FeatureAndList } from './feature-and-list';
 
 export interface BooksProps extends React.ComponentPropsWithoutRef<'div'> {
-	books: Book<string>[]
+	books: Book<string>[];
 }
 
 export function Books({ className, books, ...props }: BooksProps) {
-	const randomBooks = sampleSize(books, 6)
+	const randomBooks = sampleSize(books, 6);
 	return (
 		<FeatureAndList
 			className={classNames(className, booksStyle)}
@@ -35,13 +35,13 @@ export function Books({ className, books, ...props }: BooksProps) {
 					href: book.href,
 					description: book.description,
 					attributes: [['level', book.level]],
-				}
+				};
 			})}
 			hideFeature
 			emptyStateElement={<EmptyState />}
 			{...props}
 		/>
-	)
+	);
 }
 
 function EmptyState() {
@@ -62,5 +62,5 @@ function EmptyState() {
 				</div>
 			</div>
 		</div>
-	)
+	);
 }

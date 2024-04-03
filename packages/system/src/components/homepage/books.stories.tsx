@@ -1,20 +1,24 @@
-import { Story, Meta } from '@storybook/react'
-import { Books as BooksComponent, BooksProps } from './books'
-import { exampleBooks } from '../../util/example-content'
-import { pxToRem } from '../../util/style-utils'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Books as BooksComponent } from './books';
+import { exampleBooks } from '../../util/example-content';
+import { pxToRem } from '../../util/style-utils';
 
-export default {
+const meta: Meta<typeof BooksComponent> = {
 	title: 'Home/Books',
 	component: BooksComponent,
 	args: {
 		books: exampleBooks,
 	},
-} as Meta
+};
+export default meta;
 
-const Template: Story<BooksProps> = (args) => (
-	<div style={{ maxWidth: pxToRem(800) }}>
-		<BooksComponent {...args} />
-	</div>
-)
+type Story = StoryObj<typeof BooksComponent>;
 
-export const Books = Template.bind({})
+export const Books: Story = {
+	render: (args) => (
+		<div style={{ maxWidth: pxToRem(800) }}>
+			<BooksComponent {...args} />
+		</div>
+	),
+};

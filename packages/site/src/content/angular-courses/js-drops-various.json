@@ -1,0 +1,11 @@
+{
+	"title": "JS Drops",
+	"author": "Various",
+	"image": "./assets/js-drops-various.png",
+	"description": "JS Drops is a weekly series of online courses on Angular, React, TypeScript, GraphQL, and other topics in the JS ecosystem. Learn about leading web development technologies and concepts!",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://dropjs.com/",
+	"tags": ["JavaScript marathon"]
+}

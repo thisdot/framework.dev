@@ -1,7 +1,7 @@
-import classNames from 'classnames'
-import React from 'react'
-import { iconStyle } from './icon.css'
-import { FrameworkIconProps } from './shared-icon-types'
+import classNames from 'classnames';
+import React from 'react';
+import { iconStyle } from './icon.css';
+import { type FrameworkIconProps } from './shared-icon-types';
 
 export const SolidJSFrameworkIcon = React.forwardRef<
 	SVGSVGElement,
@@ -309,5 +309,5 @@ export const SolidJSFrameworkIcon = React.forwardRef<
 				</linearGradient>
 			</defs>
 		</svg>
-	)
-})
+	);
+});

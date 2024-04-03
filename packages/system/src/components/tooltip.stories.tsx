@@ -1,8 +1,9 @@
-import { Story, Meta } from '@storybook/react'
-import { InteractiveIcon } from '../icons/interactive-icon'
-import { Tooltip as TooltipComponent, TooltipProps } from './tooltip'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { InteractiveIcon } from '../icons/interactive-icon';
+import { Tooltip as TooltipComponent } from './tooltip';
 
-export default {
+const meta: Meta<typeof TooltipComponent> = {
 	title: 'Tooltip',
 	component: TooltipComponent,
 	args: {
@@ -15,21 +16,24 @@ export default {
 			control: 'inline-radio',
 		},
 	},
-} as Meta
+};
+export default meta;
 
-const Template: Story<TooltipProps> = (args) => (
-	<div
-		style={{
-			display: 'grid',
-			width: '90vw',
-			height: '90vh',
-			placeItems: 'center',
-		}}
-	>
-		<TooltipComponent {...args}>
-			<InteractiveIcon />
-		</TooltipComponent>
-	</div>
-)
+type Story = StoryObj<typeof TooltipComponent>;
 
-export const Tooltip = Template.bind({})
+export const Tooltip: Story = {
+	render: (args) => (
+		<div
+			style={{
+				display: 'grid',
+				width: '90vw',
+				height: '90vh',
+				placeItems: 'center',
+			}}
+		>
+			<TooltipComponent {...args}>
+				<InteractiveIcon />
+			</TooltipComponent>
+		</div>
+	),
+};

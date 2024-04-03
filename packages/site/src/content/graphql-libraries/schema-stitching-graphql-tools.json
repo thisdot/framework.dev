@@ -1,0 +1,11 @@
+{
+	"name": "Schema Stitching - GraphQL Tools",
+	"author": "Arda TANRIKULU",
+	"repo": "https://www.github.com/ardatan/graphql-tools",
+	"package": "https://www.npmjs.com/package/@graphql-tools/schema",
+	"href": "https://www.the-guild.dev/graphql/tools",
+	"description": "GraphQL Tools is a set of NPM packages and an opinionated structure for how to build a GraphQL schema and resolvers in JavaScript, following the GraphQL-first development workflow.",
+	"image": "./assets/schema-stitching-graphql-tools.jpeg",
+	"language": "NodeJS",
+	"tags": ["data processing"]
+}

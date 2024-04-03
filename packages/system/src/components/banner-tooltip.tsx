@@ -1,8 +1,8 @@
-import classNames from 'classnames'
-import React from 'react'
-import { CloseIcon } from '../icons/close-icon'
-import { LibraryCardIcon } from '../icons/library-card-icon'
-import { WavyArrowIcon } from '../icons/wavy-arrow-icon'
+import classNames from 'classnames';
+import React from 'react';
+import { CloseIcon } from '../icons/close-icon';
+import { LibraryCardIcon } from '../icons/library-card-icon';
+import { WavyArrowIcon } from '../icons/wavy-arrow-icon';
 import {
 	bannerTooltipStyle,
 	bannerTooltipHeadingStyle,
@@ -12,16 +12,16 @@ import {
 	bannerTooltipExplanatoryText,
 	bannerTooltipCloseIcon,
 	bannerTooltipWavyArrowIcon,
-} from './banner-tooltip.css'
+} from './banner-tooltip.css';
 
 export interface BannerTooltipProps
 	extends React.ComponentPropsWithoutRef<'div'> {
 	pitchText: {
-		highlightedText: string
-		softText: string
-	}
-	explanatoryText: string
-	onClick: () => void
+		highlightedText: string;
+		softText: string;
+	};
+	explanatoryText: string;
+	onClick: () => void;
 }
 
 export function BannerTooltip({
@@ -53,5 +53,5 @@ export function BannerTooltip({
 				<CloseIcon size="large" />
 			</button>
 		</div>
-	)
+	);
 }

@@ -1,0 +1,9 @@
+{
+	"title": "CodeNewbie",
+	"image": "./assets/codenewbie.webp",
+	"hosts": ["Saron Yitbarek", "Vaidehi Joshi"],
+	"description": "The most supportive community of programmers and people learning to code.",
+	"rss": "http://feeds.codenewbie.org/cnpodcast.xml",
+	"href": "https://www.codenewbie.org/podcast",
+	"tags": ["general, node, full stack"]
+}

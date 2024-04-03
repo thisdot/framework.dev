@@ -1,0 +1,9 @@
+{
+	"title": "devMode.fm",
+	"image": "./assets/devmode-fm.webp",
+	"hosts": ["Andrew Welch", "Ryan Irelan"],
+	"description": "devMode.fm is a bi-weekly podcast dedicated to the tools, techniques, and technologies used in modern web development.",
+	"rss": "https://devmode.fm/rss",
+	"href": "https://devmode.fm/",
+	"tags": ["general, node, full stack"]
+}

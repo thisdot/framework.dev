@@ -1,0 +1,9 @@
+{
+	"title": "Software Engineering Daily",
+	"image": "./assets/software-engineering-daily.webp",
+	"hosts": ["SE Daily"],
+	"description": "The world through the lens of software.",
+	"rss": "https://softwareengineeringdaily.com/feed/podcast/",
+	"href": "https://softwareengineeringdaily.com/",
+	"tags": ["general"]
+}

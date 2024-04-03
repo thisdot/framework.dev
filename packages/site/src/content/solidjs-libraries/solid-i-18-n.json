@@ -1,0 +1,11 @@
+{
+	"name": "solid-i18n",
+	"author": "SanichKotikov",
+	"repo": "https://www.github.com/SanichKotikov/solid-i18n",
+	"package": "https://www.npmjs.com/package/solid-i18n",
+	"href": "https://github.com/SanichKotikov/solid-i18n",
+	"description": "Tiny internationalization library for SolidJS.",
+	"image": "./assets/solid-i-18-n.png",
+	"tags": ["internationalization"],
+	"language": "TypeScript"
+}

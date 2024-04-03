@@ -1,7 +1,7 @@
-import classNames from 'classnames'
-import React from 'react'
-import { iconStyle } from './icon.css'
-import { IconProps } from './shared-icon-types'
+import classNames from 'classnames';
+import React from 'react';
+import { iconStyle } from './icon.css';
+import { type IconProps } from './shared-icon-types';
 
 export const ReactIcon = React.forwardRef<SVGSVGElement, IconProps>(
 	function ReactIcon({ className, size, ...props }, ref) {
@@ -33,6 +33,6 @@ export const ReactIcon = React.forwardRef<SVGSVGElement, IconProps>(
 					fill="#14D9FA"
 				/>
 			</svg>
-		)
-	}
-)
+		);
+	},
+);

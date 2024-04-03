@@ -1,0 +1,8 @@
+{
+	"name": "Remix Conf",
+	"description": "Conference dedicated to all things Remix.",
+	"image": "./assets/remix-conf.jpeg",
+	"type": "Live Events",
+	"href": "https://remix.run/conf",
+	"tags": ["conferences"]
+}

@@ -1,0 +1,11 @@
+{
+	"name": "Solid Start",
+	"author": "SolidJS",
+	"repo": "https://www.github.com/solidjs/solid-start",
+	"package": "",
+	"href": "https://start.solidjs.com/getting-started/what-is-solidstart",
+	"description": "a framework that provides many of these components out-of-the-box and integrates them seamlessly!",
+	"image": "./assets/solid-start.png",
+	"tags": ["frameworks"],
+	"language": "TypeScript"
+}

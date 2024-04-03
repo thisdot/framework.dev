@@ -1,0 +1,11 @@
+{
+	"title": "Client-Side GraphQL ",
+	"author": "Scott Moss",
+	"image": "./assets/client-side-graphql-scott-moss.octet-stream",
+	"description": "Learn to use GraphQL on the client-side using React with Apollo Client.",
+	"paymentType": "paid",
+	"level": "intermediate",
+	"format": "interactive",
+	"href": "https://frontendmasters.com/courses/client-graphql-react/",
+	"tags": ["components", "data fetching", "graphQL", "state management"]
+}

@@ -1,0 +1,8 @@
+{
+	"name": "Svelte",
+	"description": "A chat community of 45,000+ Svelte Developers.",
+	"image": "./assets/svelte.webp",
+	"type": "Discord",
+	"href": "https://discord.com/invite/svelte",
+	"tags": []
+}

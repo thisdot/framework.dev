@@ -1,0 +1,11 @@
+{
+	"title": "Advanced Node.js 12",
+	"author": "Samer Buna",
+	"image": "./assets/advanced-node-js-12-samer-buna.png",
+	"description": "This course will teach you the core Node.js concepts and API modules from simple utility modules all the way to streams and clusters.",
+	"paymentType": "paid",
+	"level": "advanced",
+	"format": "video",
+	"href": "https://www.pluralsight.com/courses/nodejs-advanced",
+	"tags": ["backend"]
+}

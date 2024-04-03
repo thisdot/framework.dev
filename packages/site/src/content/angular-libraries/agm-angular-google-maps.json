@@ -1,0 +1,11 @@
+{
+	"name": "AGM - Angular Google Maps",
+	"author": "Sebastian Holstein",
+	"repo": "https://www.github.com/SebastianM/angular-google-maps",
+	"package": "https://www.npmjs.com/package/@agm/core",
+	"href": "https://angular-maps.com/guides/getting-started/",
+	"description": "Angular components for Google Maps.",
+	"image": "./assets/agm-angular-google-maps.png",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

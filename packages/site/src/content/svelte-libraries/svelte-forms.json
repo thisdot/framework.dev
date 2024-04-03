@@ -1,0 +1,11 @@
+{
+	"name": "Svelte Forms",
+	"author": "chainlist",
+	"repo": "https://www.github.com/chainlist/svelte-forms",
+	"package": "https://www.npmjs.com/package/svelte-forms",
+	"href": "https://chainlist.github.io/svelte-forms/",
+	"description": "A form validation library for Svelte.",
+	"image": "./assets/svelte-forms.png",
+	"tags": ["forms"],
+	"language": "TypeScript"
+}

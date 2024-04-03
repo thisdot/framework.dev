@@ -1,0 +1,11 @@
+{
+	"name": "Analog",
+	"author": "Brandon Roberts",
+	"repo": "https://github.com/analogjs/analog",
+	"package": "https://www.npmjs.com/package/@analogjs/platform",
+	"href": "https://analogjs.org/",
+	"image": "./assets/analog.svg",
+	"description": "Analog is a meta-framework for building applications and websites with Angular.",
+	"tags": ["frameworks"],
+	"language": "TypeScript"
+}

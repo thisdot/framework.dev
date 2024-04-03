@@ -1,4 +1,4 @@
-import color from 'color'
+import color from 'color';
 
 export const blankPalette = {
 	logo: '#ffffff',
@@ -81,49 +81,49 @@ export const blankPalette = {
 	error20: '#ffffff',
 	error10: '#ffffff',
 	error0: '#ffffff',
-}
+};
 
-export type ColorPalette = typeof blankPalette
+export type ColorPalette = typeof blankPalette;
 
 export type ColorTheme = {
-	palette: ColorPalette
+	palette: ColorPalette;
 	themeColors: {
-		highlight: string
-		primary: string
-		onPrimary: string
-		primaryContainer: string
-		secondary: string
-		secondaryContainer: string
-		onSecondaryContainer: string
-		tertiary: string
-		onTertiary: string
-		tertiaryContainer: string
-		tertiaryBorder: string
-		error: string
-		errorContainer: string
-		onErrorContainer: string
-		background: string
-		onBackground: string
-		surface: string
-		onSurface: string
-		surfaceVariant: string
-		outline: string
-		regularText: string
-		strongText: string
-		softText: string
-		surface1: string
-		surface4: string
-		surface5: string
-		beginner: string
-		intermediate: string
-		advanced: string
-		white: string
-	}
-}
+		highlight: string;
+		primary: string;
+		onPrimary: string;
+		primaryContainer: string;
+		secondary: string;
+		secondaryContainer: string;
+		onSecondaryContainer: string;
+		tertiary: string;
+		onTertiary: string;
+		tertiaryContainer: string;
+		tertiaryBorder: string;
+		error: string;
+		errorContainer: string;
+		onErrorContainer: string;
+		background: string;
+		onBackground: string;
+		surface: string;
+		onSurface: string;
+		surfaceVariant: string;
+		outline: string;
+		regularText: string;
+		strongText: string;
+		softText: string;
+		surface1: string;
+		surface4: string;
+		surface5: string;
+		beginner: string;
+		intermediate: string;
+		advanced: string;
+		white: string;
+	};
+};
 
 export function lightThemeFromPalette(p: ColorPalette): ColorTheme {
-	const surface = color(p.neutral99)
-	const primary = color(p.primary40)
+	const surface = color(p.neutral99);
+	const primary = color(p.primary40);
 	return {
 		palette: p,
 		themeColors: {
@@ -158,12 +158,12 @@ export function lightThemeFromPalette(p: ColorPalette): ColorTheme {
 			advanced: '#B25959',
 			white: '#FFFFFF',
 		},
-	}
+	};
 }
 
 export function darkThemeFromPalette(p: ColorPalette): ColorTheme {
-	const surface = color(p.neutral10)
-	const primary = color(p.primary40)
+	const surface = color(p.neutral10);
+	const primary = color(p.primary40);
 	return {
 		palette: p,
 		themeColors: {
@@ -198,5 +198,5 @@ export function darkThemeFromPalette(p: ColorPalette): ColorTheme {
 			advanced: '#B25959',
 			white: '#FFFFFF',
 		},
-	}
+	};
 }

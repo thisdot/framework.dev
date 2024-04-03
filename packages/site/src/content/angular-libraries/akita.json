@@ -1,0 +1,11 @@
+{
+	"name": "Akita",
+	"author": "Salesforce",
+	"repo": "https://www.github.com/salesforce/akita",
+	"package": "https://www.npmjs.com/package/@datorama/akita",
+	"href": "https://opensource.salesforce.com/akita/",
+	"description": "State management library, built on top of RxJS, based on the ideas introduced by Flux and Redux.",
+	"image": "./assets/akita.svg",
+	"tags": ["state management"],
+	"language": "TypeScript"
+}

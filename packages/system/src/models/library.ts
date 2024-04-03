@@ -1,5 +1,5 @@
-import { SearchableRecord } from './search'
-import { LibraryTag } from './library-tag'
+import { type SearchableRecord } from './search';
+import { LibraryTag } from './library-tag';
 
 /**
  * Represents a Javascript library. Different
@@ -9,34 +9,34 @@ import { LibraryTag } from './library-tag'
  */
 export interface Library extends SearchableRecord<LibraryTag> {
 	/** Library name for display*/
-	name: string
+	name: string;
 	/** Author name for display */
-	author: string
+	author: string;
 	/** A small (40x40) image, usually a logo, to represent the library */
-	image: string
+	image: string;
 	/** Option to add a dark color to the background of the image */
-	darkImageBackground?: boolean
+	darkImageBackground?: boolean;
 	/** Short description for display */
-	description: string
+	description: string;
 	/**
 	 * Repo, in full href format.
 	 * For displaying star count and or linking
 	 * back to the repo.
 	 */
-	repo: string
+	repo: string;
 	/**
 	 * Package name, for displaying download
 	 * count, bundle size, and SO question count
 	 * as well as for linking back to NPM.
 	 */
-	package: string
+	package: string;
 	/**
 	 * Link to the library's page so that users can
 	 * go and learn more. This can be a link to the
 	 * library's docs site if it has one. If it does
 	 * not then a link to its npm page will suffice
 	 */
-	href: string
+	href: string;
 	/**
 	 * Language associate with the library
 	 */
@@ -53,11 +53,11 @@ export interface Library extends SearchableRecord<LibraryTag> {
 		| 'Go'
 		| 'C#'
 		| 'Swift'
-		| 'unknown'
+		| 'unknown';
 }
 
 export const libraryIndexMetadata = {
 	name: 'libraries',
 	searchableFields: ['author', 'description', 'name'],
 	filterableFields: {},
-} as const
+} as const;

@@ -1,0 +1,8 @@
+{
+	"name": "NG-BE 2023",
+	"description": "Belgium's Angular conference.",
+	"image": "./assets/ng-be-2023.png",
+	"type": "Live Events",
+	"href": "https://ng-be.org/",
+	"tags": ["conferences"]
+}

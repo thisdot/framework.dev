@@ -1,0 +1,9 @@
+{
+	"title": "PodRocket",
+	"image": "./assets/podrocket.jpeg",
+	"hosts": ["Various"],
+	"description": "PodRocket covers everything you need to know about frontend web development on a weekly basis. Join LogRocket cofounder Ben Edelstein, the LogRocket engineering team, and more, as they interview experienced developers about all the libraries, frameworks, and tech industry issues they deal with every day.",
+	"rss": "https://feeds.fireside.fm/podrocket/rss",
+	"href": "https://podrocket.logrocket.com/",
+	"tags": ["general, node, full stack"]
+}

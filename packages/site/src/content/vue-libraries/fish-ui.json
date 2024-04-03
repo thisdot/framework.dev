@@ -1,0 +1,11 @@
+{
+	"name": "Fish UI",
+	"author": "myliang",
+	"repo": "https://www.github.com/myliang/fish-ui",
+	"package": "https://www.npmjs.com/package/fish-ui",
+	"href": "https://myliang.github.io/fish-ui/#/components/index",
+	"description": "A Vue 2 UI Toolkit for Web.",
+	"image": "./assets/fish-ui.png",
+	"tags": ["component"],
+	"language": "JavaScript"
+}

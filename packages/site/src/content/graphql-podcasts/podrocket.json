@@ -1,0 +1,20 @@
+{
+	"title": "PodRocket",
+	"image": "./assets/podrocket.jpeg",
+	"hosts": [
+		"Ben Edelstein",
+		"Kate Trahan",
+		"Brendan Downing",
+		"Noel Minchow",
+		"Paul Mikulskis",
+		"Kaelan Cooter",
+		"Chris Botaish",
+		"Sean Rayment",
+		"Emily Kochanek Ketner",
+		"Matthew Arbesfeld"
+	],
+	"description": "PodRocket covers everything you need to know about frontend web development on a weekly basis.",
+	"rss": "https://feeds.fireside.fm/podrocket/rss",
+	"href": "https://podrocket.logrocket.com/",
+	"tags": ["general"]
+}

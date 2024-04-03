@@ -1,0 +1,11 @@
+{
+	"title": "The Road to React",
+	"authors": ["Robin Wieruch"],
+	"href": "https://www.roadtoreact.com/",
+	"image": "./assets/the-road-to-react-robin-wieruch.jpeg",
+	"description": "In this book you will learn about all the fundamentals of React.js with Hooks while building a full-blown React application step by step. While you create the React application, every chapter will introduce you to a new React key feature.",
+	"yearOfPublication": 2021,
+	"numberOfPages": 250,
+	"level": "beginner",
+	"tags": ["testing", "TypeScript", "projects"]
+}

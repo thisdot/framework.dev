@@ -1,0 +1,11 @@
+{
+	"name": "NgRx Store",
+	"author": "NgRx",
+	"repo": "https://www.github.com/ngrx/platform",
+	"package": "https://www.npmjs.com/package/@ngrx/store",
+	"href": "https://ngrx.io/guide/store",
+	"description": "Store is RxJS powered global state management for Angular applications, inspired by Redux. Store is a controlled state container designed to help write performant, consistent applications on top of Angular.",
+	"image": "./assets/ngrx-store.jpeg",
+	"tags": ["state management"],
+	"language": "TypeScript"
+}

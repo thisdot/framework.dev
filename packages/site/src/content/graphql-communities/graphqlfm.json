@@ -1,0 +1,8 @@
+{
+	"name": "GraphQLfm",
+	"description": "Welcome to GraphQL.FM, a Twitch Channel all about GraphQL.",
+	"image": "./assets/graphqlfm.jpeg",
+	"type": "Twitch",
+	"href": "https://www.twitch.tv/graphqlfm",
+	"tags": []
+}

@@ -1,21 +1,21 @@
-import classNames from 'classnames'
-import React, { useEffect, useState } from 'react'
-import { DialogOverlay, DialogContent } from '@reach/dialog'
+import classNames from 'classnames';
+import React, { useEffect, useState } from 'react';
+import { DialogOverlay, DialogContent } from '@reach/dialog';
 import {
 	dialogContentStyle,
-	DialogContentVariants,
+	type DialogContentVariants,
 	dialogOverlayStyle,
-} from './side-dialog.css'
-import assertNever from 'assert-never'
+} from './side-dialog.css';
+import assertNever from 'assert-never';
 
-type MenuState = 'closed' | 'closing' | 'opening' | 'open'
-type AnimationState = 'open' | 'closed'
+type MenuState = 'closed' | 'closing' | 'opening' | 'open';
+type AnimationState = 'open' | 'closed';
 
 export interface SideDialogProps extends React.ComponentPropsWithoutRef<'div'> {
-	isOpen?: boolean
-	onDismiss: () => void
-	position: NonNullable<DialogContentVariants['position']>
-	zIndex?: number
+	isOpen?: boolean;
+	onDismiss: () => void;
+	position: NonNullable<DialogContentVariants['position']>;
+	zIndex?: number;
 }
 
 export function SideDialog({
@@ -27,7 +27,7 @@ export function SideDialog({
 	zIndex,
 	...props
 }: SideDialogProps) {
-	const menuState = useMenuState(isOpen)
+	const menuState = useMenuState(isOpen);
 	return (
 		<DialogOverlay
 			style={{ zIndex }}
@@ -43,63 +43,63 @@ export function SideDialog({
 					dialogContentStyle({
 						state: menuStateToAnimationState(menuState),
 						position,
-					})
+					}),
 				)}
 				{...props}
 			>
 				{children}
 			</DialogContent>
 		</DialogOverlay>
-	)
+	);
 }
 
 function useMenuState(isOpen: boolean): MenuState {
 	const [menuState, setMenuState] = useState<MenuState>(
-		isOpen ? 'open' : 'closed'
-	)
+		isOpen ? 'open' : 'closed',
+	);
 	useEffect(() => {
 		if (isOpen) {
 			switch (menuState) {
 				case 'closed':
 				case 'closing':
-					setMenuState('opening')
-					return
+					setMenuState('opening');
+					return;
 				case 'opening':
-					requestAnimationFrame(() => setMenuState('open'))
-					return
+					requestAnimationFrame(() => setMenuState('open'));
+					return;
 				case 'open':
-					return
+					return;
 				default:
-					assertNever(menuState)
+					assertNever(menuState);
 			}
 		} else {
 			switch (menuState) {
 				case 'open':
 				case 'opening':
-					setMenuState('closing')
-					return
+					setMenuState('closing');
+					return;
 				case 'closing':
-					const timeout = setTimeout(() => setMenuState('closed'), 200)
-					return () => clearTimeout(timeout)
+					const timeout = setTimeout(() => setMenuState('closed'), 200);
+					return () => clearTimeout(timeout);
 				case 'closed':
-					return
+					return;
 				default:
-					assertNever(menuState)
+					assertNever(menuState);
 			}
 		}
-	}, [isOpen, menuState])
-	return menuState
+	}, [isOpen, menuState]);
+	return menuState;
 }
 
 function menuStateToAnimationState(menuState: MenuState): AnimationState {
 	switch (menuState) {
 		case 'open':
-			return 'open'
+			return 'open';
 		case 'closed':
 		case 'opening':
 		case 'closing':
-			return 'closed'
+			return 'closed';
 		default:
-			assertNever(menuState)
+			assertNever(menuState);
 	}
 }

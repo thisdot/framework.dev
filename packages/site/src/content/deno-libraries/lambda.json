@@ -1,0 +1,11 @@
+{
+	"name": "lambda",
+	"description": "A deno runtime for AWS Lambda. Deploy deno via docker, SAM, serverless, or bundle it yourself.",
+	"href": "https://deno.land/x/lambda",
+	"package": "",
+	"repo": "https://github.com/hayd/deno-lambda",
+	"author": "Andy Hayden",
+	"image": "./assets/lambda.jpeg",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

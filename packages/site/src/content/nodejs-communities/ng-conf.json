@@ -1,0 +1,8 @@
+{
+	"name": "Ng-Conf",
+	"description": "Join us for this 3-day immersion into everything Angular. You'll meet members of the Angular Team, learn cutting-edge developments firsthand, and meet all kinds of interesting people who understand your syntax.",
+	"image": "./assets/ng-conf.png",
+	"type": "Live Events",
+	"href": "https://ng-conf.org/",
+	"tags": ["conferences"]
+}

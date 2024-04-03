@@ -1,13 +1,13 @@
-import classNames from 'classnames'
-import React from 'react'
-import sampleSize from 'lodash/sampleSize'
-import { Community } from '../../models/community'
-import { communitiesStyle } from './communities.css'
-import { ContentBanner } from './content-banner'
+import classNames from 'classnames';
+import React from 'react';
+import sampleSize from 'lodash/sampleSize';
+import { type Community } from '../../models/community';
+import { communitiesStyle } from './communities.css';
+import { ContentBanner } from './content-banner';
 
 export interface CommunitiesProps
 	extends React.ComponentPropsWithoutRef<'div'> {
-	communities: Community<string>[]
+	communities: Community<string>[];
 }
 
 export function Communities({
@@ -15,7 +15,7 @@ export function Communities({
 	communities,
 	...props
 }: CommunitiesProps) {
-	const randomCommunities = sampleSize(communities, 4)
+	const randomCommunities = sampleSize(communities, 4);
 	return (
 		<ContentBanner
 			className={classNames(className, communitiesStyle)}
@@ -30,9 +30,9 @@ export function Communities({
 					metadata: community.type,
 					image: community.image,
 					href: community.href,
-				}
+				};
 			})}
 			{...props}
 		/>
-	)
+	);
 }

@@ -1,7 +1,7 @@
-import React from 'react'
-import { IconProps } from './shared-icon-types'
-import classNames from 'classnames'
-import { iconStyle } from './icon.css'
+import React from 'react';
+import { type IconProps } from './shared-icon-types';
+import classNames from 'classnames';
+import { iconStyle } from './icon.css';
 
 export const DenoIcon = React.forwardRef<SVGSVGElement, IconProps>(
 	function DenoIcon({ className, size, ...props }, ref) {
@@ -24,6 +24,6 @@ export const DenoIcon = React.forwardRef<SVGSVGElement, IconProps>(
 					></path>
 				</g>
 			</svg>
-		)
-	}
-)
+		);
+	},
+);

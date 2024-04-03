@@ -1,0 +1,8 @@
+{
+	"name": "ES7 React/Redux/GraphQL/React-Native snippets",
+	"author": "dsznajder",
+	"description": "Simple extensions for React, Redux and Graphql in JS/TS with ES7 syntax",
+	"image": "./assets/es-7-react-redux-graphql-react-native-snippets.png",
+	"href": "https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets",
+	"tags": ["VSCode"]
+}

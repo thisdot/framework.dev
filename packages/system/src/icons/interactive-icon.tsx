@@ -1,7 +1,7 @@
-import classNames from 'classnames'
-import React from 'react'
-import { iconStyle } from './icon.css'
-import { IconProps } from './shared-icon-types'
+import classNames from 'classnames';
+import React from 'react';
+import { iconStyle } from './icon.css';
+import { type IconProps } from './shared-icon-types';
 
 export const InteractiveIcon = React.forwardRef<SVGSVGElement, IconProps>(
 	function InteractiveIcon({ className, size, ...props }, ref) {
@@ -15,6 +15,6 @@ export const InteractiveIcon = React.forwardRef<SVGSVGElement, IconProps>(
 			>
 				<path d="M13.6426 9.33L11.2126 8.115C12.1801 7.365 12.8026 6.195 12.8026 4.875C12.8026 2.6025 10.9501 0.75 8.67762 0.75C6.40512 0.75 4.55262 2.6025 4.55262 4.875C4.55262 6.4725 5.46762 7.86 6.80262 8.5425V10.9875C5.19012 10.6425 5.28762 10.6575 5.10762 10.6575C4.71012 10.6575 4.33512 10.815 4.05012 11.1L3.00012 12.165L6.81762 15.9825C7.14012 16.3125 7.59012 16.5 8.05512 16.5H12.7801C13.5151 16.5 14.1376 15.975 14.2576 15.2475L14.8576 11.715C15.0226 10.74 14.5351 9.78 13.6426 9.33ZM13.3801 11.4675L12.7801 15H8.05512C7.98762 15 7.92762 14.97 7.87512 14.925L5.11512 12.165L8.30262 12.8325V4.875C8.30262 4.665 8.46762 4.5 8.67762 4.5C8.88762 4.5 9.05262 4.665 9.05262 4.875V9.375H10.3726L12.9676 10.6725C13.2676 10.8225 13.4326 11.145 13.3801 11.4675ZM6.05262 4.875C6.05262 3.4275 7.23012 2.25 8.67762 2.25C10.1251 2.25 11.3026 3.4275 11.3026 4.875C11.3026 5.5875 11.0176 6.2325 10.5526 6.705V4.875C10.5526 3.84 9.71262 3 8.67762 3C7.64262 3 6.80262 3.84 6.80262 4.875V6.705C6.33762 6.2325 6.05262 5.5875 6.05262 4.875Z" />
 			</svg>
-		)
-	}
-)
+		);
+	},
+);

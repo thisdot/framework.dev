@@ -1,7 +1,7 @@
-import { style } from '@vanilla-extract/css'
-import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css'
-import { vars } from '../../themes/themes.css'
-import { pxToRem } from '../../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css';
+import { vars } from '../../themes/themes.css';
+import { pxToRem } from '../../util/style-utils';
 
 export const heroStyle = style([
 	sprinkles({
@@ -20,7 +20,7 @@ export const heroStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const heroInnerStyle = style([
 	sprinkles({
@@ -29,7 +29,7 @@ export const heroInnerStyle = style([
 	{
 		maxWidth: pxToRem(1080),
 	},
-])
+]);
 
 export const heroHeaderStyle = style([
 	sprinkles({
@@ -44,7 +44,7 @@ export const heroHeaderStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const heroBodyStyle = style([
 	sprinkles({
@@ -62,7 +62,7 @@ export const heroBodyStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const heroTitleStyle = style([
 	sprinkles({
@@ -86,11 +86,11 @@ export const heroTitleStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const heroSoftTitleStyle = sprinkles({
 	color: 'softText',
-})
+});
 
 export const heroSubtitleStyle = style([
 	{
@@ -105,13 +105,13 @@ export const heroSubtitleStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const heroIconTyle = style({
 	display: 'inline-block',
 	height: '1.5em',
 	width: 'auto',
-})
+});
 
 export const linkCardGroupStyle = style([
 	{
@@ -122,4 +122,4 @@ export const linkCardGroupStyle = style([
 			},
 		},
 	},
-])
+]);

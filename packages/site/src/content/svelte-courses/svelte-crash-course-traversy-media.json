@@ -1,0 +1,11 @@
+{
+	"title": "Svelte Crash Course",
+	"author": "Traversy Media",
+	"image": "./assets/svelte-crash-course-traversy-media.jpeg",
+	"description": "Learn the fundamentals of Svelte by building a feedback app",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.youtube.com/watch?v=3TVy6GdtNuQ",
+	"tags": ["animations", "forms"]
+}

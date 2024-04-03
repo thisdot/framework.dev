@@ -1,0 +1,11 @@
+{
+	"name": "Vuelidate",
+	"author": "Vuelidate",
+	"repo": "https://www.github.com/vuelidate/vuelidate",
+	"package": "https://www.npmjs.com/package/vuelidate",
+	"href": "https://vuelidate-next.netlify.app/",
+	"description": "Vuelidate 2 is a simple, but powerful, lightweight model-based validation for Vue.js 3 and 2.",
+	"image": "./assets/vuelidate.png",
+	"tags": ["forms"],
+	"language": "JavaScript"
+}

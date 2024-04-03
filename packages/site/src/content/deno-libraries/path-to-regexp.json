@@ -1,0 +1,11 @@
+{
+	"name": "path_to_regexp",
+	"description": "Turn a path string such as `/user/:name` into a regular expression",
+	"href": "https://deno.land/x/path_to_regexp",
+	"package": "",
+	"repo": "https://github.com/pillarjs/path-to-regexp",
+	"author": "pillarjs",
+	"image": "./assets/path-to-regexp.png",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

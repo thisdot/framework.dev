@@ -1,0 +1,8 @@
+{
+	"name": "JSNation Conference",
+	"description": "A conference dedicated to the latest trends in JavaScript development.",
+	"image": "./assets/jsnation-conference.svg",
+	"type": "Live Events",
+	"href": "https://jsnation.com/",
+	"tags": ["conferences"]
+}

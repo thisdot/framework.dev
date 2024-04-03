@@ -1,0 +1,8 @@
+{
+	"name": "Vue Day",
+	"description": "This is an online and in person conference dedicated to all things Vue",
+	"image": "./assets/vue-day.png",
+	"type": "Live and Online Events",
+	"href": "https://2022.vueday.it/",
+	"tags": ["conferences"]
+}

@@ -1,0 +1,8 @@
+{
+	"name": "Bloki.app",
+	"author": "MrFoxPro",
+	"description": "Blocks-based collaborative editor more coming soon...",
+	"image": "./assets/bloki-app.svg",
+	"href": "https://github.com/MrFoxPro/bloki",
+	"tags": ["Editor"]
+}

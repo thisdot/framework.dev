@@ -1,0 +1,11 @@
+{
+	"name": "another_cookiejar",
+	"description": "https://deno.land/x/another_cookiejar",
+	"href": "https://deno.land/x/another_cookiejar",
+	"package": "",
+	"repo": "https://github.com/jd1378/deno-another-cookiejar",
+	"author": "javad mnjd",
+	"image": "./assets/another-cookiejar.jpeg",
+	"tags": ["utilities", "data fetching"],
+	"language": "TypeScript"
+}

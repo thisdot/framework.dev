@@ -1,0 +1,8 @@
+{
+	"description": "A community-ran Github Discussions for all things Deno",
+	"href": "https://github.com/denoland/deno/discussions",
+	"image": "./assets/deno-github-discussions.png",
+	"name": "Deno Github Discussions",
+	"tags": [],
+	"type": "Forum"
+}

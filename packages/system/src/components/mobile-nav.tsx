@@ -1,27 +1,27 @@
-import classNames from 'classnames'
-import React, { useState } from 'react'
+import classNames from 'classnames';
+import React, { useState } from 'react';
 import {
 	menuButtonStyle,
 	mobileNavDialogStyle,
 	mobileNavSponorIconContainerStyle,
 	mobileNavStyle,
-} from './mobile-nav.css'
-import { SideDialog } from './side-dialog'
-import { SearchIcon } from '../icons/search-icon'
-import { HomeIcon } from '../icons/home-icon'
-import { BurgerIcon } from '../icons/burger-icon'
-import { CloseBurgerIcon } from '../icons/close-burger-icon'
-import { sprinkles } from '../sprinkles/sprinkles.css'
-import { GithubIcon } from '../icons/github-icon'
-import { SponsorIcon } from '../icons/sponsor-icon'
+} from './mobile-nav.css';
+import { SideDialog } from './side-dialog';
+import { SearchIcon } from '../icons/search-icon';
+import { HomeIcon } from '../icons/home-icon';
+import { BurgerIcon } from '../icons/burger-icon';
+import { CloseBurgerIcon } from '../icons/close-burger-icon';
+import { sprinkles } from '../sprinkles/sprinkles.css';
+import { GithubIcon } from '../icons/github-icon';
+import { SponsorIcon } from '../icons/sponsor-icon';
 
-type MenuState = 'open' | 'closed'
+type MenuState = 'open' | 'closed';
 
 export type MobileNavProps = React.ComponentProps<'nav'> & {
-	initialMenuState?: MenuState
-}
+	initialMenuState?: MenuState;
+};
 
-const menuButtonId = 'burger-menu-button'
+const menuButtonId = 'burger-menu-button';
 
 export function MobileNav({
 	className,
@@ -29,7 +29,7 @@ export function MobileNav({
 	children,
 	...props
 }: MobileNavProps) {
-	const [menuState, setMenuState] = useState(initialMenuState)
+	const [menuState, setMenuState] = useState(initialMenuState);
 
 	return (
 		<nav className={classNames(className, mobileNavStyle)} {...props}>
@@ -41,7 +41,7 @@ export function MobileNav({
 						onClick={() =>
 							(
 								document.querySelector(
-									'input[type="search"]'
+									'input[type="search"]',
 								) as HTMLInputElement | null
 							)?.focus()
 						}
@@ -121,5 +121,5 @@ export function MobileNav({
 				<div className={sprinkles({ padding: 16 })}>{children}</div> 
 			</SideDialog>
 		</nav>
-	)
+	);
 }

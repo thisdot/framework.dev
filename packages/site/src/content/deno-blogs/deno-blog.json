@@ -1,0 +1,8 @@
+{
+	"title": "Deno Blog",
+	"author": "Deno",
+	"description": "The official blog of the Deno Company.",
+	"image": "./assets/deno-blog.svg",
+	"href": "https://deno.com/blog",
+	"tags": []
+}

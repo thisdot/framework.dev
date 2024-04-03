@@ -1,0 +1,19 @@
+{
+	"title": "Become a ninja with Vue 3",
+	"authors": ["Cédric Exbrayat"],
+	"image": "./assets/become-a-ninja-with-vue-3-cedric-exbrayat.webp",
+	"description": "This ebook helps you get the philosophy of Vue 3 (currently 3.2.33), the new tools (like TypeScript, Vite, esbuild...), the essential libraries (vue-router, @vue/test-utils, axios...), and each part of the framework in a pragmatic way. You will be able to kickstart your project by the end of the reading, and build your amazing apps!",
+	"yearOfPublication": 2021,
+	"numberOfPages": 236,
+	"level": "beginner",
+	"href": "https://books.ninja-squad.com/vue",
+	"tags": [
+		"best practices",
+		"vue 3",
+		"TypeScript",
+		"vite",
+		"routing",
+		"testing",
+		"state management"
+	]
+}

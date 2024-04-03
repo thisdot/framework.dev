@@ -1,0 +1,9 @@
+{
+	"title": "GraphQLfm",
+	"image": "./assets/graphqlfm.jpeg",
+	"hosts": ["Marc-Andre Giroux", "Tony Ghita"],
+	"description": "Welcome to GraphQL.FM, a Twitch Channel all about GraphQL.",
+	"rss": "https://twitchrss.appspot.com/vod/graphqlfm",
+	"href": "https://www.twitch.tv/graphqlfm",
+	"tags": ["graphQL"]
+}

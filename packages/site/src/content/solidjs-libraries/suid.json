@@ -1,0 +1,11 @@
+{
+	"name": "Suid",
+	"author": "swordev",
+	"repo": "https://www.github.com/swordev/suid",
+	"package": "https://www.npmjs.com/package/suid",
+	"href": "https://suid.io/",
+	"description": "A port of MUI built with SolidJS",
+	"image": "./assets/suid.png",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

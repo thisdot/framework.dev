@@ -1,0 +1,11 @@
+{
+	"name": "polkadot",
+	"description": "Package publishing for deno.land/x/polkadot",
+	"href": "https://deno.land/x/polkadot",
+	"package": "",
+	"repo": "https://github.com/polkadot-js/build-deno.land",
+	"author": "@polkadot{.js}",
+	"image": "./assets/polkadot.png",
+	"tags": ["utilities", "tooling"],
+	"language": "TypeScript"
+}

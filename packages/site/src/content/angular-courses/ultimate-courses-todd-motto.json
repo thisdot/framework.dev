@@ -1,0 +1,11 @@
+{
+	"title": "Ultimate Courses",
+	"author": "Todd Motto",
+	"image": "./assets/ultimate-courses-todd-motto.svg",
+	"description": "Ultimate Courses has a collection of video courses covering beginner and advanced Angular, TypeScript, RxJS, and NgRX.",
+	"paymentType": "paid",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://ultimatecourses.com/",
+	"tags": ["RxJS", "TypeScript", "NgRx"]
+}

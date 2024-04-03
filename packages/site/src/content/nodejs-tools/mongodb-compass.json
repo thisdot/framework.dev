@@ -1,0 +1,8 @@
+{
+	"name": "Mongodb Compass",
+	"author": "MongoDB, Inc.",
+	"description": "Compass is an interactive tool for querying, optimizing, and analyzing your MongoDB data. Get key insights, drag and drop to build pipelines, and more.",
+	"image": "./assets/mongodb-compass.png",
+	"href": "https://www.mongodb.com/products/compass",
+	"tags": ["database"]
+}

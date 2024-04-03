@@ -1,7 +1,7 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../sprinkles/sprinkles.css'
-import { vars } from '../themes/themes.css'
-import { pxToRem } from '../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../sprinkles/sprinkles.css';
+import { vars } from '../themes/themes.css';
+import { pxToRem } from '../util/style-utils';
 
 export const sidebarStyle = style([
 	sprinkles({
@@ -12,7 +12,7 @@ export const sidebarStyle = style([
 	{
 		position: 'relative',
 	},
-])
+]);
 
 export const sidebarContentsStyle = style([
 	sprinkles({
@@ -25,7 +25,7 @@ export const sidebarContentsStyle = style([
 		position: 'sticky',
 		top: 0,
 	},
-])
+]);
 
 export const sidebarHeaderStyle = style([
 	sprinkles({
@@ -38,10 +38,13 @@ export const sidebarHeaderStyle = style([
 		backgroundColor: vars.palette.primary99,
 		height: pxToRem(72),
 	},
-])
+]);
 
-export const sidebarBodyStyle = sprinkles({ padding: 12, color: 'regularText' })
+export const sidebarBodyStyle = sprinkles({
+	padding: 12,
+	color: 'regularText',
+});
 
 export const sidebarSponsorIconContainerStyle = style({
 	maxWidth: pxToRem(131),
-})
+});

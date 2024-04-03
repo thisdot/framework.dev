@@ -1,0 +1,19 @@
+{
+	"title": "Introduction to SolidJS",
+	"author": "Siddhant Varma",
+	"image": "./assets/introduction-to-solidjs-siddhant-varma.jpeg",
+	"description": "In this tutorial, you’ll learn what SolidJS is, how it works, and its fundamentals such as reactivity, architecture, events, effects, etc. Then you’ll use this knowledge to build a simple todo app. Finally, you’ll understand how SolidJS compares with React and how it’s better and worse.",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "text",
+	"href": "https://www.loginradius.com/blog/engineering/guest-post/introduction-to-solidjs/",
+	"tags": [
+		"reactivity",
+		"lifecycle methods",
+		"state management",
+		"events",
+		"effects",
+		"conditionals",
+		"loops"
+	]
+}

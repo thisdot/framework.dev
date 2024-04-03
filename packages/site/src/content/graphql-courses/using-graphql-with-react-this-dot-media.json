@@ -1,0 +1,18 @@
+{
+	"title": "Using GraphQL with React",
+	"author": "This Dot Media",
+	"image": "./assets/using-graphql-with-react-this-dot-media.png",
+	"description": "GraphQL provides a strong-typing system to better understand and utilize our API to retrieve and interact with our data. ",
+	"paymentType": "free",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://www.youtube.com/watch?v=JmVdgtjGo5Q",
+	"tags": [
+		"components",
+		"data fetching",
+		"graphQL",
+		"javascript marathon",
+		"routing",
+		"typescript"
+	]
+}

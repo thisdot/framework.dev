@@ -1,5 +1,6 @@
-import { Course } from '../../models/course'
-import { ResourceCard, ResourceCardProps } from './resource-card'
+import React from 'react';
+import { type Course } from '../../models/course';
+import { ResourceCard, type ResourceCardProps } from './resource-card';
 
 export type CourseCardProps = Omit<
 	ResourceCardProps,
@@ -13,8 +14,8 @@ export type CourseCardProps = Omit<
 	| 'attributes'
 	| 'children'
 > & {
-	course: Course<string>
-}
+	course: Course<string>;
+};
 
 export function CourseCard({ course, ...props }: CourseCardProps) {
 	return (
@@ -32,5 +33,5 @@ export function CourseCard({ course, ...props }: CourseCardProps) {
 		>
 			{course.description}
 		</ResourceCard>
-	)
+	);
 }

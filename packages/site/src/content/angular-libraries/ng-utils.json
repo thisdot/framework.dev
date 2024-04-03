@@ -1,0 +1,11 @@
+{
+	"name": "Ng Utils",
+	"author": "This Dot Labs",
+	"repo": "https://www.github.com/thisdot/open-source",
+	"package": "https://www.npmjs.com/package/@this-dot/ng-utils",
+	"href": "https://www.npmjs.com/package/@this-dot/ng-utils",
+	"image": "./assets/ng-utils.png",
+	"tags": ["performance tools"],
+	"description": "Ng Utils is a collection of Angular utils which we would like to continuously extend and improve.",
+	"language": "TypeScript"
+}

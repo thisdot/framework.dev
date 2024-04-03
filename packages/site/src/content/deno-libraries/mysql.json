@@ -1,0 +1,11 @@
+{
+	"name": "mysql",
+	"description": " MySQL driver for Deno",
+	"href": "https://deno.land/x/mysql",
+	"package": "",
+	"repo": "https://github.com/denodrivers/mysql",
+	"author": "Deno Drivers",
+	"image": "./assets/mysql.png",
+	"tags": ["utilities", "database drivers"],
+	"language": "TypeScript"
+}

@@ -1,0 +1,11 @@
+{
+	"name": "events",
+	"description": "EventEmitter for deno",
+	"href": "https://deno.land/x/events",
+	"package": "",
+	"repo": "https://github.com/deno-library/events",
+	"author": "Deno Library",
+	"image": "./assets/events.png",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

@@ -1,0 +1,8 @@
+{
+	"name": "Simple React Snippets",
+	"author": "Burke Holland",
+	"description": "Dead simple React snippets you will actually use",
+	"image": "./assets/simple-react-snippets.png",
+	"href": "https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets",
+	"tags": ["VSCode"]
+}

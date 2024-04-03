@@ -1,0 +1,9 @@
+{
+	"title": "React Native Nerds",
+	"image": "./assets/react-native-nerds.png",
+	"hosts": ["Spencer Carli", "Jonathan Wheat"],
+	"description": "Join Spencer Carli and Jonathan Wheat as they discuss React Native topics you need to know about to become a better developer.",
+	"rss": "https://www.podbean.com/site/podcatcher/index/blog/yOanVRcNMt7v",
+	"href": "https://www.reactnativenerds.com/",
+	"tags": ["react native"]
+}

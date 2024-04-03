@@ -1,0 +1,11 @@
+{
+	"name": "GraphQL-request",
+	"author": "Prisma Labs",
+	"repo": "https://www.github.com/prisma-labs/graphql-request",
+	"package": "https://www.npmjs.com/package/graphql-request",
+	"href": "https://github.com/prisma-labs/graphql-request",
+	"description": "Minimal GraphQL client supporting Node and browsers for scripts or simple apps",
+	"image": "./assets/graphql-request.png",
+	"language": "TypeScript",
+	"tags": ["data fetching"]
+}

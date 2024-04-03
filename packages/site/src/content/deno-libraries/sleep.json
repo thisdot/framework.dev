@@ -1,0 +1,11 @@
+{
+	"name": "sleep",
+	"description": "🦕 module for sleep. You can sleep for a specific amount of time or you can sleep for a random amount of time with this.",
+	"href": "https://deno.land/x/sleep",
+	"package": "",
+	"repo": "https://github.com/michael-spengler/sleep",
+	"author": "michael spengler",
+	"image": "./assets/sleep.jpeg",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

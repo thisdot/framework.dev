@@ -1,5 +1,5 @@
-import { style } from '@vanilla-extract/css'
-import { pxToRem } from '../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { pxToRem } from '../util/style-utils';
 
 export const bookDecoratorStyle = style({
 	height: 'min-content',
@@ -27,4 +27,4 @@ export const bookDecoratorStyle = style({
 			'linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.15) 100%)',
 		opacity: '0.6',
 	},
-})
+});

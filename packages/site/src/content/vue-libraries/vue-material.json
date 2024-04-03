@@ -1,0 +1,11 @@
+{
+	"name": "Vue Material",
+	"author": "Marcos Moura, Creative Tim & Community",
+	"repo": "https://www.github.com/vuematerial/vue-material",
+	"package": "https://www.npmjs.com/package/vue-material",
+	"href": "https://vuematerial.io/",
+	"description": "Vue Material is Simple, lightweight and built exactly according to the Google Material Design specs",
+	"image": "./assets/vue-material.svg",
+	"tags": ["component"],
+	"language": "JavaScript"
+}

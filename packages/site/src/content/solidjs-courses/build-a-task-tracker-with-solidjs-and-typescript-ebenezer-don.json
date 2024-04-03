@@ -1,0 +1,11 @@
+{
+	"title": "Build a task tracker with SolidJS and TypeScript",
+	"author": "Ebenezer Don",
+	"image": "./assets/build-a-task-tracker-with-solidjs-and-typescript-ebenezer-don.jpeg",
+	"description": "In this tutorial, you'll learn how to build a task tracker app with Solid.",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "text",
+	"href": "https://blog.logrocket.com/build-task-tracker-solidjs-typescript/",
+	"tags": ["reactivity", "effects", "state management", "loops", "control flow"]
+}

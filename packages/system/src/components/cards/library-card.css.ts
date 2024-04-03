@@ -1,11 +1,11 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { vars } from '../../themes/themes.css'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { vars } from '../../themes/themes.css';
 
 export const libraryCardBadgeStyle = style({
 	height: 20,
 	maxWidth: '100%',
-})
+});
 
 export const libraryPackageLinkStyle = style([
 	sprinkles({
@@ -23,7 +23,7 @@ export const libraryPackageLinkStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const libraryPackageTextStyle = style([
 	sprinkles({
@@ -38,4 +38,4 @@ export const libraryPackageTextStyle = style([
 			transition: 'none',
 		},
 	},
-])
+]);

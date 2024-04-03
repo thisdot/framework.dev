@@ -1,0 +1,11 @@
+{
+	"name": "React Spectrum",
+	"author": "Adobe, Inc.",
+	"repo": "https://www.github.com/adobe/react-spectrum",
+	"package": "https://www.npmjs.com/package/@adobe/react-spectrum",
+	"href": "https://react-spectrum.adobe.com/",
+	"image": "./assets/react-spectrum.png",
+	"tags": ["component"],
+	"description": "A collection of libraries and tools that help you build adaptive, accessible, and robust user experiences.",
+	"language": "TypeScript"
+}

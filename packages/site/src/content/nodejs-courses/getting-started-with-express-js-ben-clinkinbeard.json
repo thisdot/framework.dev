@@ -1,0 +1,11 @@
+{
+	"title": "Getting Started with Express.js",
+	"author": "Ben Clinkinbeard",
+	"image": "./assets/getting-started-with-express-js-ben-clinkinbeard.png",
+	"description": "Express is a minimal web server built on Node.js that provides essential functionality for delivering web applications to the browser and mobile devices. This series will guide you through the first steps of using Express for building your own applications.",
+	"paymentType": "paid",
+	"level": "beginner",
+	"format": "video",
+	"href": "https://egghead.io/courses/getting-started-with-express-js",
+	"tags": ["backend"]
+}

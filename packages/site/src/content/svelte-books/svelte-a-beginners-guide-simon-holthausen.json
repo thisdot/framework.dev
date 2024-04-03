@@ -1,0 +1,11 @@
+{
+	"title": "Svelte: A Beginner's Guide",
+	"authors": ["Simon Holthausen"],
+	"image": "./assets/svelte-a-beginners-guide-simon-holthausen.jpeg",
+	"description": "Svelte appeals to developers with its combination of a small bundle size, very good performance, and ease of use. At the same time, it comes packed with a lot of goodies. A simple state management solution to build upon is already provided, as well as ready-to-use transitions and animations. This book will start by shedding light on how Svelte achieves this, and then we'll look at how to implement applications with Svelte using the various possibilities Svelte provides.",
+	"yearOfPublication": 2022,
+	"numberOfPages": 59,
+	"level": "beginner",
+	"href": "https://www.oreilly.com/library/view/svelte-a-beginners/9781098129576/",
+	"tags": ["projects", "state management", "testing"]
+}

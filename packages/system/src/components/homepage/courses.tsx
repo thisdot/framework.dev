@@ -1,16 +1,16 @@
-import classNames from 'classnames'
-import React from 'react'
-import sampleSize from 'lodash/sampleSize'
-import { coursesStyle } from './courses.css'
-import { Course } from '../../models/course'
-import { FeatureAndList } from './feature-and-list'
+import classNames from 'classnames';
+import React from 'react';
+import sampleSize from 'lodash/sampleSize';
+import { coursesStyle } from './courses.css';
+import { type Course } from '../../models/course';
+import { FeatureAndList } from './feature-and-list';
 
 export interface CoursesProps extends React.ComponentPropsWithoutRef<'div'> {
-	courses: Course<string>[]
+	courses: Course<string>[];
 }
 
 export function Courses({ className, courses, ...props }: CoursesProps) {
-	const randomCourses = sampleSize(courses, 6)
+	const randomCourses = sampleSize(courses, 6);
 	return (
 		<FeatureAndList
 			className={classNames(className, coursesStyle)}
@@ -28,9 +28,9 @@ export function Courses({ className, courses, ...props }: CoursesProps) {
 						['format', course.format],
 						['paymentType', course.paymentType],
 					],
-				}
+				};
 			})}
 			{...props}
 		/>
-	)
+	);
 }

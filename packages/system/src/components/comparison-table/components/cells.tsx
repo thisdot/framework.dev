@@ -1,6 +1,6 @@
-import React from 'react'
-import classNames from 'classnames'
-import { Headings, ISortConfig } from '../types'
+import React from 'react';
+import classNames from 'classnames';
+import { type Headings, type ISortConfig } from '../types';
 import {
 	cellTHStyle,
 	cellTDStyle,
@@ -8,13 +8,13 @@ import {
 	cellContentsStyle,
 	rowHeadingStyle,
 	rowHeadingContentsStyle,
-} from './cells.css'
+} from './cells.css';
 
 type ColHeadingProps = {
-	name?: Headings
-	sort?: ISortConfig
-	onClick?: React.MouseEventHandler<HTMLButtonElement>
-}
+	name?: Headings;
+	sort?: ISortConfig;
+	onClick?: React.MouseEventHandler<HTMLButtonElement>;
+};
 
 export const ColHeading = ({
 	children,
@@ -24,9 +24,9 @@ export const ColHeading = ({
 	onClick,
 	...props
 }: ColHeadingProps & React.ComponentPropsWithoutRef<'th'>) => {
-	let sorted = {}
+	let sorted = {};
 	if (sort && sort.by === name) {
-		sorted = { 'aria-sort': sort.asc ? 'ascending' : 'descending' }
+		sorted = { 'aria-sort': sort.asc ? 'ascending' : 'descending' };
 	}
 	return (
 		<th
@@ -45,8 +45,8 @@ export const ColHeading = ({
 				</button>
 			)}
 		</th>
-	)
-}
+	);
+};
 
 export const RowHeading = ({
 	children,
@@ -61,8 +61,8 @@ export const RowHeading = ({
 		>
 			<div className={rowHeadingContentsStyle}>{children}</div>
 		</th>
-	)
-}
+	);
+};
 
 export const TD = ({
 	children,
@@ -72,4 +72,4 @@ export const TD = ({
 	<td className={classNames(cellTDStyle, className)} {...props}>
 		<div className={cellContentsStyle}>{children}</div>
 	</td>
-)
+);

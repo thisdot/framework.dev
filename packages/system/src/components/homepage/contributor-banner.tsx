@@ -1,18 +1,18 @@
-import classNames from 'classnames'
-import React from 'react'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { Button } from '../button'
-import { Contributor, ContributorData } from './contributor'
+import classNames from 'classnames';
+import React from 'react';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { Button } from '../button';
+import { Contributor, type ContributorData } from './contributor';
 import {
 	contributorBannerStyle,
 	buttonStyles,
 	contributorsContainerStyle,
 	contributorElementStyle,
-} from './contributor-banner.css'
+} from './contributor-banner.css';
 
 export interface ContributorBannerProps
 	extends React.ComponentPropsWithoutRef<'div'> {
-	contributors: ContributorData[]
+	contributors: ContributorData[];
 }
 
 export function ContributorBanner({
@@ -56,5 +56,5 @@ export function ContributorBanner({
 				))}
 			</div>
 		</div>
-	)
+	);
 }

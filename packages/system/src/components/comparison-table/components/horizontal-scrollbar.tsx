@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react'
-import classNames from 'classnames'
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import classNames from 'classnames';
 import {
 	horizontalScrollbarContainerStyle,
 	horizontalScrollbarContentStyle,
@@ -10,58 +10,60 @@ import {
 	horizontalScrollbarButtonContainerStyle,
 	horizontalScrollbarButtonStyle,
 	horizontalScrollbarButtonIconStyle,
-} from './horizontal-scrollbar.css'
-import { ChevronIcon } from '../../../icons/chevron-icon'
+} from './horizontal-scrollbar.css';
+import { ChevronIcon } from '../../../icons/chevron-icon';
 
 export const HorizontalScrollbar = ({
 	children,
 	className,
 	...props
 }: React.ComponentPropsWithoutRef<'div'>) => {
-	const scrollContentRef = useRef<HTMLDivElement | null>(null)
-	const scrollTrackRef = useRef<HTMLDivElement | null>(null)
-	const scrollThumbRef = useRef<HTMLDivElement | null>(null)
-	const [thumbWidth, setThumbWidth] = useState(20)
-	const [scrollStartPosition, setScrollStartPosition] = useState(0)
-	const [initialScrollLeft, setInitialScrollLeft] = useState(0)
-	const [isDragging, setIsDragging] = useState(false)
+	const scrollContentRef = useRef<HTMLDivElement | null>(null);
+	const scrollTrackRef = useRef<HTMLDivElement | null>(null);
+	const scrollThumbRef = useRef<HTMLDivElement | null>(null);
+	const [thumbWidth, setThumbWidth] = useState(20);
+	const [scrollStartPosition, setScrollStartPosition] = useState(0);
+	const [initialScrollLeft, setInitialScrollLeft] = useState(0);
+	const [isDragging, setIsDragging] = useState(false);
 
 	function handleResize(ref: HTMLDivElement, track: number) {
-		const { clientWidth, scrollWidth } = ref
-		setThumbWidth(Math.max((clientWidth / scrollWidth) * track, 20))
+		const { clientWidth, scrollWidth } = ref;
+		setThumbWidth(Math.max((clientWidth / scrollWidth) * track, 20));
 	}
 
 	function handleScrollButton(direction: 'left' | 'right') {
-		const { current } = scrollContentRef
+		const { current } = scrollContentRef;
 		if (current) {
-			const scrollAmount = direction === 'right' ? 200 : -200
-			current.scrollBy({ left: scrollAmount, behavior: 'smooth' })
+			const scrollAmount = direction === 'right' ? 200 : -200;
+			current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
 		}
 	}
 
 	const handleTrackClick = useCallback(
 		(e: React.MouseEvent) => {
-			e.preventDefault()
-			e.stopPropagation()
-			const { current: trackCurrent } = scrollTrackRef
-			const { current: contentCurrent } = scrollContentRef
+			e.preventDefault();
+			e.stopPropagation();
+			const { current: trackCurrent } = scrollTrackRef;
+			const { current: contentCurrent } = scrollContentRef;
 			if (trackCurrent && contentCurrent) {
-				const { clientX } = e
-				const target = e.target as HTMLDivElement
-				const rect = target.getBoundingClientRect()
-				const thumbOffset = -(thumbWidth / 2)
+				const { clientX } = e;
+				const target = e.target as HTMLDivElement;
+				const rect = target.getBoundingClientRect();
+				const thumbOffset = -(thumbWidth / 2);
 				const clickRatio =
-					(clientX - rect.left + thumbOffset) / trackCurrent.clientWidth
-				const scrollAmount = Math.floor(clickRatio * contentCurrent.scrollWidth)
-				console.log(clickRatio, thumbOffset, scrollAmount)
+					(clientX - rect.left + thumbOffset) / trackCurrent.clientWidth;
+				const scrollAmount = Math.floor(
+					clickRatio * contentCurrent.scrollWidth,
+				);
+				console.log(clickRatio, thumbOffset, scrollAmount);
 				contentCurrent.scrollTo({
 					left: scrollAmount,
 					behavior: 'smooth',
-				})
+				});
 			}
 		},
-		[thumbWidth]
-	)
+		[thumbWidth],
+	);
 
 	const handleThumbPosition = useCallback(() => {
 		if (
@@ -69,60 +71,60 @@ export const HorizontalScrollbar = ({
 			!scrollTrackRef.current ||
 			!scrollThumbRef.current
 		) {
-			return
+			return;
 		}
-		const { scrollLeft, scrollWidth } = scrollContentRef.current
-		const trackWidth = scrollTrackRef.current.clientWidth
-		let newLeft = (+scrollLeft / +scrollWidth) * trackWidth
-		newLeft = Math.min(newLeft, trackWidth - thumbWidth)
-		const thumb = scrollThumbRef.current
-		thumb.style.left = `${newLeft}px`
-	}, [thumbWidth])
+		const { scrollLeft, scrollWidth } = scrollContentRef.current;
+		const trackWidth = scrollTrackRef.current.clientWidth;
+		let newLeft = (+scrollLeft / +scrollWidth) * trackWidth;
+		newLeft = Math.min(newLeft, trackWidth - thumbWidth);
+		const thumb = scrollThumbRef.current;
+		thumb.style.left = `${newLeft}px`;
+	}, [thumbWidth]);
 
 	const handleThumbMousedown = useCallback(
 		(e: MouseEvent | React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-			e.preventDefault()
-			e.stopPropagation()
-			setScrollStartPosition(e.clientX)
+			e.preventDefault();
+			e.stopPropagation();
+			setScrollStartPosition(e.clientX);
 			if (scrollContentRef.current)
-				setInitialScrollLeft(scrollContentRef.current.scrollLeft)
-			setIsDragging(true)
+				setInitialScrollLeft(scrollContentRef.current.scrollLeft);
+			setIsDragging(true);
 		},
-		[]
-	)
+		[],
+	);
 
 	const handleThumbMouseup = useCallback(
 		(e: MouseEvent | React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-			e.preventDefault()
-			e.stopPropagation()
+			e.preventDefault();
+			e.stopPropagation();
 			if (isDragging) {
-				setIsDragging(false)
+				setIsDragging(false);
 			}
 		},
-		[isDragging]
-	)
+		[isDragging],
+	);
 
 	const handleThumbMousemove = useCallback(
 		(e: MouseEvent | React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-			e.preventDefault()
-			e.stopPropagation()
+			e.preventDefault();
+			e.stopPropagation();
 			if (isDragging && scrollContentRef.current) {
 				const {
 					scrollWidth: contentScrollWidth,
 					offsetWidth: contentOffsetWidth,
-				} = scrollContentRef.current
+				} = scrollContentRef.current;
 
 				const deltaX = Math.round(
-					(e.clientX - scrollStartPosition) * (contentOffsetWidth / thumbWidth)
-				)
+					(e.clientX - scrollStartPosition) * (contentOffsetWidth / thumbWidth),
+				);
 
 				const newScrollLeft = Math.min(
 					initialScrollLeft + deltaX,
-					contentScrollWidth - contentOffsetWidth
-				)
+					contentScrollWidth - contentOffsetWidth,
+				);
 
-				scrollContentRef.current.scrollLeft = newScrollLeft
-				handleThumbPosition()
+				scrollContentRef.current.scrollLeft = newScrollLeft;
+				handleThumbPosition();
 			}
 		},
 		[
@@ -131,36 +133,36 @@ export const HorizontalScrollbar = ({
 			isDragging,
 			scrollStartPosition,
 			thumbWidth,
-		]
-	)
+		],
+	);
 
 	useEffect(() => {
 		if (scrollContentRef.current && scrollTrackRef.current) {
-			const ref = scrollContentRef.current
-			const track = scrollTrackRef.current
+			const ref = scrollContentRef.current;
+			const track = scrollTrackRef.current;
 			const observer = new ResizeObserver(() => {
-				handleResize(ref, track.clientWidth)
-			})
-			const firstChild = ref.getElementsByTagName('table')[0]
-			observer.observe(firstChild)
-			ref.addEventListener('scroll', handleThumbPosition)
+				handleResize(ref, track.clientWidth);
+			});
+			const firstChild = ref.getElementsByTagName('table')[0];
+			observer.observe(firstChild);
+			ref.addEventListener('scroll', handleThumbPosition);
 			return () => {
-				observer.unobserve(firstChild)
-				ref.removeEventListener('scroll', handleThumbPosition)
-			}
+				observer.unobserve(firstChild);
+				ref.removeEventListener('scroll', handleThumbPosition);
+			};
 		}
-	}, [handleThumbPosition])
+	}, [handleThumbPosition]);
 
 	useEffect(() => {
-		document.addEventListener('mousemove', handleThumbMousemove)
-		document.addEventListener('mouseup', handleThumbMouseup)
-		document.addEventListener('mouseleave', handleThumbMouseup)
+		document.addEventListener('mousemove', handleThumbMousemove);
+		document.addEventListener('mouseup', handleThumbMouseup);
+		document.addEventListener('mouseleave', handleThumbMouseup);
 		return () => {
-			document.removeEventListener('mousemove', handleThumbMousemove)
-			document.removeEventListener('mouseup', handleThumbMouseup)
-			document.removeEventListener('mouseleave', handleThumbMouseup)
-		}
-	}, [handleThumbMousemove, handleThumbMouseup])
+			document.removeEventListener('mousemove', handleThumbMousemove);
+			document.removeEventListener('mouseup', handleThumbMouseup);
+			document.removeEventListener('mouseleave', handleThumbMouseup);
+		};
+	}, [handleThumbMousemove, handleThumbMouseup]);
 
 	return (
 		<div className={classNames(className, horizontalScrollbarContainerStyle)}>
@@ -212,5 +214,5 @@ export const HorizontalScrollbar = ({
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};

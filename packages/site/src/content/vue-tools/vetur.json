@@ -1,0 +1,8 @@
+{
+	"name": "Vetur",
+	"author": "Pine Wu",
+	"description": "Vue tooling for VS Code.",
+	"image": "./assets/vetur.png",
+	"href": "https://marketplace.visualstudio.com/items?itemName=octref.vetur",
+	"tags": ["VSCode"]
+}

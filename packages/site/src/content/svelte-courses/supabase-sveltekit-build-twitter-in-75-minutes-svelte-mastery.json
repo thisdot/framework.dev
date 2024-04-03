@@ -1,0 +1,19 @@
+{
+	"title": "Supabase & Sveltekit - Build Twitter in 75 minutes",
+	"author": "Svelte Mastery",
+	"image": "./assets/supabase-sveltekit-build-twitter-in-75-minutes-svelte-mastery.png",
+	"description": "Let's build Qwitter!. You're gonna learn about magic links, databases, row level security, storage and.. svelte cubed!",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://www.youtube.com/watch?v=mPQyckogDYc",
+	"tags": [
+		"Supabase",
+		"state management",
+		"tailwind",
+		"routing",
+		"forms",
+		"data fetching",
+		"daisyUI"
+	]
+}

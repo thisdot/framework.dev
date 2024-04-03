@@ -1,18 +1,18 @@
-import classNames from 'classnames'
-import React from 'react'
+import classNames from 'classnames';
+import React from 'react';
 import {
 	pitchCardHeadingSoftStyle,
 	pitchCardHeadingStyle,
 	pitchCardImage,
 	pitchCardStyle,
-} from './pitch-card.css'
+} from './pitch-card.css';
 
 export interface PitchCardProps extends React.ComponentPropsWithoutRef<'div'> {
 	pitchText: {
-		highlightedText: string
-		softText: string
-	}
-	imageUrl: string
+		highlightedText: string;
+		softText: string;
+	};
+	imageUrl: string;
 }
 
 export function PitchCard({
@@ -33,5 +33,5 @@ export function PitchCard({
 				<img src={imageUrl} alt={pitchText.highlightedText} />
 			</div>
 		</div>
-	)
+	);
 }

@@ -1,0 +1,11 @@
+{
+	"name": "negotiator",
+	"description": "An HTTP content negotiator for Deno.",
+	"href": "https://deno.land/x/negotiator",
+	"package": "",
+	"repo": "https://github.com/ako-deno/negotiator",
+	"author": "ako-deno",
+	"image": "./assets/negotiator.png",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

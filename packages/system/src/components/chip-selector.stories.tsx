@@ -1,19 +1,18 @@
-import { Story, Meta } from '@storybook/react'
-import {
-	ChipSelector as ChipSelectorComponent,
-	ChipSelectorProps,
-} from './chip-selector'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { ChipSelector as ChipSelectorComponent } from './chip-selector';
 
-export default {
+const meta: Meta<typeof ChipSelectorComponent> = {
 	title: 'Chip Selector',
 	component: ChipSelectorComponent,
 	args: {
 		label: 'Hello world',
 	},
-} as Meta
+};
+export default meta;
 
-const Template: Story<ChipSelectorProps> = (args) => (
-	<ChipSelectorComponent {...args} />
-)
+type Story = StoryObj<typeof ChipSelectorComponent>;
 
-export const ChipSelector = Template.bind({})
+export const ChipSelector: Story = {
+	render: (args) => <ChipSelectorComponent {...args} />,
+};

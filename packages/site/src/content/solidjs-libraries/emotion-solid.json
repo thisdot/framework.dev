@@ -1,0 +1,11 @@
+{
+	"name": "Emotion Solid",
+	"author": "tqwewe",
+	"repo": "https://www.github.com/tqwewe/emotion-solid",
+	"package": "https://www.npmjs.com/package/emotion-solid",
+	"href": "https://github.com/tqwewe/emotion-solid",
+	"description": "Emotion JS support for Solid JS.",
+	"image": "./assets/emotion-solid.png",
+	"tags": ["styling"],
+	"language": "TypeScript"
+}

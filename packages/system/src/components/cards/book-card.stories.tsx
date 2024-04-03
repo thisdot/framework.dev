@@ -1,10 +1,11 @@
-import { Story, Meta } from '@storybook/react'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { BookCard as BookCardComponent, BookCardProps } from './book-card'
-import { exampleBooks } from '../../util/example-content'
-import { imageFirstCardGrid } from './card-layouts.css'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { BookCard as BookCardComponent } from './book-card';
+import { exampleBooks } from '../../util/example-content';
+import { imageFirstCardGrid } from './card-layouts.css';
 
-export default {
+const meta: Meta<typeof BookCardComponent> = {
 	title: 'Cards/Book Card',
 	component: BookCardComponent,
 	args: {
@@ -18,21 +19,24 @@ export default {
 			action: 'onTagClick',
 		},
 	},
-} as Meta
+};
+export default meta;
 
-const Template: Story<BookCardProps> = (args) => (
-	<div
-		className={sprinkles({
-			backgroundColor: 'surface4',
-			padding: 16,
-		})}
-	>
-		<div className={imageFirstCardGrid}>
-			{exampleBooks.map((book) => (
-				<BookCardComponent key={book.title} {...args} book={book} />
-			))}
+type Story = StoryObj<typeof BookCardComponent>;
+
+export const BookCard: Story = {
+	render: (args) => (
+		<div
+			className={sprinkles({
+				backgroundColor: 'surface4',
+				padding: 16,
+			})}
+		>
+			<div className={imageFirstCardGrid}>
+				{exampleBooks.map((book) => (
+					<BookCardComponent key={book.title} {...args} book={book} />
+				))}
+			</div>
 		</div>
-	</div>
-)
-
-export const BookCard = Template.bind({})
+	),
+};

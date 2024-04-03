@@ -1,0 +1,8 @@
+{
+	"name": "Xtremejs",
+	"description": "Professional development conference dedicated to all things JavaScript.",
+	"image": "./assets/xtremejs.png",
+	"type": "Online Events",
+	"href": "https://xtremejs.dev/",
+	"tags": ["conferences"]
+}

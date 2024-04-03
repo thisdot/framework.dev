@@ -1,0 +1,11 @@
+{
+	"name": "GraphQL.js",
+	"author": "Meta",
+	"repo": "https://www.github.com/graphql/graphql-js",
+	"package": "https://www.npmjs.com/package/graphql",
+	"href": "https://graphql.org/graphql-js/",
+	"description": "The JavaScript reference implementation for GraphQL, a query language for APIs created by Facebook.",
+	"image": "./assets/graphql-js.png",
+	"language": "TypeScript",
+	"tags": ["frameworks"]
+}

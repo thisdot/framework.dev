@@ -1,0 +1,8 @@
+{
+	"name": "nodist",
+	"author": "Marcel Klehr",
+	"description": "A node.js and npm version manager for the windows folks out there. Inspired by n. And nodenv.",
+	"image": "./assets/nodist.png",
+	"href": "https://github.com/nullivex/nodist",
+	"tags": ["development"]
+}

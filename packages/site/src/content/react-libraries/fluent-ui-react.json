@@ -1,0 +1,11 @@
+{
+	"name": "Fluent UI React",
+	"author": "Microsoft",
+	"repo": "https://www.github.com/microsoft/fluentui",
+	"package": "https://www.npmjs.com/package/@fluentui/react",
+	"href": "https://aka.ms/fluentui-react",
+	"description": "Fluent UI web represents a collection of utilities, React components, and web components for building web applications. It is the web version of Microsoft's cross-platform Fluent UI design framework.",
+	"image": "./assets/fluent-ui-react.png",
+	"tags": ["component"],
+	"language": "TypeScript"
+}

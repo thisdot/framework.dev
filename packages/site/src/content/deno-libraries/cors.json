@@ -1,0 +1,11 @@
+{
+	"name": "cors",
+	"description": "Deno.js CORS middleware",
+	"href": "https://deno.land/x/cors",
+	"package": "",
+	"repo": "https://github.com/tajpouria/cors",
+	"author": "Pouria Taj",
+	"image": "./assets/cors.png",
+	"tags": ["utilities", "web servers"],
+	"language": "TypeScript"
+}

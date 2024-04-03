@@ -1,36 +1,24 @@
-import logo1 from './example-assets/logo-1.png'
-import logo2 from './example-assets/logo-2.png'
-import logo3 from './example-assets/logo-3.png'
-import company1 from './example-assets/company1.png'
-import tool1 from './example-assets/tool-1.png'
-import { Course, courseIndexMetadata } from '../models/course'
-import { Library, libraryIndexMetadata } from '../models/library'
-import book1 from './example-assets/book-1.png'
-import book2 from './example-assets/book-2.png'
-import book3 from './example-assets/book-3.png'
-import { Book, bookIndexMetadata } from '../models/book'
-import { Podcast, podcastIndexMetadata } from '../models/podcast'
-import { Community, communityIndexMetadata } from '../models/community'
-import { Company } from '../models/company'
-import { CodeExample } from '../models/code-example'
-import { Tool, toolIndexMetadata } from '../models/tool'
-import { AllCategories } from '../models/all-categories'
-import { Blog, blogIndexMetadata } from '../models/blog'
-import { LibraryTag } from '../models/library-tag'
+import { type Course, courseIndexMetadata } from '../models/course';
+import { type Library, libraryIndexMetadata } from '../models/library';
+import { type Book, bookIndexMetadata } from '../models/book';
+import { type Podcast, podcastIndexMetadata } from '../models/podcast';
+import { type Community, communityIndexMetadata } from '../models/community';
+import { type Company } from '../models/company';
+import { type CodeExample } from '../models/code-example';
+import { type Tool, toolIndexMetadata } from '../models/tool';
+import { type AllCategories } from '../models/all-categories';
+import { type Blog, blogIndexMetadata } from '../models/blog';
+import { LibraryTag } from '../models/library-tag';
 
-export const exampleTags = [
-	'accessibility',
-	'state management',
-	'redux',
-] as const
+export const exampleTags = ['accessibility', 'state management', 'redux'];
 
-export type ExampleTag = (typeof exampleTags)[number]
+export type ExampleTag = (typeof exampleTags)[number];
 
 export const exampleCourses: Course<ExampleTag>[] = [
 	{
 		title: 'Code 15 React Projects - Complete Course',
 		author: 'freeCodeCamp',
-		image: logo1,
+		image: './example-assets/logo-1.png',
 		description:
 			'Improve your skills with the React JavaScript library by building 15 projects using React.',
 		paymentType: 'free',
@@ -42,7 +30,7 @@ export const exampleCourses: Course<ExampleTag>[] = [
 	{
 		title: 'Fullstack React',
 		author: 'newline',
-		image: logo3,
+		image: './example-assets/logo-3.png',
 		description:
 			'The up-to-date, in-depth, complete guide to React and friends.',
 		paymentType: 'paid',
@@ -54,7 +42,7 @@ export const exampleCourses: Course<ExampleTag>[] = [
 	{
 		title: 'Mastering React',
 		author: 'Mosh',
-		image: logo2,
+		image: './example-assets/logo-2.png',
 		description:
 			"If you're on React 15, take your components to new levels with these advanced patterns, lectures, exercises, and more.",
 		paymentType: 'paid',
@@ -63,7 +51,7 @@ export const exampleCourses: Course<ExampleTag>[] = [
 		href: 'https://codewithmosh.com/p/mastering-react',
 		tags: ['state management'],
 	},
-]
+];
 
 export const exampleLibraries: Library[] = [
 	{
@@ -745,14 +733,14 @@ export const exampleLibraries: Library[] = [
 		description: 'A general purpose internationalization library in 298 bytes',
 		language: 'JavaScript',
 	},
-]
+];
 
 export const exampleBooks: Book<string>[] = [
 	{
 		href: '/atomic-habits',
 		title:
 			'Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones',
-		image: book1,
+		image: './example-assets/book-1.png',
 		authors: ['James Clear'],
 		yearOfPublication: 2018,
 		numberOfPages: 320,
@@ -764,7 +752,7 @@ export const exampleBooks: Book<string>[] = [
 	{
 		href: '/harry-potter',
 		title: "Harry Potter and the Sorcerer's Stone",
-		image: book2,
+		image: './example-assets/book-2.png',
 		authors: ['J. K. Rowling', 'Robert Galbraith'],
 		yearOfPublication: 1997,
 		numberOfPages: 223,
@@ -776,7 +764,7 @@ export const exampleBooks: Book<string>[] = [
 	{
 		href: '/cryptonomicon',
 		title: 'Cryptonomicon',
-		image: book3,
+		image: './example-assets/book-3.png',
 		authors: ['Neal Stephenson'],
 		yearOfPublication: 1999,
 		numberOfPages: 918,
@@ -785,7 +773,7 @@ export const exampleBooks: Book<string>[] = [
 		description:
 			'Randy Waterhouse spearheads a movement to create a safe haven for data in a world where information equals power and big business and government seek to control the flow of knowledge.',
 	},
-]
+];
 
 export const examplePodcasts: Podcast<string>[] = [
 	{
@@ -818,7 +806,7 @@ export const examplePodcasts: Podcast<string>[] = [
 		tags: ['react'],
 		href: 'https://devchat.tv/podcasts/react-round-up/',
 	},
-]
+];
 
 export const exampleCommunities: Community<string>[] = [
 	{
@@ -826,7 +814,7 @@ export const exampleCommunities: Community<string>[] = [
 		description: 'Example community, full of people who, uh, commune.',
 		image:
 			'https://picsum.photos/seed/3aea63e0-3db5-517c-99e7-817a11b35b3e/250',
-		type: 'Discord Community',
+		type: 'Discord',
 		tags: ['accessibility'],
 		href: 'https://google.com',
 	},
@@ -849,19 +837,19 @@ export const exampleCommunities: Community<string>[] = [
 		tags: ['graphQL'],
 		href: 'https://duckduckgo.com',
 	},
-]
+];
 
 export const exampleCompanies: Company<'consultancy'>[] = [
 	{
 		name: 'This Dot',
 		description:
 			'Provides architectural guidance, staff augmentation, on demand Subject Matter Experts, temporary CTOs, one-on-one pairing, mentorship, and open source strategy support.',
-		image: company1,
+		image: './example-assets/company1.png',
 		numberOfEmployees: '10 to 50',
 		href: 'https://labs.thisdot.co',
 		tags: ['consultancy'],
 	},
-]
+];
 
 export const exampleCodeExamples: CodeExample<ExampleTag>[] = [
 	{
@@ -871,18 +859,18 @@ export const exampleCodeExamples: CodeExample<ExampleTag>[] = [
 		href: 'https://codesandbox.io/s/un8my',
 		tags: ['redux', 'state management'],
 	},
-]
+];
 
 export const exampleTools: Tool<string>[] = [
 	{
 		name: 'Doge Generator',
 		author: 'Jackson Palmer',
 		description: 'Wow. Doge meme generator. Very plugin.',
-		image: tool1,
+		image: './example-assets/tool-1.png',
 		tags: ['Data Visualization', 'Web3', 'Hooks'],
 		href: 'https://dogecoin.com/',
 	},
-]
+];
 
 export const exampleBlogs: Blog<ExampleTag>[] = [
 	{
@@ -911,7 +899,7 @@ export const exampleBlogs: Blog<ExampleTag>[] = [
 		href: 'https://www.robinwieruch.de/categories/react/',
 		tags: [],
 	},
-]
+];
 
 export const exampleSearchData: AllCategories[] = [
 	{
@@ -956,4 +944,4 @@ export const exampleSearchData: AllCategories[] = [
 		name: toolIndexMetadata.name,
 		tags: exampleTags,
 	},
-]
+];

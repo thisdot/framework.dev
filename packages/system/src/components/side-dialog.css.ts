@@ -1,6 +1,6 @@
-import { recipe } from '@vanilla-extract/recipes'
-import type { VariantSelection } from '@framework/system/src/util/type-utils'
-import { breakpoints, sprinkles } from '../sprinkles/sprinkles.css'
+import { recipe } from '@vanilla-extract/recipes';
+import type { VariantSelection } from '@framework/system/src/util/type-utils';
+import { breakpoints, sprinkles } from '../sprinkles/sprinkles.css';
 
 const dialogOverlayVariants = {
 	state: {
@@ -12,11 +12,11 @@ const dialogOverlayVariants = {
 			pointerEvents: 'none',
 		},
 	},
-} as const
+} as const;
 
 export type DialogOverlayVariants = VariantSelection<
 	typeof dialogOverlayVariants
->
+>;
 
 export const dialogOverlayStyle = recipe({
 	base: {
@@ -31,7 +31,7 @@ export const dialogOverlayStyle = recipe({
 		transitionTimingFunction: 'ease-out',
 	},
 	variants: dialogOverlayVariants,
-})
+});
 
 const dialogContentVariants = {
 	state: {
@@ -60,11 +60,11 @@ const dialogContentVariants = {
 			},
 		},
 	},
-} as const
+} as const;
 
 export type DialogContentVariants = VariantSelection<
 	typeof dialogContentVariants
->
+>;
 
 export const dialogContentStyle = recipe({
 	base: [
@@ -99,4 +99,4 @@ export const dialogContentStyle = recipe({
 			},
 		},
 	],
-})
+});

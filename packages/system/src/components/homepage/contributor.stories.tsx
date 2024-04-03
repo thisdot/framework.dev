@@ -1,10 +1,8 @@
-import { Story, Meta } from '@storybook/react'
-import {
-	Contributor as ContributorComponent,
-	ContributorProps,
-} from './contributor'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Contributor as ContributorComponent } from './contributor';
 
-export default {
+const meta: Meta<typeof ContributorComponent> = {
 	title: 'Home/Contributor',
 	component: ContributorComponent,
 	args: {
@@ -14,10 +12,11 @@ export default {
 			avatarUrl: 'https://github.com/ktrz.png',
 		},
 	},
-} as Meta
+};
+export default meta;
 
-const Template: Story<ContributorProps> = (args) => (
-	<ContributorComponent {...args} />
-)
+type Story = StoryObj<typeof ContributorComponent>;
 
-export const Contributor = Template.bind({})
+export const Contributor: Story = {
+	render: (args) => <ContributorComponent {...args} />,
+};

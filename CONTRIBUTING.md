@@ -19,7 +19,8 @@ repository, you are agreeing to its rules.
 After you have cloned the project, run `yarn install` in your terminal to
 install the dependencies.
 
-To run any of the dev servers for specific packages, you can use `yarn dev:<package-name>`.
+To run any of the dev servers for specific packages, you can use
+`yarn dev:<package-name>`.
 
 For example:
 

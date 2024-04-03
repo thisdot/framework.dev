@@ -1,0 +1,11 @@
+{
+	"name": "lumberjack",
+	"author": "@ng-worker",
+	"repo": "https://www.github.com/ngworker/lumberjack",
+	"package": "https://www.npmjs.com/package/lumberjack",
+	"href": "https://github.com/ngworker/lumberjack",
+	"description": "Lumberjack is a versatile Angular logging library, specifically designed to be extended and customized. It provides a few simple log drivers (logging mechanisms, transports, log drivers) out-of-the-box.",
+	"image": "./assets/lumberjack.svg",
+	"tags": ["logging"],
+	"language": "TypeScript"
+}

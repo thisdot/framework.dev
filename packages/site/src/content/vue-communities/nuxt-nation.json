@@ -1,0 +1,8 @@
+{
+	"name": "Nuxt Nation",
+	"description": "One of the largest Nuxt conferences in the world.",
+	"image": "./assets/nuxt-nation.png",
+	"type": "Online Events",
+	"href": "https://nuxtnation.com/",
+	"tags": ["conferences"]
+}

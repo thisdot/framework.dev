@@ -1,15 +1,15 @@
-import classNames from 'classnames'
-import React from 'react'
+import classNames from 'classnames';
+import React from 'react';
 import {
 	LinkCardGroupItemStyle,
 	LinkCardGroupStyle,
-} from './link-card-group.css'
-import { LinkCard, LinkCardProps } from './link-card'
+} from './link-card-group.css';
+import { LinkCard, type LinkCardProps } from './link-card';
 
 export interface LinkCardGroupProps
 	extends React.ComponentPropsWithoutRef<'div'> {
-	cards: LinkCardProps[]
-	columns?: number
+	cards: LinkCardProps[];
+	columns?: number;
 }
 
 export function LinkCardGroup({
@@ -24,5 +24,5 @@ export function LinkCardGroup({
 				<LinkCard key={index} className={LinkCardGroupItemStyle} {...card} />
 			))}
 		</div>
-	)
+	);
 }

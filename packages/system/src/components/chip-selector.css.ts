@@ -1,7 +1,7 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../sprinkles/sprinkles.css'
-import { vars } from '../themes/themes.css'
-import { pxToRem } from '../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../sprinkles/sprinkles.css';
+import { vars } from '../themes/themes.css';
+import { pxToRem } from '../util/style-utils';
 
 export const chipSelectorStyle = style([
 	sprinkles({
@@ -32,7 +32,7 @@ export const chipSelectorStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const chipSelectorIconStyle = style({
 	overflow: 'hidden',
@@ -50,4 +50,4 @@ export const chipSelectorIconStyle = style({
 			backgroundColor: 'currentcolor',
 		},
 	},
-})
+});

@@ -1,0 +1,8 @@
+{
+	"name": "pgAdmin",
+	"author": "The pgAdmin Development Team",
+	"description": "pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world.",
+	"image": "./assets/pgadmin.png",
+	"href": "https://www.pgadmin.org/",
+	"tags": ["database"]
+}

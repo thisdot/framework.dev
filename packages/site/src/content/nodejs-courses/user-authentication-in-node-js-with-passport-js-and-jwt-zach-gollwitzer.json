@@ -1,0 +1,11 @@
+{
+	"title": "User Authentication in Node.js with Passport.js and JWT",
+	"author": "Zach Gollwitzer",
+	"image": "./assets/user-authentication-in-node-js-with-passport-js-and-jwt-zach-gollwitzer.jpeg",
+	"description": "In this full course for beginners, you will learn how to implement user authentication from scratch in your web apps. You will learn how to use Passport.js in a Node / Express app.",
+	"paymentType": "free",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://www.youtube.com/watch?v=F-sFp_AvHc8",
+	"tags": ["backend"]
+}

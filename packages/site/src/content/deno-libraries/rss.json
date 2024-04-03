@@ -1,0 +1,11 @@
+{
+	"name": "rss",
+	"description": "📰 Deno module for deserializing RSS or ATOM XML feeds into typed objects ",
+	"href": "https://deno.land/x/rss",
+	"package": "",
+	"repo": "https://github.com/MikaelPorttila/rss",
+	"author": "Mikael Porttila",
+	"image": "./assets/rss.jpeg",
+	"tags": ["utilities", "data fetching"],
+	"language": "TypeScript"
+}

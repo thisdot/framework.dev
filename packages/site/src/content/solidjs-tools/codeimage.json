@@ -1,0 +1,8 @@
+{
+	"name": "CodeImage",
+	"author": "ui.dev",
+	"description": "Create elegant screenshots of your source code. Built with SolidJS.",
+	"image": "./assets/codeimage.svg",
+	"href": "https://github.com/riccardoperra/codeimage",
+	"tags": ["generator"]
+}

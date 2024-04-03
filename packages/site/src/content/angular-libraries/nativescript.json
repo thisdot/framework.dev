@@ -1,0 +1,11 @@
+{
+	"name": "NativeScript",
+	"author": "NativeScript",
+	"repo": "https://www.github.com/NativeScript/NativeScript",
+	"package": "https://www.npmjs.com/package/nativescript",
+	"href": "https://nativescript.org/",
+	"description": "NativeScript empowers you to access native APIs from JavaScript directly. The framework currently provides iOS and Android runtimes for rich mobile development and can be utilized in a number of diverse use cases.",
+	"image": "./assets/nativescript.png",
+	"tags": ["frameworks"],
+	"language": "TypeScript"
+}

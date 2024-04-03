@@ -1,0 +1,11 @@
+{
+	"name": "Observer-Spy",
+	"author": "HiRez.io",
+	"repo": "https://www.github.com/hirezio/observer-spy",
+	"package": "https://www.npmjs.com/package/@hirez_io/observer-spy",
+	"href": "https://github.com/hirezio/observer-spy",
+	"description": "This library makes RxJS Observables testing easy!",
+	"image": "./assets/observer-spy.png",
+	"tags": ["testing"],
+	"language": "TypeScript"
+}

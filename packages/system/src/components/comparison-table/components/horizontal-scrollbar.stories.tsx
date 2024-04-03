@@ -1,10 +1,10 @@
-import { Story, Meta } from '@storybook/react'
-import { HorizontalScrollbar as HorizontalScrollbarComponent } from './horizontal-scrollbar'
-import { vars } from '../../../themes/themes.css'
-import { exampleScrollbarTableData } from './example-data'
-import React from 'react'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { HorizontalScrollbar as HorizontalScrollbarComponent } from './horizontal-scrollbar';
+import { vars } from '../../../themes/themes.css';
+import { exampleScrollbarTableData } from './example-data';
 
-export default {
+const meta: Meta<typeof HorizontalScrollbarComponent> = {
 	title: 'Horizontal Scrollbar',
 	component: HorizontalScrollbarComponent,
 	parameters: {
@@ -20,27 +20,30 @@ export default {
 		},
 		viewport: { defaultViewport: 'tablet' },
 	},
-} as Meta
+};
+export default meta;
 
-const Template: Story<React.ComponentPropsWithoutRef<'div'>> = () => (
-	<HorizontalScrollbarComponent>
-		<table>
-			<tbody>
-				{exampleScrollbarTableData.map((row) => (
-					<tr key={row.id}>
-						{Object.entries(row).map(([key, value]) => (
-							<td
-								key={`row-${row.id}-${key}`}
-								style={{ background: 'white', padding: '12px' }}
-							>
-								{value}
-							</td>
-						))}
-					</tr>
-				))}
-			</tbody>
-		</table>
-	</HorizontalScrollbarComponent>
-)
+type Story = StoryObj<typeof HorizontalScrollbarComponent>;
 
-export const HorizontalScrollbar = Template.bind({})
+export const HorizontalScrollbar: Story = {
+	render: () => (
+		<HorizontalScrollbarComponent>
+			<table>
+				<tbody>
+					{exampleScrollbarTableData.map((row) => (
+						<tr key={row.id}>
+							{Object.entries(row).map(([key, value]) => (
+								<td
+									key={`row-${row.id}-${key}`}
+									style={{ background: 'white', padding: '12px' }}
+								>
+									{value}
+								</td>
+							))}
+						</tr>
+					))}
+				</tbody>
+			</table>
+		</HorizontalScrollbarComponent>
+	),
+};

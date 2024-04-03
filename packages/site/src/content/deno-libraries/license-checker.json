@@ -1,0 +1,11 @@
+{
+	"name": "license_checker",
+	"description": "📄 CLI tool for checking license headers in files",
+	"href": "https://deno.land/x/license_checker",
+	"package": "",
+	"repo": "https://github.com/kt3k/deno_license_checker",
+	"author": "Yoshiya Hinosawa",
+	"image": "./assets/license-checker.jpeg",
+	"tags": ["utilities", "documentation"],
+	"language": "TypeScript"
+}

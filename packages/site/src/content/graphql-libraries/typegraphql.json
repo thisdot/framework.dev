@@ -1,0 +1,11 @@
+{
+	"name": "TypeGraphQL",
+	"author": "Michał Lytek",
+	"repo": "https://www.github.com/MichalLytek/type-graphql",
+	"package": "https://www.npmjs.com/package/type-graphql",
+	"href": "https://typegraphql.com/",
+	"description": "Modern framework for GraphQL API in Node.js",
+	"image": "./assets/typegraphql.png",
+	"language": "NodeJS",
+	"tags": ["data processing"]
+}

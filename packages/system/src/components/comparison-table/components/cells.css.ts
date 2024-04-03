@@ -1,7 +1,7 @@
-import { style } from '@vanilla-extract/css'
-import { breakpoints, sprinkles } from '../../../sprinkles/sprinkles.css'
-import { pxToRem } from '../../../util/style-utils'
-import { vars } from '../../../themes/themes.css'
+import { style } from '@vanilla-extract/css';
+import { breakpoints, sprinkles } from '../../../sprinkles/sprinkles.css';
+import { pxToRem } from '../../../util/style-utils';
+import { vars } from '../../../themes/themes.css';
 
 const cellStyle = style([
 	sprinkles({
@@ -16,7 +16,7 @@ const cellStyle = style([
 	{
 		maxWidth: '40vw',
 	},
-])
+]);
 
 export const cellTHStyle = style([
 	cellStyle,
@@ -46,7 +46,7 @@ export const cellTHStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const cellTHButtonStyle = style([
 	sprinkles({
@@ -98,7 +98,7 @@ export const cellTHButtonStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const cellTDStyle = style([
 	cellStyle,
@@ -110,7 +110,7 @@ export const cellTDStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const cellContentsStyle = style([
 	{
@@ -122,7 +122,7 @@ export const cellContentsStyle = style([
 		textOverflow: 'ellipsis',
 		overflow: 'hidden',
 	},
-])
+]);
 
 export const rowHeadingStyle = style([
 	cellStyle,
@@ -135,7 +135,7 @@ export const rowHeadingStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const rowHeadingContentsStyle = style([
 	sprinkles({
@@ -143,4 +143,4 @@ export const rowHeadingContentsStyle = style([
 		gap: 12,
 	}),
 	cellContentsStyle,
-])
+]);

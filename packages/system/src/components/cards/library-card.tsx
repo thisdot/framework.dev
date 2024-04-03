@@ -1,17 +1,18 @@
-import classNames from 'classnames'
-import { Library } from '../../models/library'
+import React from 'react';
+import classNames from 'classnames';
+import { type Library } from '../../models/library';
 import {
 	libraryCardBadgeStyle,
 	libraryPackageLinkStyle,
 	libraryPackageTextStyle,
-} from './library-card.css'
+} from './library-card.css';
 import {
 	getBundleSizeBadge,
 	getGitHubStarsBadge,
 	getNpmDownloadsBadge,
-} from '../../util/stats-util'
-import { track } from '../../util/analytics-utils'
-import { ResourceCard, ResourceCardProps } from './resource-card'
+} from '../../util/stats-util';
+import { track } from '../../util/analytics-utils';
+import { ResourceCard, type ResourceCardProps } from './resource-card';
 
 export type LibraryCardProps = Omit<
 	ResourceCardProps,
@@ -25,8 +26,8 @@ export type LibraryCardProps = Omit<
 	| 'attributes'
 	| 'children'
 > & {
-	library: Library
-}
+	library: Library;
+};
 
 export function LibraryCard({ library, ...props }: LibraryCardProps) {
 	return (
@@ -46,7 +47,7 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 					{library?.repo.includes('github.com') ? (
 						<Badge
 							data={getGitHubStarsBadge(
-								library.repo.replace(/https:\/\/(www\.)?github\.com\//, '')
+								library.repo.replace(/https:\/\/(www\.)?github\.com\//, ''),
 							)}
 							href={library.repo}
 							label={`${library.name} GitHub Repository`}
@@ -63,18 +64,18 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 						<>
 							<Badge
 								data={getNpmDownloadsBadge(
-									library.package.replace('https://www.npmjs.com/package/', '')
+									library.package.replace('https://www.npmjs.com/package/', ''),
 								)}
 								href={library.package}
 								label={`${library.name} NPM Package`}
 							/>
 							<Badge
 								data={getBundleSizeBadge(
-									library.package.replace('https://www.npmjs.com/package/', '')
+									library.package.replace('https://www.npmjs.com/package/', ''),
 								)}
 								href={`https://bundlephobia.com/package/${library.package.replace(
 									'https://www.npmjs.com/package/',
-									''
+									'',
 								)}`}
 								label={`${library.name} Bundle Size Stats`}
 							/>
@@ -84,7 +85,7 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 						<div
 							className={classNames(
 								libraryPackageLinkStyle,
-								libraryCardBadgeStyle
+								libraryCardBadgeStyle,
 							)}
 						>
 							<a className={libraryPackageTextStyle} href={library.package}>
@@ -98,19 +99,19 @@ export function LibraryCard({ library, ...props }: LibraryCardProps) {
 		>
 			{library.description}
 		</ResourceCard>
-	)
+	);
 }
 
 type BadgeProps = {
-	data?: string
-	href: string
-	label: string
-}
+	data?: string;
+	href: string;
+	label: string;
+};
 
 function Badge({ data, href, label }: BadgeProps) {
 	return (
 		<a href={href} target="_blank" rel="noreferrer">
 			<img className={libraryCardBadgeStyle} src={data} alt={label} />
 		</a>
-	)
+	);
 }

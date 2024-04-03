@@ -1,20 +1,25 @@
-import { Story, Meta } from '@storybook/react'
-import { allCategoriesMetadata } from '../models/all-categories'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 import {
-	DiscreteAttribute as DiscreteAttributeComponent,
-	DiscreteAttributeProps,
-} from './discrete-attribute'
-import { ungroupFieldFilters } from './search/query-util'
+	allCategoriesMetadata,
+	type FieldFilter,
+} from '../models/all-categories';
+import { DiscreteAttribute as DiscreteAttributeComponent } from './discrete-attribute';
+import { ungroupFieldFilters } from './search/query-util';
 
 const attributeMapping = Object.fromEntries(
 	Object.values(allCategoriesMetadata)
 		.flatMap((metadata) =>
-			ungroupFieldFilters(Object.entries(metadata.filterableFields) as any)
+			ungroupFieldFilters(
+				Object.entries(metadata.filterableFields).map(
+					([key, value]) => [key, value] as FieldFilter,
+				),
+			),
 		)
-		.map((entry) => [entry.join(':'), entry])
-)
+		.map((entry) => [entry.join(':'), entry]),
+);
 
-export default {
+const meta: Meta<typeof DiscreteAttributeComponent> = {
 	title: 'Discrete Attribute',
 	component: DiscreteAttributeComponent,
 	args: {
@@ -28,10 +33,11 @@ export default {
 			mapping: attributeMapping,
 		},
 	},
-} as Meta
+};
+export default meta;
 
-const Template: Story<DiscreteAttributeProps> = (args) => (
-	<DiscreteAttributeComponent {...args} />
-)
+type Story = StoryObj<typeof DiscreteAttributeComponent>;
 
-export const DiscreteAttribute = Template.bind({})
+export const DiscreteAttribute: Story = {
+	render: (args) => <DiscreteAttributeComponent {...args} />,
+};

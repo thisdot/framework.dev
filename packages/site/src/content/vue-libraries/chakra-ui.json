@@ -1,0 +1,11 @@
+{
+	"name": "Chakra UI",
+	"author": "Jonathan Bakebwa",
+	"repo": "https://www.github.com/chakra-ui/chakra-ui-vue",
+	"package": "https://www.npmjs.com/package/@chakra-ui/vue",
+	"href": "https://vue.chakra-ui.com/",
+	"description": "Chakra UI gives you a set of accessible and composable Vue components that you can use to build your favourite applications and sites. Made for Vue 2.X",
+	"image": "./assets/chakra-ui.svg",
+	"tags": ["component"],
+	"language": "JavaScript"
+}

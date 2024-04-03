@@ -1,0 +1,11 @@
+{
+	"title": "JSON Web Token (JWT) Authentication with Node.js and Auth0",
+	"author": "Joel Lord",
+	"image": "./assets/json-web-token-jwt-authentication-with-node-js-and-auth-0-joel-lord.png",
+	"description": "In this course, we will build a simple authentication server that will act as a token issuer, and we will use those tokens to access resources on an API. Starting from scratch, you will learn how easy token based authentication can be and will understand how to use them on your APIs as well as on the front end of your web applications.",
+	"paymentType": "paid",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://egghead.io/courses/json-web-token-jwt-authentication-with-node-js-and-auth0",
+	"tags": ["backend"]
+}

@@ -1,0 +1,11 @@
+{
+	"name": "Ngx Sub Form",
+	"author": "cloudnc",
+	"repo": "https://www.github.com/cloudnc/ngx-sub-form",
+	"package": "https://www.npmjs.com/package/ngx-sub-form",
+	"href": "https://github.com/cloudnc/ngx-sub-form",
+	"description": "Utility library to improve the robustness of your Angular forms.",
+	"image": "./assets/ngx-sub-form.png",
+	"tags": ["forms"],
+	"language": "TypeScript"
+}

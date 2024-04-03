@@ -1,0 +1,9 @@
+{
+	"title": "Full Stack Leader",
+	"image": "./assets/full-stack-leader.jpeg",
+	"hosts": ["Ryan Williams"],
+	"description": "Full Stack Leader is a series of interviews with today's leading technology leaders. The show will cover how they work across some of the main concepts in organizational leadership and resourcing, with a slant toward the digital space. In each episode we sit down with a different leader to hear key stories about their leadership journey as well as run through their Top 5 Tips for inspiring a great team of creators, builders, and innovative thinkers.",
+	"rss": "https://feeds.buzzsprout.com/1815739.rss",
+	"href": "https://player.fm/series/full-stack-leader",
+	"tags": ["general, node, full stack"]
+}

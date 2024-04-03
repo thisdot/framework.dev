@@ -1,0 +1,11 @@
+{
+	"name": "Solid Services",
+	"author": "Exelord",
+	"repo": "https://www.github.com/exelord/solid-services",
+	"package": "https://www.npmjs.com/package/solid-services",
+	"href": "https://github.com/exelord/solid-services",
+	"description": "Services are 'global' objects useful for features that require shared state or persistent connections. They are lazy evaluated, only when used, solving an issue of cross dependencies and contexts tree.",
+	"image": "./assets/solid-services.png",
+	"tags": ["state management"],
+	"language": "TypeScript"
+}

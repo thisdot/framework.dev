@@ -1,0 +1,9 @@
+{
+	"title": "Modern Web",
+	"image": "./assets/modern-web.jpeg",
+	"hosts": ["ThisDot Labs"],
+	"description": "Modern Web is a podcast that explores next generation frameworks, standards, and techniques.",
+	"rss": "https://www.podbean.com/site/podcatcher/index/blog/7YqKYcoGcvP",
+	"href": "https://modernweb.podbean.com/",
+	"tags": ["general"]
+}

@@ -1,0 +1,11 @@
+{
+	"name": "LoopBack",
+	"author": "OpenJS Foundation",
+	"repo": "https://www.github.com/loopbackio/loopback-next",
+	"package": "https://www.npmjs.com/package/@loopback/cli",
+	"href": "https://loopback.io/",
+	"description": "A highly extensible Node.js and TypeScript framework for building APIs and microservices.",
+	"image": "./assets/loopback.svg",
+	"tags": ["frameworks"],
+	"language": "NodeJS"
+}

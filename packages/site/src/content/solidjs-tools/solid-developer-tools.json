@@ -1,0 +1,8 @@
+{
+	"name": "Solid Developer Tools",
+	"author": "Damian Tarnawski",
+	"description": "Library of developer tools, reactivity debugger & Devtools Chrome extension for visualizing SolidJS reactivity graph",
+	"image": "./assets/solid-developer-tools.png",
+	"href": "https://github.com/thetarnav/solid-devtools",
+	"tags": ["development"]
+}

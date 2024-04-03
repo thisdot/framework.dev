@@ -1,0 +1,11 @@
+{
+	"name": "Remix",
+	"author": "Remix",
+	"repo": "https://www.github.com/remix-run/remix",
+	"package": "https://www.npmjs.com/package/remix",
+	"href": "https://github.com/remix-run/remix",
+	"description": "Remix is a full stack web framework that lets you focus on the user interface and work back through web standards to deliver a fast, slick, and resilient user experience. People are gonna love using your stuff.",
+	"image": "./assets/remix.png",
+	"tags": ["frameworks"],
+	"language": "NodeJS"
+}

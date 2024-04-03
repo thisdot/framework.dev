@@ -1,0 +1,11 @@
+{
+	"name": "GraphQL Scalars",
+	"author": "Uri Goldshtein",
+	"repo": "https://www.github.com/urigo/graphql-scalars",
+	"package": "https://www.npmjs.com/package/graphql-scalars",
+	"href": "https://www.the-guild.dev/graphql/scalars",
+	"description": "Data Integrity and Strict Validations on GraphQL",
+	"image": "./assets/graphql-scalars.png",
+	"language": "TypeScript",
+	"tags": ["utilities"]
+}

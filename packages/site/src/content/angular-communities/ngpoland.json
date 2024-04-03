@@ -1,0 +1,8 @@
+{
+	"name": "NgPoland",
+	"description": "One of the largest Angular conferences in Europe.",
+	"image": "./assets/ngpoland.png",
+	"type": "Live and Online Events",
+	"href": "http://ng-poland.pl/",
+	"tags": ["conferences"]
+}

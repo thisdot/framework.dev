@@ -1,0 +1,11 @@
+{
+	"name": "zod",
+	"description": "TypeScript-first schema validation with static type inference",
+	"href": "https://deno.land/x/zod",
+	"package": "",
+	"repo": "https://github.com/colinhacks/zod",
+	"author": "Colin McDonnell",
+	"image": "./assets/zod.png",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

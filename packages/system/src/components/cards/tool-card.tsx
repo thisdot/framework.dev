@@ -1,5 +1,6 @@
-import { Tool } from '../../models/tool'
-import { ResourceCard, ResourceCardProps } from './resource-card'
+import React from 'react';
+import { type Tool } from '../../models/tool';
+import { ResourceCard, type ResourceCardProps } from './resource-card';
 
 export type ToolCardProps = Omit<
 	ResourceCardProps,
@@ -13,8 +14,8 @@ export type ToolCardProps = Omit<
 	| 'attributes'
 	| 'children'
 > & {
-	tool: Tool<string>
-}
+	tool: Tool<string>;
+};
 
 export function ToolCard({ tool, ...props }: ToolCardProps) {
 	return (
@@ -28,5 +29,5 @@ export function ToolCard({ tool, ...props }: ToolCardProps) {
 		>
 			{tool.description}
 		</ResourceCard>
-	)
+	);
 }

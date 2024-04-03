@@ -1,0 +1,11 @@
+{
+	"name": "flat",
+	"description": "A collection of postprocessing utilities for flat",
+	"href": "https://deno.land/x/flat",
+	"package": "",
+	"repo": "https://github.com/githubocto/flat-postprocessing",
+	"author": "GitHub Next",
+	"image": "./assets/flat.png",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

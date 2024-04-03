@@ -1,0 +1,11 @@
+{
+	"name": "Relay",
+	"author": "Meta",
+	"repo": "https://www.github.com/facebook/relay",
+	"package": "https://www.npmjs.com/package/react-relay",
+	"href": "https://relay.dev/",
+	"description": "The GraphQL client that scales with you.",
+	"image": "./assets/relay.png",
+	"language": "JavaScript",
+	"tags": ["data fetching"]
+}

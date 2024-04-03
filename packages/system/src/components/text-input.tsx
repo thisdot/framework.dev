@@ -1,17 +1,17 @@
-import classNames from 'classnames'
-import React from 'react'
-import { useId } from '@reach/auto-id'
+import classNames from 'classnames';
+import React from 'react';
+import { useId } from '@reach/auto-id';
 import {
 	textInputBoxStyle,
 	textInputContainerStyle,
 	textInputLabelStyle,
-} from './text-input.css'
-import { visuallyHidden } from '../styles/utilities.css'
+} from './text-input.css';
+import { visuallyHidden } from '../styles/utilities.css';
 
 export interface TextInputProps
 	extends React.ComponentPropsWithoutRef<'input'> {
-	label: string
-	hideLabel?: boolean
+	label: string;
+	hideLabel?: boolean;
 }
 
 export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
@@ -23,9 +23,9 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 			id: customIdFromProps,
 			...props
 		}: TextInputProps,
-		ref
+		ref,
 	) {
-		const id = useId(customIdFromProps)
+		const id = useId(customIdFromProps);
 		return (
 			<div className={classNames(className, textInputContainerStyle)}>
 				<input
@@ -39,12 +39,12 @@ export const TextInput = React.forwardRef<HTMLInputElement, TextInputProps>(
 					htmlFor={id}
 					className={classNames(
 						textInputLabelStyle,
-						hideLabel && visuallyHidden
+						hideLabel && visuallyHidden,
 					)}
 				>
 					{label}
 				</label>
 			</div>
-		)
-	}
-)
+		);
+	},
+);

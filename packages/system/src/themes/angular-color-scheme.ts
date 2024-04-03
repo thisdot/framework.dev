@@ -1,4 +1,4 @@
-import { ColorPalette } from './theme-from-palette'
+import { type ColorPalette } from './theme-from-palette';
 
 export const angularColorPalette: ColorPalette = {
 	highlight: '#FFB3B3',
@@ -81,4 +81,4 @@ export const angularColorPalette: ColorPalette = {
 	error20: '#680003',
 	error10: '#410001',
 	error0: '#000000',
-}
+};

@@ -1,14 +1,14 @@
-import classNames from 'classnames'
-import React from 'react'
-import { GithubIcon } from '../../icons/github-icon'
-import { SponsorIcon } from '../../icons/sponsor-icon'
+import classNames from 'classnames';
+import React from 'react';
+import { GithubIcon } from '../../icons/github-icon';
+import { SponsorIcon } from '../../icons/sponsor-icon';
 import {
 	footerLinkStyle,
 	footerSponsorIconContainerStyle,
 	footerStyle,
-} from './footer.css'
+} from './footer.css';
 
-export interface FooterProps extends React.ComponentPropsWithoutRef<'footer'> {}
+export type FooterProps = React.ComponentPropsWithoutRef<'footer'>;
 
 export function Footer({ children, className, ...props }: FooterProps) {
 	return (
@@ -37,5 +37,5 @@ export function Footer({ children, className, ...props }: FooterProps) {
 				</div>
 			</div>
 		</footer>
-	)
+	);
 }

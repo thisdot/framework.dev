@@ -1,5 +1,5 @@
-import { style } from '@vanilla-extract/css'
-import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css'
+import { style } from '@vanilla-extract/css';
+import { breakpoints, sprinkles } from '../../sprinkles/sprinkles.css';
 
 export const contentBannerStyle = style([
 	sprinkles({
@@ -42,7 +42,7 @@ export const contentBannerStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const contentBannerTextAreaStyle = style([
 	sprinkles({
@@ -53,19 +53,19 @@ export const contentBannerTextAreaStyle = style([
 		gridArea: 'text',
 		gridTemplateRows: '1fr auto',
 	},
-])
+]);
 
 export const contentBannerHeadingStyle = style([
 	sprinkles({
 		color: 'regularText',
 		textStyle: 'h200',
 	}),
-])
+]);
 
 export const contentBannersViewAllStyle = sprinkles({
 	color: 'tertiary',
 	textStyle: 'button',
-})
+});
 
 export const contentBannerCardImageStyle = style([
 	sprinkles({ borderRadius: 8, marginBottom: 16 }),
@@ -73,7 +73,7 @@ export const contentBannerCardImageStyle = style([
 		aspectRatio: '1 / 1',
 		width: '100%',
 	},
-])
+]);
 
 export const contentBannerTitleStyle = style([
 	sprinkles({
@@ -84,9 +84,9 @@ export const contentBannerTitleStyle = style([
 	{
 		fontWeight: 600,
 	},
-])
+]);
 
 export const contentBannerHostStyle = sprinkles({
 	color: 'softText',
 	textStyle: 'bodyShort3',
-})
+});

@@ -1,24 +1,24 @@
-import React, { useState } from 'react'
-import { Button } from '../button'
-import { CardDivider } from '../card-divider'
+import React, { useState } from 'react';
+import { Button } from '../button';
+import { CardDivider } from '../card-divider';
 import {
 	filterMenuFilterContainerStyle,
 	filterMenuFooterStyle,
 	filterMenuStyle,
-} from './filter-menu.css'
-import { FilterSet, QueryParams } from './types'
-import { Filter } from './filter'
-import { TagFilter } from './tag-filter'
-import classNames from 'classnames'
-import { TextInput } from '../text-input'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
+} from './filter-menu.css';
+import { type FilterSet, type QueryParams } from './types';
+import { Filter } from './filter';
+import { TagFilter } from './tag-filter';
+import classNames from 'classnames';
+import { TextInput } from '../text-input';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
 
 export type FilterMenuProps = React.ComponentPropsWithoutRef<'form'> & {
-	params: QueryParams
-	availableFilters: FilterSet
-	onConfirm: (newParams: QueryParams) => void
-	popularTags: string[]
-}
+	params: QueryParams;
+	availableFilters: FilterSet;
+	onConfirm: (newParams: QueryParams) => void;
+	popularTags: string[];
+};
 
 export function FilterMenu({
 	className,
@@ -28,14 +28,14 @@ export function FilterMenu({
 	popularTags,
 	...props
 }: FilterMenuProps) {
-	const [params, setParams] = useState<QueryParams>(initialParams)
-	const { filters } = params
+	const [params, setParams] = useState<QueryParams>(initialParams);
+	const { filters } = params;
 	return (
 		<form
 			aria-label="Advanced search controls"
 			onSubmit={(e) => {
-				e.preventDefault()
-				onConfirm(params)
+				e.preventDefault();
+				onConfirm(params);
 			}}
 			className={classNames(className, filterMenuStyle)}
 			{...props}
@@ -70,7 +70,7 @@ export function FilterMenu({
 										...oldParams.filters,
 										field: [
 											...filters.field.filter(
-												([name]) => name !== fieldFilter[0]
+												([name]) => name !== fieldFilter[0],
 											),
 											newValue,
 										],
@@ -112,5 +112,5 @@ export function FilterMenu({
 				</Button>
 			</footer>
 		</form>
-	)
+	);
 }

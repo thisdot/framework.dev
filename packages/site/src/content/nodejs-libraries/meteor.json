@@ -1,0 +1,11 @@
+{
+	"name": "Meteor",
+	"author": "Harminder Virk",
+	"repo": "https://www.github.com/meteor/meteor",
+	"package": "https://www.npmjs.com/package/meteor",
+	"href": "https://www.meteor.com/",
+	"description": "Meteor is an open source platform for seamlessly building and deploying Web, Mobile, and Desktop applications in Javascript.",
+	"image": "./assets/meteor.svg",
+	"tags": ["frameworks"],
+	"language": "NodeJS"
+}

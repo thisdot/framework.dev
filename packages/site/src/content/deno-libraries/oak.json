@@ -1,0 +1,11 @@
+{
+	"name": "oak",
+	"description": "A middleware framework for handling HTTP with Deno 🐿️ 🦕",
+	"href": "https://deno.land/x/oak",
+	"package": "",
+	"repo": "https://github.com/oakserver/oak",
+	"author": "oak",
+	"image": "./assets/oak.png",
+	"tags": ["frameworks", "web servers"],
+	"language": "TypeScript"
+}

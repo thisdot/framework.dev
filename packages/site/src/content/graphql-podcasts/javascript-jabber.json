@@ -1,0 +1,15 @@
+{
+	"title": "JavaScript Jabber",
+	"image": "./assets/javascript-jabber.jpeg",
+	"hosts": [
+		"AJ ONeal",
+		"Charles Max Wood",
+		"Aimee Knight",
+		"Dan Shappir",
+		"Steve Edwards"
+	],
+	"description": "A weekly discussion by top-end JavaScript developers on the technology and skills needed to level up on your JavaScript journey.",
+	"rss": "https://topenddevs.com/podcasts/javascript-jabber/rss.rss",
+	"href": "https://topenddevs.com/podcasts/javascript-jabber",
+	"tags": ["general"]
+}

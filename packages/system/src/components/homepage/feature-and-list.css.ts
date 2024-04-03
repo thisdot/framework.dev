@@ -1,7 +1,7 @@
-import { style } from '@vanilla-extract/css'
-import { breakpoints, sprinkles, borders } from '../../sprinkles/sprinkles.css'
-import { vars } from '../../themes/themes.css'
-import { pxToRem } from '../../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { breakpoints, sprinkles, borders } from '../../sprinkles/sprinkles.css';
+import { vars } from '../../themes/themes.css';
+import { pxToRem } from '../../util/style-utils';
 
 export const featureAndListStyle = style([
 	sprinkles({
@@ -10,7 +10,7 @@ export const featureAndListStyle = style([
 	{
 		// Put custom CSS here
 	},
-])
+]);
 
 export const featureAndListHeadingStyle = style([
 	sprinkles({
@@ -20,7 +20,7 @@ export const featureAndListHeadingStyle = style([
 	{
 		color: vars.palette.neutralVariant20,
 	},
-])
+]);
 
 export const featureAndListBoxStyle = style([
 	sprinkles({
@@ -48,7 +48,7 @@ export const featureAndListBoxStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const featureAndListFeaturedStyle = style([
 	sprinkles({
@@ -71,13 +71,13 @@ export const featureAndListFeaturedStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const featureAndListFeatureImageStyle = sprinkles({
 	borderRadius: 8,
 	marginBottom: 12,
 	width: 'full',
-})
+});
 
 export const featureAndListFeatureBookContainerStyle = style([
 	sprinkles({
@@ -91,13 +91,13 @@ export const featureAndListFeatureBookContainerStyle = style([
 		backgroundColor: vars.palette.neutral95,
 		placeItems: 'center',
 	},
-])
+]);
 
 export const featureAndListFeatureBookStyle = style({
 	filter: `
 	drop-shadow(0px 8px 31px rgba(0, 0, 0, 0.13))
 	drop-shadow(0px 1.00172px 3.88168px rgba(0, 0, 0, 0.065))`,
-})
+});
 
 export const featureAndListFeatureTitleStyle = style([
 	sprinkles({
@@ -108,7 +108,7 @@ export const featureAndListFeatureTitleStyle = style([
 	{
 		fontWeight: 600,
 	},
-])
+]);
 
 export const featureAndListMetadataStyle = style([
 	sprinkles({
@@ -116,25 +116,25 @@ export const featureAndListMetadataStyle = style([
 		marginBottom: 12,
 		textStyle: 'bodyShort3',
 	}),
-])
+]);
 
 export const featureAndListFeatureAttributesStyle = sprinkles({
 	gap: 16,
 	layout: 'row',
 	marginBottom: 12,
-})
+});
 
 export const featureAndListFeatureDescription = style([
 	sprinkles({
 		color: 'regularText',
 		textStyle: 'bodyLong2',
 	}),
-])
+]);
 
 export const featureAndListListStyle = sprinkles({
 	gap: 24,
 	layout: 'stack',
-})
+});
 
 export const featureAndListListItemStyle = style([
 	sprinkles({
@@ -144,7 +144,7 @@ export const featureAndListListItemStyle = style([
 	{
 		gridTemplateColumns: `${pxToRem(32)} 1fr`,
 	},
-])
+]);
 
 export const featureAndListListImageStyle = style([
 	sprinkles({ borderRadius: 8 }),
@@ -153,7 +153,7 @@ export const featureAndListListImageStyle = style([
 		objectFit: 'cover',
 		width: pxToRem(32),
 	},
-])
+]);
 
 export const featureAndListListBookStyle = style({
 	filter: `
@@ -162,7 +162,7 @@ export const featureAndListListBookStyle = style({
 	height: pxToRem(48),
 	objectFit: 'contain',
 	width: pxToRem(32),
-})
+});
 
 export const featureAndListListTitleStyle = style([
 	sprinkles({
@@ -172,7 +172,7 @@ export const featureAndListListTitleStyle = style([
 	{
 		fontWeight: 600,
 	},
-])
+]);
 
 export const featureAndListListMetadataStyle = style([
 	sprinkles({
@@ -185,9 +185,9 @@ export const featureAndListListMetadataStyle = style([
 	{
 		alignItems: 'center',
 	},
-])
+]);
 
 export const featureAndListViewAllStyle = sprinkles({
 	color: 'tertiary',
 	textStyle: 'button',
-})
+});

@@ -1,0 +1,11 @@
+{
+	"name": "Solid Form Handler",
+	"author": "SolidJS",
+	"repo": "https://www.github.com/webblocksapp/solid-form-handler",
+	"package": "https://www.npmjs.com/package/solid-form-handler",
+	"href": "https://solid-form-handler.com/docs/introduction",
+	"description": "solidjs-form-handler is a lightweight library for building form components and validating forms with them.",
+	"image": "./assets/solid-form-handler.png",
+	"tags": ["forms"],
+	"language": "TypeScript"
+}

@@ -1,0 +1,11 @@
+{
+	"name": "imagemagick_deno",
+	"description": "No description",
+	"href": "https://deno.land/x/imagemagick_deno",
+	"package": "",
+	"repo": "https://github.com/lumeland/imagemagick-deno",
+	"author": "lume",
+	"image": "./assets/imagemagick-deno.png",
+	"tags": ["utilities"],
+	"language": "TypeScript"
+}

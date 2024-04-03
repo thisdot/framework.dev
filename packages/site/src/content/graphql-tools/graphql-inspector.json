@@ -1,0 +1,8 @@
+{
+	"name": "GraphQL Inspector",
+	"author": "The Guild",
+	"description": "Validate schemas and detect changes. Receive schema change notifications. Keep Operations and Fragments consistent.",
+	"image": "./assets/graphql-inspector.jpeg",
+	"href": "https://www.the-guild.dev/graphql/inspector",
+	"tags": ["schemas", "frontend", "backend", "development"]
+}

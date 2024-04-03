@@ -1,11 +1,9 @@
-import { Story, Meta } from '@storybook/react'
-import { allCategoryNames } from '../../models/all-categories'
-import { exampleTags } from '../../util/example-content'
-import {
-	FilterMenu as FilterMenuComponent,
-	FilterMenuProps,
-} from './filter-menu'
-import { FilterSet, QueryParams } from './types'
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { allCategoryNames } from '../../models/all-categories';
+import { exampleTags } from '../../util/example-content';
+import { FilterMenu as FilterMenuComponent } from './filter-menu';
+import { type FilterSet, type QueryParams } from './types';
 
 const params: QueryParams = {
 	filters: {
@@ -14,7 +12,7 @@ const params: QueryParams = {
 		tag: [],
 	},
 	textSearch: '',
-}
+};
 
 const availableFilters: FilterSet = {
 	category: allCategoryNames,
@@ -24,9 +22,9 @@ const availableFilters: FilterSet = {
 		['paymentType', ['free', 'paid']],
 		['format', ['text', 'video', 'interactive']],
 	],
-}
+};
 
-export default {
+const meta: Meta<typeof FilterMenuComponent> = {
 	title: 'Search/Filter Menu',
 	component: FilterMenuComponent,
 	parameters: {
@@ -53,10 +51,11 @@ export default {
 			},
 		},
 	},
-} as Meta
+};
+export default meta;
 
-const Template: Story<FilterMenuProps> = (args) => (
-	<FilterMenuComponent {...args} />
-)
+type Story = StoryObj<typeof FilterMenuComponent>;
 
-export const FilterMenu = Template.bind({})
+export const FilterMenu: Story = {
+	render: (args) => <FilterMenuComponent {...args} />,
+};

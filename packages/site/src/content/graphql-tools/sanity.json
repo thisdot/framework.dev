@@ -1,0 +1,8 @@
+{
+	"name": "Sanity",
+	"author": "Sanity.io",
+	"description": "Sanity.io has powerful APIs for querying, patching, and mutating data in the real-time content backend. In addition to our GROQ API, we also support deploying GraphQL APIs to query your content.",
+	"image": "./assets/sanity.jpeg",
+	"href": "https://www.sanity.io/docs/graphql",
+	"tags": ["schemas", "frontend", "backend", "development"]
+}

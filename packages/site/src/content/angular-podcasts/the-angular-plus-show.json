@@ -1,0 +1,9 @@
+{
+	"title": "The Angular Plus Show",
+	"image": "./assets/the-angular-plus-show.jpg",
+	"hosts": ["ng-conf"],
+	"description": "The Angular Plus Show is the home of ng-conf's official all-Angular podcast. It covers a wide variety of non-Angular topics as well.",
+	"rss": "https://www.spreaker.com/show/4175221/episodes/feed",
+	"href": "https://www.spreaker.com/show/angular-show",
+	"tags": ["general"]
+}

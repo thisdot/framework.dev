@@ -1,0 +1,9 @@
+{
+	"title": "Svelte with Rich Harris",
+	"image": "./assets/svelte-with-rich-harris.jpeg",
+	"hosts": ["Rich Harris"],
+	"description": "We interview Rich Harris about Svelte's position in the landscape of frameworks, how other popular frameworks are becoming more Svelte-like, how Svelte handles state, how SvelteKit works, and more",
+	"rss": "https://podrocket.logrocket.com/rss",
+	"href": "https://podrocket.logrocket.com/rich-harris",
+	"tags": ["general"]
+}

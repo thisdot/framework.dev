@@ -1,0 +1,11 @@
+{
+	"title": "How to Build Microservices with Node.js",
+	"author": "Ashley Davis",
+	"image": "./assets/how-to-build-microservices-with-node-js-ashley-davis.svg",
+	"description": "Explore how to build microservices with Node.js, and learn when and why to use them.",
+	"paymentType": "paid",
+	"level": "intermediate",
+	"format": "video",
+	"href": "https://www.oreilly.com/videos/how-to-build/10000MNHV202232/",
+	"tags": ["backend"]
+}

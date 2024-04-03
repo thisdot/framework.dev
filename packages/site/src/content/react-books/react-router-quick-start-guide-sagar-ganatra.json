@@ -1,0 +1,11 @@
+{
+	"title": "React Router Quick Start Guide",
+	"authors": ["Sagar Ganatra"],
+	"image": "./assets/react-router-quick-start-guide-sagar-ganatra.jpeg",
+	"description": "The book starts with an introduction to React Router and teaches you how to create your first route using the React component. You will then learn about configuring your routes, passing parameters, and creating nested routes.",
+	"yearOfPublication": 2018,
+	"numberOfPages": 181,
+	"level": "intermediate",
+	"href": "https://www.oreilly.com/library/view/react-router-quick/9781789532555/",
+	"tags": ["routing"]
+}

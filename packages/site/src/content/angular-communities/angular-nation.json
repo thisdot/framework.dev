@@ -1,0 +1,8 @@
+{
+	"name": "Angular Nation",
+	"description": "A free and friendly place to network and collaborate with Angular developers just  like you!",
+	"image": "./assets/angular-nation.webp",
+	"type": "Online Events",
+	"href": "https://www.angularnation.net/",
+	"tags": ["meetups"]
+}

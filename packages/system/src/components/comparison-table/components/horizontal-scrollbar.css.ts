@@ -1,7 +1,7 @@
-import { style } from '@vanilla-extract/css'
-import { breakpoints, sprinkles } from '../../../sprinkles/sprinkles.css'
-import { vars } from '../../../themes/themes.css'
-import { pxToRem } from '../../../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { breakpoints, sprinkles } from '../../../sprinkles/sprinkles.css';
+import { vars } from '../../../themes/themes.css';
+import { pxToRem } from '../../../util/style-utils';
 
 export const horizontalScrollbarContainerStyle = style([
 	sprinkles({
@@ -19,7 +19,7 @@ export const horizontalScrollbarContainerStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const horizontalScrollbarContentStyle = style({
 	msOverflowStyle: 'none',
@@ -30,7 +30,7 @@ export const horizontalScrollbarContentStyle = style({
 			display: 'none',
 		},
 	},
-})
+});
 
 export const horizontalScrollbarSectionStyle = style([
 	sprinkles({
@@ -45,14 +45,14 @@ export const horizontalScrollbarSectionStyle = style([
 		gridTemplateColumns: '1fr auto',
 		placeItems: 'center',
 	},
-])
+]);
 
 export const horizontalScrollbarTrackAndThumbStyle = style({
 	display: 'block',
 	height: pxToRem(36),
 	position: 'relative',
 	width: '100%',
-})
+});
 
 export const horizontalScrollbarTrackStyle = style([
 	sprinkles({
@@ -67,7 +67,7 @@ export const horizontalScrollbarTrackStyle = style([
 		right: 0,
 		width: '100%',
 	},
-])
+]);
 
 export const horizontalScrollbarThumbStyle = style([
 	sprinkles({
@@ -78,7 +78,7 @@ export const horizontalScrollbarThumbStyle = style([
 		height: pxToRem(36),
 		position: 'absolute',
 	},
-])
+]);
 
 export const horizontalScrollbarButtonContainerStyle = style([
 	sprinkles({
@@ -88,7 +88,7 @@ export const horizontalScrollbarButtonContainerStyle = style([
 	{
 		gridTemplateColumns: 'repeat(2, auto)',
 	},
-])
+]);
 
 export const horizontalScrollbarButtonStyle = style([
 	sprinkles({
@@ -102,9 +102,9 @@ export const horizontalScrollbarButtonStyle = style([
 		placeItems: 'center',
 		width: pxToRem(40),
 	},
-])
+]);
 
 export const horizontalScrollbarButtonIconStyle = style({
 	height: pxToRem(9),
 	width: pxToRem(6),
-})
+});

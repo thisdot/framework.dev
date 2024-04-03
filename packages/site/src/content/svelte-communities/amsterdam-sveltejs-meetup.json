@@ -1,0 +1,8 @@
+{
+	"name": "Amsterdam SvelteJS meetup",
+	"description": "A meetup dedicated to the Svelte framework",
+	"image": "./assets/amsterdam-sveltejs-meetup.svg",
+	"type": "Live Events",
+	"href": "https://www.meetup.com/Amsterdam-SvelteJS/",
+	"tags": ["conferences"]
+}

@@ -1,0 +1,11 @@
+{
+	"name": "dnt",
+	"description": "Deno to npm package build tool.",
+	"href": "https://deno.land/x/dnt",
+	"package": "",
+	"repo": "https://github.com/denoland/dnt",
+	"author": "Deno",
+	"image": "./assets/dnt.png",
+	"tags": ["utilities", "tooling"],
+	"language": "TypeScript"
+}

@@ -1,0 +1,9 @@
+{
+	"title": "Build IT Better",
+	"image": "./assets/build-it-better.jpeg",
+	"hosts": ["This Dot Media"],
+	"description": "Build it Better is a podcast that focuses on advanced architecture and web development. In each episode, experts in these fields share their insights and knowledge on the latest technologies, techniques, and trends in the industry. The podcast covers a wide range of topics, including exploring various architecture patterns and web development frameworks.",
+	"rss": "https://feed.podbean.com/builditbetter/feed.xml",
+	"href": "https://builditbetter.podbean.com",
+	"tags": ["general"]
+}

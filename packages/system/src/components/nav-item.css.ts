@@ -1,7 +1,7 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../sprinkles/sprinkles.css'
-import { vars } from '../themes/themes.css'
-import { pxToRem } from '../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../sprinkles/sprinkles.css';
+import { vars } from '../themes/themes.css';
+import { pxToRem } from '../util/style-utils';
 
 export const navItemStyle = style([
 	sprinkles({
@@ -46,11 +46,11 @@ export const navItemStyle = style([
 			},
 		},
 	},
-])
+]);
 
 export const navItemLabelStyle = style({
 	width: '100%',
-})
+});
 
 export const navItemIconStyle = style({
 	fontSize: pxToRem(20),
@@ -64,7 +64,7 @@ export const navItemIconStyle = style({
 			color: 'currentcolor',
 		},
 	},
-})
+});
 
 export const navItemHiddenUntilFocus = style({
 	position: 'absolute',
@@ -78,4 +78,4 @@ export const navItemHiddenUntilFocus = style({
 		width: 'auto',
 		height: pxToRem(44),
 	},
-})
+});

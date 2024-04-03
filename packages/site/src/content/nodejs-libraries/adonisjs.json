@@ -1,0 +1,11 @@
+{
+	"name": "AdonisJS",
+	"author": "Harminder Virk",
+	"repo": "https://www.github.com/adonisjs/core",
+	"package": "https://www.npmjs.com/package/@adonisjs/core",
+	"href": "https://adonisjs.com/",
+	"description": "AdonisJS includes everything you need to create a fully functional web app or an API server. So stop wasting hours downloading and assembling hundreds of packages — Use AdonisJS and be productive from day one.",
+	"image": "./assets/adonisjs.png",
+	"tags": ["frameworks"],
+	"language": "NodeJS"
+}

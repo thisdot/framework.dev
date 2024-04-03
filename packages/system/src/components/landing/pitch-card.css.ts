@@ -1,6 +1,6 @@
-import { style } from '@vanilla-extract/css'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { pxToRem } from '../../util/style-utils'
+import { style } from '@vanilla-extract/css';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { pxToRem } from '../../util/style-utils';
 
 export const pitchCardStyle = style([
 	sprinkles({
@@ -9,7 +9,7 @@ export const pitchCardStyle = style([
 		gap: { mobile: 32 },
 		justifyContent: 'space-between',
 	}),
-])
+]);
 
 export const pitchCardHeadingStyle = style([
 	sprinkles({
@@ -20,14 +20,14 @@ export const pitchCardHeadingStyle = style([
 	{
 		maxWidth: pxToRem(436),
 	},
-])
+]);
 
 export const pitchCardHeadingSoftStyle = sprinkles({
 	color: 'softText',
 	paddingRight: 16,
-})
+});
 
 export const pitchCardImage = style({
 	maxWidth: pxToRem(580),
 	maxHeight: pxToRem(481),
-})
+});

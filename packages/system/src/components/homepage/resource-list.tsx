@@ -1,8 +1,8 @@
-import classNames from 'classnames'
-import React from 'react'
-import { sprinkles } from '../../sprinkles/sprinkles.css'
-import { Tag } from '../tag'
-import { formatFieldValue } from '../../util/string-utils'
+import classNames from 'classnames';
+import React from 'react';
+import { sprinkles } from '../../sprinkles/sprinkles.css';
+import { Tag } from '../tag';
+import { formatFieldValue } from '../../util/string-utils';
 import {
 	resourceListStyle,
 	resourceListHeadingStyle,
@@ -14,23 +14,23 @@ import {
 	resourceListItemImageStyle,
 	resourceListItemDescriptionStyle,
 	resourceListViewAllStyle,
-} from './resource-list.css'
+} from './resource-list.css';
 
 export interface ResourceListProps
 	extends React.ComponentPropsWithoutRef<'div'> {
-	title: string
+	title: string;
 	viewAll: {
-		title: string
-		href: string
-	}
+		title: string;
+		href: string;
+	};
 	items: {
-		image?: string
-		title: string
-		metadata: string
-		href: string
-		description: string
-		tags?: string[]
-	}[]
+		image?: string;
+		title: string;
+		metadata: string;
+		href: string;
+		description: string;
+		tags?: string[];
+	}[];
 }
 
 export function ResourceList({
@@ -83,7 +83,7 @@ export function ResourceList({
 									)}
 								</a>
 							</li>
-						)
+						);
 					})}
 				</ul>
 				<a href={viewAll.href} className={resourceListViewAllStyle}>
@@ -91,5 +91,5 @@ export function ResourceList({
 				</a>
 			</div>
 		</div>
-	)
+	);
 }

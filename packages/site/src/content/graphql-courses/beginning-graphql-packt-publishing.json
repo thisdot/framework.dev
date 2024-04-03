@@ -1,0 +1,17 @@
+{
+	"title": "Beginning GraphQL",
+	"author": "Packt Publishing",
+	"image": "./assets/beginning-graphql-packt-publishing.jpeg",
+	"description": "Learn faster data fetching using this query language and improve the performance of your application.",
+	"paymentType": "paid",
+	"level": "beginner",
+	"format": "interactive",
+	"href": "https://www.udemy.com/course/beginning-graphql/",
+	"tags": [
+		"components",
+		"data fetching",
+		"graphQL",
+		"routing",
+		"state management"
+	]
+}

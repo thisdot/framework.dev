@@ -1,0 +1,8 @@
+{
+	"name": "Twitter - Node.js",
+	"description": "This is the official Twitter account for NodeJS where you can receive the latest updates on the technology.",
+	"image": "./assets/twitter-node-js.jpeg",
+	"type": "Online",
+	"href": "https://twitter.com/nodejs",
+	"tags": []
+}

@@ -1,0 +1,8 @@
+{
+	"name": "Hasura",
+	"author": "Hasura",
+	"description": "The top stories from Hasura: engineering, tutorials, product updates, GraphQL, frontend & backend frameworks & more!",
+	"image": "./assets/hasura.svg",
+	"href": "https://hasura.io/blog/",
+	"tags": ["schemas", "frontend", "backend", "development"]
+}

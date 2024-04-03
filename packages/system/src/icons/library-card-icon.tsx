@@ -1,7 +1,7 @@
-import classNames from 'classnames'
-import React from 'react'
-import { iconStyle } from './icon.css'
-import { IconProps } from './shared-icon-types'
+import classNames from 'classnames';
+import React from 'react';
+import { iconStyle } from './icon.css';
+import { type IconProps } from './shared-icon-types';
 
 export const LibraryCardIcon = React.forwardRef<SVGSVGElement, IconProps>(
 	function LibraryCardIcon({ className, size, ...props }, ref) {
@@ -40,6 +40,6 @@ export const LibraryCardIcon = React.forwardRef<SVGSVGElement, IconProps>(
 					stroke="#70797C"
 				/>
 			</svg>
-		)
-	}
-)
+		);
+	},
+);

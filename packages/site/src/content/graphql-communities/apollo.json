@@ -1,0 +1,8 @@
+{
+	"name": "Apollo",
+	"description": "Welcome to the Apollo community forums! Here you can connect with other developers and share knowledge about every part of the Apollo GraphQL platform.",
+	"image": "./assets/apollo.png",
+	"type": "Forum",
+	"href": "https://community.apollographql.com/",
+	"tags": []
+}

@@ -599,4 +599,4 @@ export const exampleScrollbarTableData = [
 		wallet: '0xceef047c4fedb579be87e15f604706238a785ef4',
 		plant: 'Boreal Bog Sedge',
 	},
-]
+];
