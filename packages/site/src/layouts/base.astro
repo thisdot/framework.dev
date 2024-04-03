@@ -47,19 +47,18 @@ const themeClass = themes[
 		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
 		{
-			import.meta.env.VITE_ENVIRONMENT === 'production' && (
-				<>
-					<script
-						is:inline
-						src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.VITE_GOOGLE_ANALYTICS}`}>
-					</script>
-					<script is:inline>
-						window.dataLayer = window.dataLayer || [];
-						function gtag(){dataLayer.push(arguments);}
-						gtag('js', new Date());
-						gtag('config', '${import.meta.env.VITE_GOOGLE_ANALYTICS}');
-					</script>
-				</>
+			import.meta.env.MODE === 'production' && (
+				<script
+					is:inline
+					async
+					src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.VITE_GOOGLE_ANALYTICS}`}>
+				</script>
+				<script is:inline>
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', '${import.meta.env.VITE_GOOGLE_ANALYTICS}');
+				</script>
 			)
 		}
 	</head>
