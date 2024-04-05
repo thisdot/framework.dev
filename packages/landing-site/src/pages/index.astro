@@ -12,6 +12,7 @@ import { landingBody } from '@framework/system/src/styles/layouts.css'
 import { SocialMetaTags } from '../../../site/src/components/social-meta-tags'
 
 const contributorsData = await getContributorsData()
+const GA_TAG_ID = import.meta.env.VITE_GOOGLE_ANALYTICS
 ---
 
 <!doctype html>
@@ -37,11 +38,11 @@ const contributorsData = await getContributorsData()
 					async
 					src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.VITE_GOOGLE_ANALYTICS}`}>
 				</script>
-				<script is:inline>
+				<script is:inline define:vars={{ GA_TAG_ID }}>
 					window.dataLayer = window.dataLayer || [];
 					function gtag(){dataLayer.push(arguments);}
 					gtag('js', new Date());
-					gtag('config', '${import.meta.env.VITE_GOOGLE_ANALYTICS}');
+					gtag('config', GA_TAG_ID);
 				</script>
 			)
 		}

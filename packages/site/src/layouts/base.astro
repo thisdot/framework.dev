@@ -21,6 +21,8 @@ const navData = searchData.map((o) => pick(o, ['name', 'subCategories']))
 const themeClass = themes[
 	`${import.meta.env.VITE_FRAMEWORK}Theme` as keyof typeof themes
 ] as string
+
+const GA_TAG_ID = import.meta.env.VITE_GOOGLE_ANALYTICS
 ---
 
 <!doctype html>
@@ -53,11 +55,11 @@ const themeClass = themes[
 					async
 					src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.VITE_GOOGLE_ANALYTICS}`}>
 				</script>
-				<script is:inline>
+				<script is:inline define:vars={{ GA_TAG_ID }}>
 					window.dataLayer = window.dataLayer || [];
 					function gtag(){dataLayer.push(arguments);}
 					gtag('js', new Date());
-					gtag('config', '${import.meta.env.VITE_GOOGLE_ANALYTICS}');
+					gtag('config', GA_TAG_ID);
 				</script>
 			)
 		}
