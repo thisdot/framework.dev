@@ -1,0 +1,11 @@
+{
+	"title": "Learn Qwik",
+	"href": "https://www.learn-qwik.com/",
+	"image": "./assets/learn-qwik-giuliano-loic-lareponsedev-com.png",
+	"description": "Qwik offers a new way to build web applications. Learn the foundations with interactive courses and create a functional demo site.",
+	"tags": ["state management", "data fetching", "structure", "routing"],
+	"author": "Giuliano Loic | lareponsedev.com",
+	"level": "beginner",
+	"paymentType": "free",
+	"format": "interactive"
+}
