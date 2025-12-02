@@ -58,6 +58,7 @@ const GA_TAG_ID = import.meta.env.VITE_GOOGLE_ANALYTICS
 				<script is:inline define:vars={{ GA_TAG_ID }}>
 					window.dataLayer = window.dataLayer || [];
 					function gtag(){dataLayer.push(arguments);}
+					window.gtag = gtag;
 					gtag('js', new Date());
 					gtag('config', GA_TAG_ID);
 				</script>
