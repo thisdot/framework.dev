@@ -29,11 +29,19 @@ export const track = <T extends keyof TrackingCustomEvents>(
 	event: T,
 	...data: TrackingCustomEvents[T] extends void ? [] : [TrackingCustomEvents[T]]
 ): void => {
-	import.meta.env.MODE === 'production'
-		? data[0] != null
-			? gtag('event', event, data[0])
-			: gtag('event', event)
-		: data[0] != null
-			? console.info('track', event, data[0])
-			: console.info('track', event);
+	if (import.meta.env.MODE === 'production') {
+		if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+			if (data[0] != null) {
+				window.gtag('event', event, data[0]);
+			} else {
+				window.gtag('event', event);
+			}
+		}
+	} else {
+		if (data[0] != null) {
+			console.info('track', event, data[0]);
+		} else {
+			console.info('track', event);
+		}
+	}
 };
